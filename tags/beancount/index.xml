@@ -26,23 +26,23 @@
 
 &lt;p&gt;复式记帐法说起来复杂，对个人来说，就是将每笔交易分门别类，填入下面这条等式中：&lt;/p&gt;
 
-&lt;div class=&#34;HTML&#34;&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+
+&lt;div class=&#34;org-center&#34;&gt;
   &lt;div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;center&gt;
-资产 + 费用 = 负债 + 所有者权益 + 收入
-&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;资产 + 费用 = 负债 + 所有者权益 + 收入&lt;/p&gt;
 
 &lt;p&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;在个人记帐中，这条等式辅以借贷概念会令人望而生畏，所以我将其略一变形：&lt;/p&gt;
 
-&lt;div class=&#34;HTML&#34;&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+
+&lt;div class=&#34;org-center&#34;&gt;
   &lt;div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;center&gt;
-（+资产）+（-负债）+（+费用）+（-收入）+（-所有者权益）= 0
-&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;（+资产）+（-负债）+（+费用）+（-收入）+（-所有者权益）= 0&lt;/p&gt;
 
 &lt;p&gt;&lt;/div&gt;&lt;/p&gt;
 

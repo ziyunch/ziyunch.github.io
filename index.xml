@@ -59,23 +59,23 @@ Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=
 
 &lt;p&gt;复式记帐法说起来复杂，对个人来说，就是将每笔交易分门别类，填入下面这条等式中：&lt;/p&gt;
 
-&lt;div class=&#34;HTML&#34;&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+
+&lt;div class=&#34;org-center&#34;&gt;
   &lt;div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;center&gt;
-资产 + 费用 = 负债 + 所有者权益 + 收入
-&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;资产 + 费用 = 负债 + 所有者权益 + 收入&lt;/p&gt;
 
 &lt;p&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;在个人记帐中，这条等式辅以借贷概念会令人望而生畏，所以我将其略一变形：&lt;/p&gt;
 
-&lt;div class=&#34;HTML&#34;&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+
+&lt;div class=&#34;org-center&#34;&gt;
   &lt;div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;center&gt;
-（+资产）+（-负债）+（+费用）+（-收入）+（-所有者权益）= 0
-&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;（+资产）+（-负债）+（+费用）+（-收入）+（-所有者权益）= 0&lt;/p&gt;
 
 &lt;p&gt;&lt;/div&gt;&lt;/p&gt;
 
@@ -88,15 +88,6 @@ Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=
 &lt;p&gt;而这个变形公式中的正负号，则可以将各项目的符号关系，用作资金流向的参照。这么说有点玄乎，换个茨威格式的说法就是：&amp;rdquo;人们从命运得到的一切，冥冥之中都记下了它的价钱。&amp;rdquo;花钱买了服务，则是减少资产（花了钱），增加费用（得到服务）；工资到帐，则是增加资产（到帐），减少收入（既有劳动时间的减少）；别人跟你借了钱，则是资产减少（银行帐户或现金余额减少），负债增加（别人在你这儿的负债）。&lt;/p&gt;
 
 &lt;p&gt;总结一下，由于人类暂时无法操控时间，所以费用一般为正，收入一般为负。而没有破产的情况下资产一般为正，别人欠你的钱为正，信用卡债（你欠别人的钱）为负。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>http://blindwith.science/about/</link>
-      <pubDate>Tue, 27 Aug 2019 14:39:00 -0400</pubDate>
-      
-      <guid>http://blindwith.science/about/</guid>
-      <description>关于我 常用ID是「Ziyunch」，来源是初一练习建站时胡诌的紫云茶室的拼音与英文的混合体，后来也被我衍生为无意义的「梓韵岑和」，皆是中二时</description>
     </item>
     
     <item>
@@ -1976,21 +1967,21 @@ Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=
     </item>
     
     <item>
-      <title>两天随记（好WS的题目啊）</title>
-      <link>http://blindwith.science/2008/07/240.html/</link>
-      <pubDate>Sun, 13 Jul 2008 22:06:55 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2008/07/240.html/</guid>
-      <description>ziyunch 发表于 2008-07-13 22:06:12 @ Ycool 这两天打雷啊都没怎么发博，自己心里也痒啊（我啊是得了什么博客综合症啦？） 家里的电话坏了（再也不买子母机了！），跟老妈跑到苏宁</description>
-    </item>
-    
-    <item>
       <title>奇诺之旅 第四、五话</title>
       <link>http://blindwith.science/2008/07/241.html/</link>
       <pubDate>Sun, 13 Jul 2008 14:15:51 +0000</pubDate>
       
       <guid>http://blindwith.science/2008/07/241.html/</guid>
       <description>ziyunch 发表于 2008-07-13 14:15:56 @ Ycool 『第四话-大人之国』 “…的记忆，憧憬梦想之翼，将心中所有的记忆，带往彩虹的彼方” “再唱一首！我还想听两三首别的。或者…” “或</description>
+    </item>
+    
+    <item>
+      <title>两天随记（好WS的题目啊）</title>
+      <link>http://blindwith.science/2008/07/240.html/</link>
+      <pubDate>Sun, 13 Jul 2008 22:06:55 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/240.html/</guid>
+      <description>ziyunch 发表于 2008-07-13 22:06:12 @ Ycool 这两天打雷啊都没怎么发博，自己心里也痒啊（我啊是得了什么博客综合症啦？） 家里的电话坏了（再也不买子母机了！），跟老妈跑到苏宁</description>
     </item>
     
     <item>
@@ -2039,21 +2030,21 @@ Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=
     </item>
     
     <item>
-      <title>奇诺之旅 第一、二、三话</title>
-      <link>http://blindwith.science/2008/07/233.html/</link>
-      <pubDate>Wed, 09 Jul 2008 17:55:03 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2008/07/233.html/</guid>
-      <description>ziyunch 发表于 2008-07-09 17:55:14 @ Ycool “世界——不美丽” “你有没有羡慕过飞鸟呢” “人和物都是有‘天赋’的啊，奇诺。摩托车也好，人也好，都是无法在天空飞的” “据说无</description>
-    </item>
-    
-    <item>
       <title>猫的漫画集——1&amp;2</title>
       <link>http://blindwith.science/2008/07/234.html/</link>
       <pubDate>Wed, 09 Jul 2008 13:19:21 +0000</pubDate>
       
       <guid>http://blindwith.science/2008/07/234.html/</guid>
       <description>ziyunch 发表于 2008-07-09 13:19:50 @ Ycool [![26666541.jpg](https://ziyunch.files.wordpress.com/2016/10/26666541.jpg)![](///Volumes/BOOTCAMP/Runhan/scrapbook/data/20130313234608/26666541.jpg)](http://www.ycool.com/photo.php?uid=1580293&amp;paid=1254679&amp;id=26666541) 2008.4.11之作品01 应该说真的很冷啊（我哪个漫画不冷的说……） 某段时间由于家里没人，我中午就跟着那几个百合吃。善于</description>
+    </item>
+    
+    <item>
+      <title>奇诺之旅 第一、二、三话</title>
+      <link>http://blindwith.science/2008/07/233.html/</link>
+      <pubDate>Wed, 09 Jul 2008 17:55:03 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/233.html/</guid>
+      <description>ziyunch 发表于 2008-07-09 17:55:14 @ Ycool “世界——不美丽” “你有没有羡慕过飞鸟呢” “人和物都是有‘天赋’的啊，奇诺。摩托车也好，人也好，都是无法在天空飞的” “据说无</description>
     </item>
     
     <item>
@@ -2660,6 +2651,15 @@ Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=
     </item>
     
     <item>
+      <title>姜——赔礼</title>
+      <link>http://blindwith.science/2008/01/165.html/</link>
+      <pubDate>Thu, 10 Jan 2008 19:10:20 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/165.html/</guid>
+      <description>ziyunch 发表于 2008-01-10 18:10:19 @ Ycool 姜者，鹅黄扁物也。抚之若柔荑，乃至辛之物也。 夫有阋于人，而欲复归于好者，必挠首以觅道歉所持之器也。姜者，胡非赔礼不二之选乎？</description>
+    </item>
+    
+    <item>
       <title>羡慕虫</title>
       <link>http://blindwith.science/2008/01/164.html/</link>
       <pubDate>Sat, 12 Jan 2008 18:46:51 +0000</pubDate>
@@ -2675,15 +2675,6 @@ Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=
       
       <guid>http://blindwith.science/2008/01/163.html/</guid>
       <description>### [ziyunch](http://www.ycool.com/space.php?uid=1580293) 发表于 2008-01-12 15:38:35 @ Ycool bt大神1096君发问了：什么是千大？在此牺牲形象，特供一贴让各位一起讨论 有空的话也追溯下虫虫&amp;咸咸的由来吧…… 喵~ 表出现</description>
-    </item>
-    
-    <item>
-      <title>姜——赔礼</title>
-      <link>http://blindwith.science/2008/01/165.html/</link>
-      <pubDate>Thu, 10 Jan 2008 19:10:20 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2008/01/165.html/</guid>
-      <description>ziyunch 发表于 2008-01-10 18:10:19 @ Ycool 姜者，鹅黄扁物也。抚之若柔荑，乃至辛之物也。 夫有阋于人，而欲复归于好者，必挠首以觅道歉所持之器也。姜者，胡非赔礼不二之选乎？</description>
     </item>
     
     <item>
@@ -2705,21 +2696,21 @@ Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=
     </item>
     
     <item>
-      <title>我编的填字游戏，大家一起填啊</title>
-      <link>http://blindwith.science/2007/12/159.html/</link>
-      <pubDate>Mon, 31 Dec 2007 22:40:05 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2007/12/159.html/</guid>
-      <description>ziyunch 发表于 2007-12-31 21:40:00 @ Ycool 横向 一、“跟长生不死擦肩而过”的谜底 二、两个字 乐观 三、一部日剧，长濑智也主演 四、成语 比喻谣传一再反复能使人信以为真 五、一个动</description>
-    </item>
-    
-    <item>
       <title>迷茫</title>
       <link>http://blindwith.science/2007/12/160.html/</link>
       <pubDate>Mon, 31 Dec 2007 19:39:36 +0000</pubDate>
       
       <guid>http://blindwith.science/2007/12/160.html/</guid>
       <description>ziyunch 发表于 2007-12-31 18:39:00 @ Ycool 今天是2007年的最后一天，想快点奔过这悲伤的一年，却又害怕明年，害怕明年的考试，是否会延续我每年都会有的厄运，出现令人失望</description>
+    </item>
+    
+    <item>
+      <title>我编的填字游戏，大家一起填啊</title>
+      <link>http://blindwith.science/2007/12/159.html/</link>
+      <pubDate>Mon, 31 Dec 2007 22:40:05 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/159.html/</guid>
+      <description>ziyunch 发表于 2007-12-31 21:40:00 @ Ycool 横向 一、“跟长生不死擦肩而过”的谜底 二、两个字 乐观 三、一部日剧，长濑智也主演 四、成语 比喻谣传一再反复能使人信以为真 五、一个动</description>
     </item>
     
     <item>
@@ -2948,21 +2939,21 @@ Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=
     </item>
     
     <item>
-      <title>偶感生死</title>
-      <link>http://blindwith.science/2007/11/132.html/</link>
-      <pubDate>Sun, 18 Nov 2007 18:27:10 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2007/11/132.html/</guid>
-      <description>ziyunch 发表于 2007-11-18 17:27:57 @ Ycool 周荣娟，在其空间上说： 万一是不能根治而要终身用药的疾病 我宁愿放弃那种毫无质量的生活 以前我也这么想，既然过去和未来都被撕得颤裂</description>
-    </item>
-    
-    <item>
       <title>闲话捏脸</title>
       <link>http://blindwith.science/2007/11/133.html/</link>
       <pubDate>Sun, 18 Nov 2007 17:25:19 +0000</pubDate>
       
       <guid>http://blindwith.science/2007/11/133.html/</guid>
       <description>ziyunch 发表于 2007-11-18 16:25:22 @ Ycool 捏脸是会上瘾的。想我小学时热衷于捏耳朵，初中时增加了捏脸，到了高中好不容易貌似戒掉了，但是……凡物是容易戒掉的吗？ 脸，虽然是</description>
+    </item>
+    
+    <item>
+      <title>偶感生死</title>
+      <link>http://blindwith.science/2007/11/132.html/</link>
+      <pubDate>Sun, 18 Nov 2007 18:27:10 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/132.html/</guid>
+      <description>ziyunch 发表于 2007-11-18 17:27:57 @ Ycool 周荣娟，在其空间上说： 万一是不能根治而要终身用药的疾病 我宁愿放弃那种毫无质量的生活 以前我也这么想，既然过去和未来都被撕得颤裂</description>
     </item>
     
     <item>
@@ -2993,21 +2984,21 @@ Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=
     </item>
     
     <item>
-      <title>《红樱桃》观感</title>
-      <link>http://blindwith.science/2007/11/127.html/</link>
-      <pubDate>Sun, 11 Nov 2007 12:08:58 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2007/11/127.html/</guid>
-      <description>ziyunch 发表于 2007-11-11 12:08:58 @ ycool 周六在家里，无聊，开电视，放的是红樱桃。当时此片已经放了一会时间了，所以一开始，没有看出什么味道。但从那个军官对他欣赏的歌唱</description>
-    </item>
-    
-    <item>
       <title>换位子的预想</title>
       <link>http://blindwith.science/2007/11/128.html/</link>
       <pubDate>Sun, 11 Nov 2007 11:32:00 +0000</pubDate>
       
       <guid>http://blindwith.science/2007/11/128.html/</guid>
       <description>换位子的预想 ziyunch 发表于 2007-11-11 11:32:27 @ ycool 今天早上起床突然想到，明天可能又要换座位了。蘑菇一般都在刚考完的一刻，默默酝酿新一轮的座位表~~而我们，只能沦为</description>
+    </item>
+    
+    <item>
+      <title>《红樱桃》观感</title>
+      <link>http://blindwith.science/2007/11/127.html/</link>
+      <pubDate>Sun, 11 Nov 2007 12:08:58 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/127.html/</guid>
+      <description>ziyunch 发表于 2007-11-11 12:08:58 @ ycool 周六在家里，无聊，开电视，放的是红樱桃。当时此片已经放了一会时间了，所以一开始，没有看出什么味道。但从那个军官对他欣赏的歌唱</description>
     </item>
     
     <item>
@@ -3047,21 +3038,21 @@ Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=
     </item>
     
     <item>
-      <title>前百请留言（咸：非前百亦可留）</title>
-      <link>http://blindwith.science/2007/11/121.html/</link>
-      <pubDate>Tue, 06 Nov 2007 12:17:00 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2007/11/121.html/</guid>
-      <description>前百请留言（咸：非前百亦可留） ziyunch 发表于 2007-11-06 09:42:43 @ ycool 前百发话了：“你多赞美一下我，我就留言。”为了不逆她老人家的心意，我在此且赋打油诗一首： 容淡羡</description>
-    </item>
-    
-    <item>
       <title>完了</title>
       <link>http://blindwith.science/2007/11/122.html/</link>
       <pubDate>Tue, 06 Nov 2007 07:41:00 +0000</pubDate>
       
       <guid>http://blindwith.science/2007/11/122.html/</guid>
       <description>完了 ziyunch 发表于 2007-11-06 07:41:37 @ ycool 昨天打前百合家电话（此人小灵通一天到晚无反应乱鄙视），被其父BH的声线吓了一跳~（她妈妈的声音还是蛮好听的，怎么夫妻俩反</description>
+    </item>
+    
+    <item>
+      <title>前百请留言（咸：非前百亦可留）</title>
+      <link>http://blindwith.science/2007/11/121.html/</link>
+      <pubDate>Tue, 06 Nov 2007 12:17:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/121.html/</guid>
+      <description>前百请留言（咸：非前百亦可留） ziyunch 发表于 2007-11-06 09:42:43 @ ycool 前百发话了：“你多赞美一下我，我就留言。”为了不逆她老人家的心意，我在此且赋打油诗一首： 容淡羡</description>
     </item>
     
     <item>
@@ -3110,21 +3101,21 @@ Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=
     </item>
     
     <item>
-      <title>杀手悲歌</title>
-      <link>http://blindwith.science/2007/10/114.html/</link>
-      <pubDate>Sun, 28 Oct 2007 09:44:00 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2007/10/114.html/</guid>
-      <description>杀手悲歌 ziyunch 发表于 2007-10-28 09:44:43 @ ycool “那天早上没什么新鲜的，没有爱情，没有福气，没有便车，什么都没有，我邂逅了一只乌龟，在孤独的高速公路上，和我意外的相</description>
-    </item>
-    
-    <item>
       <title>重温书的计划</title>
       <link>http://blindwith.science/2007/10/115.html/</link>
       <pubDate>Sun, 28 Oct 2007 09:04:00 +0000</pubDate>
       
       <guid>http://blindwith.science/2007/10/115.html/</guid>
       <description>重温书的计划 ziyunch 发表于 2007-10-28 09:04:01 @ ycool 昨日翻看新购的《书房一角》时，看到卷一引言有这样的话：“这种在书架上放旧了的书，往往比买来的更会有意思，因为和他</description>
+    </item>
+    
+    <item>
+      <title>杀手悲歌</title>
+      <link>http://blindwith.science/2007/10/114.html/</link>
+      <pubDate>Sun, 28 Oct 2007 09:44:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/114.html/</guid>
+      <description>杀手悲歌 ziyunch 发表于 2007-10-28 09:44:43 @ ycool “那天早上没什么新鲜的，没有爱情，没有福气，没有便车，什么都没有，我邂逅了一只乌龟，在孤独的高速公路上，和我意外的相</description>
     </item>
     
     <item>
@@ -3227,21 +3218,21 @@ Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=
     </item>
     
     <item>
-      <title>对白玉蟾的初感觉</title>
-      <link>http://blindwith.science/2007/10/101.html/</link>
-      <pubDate>Tue, 16 Oct 2007 21:13:00 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2007/10/101.html/</guid>
-      <description>对白玉蟾的初感觉 ziyunch 发表于 2007-10-16 21:13:19 @ ycool 偷春格是谁，这是我研究已久的问题。从前已经否定了一位，现在另一位候选人的可能性大大提升——张哲来同学。此人大</description>
-    </item>
-    
-    <item>
       <title>换座位了，郁闷</title>
       <link>http://blindwith.science/2007/10/102.html/</link>
       <pubDate>Tue, 16 Oct 2007 20:43:00 +0000</pubDate>
       
       <guid>http://blindwith.science/2007/10/102.html/</guid>
       <description>换座位了，郁闷 ziyunch 发表于 2007-10-16 20:43:27 @ ycool 今天换座位，我竟换到若说班级呈众星捧月之势我既为斯月的位置。呜呼哀哉，和百合同坐虽为下策，但犹能逞口舌之快；现</description>
+    </item>
+    
+    <item>
+      <title>对白玉蟾的初感觉</title>
+      <link>http://blindwith.science/2007/10/101.html/</link>
+      <pubDate>Tue, 16 Oct 2007 21:13:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/101.html/</guid>
+      <description>对白玉蟾的初感觉 ziyunch 发表于 2007-10-16 21:13:19 @ ycool 偷春格是谁，这是我研究已久的问题。从前已经否定了一位，现在另一位候选人的可能性大大提升——张哲来同学。此人大</description>
     </item>
     
     <item>
@@ -3920,21 +3911,21 @@ Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=
     </item>
     
     <item>
-      <title>对联？失望的讲座</title>
-      <link>http://blindwith.science/2006/01/24.html/</link>
-      <pubDate>Sat, 28 Jan 2006 20:07:34 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2006/01/24.html/</guid>
-      <description>ziyunch 发表于 2006-01-28 20:07:01 @MSN Live 本人很喜欢百家讲坛，不过最近那个什么人讲对联，真的是气得吐血。第一讲的很差；第二一天到晚在卖弄自己写的对联，姑且不说他水平如</description>
-    </item>
-    
-    <item>
       <title>小议韩剧</title>
       <link>http://blindwith.science/2006/01/25.html/</link>
       <pubDate>Sat, 28 Jan 2006 20:05:35 +0000</pubDate>
       
       <guid>http://blindwith.science/2006/01/25.html/</guid>
       <description>ziyunch 发表于 2006-01-28 20:05:45 @MSN Live 本人看韩剧也有些时日了，看过的韩剧也不只是一两部了。扳扳手指头，能记起的有《玻璃鞋》《人鱼小姐》《明成皇后》《蓝色生死恋》《</description>
+    </item>
+    
+    <item>
+      <title>对联？失望的讲座</title>
+      <link>http://blindwith.science/2006/01/24.html/</link>
+      <pubDate>Sat, 28 Jan 2006 20:07:34 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/01/24.html/</guid>
+      <description>ziyunch 发表于 2006-01-28 20:07:01 @MSN Live 本人很喜欢百家讲坛，不过最近那个什么人讲对联，真的是气得吐血。第一讲的很差；第二一天到晚在卖弄自己写的对联，姑且不说他水平如</description>
     </item>
     
     <item>
@@ -4037,111 +4028,102 @@ Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=
     </item>
     
     <item>
-      <title>关于LT&amp;QZD的词</title>
+      <title>关于 LT &amp; QZD 的词</title>
       <link>http://blindwith.science/2005/09/12.html/</link>
-      <pubDate>Sun, 18 Sep 2005 16:51:08 +0000</pubDate>
+      <pubDate>Sun, 18 Sep 2005 16:51:00 -0400</pubDate>
       
       <guid>http://blindwith.science/2005/09/12.html/</guid>
-      <description>ziyunch 发表于 2005-09-18 16:51:42 @QQ空间 诉衷情 桃花粉色薛涛笺 金笔换青竹 清晨日变阴雨 朔方为何物 天靉靆（应用简体破，无奈电脑上打不出简体） 去浮云 晴不如 此文书罢 刀已</description>
+      <description>ziyunch @ QQ空间 诉衷情 桃花粉色薛涛笺 金笔换青竹 清晨日变阴雨 朔方为何物 天靉靆（应用简体破，无奈电脑上打不出简体） 去浮云 晴不如 此文书罢 刀已横旁 女子亭</description>
     </item>
     
     <item>
       <title>我的初中岁月</title>
       <link>http://blindwith.science/2005/08/11.html/</link>
-      <pubDate>Thu, 18 Aug 2005 12:56:43 +0000</pubDate>
+      <pubDate>Thu, 18 Aug 2005 12:56:00 -0400</pubDate>
       
       <guid>http://blindwith.science/2005/08/11.html/</guid>
-      <description>ziyunch 发表于 2005-08-18 12:56:04 @QQ空间 或许有人会笑我白痴 把往事写出作为别人的谈资 那么将它遗失 成为月光下的冷尸 我又一遍为之 那段不堪的历史？ 可我似乎并没有忏悔的</description>
-    </item>
-    
-    <item>
-      <title>水瓶座</title>
-      <link>http://blindwith.science/2005/08/10.html/</link>
-      <pubDate>Wed, 17 Aug 2005 01:05:20 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2005/08/10.html/</guid>
-      <description>ziyunch 发表于 2005-08-17 01:05:14 @ QQ空间 水瓶座 1月21日～2月19日 主宰行星：天王星 属性：风相星座 冬天出生的生辰星位或太阳在水瓶座的人的特点： 在充满绝对意识的</description>
-    </item>
-    
-    <item>
-      <title>有感于太极旗飘扬</title>
-      <link>http://blindwith.science/2005/08/9.html/</link>
-      <pubDate>Fri, 12 Aug 2005 01:51:35 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2005/08/9.html/</guid>
-      <description>ziyunch 发表于 2005-08-12 01:51:03 @ BlogBus 起初看这部片子是冲着元彬的名字去的，看了一会儿就不再搀杂着个人的喜好而以电影的角度去看它。战争真是太残酷了，它可以使被它牵涉</description>
+      <description>ziyunch @ QQ空间 或许有人会笑我白痴 把往事写出作为别人的谈资 那么将它遗失 成为月光下的冷尸 我又一遍为之 那段不堪的历史？ 可我似乎并没有忏悔的意思 依然妄</description>
     </item>
     
     <item>
       <title>难吃</title>
       <link>http://blindwith.science/2005/08/8.html/</link>
-      <pubDate>Mon, 08 Aug 2005 23:57:18 +0000</pubDate>
+      <pubDate>Mon, 08 Aug 2005 23:57:00 -0400</pubDate>
       
       <guid>http://blindwith.science/2005/08/8.html/</guid>
-      <description>ziyunch 发表于 2005-08-08 23:57:26 @ Blogbus 今天出去，路上嘴馋，看见好 利来的广告——炎炎夏日，好利来冰品让你爽一夏什么的，就进去了。点了一款坐下来吃。甜，腻，温，第一口</description>
+      <description>ziyunch @ Blogbus 今天出去，路上嘴馋，看见好利来的广告——炎炎夏日，好利来冰品让你爽一夏什么的，就进去了。点了一款坐下来吃。甜，腻，温，第一口就让我受不</description>
     </item>
     
     <item>
-      <title>尼康coolpix5900之购买</title>
+      <title>尼康 coolpix5900 之购买</title>
       <link>http://blindwith.science/2005/08/7.html/</link>
-      <pubDate>Sun, 07 Aug 2005 00:55:16 +0000</pubDate>
+      <pubDate>Sun, 07 Aug 2005 00:55:00 -0400</pubDate>
       
       <guid>http://blindwith.science/2005/08/7.html/</guid>
-      <description>ziyunch 发表于 2005-08-07 00:55:59 @ Blogbus 今天台风降临苏州，风雨大作。但是中午一切正常，丝毫看不出一点要下雨的征兆。那时风虽然大，但又凉爽又无雨，的确是买东西的好天气</description>
+      <description>ziyunch @ Blogbus 今天台风降临苏州，风雨大作。但是中午一切正常，丝毫看不出一点要下雨的征兆。那时风虽然大，但又凉爽又无雨，的确是 买 东西的好天气——与前几</description>
     </item>
     
     <item>
       <title>麻辣豆腐</title>
       <link>http://blindwith.science/2005/08/6.html/</link>
-      <pubDate>Wed, 03 Aug 2005 21:58:38 +0000</pubDate>
+      <pubDate>Wed, 03 Aug 2005 21:58:00 -0400</pubDate>
       
       <guid>http://blindwith.science/2005/08/6.html/</guid>
-      <description>ziyunch 发表于 2005-08-03 21:58:34 @ Blogbus 今天起来想自己烧菜，便找了麻辣豆腐的做法。这个菜可是要炒的，而我平生最怕炒菜 了。怎么办呢？全副武装！于是我找来袖套、手套、围</description>
+      <description>ziyunch @ Blogbus 今天起来想自己烧菜，便找了麻辣豆腐的做法。这个菜可是要 炒 的，而我平生最怕 炒 菜了。怎么办呢？全副武装！于是我找来袖套、手套、围裙，只差没</description>
     </item>
     
     <item>
-      <title>兴奋之——wallop&amp;Gmail</title>
+      <title>兴奋之 Wallop &amp; Gmail</title>
       <link>http://blindwith.science/2005/08/5.html/</link>
-      <pubDate>Wed, 03 Aug 2005 00:44:39 +0000</pubDate>
+      <pubDate>Wed, 03 Aug 2005 00:44:00 -0400</pubDate>
       
       <guid>http://blindwith.science/2005/08/5.html/</guid>
-      <description>ziyunch 发表于 2005-08-03 00:44:32 @ Blogbus 今天真是很兴奋。 昨日想找个wallop玩玩，就寻找起来。在从不知网上看见有赠与wallop &amp; Gmail的邀请，便把我的mai</description>
+      <description>ziyunch @ Blogbus 今天真是很兴奋。 昨日想找个 wallop 玩玩，就寻找起来。在从不知网上看见有赠与 wallop &amp;amp; Gmail 的邀请，便把我的 mail 与 blog 留下。那个日志是比较早的了，但看见前几</description>
     </item>
     
     <item>
-      <title>疑似UFO</title>
+      <title>疑似 UFO</title>
       <link>http://blindwith.science/2005/07/4.html/</link>
-      <pubDate>Sun, 31 Jul 2005 22:38:12 +0000</pubDate>
+      <pubDate>Sun, 31 Jul 2005 22:38:00 -0400</pubDate>
       
       <guid>http://blindwith.science/2005/07/4.html/</guid>
-      <description>ziyunch 发表于 2005-07-31 22:38:19 @ Blogbus 今天傍晚在看电视的我被外婆叫到楼上去。心里想着又是哪盆花开得美丽，可这时早已吃完晚饭，花都将谢欲谢，哪里来这满盆吐香之妙景呢</description>
+      <description>ziyunch @ Blogbus 今天傍晚在看电视的我被外婆叫到楼上去。心里想着又是哪盆花开得美丽，可这时早已吃完晚饭，花都将谢欲谢，哪里来这满盆吐香之妙景呢？出了阳台</description>
     </item>
     
     <item>
-      <title>eyes in Nazca,Peru</title>
+      <title>eyes in Nazca, Peru</title>
       <link>http://blindwith.science/2005/07/3.html/</link>
-      <pubDate>Sun, 31 Jul 2005 16:21:32 +0000</pubDate>
+      <pubDate>Sun, 31 Jul 2005 16:21:00 -0400</pubDate>
       
       <guid>http://blindwith.science/2005/07/3.html/</guid>
-      <description>ziyunch 发表于 2005-07-31 16:21:03 @ Blogbus 今天用google earth想看纳斯卡线条的，结果没找到。却发现了个很奇怪的东东。纳斯卡边上竟有一双大眼睛……</description>
+      <description>ziyunch @ Blogbus 今天用google earth想看纳斯卡线条的，结果没找到。却发现了个很奇怪的东东。纳斯卡边上竟有一双大眼睛&amp;hellip;&amp;helli</description>
     </item>
     
     <item>
       <title>沉默</title>
       <link>http://blindwith.science/2005/07/2.html/</link>
-      <pubDate>Thu, 07 Jul 2005 10:06:11 +0000</pubDate>
+      <pubDate>Thu, 07 Jul 2005 10:06:00 -0400</pubDate>
       
       <guid>http://blindwith.science/2005/07/2.html/</guid>
-      <description>ziyunch 发表于 2005-07-07 10:06:07 @ Blogbus 沉默是指缝间的流水 一不留神忘了它 失去 顺带走了时间 缺一片哗哗 &amp;nbsp; 沉默是时间里的风 微微的远去 时间流逝 怎是那无言的倾诉 &amp;nbsp; 沉默就那么清</description>
+      <description>ziyunch @ Blogbus 沉默是指缝间的流水 一不留神忘了它 失去 顺带走了时间 缺一片哗哗 沉默是时间里的风 微微的远去 时间流逝 怎是那无言的倾诉 沉默就那么清澈 透明 时间的小</description>
     </item>
     
     <item>
       <title>关于牙</title>
       <link>http://blindwith.science/2005/07/1.html/</link>
-      <pubDate>Thu, 07 Jul 2005 10:04:50 +0000</pubDate>
+      <pubDate>Thu, 07 Jul 2005 10:04:00 -0400</pubDate>
       
       <guid>http://blindwith.science/2005/07/1.html/</guid>
-      <description>ziyunch 发表于 2005-07-07 10:04:42 @ BlogBus 最近很颓废 似乎每天都是沙发动物 什么都不能吃 牙很疼 医生说是长牙的原因，却又不是智齿 或许不是一般的牙 它刺在我心 将我扼的难受 评论 （</description>
+      <description>ziyunch @ BlogBus 最近很颓废 似乎每天都是沙发动物 什么都不能吃 牙很疼 医生说是长牙的原因，却又不是智齿 或许不是一般的牙 它刺在我心 将我扼的难受 评论 （没有名称）</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://blindwith.science/about/</link>
+      <pubDate>Tue, 27 Aug 2019 14:39:00 -0400</pubDate>
+      
+      <guid>http://blindwith.science/about/</guid>
+      <description>关于我 常用ID是「Ziyunch」，来源是初一练习建站时胡诌的紫云茶室的拼音与英文的混合体，后来也被我衍生为无意义的「梓韵岑和」，皆是中二时</description>
     </item>
     
   </channel>
