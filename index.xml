@@ -1,0 +1,4148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blind with Science</title>
+    <link>http://blindwith.science/</link>
+    <description>Recent content on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Tue, 27 Aug 2019 14:39:00 -0400</lastBuildDate>
+    
+	<atom:link href="http://blindwith.science/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>博客由 Hexo 迁移至 Hugo</title>
+      <link>http://blindwith.science/2019/08/446.html/</link>
+      <pubDate>Mon, 26 Aug 2019 23:49:00 -0400</pubDate>
+      
+      <guid>http://blindwith.science/2019/08/446.html/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;本篇博文使用 org-mode 书就，耶！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;从 2016 将博客迁移至 Hexo+Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sleep No More 小结</title>
+      <link>http://blindwith.science/2019/08/445.html/</link>
+      <pubDate>Sun, 25 Aug 2019 17:04:00 -0400</pubDate>
+      
+      <guid>http://blindwith.science/2019/08/445.html/</guid>
+      <description>&lt;p&gt;以下是当年（2017-08-26）周六下午看完五点场写的总结，当时想着要建个微信公众号，就想留着弄个十万加，然而两年了公众号都给销号了也一直没发，就放博客上吧。&lt;/p&gt;
+
+&lt;p&gt;周六五点场，4点40左右到达酒店（McKittrick
+Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=&#34;#fn:fn-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;），拿到Ace牌，持此牌可以第一批（大概二十人左右）入场。进入酒店，寄包
+($4)，穿过漆黑走廊以适应灯光晦暗的环境。而后进入酒吧等待酒保带领入场，并获得白色面具以佩戴于面&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-2&#34;&gt;&lt;a href=&#34;#fn:fn-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;，进入电梯，开始演出。&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&#34;./ox-hugo/sleepnomore.png&#34;
+         alt=&#34;Figure 1: 根据记忆推算的舞台调度示意图&#34;/&gt; &lt;figcaption&gt;
+            &lt;p&gt;Figure 1: 根据记忆推算的舞台调度示意图&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;</description>
+    </item>
+    
+    <item>
+      <title>Emacs 记帐</title>
+      <link>http://blindwith.science/2019/07/444.html/</link>
+      <pubDate>Thu, 04 Jul 2019 12:58:00 -0400</pubDate>
+      
+      <guid>http://blindwith.science/2019/07/444.html/</guid>
+      <description>&lt;p&gt;昨天搞定 Emacs 的中文环境，今天想着好久没记帐了，随手记总是很花时间，干脆一鼓作气，将记帐一起搬过来。&lt;/p&gt;
+
+&lt;h2 id=&#34;复式记帐&#34;&gt;复式记帐&lt;/h2&gt;
+
+&lt;p&gt;我本科时双修了一门金融，其中最为繁琐，也是最令人头疼的一门课便是会计学。我不爱听讲，毕业之后也将会计的知识点忘得查差不多了，然而其&amp;rdquo;有借必有贷，借贷必相等&amp;rdquo;的复式记帐法，反而是我生活中运用最多的。&lt;/p&gt;
+
+&lt;p&gt;复式记帐法说起来复杂，对个人来说，就是将每笔交易分门别类，填入下面这条等式中：&lt;/p&gt;
+
+&lt;div class=&#34;HTML&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;center&gt;
+资产 + 费用 = 负债 + 所有者权益 + 收入
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;在个人记帐中，这条等式辅以借贷概念会令人望而生畏，所以我将其略一变形：&lt;/p&gt;
+
+&lt;div class=&#34;HTML&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;center&gt;
+（+资产）+（-负债）+（+费用）+（-收入）+（-所有者权益）= 0
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;资产与负债都是与金钱直接挂钩的，比如银行户头，比如人民币美钞，比如信用卡帐户，再比如借条，这些都可以算是货币的不同表示形式。&lt;/li&gt;
+&lt;li&gt;费用与收入则是与金钱间接挂钩的，比如工资，比如商品，比如服务，这些都可以算是生产资本与商品资本的不同表现形式。其中收入与字面意思不同，可以理解为生产资本（劳动力等）。&lt;/li&gt;
+&lt;li&gt;所有者权益对个人意义不大，一般用来记录历史盈余与糊涂帐。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;而这个变形公式中的正负号，则可以将各项目的符号关系，用作资金流向的参照。这么说有点玄乎，换个茨威格式的说法就是：&amp;rdquo;人们从命运得到的一切，冥冥之中都记下了它的价钱。&amp;rdquo;花钱买了服务，则是减少资产（花了钱），增加费用（得到服务）；工资到帐，则是增加资产（到帐），减少收入（既有劳动时间的减少）；别人跟你借了钱，则是资产减少（银行帐户或现金余额减少），负债增加（别人在你这儿的负债）。&lt;/p&gt;
+
+&lt;p&gt;总结一下，由于人类暂时无法操控时间，所以费用一般为正，收入一般为负。而没有破产的情况下资产一般为正，别人欠你的钱为正，信用卡债（你欠别人的钱）为负。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://blindwith.science/about/</link>
+      <pubDate>Tue, 27 Aug 2019 14:39:00 -0400</pubDate>
+      
+      <guid>http://blindwith.science/about/</guid>
+      <description>关于我 常用ID是「Ziyunch」，来源是初一练习建站时胡诌的紫云茶室的拼音与英文的混合体，后来也被我衍生为无意义的「梓韵岑和」，皆是中二时</description>
+    </item>
+    
+    <item>
+      <title>Emacs 中文环境配置</title>
+      <link>http://blindwith.science/2019/07/443.html/</link>
+      <pubDate>Wed, 03 Jul 2019 13:44:05 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2019/07/443.html/</guid>
+      <description>&lt;p&gt;使用 Emacs 三年多了，当时受了 &lt;a href=&#34;https://github.com/redguardtoo/mastering-emacs-in-one-year-guide&#34;&gt;一年成为 Emacs 高手&lt;/a&gt; 的蛊惑，且贪图便利，使用了 &lt;a href=&#34;https://github.com/purcell/emacs.d&#34;&gt;Purcell 的配置&lt;/a&gt;。正如 Purcell 所说，此配置相当 reasonable，用来入门确实让我受益匪浅，少走了很多弯路。三年使用下来，我需要添加的插件只有 &lt;code&gt;org-ref&lt;/code&gt; 和 &lt;code&gt;ob-smiles&lt;/code&gt;，配置更新也仅须 &lt;code&gt;git pull&lt;/code&gt; 外加 &lt;code&gt;M-x package-list-packages U x&lt;/code&gt; 即可，非常方便。&lt;/p&gt;
+
+&lt;p&gt;然而过去三年来，我主要是使用 Emacs 中的 org-mode 来记 Science 与 Tech 方面笔记，基于 Latex 的长文章 / 代码我更喜欢用 Atoms + Vim-mode 来写，基于 Markdown 的博客则用 MWeb 来写，中文笔记喜欢使用 Bears，最后却还是回到了苹果自带的免费 Notes。其他零零碎碎的场景则使用更为零碎的 app，餐馆用 DayGram + Workflowy，记账用随手记。非常不统一。&lt;/p&gt;
+
+&lt;p&gt;也就是说，我并不是一个 “running my life with Emacs” 的重症者，Purcell 配置的 Emacs 中也有大量我用不到，或者需要使用却不甚了解的插件。所以失业在家这个契机恰好也是让我重新审视 Emacs，看看我能否最大化地使用 Emacs。&lt;/p&gt;
+
+&lt;p&gt;对我而言，使用 Atoms 来写代码与 Latex，是由于我对使用 Emacs 调试还不甚熟练。所以这几天我花了一点时间重新阅读了 Emacs 手册。&lt;/p&gt;
+
+&lt;p&gt;使用 MWeb 来写博客与使用 Notes 来记笔记的原因则比较可笑，因为我基本上都是使用英文记录 Science &amp;amp; Tech 方面的笔记，我并没有配置 Emacs 的中文环境。所以需要使用中文来写东西时，我自然就得换用其他工具。这段时间准备面试，将 org-mode 的使用范围扩大到记录面试适宜，由于一亩三分地是一个主要资料来源，不免需要粘贴许多中文帖子进来。这时再将 Emacs 视为一个纯英文环境未免有些麻烦。而将 Emacs 中文化了，自然也不需要 MWeb 和 Notes 或者 Bear 什么事了。&lt;/p&gt;
+
+&lt;p&gt;而记录餐馆和消费的需求比较麻烦，本文暂且搁置，今后有空再来研究。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Gene Variation Analysis of Stomach Cancer</title>
+      <link>http://blindwith.science/2018/10/442.html/</link>
+      <pubDate>Wed, 17 Oct 2018 22:46:28 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2018/10/442.html/</guid>
+      <description>&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;
+
+&lt;div class=&#34;note info&#34;&gt;&lt;p&gt;Cancer is the second leading cause of death globally, and is responsible for an estimated 9.6 million deaths in 2018. Globally, about 1 in 6 deaths is due to cancer. &lt;br&gt;--World Health Organization
+&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Cancer is the second leading cause of death globally &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. Cancer generally arises when normal cells transform from pre-cancerous lesion to malignant tumour cells. This transformation is a result of the interaction between a person&amp;rsquo;s genetic factors and three categories of external agents including physical, chemical and biological carcinogens. Cancer mortality can be reduced if cases are detected and treated early.&lt;/p&gt;
+
+&lt;div class=&#34;note info&#34;&gt;&lt;p&gt;For stomach cancer in the United States for 2018:&lt;br&gt;About 26,240 cases of stomach cancer will be diagnosed (16,520 in men and 9,720 in women)&lt;br&gt;About 10,800 people will die from this type of cancer (6,510 men and 4,290 women)&lt;br&gt;--The American Cancer Society&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Stomach cancer is the world&amp;rsquo;s third leading cause of cancer-related death &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. It is responsible for an estimated 783, 000 deaths globally in 2018 &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;. Stomach cancers can be classified as adenocarcinoma, lymphoma, gastrointestinal stromal tumor, carcinoid tumor and other rare cancers. The majority (about 90% to 95%) of stomach cancers are adenocarcinomas &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;. Thus, if adenocarcinomas can be further classified into subgroups, it will be beneficial in clinical care:
+1. Appropriate screening tests can be developed based on information of each subgroup.
+2. Effective treatment can be achieved by better defined drug targets for each subgroup.&lt;/p&gt;
+
+&lt;p&gt;Recently, The Cancer Genome Atlas Network (TCGA) obtained gastric adenocarcinoma primary tumour tissue from 295 patients, in order to purse molecular sub-group classification &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;. On this tissue whole-exome sequencing, array-based somatic copy number analysis, array-based DNA methylation profiling, messenger RNA (mRNA) sequencing, microRNA sequencing and reverse-phase protein array (RPPA) molecular classification was performed. Unsupervised clustering of the data resulted in 4 subgroups; characterized by EBV-positivity, high microsatellite-instability, genomically stability or chromosomal instability.&lt;/p&gt;
+
+&lt;p&gt;Here I explored this TCGA dataset, started with a gene copy number variation analysis for an expanded set (443 patients), identified differentially expressed genes in comparison to normal matched tissues by hierarchical clustering.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小议双拼</title>
+      <link>http://blindwith.science/2018/10/441.html/</link>
+      <pubDate>Wed, 10 Oct 2018 14:42:57 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2018/10/441.html/</guid>
+      <description>&lt;div class=&#34;note default&#34;&gt;&lt;p&gt;tl;dr 微软双拼好，鼠须管很妙，iOS 上却没有一个容器呱呱叫。&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;我的朋友们都不爱用我手机，原因很简单，不知道怎么打中文。然而由于我也算半个老司机，出行的时候总有让副驾帮忙回信或是代查些东西的时候，往往副驾便会骂道：“你这啥玩意呀我不会打”，而我则只能一字一句教道：“知打成 vi，道打成 dk，了就是 le”。对方不耐烦，我也不会硬去安利，因为我也知道在这个年代，对于很多人来说，双拼对于全拼来说未必有那么大的效率提升。不少人说双拼和五笔一样，都是上个世纪的产物，其实也没错。&lt;/p&gt;
+
+&lt;p&gt;说起来其实我并不是从上个世纪起便开始使用双拼的，相反，我接触双拼不过十年，全平台统一使用双拼也就是近两年的事。那我为什么没有放弃使用它，反而越用越起劲了呢，可能还是因为双拼和我的打字风格还是有许多契合点吧。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SSH 免密远程登录</title>
+      <link>http://blindwith.science/2018/10/440.html/</link>
+      <pubDate>Mon, 01 Oct 2018 23:40:25 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2018/10/440.html/</guid>
+      <description>&lt;h1 id=&#34;缘起&#34;&gt;缘起&lt;/h1&gt;
+
+&lt;p&gt;平时实验需要在 HPC 上进行一些计算，而那些比较占空间的结果则会存储在 lab server 上。照理说，在这三处转移数据，使用 &lt;code&gt;rsync&lt;/code&gt; 命令的话，应该是十分方便快捷的。然而由于总是不能成功设置密钥，这些愉快的操作总是会被密码输入框打断。今天仔细研究了一下这个问题，终于可以成功进行免密远程登录了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>lighthouse</title>
+      <link>http://blindwith.science/2018/09/439.html/</link>
+      <pubDate>Tue, 04 Sep 2018 18:50:09 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2018/09/439.html/</guid>
+      <description>&lt;p&gt;到灯塔去&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>新电脑折腾记录</title>
+      <link>http://blindwith.science/2017/09/438.html/</link>
+      <pubDate>Sun, 24 Sep 2017 13:27:15 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2017/09/438.html/</guid>
+      <description>&lt;p&gt;于 9 月 22 日买了个新电脑，发现我原来在 iMac 和 Thinkpad 上弄的那些东西，又需要重新安装配置在新电脑上，非常麻烦。之前看到别人为自己配置 HEXO 主题记录的小&lt;a href=&#34;http://moxfive.xyz/2015/08/20/blog-building/&#34;&gt;日志&lt;/a&gt;，觉得很方便。为了避免以后购入新电脑后出现这样一个阶段，在此对这台电脑上进行的折腾进行记录。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Karate笔记</title>
+      <link>http://blindwith.science/2017/09/437.html/</link>
+      <pubDate>Sat, 23 Sep 2017 16:14:52 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2017/09/437.html/</guid>
+      <description>&lt;p&gt;练了一段时间的空手道 (Karate) 和柔术 (じゅうじゅつ, jujitsu)，总是记不住动作和名字。在此记一下笔记。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git笔记</title>
+      <link>http://blindwith.science/2017/09/436.html/</link>
+      <pubDate>Tue, 19 Sep 2017 18:43:16 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2017/09/436.html/</guid>
+      <description>&lt;p&gt;为了一些软件的配置（包括这个博客），一直有在断断续续地使用Github。由于对一些概念始终有一些疑惑，所以来读一下著名的&lt;a href=&#34;https://git-scm.com/book/zh/v2/&#34;&gt;Pro Git v2&lt;/a&gt;，顺便记笔记。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python入门</title>
+      <link>http://blindwith.science/2017/03/435.html/</link>
+      <pubDate>Mon, 20 Mar 2017 22:06:11 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2017/03/435.html/</guid>
+      <description>最近在处理 pre-steady-state data，一不小心每次都要处理几十组，加上 cross-fit 后每次都要上百组，已非手动可以完成的数据量了。虽然一直都是在 cluster 上跑数据，但是文本预处</description>
+    </item>
+    
+    <item>
+      <title>Enzyme Evolution and Vim</title>
+      <link>http://blindwith.science/2017/02/434.html/</link>
+      <pubDate>Sat, 04 Feb 2017 13:57:03 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2017/02/434.html/</guid>
+      <description>&lt;h1 id=&#34;enzyme-evolution&#34;&gt;Enzyme evolution&lt;/h1&gt;
+
+&lt;p&gt;我一直都对比较大的蓝图感兴趣，如果当时有意识地去选择，自己可能就会去做Bioinformatics相关的研究了。（为什么不去当码农。。。）可能因为这个的缘故，我对enzyme evolution也一直有那么点兴趣。&lt;/p&gt;
+
+&lt;p&gt;去年 Doug sabbatical，于是他们组有半年与我们组一起开联合组会，我也得知这一与我们同幢楼的实验室具体是做的什么。今年年初的时候学校搞了个 &lt;a href=&#34;https://kb.brandeis.edu/display/SCI/MiniCourse+in+Statistics&#34;&gt;minicourse in statistics&lt;/a&gt;，Doug也在其中开了一门 *Bayesian Methods for Analysis of Protein Evolution*。一眼督见后面两个单词的我想着正和朕意，便报名上课。课程很短，除去一天基本上是&lt;del&gt;废话&lt;/del&gt;基础介绍的Linux/R的入门课外，正式课程只有三天。而在其中Doug讲了两天的概率（我还没带纸笔，只能用Emacs来记笔记，简直头大）。不过第三天的实战(BLAST+ClustalOmega+Phyml+BAli-Phy)确实算带我入了门。不得不说一个搞生化研究的老师比一个搞计算机的老师在演示BLAST时，关注的重点要实用许多。&lt;/p&gt;
+
+&lt;p&gt;不过虽然有上手操作，这毕竟还是课程，而我缺少课堂学习的能力，所以还需实例演示。也是凑巧，Doug昨天讲了个seminar，正是关于他如何用evolutionary手段玩弄LDH和MDH两种酶的，听完之后基本上明白了实战的思路，回家又顶着高烧扫了一遍他的文章们，大致也摸出了基本的套路：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;他们组自己关于LDH/MDH的几篇文章：和seminar上讲的差不多，但是有具体的实验方法说明呀；&lt;/li&gt;
+&lt;li&gt;他的几篇理论性文章：跟他上课的内容互为补充；&lt;/li&gt;
+&lt;li&gt;他和其他组合作的文章：和Miller爷爷合作的ion channel的，和Oprian合作的rhodopsin的，和Kern合作的thermoadaptation的，和Garrity合作的果蝇thermosensor的。只想吐槽好多Nature Science啊。。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;然后我就跃跃欲试了。然后就遇到了fasta文件预处理的问题，然后不折腾不死星人便想着，刚好最近用过几次Vim，要不就用它来预处理吧。于是文章的第二部分诞生了。&lt;/p&gt;
+
+&lt;h1 id=&#34;vim中查找与替换&#34;&gt;Vim中查找与替换&lt;/h1&gt;</description>
+    </item>
+    
+    <item>
+      <title>完美的一周</title>
+      <link>http://blindwith.science/2016/11/433.html/</link>
+      <pubDate>Sun, 06 Nov 2016 23:19:53 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/11/433.html/</guid>
+      <description>&lt;p&gt;没想到，来Boston四年多了，我竟第一次感受到*生活*在&lt;strong&gt;Boston&lt;/strong&gt;的感觉。&lt;/p&gt;
+
+&lt;p&gt;第一年，是生活在Brandeis；第二年，是生活在美国的孤独中；第三年，是生活在友人舒服的家中；第四年，是生活在New England；也许是因为住在远郊，也许是囿于生活圈子，直到今天，才有了生活在Boston的实感。&lt;/p&gt;
+
+&lt;p&gt;太美妙，以至于我竟难以平复这种无尽的充实感带来的兴奋情绪，不得不写这么一篇流水账来记录这一周，以免其消弭于我因晚睡而惨遭损毁的海马体中。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>“新的博客”</title>
+      <link>http://blindwith.science/2016/10/432.html/</link>
+      <pubDate>Thu, 27 Oct 2016 22:48:41 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/10/432.html/</guid>
+      <description>今天将原来的博客转移至Hexo(@Github)，采用NexT主题，还搞了个略nerdy的一级域名。 之后可能需要每天检查十余篇博客保证显示正</description>
+    </item>
+    
+    <item>
+      <title>效率规划新方案</title>
+      <link>http://blindwith.science/2016/10/431.html/</link>
+      <pubDate>Thu, 13 Oct 2016 13:19:42 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/10/431.html/</guid>
+      <description>个人在效率规划方面（+笔记整理）笃行的是轻量级。倒不是说自己有多么地不喜欢使用工具，而是用过的一些工具(Things, Clear, OneNote, Evernote等</description>
+    </item>
+    
+    <item>
+      <title>第26个第一届搞笑诺贝尔奖现场观后感</title>
+      <link>http://blindwith.science/2016/09/430.html/</link>
+      <pubDate>Fri, 23 Sep 2016 00:03:23 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/09/430.html/</guid>
+      <description>&lt;p&gt;来 Boston 几年，每次都等搞笑诺贝尔奖颁完奖后才发现自己又错过了这个活动，心颇有不甘。今天早上刷微博发现国内某伪科学媒体摆了个乌龙，搞错了这届颁奖的时间，恰好给我了买票围观的时机。正好刷到了不错的座位，晚上便驱车进城围观了一发。&lt;/p&gt;
+
+&lt;p&gt;感想：要好好学习折纸飞机的技术。&lt;/p&gt;
+
+&lt;p&gt;今年的主题是 Time，即时间。颁奖间隙时钟合唱团深情地为大家表演了精彩的三幕剧：“我为长者续一秒”（大误）。&lt;/p&gt;
+
+&lt;p&gt;两个小实验则是共振与干涉。（感觉又学了一遍物理）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>也谈高考择校选专业</title>
+      <link>http://blindwith.science/2016/05/429.html/</link>
+      <pubDate>Fri, 20 May 2016 01:53:52 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/05/429.html/</guid>
+      <description>&lt;p&gt;题目中有个也字，是因为今天在微信某公众号上看到一篇文章，是关于高考和学校专业选择的。作者的建议是“选择难度高的专业，选择喜欢的专业，选择好的学校，刻苦读书，只争朝夕。”&lt;/p&gt;
+
+&lt;p&gt;看到这篇文章，我不禁回想起自己在八年之前择校的画面。高三恰巧是我写博客最为频繁的阶段，事无大小，都被我像日记一般存于网络，供友人讨论。因此之后的高考、出分、择校、录取，我也都一一记录于案。当年是江苏高考改革的第一年，我的分数又是尴尬的物理 B+，使我无法简单地根据排名来判断是否能被各校录取，因此选校对我来说变得异常复杂。当时的我，手持厚厚的招生计划，搜集参考了过去好几年的录取情况，分析在我之前那上千人的理化成绩，揣度他们的择校心理。另一方面，我又对自己符合招生条件（即不要求物理 A）的学校的优势专业进行分析评估，选出那三个平行志愿，以及各自六个专业意向。八年之后来看，当时的选择也许不能令我满意，但已经是我个人条件限制下所能达到的最优解了。在这八年之中，也许因为自己一直在校园里待着，便总会思考起高考如何择校选专业这个命题。受那篇文章启发，在此我也想和大家来分享自己对于这个命题的一些想法。当然，由于自己涉世不深，许多想法也许十分幼稚，但请见谅。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>荒岛书店，六年了吧</title>
+      <link>http://blindwith.science/2016/05/428.html/</link>
+      <pubDate>Tue, 10 May 2016 22:06:23 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/05/428.html/</guid>
+      <description>今日在知乎闲转，在一个读书相关的题目上看到一张照片：一只猫趴在书堆之上。虽然我记不住猫咪的相貌，但窗外的景象，太熟悉了，不正是荒岛么？再看作</description>
+    </item>
+    
+    <item>
+      <title>又是一年四二九</title>
+      <link>http://blindwith.science/2016/04/427.html/</link>
+      <pubDate>Fri, 29 Apr 2016 23:33:03 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/04/427.html/</guid>
+      <description>没有什么消息了 没有什么消息</description>
+    </item>
+    
+    <item>
+      <title>有机全合成之美</title>
+      <link>http://blindwith.science/2016/04/426.html/</link>
+      <pubDate>Thu, 28 Apr 2016 23:05:55 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/04/426.html/</guid>
+      <description>虽然名义上我是有机方向的，但我一直都不太喜欢现有的体系。可能是自己不长于记诵的缘故吧，我一直觉得记忆那么多反应没什么必要。等到人们对有机反应</description>
+    </item>
+    
+    <item>
+      <title>修车小记</title>
+      <link>http://blindwith.science/2016/03/424.html/</link>
+      <pubDate>Thu, 24 Mar 2016 22:51:25 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/03/424.html/</guid>
+      <description>&lt;p&gt;都说在美帝呀，得先在国内两大高校进修过：新东方厨师学校和蓝翔高级技工学校。烧菜与汽修，看起来都很高大上，其实仔细想想，似乎和搬砖也差不了太多：烧菜跟搭反应很像，汽修则跟修仪器差不多。在烧菜领域小有所成（指除口味以外的那些，比如装盘啊拍照啊什么的）的我，最近也开始手痒，想着跟蓝翔抢饭碗了~&lt;/p&gt;
+
+&lt;p&gt;其实就是车坏了，又没钱修。&lt;/p&gt;
+
+&lt;p&gt;去年冬天后备箱打不开的时候，去传说中附近最良心的修车铺 Longlife 检查过。作为拿着最底时薪的小砖工，看到高昂的 Labor fee 就知道得靠自己的双手了。然后就拖了一年。转眼又一个冬天过去了，不仅后备箱没修好，其他地方也出现了许多小毛病。昨天拉人去 Costco 时狼狈地钻进后备箱手动打开它，又想着五月的 inspection 恐怕也会过不了，就觉得自己不能再拖了。&lt;/p&gt;
+
+&lt;p&gt;先把未来需要在车上花费的时间精力金钱列个表吧：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>送别</title>
+      <link>http://blindwith.science/2016/03/423.html/</link>
+      <pubDate>Sun, 13 Mar 2016 01:15:07 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/03/423.html/</guid>
+      <description>今天的狼人杀非常过瘾，没有被首杀（大概是因为坐在舆论引导者的上家获得了隐身的能力: D），多数情况下也活过了第二轮。因为只抽到了一次平民，又被</description>
+    </item>
+    
+    <item>
+      <title>不吐不快</title>
+      <link>http://blindwith.science/2016/03/422.html/</link>
+      <pubDate>Mon, 07 Mar 2016 23:03:46 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/03/422.html/</guid>
+      <description>最近学校以一种奇怪的方式出名了。 起因是校报上一则关于一名学生去世的消息被匿名人士发表了恶意虚假评论，无良媒体又不负责任地将不实信息进行串联报</description>
+    </item>
+    
+    <item>
+      <title>LaTeX 笔记2</title>
+      <link>http://blindwith.science/2016/03/421.html/</link>
+      <pubDate>Wed, 02 Mar 2016 23:40:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/03/421.html/</guid>
+      <description>&lt;p&gt;今天努了把力终于把初稿写完了。话说 LaTeX 真是超级容易上手啊，感觉看过入门手册和描述文档后，今天基本上可以脱手写论文了。&lt;/p&gt;
+
+&lt;p&gt;写完之后去吃了东北菜，然后回家又开始摸鱼，研究起了 Emacs + AucTeX 的组合。&lt;/p&gt;
+
+&lt;p&gt;受了&lt;a href=&#34;https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org&#34;&gt;一年成为 Emacs 高手&lt;/a&gt;的蛊惑，我使用了 &lt;a href=&#34;https://github.com/purcell/emacs.d&#34;&gt;Purcell 的配置&lt;/a&gt;，花了一点时间把 tutorial 读了一遍，做了笔记，并通过&lt;a href=&#34;http://www.cnblogs.com/robertzml/archive/2010/03/31/1701374.html&#34;&gt;别人的教程&lt;/a&gt;将不理解的部分大致搞了清楚。之后我便按照不&lt;a href=&#34;http://cs2.swfc.edu.cn/~wx672/lecture_notes/linux/latex/latex_tutorial.html&#34;&gt;知道是哪个学校出的快速上手教程&lt;/a&gt;过了一遍。&lt;/p&gt;
+
+&lt;p&gt;不过这个教程的配置和我的有所不同:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在 minibuffer 进行选项补完时，我只能使用RET，C-j 会导致补完失败.
+还有一些教程里没有提到的 AucTeX 的特性：&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;可以直接使用 C-c C-c 编译，C-c C-v 预览 pdf，并不需要像文中一样在 &lt;em&gt;shell&lt;/em&gt; 里敲命令进行调用;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;TAB&gt; LaTeX-indent-line will indent the current line；&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;C-j newline-and-indent inserts a new line (much like &lt;RET&gt;) and moves the cursor to an appropriate position by the left margin；&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;RET&gt; no indent.
+感觉还蛮顺利的，下次摸鱼时可以研究一下 org-mode，以后说不定就能在 Emacs 里管理文献了~&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;感觉明天可以去搞这些的 Reference Card，让生活更简单一些~&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LaTeX 笔记 1</title>
+      <link>http://blindwith.science/2016/03/420.html/</link>
+      <pubDate>Tue, 01 Mar 2016 18:47:39 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/03/420.html/</guid>
+      <description>&lt;p&gt;其实转投 LaTeX 的念头大学时就有了：写各种作业、报告时，写两本毕业论文时。然而大学的我实在懒惰，虽然在排版方面认真地似有强迫症，但也只是徒增一些 Office 排版技巧罢了。这次写文章，只觉受够了 Word 的繁琐操作，便在前几日磨着洋工扫了眼大家推荐的 LaTeX 配置，在昨日分别下载安装了 TexLive 和 MacTex，并在今日把写好的部分用 LaTeX 格式重写，输出的排版真是赏心悦目，不经感叹 LaTeX 真是一个美观易用零学习成本的好工具。&lt;/p&gt;
+
+&lt;p&gt;LaTeX 2e，经历了 Knuth 大神 (Plain TeX)，敝校数学博士 Lamport (LaTeX)，Mittelbach (LaTeX 2e) 一系列人的开发，已是一个非常好用的格式，并有着较为完善的引擎、宏包、驱动。软件方面，作为一个入门者，同时提供后台处理机制与前台编辑器的发行包是最傻瓜易用的。比较常用的发行版是 MikTeX 与 TeXLive，由于后者是通用的，适合我这种家里用 Mac OS，实验室用 Windows 及 Ubuntu 的小朋友，所以我就给 Mac 装了基于 TeXLive 的 MacTeX，Windows 装了 TexLive，编辑器也就是相应的 TeXshop 与 TeXworks。&lt;/p&gt;
+
+&lt;p&gt;入门手册我看的是 Oetiker 的 &lt;a href=&#34;https://www.ctan.org/tex-archive/info/lshort/english&#34;&gt;lshort&lt;/a&gt; 和包太雷的 &lt;a href=&#34;http://math.nju.edu.cn/~meijq/tex/lnotes2.pdf&#34;&gt;lnotes2&lt;/a&gt;，同时参考了 Math mode 的那篇 &lt;a href=&#34;https://www.ctan.org/tex-archive/info/math/voss/mathmode/?lang=en&#34;&gt;review&lt;/a&gt; 及各包的描述文件，感觉写写论文是足够了。&lt;/p&gt;
+
+&lt;p&gt;对于 Science 论文写作来说，今天用到的 Package 有 siunitx （用来写单位）, mhchem（用来写化学式）, natbib（用来加引用文献） 和 achemos（ACS投稿用）。&lt;/p&gt;
+
+&lt;p&gt;感觉以后还可以用LaTeX格式来做文献笔记（各家文献管理软件/笔记软件没一个好用的，对于阅读文献的整理还得靠手写），等我转移到 Emacs 后，用 org-mode 来管理文献，大概就能走上摸鱼的人生巅峰了吧（请去做实验，苦笑）。&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>30分钟快手菜</title>
+      <link>http://blindwith.science/2016/01/419.html/</link>
+      <pubDate>Mon, 18 Jan 2016 18:14:20 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/01/419.html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>生活</title>
+      <link>http://blindwith.science/2016/01/418.html/</link>
+      <pubDate>Thu, 14 Jan 2016 23:59:31 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/01/418.html/</guid>
+      <description>最近身边的人似乎都不太顺。 晚上接到友人A的电话，她真是从工作到生活都特别不顺，非常为她担心，却不知道自己能做什么，连安慰的话都不知道说什么比</description>
+    </item>
+    
+    <item>
+      <title>Powerball</title>
+      <link>http://blindwith.science/2016/01/417.html/</link>
+      <pubDate>Wed, 13 Jan 2016 23:59:46 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/01/417.html/</guid>
+      <description>今天Powerball的开奖日。这个北美超级乐透在上周末以上亿的奖池积累强势闯入大家的视线，更在这周以破纪录的十数亿大奖霸占了人们的眼球。上</description>
+    </item>
+    
+    <item>
+      <title>#30分钟快手菜# 椒盐大虾&#43;香煎嫩豆腐配芦笋&#43;芹菜炒鸡片&#43;饭</title>
+      <link>http://blindwith.science/2016/01/416.html/</link>
+      <pubDate>Mon, 11 Jan 2016 19:15:22 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/01/416.html/</guid>
+      <description>今天花了45分钟煮了三个菜：椒盐大虾、香煎嫩豆腐配芦笋和芹菜炒鸡肉。椒盐是现配的感觉哪里还是不太对。豆腐倒是很好吃，不过芦笋没怎么煎好。鸡肉</description>
+    </item>
+    
+    <item>
+      <title>#30分钟快手菜# 鱼片豆腐&#43;酱烧茄子拌面</title>
+      <link>http://blindwith.science/2016/01/415.html/</link>
+      <pubDate>Sat, 09 Jan 2016 14:42:54 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/01/415.html/</guid>
+      <description>我做菜慢不是一天两天的事了，但成为属性一般的存在，还是令我有些尴尬的。而这几年来，因为永远处于减肥的状态与无法消除的懒癌，我逐渐养成了早上做</description>
+    </item>
+    
+    <item>
+      <title>随记几段</title>
+      <link>http://blindwith.science/2015/11/414.html/</link>
+      <pubDate>Fri, 20 Nov 2015 22:43:22 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/11/414.html/</guid>
+      <description>今天，校长转发了一封人民来信，大致就是要学校搞各种对黑人的优待，以及要让副校长对Khadijah Lynch道歉（后者去年因发表争议言论而辞去</description>
+    </item>
+    
+    <item>
+      <title>关于巴黎遭袭的一点想法</title>
+      <link>http://blindwith.science/2015/11/413.html/</link>
+      <pubDate>Mon, 16 Nov 2015 01:05:03 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/11/413.html/</guid>
+      <description>巴黎遭袭，举世震惊。 一时间，各大媒体、微博、朋友圈都充斥着对事件的报道，对ISIS的介绍，对恐怖行为的控诉，对地缘政治的分析。而我，竟然有些</description>
+    </item>
+    
+    <item>
+      <title>口香糖墙 Gum Wall</title>
+      <link>http://blindwith.science/2015/11/412.html/</link>
+      <pubDate>Wed, 11 Nov 2015 12:15:45 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/11/412.html/</guid>
+      <description>今天姜饼给我发了个假装在纽约写的帖子，说是Gum Wall正被西雅图市容市貌管理中心清洗中。大吃一斤，啊不对，是惊。随手谷歌一下，尽是这样的新</description>
+    </item>
+    
+    <item>
+      <title>逗比人生</title>
+      <link>http://blindwith.science/2015/11/411.html/</link>
+      <pubDate>Sun, 01 Nov 2015 22:45:48 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/11/411.html/</guid>
+      <description>昨天被安利了个小游戏，叫逗比人生。友人A将其所恨之人的名字写上，却活到了四十多的高寿。而我，却总是活不过20，唯一一次活过，是因为一出生就有</description>
+    </item>
+    
+    <item>
+      <title>如果我对待学术时也有此钻研精神就好了</title>
+      <link>http://blindwith.science/2015/10/410.html/</link>
+      <pubDate>Fri, 23 Oct 2015 19:50:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/10/410.html/</guid>
+      <description>今天去蹭了 BCBP 的 seminar。话说这学期没有强制签到没有食物还和 bcbp seminar 撞（好吧，关键是和生化的撞时间了）的有机 seminar 真是好，我终于可以去听更有意思</description>
+    </item>
+    
+    <item>
+      <title>回到未来日看电影小记</title>
+      <link>http://blindwith.science/2015/10/409.html/</link>
+      <pubDate>Wed, 21 Oct 2015 16:29:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/10/409.html/</guid>
+      <description>今天是回到未来日，不过身边唯一的迹象就是各大 AMC 在 4:29 pm 连播回到未来。于是我就去看电影了。 然而并不是去看回到未来。 The Martian 8&amp;frasl;10 一部是大热门 The Marti</description>
+    </item>
+    
+    <item>
+      <title>随记</title>
+      <link>http://blindwith.science/2015/10/408.html/</link>
+      <pubDate>Tue, 20 Oct 2015 23:31:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/10/408.html/</guid>
+      <description>这两日过得昏头昏脑的，打开博客才发现已经是1020了，哈，差点错过姜饼生日。 太鼓达人 前两日和友人一起玩耍时，提到波屯有游戏机厅，可惜没有太鼓</description>
+    </item>
+    
+    <item>
+      <title>Kancamagus Highway 之白山一日游</title>
+      <link>http://blindwith.science/2015/10/407.html/</link>
+      <pubDate>Sun, 11 Oct 2015 23:57:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/10/407.html/</guid>
+      <description>[googlemaps https://www.google.com/maps/d/u/3/embed?mid=zJb69KfR-gPs.krLgC1NN5oi4&amp;amp;w=640&amp;amp;h=480] 10月30日补记 先放点照片。。 [caption id=&amp;ldquo;attachment_665&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;660&amp;rdquo;] 白山[/caption] [caption id=&amp;ldquo;attachment_678&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;660&amp;rdquo;] 赏秋[/caption] [caption id=&amp;ldquo;attachment_661&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;660&amp;rdquo;] 早餐[/caption] [caption id=&amp;ldquo;attachment_666&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;660&amp;rdquo;] 山</description>
+    </item>
+    
+    <item>
+      <title>几个小手办</title>
+      <link>http://blindwith.science/2015/10/406.html/</link>
+      <pubDate>Sat, 10 Oct 2015 03:03:23 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/10/406.html/</guid>
+      <description>老妈来美，便从我大淘宝上找了几款祖国版初音让她帮我带过来。到手一看，质量还是可以的。不得不感慨祖国盗版事业的蓬勃发展，这些初音们，已然告别过</description>
+    </item>
+    
+    <item>
+      <title>[盘点] 老妈访美二十天</title>
+      <link>http://blindwith.science/2015/10/405.html/</link>
+      <pubDate>Fri, 09 Oct 2015 02:13:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/10/405.html/</guid>
+      <description>老妈刚定下来在中秋国庆假期来看我，写旅行计划的时候，我便想着要玩纽约、波士顿以及北上看红叶。后来，因为今年红叶来得晚，计划便成了先去纽约，而</description>
+    </item>
+    
+    <item>
+      <title>[游记]罗德岛看海</title>
+      <link>http://blindwith.science/2015/10/404.html/</link>
+      <pubDate>Thu, 08 Oct 2015 04:47:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/10/404.html/</guid>
+      <description>老妈想看海，麻省又太冷，便把她带去了罗德岛。罗德岛的 Newport（如豪宅解说里所言，译为新港镇）离村子只有一个半小时，是自镀金时代起美帝著</description>
+    </item>
+    
+    <item>
+      <title>[Road Trip]北上看红叶 — Day 7 Schoodic Scenic Byway</title>
+      <link>http://blindwith.science/2015/10/403.html/</link>
+      <pubDate>Wed, 07 Oct 2015 07:30:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/10/403.html/</guid>
+      <description>Oct 10, 2015 补记 本来的计划是今天游玩Southwest Harbor及Acadia的附岛们，明天上山看个日出走 112 经 Lincoln 回家。结果老妈闹着说看够了森林要</description>
+    </item>
+    
+    <item>
+      <title>[Road Trip]北上看红叶 — Day 6 Acadia National Park</title>
+      <link>http://blindwith.science/2015/10/402.html/</link>
+      <pubDate>Tue, 06 Oct 2015 06:37:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/10/402.html/</guid>
+      <description>Oct 10, 2015 补记 昨晚住的 Best Western 也算是良心，早餐选择非常多。 吃完早饭，我们便向 Mount Dessert Island 进发。全美游览量仅次于黄石公园的 Acadia National Park 的主体部分便在这里。我之前来</description>
+    </item>
+    
+    <item>
+      <title>[Road Trip]北上看红叶 — Day 5 White Mountain National Forest</title>
+      <link>http://blindwith.science/2015/10/401.html/</link>
+      <pubDate>Mon, 05 Oct 2015 05:48:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/10/401.html/</guid>
+      <description>Oct 10, 2015 补记 昨晚住的The Lyme Inn，虽然名为Inn，但论硬件、论配置、论服务，都更为高档。房间布置古朴典雅，床铺舒适整洁，就连早餐，也是与In</description>
+    </item>
+    
+    <item>
+      <title>[Road Trip]北上看红叶 — Day 4 Upper Vermont</title>
+      <link>http://blindwith.science/2015/10/400.html/</link>
+      <pubDate>Sun, 04 Oct 2015 10:33:20 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/10/400.html/</guid>
+      <description>昨晚梦到初中同学聚会，还有好多高中同学，梦里很是热闹，然后就被老妈推醒了。。 今天北上 I 87，在离加拿大边境还有 3 miles 的时候下了高速，转 11 号国道</description>
+    </item>
+    
+    <item>
+      <title>[Road Trip]北上看红叶 -- Day 3 Adirondack State Park</title>
+      <link>http://blindwith.science/2015/10/399.html/</link>
+      <pubDate>Sat, 03 Oct 2015 08:49:50 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/10/399.html/</guid>
+      <description>[googlemaps https://mapsengine.google.com/map/embed?mid=zJb69KfR-gPs.kNR3I6kcr0VI&amp;amp;w=640&amp;amp;h=480] 今天沿着 Locks to Lakes Passage 北上，进入了 Adirondack State Park 的区域。 Adirondack State Park，Mohawk 语意为食树者。虽然只是个州立公园，但从面积上来看，足有2.4万平方公</description>
+    </item>
+    
+    <item>
+      <title>[Road Trip]北上看红叶 -- Day 2 Lakes to Locks Passage</title>
+      <link>http://blindwith.science/2015/10/398.html/</link>
+      <pubDate>Fri, 02 Oct 2015 10:54:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/10/398.html/</guid>
+      <description>[googlemaps https://mapsengine.google.com/map/embed?mid=zJb69KfR-gPs.k1QE4Kcefx-U&amp;amp;w=640&amp;amp;h=480] 昨天晚上回酒店很早，就把今明两天在纽约的行程确定下来。说起来很简单，沿 Lakes to Locks Passage 游玩 Adirondack State Park：第一日沿途游玩 Saratoga NHP，Lake Geor</description>
+    </item>
+    
+    <item>
+      <title>[Road Trip]北上看红叶 -- Day 1 Mohawk Towpath Scenic Byway</title>
+      <link>http://blindwith.science/2015/10/397.html/</link>
+      <pubDate>Thu, 01 Oct 2015 08:55:38 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/10/397.html/</guid>
+      <description>[googlemaps https://mapsengine.google.com/map/embed?mid=zJb69KfR-gPs.kFg5mXfEqYDk&amp;amp;w=640&amp;amp;h=480] 我所在的新英格兰地区，最出名的，恐怕就是秋天漫山遍野的红叶。看红叶的具体日期年年不同，但大致都在九月末十月初。所以，北上看红叶，是老妈刚</description>
+    </item>
+    
+    <item>
+      <title>中秋&#43;超级月亮&#43;月全食</title>
+      <link>http://blindwith.science/2015/09/396.html/</link>
+      <pubDate>Mon, 28 Sep 2015 11:48:36 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/09/396.html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>[游记]小记纽约五日游</title>
+      <link>http://blindwith.science/2015/09/395.html/</link>
+      <pubDate>Sat, 26 Sep 2015 11:34:35 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/09/395.html/</guid>
+      <description>这几日母上大人来，便给她策划了一个非主流美东游——一般来说美东游是指波士</description>
+    </item>
+    
+    <item>
+      <title>[R] 久不编程爪已疏 —— R初学以及挣扎于非线性拟合与bquote的用法上</title>
+      <link>http://blindwith.science/2015/09/394.html/</link>
+      <pubDate>Mon, 14 Sep 2015 02:45:13 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/09/394.html/</guid>
+      <description>像我这种做Enzyme kinetic的砖工，每天都有大把时间耗在处理数据+作图上。过去的几年里，懒惰的我都是先从运行软件（UVProbe）上</description>
+    </item>
+    
+    <item>
+      <title>[真·剁手指南]Wüsthof的三德刀及选刀要点总结</title>
+      <link>http://blindwith.science/2015/09/393.html/</link>
+      <pubDate>Sat, 05 Sep 2015 14:56:11 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/09/393.html/</guid>
+      <description>来美帝三年多，在刀的选用方面一直极不讲究。一共只两把剁肉刀和一把从家里带来的“祖传”水果刀（切肉也是极为锋利好用）。而且刀都是公用的，也就没</description>
+    </item>
+    
+    <item>
+      <title>无力吐槽工科女的审美了</title>
+      <link>http://blindwith.science/2015/09/392.html/</link>
+      <pubDate>Fri, 04 Sep 2015 12:49:34 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/09/392.html/</guid>
+      <description>唉 唉 唉</description>
+    </item>
+    
+    <item>
+      <title>[剁手清单]奸笑社那些颜值高的手办</title>
+      <link>http://blindwith.science/2015/09/391.html/</link>
+      <pubDate>Fri, 04 Sep 2015 05:21:26 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/09/391.html/</guid>
+      <description>&lt;p&gt;老妈月底要来看我，就盘算着让她带点祖国版的手办来摆车上。问我为什么不买原版的，在国内的时候，价钱是主因。那时只能买一些冷门散货，比如NHK的天气娘（其实还是很萌的）&lt;/p&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;600&amp;rdquo;]&lt;img src=&#34;http://images.goodsmile.info/cgm/images/product/20101129/3027/12097/large/d126d192982790dbc405aae643102478.jpg&#34; alt=&#34;&#34; /&gt; &lt;sup&gt;2011&lt;/sup&gt;&amp;frasl;&lt;sub&gt;04&lt;/sub&gt; #146 Nendoroid Haru-chan (ねんどろいど 春ちゃん) 3,619円 ＋税 伊藤霊一[/caption]&lt;/p&gt;
+
+&lt;p&gt;而现在，介于我在这儿买乐高和旅行纪念品的疯狂劲，所花的那些钱至少早就能把我喜欢的那些小粘土全部收入囊中了，所以关键还是购买的不便。美帝不像国内这样，有万能的淘宝来帮你囤旧买新。诚然，可以在GSC官网上预定，但是且不说20刀的运费已是小粘土的一半价格，一旦错过预定期就与官网无缘了（比如最近的中秋音）。这时只能在类似Amiami的网站上看有没有现货，不过有的话运费也是大头。不过其实这次买祖国版的主要原因是好奇心，以及美帝恶劣的日照。&lt;/p&gt;
+
+&lt;p&gt;废话说完，下面开始盘点（好吧这也是未来毕业了要是有幸能找到工作以后的剁手清单）：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>史上最糟糕重装历程。。</title>
+      <link>http://blindwith.science/2013/10/390.html/</link>
+      <pubDate>Tue, 29 Oct 2013 10:13:25 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2013/10/390.html/</guid>
+      <description>虽然对于一个考虑问题足够全面的人来说，这样一个标题如果不加上“之一”两字实在欠妥，但是我也不想再在重装系统这样一桩毫无技术含量的小事上大动干</description>
+    </item>
+    
+    <item>
+      <title>Kindle DXG(2.5.8) 中文字体手记</title>
+      <link>http://blindwith.science/2013/04/389.html/</link>
+      <pubDate>Sun, 21 Apr 2013 06:21:20 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2013/04/389.html/</guid>
+      <description>Kindle DXG是一款霸气却又被遗弃的半成品。用其来看漫画和古籍扫描本堪称完美，但因为便携性、价格、以及市场选取等因素而惨遭降价停产，版本号永久停留</description>
+    </item>
+    
+    <item>
+      <title>就摘几句燕丹子传有意思的地方。。</title>
+      <link>http://blindwith.science/2013/03/388.html/</link>
+      <pubDate>Mon, 25 Mar 2013 04:54:41 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2013/03/388.html/</guid>
+      <description>读《燕丹子传》，虽《战国策·燕太子丹質於秦亡歸》《史记·刺客列传》可为正史，《燕丹子传》更近乎小说，成书年代亦存疑，但细节互为补充使荆轲刺秦</description>
+    </item>
+    
+    <item>
+      <title>从京东海外版想到的</title>
+      <link>http://blindwith.science/2012/10/387.html/</link>
+      <pubDate>Sun, 21 Oct 2012 03:43:26 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2012/10/387.html/</guid>
+      <description>久不读书，但心中文艺的那一小块在听闻京东推出海外版还免运费的消息后还是酥麻了一下。日移墙影，初高中时读书的激情早不在，但购书执念愈涨，可能是</description>
+    </item>
+    
+    <item>
+      <title>一点笔记V</title>
+      <link>http://blindwith.science/2012/06/386.html/</link>
+      <pubDate>Sat, 23 Jun 2012 22:19:10 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2012/06/386.html/</guid>
+      <description>毒月端午 今天端午，一个古时候有许多讲究但是到了今天仅仅是用来多放一天假还有粽子吃的节日。写点笔记记录下今天的习俗和粽子的做法。 蒲剑蓬鞭 外婆事</description>
+    </item>
+    
+    <item>
+      <title>一点笔记IV</title>
+      <link>http://blindwith.science/2012/06/385.html/</link>
+      <pubDate>Thu, 21 Jun 2012 23:03:26 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2012/06/385.html/</guid>
+      <description>今天夏至，家里的传统是吃馄饨。问外婆夏至有木有什么俗语，外婆想了半天，曰：夏至不吃馄饨，死后呒么坟敦。 今天太晚了，明天写吧。。</description>
+    </item>
+    
+    <item>
+      <title>一点笔记III</title>
+      <link>http://blindwith.science/2012/06/384.html/</link>
+      <pubDate>Sun, 10 Jun 2012 23:40:45 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2012/06/384.html/</guid>
+      <description>茭白 茭白常有，所以常吃。其中稻茭最为香糯。茭白长短粗细不较，一般从肉质看，挑选细腻、嫩、肉滋滋的，切忌内有灰斑者。通常，根据共炒的食材，茭白</description>
+    </item>
+    
+    <item>
+      <title>一点笔记 II</title>
+      <link>http://blindwith.science/2012/06/383.html/</link>
+      <pubDate>Sun, 10 Jun 2012 00:00:12 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2012/06/383.html/</guid>
+      <description>鲫鱼汤 鲫鱼一般挑选半斤左右的最好，最为清甜。小了骨头多，大了则不足味了。一般乌背鲫鱼最好，是野生的，肉质鲜嫩。 《随园食单》中云： 鲫鱼先要善买</description>
+    </item>
+    
+    <item>
+      <title>一点笔记 I</title>
+      <link>http://blindwith.science/2012/06/382.html/</link>
+      <pubDate>Fri, 08 Jun 2012 22:03:59 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2012/06/382.html/</guid>
+      <description>想到去了米国大部分时间都得自己烧饭，就觉得该做些准备。平时想到什么就记下来，省的以后忘了。顺便再记点别的。话说我最近又对清代笔记长草了，不过</description>
+    </item>
+    
+    <item>
+      <title>敏感日上海貌似水果~</title>
+      <link>http://blindwith.science/2012/06/381.html/</link>
+      <pubDate>Mon, 04 Jun 2012 23:08:25 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2012/06/381.html/</guid>
+      <description>由于传闻里上海是不按照预约时间进场的，而我前两天又忘了买票，昨天打开12306被上班族的热情shock到的我为了早到，花了八十大洋买了传说中</description>
+    </item>
+    
+    <item>
+      <title>伪全息投影DIY~</title>
+      <link>http://blindwith.science/2012/05/380.html/</link>
+      <pubDate>Sun, 20 May 2012 23:49:38 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2012/05/380.html/</guid>
+      <description>首先放上成品图 前两天在机锋看到一个做手机全息投影的帖子 （果壳上也有一个，可是那个我实在吐槽无力了 无视之。。），一直心心念念地想做来着。后来写</description>
+    </item>
+    
+    <item>
+      <title>闲情偶寄有意思/解惑的地方摘录</title>
+      <link>http://blindwith.science/2012/02/379.html/</link>
+      <pubDate>Fri, 17 Feb 2012 14:49:58 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2012/02/379.html/</guid>
+      <description>最近各种原因使得心情不太好，每晚看过电视后便读一会闲情偶寄。上古简体横排的版本挺方便阅读的，相比中华书局那些版本，三四百页的书前者只要几个小</description>
+    </item>
+    
+    <item>
+      <title>于是大家都中毒了——咸家一日游</title>
+      <link>http://blindwith.science/2011/08/378.html/</link>
+      <pubDate>Fri, 19 Aug 2011 22:54:21 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2011/08/378.html/</guid>
+      <description>咸咸说，要做披萨。于是咸咸家冰箱里冒出了各种芝士片，洋葱，青椒，蘑菇，火腿片，还有自发粉。（话说，为什么都放在冰箱里——千大在窗台底下找蒜头</description>
+    </item>
+    
+    <item>
+      <title>配眼镜</title>
+      <link>http://blindwith.science/2011/08/377.html/</link>
+      <pubDate>Thu, 18 Aug 2011 23:31:20 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2011/08/377.html/</guid>
+      <description>今天去配眼镜，早上和朱震约好，却又迟到了，真是罪过。 配镜时看中一副红框眼镜，无奈价高，便换了另一副。说来一句话，却是纠结了我一上午——选择恐</description>
+    </item>
+    
+    <item>
+      <title>苏州话报站</title>
+      <link>http://blindwith.science/2011/08/376.html/</link>
+      <pubDate>Wed, 17 Aug 2011 23:58:25 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2011/08/376.html/</guid>
+      <description>从平江新城那一块回来恰好坐的是游五，我便赶上了传说中的苏州话报站。 姜饼话说在前，便有个概念说是新的苏州话报站让人听得头皮发麻；也曾听过别人的</description>
+    </item>
+    
+    <item>
+      <title>我就像个车轮一样滚啊滚。。</title>
+      <link>http://blindwith.science/2011/08/375.html/</link>
+      <pubDate>Sun, 14 Aug 2011 23:31:45 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2011/08/375.html/</guid>
+      <description>作为前段时间因笨笨小千大大的习惯性失言——同时又是不可饶恕的食言——而对前者不理不睬不管不问甚至一度采取极端行为态度这两天才稍有好转的青春无</description>
+    </item>
+    
+    <item>
+      <title>婚姻法解释三的若干想法</title>
+      <link>http://blindwith.science/2011/08/374.html/</link>
+      <pubDate>Sat, 13 Aug 2011 22:10:52 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2011/08/374.html/</guid>
+      <description>婚姻法解释三颁布了。看似这次的婚姻法解释保护了婚姻双方资产的利益。但是，在现在男女在工作机会，社会地位上的差异仍然十分巨大的情况下，这样看似</description>
+    </item>
+    
+    <item>
+      <title>以前看到好玩的关于书的点名- -</title>
+      <link>http://blindwith.science/2011/07/373.html/</link>
+      <pubDate>Thu, 14 Jul 2011 13:13:54 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2011/07/373.html/</guid>
+      <description>1 每次读一定会流泪的是什么书？ 木有吧- -会流泪的有，可不会再读- - &amp;nbsp; 2 购买过全集吗？是什么全集？ 好吧我是全集控，全集神马的最有爱的，放在书架</description>
+    </item>
+    
+    <item>
+      <title>qq啊~你让我情何以堪</title>
+      <link>http://blindwith.science/2010/11/372.html/</link>
+      <pubDate>Mon, 29 Nov 2010 18:48:06 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/11/372.html/</guid>
+      <description>先是十几天前提示我“您的qq版本即将过期”神马的。。。——2009才过去多久啊。。。 然后几天前我想登qq时告诉我您的qq版本太旧不能使用，让</description>
+    </item>
+    
+    <item>
+      <title>诽谤什么的，最讨厌了——对林晨言论的碎碎念</title>
+      <link>http://blindwith.science/2010/09/371.html/</link>
+      <pubDate>Tue, 21 Sep 2010 22:42:03 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/09/371.html/</guid>
+      <description>二零一零年九月十七日 周五上午三四节课 大学语文 林晨发表过这些言论 “常识这个东西，作为你们当中任何一个念过大学的人来说，作为你们所有知识系统当中</description>
+    </item>
+    
+    <item>
+      <title>低潮期絮语</title>
+      <link>http://blindwith.science/2010/07/370.html/</link>
+      <pubDate>Fri, 23 Jul 2010 13:07:15 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/07/370.html/</guid>
+      <description>云是很神奇的物种。它缠绵，翻滚，完全就是人欲望的纠结。爽气，一如墨汁倾入水中，混混然地漫化开来，愈浓，而又变淡。蓦地只见兵戈相见，战场上墨血</description>
+    </item>
+    
+    <item>
+      <title>暑假第一天</title>
+      <link>http://blindwith.science/2010/07/369.html/</link>
+      <pubDate>Thu, 08 Jul 2010 15:44:40 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/07/369.html/</guid>
+      <description>暑假的开端是颓废的。 昨天本来想熬夜到凌晨两点半看球的，结果熬到一点实在熬不下去了。再醒来，电视开着，比赛刚开始，大家在唱国歌，结果看了一半老</description>
+    </item>
+    
+    <item>
+      <title>俺的考试时间安排</title>
+      <link>http://blindwith.science/2010/06/368.html/</link>
+      <pubDate>Wed, 09 Jun 2010 17:00:36 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/06/368.html/</guid>
+      <description>&amp;nbsp; 科目 日期 时间 地点 统计学 6月11日 晚上6:30-8:10 B404、406 催化反应原理 6月24日 上午10:00 B302 财政学 6月24日 晚6：30 B4</description>
+    </item>
+    
+    <item>
+      <title>两个游戏</title>
+      <link>http://blindwith.science/2010/05/367.html/</link>
+      <pubDate>Wed, 26 May 2010 09:30:43 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/05/367.html/</guid>
+      <description>今天玩了两个游戏。 游戏一是jpl在贴吧上推荐的宅男最后的120个小时。非常有创意的互动视频，用galgame的方式做香港的旅游推介。虽然对两</description>
+    </item>
+    
+    <item>
+      <title>各种人渣各种门</title>
+      <link>http://blindwith.science/2010/05/366.html/</link>
+      <pubDate>Wed, 19 May 2010 09:21:22 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/05/366.html/</guid>
+      <description>最近不管什么事件都被冠以“门”的名字，一个是显示出现在网友的创造力有点小差，以前好歹还有七十码什么的，现在完全就墨守成规不会创新了，还有一个</description>
+    </item>
+    
+    <item>
+      <title>喝茶</title>
+      <link>http://blindwith.science/2010/05/365.html/</link>
+      <pubDate>Sun, 16 May 2010 13:27:46 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/05/365.html/</guid>
+      <description>这两天T上常见的几个词，五区公投，被喝茶。我置身事外。他们关注自由，而我只是发些腻腻歪歪的小情感。 有的时候心情不好，就会找些小书看看。结果米</description>
+    </item>
+    
+    <item>
+      <title>月之恋人你把我雷得里嫩外焦。。</title>
+      <link>http://blindwith.science/2010/05/364.html/</link>
+      <pubDate>Fri, 14 May 2010 08:28:26 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/05/364.html/</guid>
+      <description>这两年11区民众貌似很喜欢来魔都取景，这个没什么。你看人家Canaan，Triangle，拍的又好看又精彩，这个月之恋人我是真的受不了了。。</description>
+    </item>
+    
+    <item>
+      <title>念、念不忘</title>
+      <link>http://blindwith.science/2010/05/363.html/</link>
+      <pubDate>Wed, 12 May 2010 08:50:33 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/05/363.html/</guid>
+      <description>“不是每一处房屋都会倒下，不是每一个生命都会被忘记，不是每一座桥梁一定被阻断，不是每一个祈愿一定被谎言。《念》”——aiww 以前follow</description>
+    </item>
+    
+    <item>
+      <title>菊与刀与其他</title>
+      <link>http://blindwith.science/2010/04/358.html/</link>
+      <pubDate>Fri, 30 Apr 2010 15:11:32 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/04/358.html/</guid>
+      <description>今天结构课看了一半晶体的就看不下去了，也许是缺少睡眠的原因。于是打开《菊与刀》，读完剩下的八章。这本小册子呆在书包里很久了，一直拿出来又放了</description>
+    </item>
+    
+    <item>
+      <title>iTunes的bug？</title>
+      <link>http://blindwith.science/2010/02/357.html/</link>
+      <pubDate>Mon, 22 Feb 2010 14:00:18 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/02/357.html/</guid>
+      <description>今天给自己的小nano传歌。有一个网上下载的podcast集，放在音乐里，看着乱奇怪的。于是就在选项的媒体选项里把它改成podcast了。经</description>
+    </item>
+    
+    <item>
+      <title>化学知识普及：氩氪烯</title>
+      <link>http://blindwith.science/2010/02/356.html/</link>
+      <pubDate>Sun, 21 Feb 2010 00:27:34 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/02/356.html/</guid>
+      <description>简介 氩氪烯，化学名称C10H10Ar2Kr。别名二氩二茂氪，二氩双(η5-2,4-环戊二烯-1-基)氪 Di(Argon)titanium(IV) krypton，Titanocene</description>
+    </item>
+    
+    <item>
+      <title>读了几篇明清小品</title>
+      <link>http://blindwith.science/2010/02/355.html/</link>
+      <pubDate>Sat, 20 Feb 2010 18:25:57 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/02/355.html/</guid>
+      <description>近来多日，都是上网，间以游乐。只是一桌的书本，不曾翻阅。上学的时候，总是心心念念着要读书，越是离考试近了，越是像有蛔虫似的想去翻书。心中交战</description>
+    </item>
+    
+    <item>
+      <title>瞎写点常熟有的苏州没有的……</title>
+      <link>http://blindwith.science/2010/02/354.html/</link>
+      <pubDate>Fri, 12 Feb 2010 23:05:43 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/02/354.html/</guid>
+      <description>虽然苏州出生，但小时候有一段的时间在常熟乡下长大（导致我苏州话总归说不大连牵……）。虽然更喜欢苏州，想当一个更纯的苏州人，但还是改不了半个常</description>
+    </item>
+    
+    <item>
+      <title>关于那个【第六感运算装置和纸“计算机”】瞎想想……</title>
+      <link>http://blindwith.science/2010/02/353.html/</link>
+      <pubDate>Thu, 11 Feb 2010 00:42:47 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/02/353.html/</guid>
+      <description>刚刚看了一个TED大会的视频，就是一个印度人的设计。他那个图像扫描一下子让我想到了“东之伊甸”计划。那个需要强大的图像辨识系统和数据库支持，</description>
+    </item>
+    
+    <item>
+      <title>明信片的故事~</title>
+      <link>http://blindwith.science/2010/02/352.html/</link>
+      <pubDate>Tue, 09 Feb 2010 23:52:05 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/02/352.html/</guid>
+      <description>今天把大一下学期玩postcrossing收到的明信片都整理了一下，建了个相册。大一下学期就是在寄信的兴奋与等待的欢欣中度过的。一次5张，一</description>
+    </item>
+    
+    <item>
+      <title>ania~三国杀~</title>
+      <link>http://blindwith.science/2010/02/351.html/</link>
+      <pubDate>Tue, 09 Feb 2010 00:01:54 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/02/351.html/</guid>
+      <description>今天和老蒋见面了，除去上次小学同学聚会，应该算是八年来第一次碰头了吧~（泪目……）话说我周围学德语的人人头真的是多得呀……于是她带我进入了三</description>
+    </item>
+    
+    <item>
+      <title>检讨……</title>
+      <link>http://blindwith.science/2010/02/350.html/</link>
+      <pubDate>Sun, 07 Feb 2010 23:43:43 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/02/350.html/</guid>
+      <description>话说今天（确切地说是昨天），由于跟踪、挖坟等一系列举动把前百同学惹怒了……于是画了幅检讨画…… p.s.我妈说我画儿童画倒画得蛮好的= = p.s</description>
+    </item>
+    
+    <item>
+      <title>某个质疑</title>
+      <link>http://blindwith.science/2010/02/349.html/</link>
+      <pubDate>Sat, 06 Feb 2010 22:05:09 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/02/349.html/</guid>
+      <description>最近一直都没看书，今天想想不行了哇，于是洗脚的时候翻了两页余英时的《重寻胡适历程》，然后发现了点小问题（或者说之前就存于我心头的疑虑得到了一</description>
+    </item>
+    
+    <item>
+      <title>内个啥，上渣画</title>
+      <link>http://blindwith.science/2010/02/348.html/</link>
+      <pubDate>Fri, 05 Feb 2010 21:20:18 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/02/348.html/</guid>
+      <description>好吧，渣图退散！！！ p.s.一边画图一边看School Days……神作也，心理刻画及其强悍……Nice Boat出现的一刻，我的身心都被净化了</description>
+    </item>
+    
+    <item>
+      <title>阿凡达什么的，都是浮云~~</title>
+      <link>http://blindwith.science/2010/02/347.html/</link>
+      <pubDate>Thu, 04 Feb 2010 22:37:01 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/02/347.html/</guid>
+      <description>好吧，Avatar当然不是浮云好好看啊好好看我不当剧透君被砍，但是不剧透真的我被震撼到无话可说了！3D效果超赞的，胶片Imax也颇让人有身临</description>
+    </item>
+    
+    <item>
+      <title>回盼盼点名~~~~~~~~~</title>
+      <link>http://blindwith.science/2010/02/346.html/</link>
+      <pubDate>Wed, 03 Feb 2010 23:29:21 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/02/346.html/</guid>
+      <description>游戏规则： 1：增加一个你想增加的问题，然后去掉一个不喜欢的问题，然后传给朋友 2：点名人数5～10个内 3：被点到的人必须遵守规则完成 Q1：如果</description>
+    </item>
+    
+    <item>
+      <title>100129</title>
+      <link>http://blindwith.science/2010/01/345.html/</link>
+      <pubDate>Sat, 30 Jan 2010 00:40:41 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/01/345.html/</guid>
+      <description>整理了个贴吧活动阿凡达汇总贴……好累啊，睡去也 http://tieba.baidu.com/f?kz=703523579 &amp;nbsp; 科文的胶片imax，不行就嘉禾的双机3d。周一三四五，暂定2月4日。 （有人想加入我们的阿凡</description>
+    </item>
+    
+    <item>
+      <title>杯具的诞生——尼采（伪）</title>
+      <link>http://blindwith.science/2010/01/344.html/</link>
+      <pubDate>Fri, 29 Jan 2010 00:20:24 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/01/344.html/</guid>
+      <description>额，今天高中同学聚会了……一开始还是很兴奋滴，这次同学聚会去的人特别多，四十几个人的班我觉得去了有三十来个了吧~ 去的不算早，不过门口基本上没</description>
+    </item>
+    
+    <item>
+      <title>前百家一日游……有图有真相</title>
+      <link>http://blindwith.science/2010/01/343.html/</link>
+      <pubDate>Wed, 27 Jan 2010 21:04:34 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/01/343.html/</guid>
+      <description>今天跑到百爸爸家去玩了。话说她染头发了，不过迟钝的我一如既往很晚才发现……不过还是发现了，棕红色（其实也没多大变化的说）。中午可怜巴巴的去吃</description>
+    </item>
+    
+    <item>
+      <title>100126</title>
+      <link>http://blindwith.science/2010/01/342.html/</link>
+      <pubDate>Tue, 26 Jan 2010 20:07:54 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/01/342.html/</guid>
+      <description>今天睡到自然醒，又赖了会儿床。宅在家里的时候，寒假貌似就失去了意义。大约摸张看看，和高中也没什么区别，要说有也就是经过大学的一个学期人会透支</description>
+    </item>
+    
+    <item>
+      <title>奔三第三天……</title>
+      <link>http://blindwith.science/2010/01/341.html/</link>
+      <pubDate>Mon, 25 Jan 2010 22:02:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/01/341.html/</guid>
+      <description>一边奔着三一边奔回苏州，然后宅了一天，今天便是奔三第三天了……（圆圆你也是大妈了哇哈哈哈哈~） 早上被老妈拖去中医院，结果囧，那个医生要提前一</description>
+    </item>
+    
+    <item>
+      <title>也许我应该睡觉去了</title>
+      <link>http://blindwith.science/2009/11/340.html/</link>
+      <pubDate>Sat, 21 Nov 2009 00:03:56 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/11/340.html/</guid>
+      <description>我到底是怎么了，倒了什么霉 我不就是一个无能的人，碰巧会了一点ps的皮毛 显然没有百百的好 仅仅我们学院也有比我好的 为什么凡是做到乱七八糟的ppt</description>
+    </item>
+    
+    <item>
+      <title>能上网了~撒花~~</title>
+      <link>http://blindwith.science/2009/10/339.html/</link>
+      <pubDate>Sun, 18 Oct 2009 12:13:26 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/10/339.html/</guid>
+      <description>今天一大清早（才八点多啊姐姐），宿舍门口出现男人的声音，敲门…… 于是躲在被窝里打呼的三只以迅雷不及掩耳盗铃之势起身，边念道修网线的叔叔你们不</description>
+    </item>
+    
+    <item>
+      <title>悼念我掉水里的ipod</title>
+      <link>http://blindwith.science/2009/08/338.html/</link>
+      <pubDate>Sun, 30 Aug 2009 17:02:45 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/08/338.html/</guid>
+      <description>ipod进水了，然后报废了。 某天我洗衣服的时候让ipod头朝下载到水里面，于是它湿了。很快从肥皂水里捞起来，而之后它还在放音乐，我便轻易以为</description>
+    </item>
+    
+    <item>
+      <title>新番鉴定报告（一）</title>
+      <link>http://blindwith.science/2009/07/337.html/</link>
+      <pubDate>Wed, 22 Jul 2009 20:58:42 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/07/337.html/</guid>
+      <description>这次鉴定新番，由于新番们都出了三集以上了，所以我尽量看完三话再发话。不过某些雷剧我就看一话就抛弃不能怪我啊= =（关于截图某人不说什么啊，最近</description>
+    </item>
+    
+    <item>
+      <title>宅家家诺……</title>
+      <link>http://blindwith.science/2009/07/336.html/</link>
+      <pubDate>Tue, 21 Jul 2009 20:49:32 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/07/336.html/</guid>
+      <description>宅家里的第二天，或者说是不得不宅。很迷茫的开着电脑，或者说是不开电脑无事可做，或者说是无力做其他的事。头晕脚软，无力，中午稍微有点油下午就又</description>
+    </item>
+    
+    <item>
+      <title>回家家了</title>
+      <link>http://blindwith.science/2009/07/335.html/</link>
+      <pubDate>Tue, 21 Jul 2009 08:51:51 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/07/335.html/</guid>
+      <description>凌晨，火车上，大概两点多，头晕得想吐，于是爬起来去厕所吐。火车颠簸，吐了三次，不想爬到中铺，我便拖了被子下来在小计铺上坐着，久久便趴在她身上</description>
+    </item>
+    
+    <item>
+      <title>关于二排长性取向的推理= =</title>
+      <link>http://blindwith.science/2009/07/334.html/</link>
+      <pubDate>Fri, 17 Jul 2009 11:17:24 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/07/334.html/</guid>
+      <description>二排长小眼睛，微黑，个子不高，总给人一种其貌不扬的感觉。但他总会腼腆的浅笑，露出嘴角的酒窝，忸怩地摆着臂，踏步，给人不仅仅以与其实际87年生</description>
+    </item>
+    
+    <item>
+      <title>在南开渐渐死去</title>
+      <link>http://blindwith.science/2009/07/333.html/</link>
+      <pubDate>Sun, 12 Jul 2009 16:49:08 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/07/333.html/</guid>
+      <description>标题党们又会失望了，其实俺就是想发个军训时间表来着个，感觉军训了和外界的联系几乎没有了，米那桑不是我无视忘记忽略你们阿… 我们五点起床，洗漱，</description>
+    </item>
+    
+    <item>
+      <title>暑假游~~</title>
+      <link>http://blindwith.science/2009/04/332.html/</link>
+      <pubDate>Wed, 22 Apr 2009 11:48:42 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/04/332.html/</guid>
+      <description>暑假多漫长啊， 我们出去玩吧~~ 而且这种事定房子定票越早越好的说 想去 什么地方 玩啊，定在 什么时间 啊，给我 留言 啊~ p.s.1 最近都不理我博客，俺就发校内了</description>
+    </item>
+    
+    <item>
+      <title>提喻</title>
+      <link>http://blindwith.science/2009/03/331.html/</link>
+      <pubDate>Sat, 14 Mar 2009 14:03:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/03/331.html/</guid>
+      <description>茫然，迷失，死亡在脑海中遍历，视图中无数次循环着这样的画面，飞机，家中，医院，变换的场景，不变的都是脑海中穿梭的剧本成为现实的缩演。时间不再</description>
+    </item>
+    
+    <item>
+      <title>莫名其妙的</title>
+      <link>http://blindwith.science/2009/03/330.html/</link>
+      <pubDate>Thu, 12 Mar 2009 13:03:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/03/330.html/</guid>
+      <description>早上自主学习大厅速度很彪，只用了半个小时，我下下来了6个G的东西（六部电影加一部美剧——可见画质很差的，不过在无线速度慢的连音乐都下不下来的</description>
+    </item>
+    
+    <item>
+      <title>诗词几首</title>
+      <link>http://blindwith.science/2009/03/329.html/</link>
+      <pubDate>Sat, 07 Mar 2009 08:03:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/03/329.html/</guid>
+      <description>寒假的某日，咸阿姨发来个词牌，月下笛，硬要我填。据说是奶奶看到了让咸阿姨填的。却一直没有后文，当然仅仅是我。开了学，咸阿姨不忘提醒，终于在上</description>
+    </item>
+    
+    <item>
+      <title>写博啦写博啦</title>
+      <link>http://blindwith.science/2009/03/328.html/</link>
+      <pubDate>Fri, 06 Mar 2009 12:03:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/03/328.html/</guid>
+      <description>恩多天没写博了，有些小无聊。也不知道为什么，平时总将写博当成一种用来强迫自己的嗜好，而进了大学，这样的嗜好湮灭了，换来的是，每天上校内更改状</description>
+    </item>
+    
+    <item>
+      <title>我要做个谦卑的小孩……</title>
+      <link>http://blindwith.science/2009/02/327.html/</link>
+      <pubDate>Thu, 19 Feb 2009 23:34:32 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/02/327.html/</guid>
+      <description>时隔三年，又一次聆听蒋同学发表他的历史长篇大论（也可以称之为普及历史知识……）。当时在苏大溜达，就和JPL乱有共鸣地谈论他的往事。我：当年初</description>
+    </item>
+    
+    <item>
+      <title>关于小黑的一键恢复</title>
+      <link>http://blindwith.science/2009/02/326.html/</link>
+      <pubDate>Wed, 18 Feb 2009 10:50:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/02/326.html/</guid>
+      <description>昨天因为sid的问题搞得头大（不是性手枪主唱！跟nancy无关！也别跟我想众多drama中的昵称，比如skins！……是不是有点愤然了？……</description>
+    </item>
+    
+    <item>
+      <title>俺想认真地学习计算机技术……</title>
+      <link>http://blindwith.science/2009/02/325.html/</link>
+      <pubDate>Tue, 17 Feb 2009 23:21:39 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/02/325.html/</guid>
+      <description>在美化系统方面，stardock的东东可谓独占鳌头。其中某款cursorxp即是好东西之一。不过网上搜搜发现老早有新版的cursorfx出现</description>
+    </item>
+    
+    <item>
+      <title>双系统小记</title>
+      <link>http://blindwith.science/2009/02/324.html/</link>
+      <pubDate>Tue, 17 Feb 2009 01:20:32 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/02/324.html/</guid>
+      <description>虽然网上找了不少资料（以跨过第一二道坎），不过自己操作的时候并不是那么简单 Thinkpad X200，预装的Vista。想用但又不想被其兼容性所左右的我，还</description>
+    </item>
+    
+    <item>
+      <title>独发校内——点名贴……</title>
+      <link>http://blindwith.science/2009/02/323.html/</link>
+      <pubDate>Sun, 15 Feb 2009 00:31:53 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/02/323.html/</guid>
+      <description>一个说法是，虽然我对自己总没人点名的情形很是郁闷，但是也不想用点名帖来干扰我小歪的正常书写。 其实还有另一种说法，那就是小歪暂时禁止对外开放，</description>
+    </item>
+    
+    <item>
+      <title>小学同学聚会</title>
+      <link>http://blindwith.science/2009/02/322.html/</link>
+      <pubDate>Tue, 10 Feb 2009 16:02:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/02/322.html/</guid>
+      <description>原定在4点的小学聚会，提前到了3点半。其实提前或者没提前都没关系，最终仍旧是4点由叶老师领进了大门。从平江路骑车到了小学门口，融入人群。其实</description>
+    </item>
+    
+    <item>
+      <title>元宵灯会不见月</title>
+      <link>http://blindwith.science/2009/02/321.html/</link>
+      <pubDate>Mon, 09 Feb 2009 15:02:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/02/321.html/</guid>
+      <description>今天元宵节，吃过元宵就一家人跑到胥门去看灯会。 回来时经士其巷，书院巷，十全街，带成桥路，竹辉路回家~ 先留个爪子，明天放照片&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>累哦~</title>
+      <link>http://blindwith.science/2009/02/320.html/</link>
+      <pubDate>Sat, 07 Feb 2009 13:02:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/02/320.html/</guid>
+      <description>累累的哦~今天 早晨跟了老妈跑到科文去看赤壁下。我们还真是落伍啊，一回家就说要看赤壁看赤壁，结果一推再推，就看了个《叶问》啊没继续。今天终于看</description>
+    </item>
+    
+    <item>
+      <title>自问自答Proust</title>
+      <link>http://blindwith.science/2009/02/319.html/</link>
+      <pubDate>Tue, 03 Feb 2009 14:02:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/02/319.html/</guid>
+      <description>一向没人点我名，我自己点自己名了…… 普鲁斯特问卷 1.你认为最完美的快乐是怎样的？ 心无旁骛 2.你最希望拥有哪种才华？ 读心术 3.你最恐惧的是什么</description>
+    </item>
+    
+    <item>
+      <title>轻小说之所以为轻小说</title>
+      <link>http://blindwith.science/2009/02/318.html/</link>
+      <pubDate>Sun, 01 Feb 2009 12:02:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/02/318.html/</guid>
+      <description>今天去剪头发，陪老妈，也给自己做。漫长的等待中，打开手机看一会儿空之境界。手机看书不比实体书，总让我有不适感，没有书的感觉，看到速度也慢。虽</description>
+    </item>
+    
+    <item>
+      <title>无锡真奇妙</title>
+      <link>http://blindwith.science/2009/01/317.html/</link>
+      <pubDate>Sat, 31 Jan 2009 11:01:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/01/317.html/</guid>
+      <description>今天搭子老妈一起去无锡小姑婆家去走亲戚。坐汽车到无锡汽车站（无锡好像就一个汽车站诺，不方便），然后做了好久的公交，一路发现了不少奇观。 比如，</description>
+    </item>
+    
+    <item>
+      <title>两只脚好酸好酸</title>
+      <link>http://blindwith.science/2009/01/316.html/</link>
+      <pubDate>Fri, 30 Jan 2009 13:01:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/01/316.html/</guid>
+      <description>今天搭子小蹄蹄出去玩。缘起是她有四张寒山寺的票，然后想搭我们一起出去玩玩，结果姚姚要陪妈妈，圆圆不想出去，最后又是我们两个人一高一矮地出去。</description>
+    </item>
+    
+    <item>
+      <title>额又回苏州了</title>
+      <link>http://blindwith.science/2009/01/315.html/</link>
+      <pubDate>Thu, 29 Jan 2009 14:01:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/01/315.html/</guid>
+      <description>经过两天窝在乡下的无奈日子，我终于又回到了苏州的小窝。 两头，除了偶家nano，手机上的轻小说，还有时而跑到341小妹妹（好像也不太小了点说）</description>
+    </item>
+    
+    <item>
+      <title>大年初一不是不应该出门的诺</title>
+      <link>http://blindwith.science/2009/01/314.html/</link>
+      <pubDate>Mon, 26 Jan 2009 14:01:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/01/314.html/</guid>
+      <description>今天中午起了床，然后就去买衣服。 老妈总是对泰华（东楼啦，俺们穷人家买不起西楼的东西）一双千百度的鞋子念念不忘，想着过年了折扣应该低点。结果两</description>
+    </item>
+    
+    <item>
+      <title>冬季日剧横扫之--一</title>
+      <link>http://blindwith.science/2009/01/313.html/</link>
+      <pubDate>Sun, 25 Jan 2009 16:01:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/01/313.html/</guid>
+      <description>迎接牛年的时候，搬到了外婆房里玩电脑，没有网线接口无线信号又微弱的我，不想看春晚，便研究起冬季日剧列~~ 很久没接触日剧了，半年时间，错过了秋</description>
+    </item>
+    
+    <item>
+      <title>生日快乐</title>
+      <link>http://blindwith.science/2009/01/312.html/</link>
+      <pubDate>Fri, 23 Jan 2009 16:01:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/01/312.html/</guid>
+      <description>由于本人p图水平骤减，于是大家请无视图上的斑斑点点…… 今天本天才生日诺。这个详情么……由于太晚，俺就转个贴（众：你不是从来不转帖的么？况且这</description>
+    </item>
+    
+    <item>
+      <title>OC处女作……囧</title>
+      <link>http://blindwith.science/2009/01/311.html/</link>
+      <pubDate>Thu, 22 Jan 2009 09:01:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/01/311.html/</guid>
+      <description>OC，之前就听闻其大名。前日去百爸爸家时发现张她未公之于众的画虫妈妈的小图图，突然又很想去画画看，便下载了个OC玩玩。OC很小，几兆之内，而</description>
+    </item>
+    
+    <item>
+      <title>最近怎么都那么晚才写博</title>
+      <link>http://blindwith.science/2009/01/310.html/</link>
+      <pubDate>Wed, 21 Jan 2009 16:01:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/01/310.html/</guid>
+      <description>今天一天呆在家里，无所事事的样子，于是整理电脑，整理短信。 把短信都导在电脑上，五千多条的样子，我这个有着不删短信强迫症的人，也是要为自己的强</description>
+    </item>
+    
+    <item>
+      <title>今天去百百家玩了诺</title>
+      <link>http://blindwith.science/2009/01/309.html/</link>
+      <pubDate>Tue, 20 Jan 2009 16:01:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/01/309.html/</guid>
+      <description>差不多是正式的寒假第二天吧，从南开校历来看，虽然兜了两天街睡过了一天觉。今天自然去百百家玩了啦，骑车从城内到了城外，风呼呼地啸过，还是很开心</description>
+    </item>
+    
+    <item>
+      <title>回到苏州啦</title>
+      <link>http://blindwith.science/2009/01/308.html/</link>
+      <pubDate>Mon, 19 Jan 2009 14:01:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/01/308.html/</guid>
+      <description>未到苏州的时候，火车上，看着窗外悄寂，无边的黑暗蔓延开来，没有光的荒凉。火车上原本拥挤无立锥之地的状况，却演化为了空寂。一排十个座位，只有我</description>
+    </item>
+    
+    <item>
+      <title>自作孽不可活！</title>
+      <link>http://blindwith.science/2009/01/307.html/</link>
+      <pubDate>Thu, 08 Jan 2009 09:01:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/01/307.html/</guid>
+      <description>数学考试 考得很毛 一共个位数的题 我五道题不会做 还有一些完全是蒙的答案 第一题第二题就不会 第一页就三道题 最后一页全部不会，蒙了一道题 当中两页还有几</description>
+    </item>
+    
+    <item>
+      <title>朔方的手</title>
+      <link>http://blindwith.science/2008/12/306.html/</link>
+      <pubDate>Mon, 29 Dec 2008 12:12:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/12/306.html/</guid>
+      <description>苍白龟裂了枯红 蜿蜒着蜿蜒 蜿蜒着把右手占领 “砰”一枪 便是人墙半个向西 半个向东 &amp;nbsp; 牙白，抑或幽黄 或迷离相伤 或逝灭一弧新月 瘦了眉头 瘦的未必亦是新月 新</description>
+    </item>
+    
+    <item>
+      <title>饿，最近连写博的心想啊么有了</title>
+      <link>http://blindwith.science/2008/12/305.html/</link>
+      <pubDate>Tue, 23 Dec 2008 02:12:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/12/305.html/</guid>
+      <description>积了n多写博计划 继续晕死人的元旦策划 洗头用水量大比拼 好多东西的产地是苏州 这儿都买不到味全 前百发烧了，姚姚发烧了，很多人都发了 下雪 结果啥都写不</description>
+    </item>
+    
+    <item>
+      <title>口水苏州</title>
+      <link>http://blindwith.science/2008/12/304.html/</link>
+      <pubDate>Fri, 12 Dec 2008 06:12:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/12/304.html/</guid>
+      <description>来天津的时候，出租车司机跟我们说，你要是挑剔的主，来天津绝对不会亏待你的嘴巴。天津人讲究的就是两张嘴，一个是说，一个就是吃。听见这句话，还着</description>
+    </item>
+    
+    <item>
+      <title>认真学英语</title>
+      <link>http://blindwith.science/2008/12/303.html/</link>
+      <pubDate>Thu, 11 Dec 2008 12:12:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/12/303.html/</guid>
+      <description>离四级考试还有10天的日子，亦即昨天，俺又屁颠屁颠地去买了本四级词汇书屈指算来，这已经是我的第三本词汇书了……看来我大学还真是认真学习 认识我</description>
+    </item>
+    
+    <item>
+      <title>晕死人的元旦惩罚策划</title>
+      <link>http://blindwith.science/2008/12/302.html/</link>
+      <pubDate>Mon, 08 Dec 2008 06:12:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/12/302.html/</guid>
+      <description>话说我们化学院元旦要搞个联欢晚会，然后我和小萝莉就屁颠屁颠地去争取游戏环节与惩罚设计。两个人手机上网，查到一堆有爱的惩罚，不过一想，这学校很</description>
+    </item>
+    
+    <item>
+      <title>博客却上不去</title>
+      <link>http://blindwith.science/2008/12/301.html/</link>
+      <pubDate>Sun, 07 Dec 2008 05:12:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/12/301.html/</guid>
+      <description>身在天津的日子，无时无刻不感觉到苏州的好（说的好象我过两天就能离开天津这鬼地方似的，虽然我做梦都想着逃脱）。世事就是如此，身处局外才会清晰的</description>
+    </item>
+    
+    <item>
+      <title>今天风采大赛</title>
+      <link>http://blindwith.science/2008/12/300.html/</link>
+      <pubDate>Sat, 06 Dec 2008 14:12:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/12/300.html/</guid>
+      <description>俺们得了三等奖哦～ 一共六组参加决赛，三组三等奖，两组二等奖，一组一等奖…我不喜欢那个一等奖的男生，每次都是演讲，看着很拽，但又丑又怪… 今天俺</description>
+    </item>
+    
+    <item>
+      <title>天津有点吓人哦～</title>
+      <link>http://blindwith.science/2008/12/299.html/</link>
+      <pubDate>Mon, 01 Dec 2008 02:12:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/12/299.html/</guid>
+      <description>今天出去买计算器，也就是走的地方比原来多一点，结果看到两起车祸，弄得我余下的路程都骑得忐忑不安，生怕有辆汽车突然飙出来和我亲密接触，带我到一</description>
+    </item>
+    
+    <item>
+      <title>心理测评结果出来了</title>
+      <link>http://blindwith.science/2008/11/298.html/</link>
+      <pubDate>Thu, 27 Nov 2008 01:11:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/11/298.html/</guid>
+      <description>社交退缩的分数以红色显示了，看来后果很严重…… 解释为：你在人际交往方面喜欢回避，且与人交往时容易紧张。 其他貌似还算正常，虽然都有各种个样的解</description>
+    </item>
+    
+    <item>
+      <title>智力竞猜</title>
+      <link>http://blindwith.science/2008/11/297.html/</link>
+      <pubDate>Tue, 25 Nov 2008 13:11:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/11/297.html/</guid>
+      <description>在天津，果子是什么？ （我惭愧今天才知道…绝对是今天听新东方讲座的收获啊） 在天津，姐姐是什么意思？ （我不幸被各色人等叫过…）&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>回家的n种可能…</title>
+      <link>http://blindwith.science/2008/11/296.html/</link>
+      <pubDate>Tue, 25 Nov 2008 12:11:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/11/296.html/</guid>
+      <description>这年头想回去都很愁啊～主要是方便和票… 一开始想，不管怎么样，至少也是卧铺吧…买不到硬卧买软卧，买不到软卧买飞机～这本是最基本的要求…不过凡事</description>
+    </item>
+    
+    <item>
+      <title>最近我疯狂地听讲座啊~~</title>
+      <link>http://blindwith.science/2008/11/295.html/</link>
+      <pubDate>Fri, 14 Nov 2008 12:11:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/11/295.html/</guid>
+      <description>这个星期基本上我每个晚上都有活动，周一是高数（废话），周二、三、四则是去听讲座。（我最近博客愈发有流水账之嫌了……|||）</description>
+    </item>
+    
+    <item>
+      <title>两场讲座</title>
+      <link>http://blindwith.science/2008/11/294.html/</link>
+      <pubDate>Sat, 08 Nov 2008 11:11:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/11/294.html/</guid>
+      <description>传说南开有四大才子，一为史广顺，一为艾跃进，而其余二人则是铁打的算盘流水的兵，谁也不知道下一种名单上写的是谁。这星期我倒是把这两大才子的课都</description>
+    </item>
+    
+    <item>
+      <title>蹭课是个有趣的事~~</title>
+      <link>http://blindwith.science/2008/11/293.html/</link>
+      <pubDate>Sun, 02 Nov 2008 03:11:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/11/293.html/</guid>
+      <description>是谁说的，大学生活就是由蹭课组成的，没有蹭课的生活或许就不能称之为大学生活可惭愧的是，进了大学那么久，我只蹭过两次课，两次课，两次课啊……不</description>
+    </item>
+    
+    <item>
+      <title>大学生活啊</title>
+      <link>http://blindwith.science/2008/10/292.html/</link>
+      <pubDate>Mon, 27 Oct 2008 07:10:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/10/292.html/</guid>
+      <description>最近累死了，哎~~大家也知道我的高中生活是非常规律的，正常来说我是那种每天坚持早七点晚十点（九点才王道啊！）早睡早起的好孩子，风雨无阻，繁闲</description>
+    </item>
+    
+    <item>
+      <title>今天够体力的</title>
+      <link>http://blindwith.science/2008/10/291.html/</link>
+      <pubDate>Sat, 25 Oct 2008 14:10:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/10/291.html/</guid>
+      <description>今天我们院里年级运动会&amp;hellip;（这可是我们入学来第三场运动会了，果然大学就是高级啊！） 今天的年级运动会，顾名思义就是化学院九个班之间</description>
+    </item>
+    
+    <item>
+      <title>新番啊…大学啊</title>
+      <link>http://blindwith.science/2008/10/290.html/</link>
+      <pubDate>Fri, 17 Oct 2008 02:10:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/10/290.html/</guid>
+      <description>我们隔壁门口贴出了fate的崩坏海报，让我觉得世界不是真实的……然后就燃起了对新番的无限憧憬，毕竟我还有几个没追的说，于是就…… 那个什么朝太</description>
+    </item>
+    
+    <item>
+      <title>追新番啊</title>
+      <link>http://blindwith.science/2008/10/289.html/</link>
+      <pubDate>Sat, 11 Oct 2008 09:10:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/10/289.html/</guid>
+      <description>继续追 之前又看了下豆瓣的扫雷贴，觉得自己好像把龙与虎漏了，于是先拿出来看看。传说又是傲骄，不过一开始就被男主的奇怪发型和死鱼大眼睛吓到了，然</description>
+    </item>
+    
+    <item>
+      <title>十月新番扫雷啊</title>
+      <link>http://blindwith.science/2008/10/288.html/</link>
+      <pubDate>Tue, 07 Oct 2008 08:10:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/10/288.html/</guid>
+      <description>豆瓣上看到个扫雷篇，然后突然觉得空气好清新，心情好愉快，迫不及待的想看新番来着了…… 然后我就先按着好评顺序挑了个再造人卡辛。。。 是龙之子做的</description>
+    </item>
+    
+    <item>
+      <title>北京我来拉</title>
+      <link>http://blindwith.science/2008/10/287.html/</link>
+      <pubDate>Thu, 02 Oct 2008 13:10:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/10/287.html/</guid>
+      <description>之前就计划的很好的可爱的北京之旅，终于在十一假期开心的实现了……我们提早了将近一周挤到了天津火车站买好了城际列车的票，58呢五十八呢！~（给</description>
+    </item>
+    
+    <item>
+      <title>南开非常好，浴园特别佳</title>
+      <link>http://blindwith.science/2008/09/286.html/</link>
+      <pubDate>Sun, 28 Sep 2008 08:09:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/09/286.html/</guid>
+      <description>话说啊，南开真是个好地方，真的具体怎么个好捏，其实我在上一篇日志里写了，可惜啊，发送失败，你们都看不到。用手机写博真是个痛苦的事情，所以么我</description>
+    </item>
+    
+    <item>
+      <title>尽管不舍，还是得走了</title>
+      <link>http://blindwith.science/2008/09/285.html/</link>
+      <pubDate>Thu, 11 Sep 2008 02:09:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/09/285.html/</guid>
+      <description>总是这样，总认为那些日子离得很远，却总是一瞬而过。便回想不起从前的日子，让而后匆匆划过。 要走了，今天晚上的火车。 不想矫情了，就此搁笔吧&amp;he</description>
+    </item>
+    
+    <item>
+      <title>很后悔啊，为什么要填那么远</title>
+      <link>http://blindwith.science/2008/09/284.html/</link>
+      <pubDate>Tue, 09 Sep 2008 13:09:01 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/09/284.html/</guid>
+      <description>没有几天时间，就要启程去天津了。这两天除了黏在网上最后的疯狂一下（貌似是一暑假都那么疯狂的说），就是后悔——为什么要填那么远。可又有什么办法</description>
+    </item>
+    
+    <item>
+      <title>最后一次上色比赛——我完败</title>
+      <link>http://blindwith.science/2008/09/283.html/</link>
+      <pubDate>Mon, 08 Sep 2008 07:09:25 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/09/283.html/</guid>
+      <description>先发上次杯子比赛的图 前百的： 我的： 可以看出我对阴暗的掌握非常差，可以说完全没有感觉，对此一窍不通。而且我很懒惰，除了个杯子，实在懒得再多加个</description>
+    </item>
+    
+    <item>
+      <title>三星是小三，小诺是小受</title>
+      <link>http://blindwith.science/2008/09/282.html/</link>
+      <pubDate>Sat, 06 Sep 2008 14:09:30 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/09/282.html/</guid>
+      <description>我不是标题党啊。其实研究结果是三星是强攻而已，不过既然拥有协调的三星一家的前百大人亲口说出诸如“三星是小三”的话语，我也这么用上不错哦~~ 事</description>
+    </item>
+    
+    <item>
+      <title>岩井俊二的世界</title>
+      <link>http://blindwith.science/2008/09/281.html/</link>
+      <pubDate>Thu, 04 Sep 2008 08:09:29 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/09/281.html/</guid>
+      <description>有人说，岩井的四部片子，四月物语，花与爱丽丝，情书，关于莉莉周的一切，分别是春夏秋冬，于我，略有不同。 四月物语那曼幻的飞花，绯色的晕镜，如注</description>
+    </item>
+    
+    <item>
+      <title>跑苏大丢人现眼去了</title>
+      <link>http://blindwith.science/2008/09/280.html/</link>
+      <pubDate>Wed, 03 Sep 2008 13:09:30 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/09/280.html/</guid>
+      <description>我们班去苏大的人么不是一般的多，所以我老是心谷廿廿想到苏大去拍他们军训的猥琐样。总算在我的呼风唤雨之下，此念成行。不过捏和预期还是相差甚远，</description>
+    </item>
+    
+    <item>
+      <title>skins——青春毕竟要面对现实</title>
+      <link>http://blindwith.science/2008/09/279.html/</link>
+      <pubDate>Tue, 02 Sep 2008 06:09:37 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/09/279.html/</guid>
+      <description>无论在青春的皮囊中塞入多少致幻品，它总要面对现实。无论怎样的节奏，总会发生碰撞。 终于把skins看完了，原谅我这缓慢的看剧速度。两季的英剧，</description>
+    </item>
+    
+    <item>
+      <title>苏大军训参观活动……发起~~</title>
+      <link>http://blindwith.science/2008/09/278.html/</link>
+      <pubDate>Mon, 01 Sep 2008 11:09:30 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/09/278.html/</guid>
+      <description>想看看囧人囧态的全面汇总么？ 想感受黑白袜子的风云变幻么？ 想留下高中同学的难忘回忆么？ 想得到最后一次的整人快感么？ 带好你的手机，相机，自行车，</description>
+    </item>
+    
+    <item>
+      <title>有关赤井生死的小推理</title>
+      <link>http://blindwith.science/2008/08/277.html/</link>
+      <pubDate>Fri, 29 Aug 2008 12:08:12 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/277.html/</guid>
+      <description>高三比较郁闷的就是没看柯南，前天赶紧向JPL借了到60的柯南看。结果看了几本，却迎来让我觉得不能接受的一话：赤井秀一死了…… 柯南里我喜欢的人</description>
+    </item>
+    
+    <item>
+      <title>依旧混乱</title>
+      <link>http://blindwith.science/2008/08/276.html/</link>
+      <pubDate>Thu, 28 Aug 2008 13:08:10 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/276.html/</guid>
+      <description>早晨起来，看了一集前两天发现的传说中的被禁的JLZG，是第六集（因为这玩意难找，逮着一集是一集了歪），以两个党员书记为线索来写G党集团面临的</description>
+    </item>
+    
+    <item>
+      <title>配眼镜</title>
+      <link>http://blindwith.science/2008/08/275.html/</link>
+      <pubDate>Wed, 27 Aug 2008 13:08:29 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/275.html/</guid>
+      <description>JPL家开了个眼镜店，自一入学就总听她嚷嚷大家要配眼镜到我那儿去配啊~应者为众，不过猥琐至我这种硬拉了个她陪我去配的估计就寥寥了…… 今天去配</description>
+    </item>
+    
+    <item>
+      <title>看美剧啊看美剧</title>
+      <link>http://blindwith.science/2008/08/274.html/</link>
+      <pubDate>Mon, 25 Aug 2008 13:08:36 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/274.html/</guid>
+      <description>最近窝在家里还真是无聊，主要还是没得出去玩啊~~这时间还真是尴尬啊，一坨人临近开学，时间开始呈现出一种紧迫感，之前觉得理所当然的出玩只能推迟</description>
+    </item>
+    
+    <item>
+      <title>累死我也</title>
+      <link>http://blindwith.science/2008/08/273.html/</link>
+      <pubDate>Sat, 23 Aug 2008 14:08:15 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/273.html/</guid>
+      <description>今天和妈妈两人像疯子一样，从早上八点兜街兜到晚上八点，回家头晕脚疼站不稳，顺便又月光了下（或者说季光也差不多，因为还把一年的学费生活费打到卡</description>
+    </item>
+    
+    <item>
+      <title>咸咸上色比赛</title>
+      <link>http://blindwith.science/2008/08/272.html/</link>
+      <pubDate>Thu, 21 Aug 2008 07:08:13 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/272.html/</guid>
+      <description>很明显是我输了 我的 前百的</description>
+    </item>
+    
+    <item>
+      <title>最后的贵族</title>
+      <link>http://blindwith.science/2008/08/271.html/</link>
+      <pubDate>Wed, 20 Aug 2008 06:08:10 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/271.html/</guid>
+      <description>这未删节版，前日入手，昨日沐香，今日展卷，明日无缘，注定匆匆而去，如烟无迹。就和历史上这些人一样，他们唱罢作罢，戛然离场，化归历史，寞然数百</description>
+    </item>
+    
+    <item>
+      <title>继续发图</title>
+      <link>http://blindwith.science/2008/08/270.html/</link>
+      <pubDate>Tue, 19 Aug 2008 12:08:04 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/270.html/</guid>
+      <description>继续发前百的图</description>
+    </item>
+    
+    <item>
+      <title>图图</title>
+      <link>http://blindwith.science/2008/08/269.html/</link>
+      <pubDate>Mon, 18 Aug 2008 11:08:45 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/269.html/</guid>
+      <description>在此送上前百同学美丽的图图 （某猫吐先） ———————————————————————————————————————————— 华丽地清完肠子</description>
+    </item>
+    
+    <item>
+      <title>买个手机真郁闷</title>
+      <link>http://blindwith.science/2008/08/268.html/</link>
+      <pubDate>Sun, 17 Aug 2008 11:08:30 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/268.html/</guid>
+      <description>本来买个新手机还是个蛮开心的事情，再说款式也是自己比较喜欢的，不过买的时候没注意，回来时发现竟然是心机，真是郁闷死我了。我这种人是觉得水货都</description>
+    </item>
+    
+    <item>
+      <title>上色比赛……欢迎报名</title>
+      <link>http://blindwith.science/2008/08/267.html/</link>
+      <pubDate>Fri, 15 Aug 2008 07:08:34 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/267.html/</guid>
+      <description>额……那个什么……详见贴吧&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>洋葱电影及其他</title>
+      <link>http://blindwith.science/2008/08/266.html/</link>
+      <pubDate>Thu, 14 Aug 2008 04:08:24 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/266.html/</guid>
+      <description>尽管这部电影在硬盘里躺了很久，不过今天才翻出来看（其实他的命运相比我其他n多电影来说算是好的了）。恩恩，90分钟过的乱愉快~~真是一部极尽讽</description>
+    </item>
+    
+    <item>
+      <title>挑手机~~</title>
+      <link>http://blindwith.science/2008/08/265.html/</link>
+      <pubDate>Wed, 13 Aug 2008 13:08:48 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/265.html/</guid>
+      <description>实在用现在这个过渡的手机不爽（谁叫我丢了上一个呢），现在总算能买个新的了，晚上便锁定诺基亚，三星，索爱（我一向很喜欢诺家的手机，不过老妈很喜</description>
+    </item>
+    
+    <item>
+      <title>无聊的比赛</title>
+      <link>http://blindwith.science/2008/08/264.html/</link>
+      <pubDate>Tue, 12 Aug 2008 11:08:53 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/264.html/</guid>
+      <description>昨天到前百家玩，不知怎么就找了张叶子在想那水珠怎么做……结果就定下如此赛事，给一个很挫的桃子加水滴，约在今天下午两点交稿，且不准看教程。 这是</description>
+    </item>
+    
+    <item>
+      <title>义工之环保篇</title>
+      <link>http://blindwith.science/2008/08/263.html/</link>
+      <pubDate>Sun, 10 Aug 2008 06:08:54 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/263.html/</guid>
+      <description>时间：2008年8月10日8：00~12：00（包括路上的时间） 地点：静思书轩集中，具体是到新区的慈济包的一个什么地方 工作：处理瓶子，分类分</description>
+    </item>
+    
+    <item>
+      <title>和老妈吵架了</title>
+      <link>http://blindwith.science/2008/08/262.html/</link>
+      <pubDate>Sat, 09 Aug 2008 08:08:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/262.html/</guid>
+      <description>为了一些莫名其妙的事 我们互不说话 言语发出也是磕伤 妈妈心里一定很不舒服 我也从不会退让，尽管是我先无理</description>
+    </item>
+    
+    <item>
+      <title>今晚能不能不提Olympic</title>
+      <link>http://blindwith.science/2008/08/261.html/</link>
+      <pubDate>Fri, 08 Aug 2008 10:08:31 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/261.html/</guid>
+      <description>似乎全国都在期盼着这一天的到来，打开电视，处处是举国欢庆，处处是全人类的盛会，处处说今夜无人入睡，处处圆梦，处处欣悦，处处众口同声奥运加油。</description>
+    </item>
+    
+    <item>
+      <title>七夕……</title>
+      <link>http://blindwith.science/2008/08/260.html/</link>
+      <pubDate>Thu, 07 Aug 2008 14:08:47 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/260.html/</guid>
+      <description>今天是传说中的七夕节诺~可是都形影相吊的，这七夕只有天雨降些伤感，从无浪漫。一切都是正常的吧，也可是说是既成常态的变态。唯一不正常的让人头冒</description>
+    </item>
+    
+    <item>
+      <title>义工……及其他</title>
+      <link>http://blindwith.science/2008/08/259.html/</link>
+      <pubDate>Wed, 06 Aug 2008 14:08:10 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/259.html/</guid>
+      <description>当义工的理由非常不冠冕堂皇。话说南开大学的通知书里一并寄了张《致南开大学新生的一封信》——即传说中的暑假作业——做一名义工或出去打工。虽说对</description>
+    </item>
+    
+    <item>
+      <title>夏日忆旧——老师第二</title>
+      <link>http://blindwith.science/2008/08/258.html/</link>
+      <pubDate>Mon, 04 Aug 2008 13:08:40 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/258.html/</guid>
+      <description>继续回忆 第二篇：老师 老师么，应该说毕竟是人么，虽互有交集却依然以个体的方式存在。表面上看看貌似关系不错，也许背后就会为一些或维持生活所用或维</description>
+    </item>
+    
+    <item>
+      <title>发图</title>
+      <link>http://blindwith.science/2008/08/257.html/</link>
+      <pubDate>Sun, 03 Aug 2008 08:08:28 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/257.html/</guid>
+      <description>由于某咸屡次把我发在贴吧的图删掉，我一气之下发到博客上来了…… 点我 恩咳咳咳咳咳咸阿姨真……美……啊…………………… 之后又报复性地p了张JPL</description>
+    </item>
+    
+    <item>
+      <title>无题……我真是越来越懒了</title>
+      <link>http://blindwith.science/2008/08/256.html/</link>
+      <pubDate>Fri, 01 Aug 2008 11:08:22 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/08/256.html/</guid>
+      <description>这两天貌似随着台风来袭我对博客的热情降低不少，前天一天在家一字未动，昨天出去玩两次累死我也在家的一个多小时只做了个视频依旧一字未动，今天搭某</description>
+    </item>
+    
+    <item>
+      <title>先铺层底</title>
+      <link>http://blindwith.science/2008/07/255.html/</link>
+      <pubDate>Tue, 29 Jul 2008 14:07:58 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/255.html/</guid>
+      <description>我的发现集锦 http://tieba.baidu.com/f?kz=453321371 待明日细细说来&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>夏日忆旧——学校第一</title>
+      <link>http://blindwith.science/2008/07/254.html/</link>
+      <pubDate>Mon, 28 Jul 2008 18:04:23 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/254.html/</guid>
+      <description>ziyunch 发表于 2008-07-28 18:04:25 @ Ycool 貌似拿到通知书后应该对高中生活做个小小的总结，或者回忆。 第一篇：学校 总觉得进苏高中是理所当然的事，其实也是有些无可奈何。小学</description>
+    </item>
+    
+    <item>
+      <title>拿到通知书了~</title>
+      <link>http://blindwith.science/2008/07/253.html/</link>
+      <pubDate>Fri, 25 Jul 2008 12:21:46 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/253.html/</guid>
+      <description>ziyunch 发表于 2008-07-25 12:21:57 昨天不在家，所以拿到通知书的日子向后顺延一天（今天都米的出去玩啊~~TAT） 今天中午12：15，总算门铃响了，拿了准考证&amp;身份证</description>
+    </item>
+    
+    <item>
+      <title>牢骚之去奶奶家玩……</title>
+      <link>http://blindwith.science/2008/07/252.html/</link>
+      <pubDate>Thu, 24 Jul 2008 22:09:17 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/252.html/</guid>
+      <description>ziyunch 发表于 2008-07-24 22:09:08 @ Ycool 今天去奶奶家玩的~~好远啊好远……在姑香苑……离百合家还蛮近的，可是离我们家就估计要三刻钟的自行车程了……然后本人在很困的情</description>
+    </item>
+    
+    <item>
+      <title>做了张很难看很难看的图……</title>
+      <link>http://blindwith.science/2008/07/251.html/</link>
+      <pubDate>Wed, 23 Jul 2008 22:02:41 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/251.html/</guid>
+      <description>ziyunch 发表于 2008-07-23 22:02:19 [![](///Volumes/BOOTCAMP/Runhan/scrapbook/data/20130323202035/26740064.jpg)](http://www.ycool.com/photo.php?uid=1580293&amp;paid=1255829&amp;id=26740064) ![26740064.jpg](https://ziyunch.files.wordpress.com/2016/10/26740064.jpg) 貌似配色非常难看…… 把现在已经知道的初高中同学选择个别做了个位置分析……发现天津离苏州真是很远…… 关键词(Tag): [大学]</description>
+    </item>
+    
+    <item>
+      <title>猫的漫画集——9&amp;10</title>
+      <link>http://blindwith.science/2008/07/250.html/</link>
+      <pubDate>Mon, 21 Jul 2008 21:51:14 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/250.html/</guid>
+      <description>ziyunch 发表于 2008-07-21 21:51:47 @ Ycool [![](///Volumes/BOOTCAMP/Runhan/scrapbook/data/20130323202035/26729806.jpg)](http://www.ycool.com/photo.php?uid=1580293&amp;paid=1254679&amp;id=26729806) ![26729806.jpg](https://ziyunch.files.wordpress.com/2016/10/26729806.jpg) 2008.4.25之作品09号 某张和某钱是一对好玻璃，话说有一天他们之间发生了这样的事…… 那个路人貌似是陆莹……（话说我</description>
+    </item>
+    
+    <item>
+      <title>偶滴家庭妇猫生活又开始了……</title>
+      <link>http://blindwith.science/2008/07/249.html/</link>
+      <pubDate>Mon, 21 Jul 2008 13:34:09 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/249.html/</guid>
+      <description>ziyunch 发表于 2008-07-21 13:34:53 @ Ycool 外婆的脚扭了，于是“马大嫂”滴任务全部移交到我纤弱的肩膀上OTL。昨天么周末，老妈买菜我烧菜。烧了三个菜，如图（真不美观啊真</description>
+    </item>
+    
+    <item>
+      <title>边逛街边烧包~</title>
+      <link>http://blindwith.science/2008/07/248.html/</link>
+      <pubDate>Sat, 19 Jul 2008 20:22:11 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/248.html/</guid>
+      <description>ziyunch 发表于 2008-07-19 20:22:48 @ Ycool 今天回家已经八点，拎了两个小包，装着一身我自己的和一件老妈的衣服~虽说东西看看很少的样子，不过今天一天的花费已经一千五左右了</description>
+    </item>
+    
+    <item>
+      <title>被录取了吧~</title>
+      <link>http://blindwith.science/2008/07/247.html/</link>
+      <pubDate>Fri, 18 Jul 2008 18:12:30 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/247.html/</guid>
+      <description>ziyunch 发表于 2008-07-18 18:12:22 @ Ycool 首先是南开官网查到： 考生号 083205******** 于** , 你是 江苏省 考生，恭喜您已经被录取! 姓名 考生号 录取专业 省份 于** 083205******** 材料化学 江苏省 之后在招生</description>
+    </item>
+    
+    <item>
+      <title>好紧张</title>
+      <link>http://blindwith.science/2008/07/246.html/</link>
+      <pubDate>Thu, 17 Jul 2008 12:32:08 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/246.html/</guid>
+      <description>ziyunch 发表于 2008-07-17 12:32:07 @ Ycool 3201 南开大学 物理 A B+ 398 289 5202 华中科技大学 物理 A B+ 388 283 7105 西安电子科技大学 物理 A B 368 279 投档线出来了 点我 好紧张，好紧张。觉得自己考得分</description>
+    </item>
+    
+    <item>
+      <title>杂感么杂感~</title>
+      <link>http://blindwith.science/2008/07/245.html/</link>
+      <pubDate>Wed, 16 Jul 2008 12:54:05 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/245.html/</guid>
+      <description>ziyunch 发表于 2008-07-16 12:54:47 @ Ycool 昨在图书馆借了《九故事》和《博尔赫斯口述》，今早起来就坐在椅子上翻开书页。 我不喜欢《九故事》，无论大众评论如何高。繁絮的美国</description>
+    </item>
+    
+    <item>
+      <title>不宅的一天流水</title>
+      <link>http://blindwith.science/2008/07/244.html/</link>
+      <pubDate>Tue, 15 Jul 2008 18:19:08 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/244.html/</guid>
+      <description>ziyunch 发表于 2008-07-15 18:19:20 @ Ycool [![26698863.jpg](https://ziyunch.files.wordpress.com/2016/10/26698863.jpg)![](///Volumes/BOOTCAMP/Runhan/scrapbook/data/20130323202035/26698863.jpg)](http://www.ycool.com/photo.php?uid=1580293&amp;paid=1255829&amp;id=26698863) 今天和JPL出去游荡了一天，回家好累啊~~（果然不能睡得太晚，这两天天天近11点睡哎~） 早晨在图书馆碰头。本来想叫她指点下</description>
+    </item>
+    
+    <item>
+      <title>猫的漫画集——7&amp;8</title>
+      <link>http://blindwith.science/2008/07/243.html/</link>
+      <pubDate>Mon, 14 Jul 2008 17:01:08 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/243.html/</guid>
+      <description>ziyunch 发表于 2008-07-14 17:01:38 @ Ycool [![](///Volumes/BOOTCAMP/Runhan/scrapbook/data/20130323202035/26692694.jpg)](http://www.ycool.com/photo.php?uid=1580293&amp;paid=1254679&amp;id=26692694) ![26692694.jpg](https://ziyunch.files.wordpress.com/2016/10/26692694.jpg) 2008.4.16之作品07号 这个呢，怎么说呢，上课讲话是我死啊改不了的习惯（我妈前两天跟她同学打电话时还说了|||）。</description>
+    </item>
+    
+    <item>
+      <title>微暗的火！强赞！</title>
+      <link>http://blindwith.science/2008/07/242.html/</link>
+      <pubDate>Mon, 14 Jul 2008 12:52:43 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/242.html/</guid>
+      <description>ziyunch 发表于 2008-07-14 12:52:35 @ Ycool 花了一个上午看掉《微暗的火》（在此对我成功放慢的阅读速度鼓下掌，可惜没提高效率OTL），立刻将此书归入打有“伟大”标签的经典</description>
+    </item>
+    
+    <item>
+      <title>两天随记（好WS的题目啊）</title>
+      <link>http://blindwith.science/2008/07/240.html/</link>
+      <pubDate>Sun, 13 Jul 2008 22:06:55 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/240.html/</guid>
+      <description>ziyunch 发表于 2008-07-13 22:06:12 @ Ycool 这两天打雷啊都没怎么发博，自己心里也痒啊（我啊是得了什么博客综合症啦？） 家里的电话坏了（再也不买子母机了！），跟老妈跑到苏宁</description>
+    </item>
+    
+    <item>
+      <title>奇诺之旅 第四、五话</title>
+      <link>http://blindwith.science/2008/07/241.html/</link>
+      <pubDate>Sun, 13 Jul 2008 14:15:51 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/241.html/</guid>
+      <description>ziyunch 发表于 2008-07-13 14:15:56 @ Ycool 『第四话-大人之国』 “…的记忆，憧憬梦想之翼，将心中所有的记忆，带往彩虹的彼方” “再唱一首！我还想听两三首别的。或者…” “或</description>
+    </item>
+    
+    <item>
+      <title>一天随记</title>
+      <link>http://blindwith.science/2008/07/239.html/</link>
+      <pubDate>Fri, 11 Jul 2008 16:14:41 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/239.html/</guid>
+      <description>ziyunch 发表于 2008-07-11 16:14:28 @ Ycool 昨晚JPL发短信来说不去，今天起来看到的我就又倒下去接着睡了。结果接到yeti的电话，原来把跟她的约忘记了……艾，我该死的脑</description>
+    </item>
+    
+    <item>
+      <title>猫的漫画集——5&amp;6</title>
+      <link>http://blindwith.science/2008/07/238.html/</link>
+      <pubDate>Fri, 11 Jul 2008 13:03:42 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/238.html/</guid>
+      <description>ziyunch 发表于 2008-07-11 13:03:39 @ Ycool [![](///Volumes/BOOTCAMP/Runhan/scrapbook/data/20130323202035/26676678.jpg)](http://www.ycool.com/photo.php?uid=1580293&amp;paid=1254679&amp;id=26676678) ![26676678.jpg](https://ziyunch.files.wordpress.com/2016/10/26676678.jpg) 2008.4.15之作品05号 这一天真是事情多多啊~话说当日中午，我又跟着几个百合出去吃饭。卫校门口摆了个蛋糕摊，一看就</description>
+    </item>
+    
+    <item>
+      <title>暑假的动漫计划</title>
+      <link>http://blindwith.science/2008/07/237.html/</link>
+      <pubDate>Thu, 10 Jul 2008 17:03:36 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/237.html/</guid>
+      <description>ziyunch 发表于 2008-07-10 17:03:11 @ Ycool 暑假的动漫计划 首先，怀旧（希望我能接受陈年画风） EVA【新世纪福音战士】1995：只看过漫画版和一点点动画的我应该没有资格说</description>
+    </item>
+    
+    <item>
+      <title>猫的漫画集——3&amp;4</title>
+      <link>http://blindwith.science/2008/07/236.html/</link>
+      <pubDate>Thu, 10 Jul 2008 12:54:10 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/236.html/</guid>
+      <description>ziyunch 发表于 2008-07-10 12:54:19 @ Ycool [![](///Volumes/BOOTCAMP/Runhan/scrapbook/data/20130323202035/26672018.jpg)](http://www.ycool.com/photo.php?uid=1580293&amp;paid=1254679&amp;id=26672018) ![26672018.jpg](https://ziyunch.files.wordpress.com/2016/10/266720181.jpg) 2008.4.15之作品03号 这个事情么详细说来不太好，哈哈，反正当事人心里明了~~ [![](///Volumes/BOOTCAMP/Runhan/scrapbook/data/20130323202035/26672107.jpg)](http://www.ycool.com/photo.php?uid=1580293&amp;paid=1254679&amp;id=26672107) ![26672107.jpg](https://ziyunch.files.wordpress.com/2016/10/266721071.jpg) 2008.4.15之作品04号 紧</description>
+    </item>
+    
+    <item>
+      <title>点名游戏……</title>
+      <link>http://blindwith.science/2008/07/235.html/</link>
+      <pubDate>Thu, 10 Jul 2008 12:06:35 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/235.html/</guid>
+      <description>ziyunch 发表于 2008-07-10 12:06:06 @ Ycool 1、你最喜欢什么样的人？ 开朗 2、你是个好人还是坏人？ 也许都是，也许都不是 3、你最大的愿望是什么？ 活好 4、你最痛恨的事情是什么</description>
+    </item>
+    
+    <item>
+      <title>奇诺之旅 第一、二、三话</title>
+      <link>http://blindwith.science/2008/07/233.html/</link>
+      <pubDate>Wed, 09 Jul 2008 17:55:03 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/233.html/</guid>
+      <description>ziyunch 发表于 2008-07-09 17:55:14 @ Ycool “世界——不美丽” “你有没有羡慕过飞鸟呢” “人和物都是有‘天赋’的啊，奇诺。摩托车也好，人也好，都是无法在天空飞的” “据说无</description>
+    </item>
+    
+    <item>
+      <title>猫的漫画集——1&amp;2</title>
+      <link>http://blindwith.science/2008/07/234.html/</link>
+      <pubDate>Wed, 09 Jul 2008 13:19:21 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/234.html/</guid>
+      <description>ziyunch 发表于 2008-07-09 13:19:50 @ Ycool [![26666541.jpg](https://ziyunch.files.wordpress.com/2016/10/26666541.jpg)![](///Volumes/BOOTCAMP/Runhan/scrapbook/data/20130313234608/26666541.jpg)](http://www.ycool.com/photo.php?uid=1580293&amp;paid=1254679&amp;id=26666541) 2008.4.11之作品01 应该说真的很冷啊（我哪个漫画不冷的说……） 某段时间由于家里没人，我中午就跟着那几个百合吃。善于</description>
+    </item>
+    
+    <item>
+      <title>四人飙歌好开心</title>
+      <link>http://blindwith.science/2008/07/232.html/</link>
+      <pubDate>Tue, 08 Jul 2008 19:33:57 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/232.html/</guid>
+      <description>ziyunch 发表于 2008-07-08 19:33:58 @ Ycool 今天四个人出去玩滴~~先去吃个小披萨，再去飙歌~~好爽啊~~不过本人的破落嗓不用想也知道太过震撼人心了，所以蹄蹄姚姚圆圆一致</description>
+    </item>
+    
+    <item>
+      <title>YY</title>
+      <link>http://blindwith.science/2008/07/231.html/</link>
+      <pubDate>Mon, 07 Jul 2008 17:04:37 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/231.html/</guid>
+      <description>ziyunch 发表于 2008-07-07 17:04:02 @ Ycool 传说某前百要一周不能见人，哪个地方要割一刀……大家一起遐想下吧，她要干嘛捏？ 首先，如果是真的，那她要割哪边捏？ 1.脸？不至于</description>
+    </item>
+    
+    <item>
+      <title>Unfair</title>
+      <link>http://blindwith.science/2008/07/230.html/</link>
+      <pubDate>Sun, 06 Jul 2008 12:52:50 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/230.html/</guid>
+      <description>ziyunch 发表于 2008-07-06 12:52:52 @ Ycool 世の中にはフェアな事なんて何もない。 目には目を。复讐には复讐を。 アンフェアにはアンフェアを。 这世间根本就不存在什么fair的</description>
+    </item>
+    
+    <item>
+      <title>暑假看剧计划</title>
+      <link>http://blindwith.science/2008/07/229.html/</link>
+      <pubDate>Fri, 04 Jul 2008 19:57:50 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/229.html/</guid>
+      <description>ziyunch 发表于 2008-07-04 19:57:00 @ Ycool 这两天晚上都在看剧，不过随着库存渐渐被消灭，我也要开始计划新剧的下载了，先给自己排张表吧~ 美剧 传说中的经典：（希望能下下来）</description>
+    </item>
+    
+    <item>
+      <title>这两天我蛮乖的哦</title>
+      <link>http://blindwith.science/2008/07/228.html/</link>
+      <pubDate>Fri, 04 Jul 2008 18:55:01 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/228.html/</guid>
+      <description>ziyunch 发表于 2008-07-04 18:55:11 @ Ycool 自从发誓要从宅女状态脱离后（我有发过这誓么……），偶就开始调整，虽然从本质上来看还是宅着，不过貌似没那么无所作为了。 前天上午</description>
+    </item>
+    
+    <item>
+      <title>珍爱生命，远离宅女</title>
+      <link>http://blindwith.science/2008/07/227.html/</link>
+      <pubDate>Tue, 01 Jul 2008 12:31:16 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/07/227.html/</guid>
+      <description>ziyunch 发表于 2008-07-01 12:31:08 @ Ycool 最近在家里，一般都是这样的作为： 8点醒，粘到9点起来洗漱吃饭，看看家里的花草，做做白日梦，而后开电脑，上网，看动漫 中午12点</description>
+    </item>
+    
+    <item>
+      <title>我还是那么容易受影响</title>
+      <link>http://blindwith.science/2008/06/226.html/</link>
+      <pubDate>Mon, 30 Jun 2008 21:40:35 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/06/226.html/</guid>
+      <description>ziyunch 发表于 2008-06-30 21:40:42 @ Ycool 没什么明明挑专业是自己的事，为什么消失已久的人又要跳出来，好像自己损失了什么似的来妄加嚣嘘？他有什么资格，好像自己是被冤枉似</description>
+    </item>
+    
+    <item>
+      <title>寒死我的alice</title>
+      <link>http://blindwith.science/2008/06/225.html/</link>
+      <pubDate>Mon, 30 Jun 2008 13:22:35 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/06/225.html/</guid>
+      <description>ziyunch 发表于 2008-06-30 13:22:19 @ Ycool 几个百合（咸虫盼）高三天天烦爱丽丝学园，什么小熊好可爱啦，巨鸡萌之类的（其实我也忘了他们在讨论什么了OTL就瞎掰了点），然后</description>
+    </item>
+    
+    <item>
+      <title>挑专业……难啊</title>
+      <link>http://blindwith.science/2008/06/224.html/</link>
+      <pubDate>Fri, 27 Jun 2008 22:06:36 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/06/224.html/</guid>
+      <description>ziyunch 发表于 2008-06-27 22:06:29 @ Ycool 今天去了高招会（车啊打不到TAT），更觉得犯晕 南开有设摊，给出的分数线是395，按理进是能进，但专业不可知。主要就看江苏有多</description>
+    </item>
+    
+    <item>
+      <title>反思</title>
+      <link>http://blindwith.science/2008/06/223.html/</link>
+      <pubDate>Wed, 25 Jun 2008 09:26:32 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/06/223.html/</guid>
+      <description>ziyunch 发表于 2008-06-25 09:26:37 @ Ycool 一直说别人考爆了 可是静下进来想想，我自己也是考爆了 只不过没那么明显 没有别人程度大而已么 以下是不该失的分数： 数学填空第13题（</description>
+    </item>
+    
+    <item>
+      <title>我应该欣慰</title>
+      <link>http://blindwith.science/2008/06/222.html/</link>
+      <pubDate>Tue, 24 Jun 2008 19:50:19 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/06/222.html/</guid>
+      <description>ziyunch 发表于 2008-06-24 19:50:35 @ Ycool 知道成绩后，我先是为物理的B+庆幸，毕竟不用复读了。 而后是遗憾，毕竟我物理不差，正常水平明显应该A+的。 而后却是迷茫，数学附</description>
+    </item>
+    
+    <item>
+      <title>对前百的过去YY——补遗</title>
+      <link>http://blindwith.science/2008/06/221.html/</link>
+      <pubDate>Mon, 23 Jun 2008 20:38:06 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/06/221.html/</guid>
+      <description>ziyunch 发表于 2008-06-23 20:38:36 @ Ycool 高一：村长胡斌 今天在某个很可爱的地方，我郁闷地问前百同学为啥她不来我的小博评论。一听此言，前百努力摆出一副无所谓的样子，咬牙</description>
+    </item>
+    
+    <item>
+      <title>来对前百的过去YY吧~</title>
+      <link>http://blindwith.science/2008/06/220.html/</link>
+      <pubDate>Fri, 20 Jun 2008 12:10:50 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/06/220.html/</guid>
+      <description>ziyunch 发表于 2008-06-20 12:10:04 @ Ycool 某日，在雁荡山脚下一个便宜的要死的小旅馆里，偶对前百大神的过去又有了不一样的了解，值得YY啊~~（比那个灵峰夜景更值得YY）</description>
+    </item>
+    
+    <item>
+      <title>最后的朋友</title>
+      <link>http://blindwith.science/2008/06/219.html/</link>
+      <pubDate>Sun, 15 Jun 2008 20:18:53 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/06/219.html/</guid>
+      <description>ziyunch 发表于 2008-06-15 20:18:50 @ Ycool 每个人都是无辜的 每个人都是寂寞的 每个人都是 每个人都是一个我 不知道怎么评论这剧，太多的感触，却不知道怎么说出，是假模假样地依势</description>
+    </item>
+    
+    <item>
+      <title>不知所措</title>
+      <link>http://blindwith.science/2008/06/218.html/</link>
+      <pubDate>Sat, 14 Jun 2008 15:17:45 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/06/218.html/</guid>
+      <description>ziyunch 发表于 2008-06-14 15:17:40 @ Ycool 不知所措 呆在家里，尽管家里很乱，但还是什么都不想做，只能无聊的开着电脑。前百给的伊苏，玩了一会会就不太有玩下去的兴趣了……学</description>
+    </item>
+    
+    <item>
+      <title>《谈艺录》顺藤摸瓜之一</title>
+      <link>http://blindwith.science/2008/06/217.html/</link>
+      <pubDate>Wed, 11 Jun 2008 08:28:32 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/06/217.html/</guid>
+      <description>ziyunch 发表于 2008-06-11 08:28:57 @ Ycool 一是辩“诗分唐宋”之论。本来此说便有偏颇，予以为时张人识，不变人志，故人有个性之说。风格与时代本来就是两矛盾又统一的东东。只</description>
+    </item>
+    
+    <item>
+      <title>《谈艺录》顺藤摸瓜之零</title>
+      <link>http://blindwith.science/2008/06/216.html/</link>
+      <pubDate>Wed, 11 Jun 2008 07:52:59 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/06/216.html/</guid>
+      <description>ziyunch 发表于 2008-06-11 07:52:32 @ Ycool 先弄个贴子 （楼主的逻辑有问题，后面批驳的很好玩） 昨天逛文化市场，看到谈艺录，就买了下来，砖头厚的一本书，我妈拿去看了会儿就睡</description>
+    </item>
+    
+    <item>
+      <title>我那可笑的尊严</title>
+      <link>http://blindwith.science/2008/06/215.html/</link>
+      <pubDate>Mon, 09 Jun 2008 17:33:37 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/06/215.html/</guid>
+      <description>ziyunch 发表于 2008-06-09 17:33:28 @ Ycool 数学考完后，却得知题目在考试前几天被数学老师说过，不知是泄题还是猜题。觉得很不公平，我宁愿一道也不会得零分，也不要在这种不公</description>
+    </item>
+    
+    <item>
+      <title>加油！！</title>
+      <link>http://blindwith.science/2008/06/214.html/</link>
+      <pubDate>Sun, 08 Jun 2008 11:34:11 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/06/214.html/</guid>
+      <description>ziyunch 发表于 2008-06-08 11:34:16 @ Ycool 昨天可以说考爆了 语文作文写得感觉非常差，结构混乱，而且偏题。想到中考时作文拉掉的分就隐隐地为这次的成绩揪心。 数学也不好，当然</description>
+    </item>
+    
+    <item>
+      <title>二模</title>
+      <link>http://blindwith.science/2008/05/213.html/</link>
+      <pubDate>Mon, 12 May 2008 18:08:21 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/05/213.html/</guid>
+      <description>ziyunch 发表于 2008-05-12 18:08:30 @ Ycool 前百的图放送先 [![](///Volumes/BOOTCAMP/Runhan/scrapbook/data/20130313233424/26387748.jpg)](http://www.ycool.com/photo.php?uid=1580293&amp;paid=1243034&amp;id=26387748) ![26387748.jpg](https://ziyunch.files.wordpress.com/2016/10/26387748.jpg) 先自我膨胀一个：二模考的不错啊 数学132+32/160+40（最郁闷的是两道填空题誊错答案了，还粗心了n多</description>
+    </item>
+    
+    <item>
+      <title>有关梦想</title>
+      <link>http://blindwith.science/2008/05/212.html/</link>
+      <pubDate>Wed, 07 May 2008 11:06:37 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/05/212.html/</guid>
+      <description>ziyunch 发表于 2008-05-07 11:06:08 @ Ycool 到了这个时候，总是会不自觉的想想未来，不知道会在什么学校，不知道将来会从事什么职业。虽然说大学时所选的专业并不能和一生从事的</description>
+    </item>
+    
+    <item>
+      <title>随便说说</title>
+      <link>http://blindwith.science/2008/04/211.html/</link>
+      <pubDate>Wed, 23 Apr 2008 11:11:26 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/04/211.html/</guid>
+      <description>### [ziyunch](http://www.ycool.com/space.php?uid=1580293) 发表于 2008-04-23 11:11:39 @ Ycool 老妈跟我说，生活不可能一帆风顺，正是因为这些挫折和不顺才使生活丰富多彩。她是在开导我吧怕我有心理负担，不过我还是想得满开的</description>
+    </item>
+    
+    <item>
+      <title>我来下个小小的决心~~</title>
+      <link>http://blindwith.science/2008/04/210.html/</link>
+      <pubDate>Fri, 18 Apr 2008 16:33:41 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/04/210.html/</guid>
+      <description>ziyunch 发表于 2008-04-18 16:33:33 @ Ycool 还有50天了，不过感觉米啥紧张感（很严重的问题啊，还溜上来写博），下个决心，今后50天不写博了~~ 今天很神奇的咩咩出现了，据</description>
+    </item>
+    
+    <item>
+      <title>《雨霖铃》词一篇</title>
+      <link>http://blindwith.science/2008/04/209.html/</link>
+      <pubDate>Fri, 11 Apr 2008 16:48:42 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/04/209.html/</guid>
+      <description>ziyunch 发表于 2008-04-11 16:48:00 @ Ycool 某日——上周日貌似是——听到外面有雨声，貌似很大，又感才思退却，处世艰难，顺手敷成半片雨霖铃： 危空无月，错将明焰，当了星落。</description>
+    </item>
+    
+    <item>
+      <title>关于虚伪什么的</title>
+      <link>http://blindwith.science/2008/04/208.html/</link>
+      <pubDate>Sun, 06 Apr 2008 12:55:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/04/208.html/</guid>
+      <description>ziyunch 发表于 2008-04-06 12:55:29 @ Ycool 周四虫搭前百也去搅和物理&#34;补差&#34;班了~~（对她们来说应该是物理超A+班）。此班结束后，据说虫某同学说虫&#34;虚伪&#34;，反正就看到虫</description>
+    </item>
+    
+    <item>
+      <title>哼哼</title>
+      <link>http://blindwith.science/2008/04/207.html/</link>
+      <pubDate>Fri, 04 Apr 2008 08:36:10 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/04/207.html/</guid>
+      <description>ziyunch 发表于 2008-04-04 08:36:31 @ Ycool 场景一：昨天回家，就看到老妈神秘地对我笑，问我最近有没有和同学……或者老师闹什么矛盾……这样的言语让我寒了一下的同时我立即猜</description>
+    </item>
+    
+    <item>
+      <title>图</title>
+      <link>http://blindwith.science/2008/03/206.html/</link>
+      <pubDate>Sun, 30 Mar 2008 13:13:05 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/03/206.html/</guid>
+      <description>ziyunch 发表于 2008-03-30 13:13:38 @ Ycool 昨天晚上实在不想做作业，就随手画了点画：百合图啦，还有Q版的某些…… 今天上色。本来，我还是做的蛮正常的。可惜做得太激动了，忘</description>
+    </item>
+    
+    <item>
+      <title>口语考啊~~</title>
+      <link>http://blindwith.science/2008/03/205.html/</link>
+      <pubDate>Sat, 29 Mar 2008 16:44:55 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/03/205.html/</guid>
+      <description>ziyunch 发表于 2008-03-29 16:44:20 @ Ycool 今天口语考，心怀忐忑进入备考室（多亏了小船那出神入化的手气——买彩票绝对能中大奖——我成了完完全全第一个考的试验品小白鼠啊）</description>
+    </item>
+    
+    <item>
+      <title>与咸的诗词交流</title>
+      <link>http://blindwith.science/2008/03/204.html/</link>
+      <pubDate>Wed, 19 Mar 2008 12:59:50 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/03/204.html/</guid>
+      <description>ziyunch 发表于 2008-03-19 12:59:36 @ Ycool 好久米写诗词了，主要是因为高三时间比较紧迫，找不出时间来细细删改。这两天恰为一摸放假，昨天头晕乎乎地也不想复习。摸到九点正想</description>
+    </item>
+    
+    <item>
+      <title>照妖镜与对联</title>
+      <link>http://blindwith.science/2008/03/203.html/</link>
+      <pubDate>Sun, 16 Mar 2008 08:53:48 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/03/203.html/</guid>
+      <description>ziyunch 发表于 2008-03-16 08:53:28 @ Ycool rp这种事，向来是不屑于眷顾我的，我也习以为常，可是周四的rp谷底也真的满汗颜的。 周四去十班借书，看到蘑菇坐在那儿，满心以为</description>
+    </item>
+    
+    <item>
+      <title>抽血</title>
+      <link>http://blindwith.science/2008/03/202.html/</link>
+      <pubDate>Sat, 15 Mar 2008 12:14:36 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/03/202.html/</guid>
+      <description>ziyunch 发表于 2008-03-15 12:14:14 @ Ycool 今天抽血啊~有着无数次抽血噩梦的我一想到这个就战战兢兢，如履薄冰，如临深渊。要知道以往每次抽血都不能一次成功。我来描述下过程</description>
+    </item>
+    
+    <item>
+      <title>物理反转剧</title>
+      <link>http://blindwith.science/2008/03/201.html/</link>
+      <pubDate>Sat, 08 Mar 2008 14:20:35 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/03/201.html/</guid>
+      <description>ziyunch 发表于 2008-03-08 13:20:52 @ Ycool 题记：两只A+舍我其谁的天才，一个会做题不会讲课的老师，将碰擦出怎样的火花？ 周四物理课上，虫和前百照例悉悉索索（实在是两人水</description>
+    </item>
+    
+    <item>
+      <title>我是很讨厌的</title>
+      <link>http://blindwith.science/2008/03/200.html/</link>
+      <pubDate>Tue, 04 Mar 2008 18:03:04 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/03/200.html/</guid>
+      <description>ziyunch 发表于 2008-03-04 17:03:26 @ Ycool 离高考还有一百天不到，也许不会有人来我博客晃悠了，也不会有人想要看到引文之内的文字吧，有一种冲动把想不通的种种发泄，不会有人</description>
+    </item>
+    
+    <item>
+      <title>一周rp事集锦</title>
+      <link>http://blindwith.science/2008/03/199.html/</link>
+      <pubDate>Sun, 02 Mar 2008 11:07:56 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/03/199.html/</guid>
+      <description>ziyunch 发表于 2008-03-02 10:07:42 @ Ycool ◎ 零模一共被多扣20分：数学9分（批错），物理1分（结错），语文10分（结错）。话说真的乱难以承受的，语文发现是结错分的时候</description>
+    </item>
+    
+    <item>
+      <title>四人再次聚会——真开心啊</title>
+      <link>http://blindwith.science/2008/02/198.html/</link>
+      <pubDate>Sat, 23 Feb 2008 22:19:45 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/198.html/</guid>
+      <description>ziyunch 发表于 2008-02-23 21:19:19 @ Ycool 好开心呀好开心，今天和圆圆、姚姚、蹄蹄聚了次，乱开心的~~~ 说到这次聚会，真是命途多舛啊~本来是元宵节听说圆圆要回苏，然后联</description>
+    </item>
+    
+    <item>
+      <title>发泄一下</title>
+      <link>http://blindwith.science/2008/02/197.html/</link>
+      <pubDate>Fri, 22 Feb 2008 17:22:09 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/197.html/</guid>
+      <description>ziyunch 发表于 2008-02-22 16:22:47 @ Ycool n多天前，考完数学后，我把QQ签名改成：“恩，我就喜欢今天的数学卷子，没难度，没深度（说这话估计要被雷劈的）”，果不其然，雷</description>
+    </item>
+    
+    <item>
+      <title>到灯塔去</title>
+      <link>http://blindwith.science/2008/02/196.html/</link>
+      <pubDate>Wed, 20 Feb 2008 11:17:50 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/196.html/</guid>
+      <description>ziyunch 发表于 2008-02-20 10:17:21 @ Ycool ![](///Volumes/BOOTCAMP/Runhan/scrapbook/data/20130313233424/23429060.jpg) ![23429060.jpg](https://ziyunch.files.wordpress.com/2016/10/23429060.jpg) 《到灯塔去》第一部，《窗》，尽管敏感、排连却不局促亦不杂乱的意识与现实的交演让人流连，但阅到最后，总觉得有些疲惫而生倦意</description>
+    </item>
+    
+    <item>
+      <title>戒博，或者稍微缓缓</title>
+      <link>http://blindwith.science/2008/02/195.html/</link>
+      <pubDate>Mon, 18 Feb 2008 19:21:42 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/195.html/</guid>
+      <description>ziyunch 发表于 2008-02-18 18:21:54 @ Ycool 恩，也该是时间缓缓我的博客了 一个么是没什么人，太寂静了也很尴尬的说（当然不是主要原因，写博还是自己的兴趣，跟别人顶不顶米啥太</description>
+    </item>
+    
+    <item>
+      <title>虫师有感——綿胞子</title>
+      <link>http://blindwith.science/2008/02/194.html/</link>
+      <pubDate>Fri, 15 Feb 2008 11:29:28 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/194.html/</guid>
+      <description>ziyunch 发表于 2008-02-15 10:29:19 @ Ycool ——为什么要杀我？ ——因为你们吞噬了人类的孩子。 ——我们没有错。 ——我们也没有错。但是，我们比你们强大，所以你将在留下种子之</description>
+    </item>
+    
+    <item>
+      <title>虫师有感——笔の海</title>
+      <link>http://blindwith.science/2008/02/193.html/</link>
+      <pubDate>Fri, 15 Feb 2008 11:05:52 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/193.html/</guid>
+      <description>ziyunch 发表于 2008-02-15 10:05:27 ——因此我为了把这些该死的害虫扫清而把身为它的天敌的虫，也就是这种虫了，在山中大量地放出。该死的害虫在不到一个月的时间里被清除得</description>
+    </item>
+    
+    <item>
+      <title>继续rp</title>
+      <link>http://blindwith.science/2008/02/192.html/</link>
+      <pubDate>Thu, 14 Feb 2008 15:02:58 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/192.html/</guid>
+      <description>### [ziyunch](http://www.ycool.com/space.php?uid=1580293) 发表于 2008-02-14 14:02:32 @ Ycool 貌似这两天rp有所缓和，只出现一两件事 昨天吃零食时，手指被开心果夹到了。 今天拔连接线时把mp3的软挡口一起拔了下来~ over [阅</description>
+    </item>
+    
+    <item>
+      <title>哎，关于音乐</title>
+      <link>http://blindwith.science/2008/02/191.html/</link>
+      <pubDate>Thu, 14 Feb 2008 11:20:03 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/191.html/</guid>
+      <description>ziyunch 发表于 2008-02-14 10:20:40 @ Ycool 近来听音乐一般都是依赖音乐博客的，一是因为没有买碟的习惯，二是自己还米对音乐有自己的感触，也米什么自己喜欢的歌手。音乐博客是</description>
+    </item>
+    
+    <item>
+      <title>虫师有感——天辺の糸</title>
+      <link>http://blindwith.science/2008/02/190.html/</link>
+      <pubDate>Wed, 13 Feb 2008 11:04:17 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/190.html/</guid>
+      <description>ziyunch 发表于 2008-02-13 10:04:28 “你比任何人都无法接受现在的吹啊，就是因为你否定了吹，所以她才无法保持人类的形态的。”吹的消失，正是因为缺少足够的信念。作为人，</description>
+    </item>
+    
+    <item>
+      <title>虫师有感——虛繭取り</title>
+      <link>http://blindwith.science/2008/02/189.html/</link>
+      <pubDate>Tue, 12 Feb 2008 11:03:29 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/189.html/</guid>
+      <description>ziyunch 发表于 2008-02-12 10:03:23 @ Ycool 像出生的婴儿一般纯净，绪依持她10岁的身形从茧中脱出。影魂噬去的只是一小块的记忆，而虚中一遭，失去的，是作为人的所有意态。那</description>
+    </item>
+    
+    <item>
+      <title>流年不利</title>
+      <link>http://blindwith.science/2008/02/188.html/</link>
+      <pubDate>Mon, 11 Feb 2008 01:59:40 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/188.html/</guid>
+      <description>ziyunch 发表于 2008-02-11 00:59:33 @ Ycool 不知是今年是鼠年还是2月7日是春节的原因，这一年一开头就有无数霉运疾至。 2月7日：右手无名指生了冻疮；想认真做物理卷却做不出</description>
+    </item>
+    
+    <item>
+      <title>再见，绝望老师蛮好看个</title>
+      <link>http://blindwith.science/2008/02/187.html/</link>
+      <pubDate>Sat, 09 Feb 2008 09:35:51 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/187.html/</guid>
+      <description>ziyunch 发表于 2008-02-09 08:35:30 @ Ycool 恩，那天抽筋去下了绝望先生看，发现此片除了HHHBL外，还是非常好看的，制作极佳，讽刺、kuso、抽等各个要素尽情释放~~佳</description>
+    </item>
+    
+    <item>
+      <title>新年随想</title>
+      <link>http://blindwith.science/2008/02/186.html/</link>
+      <pubDate>Thu, 07 Feb 2008 18:27:06 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/186.html/</guid>
+      <description>### [ziyunch](http://www.ycool.com/space.php?uid=1580293) 发表于 2008-02-07 17:27:08 @ Ycool 想一下这一年的计划吧，我的人生太没有计划了。 老妈老是说我猪头肉三不精（刚刚离开一天的猪回过头来白了我一眼，猪耳朵上的脆骨还</description>
+    </item>
+    
+    <item>
+      <title>呼吸</title>
+      <link>http://blindwith.science/2008/02/185.html/</link>
+      <pubDate>Wed, 06 Feb 2008 23:12:55 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/185.html/</guid>
+      <description>ziyunch 发表于 2008-02-06 22:12:23 @ Ycool 呼吸，虽然起了这样一个名字，却让人窒息。 像是被扼住了呼吸，只觉得胸中的气体堵住了气管，阻碍了新旧气体的及时交换。挣扎着，但有</description>
+    </item>
+    
+    <item>
+      <title>虫师有感——暁の蛇</title>
+      <link>http://blindwith.science/2008/02/184.html/</link>
+      <pubDate>Tue, 05 Feb 2008 16:26:58 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/184.html/</guid>
+      <description>ziyunch 发表于 2008-02-05 15:26:57 @ Ycool 有些事情，遗忘了也无所谓吧。像不常穿的衣服，不常吃的食物，可能忘记了，反而会带来新鲜感，每一天都是崭新的，忘了便忘了罢。 有些</description>
+    </item>
+    
+    <item>
+      <title>虫师有感——春と啸く</title>
+      <link>http://blindwith.science/2008/02/183.html/</link>
+      <pubDate>Mon, 04 Feb 2008 19:11:02 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/183.html/</guid>
+      <description>ziyunch 发表于 2008-02-04 18:11:11 @ Ycool 那透明的精灵依凭了生物的精气，振开双翅，在冬日里化开一片春机。徜徉在自己的春天里，它未贪心地想离去，在吸进一冬的活力后，低首</description>
+    </item>
+    
+    <item>
+      <title>虫师有感——笼のなか</title>
+      <link>http://blindwith.science/2008/02/182.html/</link>
+      <pubDate>Sun, 03 Feb 2008 15:53:26 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/182.html/</guid>
+      <description>ziyunch 发表于 2008-02-03 14:53:30 @ Ycool 仿佛爱就是一切，多少痴男怨女，生活在情的小蛹中，一生只在情中探寻、摸索、跌倒、销亡。节，便是如此。可是，似乎每个人都懂，似乎</description>
+    </item>
+    
+    <item>
+      <title>绀碧之馆与百合与其他</title>
+      <link>http://blindwith.science/2008/02/181.html/</link>
+      <pubDate>Sat, 02 Feb 2008 22:09:23 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/181.html/</guid>
+      <description>ziyunch 发表于 2008-02-02 21:09:00 @ Ycool 晚上看了《绀碧之馆》，八个字总结：场面惊险，推理无味。 的确现在柯南剧场版好看程度一年不如一年，没挑战性。动作性倒是一年胜过一</description>
+    </item>
+    
+    <item>
+      <title>碎碎念</title>
+      <link>http://blindwith.science/2008/02/180.html/</link>
+      <pubDate>Fri, 01 Feb 2008 19:46:18 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/02/180.html/</guid>
+      <description>ziyunch 发表于 2008-02-01 18:46:37 @ Ycool 今天冒着大雪去JPL家玩的~好开心的说 她家小孩真多：在爬她家楼梯时我猜有4个，她猜5个……正解是5个——她妹妹的同学啊，还有</description>
+    </item>
+    
+    <item>
+      <title>放牛班的春天</title>
+      <link>http://blindwith.science/2008/01/179.html/</link>
+      <pubDate>Thu, 31 Jan 2008 17:30:44 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/179.html/</guid>
+      <description>ziyunch 发表于 2008-01-31 16:30:15 @ Ycool 《放牛班的春天》，jpl很早就向我推荐了，但由于种种原因，一直没看OTL。今天中午翻出来看，真的是一部经典的好片啊。 译名很美</description>
+    </item>
+    
+    <item>
+      <title>不能说的秘密</title>
+      <link>http://blindwith.science/2008/01/178.html/</link>
+      <pubDate>Wed, 30 Jan 2008 22:51:42 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/178.html/</guid>
+      <description>ziyunch 发表于 2008-01-30 21:51:26 @ Ycool 《不能说的秘密》，本来觉得周杰伦的名字和好电影没啥关联，尽管趁热度下了电影却一直放着未看。 这次打开，从片头就让人一下子兴奋起</description>
+    </item>
+    
+    <item>
+      <title>一定要认真学习了！！！</title>
+      <link>http://blindwith.science/2008/01/177.html/</link>
+      <pubDate>Wed, 30 Jan 2008 17:04:52 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/177.html/</guid>
+      <description>ziyunch 发表于 2008-01-30 16:04:48 @ Ycool 今天本来只想上一会儿网……结果一会儿很短，只有半天……熬不住又看了点动漫，听了点音乐，下了点电影，上了会网…… 可这是十二年来</description>
+    </item>
+    
+    <item>
+      <title>开心的堆雪人</title>
+      <link>http://blindwith.science/2008/01/176.html/</link>
+      <pubDate>Tue, 29 Jan 2008 17:56:57 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/176.html/</guid>
+      <description>ziyunch 发表于 2008-01-29 16:56:45 @ Ycool 今天虫说她和一群小混混在桐迳公园打雪仗，听得我耳馋的了；PL又说她穿着单裤和媛媛在楼下玩。不甘于做宅女浑身散发死鱼味的我在和</description>
+    </item>
+    
+    <item>
+      <title>哈哈哈哈，雪哦</title>
+      <link>http://blindwith.science/2008/01/175.html/</link>
+      <pubDate>Sun, 27 Jan 2008 20:24:09 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/175.html/</guid>
+      <description>ziyunch 发表于 2008-01-27 19:24:25 @ Ycool 今天乱开心的，语文考完，广播里传来老师显得郁闷却暗含兴奋的声音：“由于天气原因，不考试啦，直接放假~”于是我们欢呼雀跃，都跑</description>
+    </item>
+    
+    <item>
+      <title>堆了个小雪人</title>
+      <link>http://blindwith.science/2008/01/174.html/</link>
+      <pubDate>Sat, 26 Jan 2008 15:05:12 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/174.html/</guid>
+      <description>ziyunch 发表于 2008-01-26 14:05:59 @ Ycool ![23423222.jpg](https://ziyunch.files.wordpress.com/2016/10/23423222.jpg) 下雪了，而且还在下。 刚刚12点半，雪并不成势时，我到阳台上堆了个小雪人，可爱吧。(比较没空，还要复习，所以照片米怎么处理，</description>
+    </item>
+    
+    <item>
+      <title>菊殇</title>
+      <link>http://blindwith.science/2008/01/173.html/</link>
+      <pubDate>Fri, 25 Jan 2008 11:06:50 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/173.html/</guid>
+      <description>ziyunch 发表于 2008-01-25 10:06:11 @ Ycool 和同学说起花草，羡慕虫家满室的兰香，我们家也养几盆，只是开不了花，美名兰草，甚或活不长。或许是家人都缺少种花的闲心吧。老妈倒</description>
+    </item>
+    
+    <item>
+      <title>电脑对联</title>
+      <link>http://blindwith.science/2008/01/172.html/</link>
+      <pubDate>Thu, 24 Jan 2008 23:00:08 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/172.html/</guid>
+      <description>ziyunch 发表于 2008-01-24 22:00:03 @ Ycool 看到一个很好玩的对对联的[网站（http://duilian.msra.cn/）](http://duilian.msra.</description>
+    </item>
+    
+    <item>
+      <title>明天就过生日啦</title>
+      <link>http://blindwith.science/2008/01/171.html/</link>
+      <pubDate>Tue, 22 Jan 2008 19:35:02 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/171.html/</guid>
+      <description>ziyunch 发表于 2008-01-22 18:35:12 @ Ycool 今天还是忍不住上网咧~哎……又无话可说 今天又降下了雪花，白色飘逸，而且还有势，只是回家路上积到的雪花就能握成鹌鹑蛋大小的雪球</description>
+    </item>
+    
+    <item>
+      <title>读书随想</title>
+      <link>http://blindwith.science/2008/01/170.html/</link>
+      <pubDate>Sun, 20 Jan 2008 10:56:43 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/170.html/</guid>
+      <description>ziyunch 发表于 2008-01-20 09:56:48 @ Ycool 近来一直在重温，一月份手中所持的除了《反对阐释》《梦十夜》外，都是读过至少一遍的“旧书”。翻开《谈龙集》，上面尽是蓝色的划痕</description>
+    </item>
+    
+    <item>
+      <title>各百合的吃相</title>
+      <link>http://blindwith.science/2008/01/169.html/</link>
+      <pubDate>Sat, 19 Jan 2008 19:51:52 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/169.html/</guid>
+      <description>ziyunch 发表于 2008-01-19 18:51:22 @ Ycool 由于和jpl一起吃老是走吃，这学期遇到家里没饭的日子就和几个百合一起吃。虽然只吃了三四顿饭，我也对各百合的吃相有了大致的印象</description>
+    </item>
+    
+    <item>
+      <title>初雪</title>
+      <link>http://blindwith.science/2008/01/168.html/</link>
+      <pubDate>Wed, 16 Jan 2008 17:44:43 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/168.html/</guid>
+      <description>ziyunch 发表于 2008-01-16 16:44:11 @ Ycool 有时，人静下来，心里就会觉得很空虚。总是想寻找一份寄托，有时在书中，有时在记忆里。 窗外，似乎飘起了雪花，只是点点，太过微小以</description>
+    </item>
+    
+    <item>
+      <title>不爽</title>
+      <link>http://blindwith.science/2008/01/167.html/</link>
+      <pubDate>Tue, 15 Jan 2008 18:23:30 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/167.html/</guid>
+      <description>ziyunch 发表于 2008-01-15 17:23:01 @ Ycool 今天本来蛮开心的，但下午心情一变，原因是张zl和李sm在那商量要收集签名把我换走。 反正被人撵走也不是一次两次了，虽然会觉得郁</description>
+    </item>
+    
+    <item>
+      <title>一周随记</title>
+      <link>http://blindwith.science/2008/01/166.html/</link>
+      <pubDate>Sun, 13 Jan 2008 17:41:08 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/166.html/</guid>
+      <description>ziyunch 发表于 2008-01-13 16:41:19 @ Ycool 咸买了《纳兰词笺注》，而我曾买过一本《饮水词笺校》，二人都更喜欢对方的。我是觉得我这本太严谨，没什么小插曲儿，而咸觉得她那本</description>
+    </item>
+    
+    <item>
+      <title>羡慕虫</title>
+      <link>http://blindwith.science/2008/01/164.html/</link>
+      <pubDate>Sat, 12 Jan 2008 18:46:51 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/164.html/</guid>
+      <description>### [ziyunch](http://www.ycool.com/space.php?uid=1580293) 发表于 2008-01-12 17:46:27 羡慕虫，毋需为人际而伤脑，她能够敏锐的感觉出旁人的心情变化，而不会像我一样把人惹毛，还不知道。 羡慕虫，智商和情商双高，被物理的</description>
+    </item>
+    
+    <item>
+      <title>关于绰号</title>
+      <link>http://blindwith.science/2008/01/163.html/</link>
+      <pubDate>Sat, 12 Jan 2008 16:38:09 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/163.html/</guid>
+      <description>### [ziyunch](http://www.ycool.com/space.php?uid=1580293) 发表于 2008-01-12 15:38:35 @ Ycool bt大神1096君发问了：什么是千大？在此牺牲形象，特供一贴让各位一起讨论 有空的话也追溯下虫虫&amp;咸咸的由来吧…… 喵~ 表出现</description>
+    </item>
+    
+    <item>
+      <title>姜——赔礼</title>
+      <link>http://blindwith.science/2008/01/165.html/</link>
+      <pubDate>Thu, 10 Jan 2008 19:10:20 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/165.html/</guid>
+      <description>ziyunch 发表于 2008-01-10 18:10:19 @ Ycool 姜者，鹅黄扁物也。抚之若柔荑，乃至辛之物也。 夫有阋于人，而欲复归于好者，必挠首以觅道歉所持之器也。姜者，胡非赔礼不二之选乎？</description>
+    </item>
+    
+    <item>
+      <title>随感啦</title>
+      <link>http://blindwith.science/2008/01/162.html/</link>
+      <pubDate>Sat, 05 Jan 2008 16:14:30 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/162.html/</guid>
+      <description>ziyunch 发表于 2008-01-05 15:14:57 @ Ycool 今天考了两堂课化学，做的时候只觉得自己的速度慢了下来，但心觉得题目还是很顺手的。考完蘑菇偷懒，让我们自己批文字题，这时才发现</description>
+    </item>
+    
+    <item>
+      <title>偶感</title>
+      <link>http://blindwith.science/2008/01/161.html/</link>
+      <pubDate>Wed, 02 Jan 2008 17:45:32 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2008/01/161.html/</guid>
+      <description>ziyunch 发表于 2008-01-02 16:45:39 @ Ycool 又去回访别人博客了。是淹没在留言里的**[→歪的Lonely。](http://xiaowai.yculblog.com/)</description>
+    </item>
+    
+    <item>
+      <title>我编的填字游戏，大家一起填啊</title>
+      <link>http://blindwith.science/2007/12/159.html/</link>
+      <pubDate>Mon, 31 Dec 2007 22:40:05 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/159.html/</guid>
+      <description>ziyunch 发表于 2007-12-31 21:40:00 @ Ycool 横向 一、“跟长生不死擦肩而过”的谜底 二、两个字 乐观 三、一部日剧，长濑智也主演 四、成语 比喻谣传一再反复能使人信以为真 五、一个动</description>
+    </item>
+    
+    <item>
+      <title>迷茫</title>
+      <link>http://blindwith.science/2007/12/160.html/</link>
+      <pubDate>Mon, 31 Dec 2007 19:39:36 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/160.html/</guid>
+      <description>ziyunch 发表于 2007-12-31 18:39:00 @ Ycool 今天是2007年的最后一天，想快点奔过这悲伤的一年，却又害怕明年，害怕明年的考试，是否会延续我每年都会有的厄运，出现令人失望</description>
+    </item>
+    
+    <item>
+      <title>梦</title>
+      <link>http://blindwith.science/2007/12/158.html/</link>
+      <pubDate>Mon, 31 Dec 2007 14:04:58 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/158.html/</guid>
+      <description>ziyunch 发表于 2007-12-31 13:04:28 @ Ycool “你好！”我运尽丹田之气向前方啸去。前方是绵连的青山，疏化在葱白色的天空里，与烟云一道缭绕皱弥。 我不知道我为什么会喊这样的话</description>
+    </item>
+    
+    <item>
+      <title>迎新晚会</title>
+      <link>http://blindwith.science/2007/12/157.html/</link>
+      <pubDate>Fri, 28 Dec 2007 19:29:37 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/157.html/</guid>
+      <description>ziyunch 发表于 2007-12-28 18:29:24 @ Ycool 高三最后一次迎新晚会了，玩得时候蛮爽的，回到家却什么记忆阿没~ 哦对的那个死前百把我拉出来玩猜人的，估计就是因为这件事她受到了</description>
+    </item>
+    
+    <item>
+      <title>月考补趣</title>
+      <link>http://blindwith.science/2007/12/156.html/</link>
+      <pubDate>Wed, 26 Dec 2007 17:40:36 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/156.html/</guid>
+      <description>ziyunch 发表于 2007-12-26 16:40:35 @ Ycool 再说点月考评卷过程中的好玩事情吧 话说语文卷中有让我们翻译这样一个句子：“贼见其小，状其志，笑曰：‘童子内刀。’”然后就出现以</description>
+    </item>
+    
+    <item>
+      <title>真爽啊！！！</title>
+      <link>http://blindwith.science/2007/12/155.html/</link>
+      <pubDate>Mon, 24 Dec 2007 18:19:26 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/155.html/</guid>
+      <description>ziyunch 发表于 2007-12-24 17:19:40 @ Ycool **~75~** **~~75~~** **~~~75~~~** **~~~~75~~~~** **~~~75~~~** **~~75~~** **~75~** 考了有史以来最好成绩，五科总分年名75！开心死了~~~ 怀想一下我的名次（五科）： 300+（高一高二大部分）→1</description>
+    </item>
+    
+    <item>
+      <title>误读《东京奇谭集》</title>
+      <link>http://blindwith.science/2007/12/154.html/</link>
+      <pubDate>Sun, 23 Dec 2007 11:28:19 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/154.html/</guid>
+      <description>ziyunch 发表于 2007-12-23 10:28:53 @ Ycool 我所谓误读，全为一己的理解，绝对是偏颇的 偶然的旅人 对其中的巧合无多想法，却独独被那规则摄住了双眼。无形的东西，逼近潜意识，是</description>
+    </item>
+    
+    <item>
+      <title>一周随记（二）</title>
+      <link>http://blindwith.science/2007/12/153.html/</link>
+      <pubDate>Sat, 22 Dec 2007 18:37:36 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/153.html/</guid>
+      <description>ziyunch 发表于 2007-12-22 17:37:44 @ Ycool 虫虫数学考的不好，并前百又开始拿我开烦。可惜一般成绩揭晓总会发现虫也就扣了几分，前百也就算错了几题，而我总是那单薄的成绩，在</description>
+    </item>
+    
+    <item>
+      <title>一周随记</title>
+      <link>http://blindwith.science/2007/12/152.html/</link>
+      <pubDate>Thu, 20 Dec 2007 12:28:08 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/152.html/</guid>
+      <description>ziyunch 发表于 2007-12-20 11:28:07 @ Ycool 果然咸咸托腮不能乱学，周二不小心摆了这样一个姿势，结果手一滑，把舌头咬到了 周三排考试座位时，把空调下面的桌子高高叠起——此处</description>
+    </item>
+    
+    <item>
+      <title>也许</title>
+      <link>http://blindwith.science/2007/12/151.html/</link>
+      <pubDate>Wed, 19 Dec 2007 21:02:26 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/151.html/</guid>
+      <description>ziyunch 发表于 2007-12-19 20:02:40 @ Ycool 也许我的情商真的很低吧，劝解别人时让他们想开点，但自己却是最小心眼最容易想不开的。常发牢骚自己口无遮拦而惹火别人的郁闷，但自</description>
+    </item>
+    
+    <item>
+      <title>kuso~</title>
+      <link>http://blindwith.science/2007/12/150.html/</link>
+      <pubDate>Tue, 18 Dec 2007 19:10:04 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/150.html/</guid>
+      <description>ziyunch 发表于 2007-12-18 18:10:20 @ Ycool 前百现在越来越得寸进尺了！！！揪住我怕看见别人生气的样子，一是会心软，二是怕错误因我而起，而对我拼命颐指气使……先是让我放书</description>
+    </item>
+    
+    <item>
+      <title>公平与否</title>
+      <link>http://blindwith.science/2007/12/149.html/</link>
+      <pubDate>Sun, 16 Dec 2007 10:20:07 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/149.html/</guid>
+      <description>ziyunch 发表于 2007-12-16 09:20:58 @ Ycool 我们常常会发这样的感叹：凭什么有的人靠父母就能锦衣玉食，凭什么不如自己的人靠层层关系网就能爬于己上，凭什么……我也常常会绝望</description>
+    </item>
+    
+    <item>
+      <title>此周琐事集</title>
+      <link>http://blindwith.science/2007/12/148.html/</link>
+      <pubDate>Sat, 15 Dec 2007 16:42:07 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/148.html/</guid>
+      <description>ziyunch 发表于 2007-12-15 15:42:41 @ Ycool 我的rp低已经不是什么能让人惊诧的事了，周围人也对其习以为常，认为我出丑是天经地义理所当然的了。每周都有佐证，这周也不例外。</description>
+    </item>
+    
+    <item>
+      <title>又换位子了</title>
+      <link>http://blindwith.science/2007/12/147.html/</link>
+      <pubDate>Wed, 12 Dec 2007 17:45:27 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/147.html/</guid>
+      <description>ziyunch 发表于 2007-12-12 16:45:40 @ Ycool 蘑菇终于熬不住又换位子了。 这次虽然只换了一咩咩人的位子，我的也没动，但是……明摆着就是换我的位子。咩咩休学了（好可怜的咩咩，</description>
+    </item>
+    
+    <item>
+      <title>化身为谁呢？迷茫啊</title>
+      <link>http://blindwith.science/2007/12/146.html/</link>
+      <pubDate>Sun, 09 Dec 2007 21:38:34 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/146.html/</guid>
+      <description>ziyunch 发表于 2007-12-09 20:38:28 @ Ycool 现在开始想语文随笔应该写谁是不是有点晚了？翻来覆去想些好玩的时刻，却越想越迷茫。事出周六，顾芸给我们看某高考作文，是那种拿两</description>
+    </item>
+    
+    <item>
+      <title>兜文化市场杂感</title>
+      <link>http://blindwith.science/2007/12/145.html/</link>
+      <pubDate>Sat, 08 Dec 2007 14:13:33 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/145.html/</guid>
+      <description>ziyunch 发表于 2007-12-08 13:13:57 @ Ycool 今天去文化市场兜了兜，本来是想去买《科幻世界》的，没有，但心里却没有遗憾的感觉。现在的科幻世界好看的文章越来越少了，甚至一些</description>
+    </item>
+    
+    <item>
+      <title>《离骚》读后感（下）</title>
+      <link>http://blindwith.science/2007/12/144.html/</link>
+      <pubDate>Fri, 07 Dec 2007 18:49:31 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/144.html/</guid>
+      <description>ziyunch 发表于 2007-12-07 17:49:31 @ Ycool 而后此诗条理清晰，几波几折，欲取却反，跌宕起伏，情亦贯溢全文，所谓“国风好色而不淫，小雅怨诽而不乱，若《离骚》者，可谓兼之”</description>
+    </item>
+    
+    <item>
+      <title>等着收还是催着收</title>
+      <link>http://blindwith.science/2007/12/143.html/</link>
+      <pubDate>Wed, 05 Dec 2007 17:12:40 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/143.html/</guid>
+      <description>ziyunch 发表于 2007-12-05 16:12:39 @ Ycool 今天蘑菇再次发飙，全班噤若寒蝉，不敢发一声。不过对其所谓课代表等着收作业组长等着收作业的论调，我还是觉得不甚了了。收作业收作</description>
+    </item>
+    
+    <item>
+      <title>《离骚》读后感（上）</title>
+      <link>http://blindwith.science/2007/12/142.html/</link>
+      <pubDate>Wed, 05 Dec 2007 17:11:46 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/142.html/</guid>
+      <description>ziyunch 发表于 2007-12-05 16:11:46 @ Ycool 当年学《渔夫》，颇不以为然。书打油诗云：“众人皆醉我独醒，举世皆浊我独清，共醉同浊又何如，人生不过一浮萍。” 前几日费数小时细</description>
+    </item>
+    
+    <item>
+      <title>化学考试啊</title>
+      <link>http://blindwith.science/2007/12/141.html/</link>
+      <pubDate>Mon, 03 Dec 2007 18:33:48 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/141.html/</guid>
+      <description>ziyunch 发表于 2007-12-03 17:33:12 @ Ycool 高三果然考试连连，物理刚讲评完毕，数学生死未卜，今天化学又考试了。 这次化学感觉做的又不太舒服，有高二的感觉，未知太多。果然，</description>
+    </item>
+    
+    <item>
+      <title>物理，数学</title>
+      <link>http://blindwith.science/2007/12/140.html/</link>
+      <pubDate>Sat, 01 Dec 2007 13:37:06 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/12/140.html/</guid>
+      <description>ziyunch 发表于 2007-12-01 12:37:18 @ Ycool 物理成绩出来了，貌似还好（对于我这种智商120考92是还好了，最近还一直及格边缘徘徊），蛮开心的，还考过虫了哈哈哈哈，差距缩</description>
+    </item>
+    
+    <item>
+      <title>不爽</title>
+      <link>http://blindwith.science/2007/11/139.html/</link>
+      <pubDate>Wed, 28 Nov 2007 18:46:32 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/139.html/</guid>
+      <description>ziyunch 发表于 2007-11-28 17:46:25 @ Ycool 很不爽。不爽这种事人人都会有，但把这种感情传于众人就不好了。心情乱差，看来我还是很容易受别人影响的。定力不够啊。 为什么会不爽</description>
+    </item>
+    
+    <item>
+      <title>七律——伤菊</title>
+      <link>http://blindwith.science/2007/11/138.html/</link>
+      <pubDate>Mon, 26 Nov 2007 18:08:39 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/138.html/</guid>
+      <description>ziyunch 发表于 2007-11-26 17:08:50 @Ycool 昨天到南阳台晃晃，竟发现以为再不能开花的菊又有了魂，一时伤感，拟一七律 伤菊 竟然东篱散弱红，风移淡影墨犹浓。 烟魂一缕随春逝，霜尽</description>
+    </item>
+    
+    <item>
+      <title>默写本也有大风景</title>
+      <link>http://blindwith.science/2007/11/137.html/</link>
+      <pubDate>Sat, 24 Nov 2007 14:10:14 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/137.html/</guid>
+      <description>### [ziyunch](http://www.ycool.com/space.php?uid=1580293) 发表于 2007-11-24 13:10:18 @ Ycool 今天几个百合拿了我的默写本去研究，结果就搞出来这点畸形的东西： 比如默《念奴娇赤壁怀古》，我不就是字稍微不合常态了点，偶尔会</description>
+    </item>
+    
+    <item>
+      <title>言多必失</title>
+      <link>http://blindwith.science/2007/11/136.html/</link>
+      <pubDate>Fri, 23 Nov 2007 17:59:37 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/136.html/</guid>
+      <description>ziyunch 发表于 2007-11-23 16:59:25 @ Ycool 俗话说得好，言多必失，这两天我就老惹人生气，知道自己人品低了，普普通通发发牢骚或说句话都会搞得别人动n多气的。哎，从小就这样</description>
+    </item>
+    
+    <item>
+      <title>可爱的学生么……</title>
+      <link>http://blindwith.science/2007/11/135.html/</link>
+      <pubDate>Wed, 21 Nov 2007 17:17:14 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/135.html/</guid>
+      <description>ziyunch 发表于 2007-11-21 16:17:15 @ Ycool 今天听到一个闷搞笑的事：潘晨在课上把两人拎出去了，结果有人就打110说他体罚…110很郁闷…潘晨很郁闷…我也很郁闷，早知有此</description>
+    </item>
+    
+    <item>
+      <title>中国版人间失格7班上演中</title>
+      <link>http://blindwith.science/2007/11/134.html/</link>
+      <pubDate>Tue, 20 Nov 2007 18:26:15 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/134.html/</guid>
+      <description>ziyunch 发表于 2007-11-20 17:26:02 @ Ycool 今天中国版人间失格在我们班上演啦，涉及百合、变态、欲望等诸多敏感话题，此剧还未开拍就受到了广大百合群体的关注。但由于剧情太过</description>
+    </item>
+    
+    <item>
+      <title>偶感生死</title>
+      <link>http://blindwith.science/2007/11/132.html/</link>
+      <pubDate>Sun, 18 Nov 2007 18:27:10 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/132.html/</guid>
+      <description>ziyunch 发表于 2007-11-18 17:27:57 @ Ycool 周荣娟，在其空间上说： 万一是不能根治而要终身用药的疾病 我宁愿放弃那种毫无质量的生活 以前我也这么想，既然过去和未来都被撕得颤裂</description>
+    </item>
+    
+    <item>
+      <title>闲话捏脸</title>
+      <link>http://blindwith.science/2007/11/133.html/</link>
+      <pubDate>Sun, 18 Nov 2007 17:25:19 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/133.html/</guid>
+      <description>ziyunch 发表于 2007-11-18 16:25:22 @ Ycool 捏脸是会上瘾的。想我小学时热衷于捏耳朵，初中时增加了捏脸，到了高中好不容易貌似戒掉了，但是……凡物是容易戒掉的吗？ 脸，虽然是</description>
+    </item>
+    
+    <item>
+      <title>缪昆VS王成</title>
+      <link>http://blindwith.science/2007/11/131.html/</link>
+      <pubDate>Sat, 17 Nov 2007 18:47:03 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/131.html/</guid>
+      <description>ziyunch 发表于 2007-11-17 17:47:30 @ Ycool 最近周荣娟生病，物理老师就变成了不定态。有两日是某牙很大的女子来代，据说原来是立达教前百她们班的。然后缪昆出现了。 话说以前缪</description>
+    </item>
+    
+    <item>
+      <title>时运不济，命途多舛</title>
+      <link>http://blindwith.science/2007/11/130.html/</link>
+      <pubDate>Fri, 16 Nov 2007 19:30:48 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/130.html/</guid>
+      <description>ziyunch 发表于 2007-11-16 16:56:07 @ Ycool 最近我的RP不是低，是完全没有，厄运接踵而来，根本都不考虑我的接受能力。 1.前日被刘巧笑同学在脸上乱画，只能跑到WC处去洗脸</description>
+    </item>
+    
+    <item>
+      <title>109.5分</title>
+      <link>http://blindwith.science/2007/11/129.html/</link>
+      <pubDate>Tue, 13 Nov 2007 17:49:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/129.html/</guid>
+      <description>109.5分 ziyunch 发表于 2007-11-13 17:49:58 @ ycool 我承认我智商不高，我承认我学习不认真，但和虫的累计差距提升到109.5分时，我还是很郁闷。也许300名左右是我最</description>
+    </item>
+    
+    <item>
+      <title>《红樱桃》观感</title>
+      <link>http://blindwith.science/2007/11/127.html/</link>
+      <pubDate>Sun, 11 Nov 2007 12:08:58 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/127.html/</guid>
+      <description>ziyunch 发表于 2007-11-11 12:08:58 @ ycool 周六在家里，无聊，开电视，放的是红樱桃。当时此片已经放了一会时间了，所以一开始，没有看出什么味道。但从那个军官对他欣赏的歌唱</description>
+    </item>
+    
+    <item>
+      <title>换位子的预想</title>
+      <link>http://blindwith.science/2007/11/128.html/</link>
+      <pubDate>Sun, 11 Nov 2007 11:32:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/128.html/</guid>
+      <description>换位子的预想 ziyunch 发表于 2007-11-11 11:32:27 @ ycool 今天早上起床突然想到，明天可能又要换座位了。蘑菇一般都在刚考完的一刻，默默酝酿新一轮的座位表~~而我们，只能沦为</description>
+    </item>
+    
+    <item>
+      <title>运动会视频恶搞</title>
+      <link>http://blindwith.science/2007/11/126.html/</link>
+      <pubDate>Fri, 09 Nov 2007 21:50:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/126.html/</guid>
+      <description>运动会视频恶搞 ziyunch 发表于 2007-11-09 21:50:56 @ ycool 花了半天时间，把运动会拍的视频整理了下，做了个90秒的小短片。自我感觉前面一半比较搞笑，但和音乐不是很配；后一</description>
+    </item>
+    
+    <item>
+      <title>英语考试啊</title>
+      <link>http://blindwith.science/2007/11/125.html/</link>
+      <pubDate>Fri, 09 Nov 2007 10:40:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/125.html/</guid>
+      <description>英语考试啊 ziyunch 发表于 2007-11-09 10:40:49 @ ycool 今天考英语，从听力开始就郁闷了，刚考前还跟前百说即使声波传不到她那那也听回声好了。结果听力一放，长达n秒的回声。照</description>
+    </item>
+    
+    <item>
+      <title>对两百合无语</title>
+      <link>http://blindwith.science/2007/11/124.html/</link>
+      <pubDate>Thu, 08 Nov 2007 17:06:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/124.html/</guid>
+      <description>对两百合无语 ziyunch 发表于 2007-11-08 17:06:21 @ ycool 两个百合真的乱抽的……烦了一中午的成绩~~哎，不就是前百把数学小抄打在厕所里去忽悠了几分钟，不就是虫虫物理这次只</description>
+    </item>
+    
+    <item>
+      <title>物理越来越烂了</title>
+      <link>http://blindwith.science/2007/11/123.html/</link>
+      <pubDate>Wed, 07 Nov 2007 15:51:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/123.html/</guid>
+      <description>物理越来越烂了 ziyunch 发表于 2007-11-07 15:51:37 @ ycool 今天考语文和物理 语文还算做得定定心心的，不管分数怎么样，过程还是蛮愉快的。不过中午就以锅子到底是用来敲还是用来</description>
+    </item>
+    
+    <item>
+      <title>前百请留言（咸：非前百亦可留）</title>
+      <link>http://blindwith.science/2007/11/121.html/</link>
+      <pubDate>Tue, 06 Nov 2007 12:17:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/121.html/</guid>
+      <description>前百请留言（咸：非前百亦可留） ziyunch 发表于 2007-11-06 09:42:43 @ ycool 前百发话了：“你多赞美一下我，我就留言。”为了不逆她老人家的心意，我在此且赋打油诗一首： 容淡羡</description>
+    </item>
+    
+    <item>
+      <title>完了</title>
+      <link>http://blindwith.science/2007/11/122.html/</link>
+      <pubDate>Tue, 06 Nov 2007 07:41:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/122.html/</guid>
+      <description>完了 ziyunch 发表于 2007-11-06 07:41:37 @ ycool 昨天打前百合家电话（此人小灵通一天到晚无反应乱鄙视），被其父BH的声线吓了一跳~（她妈妈的声音还是蛮好听的，怎么夫妻俩反</description>
+    </item>
+    
+    <item>
+      <title>睚眦必报</title>
+      <link>http://blindwith.science/2007/11/120.html/</link>
+      <pubDate>Mon, 05 Nov 2007 12:17:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/120.html/</guid>
+      <description>睚眦必报 ziyunch 发表于 2007-11-05 12:17:56 @ ycool 我这人素来睚眦必报，颇喜将事态扩大化。即使最初受害者为自己，到最后最大的责任定会由于我的任性移至我自己身上，被人鄙夷</description>
+    </item>
+    
+    <item>
+      <title>不同发型对百合的影响</title>
+      <link>http://blindwith.science/2007/11/119.html/</link>
+      <pubDate>Sun, 04 Nov 2007 17:38:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/119.html/</guid>
+      <description>不同发型对百合的影响 ziyunch 发表于 2007-11-04 17:38:53 @ ycool 不同发型对百合的影响： 虫虫：两个辫子：和额上的满天星星蛮配的。 一个辫子：其实梳的好点要比两个辫辫好看，但</description>
+    </item>
+    
+    <item>
+      <title>负负得正万岁</title>
+      <link>http://blindwith.science/2007/11/118.html/</link>
+      <pubDate>Fri, 02 Nov 2007 17:07:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/11/118.html/</guid>
+      <description>负负得正万岁 ziyunch 发表于 2007-11-02 17:07:43 @ ycool 萝卜上课时煽情讲到：“轻绳对物块做了功，自己却一点功也没做。”良久，我感慨：“轻绳太伟大了，克己为公，无私奉献，</description>
+    </item>
+    
+    <item>
+      <title>牢骚太盛防肠断</title>
+      <link>http://blindwith.science/2007/10/117.html/</link>
+      <pubDate>Wed, 31 Oct 2007 17:08:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/117.html/</guid>
+      <description>牢骚太盛防肠断 ziyunch 发表于 2007-10-31 17:08:11 @ ycool 昨天一早去填高考登记表，很快就填好了（当然其中也有类似不能保存之OTL，其实是可以保存的，结果没有尝试的人只能</description>
+    </item>
+    
+    <item>
+      <title>化学考试啊</title>
+      <link>http://blindwith.science/2007/10/116.html/</link>
+      <pubDate>Mon, 29 Oct 2007 18:17:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/116.html/</guid>
+      <description>化学考试啊 ziyunch 发表于 2007-10-29 18:17:41 @ ycool 今天考化学，时间闷紧，做的也闷急。选择题都感觉么呵隆东，后面填空计算虽然还好，但也被前面破坏的心情所扰而不知所谓了</description>
+    </item>
+    
+    <item>
+      <title>杀手悲歌</title>
+      <link>http://blindwith.science/2007/10/114.html/</link>
+      <pubDate>Sun, 28 Oct 2007 09:44:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/114.html/</guid>
+      <description>杀手悲歌 ziyunch 发表于 2007-10-28 09:44:43 @ ycool “那天早上没什么新鲜的，没有爱情，没有福气，没有便车，什么都没有，我邂逅了一只乌龟，在孤独的高速公路上，和我意外的相</description>
+    </item>
+    
+    <item>
+      <title>重温书的计划</title>
+      <link>http://blindwith.science/2007/10/115.html/</link>
+      <pubDate>Sun, 28 Oct 2007 09:04:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/115.html/</guid>
+      <description>重温书的计划 ziyunch 发表于 2007-10-28 09:04:01 @ ycool 昨日翻看新购的《书房一角》时，看到卷一引言有这样的话：“这种在书架上放旧了的书，往往比买来的更会有意思，因为和他</description>
+    </item>
+    
+    <item>
+      <title>书</title>
+      <link>http://blindwith.science/2007/10/113.html/</link>
+      <pubDate>Sat, 27 Oct 2007 15:36:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/113.html/</guid>
+      <description>书 ziyunch 发表于 2007-10-27 15:36:11 @ ycool 今天咸咸问我们某个词（很抱歉我又忘了），据说是红楼里的（完全木有印象），很惭愧啊~~我一向看书不细究字句，除非某段文字突然</description>
+    </item>
+    
+    <item>
+      <title>智商</title>
+      <link>http://blindwith.science/2007/10/112.html/</link>
+      <pubDate>Fri, 26 Oct 2007 17:47:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/112.html/</guid>
+      <description>智商 ziyunch 发表于 2007-10-26 17:47:59 @ ycool 事实证明我的智商不是一般的低。今天数学考试，摒在很简单的题目上，甚至要回过头做时才能做出，那是文科卷子的第一道大题目。而</description>
+    </item>
+    
+    <item>
+      <title>C&#39;est la vie</title>
+      <link>http://blindwith.science/2007/10/111.html/</link>
+      <pubDate>Thu, 25 Oct 2007 16:52:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/111.html/</guid>
+      <description>C&amp;rsquo;est la vie ziyunch 发表于 2007-10-25 16:52:56 @ ycool 这段时间作业很多，挤不出时间来读书了。总觉得生活有所欠缺，但又不想缩减已经缩水1小时的睡眠时间。没有书，旁生出许多蔓草</description>
+    </item>
+    
+    <item>
+      <title>RP</title>
+      <link>http://blindwith.science/2007/10/110.html/</link>
+      <pubDate>Wed, 24 Oct 2007 17:48:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/110.html/</guid>
+      <description>RP ziyunch 发表于 2007-10-24 17:48:23 @ ycool 挫人是要看RP的，今天顾芸牺牲小我为大家证明了这点。当时只听轰得一声，无数个头伸出窗外想看个究竟，原来是一扇窗连着窗框砸落</description>
+    </item>
+    
+    <item>
+      <title>随想</title>
+      <link>http://blindwith.science/2007/10/109.html/</link>
+      <pubDate>Tue, 23 Oct 2007 17:51:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/109.html/</guid>
+      <description>随想 ziyunch 发表于 2007-10-23 17:51:52 @ ycool 对某位LP同学语文课说的话彻底无语了，果然百合的逻辑我们正常人是难以理解的。 我为什么总是肚子饿呢？问问同学木有比我早餐吃</description>
+    </item>
+    
+    <item>
+      <title>谈心 vol.2</title>
+      <link>http://blindwith.science/2007/10/108.html/</link>
+      <pubDate>Mon, 22 Oct 2007 17:32:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/108.html/</guid>
+      <description>谈心 vol.2 ziyunch 发表于 2007-10-22 17:32:17 @ ycool 今天蘑菇再次找我谈心，因为周六又讲了n多话。想想自己的数学的确越来越差有吃老本嫌疑，是时间认真听课了。自己的成绩可能苏</description>
+    </item>
+    
+    <item>
+      <title>发发牢骚</title>
+      <link>http://blindwith.science/2007/10/107.html/</link>
+      <pubDate>Sun, 21 Oct 2007 17:04:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/107.html/</guid>
+      <description>发发牢骚 ziyunch 发表于 2007-10-21 17:04:36 @ ycool 今天出去买衣服，狂郁闷，喜欢的衣服都没有号。小一号的衣服其实穿着还好，但天气再冷下来里面就不能加了…… 我是应该减肥呢</description>
+    </item>
+    
+    <item>
+      <title>生日礼物</title>
+      <link>http://blindwith.science/2007/10/106.html/</link>
+      <pubDate>Fri, 19 Oct 2007 18:50:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/106.html/</guid>
+      <description>生日礼物 ziyunch 发表于 2007-10-19 18:50:27 @ ycool 明天是JPL的生日。送什么生日礼物一向让人迷茫，尤其是送成年生日礼。最近比较喜欢画漫画，就花了n小时画了个漫画版JP</description>
+    </item>
+    
+    <item>
+      <title>蘑菇的谈话</title>
+      <link>http://blindwith.science/2007/10/105.html/</link>
+      <pubDate>Thu, 18 Oct 2007 20:51:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/105.html/</guid>
+      <description>蘑菇的谈话 ziyunch 发表于 2007-10-18 20:51:10 @ ycool 今天考化学，感觉今天的卷子做的很顺手，只有几题比较迷茫，时间也充裕到让我从头到尾检查一遍。但是成绩如何，不可知啊不</description>
+    </item>
+    
+    <item>
+      <title>漫画</title>
+      <link>http://blindwith.science/2007/10/104.html/</link>
+      <pubDate>Wed, 17 Oct 2007 21:29:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/104.html/</guid>
+      <description>漫画 ziyunch 发表于 2007-10-17 21:29:17 @ ycool 发两个语文书上画的漫画吧…………（前面发的大多是画在草稿纸上的） [![23425308](https://ziyunch.files.wordpress.com/2015/08/23425308.jpg)](https://ziyunch.files.wordpress.com/2015/08/23425308.jpg) [![23426638](https://ziyunch.files.wordpress.com/2015/08/23426638.jpg)](https://ziyunch.files.wordpress.com/2015/08/23426638.jpg) vivian 2007-11-16 17:29:50 匿名 58.208.28.145 [[回复](http://blog.yc</description>
+    </item>
+    
+    <item>
+      <title>搞笑的语文题</title>
+      <link>http://blindwith.science/2007/10/103.html/</link>
+      <pubDate>Wed, 17 Oct 2007 20:52:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/103.html/</guid>
+      <description>搞笑的语文题 ziyunch 发表于 2007-10-17 20:52:18 @ ycool 以前动心送过luckystar第一话，就觉得无聊啊，近十分钟都在讨论面包怎么吃，看得我昏昏欲睡，本人和京都的动画</description>
+    </item>
+    
+    <item>
+      <title>对白玉蟾的初感觉</title>
+      <link>http://blindwith.science/2007/10/101.html/</link>
+      <pubDate>Tue, 16 Oct 2007 21:13:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/101.html/</guid>
+      <description>对白玉蟾的初感觉 ziyunch 发表于 2007-10-16 21:13:19 @ ycool 偷春格是谁，这是我研究已久的问题。从前已经否定了一位，现在另一位候选人的可能性大大提升——张哲来同学。此人大</description>
+    </item>
+    
+    <item>
+      <title>换座位了，郁闷</title>
+      <link>http://blindwith.science/2007/10/102.html/</link>
+      <pubDate>Tue, 16 Oct 2007 20:43:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/102.html/</guid>
+      <description>换座位了，郁闷 ziyunch 发表于 2007-10-16 20:43:27 @ ycool 今天换座位，我竟换到若说班级呈众星捧月之势我既为斯月的位置。呜呼哀哉，和百合同坐虽为下策，但犹能逞口舌之快；现</description>
+    </item>
+    
+    <item>
+      <title>百合的内心</title>
+      <link>http://blindwith.science/2007/10/100.html/</link>
+      <pubDate>Mon, 15 Oct 2007 21:32:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/100.html/</guid>
+      <description>百合的内心 ziyunch 发表于 2007-10-15 21:32:54 @ ycool 今天的漫画~~~（同理，发连接，看的又清楚页面打开速度又快，何乐而不为呢） [咸的故事全人物图](/Runhan/s</description>
+    </item>
+    
+    <item>
+      <title>张大思想家对我们的启示</title>
+      <link>http://blindwith.science/2007/10/99.html/</link>
+      <pubDate>Mon, 15 Oct 2007 20:47:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/99.html/</guid>
+      <description>张大思想家对我们的启示 ziyunch 发表于 2007-10-15 20:47:32 @ ycool 今日听张劼的演讲，论据充分，逻辑严密，辞藻华丽，行文流畅，引经据典，有雷霆万钧之势，不失为一上佳议论文</description>
+    </item>
+    
+    <item>
+      <title>仅为发泄</title>
+      <link>http://blindwith.science/2007/10/98.html/</link>
+      <pubDate>Sun, 14 Oct 2007 20:56:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/98.html/</guid>
+      <description>仅为发泄 ziyunch 发表于 2007-10-14 20:56:57 @ ycool 看着他们并排飞过，我愈觉孤独。我挣扎着扑翅，只能抖落些余烬。 或许，曾几何时，我也追寻过这温暖，渴望笑声洒溢在沙滩上，</description>
+    </item>
+    
+    <item>
+      <title>图片</title>
+      <link>http://blindwith.science/2007/10/97.html/</link>
+      <pubDate>Sun, 14 Oct 2007 20:41:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/97.html/</guid>
+      <description>图片 ziyunch 发表于 2007-10-14 20:41:53 @ ycool 某百合终于现身了 看此百合做的图，果然那个挫啊 不过我做的也不怎么样……[1](/Runhan/scrapbook/data</description>
+    </item>
+    
+    <item>
+      <title>路口</title>
+      <link>http://blindwith.science/2007/10/96.html/</link>
+      <pubDate>Sat, 13 Oct 2007 13:03:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/96.html/</guid>
+      <description>路口 ziyunch 发表于 2007-10-13 13:03:33 @ ycool 以前的随笔，挳出来发发～～ 今天回家的路上，我骑着自行车，遇到了红灯。原本是每天都要遇到的事，在两分钟内几十秒的概率不能算</description>
+    </item>
+    
+    <item>
+      <title>传说中百合的自画像</title>
+      <link>http://blindwith.science/2007/10/95.html/</link>
+      <pubDate>Fri, 12 Oct 2007 18:14:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/95.html/</guid>
+      <description>传说中百合的自画像 ziyunch 发表于 2007-10-12 18:14:48 @ ycool 我旁边的百合很适合演一部动画的真人版的～～蜡笔小新，因为里面都是苦瓜脸。 话说这个百合今天又考全班第二了～～</description>
+    </item>
+    
+    <item>
+      <title>百合也会长胡子耶</title>
+      <link>http://blindwith.science/2007/10/94.html/</link>
+      <pubDate>Wed, 10 Oct 2007 17:33:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/94.html/</guid>
+      <description>百合也会长胡子耶 ziyunch 发表于 2007-10-10 17:33:41 @ ycool 旁边的百合竟然长胡子，在下巴上。难道说就像某种鱼一样，因为这个百合种群中缺少雄百合，她就牺牲小我，成全大我，</description>
+    </item>
+    
+    <item>
+      <title>遐想</title>
+      <link>http://blindwith.science/2007/10/93.html/</link>
+      <pubDate>Tue, 09 Oct 2007 17:49:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/93.html/</guid>
+      <description>遐想 ziyunch 发表于 2007-10-09 17:49:57 @ ycool [![23426015](https://ziyunch.files.wordpress.com/2015/08/23426015.jpg)](https://ziyunch.files.wordpress.com/2015/08/23426015.jpg) [ 如果地球是方的](/Runhan/scrapbook/data/20130313225619/23426015.jp</description>
+    </item>
+    
+    <item>
+      <title>作文</title>
+      <link>http://blindwith.science/2007/10/92.html/</link>
+      <pubDate>Mon, 08 Oct 2007 17:40:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/92.html/</guid>
+      <description>作文 ziyunch 发表于 2007-10-08 17:40:52 @ ycool 今天发语文卷下来，不看不知道，一看吓一跳，70分的作文倒也有51分，但又被扣了错别字1分。唉，我的“倾袭”是单音节词不可</description>
+    </item>
+    
+    <item>
+      <title>只是败者的耻辱</title>
+      <link>http://blindwith.science/2007/10/91.html/</link>
+      <pubDate>Sat, 06 Oct 2007 16:35:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/91.html/</guid>
+      <description>只是败者的耻辱 ziyunch 发表于 2007-10-06 16:35:49 @ ycool 不想复习英语，把以前的读后感打上来，今天的化学太变态了，来啊来不及 读《鸦片战争——一个帝国的沉迷与另一个帝国的</description>
+    </item>
+    
+    <item>
+      <title>碎碎念</title>
+      <link>http://blindwith.science/2007/10/90.html/</link>
+      <pubDate>Fri, 05 Oct 2007 17:05:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/90.html/</guid>
+      <description>碎碎念 ziyunch 发表于 2007-10-05 17:05:45 @ ycool 前天不知道吃什么吃出了问题，昨天凌晨爬起来呕，然后一天虚脱地发烧。 昨天早晨本来想刷牙的（一天至少要刷两次牙么，不然自己</description>
+    </item>
+    
+    <item>
+      <title>哎，物价</title>
+      <link>http://blindwith.science/2007/10/89.html/</link>
+      <pubDate>Wed, 03 Oct 2007 16:05:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/89.html/</guid>
+      <description>哎，物价 ziyunch 发表于 2007-10-03 16:05:16 @ ycool 今天出去买裤子，老妈前天又去泰华兜了一圈，说衣服都是论千而记，大部分柜台都不参与活动，只得咽咽口水。今天去十全街总算</description>
+    </item>
+    
+    <item>
+      <title>诗两首-天空/泪</title>
+      <link>http://blindwith.science/2007/10/88.html/</link>
+      <pubDate>Tue, 02 Oct 2007 15:04:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/88.html/</guid>
+      <description>诗两首-天空/泪 ziyunch 发表于 2007-10-02 15:04:14 @ ycool 天空 曾经 无数个夜晚 月明星稀 或是缺月伴着繁星点点 映照着天幕 闪现出历史的记忆 像野兽，从西南角奔过 篝火斜移 映红了新</description>
+    </item>
+    
+    <item>
+      <title>博客路线</title>
+      <link>http://blindwith.science/2007/10/87.html/</link>
+      <pubDate>Tue, 02 Oct 2007 10:57:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/10/87.html/</guid>
+      <description>博客路线 ziyunch 发表于 2007-10-02 10:57:06 @ ycool 某人一天到晚宣传自己的博客，因为是新浪的，一直没看。前几天无聊找出来翻了翻，只觉得郁闷。其人开博一年不到，人气倒也不</description>
+    </item>
+    
+    <item>
+      <title>运动会</title>
+      <link>http://blindwith.science/2007/09/86.html/</link>
+      <pubDate>Sat, 29 Sep 2007 16:00:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/09/86.html/</guid>
+      <description>运动会 ziyunch 发表于 2007-09-29 16:00:00 @ycool 昨晚上睡得很差，或许说根本没有正常地睡着，导致的结果就是今天早上起来头痛欲裂，不过洗脸后大概就清醒了，也许是平时睡眠时间</description>
+    </item>
+    
+    <item>
+      <title>抱怨</title>
+      <link>http://blindwith.science/2007/09/85.html/</link>
+      <pubDate>Thu, 27 Sep 2007 17:00:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/09/85.html/</guid>
+      <description>抱怨 ziyunch 发表于 2007-09-27 17:00:00 @ ycool 今天居然跟两百合穿一色的衣服，其中一人还坐我边上（话说这两人哪天穿不一样衣服了哈）一天到晚不约而同，可我还算个儿童啊，我</description>
+    </item>
+    
+    <item>
+      <title>诗三首-试风/墨镜下的世界/脱链</title>
+      <link>http://blindwith.science/2007/09/84.html/</link>
+      <pubDate>Mon, 24 Sep 2007 17:12:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/09/84.html/</guid>
+      <description>诗三首-试风/墨镜下的世界/脱链 ziyunch 发表于 2007-09-24 17:12:16 @ Blogspot 试风 我张开双手 试图抑止风 却穿透了臂掌，不从指缝 它兀自流过 紧跟肆意的狼群 我伸展双臂，斜跨开二肢</description>
+    </item>
+    
+    <item>
+      <title>诗三首-刀/月亮/最后一页</title>
+      <link>http://blindwith.science/2007/09/83.html/</link>
+      <pubDate>Thu, 20 Sep 2007 19:48:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/09/83.html/</guid>
+      <description>诗三首-刀/月亮/最后一页 ziyunch 发表于 2007-09-20 19:48:33 @ Blogspot 刀 是否试过用刀 轻轻划开云与云的 间隙 阳光从其间露出 清晨的第一缕银光 或是金光 轻轻地划开 不要肆意 肆意 控制</description>
+    </item>
+    
+    <item>
+      <title>车胎事件</title>
+      <link>http://blindwith.science/2007/04/82.html/</link>
+      <pubDate>Sat, 21 Apr 2007 20:51:24 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/04/82.html/</guid>
+      <description>车胎事件 ziyunch 发表于 2007-04-21 @ Blogspot 后车胎没气了，去打足气，下午又没气了，便知道是爆胎了，而去车摊让检查了一下，4个洞，还有一个订书钉在外胎表面，看来又结</description>
+    </item>
+    
+    <item>
+      <title>窒息的孤独</title>
+      <link>http://blindwith.science/2007/03/81.html/</link>
+      <pubDate>Sat, 24 Mar 2007 20:08:40 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/03/81.html/</guid>
+      <description>窒息的孤独 ziyunch 发表于 2007-03-24 @ Blogspot 孤独，孤独的感觉侵袭于我 这条河，我是一条无根的水草。当其它水草摸索着联结成一张大网，共同抵挡河水冲击时，我，忽略在一</description>
+    </item>
+    
+    <item>
+      <title>自吟</title>
+      <link>http://blindwith.science/2007/03/80.html/</link>
+      <pubDate>Thu, 22 Mar 2007 18:16:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/03/80.html/</guid>
+      <description>自吟 ziyunch 发表于 2007-03-22 15:54:51 @ Blogspot 自吟 没有人说我是孱弱的绵羊 我也不屑去当 我也不希望，成为豺狼 总会与他人相妨 我是一颗 仅仅是一颗 渺小的铃铛 从不因风自响 我从不因</description>
+    </item>
+    
+    <item>
+      <title>蝴蝶</title>
+      <link>http://blindwith.science/2007/03/79.html/</link>
+      <pubDate>Sat, 17 Mar 2007 20:15:35 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/03/79.html/</guid>
+      <description>蝴蝶 ziyunch 发表于 2007-03-17 @ Blogspot 一只蝴蝶翩然隐去 沿着活页的卷边 随漾起波纹而逝 而我 想吻那蝴蝶 吻入一鼻蓝粉 在暗中细碎地笑着 发出幽邃的绿光 随着胸线起伏 金粉又一次</description>
+    </item>
+    
+    <item>
+      <title>渴</title>
+      <link>http://blindwith.science/2007/03/78.html/</link>
+      <pubDate>Sat, 17 Mar 2007 20:15:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/03/78.html/</guid>
+      <description>渴 ziyunch 发表于 2007-03-17 @ Blogspot 舌尖碰触上腭 却是 长时间的干涸 仿如窗外没有淅淅沥沥 或者如弦的雨符 我已经忘记眼睛的用途 只记得在昨日 泥沼深入项脖 还能够呼吸 我 弹奏起</description>
+    </item>
+    
+    <item>
+      <title>初中写的诗</title>
+      <link>http://blindwith.science/2007/03/77.html/</link>
+      <pubDate>Sat, 17 Mar 2007 20:05:40 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/03/77.html/</guid>
+      <description>初中写的诗 ziyunch 发表于 2007-03-17 @ Blogspot 翻出一些初中写的诗，稚嫩却感情丰富 balance 地球已经倾斜了 你没看到吗 比萨斜塔 早已不止一座 中国呀 你不觉得你的位置 太高了吗 太高了</description>
+    </item>
+    
+    <item>
+      <title>读《恶心》有感</title>
+      <link>http://blindwith.science/2007/03/76.html/</link>
+      <pubDate>Sat, 10 Mar 2007 20:03:37 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/03/76.html/</guid>
+      <description>读《恶心》有感 ziyunch 发表于 2007-03-10 @ Blogspot “它是它不是的东西，它不是它是的东西。” 总有这样的例子：在上学期间，虽学业紧张，但总是忙里偷闲地写些文章，疯狂地</description>
+    </item>
+    
+    <item>
+      <title>“佛”离家出走之后</title>
+      <link>http://blindwith.science/2007/03/75.html/</link>
+      <pubDate>Sun, 04 Mar 2007 13:51:45 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/03/75.html/</guid>
+      <description>“佛”离家出走之后 ziyunch 发表于 2007-03-04 @ Blogspot 今天班会课上，土豆就以异常沉重的口气开了场。有人离家出走了，但谁都想不到会是佛。 据土豆说，事情是这个样子：2</description>
+    </item>
+    
+    <item>
+      <title>有关翻译</title>
+      <link>http://blindwith.science/2007/03/74.html/</link>
+      <pubDate>Sat, 03 Mar 2007 20:51:29 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/03/74.html/</guid>
+      <description>有关翻译 ziyunch 发表于 2007-03-03 @ Blogspot 生活在全球化时代的我们的生活中充斥着翻译，这是我们不可回避的问题。看电影需要翻译字幕，看书需要译文，甚至身边跳出一则广</description>
+    </item>
+    
+    <item>
+      <title>UNDO</title>
+      <link>http://blindwith.science/2007/02/73.html/</link>
+      <pubDate>Thu, 22 Feb 2007 20:01:23 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/02/73.html/</guid>
+      <description>UNDO ziyunch 发表于 2007-02-22 @ Blogspot ——爱……是你情我愿的禁锢 来，逼下这段粗韧的麻绳 让她轻盈地舞蹈 变成翅膀的一支 紧紧地，勒入十指隙缝 我看着你 我挣脱不出 这蛛网 缠住</description>
+    </item>
+    
+    <item>
+      <title>苏州书店不完全手册</title>
+      <link>http://blindwith.science/2007/02/72.html/</link>
+      <pubDate>Mon, 19 Feb 2007 14:08:59 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/02/72.html/</guid>
+      <description>苏州书店不完全手册 ziyunch 发表于 2007-02-19 @ Blogspot 苏州书店不完全手册 外文书店（属新华书店）人民路44号 品种：多为外语学习方面图书，有外文原版书 布置：排列有序，</description>
+    </item>
+    
+    <item>
+      <title>厨房日记</title>
+      <link>http://blindwith.science/2007/02/71.html/</link>
+      <pubDate>Wed, 07 Feb 2007 19:48:24 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/02/71.html/</guid>
+      <description>厨房日记 ziyunch 发表于 2007-02-07 19:48:00 @ MSN Live 今天～～我自己烧菜～～ 由于家里有肉，只要买蔬菜就够了。桂花的菜场小，就去养蚕里的菜场买。可是以前我从没买过菜啊，算</description>
+    </item>
+    
+    <item>
+      <title>人品</title>
+      <link>http://blindwith.science/2007/01/70.html/</link>
+      <pubDate>Sun, 07 Jan 2007 14:34:18 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/01/70.html/</guid>
+      <description>人品 ziyunch 发表于 2007-01-07 14:34:48 @ MSN Live 人品一词，在当今社会尤为重要，做什么事都缺不了他。故现在人们身边总带着些充电器，见到插座就想去加些电压，但由于我国电压</description>
+    </item>
+    
+    <item>
+      <title>辞旧迎新</title>
+      <link>http://blindwith.science/2007/01/69.html/</link>
+      <pubDate>Mon, 01 Jan 2007 00:00:23 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2007/01/69.html/</guid>
+      <description>辞旧迎新 ziyunch 发表于 2007-01-01 00:00:00 @ MSN Live 新年，是什么样的日子，不应该是快乐的吗，可为什么，我竟连一个夜晚都不能熬。头胀痛愈烈，像是整整一年的痛苦要迸发出来</description>
+    </item>
+    
+    <item>
+      <title>《红楼梦》地点问题之我见</title>
+      <link>http://blindwith.science/2006/12/68.html/</link>
+      <pubDate>Sat, 30 Dec 2006 21:16:37 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/12/68.html/</guid>
+      <description>ziyunch 发表于 2006-12-30 21:16:37 @ MSN Live 读了俞平伯关于地点的文字。我总以为不甚对。他硬将此书地点分个南北，这便有些荒谬。而十月初借过余英时《红楼梦的两个世界》，此</description>
+    </item>
+    
+    <item>
+      <title>山洞中</title>
+      <link>http://blindwith.science/2006/12/67.html/</link>
+      <pubDate>Sat, 23 Dec 2006 21:14:18 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/12/67.html/</guid>
+      <description>山洞中 ziyunch 发表于 2006-12-23 21:14:43 @ MSN Live 我向左突 穿越于迷雾 赭色石上斜乱涂着 莫名的线路 我当作是地图 却引向迷失与孤独 我哭泣 谁该为此恸哭 迷惘，在这雾中 无法深呼吸 因</description>
+    </item>
+    
+    <item>
+      <title>拆王蕾的台</title>
+      <link>http://blindwith.science/2006/12/66.html/</link>
+      <pubDate>Sat, 16 Dec 2006 21:13:31 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/12/66.html/</guid>
+      <description>拆王蕾的台 ziyunch 发表于 2006-12-16 21:13:44 @ MSN Live 首先，对于他的“专断独行”这样的评论，我不以为然，古代哪个皇帝不专断独行，虽然中国真正的君主独揽大权是从明朝开始</description>
+    </item>
+    
+    <item>
+      <title>一缕阳光</title>
+      <link>http://blindwith.science/2006/12/65.html/</link>
+      <pubDate>Sun, 03 Dec 2006 19:29:16 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/12/65.html/</guid>
+      <description>一缕阳光 ziyunch 发表于 2006-12-03 19:29:59 @ MSN Live 一缕阳光 晚风沉寂了 我默止在丽江的小桥头 听 那欢乐是他们的 只几盅燃烈的淡酒 掩湿我呆滞的面容 掩湿我痴冷的心 浓云密布，虎跳</description>
+    </item>
+    
+    <item>
+      <title>绒纱</title>
+      <link>http://blindwith.science/2006/11/64.html/</link>
+      <pubDate>Sat, 11 Nov 2006 19:33:01 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/11/64.html/</guid>
+      <description>绒纱 ziyunch 发表于 2006-11-11 19:33:07 @ MSN Live 绒纱 都是黑色轻织纱布 甚至可以看清麻纹 像一滴浓墨化在 水中 坠我入永恒的虚无 我伸出手撩去 那厚重的幕布 轻易地移开却看到 无数的布</description>
+    </item>
+    
+    <item>
+      <title>祭魂</title>
+      <link>http://blindwith.science/2006/11/63.html/</link>
+      <pubDate>Sat, 04 Nov 2006 19:34:49 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/11/63.html/</guid>
+      <description>祭魂 ziyunch 发表于 2006-11-04 19:34:20 @ MSN Live 祭魂 一 攀上山顶，我张开双臂 鸟瞰，像秃鹰苍然傲视 世界藏入 昨晚星漏下的薄绒 扬弃，谁助我弃了呼吸 睥睨我的目力 我的魂灵 那是日光</description>
+    </item>
+    
+    <item>
+      <title>NOIP2006~~</title>
+      <link>http://blindwith.science/2006/10/62.html/</link>
+      <pubDate>Sat, 21 Oct 2006 19:35:09 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/10/62.html/</guid>
+      <description>### NOIP2006~~ #### [ziyunch](http://www.ycool.com/space.php?uid=1580293) 发表于 2006-10-21 19:35:31 @ MSN Live 单选错三题，最郁闷的是第八题明明算出来的，结果选的C，最搞笑的本来是那个南丁格尔奖，但后来第六题不用做白白送分把它踢</description>
+    </item>
+    
+    <item>
+      <title>诗三首——《窗》《风》《碎镜》</title>
+      <link>http://blindwith.science/2006/09/61.html/</link>
+      <pubDate>Sat, 09 Sep 2006 21:38:56 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/09/61.html/</guid>
+      <description>诗三首——《窗》《风》《碎镜》 ziyunch 发表于 2006-09-09 21:38:14 @ MSN Live 窗 灰色的雨线从外面 深刺入我的脸 声音的喳躁穿梭在漫天的聒噪之间 听见三个风扇卖力地轰鸣 将沉寂了一</description>
+    </item>
+    
+    <item>
+      <title>临江仙</title>
+      <link>http://blindwith.science/2006/09/60.html/</link>
+      <pubDate>Sat, 09 Sep 2006 21:36:03 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/09/60.html/</guid>
+      <description>临江仙 ziyunch 发表于 2006-09-09 21:36:56 @ MSN Live 临江仙 ——感于期初考试的烂分 却忘了千丝愁绪，偏偏昔日无辜？随波逐浪怨区区。残分稍过也，岂叹得呜乎。 错错千山微冷过，一</description>
+    </item>
+    
+    <item>
+      <title>暑假作业——《泽泻集》读后感</title>
+      <link>http://blindwith.science/2006/08/59.html/</link>
+      <pubDate>Thu, 24 Aug 2006 11:39:38 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/08/59.html/</guid>
+      <description>暑假作业——《泽泻集》读后感 ziyunch 发表于 2006-08-24 11:39:29 @ MSN Live 对于周作人的文章我一向是买来后再看的，原因有二：一是图书馆中关于先生的文字甚少；而是本人认为先</description>
+    </item>
+    
+    <item>
+      <title>生存的寂寞</title>
+      <link>http://blindwith.science/2006/08/58.html/</link>
+      <pubDate>Mon, 21 Aug 2006 16:40:28 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/08/58.html/</guid>
+      <description>生存的寂寞 ziyunch 发表于 2006-08-21 16:40:43 @MSN Live “在城市的某处，有一个怕寂寞的人，如今也是一副快哭的样子弹着吉他，失去了爱在寻找什么，一样是彷徨中的人吧，微笑的脸</description>
+    </item>
+    
+    <item>
+      <title>有些无奈</title>
+      <link>http://blindwith.science/2006/08/57.html/</link>
+      <pubDate>Sat, 19 Aug 2006 18:42:09 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/08/57.html/</guid>
+      <description>有些无奈 ziyunch 发表于 2006-08-19 18:42:13 @MSN Live 昨天与PL去文化市场，书与书的间隙之间，竟发现王力主编的《古代汉语》，欣喜之余，犹豫片刻，解囊购书。随之又怅然，这样</description>
+    </item>
+    
+    <item>
+      <title>不爽地想骂人</title>
+      <link>http://blindwith.science/2006/08/56.html/</link>
+      <pubDate>Fri, 18 Aug 2006 01:43:21 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/08/56.html/</guid>
+      <description>ziyunch 发表于 2006-08-18 01:43:45 @MSN Live 本来应该早就睡了，无奈看了几个帖子实在不爽，在此发泄。 http://post.baidu.com/f?kz=100240336 所谓复旦大学文学博士对书就这点研究，排出的名次就这么乱七八糟？他（她</description>
+    </item>
+    
+    <item>
+      <title>看～余下十五天看点什么呢……</title>
+      <link>http://blindwith.science/2006/08/55.html/</link>
+      <pubDate>Fri, 04 Aug 2006 23:44:33 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/08/55.html/</guid>
+      <description>ziyunch 发表于 2006-08-04 23:44:46 @MSN Live 这个暑假郁闷的，似乎没什么好看的新片子。 韩剧方面 在百度贴吧研究了一下，除了《宫》外排在前面的几乎都看过……本人对《宫》没兴趣</description>
+    </item>
+    
+    <item>
+      <title>live版空间～～再试试</title>
+      <link>http://blindwith.science/2006/08/54.html/</link>
+      <pubDate>Wed, 02 Aug 2006 23:45:24 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/08/54.html/</guid>
+      <description>ziyunch 发表于 2006-08-02 23:45:55 @MSN Live 今天一开博客就发现msn变了（其实是JPL先告诉我的……） 本来找不到正常点的模板才用的童话，结果安徒生都出来一条条渐变，55</description>
+    </item>
+    
+    <item>
+      <title>虫师有感——一夜橋</title>
+      <link>http://blindwith.science/2006/08/53.html/</link>
+      <pubDate>Tue, 01 Aug 2006 23:59:26 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/08/53.html/</guid>
+      <description>虫师有感——一夜橋 ziyunch 发表于 2006-08-01 23:59:21 @MSN Live &amp;nbsp; 我也会一直思念着你的，即使到了那边，一直默默地按耐住自己的心也好 虽然已经不能说她是她自己了，但即便如此，</description>
+    </item>
+    
+    <item>
+      <title>虫师有感——眇の魚</title>
+      <link>http://blindwith.science/2006/07/52.html/</link>
+      <pubDate>Mon, 31 Jul 2006 19:40:25 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/07/52.html/</guid>
+      <description>ziyunch 发表于 2006-07-31 19:40:45 @MSN Live 眇の魚（眇目鱼） 又是一则陷入黑暗的故事。 有两种黑暗，一种是把眼睛闭上，黑暗中没有月亮的夜晚，遮挡住了光和亮而出现的黑暗，还有</description>
+    </item>
+    
+    <item>
+      <title>最后一支火柴</title>
+      <link>http://blindwith.science/2006/07/51.html/</link>
+      <pubDate>Sun, 30 Jul 2006 22:21:28 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/07/51.html/</guid>
+      <description>ziyunch 发表于 2006-07-30 22:21:56 @MSN Live 现在 盛夏的风已经怒着 离开 黑云沸腾着未来 却有些发白 台风的中心由我 独自站在 岁月斑驳的留痕早已 剥离破坏 谁来为我点燃那 最后一支火柴 p</description>
+    </item>
+    
+    <item>
+      <title>公平？</title>
+      <link>http://blindwith.science/2006/07/50.html/</link>
+      <pubDate>Fri, 28 Jul 2006 23:04:10 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/07/50.html/</guid>
+      <description>ziyunch 发表于 2006-07-28 23:04:04 @MSN Live 谁会相信世界是公平的？ 善恶之论只有在童话里才有吧。我相信童话，我不相信现实。 和美的结局是不可能出现的，至少我不相信，无论看了</description>
+    </item>
+    
+    <item>
+      <title>虫师有感——やまねむる</title>
+      <link>http://blindwith.science/2006/07/49.html/</link>
+      <pubDate>Fri, 28 Jul 2006 20:16:37 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/07/49.html/</guid>
+      <description>ziyunch 发表于 2006-07-28 20:16:04 @MSN Live やまねむる（山之眠） 有一点淡淡的灰暗，有一点淡淡的哀愁。 为了山里人，虫师甘愿召唤“口绳”让自己被吞噬，也许是因为自己年老体衰</description>
+    </item>
+    
+    <item>
+      <title>虫师有感——硯に棲む白</title>
+      <link>http://blindwith.science/2006/07/48.html/</link>
+      <pubDate>Wed, 26 Jul 2006 20:17:23 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/07/48.html/</guid>
+      <description>ziyunch 发表于 2006-07-26 20:17:11 @MSN Live 硯に棲む白（栖于砚台之白） 不能说是谁做错了，虫本无错，而不知内情的人又有错吗？砚的制成，造成了虫的解脱，或是另一种桎梏，而人</description>
+    </item>
+    
+    <item>
+      <title>虫师有感——重い実</title>
+      <link>http://blindwith.science/2006/07/47.html/</link>
+      <pubDate>Tue, 25 Jul 2006 19:07:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/07/47.html/</guid>
+      <description>ziyunch 发表于 2006-07-25 19:07:31 @MSN Live 这是颗沉重的果实。 对土地的热爱也造就了果实的使用。全村子的人期盼的日子，到来时如此得沉重。虫身的不死，在不同信仰的人身上，效</description>
+    </item>
+    
+    <item>
+      <title>人生需要童话</title>
+      <link>http://blindwith.science/2006/07/46.html/</link>
+      <pubDate>Mon, 24 Jul 2006 23:12:05 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/07/46.html/</guid>
+      <description>ziyunch 发表于 2006-07-24 23:12:42 @MSN Live 换成了名为安徒生的模板 只是因为 人生需要童话为自己吹泡泡，哪怕转瞬即逝 没有自己喜欢的模板，TWEAK功能又太少 很郁闷，可能一直</description>
+    </item>
+    
+    <item>
+      <title>虫师有感——海境より</title>
+      <link>http://blindwith.science/2006/07/45.html/</link>
+      <pubDate>Fri, 21 Jul 2006 21:09:54 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/07/45.html/</guid>
+      <description>ziyunch 发表于 2006-07-21 21:09:52 @MSN Live 东西的主人已经不在了。听到这句话，心中只是充满了无奈。时间可以削薄一切事物，但若人只是痴迷，一切都还无用。时间是非常神奇的东</description>
+    </item>
+    
+    <item>
+      <title>虫师有感——雨がくる虹がたつ</title>
+      <link>http://blindwith.science/2006/07/44.html/</link>
+      <pubDate>Thu, 20 Jul 2006 22:59:03 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/07/44.html/</guid>
+      <description>ziyunch 发表于 2006-07-20 22:59:54 @MSN Live 看了几日虫师，每集都很有感觉，终在第七集时成此文。 雨がくる虹がたつ（山雨欲来虹满天） 一个追逐虹蛇的人，他其实说不出自己追逐的</description>
+    </item>
+    
+    <item>
+      <title>CSI2笔记5</title>
+      <link>http://blindwith.science/2006/07/43.html/</link>
+      <pubDate>Sun, 16 Jul 2006 21:58:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/07/43.html/</guid>
+      <description>ziyunch 发表于 2006-07-16 21:58:57 @MSN Live 一个人只有八品脱血（1加仑＝8品脱＝3.7853公升） 血液的平均直径为一厘米这类大小是受过高速撞击的明显特征，高速产生小血点</description>
+    </item>
+    
+    <item>
+      <title>帮小蹄蹄解决无法上网问题</title>
+      <link>http://blindwith.science/2006/07/42.html/</link>
+      <pubDate>Sun, 16 Jul 2006 21:13:47 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/07/42.html/</guid>
+      <description>ziyunch 发表于 2006-07-16 21:13:10 @MSN Live 小TT上网，不用防火墙，我就叫她装卡巴，结果～～ 她只能上QQ不能浏览网页。看来是UDP正常，TCP/IP设置有问题。首先看她</description>
+    </item>
+    
+    <item>
+      <title>CSI2笔记3~4</title>
+      <link>http://blindwith.science/2006/07/41.html/</link>
+      <pubDate>Sat, 15 Jul 2006 00:03:50 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/07/41.html/</guid>
+      <description>ziyunch 发表于 2006-07-15 00:03:01 @MSN Live GFCI（接地回路阻断器）可防止电击。如果有短路的话，GFCI会把电流导开。但是如果地线被剪断了，阻断器就不能正常工作。 癫痫</description>
+    </item>
+    
+    <item>
+      <title>748，明基</title>
+      <link>http://blindwith.science/2006/07/40.html/</link>
+      <pubDate>Wed, 12 Jul 2006 22:38:43 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/07/40.html/</guid>
+      <description>ziyunch 发表于 2006-07-12 22:38:05 @MSN Live 本来就不太喜欢明基这牌子，认为它性价比不高。这点是毫无疑问的，因为明基的确是一种价格贵的要命只重视外表并且性能处于次要地位的</description>
+    </item>
+    
+    <item>
+      <title>花·哀（二）</title>
+      <link>http://blindwith.science/2006/07/39.html/</link>
+      <pubDate>Wed, 12 Jul 2006 19:41:50 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/07/39.html/</guid>
+      <description>ziyunch 发表于 2006-07-12 19:41:56 @MSN Live 她只有7岁，尽管十八年前她已出生。 在她吞下那粒药时，她的嘴角明明只挂着笑意。是的，如果成功，她将进入天堂，能够品味那从未尝过</description>
+    </item>
+    
+    <item>
+      <title>花·哀（一）</title>
+      <link>http://blindwith.science/2006/07/38.html/</link>
+      <pubDate>Tue, 11 Jul 2006 19:53:24 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/07/38.html/</guid>
+      <description>ziyunch 发表于 2006-07-11 19:53:20 @MSN Live 急风骤减沉沉谢，静数愁烟，静数愁烟。残影哀霓惘断绝。 晚来吹得香篝咽，滥减红颜，滥减红颜。几度夕阳自今年。 ——调寄《采桑子》 &amp;nbsp;</description>
+    </item>
+    
+    <item>
+      <title>无耻的意大利</title>
+      <link>http://blindwith.science/2006/07/37.html/</link>
+      <pubDate>Mon, 10 Jul 2006 20:56:14 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/07/37.html/</guid>
+      <description>ziyunch 发表于 2006-07-10 20:56:42 @MSN Live 意大利输了！！！ 这是不可能的！！！ 因为： 意大利强,意大利太强了！！ 在八分之一决赛中,他们用漂亮的假摔骗过裁判,赢得点球,最终</description>
+    </item>
+    
+    <item>
+      <title>hackgame</title>
+      <link>http://blindwith.science/2006/06/36.html/</link>
+      <pubDate>Mon, 12 Jun 2006 15:47:13 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/06/36.html/</guid>
+      <description>ziyunch 发表于 2006-06-12 15:47:49 @MSN Live 选修课时玩hackgame [http://www.hackgame.cn/r1.html](http://www.hackgame.cn/r1.html) function qiying() { var script1=document.table.html.value if (script1==&#34;007521&#34;) { void(&#34;r007521-2.html&#34;,&#34;&#34;,blank) } else { alert(MM_str) } } [http://www.hackgame.cn/r007521-2.html](http://www.hackgame.cn/r007521-2.html) ad.js打开后 function qiying() { var script1=document.table.html.value if (script1==&#34;8834751&#34;) { window.open(&#34;r3__.html&#34;,&#34;_self&#34;) } else { alert(MM_str) } } [http://www.hackgame.cn/r3__.html](http://www.hackgame.cn/r3__.html) var wd =&#34;%3Cscript%20language%3D%27JavaScript%27%20type%3D%27text/javascript%27%20src%3D%27pws.js%27%3E%3C/script%3E&#34; 其实就是v</description>
+    </item>
+    
+    <item>
+      <title>眼</title>
+      <link>http://blindwith.science/2006/05/35.html/</link>
+      <pubDate>Mon, 22 May 2006 15:53:25 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/05/35.html/</guid>
+      <description>ziyunch 发表于 2006-05-22 15:53:14 @MSN Live 眼 可能眼白比眼黑更 让人流连 否则我怎么受尽你的白眼 双层镜片 有什么锐利的视线 在下面 只是随意地一督 也小心地将黑色遮掩 明天会有雨线 希</description>
+    </item>
+    
+    <item>
+      <title>那天</title>
+      <link>http://blindwith.science/2006/05/34.html/</link>
+      <pubDate>Mon, 22 May 2006 15:52:47 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/05/34.html/</guid>
+      <description>ziyunch 发表于 2006-05-22 15:52:04 @MSN Live 那天 那天我步入地下商场 看见一个乞丐穿着褴褛的衣裳 拉着二胡的声调 像拉风箱 破布般的唱腔 流入阴沟下的肮脏 我不希望再有那天 那位乞丐以</description>
+    </item>
+    
+    <item>
+      <title>铃铛</title>
+      <link>http://blindwith.science/2006/05/33.html/</link>
+      <pubDate>Mon, 22 May 2006 15:52:35 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/05/33.html/</guid>
+      <description>ziyunch 发表于 2006-05-22 15:52:52 @MSN Live 铃铛 白色的月光泻下 穿过我手中那串金黄的 铃铛 夜莺的歌声流了出来 像开启的密码 金色的薄片交换了眼神 拥抱后离开</description>
+    </item>
+    
+    <item>
+      <title>幸福</title>
+      <link>http://blindwith.science/2006/05/32.html/</link>
+      <pubDate>Mon, 22 May 2006 15:51:43 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/05/32.html/</guid>
+      <description>ziyunch 发表于 2006-05-22 15:51:04 @MSN Live 幸福 每一个富有的人都应该幸福 贫穷的人应该幸福，他们拥有爱情 失恋的人应该幸福，他们还有父母 逝去双亲应该幸福，他们父母会在天堂祝</description>
+    </item>
+    
+    <item>
+      <title>无心上路</title>
+      <link>http://blindwith.science/2006/05/31.html/</link>
+      <pubDate>Mon, 22 May 2006 15:51:16 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/05/31.html/</guid>
+      <description>ziyunch 发表于 2006-05-22 15:51:30 @MSN Live 无心上路 冥冥之中有一个声音 来吧，孩子 我只要你的心 我没有听 轻轻地掠过 我没有带上我的心 那个声音紧随着我 风打着旋 吹不起一片叶子 我的</description>
+    </item>
+    
+    <item>
+      <title>云</title>
+      <link>http://blindwith.science/2006/05/30.html/</link>
+      <pubDate>Sat, 20 May 2006 21:55:49 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/05/30.html/</guid>
+      <description>ziyunch 发表于 2006-05-20 21:55:01 @MSN Live 云 我看着远方 远方是一片薄云 云是多么悠然 夜将来时 它披上了浓厚的暮色为它 挡风 太阳，一夜之后 在它身后浮起 第一缕金光透过它 照在我脸上</description>
+    </item>
+    
+    <item>
+      <title>原创歌词两首</title>
+      <link>http://blindwith.science/2006/04/29.html/</link>
+      <pubDate>Sat, 08 Apr 2006 20:40:45 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/04/29.html/</guid>
+      <description>ziyunch 发表于 2006-04-08 20:40:41 @MSN Live 醉 亭前独酌空举杯 为了谁 饮下一点相思泪 未满半杯胜似千杯醉 恁他落花无悔 飘零新融一江冬流水 独徘徊 只想将心灰 雨霏霏 帘卷西风瘦了谁 我唤</description>
+    </item>
+    
+    <item>
+      <title>保鲜你爱的方式（作文）</title>
+      <link>http://blindwith.science/2006/03/28.html/</link>
+      <pubDate>Sat, 25 Mar 2006 20:31:37 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/03/28.html/</guid>
+      <description>ziyunch 发表于 2006-03-25 20:31:30 @MSN Live 爱，不爱，爱，不爱……每两瓣花瓣都有着相反的涵义。风扬起，残红漫天，也许是种寂寞的爱的方式。 爱，捧在手心，护着怕化了。掩住所</description>
+    </item>
+    
+    <item>
+      <title>夕阳</title>
+      <link>http://blindwith.science/2006/03/27.html/</link>
+      <pubDate>Sat, 11 Mar 2006 20:56:42 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/03/27.html/</guid>
+      <description>ziyunch 发表于 2006-03-11 20:56:14 @MSN Live 是谁手刃了你 任凭你的魂灵哭泣 却不许云的忘情 她的白纱 已被你破碎的心渗透 再一滴一滴透过 直到世界被你染红 也无人为你哭泣 也没有云的忘</description>
+    </item>
+    
+    <item>
+      <title>活着就是活着？</title>
+      <link>http://blindwith.science/2006/02/26.html/</link>
+      <pubDate>Sun, 19 Feb 2006 00:17:32 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/02/26.html/</guid>
+      <description>ziyunch 发表于 2006-02-19 00:17:54 @MSN Live 一切都会过去，一切都是瞬息，而那过去了的，终将成为亲切的怀念。 ——普希金 人一个接一个地在这本叫《活着》的书中死去。 哪怕前一刻</description>
+    </item>
+    
+    <item>
+      <title>对联？失望的讲座</title>
+      <link>http://blindwith.science/2006/01/24.html/</link>
+      <pubDate>Sat, 28 Jan 2006 20:07:34 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/01/24.html/</guid>
+      <description>ziyunch 发表于 2006-01-28 20:07:01 @MSN Live 本人很喜欢百家讲坛，不过最近那个什么人讲对联，真的是气得吐血。第一讲的很差；第二一天到晚在卖弄自己写的对联，姑且不说他水平如</description>
+    </item>
+    
+    <item>
+      <title>小议韩剧</title>
+      <link>http://blindwith.science/2006/01/25.html/</link>
+      <pubDate>Sat, 28 Jan 2006 20:05:35 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/01/25.html/</guid>
+      <description>ziyunch 发表于 2006-01-28 20:05:45 @MSN Live 本人看韩剧也有些时日了，看过的韩剧也不只是一两部了。扳扳手指头，能记起的有《玻璃鞋》《人鱼小姐》《明成皇后》《蓝色生死恋》《</description>
+    </item>
+    
+    <item>
+      <title>外公手术</title>
+      <link>http://blindwith.science/2006/01/23.html/</link>
+      <pubDate>Tue, 24 Jan 2006 19:33:29 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/01/23.html/</guid>
+      <description>ziyunch 发表于 2006-01-24 19:33:33 @MSN Live 今天我10点来到医院，外公还躺在病房中，吊着一瓶葡萄糖。没过多久，29床就出院了，他走前笑着对外公说病好 之后去桂花公园钓鱼，</description>
+    </item>
+    
+    <item>
+      <title>没有蛋糕的生日</title>
+      <link>http://blindwith.science/2006/01/22.html/</link>
+      <pubDate>Mon, 23 Jan 2006 20:09:36 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2006/01/22.html/</guid>
+      <description>ziyunch 发表于 2006-01-23 20:09:23 @MSN Live 今天，1月23日，不是什么节日，我的生日罢了，可能将来会变成一个节日也说不定，呵呵。 生日，没有蛋糕的生日，或许是我人生中的第</description>
+    </item>
+    
+    <item>
+      <title>圣诞节</title>
+      <link>http://blindwith.science/2005/12/21.html/</link>
+      <pubDate>Sat, 24 Dec 2005 21:22:49 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/12/21.html/</guid>
+      <description>ziyunch 发表于 2005-12-24 21:22:07 @MSN Live 今年的圣诞似乎过得了无生趣，一点没有初 中时的气氛。在圣诞前一天，学校垃圾桶自焚。在看这自焚热闹时，我与姜看到其他班均布置的很</description>
+    </item>
+    
+    <item>
+      <title>苏中的语文水平</title>
+      <link>http://blindwith.science/2005/12/20.html/</link>
+      <pubDate>Sat, 10 Dec 2005 19:38:09 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/12/20.html/</guid>
+      <description>ziyunch 发表于 2005-12-10 19:38:04 @MSN Live 此处的语文水平，由于本人愚钝，没进到什么国际班，就不代表苏中的最高语文水平。同时请某些认为被涉到的老师原谅，哦～～ ——题记 真</description>
+    </item>
+    
+    <item>
+      <title>关于冲动</title>
+      <link>http://blindwith.science/2005/12/19.html/</link>
+      <pubDate>Sat, 10 Dec 2005 19:33:59 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/12/19.html/</guid>
+      <description>ziyunch 发表于 2005-12-10 19:33:44 @MSN Live 有句话说：冲动是魔鬼。我想这句话自有他的道理，当然本文与感情无关，只是用此句入题。由于最近又冲动了一次，半路上便拟出了此题。</description>
+    </item>
+    
+    <item>
+      <title>麻烦事一桩</title>
+      <link>http://blindwith.science/2005/11/18.html/</link>
+      <pubDate>Sat, 19 Nov 2005 19:53:51 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/11/18.html/</guid>
+      <description>ziyunch 发表于 2005-11-19 19:53:22 @MSN Live 今天数学跟小蹄膀坐，结果她一脸阴笑得问我最近啊是有什么事。……肯定又是星期三的那点事了，气死我了，竟然已经传那么远了，王HX</description>
+    </item>
+    
+    <item>
+      <title>家长会惊魂</title>
+      <link>http://blindwith.science/2005/11/17.html/</link>
+      <pubDate>Sat, 19 Nov 2005 19:50:17 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/11/17.html/</guid>
+      <description>ziyunch 发表于 2005-11-19 19:50:07 @MSN Live 今天老妈去开家长会，我是心里忐忑不安。Why？就在星期三我上课明目张胆玩文曲星，张默还走过来专门看了一眼……何况我数学这次考</description>
+    </item>
+    
+    <item>
+      <title>杂志</title>
+      <link>http://blindwith.science/2005/11/16.html/</link>
+      <pubDate>Wed, 09 Nov 2005 18:16:08 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/11/16.html/</guid>
+      <description>ziyunch 发表于 2005-11-09 18:16:00 @MSN Live 又到了订报刊杂志的时候，心中有n多想订的杂志，可是经济有限，只能绞尽脑汁地来筛选。不禁开始回想我所看过的报刊杂志，忍不住评点</description>
+    </item>
+    
+    <item>
+      <title>王成语录之天蝎座</title>
+      <link>http://blindwith.science/2005/10/15.html/</link>
+      <pubDate>Sat, 22 Oct 2005 19:50:04 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/10/15.html/</guid>
+      <description>ziyunch 发表于 2005-10-22 19:50:40 @MSN Live 10月21日： 杆呢,有两个可能.一种是救人:一个掉进河里,就用杆去拉拉拉;一种是戳人,那一定是垂直于自己的肚子 .(边说边示意</description>
+    </item>
+    
+    <item>
+      <title>苏中——不一定要选择它</title>
+      <link>http://blindwith.science/2005/10/14.html/</link>
+      <pubDate>Thu, 06 Oct 2005 21:35:20 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/10/14.html/</guid>
+      <description>ziyunch 发表于 2005-10-06 21:35:37 @MSN Live 如果你不是苏州人就不用问了，可如果是苏州的，一定会冒出个大大的问号——为什么？ 我原来也认为苏中好啊，苏中的高考状元，竞赛冠军</description>
+    </item>
+    
+    <item>
+      <title>小蹄蹄眼中的我</title>
+      <link>http://blindwith.science/2005/09/13.html/</link>
+      <pubDate>Sun, 18 Sep 2005 16:55:18 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/09/13.html/</guid>
+      <description>ziyunch 发表于 2005-09-18 16:55:03 @QQ空间 我眼中的他/它/她 XXX，听到这个名字首先会想到什么？不认识她的人就不说了，小学时的同学我也不知道，初中同学嘛，首先一</description>
+    </item>
+    
+    <item>
+      <title>关于LT&amp;QZD的词</title>
+      <link>http://blindwith.science/2005/09/12.html/</link>
+      <pubDate>Sun, 18 Sep 2005 16:51:08 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/09/12.html/</guid>
+      <description>ziyunch 发表于 2005-09-18 16:51:42 @QQ空间 诉衷情 桃花粉色薛涛笺 金笔换青竹 清晨日变阴雨 朔方为何物 天靉靆（应用简体破，无奈电脑上打不出简体） 去浮云 晴不如 此文书罢 刀已</description>
+    </item>
+    
+    <item>
+      <title>我的初中岁月</title>
+      <link>http://blindwith.science/2005/08/11.html/</link>
+      <pubDate>Thu, 18 Aug 2005 12:56:43 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/08/11.html/</guid>
+      <description>ziyunch 发表于 2005-08-18 12:56:04 @QQ空间 或许有人会笑我白痴 把往事写出作为别人的谈资 那么将它遗失 成为月光下的冷尸 我又一遍为之 那段不堪的历史？ 可我似乎并没有忏悔的</description>
+    </item>
+    
+    <item>
+      <title>水瓶座</title>
+      <link>http://blindwith.science/2005/08/10.html/</link>
+      <pubDate>Wed, 17 Aug 2005 01:05:20 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/08/10.html/</guid>
+      <description>ziyunch 发表于 2005-08-17 01:05:14 @ QQ空间 水瓶座 1月21日～2月19日 主宰行星：天王星 属性：风相星座 冬天出生的生辰星位或太阳在水瓶座的人的特点： 在充满绝对意识的</description>
+    </item>
+    
+    <item>
+      <title>有感于太极旗飘扬</title>
+      <link>http://blindwith.science/2005/08/9.html/</link>
+      <pubDate>Fri, 12 Aug 2005 01:51:35 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/08/9.html/</guid>
+      <description>ziyunch 发表于 2005-08-12 01:51:03 @ BlogBus 起初看这部片子是冲着元彬的名字去的，看了一会儿就不再搀杂着个人的喜好而以电影的角度去看它。战争真是太残酷了，它可以使被它牵涉</description>
+    </item>
+    
+    <item>
+      <title>难吃</title>
+      <link>http://blindwith.science/2005/08/8.html/</link>
+      <pubDate>Mon, 08 Aug 2005 23:57:18 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/08/8.html/</guid>
+      <description>ziyunch 发表于 2005-08-08 23:57:26 @ Blogbus 今天出去，路上嘴馋，看见好 利来的广告——炎炎夏日，好利来冰品让你爽一夏什么的，就进去了。点了一款坐下来吃。甜，腻，温，第一口</description>
+    </item>
+    
+    <item>
+      <title>尼康coolpix5900之购买</title>
+      <link>http://blindwith.science/2005/08/7.html/</link>
+      <pubDate>Sun, 07 Aug 2005 00:55:16 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/08/7.html/</guid>
+      <description>ziyunch 发表于 2005-08-07 00:55:59 @ Blogbus 今天台风降临苏州，风雨大作。但是中午一切正常，丝毫看不出一点要下雨的征兆。那时风虽然大，但又凉爽又无雨，的确是买东西的好天气</description>
+    </item>
+    
+    <item>
+      <title>麻辣豆腐</title>
+      <link>http://blindwith.science/2005/08/6.html/</link>
+      <pubDate>Wed, 03 Aug 2005 21:58:38 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/08/6.html/</guid>
+      <description>ziyunch 发表于 2005-08-03 21:58:34 @ Blogbus 今天起来想自己烧菜，便找了麻辣豆腐的做法。这个菜可是要炒的，而我平生最怕炒菜 了。怎么办呢？全副武装！于是我找来袖套、手套、围</description>
+    </item>
+    
+    <item>
+      <title>兴奋之——wallop&amp;Gmail</title>
+      <link>http://blindwith.science/2005/08/5.html/</link>
+      <pubDate>Wed, 03 Aug 2005 00:44:39 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/08/5.html/</guid>
+      <description>ziyunch 发表于 2005-08-03 00:44:32 @ Blogbus 今天真是很兴奋。 昨日想找个wallop玩玩，就寻找起来。在从不知网上看见有赠与wallop &amp; Gmail的邀请，便把我的mai</description>
+    </item>
+    
+    <item>
+      <title>疑似UFO</title>
+      <link>http://blindwith.science/2005/07/4.html/</link>
+      <pubDate>Sun, 31 Jul 2005 22:38:12 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/07/4.html/</guid>
+      <description>ziyunch 发表于 2005-07-31 22:38:19 @ Blogbus 今天傍晚在看电视的我被外婆叫到楼上去。心里想着又是哪盆花开得美丽，可这时早已吃完晚饭，花都将谢欲谢，哪里来这满盆吐香之妙景呢</description>
+    </item>
+    
+    <item>
+      <title>eyes in Nazca,Peru</title>
+      <link>http://blindwith.science/2005/07/3.html/</link>
+      <pubDate>Sun, 31 Jul 2005 16:21:32 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/07/3.html/</guid>
+      <description>ziyunch 发表于 2005-07-31 16:21:03 @ Blogbus 今天用google earth想看纳斯卡线条的，结果没找到。却发现了个很奇怪的东东。纳斯卡边上竟有一双大眼睛……</description>
+    </item>
+    
+    <item>
+      <title>沉默</title>
+      <link>http://blindwith.science/2005/07/2.html/</link>
+      <pubDate>Thu, 07 Jul 2005 10:06:11 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/07/2.html/</guid>
+      <description>ziyunch 发表于 2005-07-07 10:06:07 @ Blogbus 沉默是指缝间的流水 一不留神忘了它 失去 顺带走了时间 缺一片哗哗 &amp;nbsp; 沉默是时间里的风 微微的远去 时间流逝 怎是那无言的倾诉 &amp;nbsp; 沉默就那么清</description>
+    </item>
+    
+    <item>
+      <title>关于牙</title>
+      <link>http://blindwith.science/2005/07/1.html/</link>
+      <pubDate>Thu, 07 Jul 2005 10:04:50 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2005/07/1.html/</guid>
+      <description>ziyunch 发表于 2005-07-07 10:04:42 @ BlogBus 最近很颓废 似乎每天都是沙发动物 什么都不能吃 牙很疼 医生说是长牙的原因，却又不是智齿 或许不是一般的牙 它刺在我心 将我扼的难受 评论 （</description>
+    </item>
+    
+  </channel>
+</rss>

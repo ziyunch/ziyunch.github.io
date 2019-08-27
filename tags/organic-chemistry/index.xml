@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Organic Chemistry on Blind with Science</title>
+    <link>http://blindwith.science/tags/organic-chemistry/</link>
+    <description>Recent content in Organic Chemistry on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Thu, 28 Apr 2016 23:05:55 +0000</lastBuildDate>
+    
+	<atom:link href="http://blindwith.science/tags/organic-chemistry/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>有机全合成之美</title>
+      <link>http://blindwith.science/2016/04/426.html/</link>
+      <pubDate>Thu, 28 Apr 2016 23:05:55 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/04/426.html/</guid>
+      <description>虽然名义上我是有机方向的，但我一直都不太喜欢现有的体系。可能是自己不长于记诵的缘故吧，我一直觉得记忆那么多反应没什么必要。等到人们对有机反应</description>
+    </item>
+    
+  </channel>
+</rss>

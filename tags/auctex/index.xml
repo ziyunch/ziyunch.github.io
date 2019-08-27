@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AucTeX on Blind with Science</title>
+    <link>http://blindwith.science/tags/auctex/</link>
+    <description>Recent content in AucTeX on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Wed, 02 Mar 2016 23:40:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blindwith.science/tags/auctex/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LaTeX 笔记2</title>
+      <link>http://blindwith.science/2016/03/421.html/</link>
+      <pubDate>Wed, 02 Mar 2016 23:40:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/03/421.html/</guid>
+      <description>&lt;p&gt;今天努了把力终于把初稿写完了。话说 LaTeX 真是超级容易上手啊，感觉看过入门手册和描述文档后，今天基本上可以脱手写论文了。&lt;/p&gt;
+
+&lt;p&gt;写完之后去吃了东北菜，然后回家又开始摸鱼，研究起了 Emacs + AucTeX 的组合。&lt;/p&gt;
+
+&lt;p&gt;受了&lt;a href=&#34;https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org&#34;&gt;一年成为 Emacs 高手&lt;/a&gt;的蛊惑，我使用了 &lt;a href=&#34;https://github.com/purcell/emacs.d&#34;&gt;Purcell 的配置&lt;/a&gt;，花了一点时间把 tutorial 读了一遍，做了笔记，并通过&lt;a href=&#34;http://www.cnblogs.com/robertzml/archive/2010/03/31/1701374.html&#34;&gt;别人的教程&lt;/a&gt;将不理解的部分大致搞了清楚。之后我便按照不&lt;a href=&#34;http://cs2.swfc.edu.cn/~wx672/lecture_notes/linux/latex/latex_tutorial.html&#34;&gt;知道是哪个学校出的快速上手教程&lt;/a&gt;过了一遍。&lt;/p&gt;
+
+&lt;p&gt;不过这个教程的配置和我的有所不同:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在 minibuffer 进行选项补完时，我只能使用RET，C-j 会导致补完失败.
+还有一些教程里没有提到的 AucTeX 的特性：&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;可以直接使用 C-c C-c 编译，C-c C-v 预览 pdf，并不需要像文中一样在 &lt;em&gt;shell&lt;/em&gt; 里敲命令进行调用;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;TAB&gt; LaTeX-indent-line will indent the current line；&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;C-j newline-and-indent inserts a new line (much like &lt;RET&gt;) and moves the cursor to an appropriate position by the left margin；&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;RET&gt; no indent.
+感觉还蛮顺利的，下次摸鱼时可以研究一下 org-mode，以后说不定就能在 Emacs 里管理文献了~&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;感觉明天可以去搞这些的 Reference Card，让生活更简单一些~&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

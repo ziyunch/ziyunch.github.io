@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>电子 on Blind with Science</title>
+    <link>http://blindwith.science/tags/%E7%94%B5%E5%AD%90/</link>
+    <description>Recent content in 电子 on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Thu, 11 Feb 2010 00:42:47 +0000</lastBuildDate>
+    
+	<atom:link href="http://blindwith.science/tags/%E7%94%B5%E5%AD%90/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>关于那个【第六感运算装置和纸“计算机”】瞎想想……</title>
+      <link>http://blindwith.science/2010/02/353.html/</link>
+      <pubDate>Thu, 11 Feb 2010 00:42:47 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/02/353.html/</guid>
+      <description>刚刚看了一个TED大会的视频，就是一个印度人的设计。他那个图像扫描一下子让我想到了“东之伊甸”计划。那个需要强大的图像辨识系统和数据库支持，</description>
+    </item>
+    
+  </channel>
+</rss>

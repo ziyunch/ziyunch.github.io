@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Blind with Science</title>
+    <link>http://blindwith.science/tags/git/</link>
+    <description>Recent content in Git on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Tue, 19 Sep 2017 18:43:16 +0000</lastBuildDate>
+    
+	<atom:link href="http://blindwith.science/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git笔记</title>
+      <link>http://blindwith.science/2017/09/436.html/</link>
+      <pubDate>Tue, 19 Sep 2017 18:43:16 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2017/09/436.html/</guid>
+      <description>&lt;p&gt;为了一些软件的配置（包括这个博客），一直有在断断续续地使用Github。由于对一些概念始终有一些疑惑，所以来读一下著名的&lt;a href=&#34;https://git-scm.com/book/zh/v2/&#34;&gt;Pro Git v2&lt;/a&gt;，顺便记笔记。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

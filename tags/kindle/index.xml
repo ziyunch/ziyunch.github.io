@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kindle on Blind with Science</title>
+    <link>http://blindwith.science/tags/kindle/</link>
+    <description>Recent content in kindle on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Sun, 21 Apr 2013 06:21:20 +0000</lastBuildDate>
+    
+	<atom:link href="http://blindwith.science/tags/kindle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kindle DXG(2.5.8) 中文字体手记</title>
+      <link>http://blindwith.science/2013/04/389.html/</link>
+      <pubDate>Sun, 21 Apr 2013 06:21:20 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2013/04/389.html/</guid>
+      <description>Kindle DXG是一款霸气却又被遗弃的半成品。用其来看漫画和古籍扫描本堪称完美，但因为便携性、价格、以及市场选取等因素而惨遭降价停产，版本号永久停留</description>
+    </item>
+    
+  </channel>
+</rss>

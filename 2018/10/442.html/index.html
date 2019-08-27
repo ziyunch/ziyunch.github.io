@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Gene Variation Analysis of Stomach Cancer - Blind with Science</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ziyunch" /><meta name="description" content="Background Cancer is the second leading cause of death globally, and is responsible for an estimated 9.6 million deaths in 2018. Globally, about 1 in 6 deaths is due to cancer. --World Health Organization  Cancer is the second leading cause of death globally 1. Cancer generally arises when normal cells transform from pre-cancerous lesion to malignant tumour cells. This transformation is a result of the interaction between a person&amp;rsquo;s genetic factors and three categories of external agents including physical, chemical and biological carcinogens. Cancer mortality can be reduced if cases are detected and treated early.
+For stomach cancer in the United States for 2018:
+About 26,240 cases of stomach cancer will be diagnosed (16,520 in men and 9,720 in women)
+About 10,800 people will die from this type of cancer (6,510 men and 4,290 women)
+--The American Cancer Society
+ Stomach cancer is the world&amp;rsquo;s third leading cause of cancer-related death 1. It is responsible for an estimated 783, 000 deaths globally in 2018 2. Stomach cancers can be classified as adenocarcinoma, lymphoma, gastrointestinal stromal tumor, carcinoid tumor and other rare cancers. The majority (about 90% to 95%) of stomach cancers are adenocarcinomas 3. Thus, if adenocarcinomas can be further classified into subgroups, it will be beneficial in clinical care: 1. Appropriate screening tests can be developed based on information of each subgroup. 2. Effective treatment can be achieved by better defined drug targets for each subgroup.
+Recently, The Cancer Genome Atlas Network (TCGA) obtained gastric adenocarcinoma primary tumour tissue from 295 patients, in order to purse molecular sub-group classification 4. On this tissue whole-exome sequencing, array-based somatic copy number analysis, array-based DNA methylation profiling, messenger RNA (mRNA) sequencing, microRNA sequencing and reverse-phase protein array (RPPA) molecular classification was performed. Unsupervised clustering of the data resulted in 4 subgroups; characterized by EBV-positivity, high microsatellite-instability, genomically stability or chromosomal instability.
+Here I explored this TCGA dataset, started with a gene copy number variation analysis for an expanded set (443 patients), identified differentially expressed genes in comparison to normal matched tissues by hierarchical clustering.
+" /><meta name="keywords" content="ziyunch, blog" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://blindwith.science/2018/10/442.html/" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../favicon-16x16.png">
+<link rel="manifest" href="../../../manifest.json">
+<link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="../../../dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Gene Variation Analysis of Stomach Cancer" />
+<meta property="og:description" content="Background
+
+Cancer is the second leading cause of death globally, and is responsible for an estimated 9.6 million deaths in 2018. Globally, about 1 in 6 deaths is due to cancer. --World Health Organization
+
+
+Cancer is the second leading cause of death globally 1. Cancer generally arises when normal cells transform from pre-cancerous lesion to malignant tumour cells. This transformation is a result of the interaction between a person&rsquo;s genetic factors and three categories of external agents including physical, chemical and biological carcinogens. Cancer mortality can be reduced if cases are detected and treated early.
+
+For stomach cancer in the United States for 2018:About 26,240 cases of stomach cancer will be diagnosed (16,520 in men and 9,720 in women)About 10,800 people will die from this type of cancer (6,510 men and 4,290 women)--The American Cancer Society
+
+Stomach cancer is the world&rsquo;s third leading cause of cancer-related death 1. It is responsible for an estimated 783, 000 deaths globally in 2018 2. Stomach cancers can be classified as adenocarcinoma, lymphoma, gastrointestinal stromal tumor, carcinoid tumor and other rare cancers. The majority (about 90% to 95%) of stomach cancers are adenocarcinomas 3. Thus, if adenocarcinomas can be further classified into subgroups, it will be beneficial in clinical care:
+1. Appropriate screening tests can be developed based on information of each subgroup.
+2. Effective treatment can be achieved by better defined drug targets for each subgroup.
+
+Recently, The Cancer Genome Atlas Network (TCGA) obtained gastric adenocarcinoma primary tumour tissue from 295 patients, in order to purse molecular sub-group classification 4. On this tissue whole-exome sequencing, array-based somatic copy number analysis, array-based DNA methylation profiling, messenger RNA (mRNA) sequencing, microRNA sequencing and reverse-phase protein array (RPPA) molecular classification was performed. Unsupervised clustering of the data resulted in 4 subgroups; characterized by EBV-positivity, high microsatellite-instability, genomically stability or chromosomal instability.
+
+Here I explored this TCGA dataset, started with a gene copy number variation analysis for an expanded set (443 patients), identified differentially expressed genes in comparison to normal matched tissues by hierarchical clustering." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blindwith.science/2018/10/442.html/" />
+<meta property="article:published_time" content="2018-10-17T22:46:28+00:00" />
+<meta property="article:modified_time" content="2018-10-17T22:46:28+00:00" />
+<meta itemprop="name" content="Gene Variation Analysis of Stomach Cancer">
+<meta itemprop="description" content="Background
+
+Cancer is the second leading cause of death globally, and is responsible for an estimated 9.6 million deaths in 2018. Globally, about 1 in 6 deaths is due to cancer. --World Health Organization
+
+
+Cancer is the second leading cause of death globally 1. Cancer generally arises when normal cells transform from pre-cancerous lesion to malignant tumour cells. This transformation is a result of the interaction between a person&rsquo;s genetic factors and three categories of external agents including physical, chemical and biological carcinogens. Cancer mortality can be reduced if cases are detected and treated early.
+
+For stomach cancer in the United States for 2018:About 26,240 cases of stomach cancer will be diagnosed (16,520 in men and 9,720 in women)About 10,800 people will die from this type of cancer (6,510 men and 4,290 women)--The American Cancer Society
+
+Stomach cancer is the world&rsquo;s third leading cause of cancer-related death 1. It is responsible for an estimated 783, 000 deaths globally in 2018 2. Stomach cancers can be classified as adenocarcinoma, lymphoma, gastrointestinal stromal tumor, carcinoid tumor and other rare cancers. The majority (about 90% to 95%) of stomach cancers are adenocarcinomas 3. Thus, if adenocarcinomas can be further classified into subgroups, it will be beneficial in clinical care:
+1. Appropriate screening tests can be developed based on information of each subgroup.
+2. Effective treatment can be achieved by better defined drug targets for each subgroup.
+
+Recently, The Cancer Genome Atlas Network (TCGA) obtained gastric adenocarcinoma primary tumour tissue from 295 patients, in order to purse molecular sub-group classification 4. On this tissue whole-exome sequencing, array-based somatic copy number analysis, array-based DNA methylation profiling, messenger RNA (mRNA) sequencing, microRNA sequencing and reverse-phase protein array (RPPA) molecular classification was performed. Unsupervised clustering of the data resulted in 4 subgroups; characterized by EBV-positivity, high microsatellite-instability, genomically stability or chromosomal instability.
+
+Here I explored this TCGA dataset, started with a gene copy number variation analysis for an expanded set (443 patients), identified differentially expressed genes in comparison to normal matched tissues by hierarchical clustering.">
+
+
+<meta itemprop="datePublished" content="2018-10-17T22:46:28&#43;00:00" />
+<meta itemprop="dateModified" content="2018-10-17T22:46:28&#43;00:00" />
+<meta itemprop="wordCount" content="1676">
+
+
+
+<meta itemprop="keywords" content="Data Science," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Gene Variation Analysis of Stomach Cancer"/>
+<meta name="twitter:description" content="Background
+
+Cancer is the second leading cause of death globally, and is responsible for an estimated 9.6 million deaths in 2018. Globally, about 1 in 6 deaths is due to cancer. --World Health Organization
+
+
+Cancer is the second leading cause of death globally 1. Cancer generally arises when normal cells transform from pre-cancerous lesion to malignant tumour cells. This transformation is a result of the interaction between a person&rsquo;s genetic factors and three categories of external agents including physical, chemical and biological carcinogens. Cancer mortality can be reduced if cases are detected and treated early.
+
+For stomach cancer in the United States for 2018:About 26,240 cases of stomach cancer will be diagnosed (16,520 in men and 9,720 in women)About 10,800 people will die from this type of cancer (6,510 men and 4,290 women)--The American Cancer Society
+
+Stomach cancer is the world&rsquo;s third leading cause of cancer-related death 1. It is responsible for an estimated 783, 000 deaths globally in 2018 2. Stomach cancers can be classified as adenocarcinoma, lymphoma, gastrointestinal stromal tumor, carcinoid tumor and other rare cancers. The majority (about 90% to 95%) of stomach cancers are adenocarcinomas 3. Thus, if adenocarcinomas can be further classified into subgroups, it will be beneficial in clinical care:
+1. Appropriate screening tests can be developed based on information of each subgroup.
+2. Effective treatment can be achieved by better defined drug targets for each subgroup.
+
+Recently, The Cancer Genome Atlas Network (TCGA) obtained gastric adenocarcinoma primary tumour tissue from 295 patients, in order to purse molecular sub-group classification 4. On this tissue whole-exome sequencing, array-based somatic copy number analysis, array-based DNA methylation profiling, messenger RNA (mRNA) sequencing, microRNA sequencing and reverse-phase protein array (RPPA) molecular classification was performed. Unsupervised clustering of the data resulted in 4 subgroups; characterized by EBV-positivity, high microsatellite-instability, genomically stability or chromosomal instability.
+
+Here I explored this TCGA dataset, started with a gene copy number variation analysis for an expanded set (443 patients), identified differentially expressed genes in comparison to normal matched tissues by hierarchical clustering."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="../../../" class="logo">Blind with Science</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="../../../">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="../../../post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="../../../tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="../../../categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="../../../about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="../../../" class="logo">Blind with Science</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="../../../">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Gene Variation Analysis of Stomach Cancer</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-10-17 </span>
+        <div class="post-category">
+            <a href="../../../categories/%E7%A7%91%E7%A0%94%E5%9C%88/"> 科研圈 </a>
+            </div>
+          <span class="more-meta"> 约 1676 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#background">Background</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#data-wrangling">Data Wrangling</a>
+<ul>
+<li><a href="#mutation-annotation-format-data-from-tcga">Mutation Annotation Format Data from TCGA</a></li>
+<li><a href="#gene-copy-number-variation-data-from-tcga">Gene Copy Number Variation Data from TCGA</a></li>
+<li><a href="#identify-molecular-subgroups">Identify Molecular Subgroups</a></li>
+<li><a href="#map-gene-list-with-biological-meanings">Map Gene List with Biological Meanings</a></li>
+</ul></li>
+<li><a href="#data-analysis-and-visualization">Data Analysis and Visualization</a>
+<ul>
+<li><a href="#summarize-and-visualize-stomach-cancer-tcga-maf-files">Summarize and Visualize Stomach Cancer TCGA MAF Files</a></li>
+<li><a href="#gene-copy-number-variation-analysis">Gene Copy Number Variation Analysis</a></li>
+<li><a href="#gene-ontology-analysis">Gene Ontology Analysis</a></li>
+</ul></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="background">Background</h1>
+
+<div class="note info"><p>Cancer is the second leading cause of death globally, and is responsible for an estimated 9.6 million deaths in 2018. Globally, about 1 in 6 deaths is due to cancer. <br>--World Health Organization
+</p></div>
+
+<p>Cancer is the second leading cause of death globally <sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>. Cancer generally arises when normal cells transform from pre-cancerous lesion to malignant tumour cells. This transformation is a result of the interaction between a person&rsquo;s genetic factors and three categories of external agents including physical, chemical and biological carcinogens. Cancer mortality can be reduced if cases are detected and treated early.</p>
+
+<div class="note info"><p>For stomach cancer in the United States for 2018:<br>About 26,240 cases of stomach cancer will be diagnosed (16,520 in men and 9,720 in women)<br>About 10,800 people will die from this type of cancer (6,510 men and 4,290 women)<br>--The American Cancer Society</p></div>
+
+<p>Stomach cancer is the world&rsquo;s third leading cause of cancer-related death <sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>. It is responsible for an estimated 783, 000 deaths globally in 2018 <sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>. Stomach cancers can be classified as adenocarcinoma, lymphoma, gastrointestinal stromal tumor, carcinoid tumor and other rare cancers. The majority (about 90% to 95%) of stomach cancers are adenocarcinomas <sup class="footnote-ref" id="fnref:3"><a href="#fn:3">3</a></sup>. Thus, if adenocarcinomas can be further classified into subgroups, it will be beneficial in clinical care:
+1. Appropriate screening tests can be developed based on information of each subgroup.
+2. Effective treatment can be achieved by better defined drug targets for each subgroup.</p>
+
+<p>Recently, The Cancer Genome Atlas Network (TCGA) obtained gastric adenocarcinoma primary tumour tissue from 295 patients, in order to purse molecular sub-group classification <sup class="footnote-ref" id="fnref:4"><a href="#fn:4">4</a></sup>. On this tissue whole-exome sequencing, array-based somatic copy number analysis, array-based DNA methylation profiling, messenger RNA (mRNA) sequencing, microRNA sequencing and reverse-phase protein array (RPPA) molecular classification was performed. Unsupervised clustering of the data resulted in 4 subgroups; characterized by EBV-positivity, high microsatellite-instability, genomically stability or chromosomal instability.</p>
+
+<p>Here I explored this TCGA dataset, started with a gene copy number variation analysis for an expanded set (443 patients), identified differentially expressed genes in comparison to normal matched tissues by hierarchical clustering.</p>
+
+<h1 id="requirements">Requirements</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">python: 2.7.10
+r: 3.4.2
+gistic: 2.0
+david: 6.8
+bioconductor: 3.7</pre></td></tr></table>
+</div>
+</div>
+<h1 id="data-wrangling">Data Wrangling</h1>
+
+<h2 id="mutation-annotation-format-data-from-tcga">Mutation Annotation Format Data from TCGA</h2>
+
+<p>Mutation Annotation Format (MAF) files are tab-delimited files that contain somatic and/or germline mutation annotations. Variants are discovered by aligning DNA sequences derived from tumor samples and sequences derived from normal samples to a reference sequence. A MAF file identifies, for all samples in a project, the discovered putative or validated mutations and categorizes those mutations (polymorphism, deletion, or insertion) as somatic (originating in the tumor tissue) or germline (originating from the germline). Mutation annotation are also reported <sup class="footnote-ref" id="fnref:5"><a href="#fn:5">5</a></sup>.</p>
+
+<p>I obtained mutation annotation format data from the Cancer Genome Atlas Network (TCGA) (<code>TCGA.STAD.somaticsniper.6a5e4a85-f398-43b0-89cf-a680fd3737fa.DR-10.0.somatic.maf.gz</code>) and used R package <code>maftools</code> <sup class="footnote-ref" id="fnref:6"><a href="#fn:6">6</a></sup> to read MAF files.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="kn">require</span><span class="p">(</span>maftools<span class="p">)</span>
+stad <span class="o">=</span> read.maf<span class="p">(</span>maf <span class="o">=</span> <span class="s">&#34;tcga_stad.somatic.maf&#34;</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="gene-copy-number-variation-data-from-tcga">Gene Copy Number Variation Data from TCGA</h2>
+
+<p>Copy Number Variations (CNV) refers to a DNA segment of one kilobase (kb) or larger that is present at a different copy number than the reference genome. These insertions, deletions, inversions, and duplications result in changes in the physical arrangement of genes on chromosomes and have been associated with susceptibility or resistance to disease, e.g. cancer <sup class="footnote-ref" id="fnref:7"><a href="#fn:7">7</a></sup>.</p>
+
+<p>I obtained copy number variation data from TCGA and convert them into appropriate data format:
+<code>cnv2seg.py</code>: convert CNV data from TCGA into segmentation file required for GISTIC.</p>
+
+<h2 id="identify-molecular-subgroups">Identify Molecular Subgroups</h2>
+
+<p>Molecular Subgroups are identified by initial analysis of the CNV data. I used Genomic Identification of Significant Targets in Cancer (GISTIC) 2.0 <sup class="footnote-ref" id="fnref:8"><a href="#fn:8">8</a></sup> on Genepattern <sup class="footnote-ref" id="fnref:9"><a href="#fn:9">9</a></sup> to perform unsupervised clustering to determine locations of the genome that contain deletion or amplification in gene copy number against refgene Human Hg19. After locations of the genome with CNV was determined, the CNV on individual genes could be inferred. GISTIC tries to overcome the noisy background by focusing in on focal regions of the chromosome.</p>
+
+<p>An appropriate marker file (<code>TCGA.DCC.GenomeWideSNP6.marker.na31.lst.gz</code>) was used. A g-score was assigned for each aberration to indicate the amplitude as well as the frequency of its occurrence for all samples. In addition a q-value was computed, it was used to set the False Discovery Rate (FDR) to 0.05. The underlying affected genes were determined by mapping the locations to a set of genes with the Hg19 chromosomal positions indicated.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml">input<span class="p">:</span><span class="w">
+</span><span class="w"></span>*<span class="w"> </span>segmentation<span class="w"> </span>file<span class="p">:</span><span class="w"> </span>`new.seg`<span class="w"> </span>(sample<span class="p">,</span><span class="w"> </span>chromosome<span class="p">,</span><span class="w"> </span>start<span class="w"> </span>position<span class="p">,</span><span class="w"> </span>end<span class="w"> </span>position<span class="p">,</span><span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>markers<span class="w"> </span>in<span class="w"> </span>segment<span class="p">,</span><span class="w"> </span>log<span class="w"> </span>of<span class="w"> </span>copy<span class="w"> </span>number)<span class="w">
+</span><span class="w"></span>*<span class="w"> </span>reference<span class="w"> </span>genome<span class="w"> </span>file<span class="p">:</span><span class="w"> </span>`hg19.mat`<span class="w">
+</span><span class="w"></span>*<span class="w"> </span>markers<span class="w"> </span>file<span class="p">:</span><span class="w"> </span>`TCGA.DCC.GenomeWideSNP6.marker.na31.lst`<span class="w"> </span>(marker<span class="w"> </span>name<span class="p">,</span><span class="w"> </span>chromosome<span class="p">,</span><span class="w"> </span>marker<span class="w"> </span>position<span class="w"> </span>in<span class="w"> </span>bases)<span class="w">
+</span><span class="w"></span>output<span class="p">:</span><span class="w">
+</span><span class="w"></span>*<span class="w"> </span>all<span class="w"> </span>lesion<span class="w"> </span>file<span class="p">:</span><span class="w"> </span>`new.all_lesion.conf_95.txt`<span class="w">
+</span><span class="w"></span>*<span class="w"> </span>amplification<span class="w"> </span>new.gene<span class="w"> </span>file<span class="p">:</span><span class="w"> </span>`amp_genes.conf_95.txt`<span class="w">
+</span><span class="w"></span>*<span class="w"> </span>deletion<span class="w"> </span>genes<span class="w"> </span>file<span class="p">:</span><span class="w"> </span>`new.del_genes.conf_95.txt`<span class="w">
+</span><span class="w"></span>*<span class="w"> </span>GISTIC<span class="w"> </span>scores<span class="w"> </span>file<span class="p">:</span><span class="w"> </span>`new.scores.gistic`<span class="w">
+</span><span class="w"></span>*<span class="w"> </span>segmented<span class="w"> </span>copy<span class="w"> </span>number<span class="p">:</span><span class="w"> </span>`new.raw_copy_number.pdf`<span class="w"> </span>and<span class="w"> </span>`new.raw_copy_number.png`<span class="w"> </span>(heat<span class="w"> </span>map<span class="w"> </span>image)<span class="w">
+</span><span class="w"></span>*<span class="w"> </span>amplification<span class="w"> </span>GISTIC<span class="w"> </span>plot<span class="p">:</span><span class="w"> </span>`new.amp_qplot.pdf`<span class="w"> </span>and<span class="w"> </span>`new.amp_qplot.png`<span class="w"> </span>(plot<span class="w"> </span>shows<span class="w"> </span>the<span class="w"> </span>G-score<span class="w"> </span>on<span class="w"> </span>top<span class="w"> </span>and<span class="w"> </span>q-values<span class="w"> </span>on<span class="w"> </span>bottom<span class="w"> </span>with<span class="w"> </span>respect<span class="w"> </span>to<span class="w"> </span>amplifications<span class="w"> </span>for<span class="w"> </span>all<span class="w"> </span>markers<span class="w"> </span>over<span class="w"> </span>the<span class="w"> </span>entire<span class="w"> </span>region<span class="w"> </span>analyzed)<span class="w">
+</span><span class="w"></span>*<span class="w"> </span>deletion<span class="w"> </span>GISTIC<span class="w"> </span>plot<span class="p">:</span><span class="w"> </span>`new.del_qplot.pdf`<span class="w"> </span>and<span class="w"> </span>`new.del_qplot.png`<span class="w">
+</span><span class="w"></span>*<span class="w"> </span>`all_data_by_genes.txt`</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="map-gene-list-with-biological-meanings">Map Gene List with Biological Meanings</h2>
+
+<p>The above technologies results in a huge gene list. To analyze the biological meanings of the output, especially for gene ontology terms, I used the functional annotation tool Database for Annotation, Visualization and Integrated Discovery (DAVID) <sup class="footnote-ref" id="fnref:10"><a href="#fn:10">10</a></sup>. DAVID is able to map the large gene list with the associated biological features, then the most significantly enriched biological annotations are highlighted within a predefined p-value threshold. While multiple tests are performed here, these p-values are corrected using Benjamini-Hochberg algorithm to allow for it.</p>
+
+<p><code>gene_amp.py</code>: use focal CNV (regions of repeated genetic information that only span a small proportion &lt;25% of the chromosome arm) to locate the amplified or the deleted genes from the chromosome.</p>
+
+<p><code>seq2gct.py</code>: prepare gene gluster text file to describe expression dataset from sequence file from GISTIC output.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml">input<span class="p">:</span><span class="w"> </span>`all_data_by_genes.txt`<span class="w">
+</span><span class="w"></span>output<span class="p">:</span><span class="w"> </span>`cnv_all_data.gct`<span class="w">
+</span><span class="w"></span>format<span class="p">:</span><span class="w">
+</span><span class="w"></span><span class="s2">&#34;#1.2&#34;</span><span class="w">
+</span><span class="w"></span>(<span class="c"># of data rows) (tab) (# of data columns)</span><span class="w">
+</span><span class="w"></span>Name(tab)Description(tab)(sample<span class="w"> </span><span class="m">1</span><span class="w"> </span>name)(tab)(sample<span class="w"> </span><span class="m">2</span><span class="w"> </span>name)<span class="w"> </span>(tab)<span class="w"> </span>...<span class="w"> </span>(sample<span class="w"> </span>N<span class="w"> </span>name)<span class="w">
+</span><span class="w"></span>(gene<span class="w"> </span>name)<span class="w"> </span>(tab)<span class="w"> </span>(gene<span class="w"> </span>description)<span class="w"> </span>(tab)<span class="w"> </span>(col<span class="w"> </span><span class="m">1</span><span class="w"> </span>data)<span class="w"> </span>(tab)<span class="w"> </span>(col<span class="w"> </span><span class="m">2</span><span class="w"> </span>data)<span class="w"> </span>(tab)<span class="w"> </span>...<span class="w"> </span>(col<span class="w"> </span>N<span class="w"> </span>data)</code></pre></td></tr></table>
+</div>
+</div>
+<p><code>gct2cls.py</code>: prepare categorical (cancer vs normal) class file to define phenotype.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml">input<span class="p">:</span><span class="w"> </span>`cnv_all_data.gct`<span class="w">
+</span><span class="w"></span>output<span class="p">:</span>`cnv.cls`<span class="w">
+</span><span class="w"></span>format<span class="p">:</span><span class="w">
+</span><span class="w"></span>(number<span class="w"> </span>of<span class="w"> </span>samples)<span class="w"> </span>(space)<span class="w"> </span>(number<span class="w"> </span>of<span class="w"> </span>classes)<span class="w"> </span>(space)<span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="w"></span><span class="s2">&#34;#&#34;</span><span class="w"> </span>(space)<span class="w"> </span>(class<span class="w"> </span><span class="m">0</span><span class="w"> </span>name)<span class="w"> </span>(space)<span class="w"> </span>(class<span class="w"> </span><span class="m">1</span><span class="w"> </span>name)<span class="w">
+</span><span class="w"></span>(sample<span class="w"> </span><span class="m">1</span><span class="w"> </span>class)<span class="w"> </span>(space)<span class="w"> </span>(sample<span class="w"> </span><span class="m">2</span><span class="w"> </span>class)<span class="w"> </span>(space)<span class="w"> </span>...<span class="w"> </span>(sample<span class="w"> </span>N<span class="w"> </span>class)</code></pre></td></tr></table>
+</div>
+</div>
+<h1 id="data-analysis-and-visualization">Data Analysis and Visualization</h1>
+
+<h2 id="summarize-and-visualize-stomach-cancer-tcga-maf-files">Summarize and Visualize Stomach Cancer TCGA MAF Files</h2>
+
+<p>I used R package <code>maftools</code> <sup class="footnote-ref" id="fnref:6"><a href="#fn:6">6</a></sup> to summarize, analyze and visualize MAF files.</p>
+
+<p>I first plot the summary of the MAF file. The number of variants in each sample is shown as a stacked barplot and variant types are shown as a boxplot. Most variants are classified as missense mutation. C&gt;T is the major SNV class. TTN is the most mutated genes, and this is not surprising since Titin which is encoded by TTN is a giant protein and third most abundant protein in muscle.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">plotmafSummary<span class="p">(</span>maf <span class="o">=</span> stad<span class="p">,</span> rmOutlier <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> addStat <span class="o">=</span> <span class="s">&#39;median&#39;</span><span class="p">,</span> dashboard <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> titvRaw <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><img src="../../../images/tcga-stad/plotmafsummary.png" alt="summary" /></p>
+
+<p>Then I plot a waterfall plots of MAF file. It is a complex heat map for top ten mutated genes. I would be a good reference for further analysis.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">oncoplot<span class="p">(</span>maf <span class="o">=</span> stad<span class="p">,</span> top <span class="o">=</span> <span class="m">10</span><span class="p">,</span> fontSize <span class="o">=</span> <span class="m">12</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><img src="../../../images/tcga-stad/oncoplot.png" alt="oncoplot" /></p>
+
+<h2 id="gene-copy-number-variation-analysis">Gene Copy Number Variation Analysis</h2>
+
+<div class="note success"><p>CSMD1 and LRP1B are stomach cancer-related gene candidates.</p></div>
+
+<p>I used  python script to visualize the gene copy number variation analysis results. In the genome plot, GISTIC 2.0 copy number variation analysis shows the q­value against the frequencies of amplification (red) and deletion (blue) in chromosome regions.</p>
+
+<p><img src="../../../images/tcga-stad/amp-del-qplot.svg" alt="qplot" /></p>
+
+<p>I also used <code>maftools</code> package to obtain the bubble plot.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">gisticBubblePlot<span class="p">(</span>gistic <span class="o">=</span> stad.gistic<span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><img src="../../../images/tcga-stad/gistic-bubble.png" alt="gistic-bubble" /></p>
+
+<p>With copy number data in hand, I can include them into oncoplot to show if any genes are amplified or deleted. And this give us a much more useful result. CSMD1 and LRP1B pop up to the top as deleted genes.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">oncoplot<span class="p">(</span>maf <span class="o">=</span> stad.plus.gistic<span class="p">,</span> top <span class="o">=</span> <span class="m">10</span><span class="p">,</span> fontSize <span class="o">=</span> <span class="m">12</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><img src="../../../images/tcga-stad/oncoplot-gistic.png" alt="oncoplot-gistic" /></p>
+
+<p>I also gave a closer look at the top four mutated genes by plotting them in heat map.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">oncostrip<span class="p">(</span>maf <span class="o">=</span> stad.plus.gistic<span class="p">,</span> genes <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;CSMD1&#39;</span><span class="p">,</span><span class="s">&#39;TTN&#39;</span><span class="p">,</span> <span class="s">&#39;TP53&#39;</span><span class="p">,</span> <span class="s">&#39;LRP1B&#39;</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><img src="../../../images/tcga-stad/oncostrip.png" alt="oncostrip" /></p>
+
+<p>In addition, I obtained a word cloud plot for mutated genes with a minimum mutation number of 30. Size of each gene is proportional to the total number of samples in which it is mutated/altered.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">geneCloud<span class="p">(</span>input <span class="o">=</span> stad.plus.gistic<span class="p">,</span> minMut <span class="o">=</span> <span class="m">30</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><img src="../../../images/tcga-stad/genecloud-30.png" alt="genecloud" /></p>
+
+<p>Many disease causing genes in cancer are co-occurring or show strong exclusiveness in their mutation pattern. So I performed pair-wise Fisher’s Exact test to detect mutually exclusive or co-occurring set of genes with top 25 mutated genes. DNAH9 significantly co-occurs with CSMD1. LRP1B significantly co-occurs with DNAH9, ARID1A, TTN, MUC16, SYNE1, FAT4, FLG and PLEC. TP53 is mutually exclusive with PIK3CA.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">somaticInteractions<span class="p">(</span>maf <span class="o">=</span> stad.plus.gistic<span class="p">,</span> top <span class="o">=</span> <span class="m">25</span><span class="p">,</span> pvalue <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0.05</span><span class="p">,</span> <span class="m">0.1</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><img src="../../../images/tcga-stad/somatic-interactions.png" alt="genecloud" /></p>
+
+<h2 id="gene-ontology-analysis">Gene Ontology Analysis</h2>
+
+<div class="note success"><p>For amplified genes, 2 gene ontology clusters are significant: microtubule polymerization and pathway related to melanoma.<br>For deleted genes, 4 clusters are significant: sugar binding, taste receptor, GTPase activity and signal peptide.<br>Further investigation may reveal more details of the relationship between melanoma and gastric cancer.</p></div>
+
+<p>The Copy Number Variation gave us two list of gene, one with amplification and the other with deletion. I then analyzed 656 amplified genes and 1790 deleted genes using DAVID to identify significantly enriched Gene Ontology terms with a Benjamini-corrected p-value of &lt;0.05. Functional Annotation Chart were generated for the most differentially expressed gene data using default settings. For amplified genes, 2 gene ontology clusters are significant: microtubule polymerization and pathway related to melanoma. For deleted genes, 4 clusters are significant: sugar binding, taste receptor, GTPase activity and signal peptide. It is reasonable that amplification in genes refer to microtubule polymerization is related to cancer. For sugar binding, taste receptor, GTPase activity and signal peptide, they are all related to stomach, which also make sense. For example, taste disorder are quite normal in patients with stomach cancer <sup class="footnote-ref" id="fnref:11"><a href="#fn:11">11</a></sup>.</p>
+
+<p>However, melanoma is the term that is interesting to look into. In literature, melanoma usually appears in those sites containing melanocytes. Primary and diffuse esophagus-gastrointestinal tract melanoma is rare and most of them are metastatic <sup class="footnote-ref" id="fnref:12"><a href="#fn:12">12</a></sup>. There is a paper mentioned that the melanoma differentiation associated gene 5 (MDA5) plays a role in Helicobacter pylori infection, which is related to gastric disease <sup class="footnote-ref" id="fnref:13"><a href="#fn:13">13</a></sup>. Thus, further investigation may reveal more details of the relationship between melanoma and gastric cancer.</p>
+
+<h1 id="reference">Reference</h1>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1"><a href="http://www.who.int/news-room/fact-sheets/detail/cancer">http://www.who.int/news-room/fact-sheets/detail/cancer</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2"><a href="https://www.cancer.org/cancer/stomach-cancer/about/key-statistics.html">https://www.cancer.org/cancer/stomach-cancer/about/key-statistics.html</a>
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+<li id="fn:3"><a href="https://www.cancer.org/cancer/stomach-cancer/about/what-is-stomach-cancer.html">https://www.cancer.org/cancer/stomach-cancer/about/what-is-stomach-cancer.html</a>
+ <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
+<li id="fn:4"><a href="https://www.nature.com/articles/nature13480">TCGA Network (2014). Nature. 513(7517), 202–209</a>
+ <a class="footnote-return" href="#fnref:4"><sup>[return]</sup></a></li>
+<li id="fn:5"><a href="https://docs.gdc.cancer.gov/Encyclopedia/pages/Mutation_Annotation_Format/">https://docs.gdc.cancer.gov/Encyclopedia/pages/Mutation_Annotation_Format/</a>
+ <a class="footnote-return" href="#fnref:5"><sup>[return]</sup></a></li>
+<li id="fn:6"><a href="http://dx.doi.org/10.1101/052662">Mayakonda, A. (2016). bioRxiv</a>
+ <a class="footnote-return" href="#fnref:6"><sup>[return]</sup></a></li>
+<li id="fn:7"><a href="https://www.nature.com/scitable/topicpage/copy-number-variation-445">Clancy S. (2008). Nature Education. 1(1), 95</a>
+ <a class="footnote-return" href="#fnref:7"><sup>[return]</sup></a></li>
+<li id="fn:8">Mermel CH. (2011). Genome Biology. 12(4), R41
+ <a class="footnote-return" href="#fnref:8"><sup>[return]</sup></a></li>
+<li id="fn:9"><a href="https://genepattern.broadinstitute.org/">Reich M. (2006). Nature Genetics. 38(5), 500-501</a>
+ <a class="footnote-return" href="#fnref:9"><sup>[return]</sup></a></li>
+<li id="fn:10"><a href="https://david.ncifcrf.gov">Huang DW. (2009). Nature Protocol. 4(1), 44-57</a>
+ <a class="footnote-return" href="#fnref:10"><sup>[return]</sup></a></li>
+<li id="fn:11">Epstein JB. (2010). Oral Oncology. 46(2), 77-81
+ <a class="footnote-return" href="#fnref:11"><sup>[return]</sup></a></li>
+<li id="fn:12">Eddekkaoui H. (2014). Bulltin of Cancer. 101(6), 637-40
+ <a class="footnote-return" href="#fnref:12"><sup>[return]</sup></a></li>
+<li id="fn:13">Tatsuta T. (2012). Journal of Clinical Pathology. 65(9), 839-43
+ <a class="footnote-return" href="#fnref:13"><sup>[return]</sup></a></li>
+</ol>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">ziyunch</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2018-10-17
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="../../../images/wechatpay.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="../../../tags/data-science/">Data Science</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="../../../2019/07/443.html/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Emacs 中文环境配置</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="../../../2018/10/441.html/">
+            <span class="next-text nav-default">小议双拼</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'kyXPptAG0HNFlxVP6PKtMG79-gzGzoHsz',
+        appKey: 'odsVXiu7qNwwQypz99atviXR',
+        notify:  false , 
+        verify:  false , 
+        avatar:'mm', 
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/ziyunch" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ziyunch" class="iconfont icon-github" title="github"></a>
+      <a href="http://weibo.com/ziyunc" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://douban.com/people/ziyunch" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ziyunch</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../../../dist/even.26188efa.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-86469737-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

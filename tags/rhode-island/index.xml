@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rhode Island on Blind with Science</title>
+    <link>http://blindwith.science/tags/rhode-island/</link>
+    <description>Recent content in Rhode Island on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Thu, 08 Oct 2015 04:47:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blindwith.science/tags/rhode-island/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[游记]罗德岛看海</title>
+      <link>http://blindwith.science/2015/10/404.html/</link>
+      <pubDate>Thu, 08 Oct 2015 04:47:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/10/404.html/</guid>
+      <description>老妈想看海，麻省又太冷，便把她带去了罗德岛。罗德岛的 Newport（如豪宅解说里所言，译为新港镇）离村子只有一个半小时，是自镀金时代起美帝著</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nlsLM on Blind with Science</title>
+    <link>http://blindwith.science/tags/nlslm/</link>
+    <description>Recent content in nlsLM on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Mon, 14 Sep 2015 02:45:13 +0000</lastBuildDate>
+    
+	<atom:link href="http://blindwith.science/tags/nlslm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[R] 久不编程爪已疏 —— R初学以及挣扎于非线性拟合与bquote的用法上</title>
+      <link>http://blindwith.science/2015/09/394.html/</link>
+      <pubDate>Mon, 14 Sep 2015 02:45:13 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/09/394.html/</guid>
+      <description>像我这种做Enzyme kinetic的砖工，每天都有大把时间耗在处理数据+作图上。过去的几年里，懒惰的我都是先从运行软件（UVProbe）上</description>
+    </item>
+    
+  </channel>
+</rss>

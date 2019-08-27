@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TeXShop on Blind with Science</title>
+    <link>http://blindwith.science/tags/texshop/</link>
+    <description>Recent content in TeXShop on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Tue, 01 Mar 2016 18:47:39 +0000</lastBuildDate>
+    
+	<atom:link href="http://blindwith.science/tags/texshop/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LaTeX 笔记 1</title>
+      <link>http://blindwith.science/2016/03/420.html/</link>
+      <pubDate>Tue, 01 Mar 2016 18:47:39 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/03/420.html/</guid>
+      <description>&lt;p&gt;其实转投 LaTeX 的念头大学时就有了：写各种作业、报告时，写两本毕业论文时。然而大学的我实在懒惰，虽然在排版方面认真地似有强迫症，但也只是徒增一些 Office 排版技巧罢了。这次写文章，只觉受够了 Word 的繁琐操作，便在前几日磨着洋工扫了眼大家推荐的 LaTeX 配置，在昨日分别下载安装了 TexLive 和 MacTex，并在今日把写好的部分用 LaTeX 格式重写，输出的排版真是赏心悦目，不经感叹 LaTeX 真是一个美观易用零学习成本的好工具。&lt;/p&gt;
+
+&lt;p&gt;LaTeX 2e，经历了 Knuth 大神 (Plain TeX)，敝校数学博士 Lamport (LaTeX)，Mittelbach (LaTeX 2e) 一系列人的开发，已是一个非常好用的格式，并有着较为完善的引擎、宏包、驱动。软件方面，作为一个入门者，同时提供后台处理机制与前台编辑器的发行包是最傻瓜易用的。比较常用的发行版是 MikTeX 与 TeXLive，由于后者是通用的，适合我这种家里用 Mac OS，实验室用 Windows 及 Ubuntu 的小朋友，所以我就给 Mac 装了基于 TeXLive 的 MacTeX，Windows 装了 TexLive，编辑器也就是相应的 TeXshop 与 TeXworks。&lt;/p&gt;
+
+&lt;p&gt;入门手册我看的是 Oetiker 的 &lt;a href=&#34;https://www.ctan.org/tex-archive/info/lshort/english&#34;&gt;lshort&lt;/a&gt; 和包太雷的 &lt;a href=&#34;http://math.nju.edu.cn/~meijq/tex/lnotes2.pdf&#34;&gt;lnotes2&lt;/a&gt;，同时参考了 Math mode 的那篇 &lt;a href=&#34;https://www.ctan.org/tex-archive/info/math/voss/mathmode/?lang=en&#34;&gt;review&lt;/a&gt; 及各包的描述文件，感觉写写论文是足够了。&lt;/p&gt;
+
+&lt;p&gt;对于 Science 论文写作来说，今天用到的 Package 有 siunitx （用来写单位）, mhchem（用来写化学式）, natbib（用来加引用文献） 和 achemos（ACS投稿用）。&lt;/p&gt;
+
+&lt;p&gt;感觉以后还可以用LaTeX格式来做文献笔记（各家文献管理软件/笔记软件没一个好用的，对于阅读文献的整理还得靠手写），等我转移到 Emacs 后，用 org-mode 来管理文献，大概就能走上摸鱼的人生巅峰了吧（请去做实验，苦笑）。&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

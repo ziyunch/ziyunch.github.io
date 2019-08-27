@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>SSH 免密远程登录 - Blind with Science</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ziyunch" /><meta name="description" content="缘起 平时实验需要在 HPC 上进行一些计算，而那些比较占空间的结果则会存储在 lab server 上。照理说，在这三处转移数据，使用 rsync 命令的话，应该是十分方便快捷的。然而由于总是不能成功设置密钥，这些愉快的操作总是会被密码输入框打断。今天仔细研究了一下这个问题，终于可以成功进行免密远程登录了。
+" /><meta name="keywords" content="ziyunch, blog" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://blindwith.science/2018/10/440.html/" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../favicon-16x16.png">
+<link rel="manifest" href="../../../manifest.json">
+<link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="../../../dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="SSH 免密远程登录" />
+<meta property="og:description" content="缘起
+
+平时实验需要在 HPC 上进行一些计算，而那些比较占空间的结果则会存储在 lab server 上。照理说，在这三处转移数据，使用 rsync 命令的话，应该是十分方便快捷的。然而由于总是不能成功设置密钥，这些愉快的操作总是会被密码输入框打断。今天仔细研究了一下这个问题，终于可以成功进行免密远程登录了。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blindwith.science/2018/10/440.html/" />
+<meta property="article:published_time" content="2018-10-01T23:40:25+00:00" />
+<meta property="article:modified_time" content="2018-10-01T23:40:25+00:00" />
+<meta itemprop="name" content="SSH 免密远程登录">
+<meta itemprop="description" content="缘起
+
+平时实验需要在 HPC 上进行一些计算，而那些比较占空间的结果则会存储在 lab server 上。照理说，在这三处转移数据，使用 rsync 命令的话，应该是十分方便快捷的。然而由于总是不能成功设置密钥，这些愉快的操作总是会被密码输入框打断。今天仔细研究了一下这个问题，终于可以成功进行免密远程登录了。">
+
+
+<meta itemprop="datePublished" content="2018-10-01T23:40:25&#43;00:00" />
+<meta itemprop="dateModified" content="2018-10-01T23:40:25&#43;00:00" />
+<meta itemprop="wordCount" content="462">
+
+
+
+<meta itemprop="keywords" content="技术,HPC," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SSH 免密远程登录"/>
+<meta name="twitter:description" content="缘起
+
+平时实验需要在 HPC 上进行一些计算，而那些比较占空间的结果则会存储在 lab server 上。照理说，在这三处转移数据，使用 rsync 命令的话，应该是十分方便快捷的。然而由于总是不能成功设置密钥，这些愉快的操作总是会被密码输入框打断。今天仔细研究了一下这个问题，终于可以成功进行免密远程登录了。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="../../../" class="logo">Blind with Science</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="../../../">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="../../../post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="../../../tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="../../../categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="../../../about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="../../../" class="logo">Blind with Science</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="../../../">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">SSH 免密远程登录</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-10-01 </span>
+        <div class="post-category">
+            <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
+            </div>
+          <span class="more-meta"> 约 462 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#缘起">缘起</a></li>
+<li><a href="#步骤">步骤</a>
+<ul>
+<li><a href="#在本机生成公私密钥">在本机生成公私密钥</a></li>
+<li><a href="#将公钥添加至-server-并添加入-authorized-keys">将公钥添加至 server 并添加入 <code>authorized_keys</code></a></li>
+<li><a href="#在本机配置偷懒简写">在本机配置偷懒简写</a></li>
+</ul></li>
+<li><a href="#心得">心得</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="缘起">缘起</h1>
+
+<p>平时实验需要在 HPC 上进行一些计算，而那些比较占空间的结果则会存储在 lab server 上。照理说，在这三处转移数据，使用 <code>rsync</code> 命令的话，应该是十分方便快捷的。然而由于总是不能成功设置密钥，这些愉快的操作总是会被密码输入框打断。今天仔细研究了一下这个问题，终于可以成功进行免密远程登录了。</p>
+
+<h1 id="步骤">步骤</h1>
+
+<h2 id="在本机生成公私密钥">在本机生成公私密钥</h2>
+
+<ul>
+<li><p>在本机使用 <code>ssh-keygen</code> 于 <code>~\.ssh</code> 生成公私密钥对 <code>id_rsa</code> 与 <code>id_rsa.pub</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ ssh-keygen -t rsa</code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>如若后续步骤出错，建议将权限设置为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ chmod <span class="m">755</span> ~/
+$ chmod <span class="m">755</span> ~/.ssh/
+$ chmod <span class="m">600</span> ~/.ssh/id_rsa
+$ chmod <span class="m">644</span> ~/.ssh/id_rsa.pub</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="将公钥添加至-server-并添加入-authorized-keys">将公钥添加至 server 并添加入 <code>authorized_keys</code></h2></li>
+
+<li><p>有两个方法，一是使用 <code>ssh-copy-id</code> 命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ ssh-copy-id -p <span class="m">22</span> username@hostname</code></pre></td></tr></table>
+</div>
+</div>
+<p>可使用 <code>brew install ssh-copy-id</code> 来安装此偷懒命令</p></li>
+
+<li><p>二是手动将公钥复制到 server</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ scp ~/.ssh/id_rsa.pub username@hostname:~/.ssh/</code></pre></td></tr></table>
+</div>
+</div>
+<p>并登录远程主机，将公钥添加至 <code>authorized_keys</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>如果遇到 <code>Permission denied</code>，可登录 server，确认自己拥有 execute permission 并移除 group 与 others 的权限</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ chmod <span class="m">600</span> ~/.ssh/</code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>如果还是需要输入密码，可修改 server 上的公钥权限</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ chmod <span class="m">600</span> ~/.ssh/authorized_keys</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="在本机配置偷懒简写">在本机配置偷懒简写</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ vi ~/.ssh/config</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-vim" data-lang="vim"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">Host</span> <span class="nx">shortname</span><span class="err">
+</span><span class="err"></span><span class="nx">User</span> <span class="nx">username</span><span class="err">
+</span><span class="err"></span><span class="nx">HostName</span> <span class="nx">hostname</span><span class="err">
+</span><span class="err"></span><span class="nx">Port</span> <span class="m">22</span><span class="err">
+</span><span class="err"></span><span class="nx">IdentityFile</span> <span class="p">~</span><span class="sr">/.ssh/</span><span class="nx">id_rsa</span></code></pre></td></tr></table>
+</div>
+</div>
+<h1 id="心得">心得</h1>
+
+<p>对于免密登录来说，顺利的话可能只需要使用 <code>ssh-keygen</code> 和 <code>ssh-copy-id</code> 命令并修改配置文件。然而权限设定十分 tricky，稍有不慎便会像自己之前一样或添加公钥失败或设置完了还得输密码。</p></li>
+</ul>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">ziyunch</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2018-10-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="../../../images/wechatpay.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="../../../tags/%E6%8A%80%E6%9C%AF/">技术</a>
+          <a href="../../../tags/hpc/">HPC</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="../../../2018/10/441.html/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">小议双拼</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="../../../2018/09/439.html/">
+            <span class="next-text nav-default">lighthouse</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'kyXPptAG0HNFlxVP6PKtMG79-gzGzoHsz',
+        appKey: 'odsVXiu7qNwwQypz99atviXR',
+        notify:  false , 
+        verify:  false , 
+        avatar:'mm', 
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/ziyunch" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ziyunch" class="iconfont icon-github" title="github"></a>
+      <a href="http://weibo.com/ziyunc" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://douban.com/people/ziyunch" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ziyunch</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../../../dist/even.26188efa.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-86469737-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

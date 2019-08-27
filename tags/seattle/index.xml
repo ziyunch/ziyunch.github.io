@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Seattle on Blind with Science</title>
+    <link>http://blindwith.science/tags/seattle/</link>
+    <description>Recent content in Seattle on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Wed, 11 Nov 2015 12:15:45 +0000</lastBuildDate>
+    
+	<atom:link href="http://blindwith.science/tags/seattle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>口香糖墙 Gum Wall</title>
+      <link>http://blindwith.science/2015/11/412.html/</link>
+      <pubDate>Wed, 11 Nov 2015 12:15:45 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2015/11/412.html/</guid>
+      <description>今天姜饼给我发了个假装在纽约写的帖子，说是Gum Wall正被西雅图市容市貌管理中心清洗中。大吃一斤，啊不对，是惊。随手谷歌一下，尽是这样的新</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HPC on Blind with Science</title>
+    <link>http://blindwith.science/tags/hpc/</link>
+    <description>Recent content in HPC on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Mon, 01 Oct 2018 23:40:25 +0000</lastBuildDate>
+    
+	<atom:link href="http://blindwith.science/tags/hpc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SSH 免密远程登录</title>
+      <link>http://blindwith.science/2018/10/440.html/</link>
+      <pubDate>Mon, 01 Oct 2018 23:40:25 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2018/10/440.html/</guid>
+      <description>&lt;h1 id=&#34;缘起&#34;&gt;缘起&lt;/h1&gt;
+
+&lt;p&gt;平时实验需要在 HPC 上进行一些计算，而那些比较占空间的结果则会存储在 lab server 上。照理说，在这三处转移数据，使用 &lt;code&gt;rsync&lt;/code&gt; 命令的话，应该是十分方便快捷的。然而由于总是不能成功设置密钥，这些愉快的操作总是会被密码输入框打断。今天仔细研究了一下这个问题，终于可以成功进行免密远程登录了。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

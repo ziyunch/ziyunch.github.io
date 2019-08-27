@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Science on Blind with Science</title>
+    <link>http://blindwith.science/tags/data-science/</link>
+    <description>Recent content in Data Science on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Wed, 17 Oct 2018 22:46:28 +0000</lastBuildDate>
+    
+	<atom:link href="http://blindwith.science/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gene Variation Analysis of Stomach Cancer</title>
+      <link>http://blindwith.science/2018/10/442.html/</link>
+      <pubDate>Wed, 17 Oct 2018 22:46:28 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2018/10/442.html/</guid>
+      <description>&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;
+
+&lt;div class=&#34;note info&#34;&gt;&lt;p&gt;Cancer is the second leading cause of death globally, and is responsible for an estimated 9.6 million deaths in 2018. Globally, about 1 in 6 deaths is due to cancer. &lt;br&gt;--World Health Organization
+&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Cancer is the second leading cause of death globally &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. Cancer generally arises when normal cells transform from pre-cancerous lesion to malignant tumour cells. This transformation is a result of the interaction between a person&amp;rsquo;s genetic factors and three categories of external agents including physical, chemical and biological carcinogens. Cancer mortality can be reduced if cases are detected and treated early.&lt;/p&gt;
+
+&lt;div class=&#34;note info&#34;&gt;&lt;p&gt;For stomach cancer in the United States for 2018:&lt;br&gt;About 26,240 cases of stomach cancer will be diagnosed (16,520 in men and 9,720 in women)&lt;br&gt;About 10,800 people will die from this type of cancer (6,510 men and 4,290 women)&lt;br&gt;--The American Cancer Society&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Stomach cancer is the world&amp;rsquo;s third leading cause of cancer-related death &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. It is responsible for an estimated 783, 000 deaths globally in 2018 &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;. Stomach cancers can be classified as adenocarcinoma, lymphoma, gastrointestinal stromal tumor, carcinoid tumor and other rare cancers. The majority (about 90% to 95%) of stomach cancers are adenocarcinomas &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;. Thus, if adenocarcinomas can be further classified into subgroups, it will be beneficial in clinical care:
+1. Appropriate screening tests can be developed based on information of each subgroup.
+2. Effective treatment can be achieved by better defined drug targets for each subgroup.&lt;/p&gt;
+
+&lt;p&gt;Recently, The Cancer Genome Atlas Network (TCGA) obtained gastric adenocarcinoma primary tumour tissue from 295 patients, in order to purse molecular sub-group classification &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;. On this tissue whole-exome sequencing, array-based somatic copy number analysis, array-based DNA methylation profiling, messenger RNA (mRNA) sequencing, microRNA sequencing and reverse-phase protein array (RPPA) molecular classification was performed. Unsupervised clustering of the data resulted in 4 subgroups; characterized by EBV-positivity, high microsatellite-instability, genomically stability or chromosomal instability.&lt;/p&gt;
+
+&lt;p&gt;Here I explored this TCGA dataset, started with a gene copy number variation analysis for an expanded set (443 patients), identified differentially expressed genes in comparison to normal matched tissues by hierarchical clustering.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

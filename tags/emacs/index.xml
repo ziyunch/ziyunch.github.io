@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Emacs on Blind with Science</title>
+    <link>http://blindwith.science/tags/emacs/</link>
+    <description>Recent content in Emacs on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Mon, 26 Aug 2019 23:49:00 -0400</lastBuildDate>
+    
+	<atom:link href="http://blindwith.science/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>博客由 Hexo 迁移至 Hugo</title>
+      <link>http://blindwith.science/2019/08/446.html/</link>
+      <pubDate>Mon, 26 Aug 2019 23:49:00 -0400</pubDate>
+      
+      <guid>http://blindwith.science/2019/08/446.html/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;本篇博文使用 org-mode 书就，耶！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;从 2016 将博客迁移至 Hexo+Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Emacs 记帐</title>
+      <link>http://blindwith.science/2019/07/444.html/</link>
+      <pubDate>Thu, 04 Jul 2019 12:58:00 -0400</pubDate>
+      
+      <guid>http://blindwith.science/2019/07/444.html/</guid>
+      <description>&lt;p&gt;昨天搞定 Emacs 的中文环境，今天想着好久没记帐了，随手记总是很花时间，干脆一鼓作气，将记帐一起搬过来。&lt;/p&gt;
+
+&lt;h2 id=&#34;复式记帐&#34;&gt;复式记帐&lt;/h2&gt;
+
+&lt;p&gt;我本科时双修了一门金融，其中最为繁琐，也是最令人头疼的一门课便是会计学。我不爱听讲，毕业之后也将会计的知识点忘得查差不多了，然而其&amp;rdquo;有借必有贷，借贷必相等&amp;rdquo;的复式记帐法，反而是我生活中运用最多的。&lt;/p&gt;
+
+&lt;p&gt;复式记帐法说起来复杂，对个人来说，就是将每笔交易分门别类，填入下面这条等式中：&lt;/p&gt;
+
+&lt;div class=&#34;HTML&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;center&gt;
+资产 + 费用 = 负债 + 所有者权益 + 收入
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;在个人记帐中，这条等式辅以借贷概念会令人望而生畏，所以我将其略一变形：&lt;/p&gt;
+
+&lt;div class=&#34;HTML&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;center&gt;
+（+资产）+（-负债）+（+费用）+（-收入）+（-所有者权益）= 0
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;资产与负债都是与金钱直接挂钩的，比如银行户头，比如人民币美钞，比如信用卡帐户，再比如借条，这些都可以算是货币的不同表示形式。&lt;/li&gt;
+&lt;li&gt;费用与收入则是与金钱间接挂钩的，比如工资，比如商品，比如服务，这些都可以算是生产资本与商品资本的不同表现形式。其中收入与字面意思不同，可以理解为生产资本（劳动力等）。&lt;/li&gt;
+&lt;li&gt;所有者权益对个人意义不大，一般用来记录历史盈余与糊涂帐。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;而这个变形公式中的正负号，则可以将各项目的符号关系，用作资金流向的参照。这么说有点玄乎，换个茨威格式的说法就是：&amp;rdquo;人们从命运得到的一切，冥冥之中都记下了它的价钱。&amp;rdquo;花钱买了服务，则是减少资产（花了钱），增加费用（得到服务）；工资到帐，则是增加资产（到帐），减少收入（既有劳动时间的减少）；别人跟你借了钱，则是资产减少（银行帐户或现金余额减少），负债增加（别人在你这儿的负债）。&lt;/p&gt;
+
+&lt;p&gt;总结一下，由于人类暂时无法操控时间，所以费用一般为正，收入一般为负。而没有破产的情况下资产一般为正，别人欠你的钱为正，信用卡债（你欠别人的钱）为负。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Emacs 中文环境配置</title>
+      <link>http://blindwith.science/2019/07/443.html/</link>
+      <pubDate>Wed, 03 Jul 2019 13:44:05 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2019/07/443.html/</guid>
+      <description>&lt;p&gt;使用 Emacs 三年多了，当时受了 &lt;a href=&#34;https://github.com/redguardtoo/mastering-emacs-in-one-year-guide&#34;&gt;一年成为 Emacs 高手&lt;/a&gt; 的蛊惑，且贪图便利，使用了 &lt;a href=&#34;https://github.com/purcell/emacs.d&#34;&gt;Purcell 的配置&lt;/a&gt;。正如 Purcell 所说，此配置相当 reasonable，用来入门确实让我受益匪浅，少走了很多弯路。三年使用下来，我需要添加的插件只有 &lt;code&gt;org-ref&lt;/code&gt; 和 &lt;code&gt;ob-smiles&lt;/code&gt;，配置更新也仅须 &lt;code&gt;git pull&lt;/code&gt; 外加 &lt;code&gt;M-x package-list-packages U x&lt;/code&gt; 即可，非常方便。&lt;/p&gt;
+
+&lt;p&gt;然而过去三年来，我主要是使用 Emacs 中的 org-mode 来记 Science 与 Tech 方面笔记，基于 Latex 的长文章 / 代码我更喜欢用 Atoms + Vim-mode 来写，基于 Markdown 的博客则用 MWeb 来写，中文笔记喜欢使用 Bears，最后却还是回到了苹果自带的免费 Notes。其他零零碎碎的场景则使用更为零碎的 app，餐馆用 DayGram + Workflowy，记账用随手记。非常不统一。&lt;/p&gt;
+
+&lt;p&gt;也就是说，我并不是一个 “running my life with Emacs” 的重症者，Purcell 配置的 Emacs 中也有大量我用不到，或者需要使用却不甚了解的插件。所以失业在家这个契机恰好也是让我重新审视 Emacs，看看我能否最大化地使用 Emacs。&lt;/p&gt;
+
+&lt;p&gt;对我而言，使用 Atoms 来写代码与 Latex，是由于我对使用 Emacs 调试还不甚熟练。所以这几天我花了一点时间重新阅读了 Emacs 手册。&lt;/p&gt;
+
+&lt;p&gt;使用 MWeb 来写博客与使用 Notes 来记笔记的原因则比较可笑，因为我基本上都是使用英文记录 Science &amp;amp; Tech 方面的笔记，我并没有配置 Emacs 的中文环境。所以需要使用中文来写东西时，我自然就得换用其他工具。这段时间准备面试，将 org-mode 的使用范围扩大到记录面试适宜，由于一亩三分地是一个主要资料来源，不免需要粘贴许多中文帖子进来。这时再将 Emacs 视为一个纯英文环境未免有些麻烦。而将 Emacs 中文化了，自然也不需要 MWeb 和 Notes 或者 Bear 什么事了。&lt;/p&gt;
+
+&lt;p&gt;而记录餐馆和消费的需求比较麻烦，本文暂且搁置，今后有空再来研究。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LaTeX 笔记2</title>
+      <link>http://blindwith.science/2016/03/421.html/</link>
+      <pubDate>Wed, 02 Mar 2016 23:40:00 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2016/03/421.html/</guid>
+      <description>&lt;p&gt;今天努了把力终于把初稿写完了。话说 LaTeX 真是超级容易上手啊，感觉看过入门手册和描述文档后，今天基本上可以脱手写论文了。&lt;/p&gt;
+
+&lt;p&gt;写完之后去吃了东北菜，然后回家又开始摸鱼，研究起了 Emacs + AucTeX 的组合。&lt;/p&gt;
+
+&lt;p&gt;受了&lt;a href=&#34;https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org&#34;&gt;一年成为 Emacs 高手&lt;/a&gt;的蛊惑，我使用了 &lt;a href=&#34;https://github.com/purcell/emacs.d&#34;&gt;Purcell 的配置&lt;/a&gt;，花了一点时间把 tutorial 读了一遍，做了笔记，并通过&lt;a href=&#34;http://www.cnblogs.com/robertzml/archive/2010/03/31/1701374.html&#34;&gt;别人的教程&lt;/a&gt;将不理解的部分大致搞了清楚。之后我便按照不&lt;a href=&#34;http://cs2.swfc.edu.cn/~wx672/lecture_notes/linux/latex/latex_tutorial.html&#34;&gt;知道是哪个学校出的快速上手教程&lt;/a&gt;过了一遍。&lt;/p&gt;
+
+&lt;p&gt;不过这个教程的配置和我的有所不同:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在 minibuffer 进行选项补完时，我只能使用RET，C-j 会导致补完失败.
+还有一些教程里没有提到的 AucTeX 的特性：&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;可以直接使用 C-c C-c 编译，C-c C-v 预览 pdf，并不需要像文中一样在 &lt;em&gt;shell&lt;/em&gt; 里敲命令进行调用;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;TAB&gt; LaTeX-indent-line will indent the current line；&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;C-j newline-and-indent inserts a new line (much like &lt;RET&gt;) and moves the cursor to an appropriate position by the left margin；&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;RET&gt; no indent.
+感觉还蛮顺利的，下次摸鱼时可以研究一下 org-mode，以后说不定就能在 Emacs 里管理文献了~&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;感觉明天可以去搞这些的 Reference Card，让生活更简单一些~&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

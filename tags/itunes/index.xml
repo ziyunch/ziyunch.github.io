@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iTunes on Blind with Science</title>
+    <link>http://blindwith.science/tags/itunes/</link>
+    <description>Recent content in iTunes on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Mon, 22 Feb 2010 14:00:18 +0000</lastBuildDate>
+    
+	<atom:link href="http://blindwith.science/tags/itunes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>iTunes的bug？</title>
+      <link>http://blindwith.science/2010/02/357.html/</link>
+      <pubDate>Mon, 22 Feb 2010 14:00:18 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2010/02/357.html/</guid>
+      <description>今天给自己的小nano传歌。有一个网上下载的podcast集，放在音乐里，看着乱奇怪的。于是就在选项的媒体选项里把它改成podcast了。经</description>
+    </item>
+    
+  </channel>
+</rss>

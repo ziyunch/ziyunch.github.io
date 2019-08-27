@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Blind with Science</title>
+    <link>http://blindwith.science/tags/hugo/</link>
+    <description>Recent content in Hugo on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Mon, 26 Aug 2019 23:49:00 -0400</lastBuildDate>
+    
+	<atom:link href="http://blindwith.science/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>博客由 Hexo 迁移至 Hugo</title>
+      <link>http://blindwith.science/2019/08/446.html/</link>
+      <pubDate>Mon, 26 Aug 2019 23:49:00 -0400</pubDate>
+      
+      <guid>http://blindwith.science/2019/08/446.html/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;本篇博文使用 org-mode 书就，耶！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;从 2016 将博客迁移至 Hexo+Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

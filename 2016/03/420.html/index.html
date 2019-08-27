@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>LaTeX 笔记 1 - Blind with Science</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ziyunch" /><meta name="description" content="其实转投 LaTeX 的念头大学时就有了：写各种作业、报告时，写两本毕业论文时。然而大学的我实在懒惰，虽然在排版方面认真地似有强迫症，但也只是徒增一些 Office 排版技巧罢了。这次写文章，只觉受够了 Word 的繁琐操作，便在前几日磨着洋工扫了眼大家推荐的 LaTeX 配置，在昨日分别下载安装了 TexLive 和 MacTex，并在今日把写好的部分用 LaTeX 格式重写，输出的排版真是赏心悦目，不经感叹 LaTeX 真是一个美观易用零学习成本的好工具。
+LaTeX 2e，经历了 Knuth 大神 (Plain TeX)，敝校数学博士 Lamport (LaTeX)，Mittelbach (LaTeX 2e) 一系列人的开发，已是一个非常好用的格式，并有着较为完善的引擎、宏包、驱动。软件方面，作为一个入门者，同时提供后台处理机制与前台编辑器的发行包是最傻瓜易用的。比较常用的发行版是 MikTeX 与 TeXLive，由于后者是通用的，适合我这种家里用 Mac OS，实验室用 Windows 及 Ubuntu 的小朋友，所以我就给 Mac 装了基于 TeXLive 的 MacTeX，Windows 装了 TexLive，编辑器也就是相应的 TeXshop 与 TeXworks。
+入门手册我看的是 Oetiker 的 lshort 和包太雷的 lnotes2，同时参考了 Math mode 的那篇 review 及各包的描述文件，感觉写写论文是足够了。
+对于 Science 论文写作来说，今天用到的 Package 有 siunitx （用来写单位）, mhchem（用来写化学式）, natbib（用来加引用文献） 和 achemos（ACS投稿用）。
+感觉以后还可以用LaTeX格式来做文献笔记（各家文献管理软件/笔记软件没一个好用的，对于阅读文献的整理还得靠手写），等我转移到 Emacs 后，用 org-mode 来管理文献，大概就能走上摸鱼的人生巅峰了吧（请去做实验，苦笑）。
+&amp;nbsp;
+" /><meta name="keywords" content="ziyunch, blog" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://blindwith.science/2016/03/420.html/" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../favicon-16x16.png">
+<link rel="manifest" href="../../../manifest.json">
+<link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="../../../dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="LaTeX 笔记 1" />
+<meta property="og:description" content="其实转投 LaTeX 的念头大学时就有了：写各种作业、报告时，写两本毕业论文时。然而大学的我实在懒惰，虽然在排版方面认真地似有强迫症，但也只是徒增一些 Office 排版技巧罢了。这次写文章，只觉受够了 Word 的繁琐操作，便在前几日磨着洋工扫了眼大家推荐的 LaTeX 配置，在昨日分别下载安装了 TexLive 和 MacTex，并在今日把写好的部分用 LaTeX 格式重写，输出的排版真是赏心悦目，不经感叹 LaTeX 真是一个美观易用零学习成本的好工具。
+
+LaTeX 2e，经历了 Knuth 大神 (Plain TeX)，敝校数学博士 Lamport (LaTeX)，Mittelbach (LaTeX 2e) 一系列人的开发，已是一个非常好用的格式，并有着较为完善的引擎、宏包、驱动。软件方面，作为一个入门者，同时提供后台处理机制与前台编辑器的发行包是最傻瓜易用的。比较常用的发行版是 MikTeX 与 TeXLive，由于后者是通用的，适合我这种家里用 Mac OS，实验室用 Windows 及 Ubuntu 的小朋友，所以我就给 Mac 装了基于 TeXLive 的 MacTeX，Windows 装了 TexLive，编辑器也就是相应的 TeXshop 与 TeXworks。
+
+入门手册我看的是 Oetiker 的 lshort 和包太雷的 lnotes2，同时参考了 Math mode 的那篇 review 及各包的描述文件，感觉写写论文是足够了。
+
+对于 Science 论文写作来说，今天用到的 Package 有 siunitx （用来写单位）, mhchem（用来写化学式）, natbib（用来加引用文献） 和 achemos（ACS投稿用）。
+
+感觉以后还可以用LaTeX格式来做文献笔记（各家文献管理软件/笔记软件没一个好用的，对于阅读文献的整理还得靠手写），等我转移到 Emacs 后，用 org-mode 来管理文献，大概就能走上摸鱼的人生巅峰了吧（请去做实验，苦笑）。
+
+&nbsp;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blindwith.science/2016/03/420.html/" />
+<meta property="article:published_time" content="2016-03-01T18:47:39+00:00" />
+<meta property="article:modified_time" content="2016-03-01T18:47:39+00:00" />
+<meta itemprop="name" content="LaTeX 笔记 1">
+<meta itemprop="description" content="其实转投 LaTeX 的念头大学时就有了：写各种作业、报告时，写两本毕业论文时。然而大学的我实在懒惰，虽然在排版方面认真地似有强迫症，但也只是徒增一些 Office 排版技巧罢了。这次写文章，只觉受够了 Word 的繁琐操作，便在前几日磨着洋工扫了眼大家推荐的 LaTeX 配置，在昨日分别下载安装了 TexLive 和 MacTex，并在今日把写好的部分用 LaTeX 格式重写，输出的排版真是赏心悦目，不经感叹 LaTeX 真是一个美观易用零学习成本的好工具。
+
+LaTeX 2e，经历了 Knuth 大神 (Plain TeX)，敝校数学博士 Lamport (LaTeX)，Mittelbach (LaTeX 2e) 一系列人的开发，已是一个非常好用的格式，并有着较为完善的引擎、宏包、驱动。软件方面，作为一个入门者，同时提供后台处理机制与前台编辑器的发行包是最傻瓜易用的。比较常用的发行版是 MikTeX 与 TeXLive，由于后者是通用的，适合我这种家里用 Mac OS，实验室用 Windows 及 Ubuntu 的小朋友，所以我就给 Mac 装了基于 TeXLive 的 MacTeX，Windows 装了 TexLive，编辑器也就是相应的 TeXshop 与 TeXworks。
+
+入门手册我看的是 Oetiker 的 lshort 和包太雷的 lnotes2，同时参考了 Math mode 的那篇 review 及各包的描述文件，感觉写写论文是足够了。
+
+对于 Science 论文写作来说，今天用到的 Package 有 siunitx （用来写单位）, mhchem（用来写化学式）, natbib（用来加引用文献） 和 achemos（ACS投稿用）。
+
+感觉以后还可以用LaTeX格式来做文献笔记（各家文献管理软件/笔记软件没一个好用的，对于阅读文献的整理还得靠手写），等我转移到 Emacs 后，用 org-mode 来管理文献，大概就能走上摸鱼的人生巅峰了吧（请去做实验，苦笑）。
+
+&nbsp;">
+
+
+<meta itemprop="datePublished" content="2016-03-01T18:47:39&#43;00:00" />
+<meta itemprop="dateModified" content="2016-03-01T18:47:39&#43;00:00" />
+<meta itemprop="wordCount" content="1075">
+
+
+
+<meta itemprop="keywords" content="LaTeX,TeXShop,技术," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LaTeX 笔记 1"/>
+<meta name="twitter:description" content="其实转投 LaTeX 的念头大学时就有了：写各种作业、报告时，写两本毕业论文时。然而大学的我实在懒惰，虽然在排版方面认真地似有强迫症，但也只是徒增一些 Office 排版技巧罢了。这次写文章，只觉受够了 Word 的繁琐操作，便在前几日磨着洋工扫了眼大家推荐的 LaTeX 配置，在昨日分别下载安装了 TexLive 和 MacTex，并在今日把写好的部分用 LaTeX 格式重写，输出的排版真是赏心悦目，不经感叹 LaTeX 真是一个美观易用零学习成本的好工具。
+
+LaTeX 2e，经历了 Knuth 大神 (Plain TeX)，敝校数学博士 Lamport (LaTeX)，Mittelbach (LaTeX 2e) 一系列人的开发，已是一个非常好用的格式，并有着较为完善的引擎、宏包、驱动。软件方面，作为一个入门者，同时提供后台处理机制与前台编辑器的发行包是最傻瓜易用的。比较常用的发行版是 MikTeX 与 TeXLive，由于后者是通用的，适合我这种家里用 Mac OS，实验室用 Windows 及 Ubuntu 的小朋友，所以我就给 Mac 装了基于 TeXLive 的 MacTeX，Windows 装了 TexLive，编辑器也就是相应的 TeXshop 与 TeXworks。
+
+入门手册我看的是 Oetiker 的 lshort 和包太雷的 lnotes2，同时参考了 Math mode 的那篇 review 及各包的描述文件，感觉写写论文是足够了。
+
+对于 Science 论文写作来说，今天用到的 Package 有 siunitx （用来写单位）, mhchem（用来写化学式）, natbib（用来加引用文献） 和 achemos（ACS投稿用）。
+
+感觉以后还可以用LaTeX格式来做文献笔记（各家文献管理软件/笔记软件没一个好用的，对于阅读文献的整理还得靠手写），等我转移到 Emacs 后，用 org-mode 来管理文献，大概就能走上摸鱼的人生巅峰了吧（请去做实验，苦笑）。
+
+&nbsp;"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="../../../" class="logo">Blind with Science</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="../../../">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="../../../post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="../../../tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="../../../categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="../../../about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="../../../" class="logo">Blind with Science</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="../../../">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">LaTeX 笔记 1</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2016-03-01 </span>
+        <div class="post-category">
+            <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
+            </div>
+          <span class="more-meta"> 约 1075 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#solarized-colors-name-r-g-b">Solarized colors (name, r, g, b)</a></li>
+<li><a href="#base03-0-0000-0-1686-0-2118">base03 0.0000 0.1686 0.2118</a></li>
+<li><a href="#base02-0-0275-0-2118-0-2588">base02 0.0275 0.2118 0.2588</a></li>
+<li><a href="#base01-0-3451-0-4314-0-4588">base01 0.3451 0.4314 0.4588</a></li>
+<li><a href="#base00-0-3961-0-4824-0-5137">base00 0.3961 0.4824 0.5137</a></li>
+<li><a href="#base0-0-5137-0-5804-0-5882">base0 0.5137 0.5804 0.5882</a></li>
+<li><a href="#base1-0-5765-0-6314-0-6314">base1 0.5765 0.6314 0.6314</a></li>
+<li><a href="#base2-0-9333-0-9098-0-8353">base2 0.9333 0.9098 0.8353</a></li>
+<li><a href="#base3-0-9922-0-9647-0-8902">base3 0.9922 0.9647 0.8902</a></li>
+<li><a href="#yellow-0-7098-0-5373-0-0000">yellow 0.7098 0.5373 0.0000</a></li>
+<li><a href="#orange-0-7961-0-2941-0-0863">orange 0.7961 0.2941 0.0863</a></li>
+<li><a href="#red-0-8275-0-0039-0-0078">red 0.8275 0.0039 0.0078</a></li>
+<li><a href="#magenta-0-8275-0-2118-0-5098">magenta 0.8275 0.2118 0.5098</a></li>
+<li><a href="#violet-0-4235-0-4431-0-7686">violet 0.4235 0.4431 0.7686</a></li>
+<li><a href="#blue-0-1490-0-5451-0-8235">blue 0.1490 0.5451 0.8235</a></li>
+<li><a href="#cyan-0-1647-0-6314-0-5961">cyan 0.1647 0.6314 0.5961</a></li>
+<li><a href="#green-0-5216-0-6000-0-0000">green 0.5216 0.6000 0.0000</a></li>
+<li><a href="#solarized-colors-name-r-g-b-1">Solarized colors (name, r, g, b)</a></li>
+<li><a href="#base03-0-0000-0-1686-0-2118-1">base03 0.0000 0.1686 0.2118</a></li>
+<li><a href="#base02-0-0275-0-2118-0-2588-1">base02 0.0275 0.2118 0.2588</a></li>
+<li><a href="#base01-0-3451-0-4314-0-4588-1">base01 0.3451 0.4314 0.4588</a></li>
+<li><a href="#base00-0-3961-0-4824-0-5137-1">base00 0.3961 0.4824 0.5137</a></li>
+<li><a href="#base0-0-5137-0-5804-0-5882-1">base0 0.5137 0.5804 0.5882</a></li>
+<li><a href="#base1-0-5765-0-6314-0-6314-1">base1 0.5765 0.6314 0.6314</a></li>
+<li><a href="#base2-0-9333-0-9098-0-8353-1">base2 0.9333 0.9098 0.8353</a></li>
+<li><a href="#base3-0-9922-0-9647-0-8902-1">base3 0.9922 0.9647 0.8902</a></li>
+<li><a href="#yellow-0-7098-0-5373-0-0000-1">yellow 0.7098 0.5373 0.0000</a></li>
+<li><a href="#orange-0-7961-0-2941-0-0863-1">orange 0.7961 0.2941 0.0863</a></li>
+<li><a href="#red-0-8275-0-0039-0-0078-1">red 0.8275 0.0039 0.0078</a></li>
+<li><a href="#magenta-0-8275-0-2118-0-5098-1">magenta 0.8275 0.2118 0.5098</a></li>
+<li><a href="#violet-0-4235-0-4431-0-7686-1">violet 0.4235 0.4431 0.7686</a></li>
+<li><a href="#blue-0-1490-0-5451-0-8235-1">blue 0.1490 0.5451 0.8235</a></li>
+<li><a href="#cyan-0-1647-0-6314-0-5961-1">cyan 0.1647 0.6314 0.5961</a></li>
+<li><a href="#green-0-5216-0-6000-0-0000-1">green 0.5216 0.6000 0.0000</a></li>
+<li><a href="#background-base3">background = base3</a></li>
+<li><a href="#commands-blue">commands = blue</a></li>
+<li><a href="#comments-base1">comments = base1</a></li>
+<li><a href="#foreground-base01">foreground = base01</a></li>
+<li><a href="#index-terms-yellow">\index terms = yellow</a></li>
+<li><a href="#marker-magenta">marker = magenta</a></li>
+<li><a href="#insertionpoint-base02">insertionpoint = base02</a></li>
+<li><a href="#highlighted-background-yellow">Highlighted background = yellow</a></li>
+<li><a href="#highlighted-brace-color-magenta">Highlighted brace color = magenta</a></li>
+<li><a href="#restore-the-default-settings-that-come-with-texshop">restore the default settings that come with TeXShop</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>其实转投 LaTeX 的念头大学时就有了：写各种作业、报告时，写两本毕业论文时。然而大学的我实在懒惰，虽然在排版方面认真地似有强迫症，但也只是徒增一些 Office 排版技巧罢了。这次写文章，只觉受够了 Word 的繁琐操作，便在前几日磨着洋工扫了眼大家推荐的 LaTeX 配置，在昨日分别下载安装了 TexLive 和 MacTex，并在今日把写好的部分用 LaTeX 格式重写，输出的排版真是赏心悦目，不经感叹 LaTeX 真是一个美观易用零学习成本的好工具。</p>
+
+<p>LaTeX 2e，经历了 Knuth 大神 (Plain TeX)，敝校数学博士 Lamport (LaTeX)，Mittelbach (LaTeX 2e) 一系列人的开发，已是一个非常好用的格式，并有着较为完善的引擎、宏包、驱动。软件方面，作为一个入门者，同时提供后台处理机制与前台编辑器的发行包是最傻瓜易用的。比较常用的发行版是 MikTeX 与 TeXLive，由于后者是通用的，适合我这种家里用 Mac OS，实验室用 Windows 及 Ubuntu 的小朋友，所以我就给 Mac 装了基于 TeXLive 的 MacTeX，Windows 装了 TexLive，编辑器也就是相应的 TeXshop 与 TeXworks。</p>
+
+<p>入门手册我看的是 Oetiker 的 <a href="https://www.ctan.org/tex-archive/info/lshort/english">lshort</a> 和包太雷的 <a href="http://math.nju.edu.cn/~meijq/tex/lnotes2.pdf">lnotes2</a>，同时参考了 Math mode 的那篇 <a href="https://www.ctan.org/tex-archive/info/math/voss/mathmode/?lang=en">review</a> 及各包的描述文件，感觉写写论文是足够了。</p>
+
+<p>对于 Science 论文写作来说，今天用到的 Package 有 siunitx （用来写单位）, mhchem（用来写化学式）, natbib（用来加引用文献） 和 achemos（ACS投稿用）。</p>
+
+<p>感觉以后还可以用LaTeX格式来做文献笔记（各家文献管理软件/笔记软件没一个好用的，对于阅读文献的整理还得靠手写），等我转移到 Emacs 后，用 org-mode 来管理文献，大概就能走上摸鱼的人生巅峰了吧（请去做实验，苦笑）。</p>
+
+<p>&nbsp;</p>
+
+<p>附我使用的 TeXShop 的配色方案</p>
+
+<h1 id="solarized-colors-name-r-g-b">Solarized colors (name, r, g, b)</h1>
+
+<h1 id="base03-0-0000-0-1686-0-2118">base03 0.0000 0.1686 0.2118</h1>
+
+<h1 id="base02-0-0275-0-2118-0-2588">base02 0.0275 0.2118 0.2588</h1>
+
+<h1 id="base01-0-3451-0-4314-0-4588">base01 0.3451 0.4314 0.4588</h1>
+
+<h1 id="base00-0-3961-0-4824-0-5137">base00 0.3961 0.4824 0.5137</h1>
+
+<h1 id="base0-0-5137-0-5804-0-5882">base0 0.5137 0.5804 0.5882</h1>
+
+<h1 id="base1-0-5765-0-6314-0-6314">base1 0.5765 0.6314 0.6314</h1>
+
+<h1 id="base2-0-9333-0-9098-0-8353">base2 0.9333 0.9098 0.8353</h1>
+
+<h1 id="base3-0-9922-0-9647-0-8902">base3 0.9922 0.9647 0.8902</h1>
+
+<h1 id="yellow-0-7098-0-5373-0-0000">yellow 0.7098 0.5373 0.0000</h1>
+
+<h1 id="orange-0-7961-0-2941-0-0863">orange 0.7961 0.2941 0.0863</h1>
+
+<h1 id="red-0-8275-0-0039-0-0078">red 0.8275 0.0039 0.0078</h1>
+
+<h1 id="magenta-0-8275-0-2118-0-5098">magenta 0.8275 0.2118 0.5098</h1>
+
+<h1 id="violet-0-4235-0-4431-0-7686">violet 0.4235 0.4431 0.7686</h1>
+
+<h1 id="blue-0-1490-0-5451-0-8235">blue 0.1490 0.5451 0.8235</h1>
+
+<h1 id="cyan-0-1647-0-6314-0-5961">cyan 0.1647 0.6314 0.5961</h1>
+
+<h1 id="green-0-5216-0-6000-0-0000">green 0.5216 0.6000 0.0000</h1>
+
+<h1 id="solarized-colors-name-r-g-b-1">Solarized colors (name, r, g, b)</h1>
+
+<h1 id="base03-0-0000-0-1686-0-2118-1">base03 0.0000 0.1686 0.2118</h1>
+
+<h1 id="base02-0-0275-0-2118-0-2588-1">base02 0.0275 0.2118 0.2588</h1>
+
+<h1 id="base01-0-3451-0-4314-0-4588-1">base01 0.3451 0.4314 0.4588</h1>
+
+<h1 id="base00-0-3961-0-4824-0-5137-1">base00 0.3961 0.4824 0.5137</h1>
+
+<h1 id="base0-0-5137-0-5804-0-5882-1">base0 0.5137 0.5804 0.5882</h1>
+
+<h1 id="base1-0-5765-0-6314-0-6314-1">base1 0.5765 0.6314 0.6314</h1>
+
+<h1 id="base2-0-9333-0-9098-0-8353-1">base2 0.9333 0.9098 0.8353</h1>
+
+<h1 id="base3-0-9922-0-9647-0-8902-1">base3 0.9922 0.9647 0.8902</h1>
+
+<h1 id="yellow-0-7098-0-5373-0-0000-1">yellow 0.7098 0.5373 0.0000</h1>
+
+<h1 id="orange-0-7961-0-2941-0-0863-1">orange 0.7961 0.2941 0.0863</h1>
+
+<h1 id="red-0-8275-0-0039-0-0078-1">red 0.8275 0.0039 0.0078</h1>
+
+<h1 id="magenta-0-8275-0-2118-0-5098-1">magenta 0.8275 0.2118 0.5098</h1>
+
+<h1 id="violet-0-4235-0-4431-0-7686-1">violet 0.4235 0.4431 0.7686</h1>
+
+<h1 id="blue-0-1490-0-5451-0-8235-1">blue 0.1490 0.5451 0.8235</h1>
+
+<h1 id="cyan-0-1647-0-6314-0-5961-1">cyan 0.1647 0.6314 0.5961</h1>
+
+<h1 id="green-0-5216-0-6000-0-0000-1">green 0.5216 0.6000 0.0000</h1>
+
+<h1 id="background-base3">background = base3</h1>
+
+<p>defaults write TeXShop background_R 1
+defaults write TeXShop background_G 1
+defaults write TeXShop background_B 1</p>
+
+<h1 id="commands-blue">commands = blue</h1>
+
+<p>defaults write TeXShop commandred 0.1490
+defaults write TeXShop commandgreen 0.5451
+defaults write TeXShop commandblue 0.8235</p>
+
+<h1 id="comments-base1">comments = base1</h1>
+
+<p>defaults write TeXShop commentred 0.5765
+defaults write TeXShop commentgreen 0.6314
+defaults write TeXShop commentblue 0.6314</p>
+
+<h1 id="foreground-base01">foreground = base01</h1>
+
+<p>defaults write TeXShop foreground_R 0
+defaults write TeXShop foreground_G 0
+defaults write TeXShop foreground_B 0</p>
+
+<h1 id="index-terms-yellow">\index terms = yellow</h1>
+
+<p>defaults write TeXShop indexred 0.7098
+defaults write TeXShop indexgreen 0.5373
+defaults write TeXShop indexblue 0.0000</p>
+
+<h1 id="marker-magenta">marker = magenta</h1>
+
+<p>defaults write TeXShop markerred 0.8275
+defaults write TeXShop markergreen 0.2118
+defaults write TeXShop markerblue 0.5098</p>
+
+<h1 id="insertionpoint-base02">insertionpoint = base02</h1>
+
+<p>defaults write TeXShop insertionpoint_R 0.0275
+defaults write TeXShop insertionpoint_G 0.2118
+defaults write TeXShop insertionpoint_B 0.2588</p>
+
+<h1 id="highlighted-background-yellow">Highlighted background = yellow</h1>
+
+<p>defaults write TeXShop highlightContentRed 0.7098
+defaults write TeXShop highlightContentGreen 0.5373
+defaults write TeXShop highlightContentBlue 0.0000</p>
+
+<h1 id="highlighted-brace-color-magenta">Highlighted brace color = magenta</h1>
+
+<p>defaults write TeXShop highlightBracesRed 0.8275
+defaults write TeXShop highlightBracesGreen 0.2118
+defaults write TeXShop highlightBracesBlue 0.5098</p>
+
+<h1 id="restore-the-default-settings-that-come-with-texshop">restore the default settings that come with TeXShop</h1>
+
+<p>defaults write TeXShop background_R 1.0
+defaults write TeXShop background_G 1.0
+defaults write TeXShop background_B 1.0</p>
+
+<p>defaults write TeXShop commandred 0.0
+defaults write TeXShop commandgreen 0.0
+defaults write TeXShop commandblue 1.0</p>
+
+<p>defaults write TeXShop commentred 1.0
+defaults write TeXShop commentgreen 0.0
+defaults write TeXShop commentblue 0.0</p>
+
+<p>defaults write TeXShop foreground_R 0.00
+defaults write TeXShop foreground_G 0.00
+defaults write TeXShop foreground_B 0.00</p>
+
+<p>defaults write TeXShop indexred 1.00
+defaults write TeXShop indexgreen 1.00
+defaults write TeXShop indexblue 0.00</p>
+
+<p>defaults write TeXShop insertionpoint_R 0.00
+defaults write TeXShop insertionpoint_G 0.00
+defaults write TeXShop insertionpoint_B 0.00</p>
+
+<p>defaults write TeXShop markerred 0.02
+defaults write TeXShop markergreen 0.51
+defaults write TeXShop markerblue 0.13</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">ziyunch</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2016-03-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="../../../images/wechatpay.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="../../../tags/latex/">LaTeX</a>
+          <a href="../../../tags/texshop/">TeXShop</a>
+          <a href="../../../tags/%E6%8A%80%E6%9C%AF/">技术</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="../../../2016/03/421.html/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">LaTeX 笔记2</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="../../../2016/01/419.html/">
+            <span class="next-text nav-default">30分钟快手菜</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'kyXPptAG0HNFlxVP6PKtMG79-gzGzoHsz',
+        appKey: 'odsVXiu7qNwwQypz99atviXR',
+        notify:  false , 
+        verify:  false , 
+        avatar:'mm', 
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/ziyunch" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ziyunch" class="iconfont icon-github" title="github"></a>
+      <a href="http://weibo.com/ziyunc" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://douban.com/people/ziyunch" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ziyunch</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../../../dist/even.26188efa.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-86469737-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

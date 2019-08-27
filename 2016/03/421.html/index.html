@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>LaTeX 笔记2 - Blind with Science</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ziyunch" /><meta name="description" content="今天努了把力终于把初稿写完了。话说 LaTeX 真是超级容易上手啊，感觉看过入门手册和描述文档后，今天基本上可以脱手写论文了。
+写完之后去吃了东北菜，然后回家又开始摸鱼，研究起了 Emacs &#43; AucTeX 的组合。
+受了一年成为 Emacs 高手的蛊惑，我使用了 Purcell 的配置，花了一点时间把 tutorial 读了一遍，做了笔记，并通过别人的教程将不理解的部分大致搞了清楚。之后我便按照不知道是哪个学校出的快速上手教程过了一遍。
+不过这个教程的配置和我的有所不同:
+ 在 minibuffer 进行选项补完时，我只能使用RET，C-j 会导致补完失败. 还有一些教程里没有提到的 AucTeX 的特性：
+ 可以直接使用 C-c C-c 编译，C-c C-v 预览 pdf，并不需要像文中一样在 shell 里敲命令进行调用;
+  LaTeX-indent-line will indent the current line；
+ C-j newline-and-indent inserts a new line (much like ) and moves the cursor to an appropriate position by the left margin；
+  no indent. 感觉还蛮顺利的，下次摸鱼时可以研究一下 org-mode，以后说不定就能在 Emacs 里管理文献了~
+  感觉明天可以去搞这些的 Reference Card，让生活更简单一些~
+" /><meta name="keywords" content="ziyunch, blog" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://blindwith.science/2016/03/421.html/" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../favicon-16x16.png">
+<link rel="manifest" href="../../../manifest.json">
+<link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="../../../dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="LaTeX 笔记2" />
+<meta property="og:description" content="今天努了把力终于把初稿写完了。话说 LaTeX 真是超级容易上手啊，感觉看过入门手册和描述文档后，今天基本上可以脱手写论文了。
+
+写完之后去吃了东北菜，然后回家又开始摸鱼，研究起了 Emacs &#43; AucTeX 的组合。
+
+受了一年成为 Emacs 高手的蛊惑，我使用了 Purcell 的配置，花了一点时间把 tutorial 读了一遍，做了笔记，并通过别人的教程将不理解的部分大致搞了清楚。之后我便按照不知道是哪个学校出的快速上手教程过了一遍。
+
+不过这个教程的配置和我的有所不同:
+
+
+在 minibuffer 进行选项补完时，我只能使用RET，C-j 会导致补完失败.
+还有一些教程里没有提到的 AucTeX 的特性：
+
+可以直接使用 C-c C-c 编译，C-c C-v 预览 pdf，并不需要像文中一样在 shell 里敲命令进行调用;
+
+ LaTeX-indent-line will indent the current line；
+
+C-j newline-and-indent inserts a new line (much like ) and moves the cursor to an appropriate position by the left margin；
+
+ no indent.
+感觉还蛮顺利的，下次摸鱼时可以研究一下 org-mode，以后说不定就能在 Emacs 里管理文献了~
+
+
+感觉明天可以去搞这些的 Reference Card，让生活更简单一些~" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blindwith.science/2016/03/421.html/" />
+<meta property="article:published_time" content="2016-03-02T23:40:00+00:00" />
+<meta property="article:modified_time" content="2016-03-02T23:40:00+00:00" />
+<meta itemprop="name" content="LaTeX 笔记2">
+<meta itemprop="description" content="今天努了把力终于把初稿写完了。话说 LaTeX 真是超级容易上手啊，感觉看过入门手册和描述文档后，今天基本上可以脱手写论文了。
+
+写完之后去吃了东北菜，然后回家又开始摸鱼，研究起了 Emacs &#43; AucTeX 的组合。
+
+受了一年成为 Emacs 高手的蛊惑，我使用了 Purcell 的配置，花了一点时间把 tutorial 读了一遍，做了笔记，并通过别人的教程将不理解的部分大致搞了清楚。之后我便按照不知道是哪个学校出的快速上手教程过了一遍。
+
+不过这个教程的配置和我的有所不同:
+
+
+在 minibuffer 进行选项补完时，我只能使用RET，C-j 会导致补完失败.
+还有一些教程里没有提到的 AucTeX 的特性：
+
+可以直接使用 C-c C-c 编译，C-c C-v 预览 pdf，并不需要像文中一样在 shell 里敲命令进行调用;
+
+ LaTeX-indent-line will indent the current line；
+
+C-j newline-and-indent inserts a new line (much like ) and moves the cursor to an appropriate position by the left margin；
+
+ no indent.
+感觉还蛮顺利的，下次摸鱼时可以研究一下 org-mode，以后说不定就能在 Emacs 里管理文献了~
+
+
+感觉明天可以去搞这些的 Reference Card，让生活更简单一些~">
+
+
+<meta itemprop="datePublished" content="2016-03-02T23:40:00&#43;00:00" />
+<meta itemprop="dateModified" content="2016-03-02T23:40:00&#43;00:00" />
+<meta itemprop="wordCount" content="1858">
+
+
+
+<meta itemprop="keywords" content="AucTeX,Emacs,LaTeX,技术," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LaTeX 笔记2"/>
+<meta name="twitter:description" content="今天努了把力终于把初稿写完了。话说 LaTeX 真是超级容易上手啊，感觉看过入门手册和描述文档后，今天基本上可以脱手写论文了。
+
+写完之后去吃了东北菜，然后回家又开始摸鱼，研究起了 Emacs &#43; AucTeX 的组合。
+
+受了一年成为 Emacs 高手的蛊惑，我使用了 Purcell 的配置，花了一点时间把 tutorial 读了一遍，做了笔记，并通过别人的教程将不理解的部分大致搞了清楚。之后我便按照不知道是哪个学校出的快速上手教程过了一遍。
+
+不过这个教程的配置和我的有所不同:
+
+
+在 minibuffer 进行选项补完时，我只能使用RET，C-j 会导致补完失败.
+还有一些教程里没有提到的 AucTeX 的特性：
+
+可以直接使用 C-c C-c 编译，C-c C-v 预览 pdf，并不需要像文中一样在 shell 里敲命令进行调用;
+
+ LaTeX-indent-line will indent the current line；
+
+C-j newline-and-indent inserts a new line (much like ) and moves the cursor to an appropriate position by the left margin；
+
+ no indent.
+感觉还蛮顺利的，下次摸鱼时可以研究一下 org-mode，以后说不定就能在 Emacs 里管理文献了~
+
+
+感觉明天可以去搞这些的 Reference Card，让生活更简单一些~"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="../../../" class="logo">Blind with Science</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="../../../">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="../../../post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="../../../tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="../../../categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="../../../about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="../../../" class="logo">Blind with Science</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="../../../">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">LaTeX 笔记2</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2016-03-02 </span>
+        <div class="post-category">
+            <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
+            </div>
+          <span class="more-meta"> 约 1858 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    
+  </div>
+</div>
+    <div class="post-content">
+      <p>今天努了把力终于把初稿写完了。话说 LaTeX 真是超级容易上手啊，感觉看过入门手册和描述文档后，今天基本上可以脱手写论文了。</p>
+
+<p>写完之后去吃了东北菜，然后回家又开始摸鱼，研究起了 Emacs + AucTeX 的组合。</p>
+
+<p>受了<a href="https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org">一年成为 Emacs 高手</a>的蛊惑，我使用了 <a href="https://github.com/purcell/emacs.d">Purcell 的配置</a>，花了一点时间把 tutorial 读了一遍，做了笔记，并通过<a href="http://www.cnblogs.com/robertzml/archive/2010/03/31/1701374.html">别人的教程</a>将不理解的部分大致搞了清楚。之后我便按照不<a href="http://cs2.swfc.edu.cn/~wx672/lecture_notes/linux/latex/latex_tutorial.html">知道是哪个学校出的快速上手教程</a>过了一遍。</p>
+
+<p>不过这个教程的配置和我的有所不同:</p>
+
+<ul>
+<li><p>在 minibuffer 进行选项补完时，我只能使用RET，C-j 会导致补完失败.
+还有一些教程里没有提到的 AucTeX 的特性：</p></li>
+
+<li><p>可以直接使用 C-c C-c 编译，C-c C-v 预览 pdf，并不需要像文中一样在 <em>shell</em> 里敲命令进行调用;</p></li>
+
+<li><p><TAB> LaTeX-indent-line will indent the current line；</p></li>
+
+<li><p>C-j newline-and-indent inserts a new line (much like <RET>) and moves the cursor to an appropriate position by the left margin；</p></li>
+
+<li><p><RET> no indent.
+感觉还蛮顺利的，下次摸鱼时可以研究一下 org-mode，以后说不定就能在 Emacs 里管理文献了~</p></li>
+</ul>
+
+<p>感觉明天可以去搞这些的 Reference Card，让生活更简单一些~</p>
+
+<p>附笔记：
+<pre style="padding-left:60px;">Emacs</pre></p>
+
+<ul>
+<li>C control key</li>
+<li>M meta key (esc in Mac)</li>
+<li>C-j Return(Not RET)</li>
+<li>C-l Clear screen and redisplay all the text, moving the text around the cursor to the center of the screen, top of the screen, bottom of the screen</li>
+<li>C-f Move forward a character</li>
+<li>C-b Move backward a character</li>
+<li>M-f Move forward a word</li>
+<li>M-b Move backward a word</li>
+<li>C-a Move to beginning of line</li>
+<li>C-e Move to end of line</li>
+<li>M-a Move back to beginning of sentence</li>
+<li>M-e Move forward to end of sentence</li>
+<li>C-n Move to next line</li>
+<li>C-p Move to previous line</li>
+<li>C-v Move forward one screenful</li>
+<li>M-v Move backward one screenful</li>
+<li>M-&lt; Move to the beginning of the whole text</li>
+<li>M-&gt; Move to the end of the whole text</li>
+</ul>
+
+<p>=======</p>
+
+<ul>
+<li><DEL> Delete the character just before the cursor</li>
+<li>C-d Delete the next character after the cursor</li>
+<li>M-<DEL> Kill the word immediately before the cursor</li>
+<li>M-d Kill the next word after the cursor</li>
+<li>C-k Kill  from the cursor position to end of line</li>
+<li>M-k Kill to the end of the current sentence</li>
+<li>C-space Mark activated/cleared</li>
+<li>C-w Kill all marked content</li>
+<li>C-y Yanking, reinserts the last killed text</li>
+<li>M-y (yank-pop)，这个命令只能在刚用完C-y后使用。它的作用是用kill 环中再前一个内容替换掉刚用C-y粘贴出来的内容。简单点说，假如kill 环中有1号、2号、3号记录，使用C-y后3号记录调出，紧接着使用M-y，删掉3号记录，换成2号记录，还有M-y是可以连着多次使用的，我们再按一下1号记录就出来了。虽然这个命令可以使用前一条记录替换此条记录，但它并不会更改kill 环中记录的顺序，仅是一个指针的移动而已。另外M-y 命令可以接受参数调用，比如说C-u 2 M-y 就等价于C-y M-y。</li>
+
+<li><p>C-M-w (append-next-kill)，这个命令只有在它下一个命令是kill 命令时才有效，作用是把下个kill 命令删掉的东西和kill 环中最后一个记录合并。
+<pre style="padding-left:30px;">=======</pre></p></li>
+
+<li><p>C-x Character eXtend. Followed by one character.</p></li>
+
+<li><p>M-x Named command eXtend. Followed by a long name.</p></li>
+
+<li><p>C-x C-f Find a file</p></li>
+
+<li><p>C-x C-s Save the file</p></li>
+
+<li><p>C-x C-w Save the file as…</p></li>
+
+<li><p>C-x s Save some buffers</p></li>
+
+<li><p>C-x k Close buffer</p></li>
+
+<li><p>C-x C-b list buffers</p></li>
+
+<li><p>C-x b Switch buffers</p></li>
+
+<li><p>C-x C-c End Emacs</p></li>
+
+<li><p>C-x 1 One window (kill other windows)</p></li>
+
+<li><p>C-x 2 split window below</p></li>
+
+<li><p>C-x 3 split window vertically</p></li>
+
+<li><p>C-x o other window</p></li>
+
+<li><p>M-x make-frame</p></li>
+
+<li><p>M-x delete-frame
+<pre style="padding-left:30px;">=======</pre></p></li>
+
+<li><p>C-g Quit a partially entered command</p></li>
+
+<li><p><Esc><Esc><Esc> get out of the recursive editing level</p></li>
+
+<li><p>C-/ Undo (except command do not change the text, self-inserting characters handled in groups of up to 20) C-_ or C-x u</p></li>
+
+<li><p>C-u numeric argument (repeat count)</p></li>
+
+<li><p>C-s searching, using <Return> to terminate
+<pre style="padding-left:30px;">=======</pre>
+<pre style="padding-left:60px;">Help</pre></p></li>
+
+<li><p>C-h c &lt;command character or sequence Display brief description of the command</p></li>
+
+<li><p>C-h m View documentation on your current major mode. 显示当前激活的所有模式的信息</p></li>
+
+<li><p>C-h k &lt;…&gt; Display the documentation of the function, as well as its name, in a Emacs window. 查找一个键被绑定在了哪个命令上</p></li>
+
+<li><p>C-h f Discribe a function. 显示给定函数的描述信息</p></li>
+
+<li><p>C-h a Command Apropos 查找一个匹配一段描述的命令</p></li>
+
+<li><p>C-h i Read included Manuals</p></li>
+
+<li><p>C-h t        启动Emacs官方教程</p></li>
+
+<li><p>C-h b        列出来所有的有效键绑定</p></li>
+
+<li><p>C-h w        查找一个命令被绑定在了哪些键上
+<pre style="padding-left:30px;">======
+Emacs的接口分成三个层次来：buffer，window 和 frame。</pre></p></li>
+
+<li><p>window 是显示buffer的一个viewport（社区）。一个window一次只能显示一个buffer。但是一个buffer可以在多个window中显示。在窗口下面有一个mode-line，它用于显示当前buffer的信息。</p></li>
+
+<li><p>frame 是Emacs的一个&rdquo;窗口&rdquo;（这是标准的术语。比如，&rsquo;窗口&rsquo;是现代桌面的称谓），它包含了标题栏，菜单栏，还有一个或多个&rsquo;window&rsquo;（这是Emacs的术语，比如上面提到的&rsquo;window&rsquo;）。</p></li>
+</ul>
+
+<p>======
+常用的自动补全有四个键TAB、SPC、RET和?。</p>
+
+<ul>
+<li>TAB　　　　尽可能的补全Minibuffer中的字符，如果没有满足要求的，则列出所有可能的补全。对应命令minibuffer-complete。</li>
+<li>SPC　　　　最多补全Minibuffer中的一个词，如果没有满足要求的，则列出所有可能的补全，在输入路径时SPC不可用。对应命令minibuffer-complete-word。</li>
+<li>RET　　　　提交Minibuffer中的文本，或者选取第一个可能的补全提交。对应命令minibuffer-complete-and-exit。</li>
+<li>?　　　　　 列出所有可能的补全。对应命令minibuffer-completion-help。</li>
+</ul>
+
+<p>======</p>
+
+<ul>
+<li>M-p 移到Minibuffer历史中的前一条，previous-history-element。</li>
+<li>M-n 移到Minibuffer历史中的后一条，next-history-element。</li>
+</ul>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">ziyunch</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2016-03-02
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="../../../images/wechatpay.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="../../../tags/auctex/">AucTeX</a>
+          <a href="../../../tags/emacs/">Emacs</a>
+          <a href="../../../tags/latex/">LaTeX</a>
+          <a href="../../../tags/%E6%8A%80%E6%9C%AF/">技术</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="../../../2016/03/422.html/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">不吐不快</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="../../../2016/03/420.html/">
+            <span class="next-text nav-default">LaTeX 笔记 1</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'kyXPptAG0HNFlxVP6PKtMG79-gzGzoHsz',
+        appKey: 'odsVXiu7qNwwQypz99atviXR',
+        notify:  false , 
+        verify:  false , 
+        avatar:'mm', 
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/ziyunch" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ziyunch" class="iconfont icon-github" title="github"></a>
+      <a href="http://weibo.com/ziyunc" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://douban.com/people/ziyunch" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ziyunch</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../../../dist/even.26188efa.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-86469737-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

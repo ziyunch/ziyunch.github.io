@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iPod on Blind with Science</title>
+    <link>http://blindwith.science/tags/ipod/</link>
+    <description>Recent content in iPod on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Sun, 30 Aug 2009 17:02:45 +0000</lastBuildDate>
+    
+	<atom:link href="http://blindwith.science/tags/ipod/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>悼念我掉水里的ipod</title>
+      <link>http://blindwith.science/2009/08/338.html/</link>
+      <pubDate>Sun, 30 Aug 2009 17:02:45 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2009/08/338.html/</guid>
+      <description>ipod进水了，然后报废了。 某天我洗衣服的时候让ipod头朝下载到水里面，于是它湿了。很快从肥皂水里捞起来，而之后它还在放音乐，我便轻易以为</description>
+    </item>
+    
+  </channel>
+</rss>

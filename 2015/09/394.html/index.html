@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[R] 久不编程爪已疏 —— R初学以及挣扎于非线性拟合与bquote的用法上 - Blind with Science</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ziyunch" /><meta name="description" content="像我这种做Enzyme kinetic的砖工，每天都有大把时间耗在处理数据&#43;作图上。过去的几年里，懒惰的我都是先从运行软件（UVProbe）上" /><meta name="keywords" content="ziyunch, blog" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://blindwith.science/2015/09/394.html/" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../favicon-16x16.png">
+<link rel="manifest" href="../../../manifest.json">
+<link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="../../../dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="[R] 久不编程爪已疏 —— R初学以及挣扎于非线性拟合与bquote的用法上" />
+<meta property="og:description" content="像我这种做Enzyme kinetic的砖工，每天都有大把时间耗在处理数据&#43;作图上。过去的几年里，懒惰的我都是先从运行软件（UVProbe）上" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blindwith.science/2015/09/394.html/" />
+<meta property="article:published_time" content="2015-09-14T02:45:13+00:00" />
+<meta property="article:modified_time" content="2015-09-14T02:45:13+00:00" />
+<meta itemprop="name" content="[R] 久不编程爪已疏 —— R初学以及挣扎于非线性拟合与bquote的用法上">
+<meta itemprop="description" content="像我这种做Enzyme kinetic的砖工，每天都有大把时间耗在处理数据&#43;作图上。过去的几年里，懒惰的我都是先从运行软件（UVProbe）上">
+
+
+<meta itemprop="datePublished" content="2015-09-14T02:45:13&#43;00:00" />
+<meta itemprop="dateModified" content="2015-09-14T02:45:13&#43;00:00" />
+<meta itemprop="wordCount" content="2425">
+
+
+
+<meta itemprop="keywords" content="bquote,nls,nlsLM,R,技术," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[R] 久不编程爪已疏 —— R初学以及挣扎于非线性拟合与bquote的用法上"/>
+<meta name="twitter:description" content="像我这种做Enzyme kinetic的砖工，每天都有大把时间耗在处理数据&#43;作图上。过去的几年里，懒惰的我都是先从运行软件（UVProbe）上"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="../../../" class="logo">Blind with Science</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="../../../">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="../../../post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="../../../tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="../../../categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="../../../about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="../../../" class="logo">Blind with Science</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="../../../">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[R] 久不编程爪已疏 —— R初学以及挣扎于非线性拟合与bquote的用法上</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-09-14 </span>
+        <div class="post-category">
+            <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
+            </div>
+          <span class="more-meta"> 约 2425 字 </span>
+          <span class="more-meta"> 预计阅读 5 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    
+  </div>
+</div>
+    <div class="post-content">
+      <p>像我这种做Enzyme kinetic的砖工，每天都有大把时间耗在处理数据+作图上。过去的几年里，懒惰的我都是先从运行软件（UVProbe）上导出数据。由于该软件及其不好用，只能导出由机器二次拟合的Activity Data和在软件自带的处理界面上得到的斜率数据即Main Table。而对于原始数据，我捣鼓了很久都没办法找到直接从.kin文件中读取的方法，只能打开每个文件，分几组（一次run几个cuvette就有几组）打包得到Data Print数据，然后手动复制粘贴。得到斜率数据后，还得在Excel上打开，Separate into columns，计算真实速率。然后再打开SigmaPlot，使用其Enzyme Kinetic模块，通过手动输入许多组fixed Substrate / varied Inhibitor 的速率值后，得到拟合不同inhibition model的图片。如果要在图片上进行标记，那还要花费更多的时间。 每一组数据，大概都需要花费将近半小时的时间进行如上处理，感觉自己宝贵的生命就一点点地耗费在这毫无意义的重复劳动上了。</p>
+
+<p>而前段时间，由于组里的HPLC无法导出图片，我只能转去研究出一套让软件每次运行后自动导出原始数据的方法，然后自己作图。期间对比了Matlab，R，Python等工具，觉得R还算是一个轻量化比较好用的工具，便大致看了下它的初学者文档，写了一个将当天run的每次HPLC分别做图的小script。每周把跑的HPLC数据放在一个文件夹里，然后打开script，在RStudio里轻轻一点击，所有图便出现在文件夹里。然后选出有意义的图，在imageJ中montage一下，就能打印出来跟老板talk了，感觉自己萌萌哒。</p>
+
+<p>从那时以后，一个念头就在我脑中生出：为什么不用R做一个一键做kinetic 图的软件？构思如下：</p>
+
+<p>先读取Main Table，因为我有给每个数据做标记的习惯，所以可以直接从Main Table中将速率与底物浓度对应起来，排除掉错误/ 失败数据并进行数据处理。同时根据其从打包的Data Print中提取每一组原始数据并导出。</p>
+
+<p>然后将处理过的数据fit进不同的模型中，利用AIC值将各模型进行排序，选取最优值。</p>
+
+<p>最后在不同Inhibitor浓度下作v0-S图， 并将得到的各种Parameter标记在图上。</p>
+
+<p>由于只是既HPLC图之后第二次使用R，自己又很多年没有编程了，script写得磕磕绊绊，过程几乎就是不断试错。途中查阅了R的基本官方手册以及cookbook，作图时研究了好几个关于ggplot2包的博客，还看了许多stat.ethz.ch与stackoverflow上的案例，进展依旧十分缓慢，断断续续大概花了半个月才搞出一个运行结果比较好看，code也相对来说比较简洁的方案。</p>
+
+<p>这其中，我在两个地方卡得时间最久：均超过一天。</p>
+
+<p>一处是模型的拟合。有三种常用的简化模型，分别是</p>
+
+<p>[code language=&ldquo;r&rdquo;]
+formulaComp &lt;- as.formula(&ldquo;v0 ~ (Vmax * S) / (Km * (1 + I / Kis) + S)&ldquo;)
+formulaNoncomp &lt;- as.formula(&ldquo;v0 ~ (Vmax * S) / (Km * (1 + I / Kis ) + S * ( 1 + I / Kii)) &ldquo;)
+formulaUncomp &lt;- as.formula(&ldquo;v0 ~ (Vmax * S) / (Km + S * (1 + I / Kii))&ldquo;)
+[/code]</p>
+
+<p>其中，仅有v0，S和I已知，其余均需要进行拟合。对于这种非线性模型，R中自带的有nls()函数：</p>
+
+<p>Nonlinear Least Squares
+Description
+Determine the nonlinear (weighted) least-squares estimates of the parameters of a nonlinear model.</p>
+
+<p>Usage
+nls(formula, data, start, control, algorithm,
+trace, subset, weights, na.action, model,
+lower, upper, &hellip;)</p>
+
+<p>这个函数可以通过三种算法进行拟合：默认的Gauss-Newton算法， 对类线性模型适用的Golub-Pereyra算法以及Port包中采用的nl2sol有边界算法。实际使用中我发现默认算法可以轻易地拟合competitive model，但这个函数对另两种模型无效。于是只能另寻它法。</p>
+
+<p>我先加载了nls2包，包内的nls2()函数适用与nls相同的算法，但是可以使用 &ldquo;brute-force&rdquo;, &ldquo;random-search&rdquo;, &ldquo;plinear-brute&rdquo;和&rdquo;plinear-random&rdquo;等附加选项，不明白这些分别有什么卵用的我在粗暴地试验下，发现这个函数并不管用。</p>
+
+<p>Nonlinear Least Squares with Brute Force
+Description
+Determine the nonlinear least-squares estimates of the parameters of a nonlinear model.</p>
+
+<p>Usage
+nls2(formula, data = parent.frame(), start, control = nls.control(),
+algorithm = c(&ldquo;default&rdquo;, &ldquo;plinear&rdquo;, &ldquo;port&rdquo;, &ldquo;brute-force&rdquo;,
+&ldquo;grid-search&rdquo;, &ldquo;random-search&rdquo;, &ldquo;plinear-brute&rdquo;, &ldquo;plinear-random&rdquo;),
+trace = FALSE, weights, &hellip;, all = FALSE)</p>
+
+<p>后来又发现了minpack.lm包，包内的nlsLM()函数采用Levenberg-Marquardts算法，居然一次成功。</p>
+
+<p>Standard &lsquo;nls&rsquo; framework that uses &lsquo;nls.lm&rsquo; for fitting
+Description
+nlsLM is a modified version of nls that uses nls.lm for fitting. Since an object of class &lsquo;nls&rsquo; is returned, all generic functions such as anova, coef, confint, deviance, df.residual, fitted, formula, logLik, predict, print, profile, residuals, summary, update, vcov and weights are applicable.</p>
+
+<p>Usage
+nlsLM(formula, data = parent.frame(), start, jac = NULL,
+algorithm = &ldquo;LM&rdquo;, control = nls.lm.control(),
+lower = NULL, upper = NULL, trace = FALSE, subset,
+weights, na.action, model = FALSE, &hellip;)</p>
+
+<p>另一处则是各种Parameter的标记。为了得到类似K<sub>m</sub> = 1.11 ± 0.11 µM一开始的试验环节，我简单粗暴地使用手动重复的annotation，效果拔群</p>
+
+<p>[code language=&ldquo;r&rdquo;]
+results.comp &lt;- summary(comp)$parameters[,1:2]
+annotation.comp &lt;- annotation_custom(grobTree(
+ textGrob(bquote(paste(K[m] == .(format(results.comp[1,1], digits = 3)) %+-% .(format(results.comp[1,2], digits = 2)) ,&rsquo; &lsquo;,mu,M)), x=0.5, y=0.2, hjust=0),
+ textGrob(bquote(paste(K[is] == .(format(results.comp[2,1], digits = 3)) %+-% .(format(results.comp[2,2], digits = 2)) ,&rsquo; &lsquo;,mu,M)), x=0.5, y=0.15, hjust=0),
+ textGrob(bquote(paste(V[max] == .(format(results.comp[3,1], digits = 3)) %+-% .(format(results.comp[3,2], digits = 2)) ,&rsquo; &lsquo;,mu,M/s)), x=0.5, y=0.1, hjust=0),
+ gp=gpar(col=&ldquo;black&rdquo;, fontsize=13, fontface=&ldquo;italic&rdquo;))) # Results</p>
+
+<p>results.noncomp &lt;- summary(noncomp)$parameters[,1:2]
+annotation.noncomp &lt;- annotation_custom(grobTree(
+ textGrob(bquote(paste(K[m] == .(format(results.noncomp[1,1], digits = 3)) %+-% .(format(results.noncomp[1,2], digits = 2)) ,&rsquo; &lsquo;,mu,M)), x=0.5, y=0.25, hjust=0),
+ textGrob(bquote(paste(K[is] == .(format(results.noncomp[2,1], digits = 3)) %+-% .(format(results.noncomp[2,2], digits = 2)) ,&rsquo; &lsquo;,mu,M)), x=0.5, y=0.2, hjust=0),
+ textGrob(bquote(paste(K[ii] == .(format(results.noncomp[3,1], digits = 3)) %+-% .(format(results.noncomp[3,2], digits = 2)) ,&rsquo; &lsquo;,mu,M)), x=0.5, y=0.15, hjust=0),
+ textGrob(bquote(paste(V[max] == .(format(results.noncomp[4,1], digits = 3)) %+-% .(format(results.noncomp[4,2], digits = 2)) ,&rsquo; &lsquo;,mu,M/s)), x=0.5, y=0.1, hjust=0),
+ gp=gpar(col=&ldquo;black&rdquo;, fontsize=13, fontface=&ldquo;italic&rdquo;))) # Results</p>
+
+<p>results.uncomp &lt;- summary(uncomp)$parameters[,1:2]
+ textGrob(bquote(paste(K[m] == .(format(results.uncomp[1,1], digits = 3)) %+-% .(format(results.uncomp[1,2], digits = 2)) ,&rsquo; &lsquo;,mu,M)), x=0.5, y=0.2, hjust=0),
+ textGrob(bquote(paste(K[ii] == .(format(results.uncomp[2,1], digits = 3)) %+-% .(format(results.uncomp[2,2], digits = 2)) ,&rsquo; &lsquo;,mu,M)), x=0.5, y=0.15, hjust=0),
+ textGrob(bquote(paste(V[max] == .(format(results.uncomp[3,1], digits = 3)) %+-% .(format(results.uncomp[3,2], digits = 2)) ,&rsquo; &lsquo;,mu,M/s)), x=0.5, y=0.1, hjust=0),
+ gp=gpar(col=&ldquo;black&rdquo;, fontsize=13, fontface=&ldquo;italic&rdquo;))) # Results
+[/code]</p>
+
+<p>但是，当我想将Km等作为变量调用，这个方法就一直报错。后来研究了quote, bquote, expression, substitue等得用法后，发现可以将简单地表达式以字符串形式存储在变量内，再通过parse调用变量，呼出表达式，再使用bquote可以直接进行变换，简化后的代码如下：</p>
+
+<p>[code language=&ldquo;r&rdquo;]
+paraMatrix &lt;- data.frame(para = c(&ldquo;K[m]&ldquo;, &ldquo;K[i]&ldquo;, &ldquo;K[ii]&ldquo;, &ldquo;K[is]&ldquo;, &ldquo;V[max]&ldquo;), unit = c(&ldquo;mu*M&rdquo;, &ldquo;mu*M&rdquo;, &ldquo;mu*M&rdquo;, &ldquo;mu*M&rdquo;, &ldquo;mu*M/s&rdquo;), row.names = c(&ldquo;Km&rdquo;, &ldquo;Ki&rdquo;, &ldquo;Kii&rdquo;, &ldquo;Kis&rdquo;, &ldquo;Vmax&rdquo;))
+results &lt;- summary(fittingModel)$parameters[,1:2]
+numPara &lt;- length(results[,1])</p>
+
+<p>for (j in 1:numPara)
+ {
+ t &lt;- row.names(results)[j]
+ para &lt;- parse(text = as.character(paraMatrix[t,1]))[[1]]
+ unit &lt;- parse(text = as.character(paraMatrix[t,2]))[[1]]
+ p &lt;- p + annotation_custom(grobTree(textGrob(bquote(.(para) == .(format(results[j,1], digits = 3)) %+-% .(format(results[j,2], digits = 2)) ~ .(unit)), x=0.5, y=0.05 * (numPara+2-j), hjust=0), gp=gpar(col=&ldquo;black&rdquo;, fontsize=13, fontface=&ldquo;italic&rdquo;)))
+ }
+[/code]</p>
+
+<p>在fail &amp; trial 的过程中，我发现R在数据拟合方面，模型还是很多的。但是在一些处理细节方面，则有一点混乱。比如bquote和substitute两个函数，虽然调用方式有一些区别，但效果基本上是一样的。究其愿意，大抵是bquote是LISP的遗留物云云。如果能统一一下就更好了。不过我现在对bquote等的适用场景还有一点茫然，改天完全搞明白了再予总结。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">ziyunch</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2015-09-14
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="../../../images/wechatpay.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="../../../tags/bquote/">bquote</a>
+          <a href="../../../tags/nls/">nls</a>
+          <a href="../../../tags/nlslm/">nlsLM</a>
+          <a href="../../../tags/r/">R</a>
+          <a href="../../../tags/%E6%8A%80%E6%9C%AF/">技术</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="../../../2015/09/395.html/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[游记]小记纽约五日游</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="../../../2015/09/393.html/">
+            <span class="next-text nav-default">[真·剁手指南]Wüsthof的三德刀及选刀要点总结</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'kyXPptAG0HNFlxVP6PKtMG79-gzGzoHsz',
+        appKey: 'odsVXiu7qNwwQypz99atviXR',
+        notify:  false , 
+        verify:  false , 
+        avatar:'mm', 
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/ziyunch" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ziyunch" class="iconfont icon-github" title="github"></a>
+      <a href="http://weibo.com/ziyunc" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://douban.com/people/ziyunch" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ziyunch</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../../../dist/even.26188efa.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-86469737-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

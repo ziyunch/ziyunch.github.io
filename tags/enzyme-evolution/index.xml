@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>enzyme evolution on Blind with Science</title>
+    <link>http://blindwith.science/tags/enzyme-evolution/</link>
+    <description>Recent content in enzyme evolution on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Sat, 04 Feb 2017 13:57:03 +0000</lastBuildDate>
+    
+	<atom:link href="http://blindwith.science/tags/enzyme-evolution/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Enzyme Evolution and Vim</title>
+      <link>http://blindwith.science/2017/02/434.html/</link>
+      <pubDate>Sat, 04 Feb 2017 13:57:03 +0000</pubDate>
+      
+      <guid>http://blindwith.science/2017/02/434.html/</guid>
+      <description>&lt;h1 id=&#34;enzyme-evolution&#34;&gt;Enzyme evolution&lt;/h1&gt;
+
+&lt;p&gt;我一直都对比较大的蓝图感兴趣，如果当时有意识地去选择，自己可能就会去做Bioinformatics相关的研究了。（为什么不去当码农。。。）可能因为这个的缘故，我对enzyme evolution也一直有那么点兴趣。&lt;/p&gt;
+
+&lt;p&gt;去年 Doug sabbatical，于是他们组有半年与我们组一起开联合组会，我也得知这一与我们同幢楼的实验室具体是做的什么。今年年初的时候学校搞了个 &lt;a href=&#34;https://kb.brandeis.edu/display/SCI/MiniCourse+in+Statistics&#34;&gt;minicourse in statistics&lt;/a&gt;，Doug也在其中开了一门 *Bayesian Methods for Analysis of Protein Evolution*。一眼督见后面两个单词的我想着正和朕意，便报名上课。课程很短，除去一天基本上是&lt;del&gt;废话&lt;/del&gt;基础介绍的Linux/R的入门课外，正式课程只有三天。而在其中Doug讲了两天的概率（我还没带纸笔，只能用Emacs来记笔记，简直头大）。不过第三天的实战(BLAST+ClustalOmega+Phyml+BAli-Phy)确实算带我入了门。不得不说一个搞生化研究的老师比一个搞计算机的老师在演示BLAST时，关注的重点要实用许多。&lt;/p&gt;
+
+&lt;p&gt;不过虽然有上手操作，这毕竟还是课程，而我缺少课堂学习的能力，所以还需实例演示。也是凑巧，Doug昨天讲了个seminar，正是关于他如何用evolutionary手段玩弄LDH和MDH两种酶的，听完之后基本上明白了实战的思路，回家又顶着高烧扫了一遍他的文章们，大致也摸出了基本的套路：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;他们组自己关于LDH/MDH的几篇文章：和seminar上讲的差不多，但是有具体的实验方法说明呀；&lt;/li&gt;
+&lt;li&gt;他的几篇理论性文章：跟他上课的内容互为补充；&lt;/li&gt;
+&lt;li&gt;他和其他组合作的文章：和Miller爷爷合作的ion channel的，和Oprian合作的rhodopsin的，和Kern合作的thermoadaptation的，和Garrity合作的果蝇thermosensor的。只想吐槽好多Nature Science啊。。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;然后我就跃跃欲试了。然后就遇到了fasta文件预处理的问题，然后不折腾不死星人便想着，刚好最近用过几次Vim，要不就用它来预处理吧。于是文章的第二部分诞生了。&lt;/p&gt;
+
+&lt;h1 id=&#34;vim中查找与替换&#34;&gt;Vim中查找与替换&lt;/h1&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
