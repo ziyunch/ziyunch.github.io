@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Thu, 04 Jul 2019 12:58:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 30 Aug 2019 11:14:00 -0400</lastBuildDate>
     
 	<atom:link href="http://blindwith.science/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hacking the Data Transformation Interview</title>
+      <link>http://blindwith.science/2019/08/447.html/</link>
+      <pubDate>Fri, 30 Aug 2019 11:14:00 -0400</pubDate>
+      
+      <guid>http://blindwith.science/2019/08/447.html/</guid>
+      <description>&lt;p&gt;I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Emacs 记帐</title>

@@ -73,14 +73,14 @@
     <item>
       <title>Emacs 中文环境配置</title>
       <link>http://blindwith.science/2019/07/443.html/</link>
-      <pubDate>Wed, 03 Jul 2019 13:44:05 +0000</pubDate>
+      <pubDate>Wed, 03 Jul 2019 13:44:00 -0400</pubDate>
       
       <guid>http://blindwith.science/2019/07/443.html/</guid>
-      <description>&lt;p&gt;使用 Emacs 三年多了，当时受了 &lt;a href=&#34;https://github.com/redguardtoo/mastering-emacs-in-one-year-guide&#34;&gt;一年成为 Emacs 高手&lt;/a&gt; 的蛊惑，且贪图便利，使用了 &lt;a href=&#34;https://github.com/purcell/emacs.d&#34;&gt;Purcell 的配置&lt;/a&gt;。正如 Purcell 所说，此配置相当 reasonable，用来入门确实让我受益匪浅，少走了很多弯路。三年使用下来，我需要添加的插件只有 &lt;code&gt;org-ref&lt;/code&gt; 和 &lt;code&gt;ob-smiles&lt;/code&gt;，配置更新也仅须 &lt;code&gt;git pull&lt;/code&gt; 外加 &lt;code&gt;M-x package-list-packages U x&lt;/code&gt; 即可，非常方便。&lt;/p&gt;
+      <description>&lt;p&gt;使用 Emacs 三年多了，当时受了 &lt;a href=&#34;https://github.com/redguardtoo/mastering-emacs-in-one-year-guide&#34;&gt;一年成为 Emacs 高手&lt;/a&gt; 的蛊惑，且贪图便利，使用了 &lt;a href=&#34;https://github.com/purcell/emacs.d&#34;&gt;Purcell 的配置&lt;/a&gt;。正如 Purcell 所说，此配置相当 reasonable，用来入门确实让我受益匪浅，少走了很多弯路。三年使用下来，我需要添加的插件只有 &lt;code&gt;org-ref&lt;/code&gt; 和 &lt;code&gt;ob-smiles&lt;/code&gt; ，配置更新也仅须 &lt;code&gt;git pull&lt;/code&gt; 外加 &lt;code&gt;M-x package-list-packages U x&lt;/code&gt; 即可，非常方便。&lt;/p&gt;
 
 &lt;p&gt;然而过去三年来，我主要是使用 Emacs 中的 org-mode 来记 Science 与 Tech 方面笔记，基于 Latex 的长文章 / 代码我更喜欢用 Atoms + Vim-mode 来写，基于 Markdown 的博客则用 MWeb 来写，中文笔记喜欢使用 Bears，最后却还是回到了苹果自带的免费 Notes。其他零零碎碎的场景则使用更为零碎的 app，餐馆用 DayGram + Workflowy，记账用随手记。非常不统一。&lt;/p&gt;
 
-&lt;p&gt;也就是说，我并不是一个 “running my life with Emacs” 的重症者，Purcell 配置的 Emacs 中也有大量我用不到，或者需要使用却不甚了解的插件。所以失业在家这个契机恰好也是让我重新审视 Emacs，看看我能否最大化地使用 Emacs。&lt;/p&gt;
+&lt;p&gt;也就是说，我并不是一个“running my life with Emacs”的重症者，Purcell 配置的 Emacs 中也有大量我用不到，或者需要使用却不甚了解的插件。所以失业在家这个契机恰好也是让我重新审视 Emacs，看看我能否最大化地使用 Emacs。&lt;/p&gt;
 
 &lt;p&gt;对我而言，使用 Atoms 来写代码与 Latex，是由于我对使用 Emacs 调试还不甚熟练。所以这几天我花了一点时间重新阅读了 Emacs 手册。&lt;/p&gt;
 
