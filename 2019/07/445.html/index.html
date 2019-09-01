@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="ziyunch" /><meta name="description" content="This configuration:
- Optimized for simplified Chinese; Implement 朙月拼音 luna-pinyin, 微软双拼 double-pinyin-mspy and 地球拼音 terra-pinyin with 20&#43; dictionaries including symbols and emoji; Feature 地球双拼 terra-double-pinyin-mspy, a double pinyin input method supporting tone marks; Use 地球双拼 terra-double-pinyin-mspy to reverse lookup 吴语（苏州话）=wugniu_soutseu= with tone marks, toggled by `; Use ASCII mode for several applications. " /><meta name="keywords" content="ziyunch, blog" />
+ Optimized for simplified Chinese; Implement 朙月拼音 luna-pinyin, 微软双拼 double-pinyin-mspy and 地球拼音 terra-pinyin with 20&#43; dictionaries including symbols and emoji; Feature 地球双拼 terra-double-pinyin-mspy, a double pinyin input method supporting tone marks; Use 地球双拼 terra-double-pinyin-mspy to reverse lookup 吴语（苏州话） wugniu_soutseu with tone marks, toggled by `; Use ASCII mode for several applications. " /><meta name="keywords" content="ziyunch, blog" />
 
 
 
@@ -50,13 +50,13 @@ emoji;
 Feature 地球双拼 terra-double-pinyin-mspy, a double pinyin input
 method supporting tone marks;
 Use 地球双拼 terra-double-pinyin-mspy to reverse lookup
-吴语（苏州话）=wugniu_soutseu= with tone marks, toggled by `;
+吴语（苏州话） wugniu_soutseu with tone marks, toggled by `;
 Use ASCII mode for several applications.
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blindwith.science/2019/07/445.html/" />
 <meta property="article:published_time" content="2019-07-20T20:58:00-04:00" />
-<meta property="article:modified_time" content="2019-08-31T21:48:22-04:00" />
+<meta property="article:modified_time" content="2019-09-01T13:49:04-04:00" />
 <meta itemprop="name" content="鼠须管傻瓜化配置">
 <meta itemprop="description" content="This configuration:
 
@@ -68,14 +68,14 @@ emoji;
 Feature 地球双拼 terra-double-pinyin-mspy, a double pinyin input
 method supporting tone marks;
 Use 地球双拼 terra-double-pinyin-mspy to reverse lookup
-吴语（苏州话）=wugniu_soutseu= with tone marks, toggled by `;
+吴语（苏州话） wugniu_soutseu with tone marks, toggled by `;
 Use ASCII mode for several applications.
 ">
 
 
 <meta itemprop="datePublished" content="2019-07-20T20:58:00-04:00" />
-<meta itemprop="dateModified" content="2019-08-31T21:48:22-04:00" />
-<meta itemprop="wordCount" content="566">
+<meta itemprop="dateModified" content="2019-09-01T13:49:04-04:00" />
+<meta itemprop="wordCount" content="535">
 
 
 
@@ -92,7 +92,7 @@ emoji;
 Feature 地球双拼 terra-double-pinyin-mspy, a double pinyin input
 method supporting tone marks;
 Use 地球双拼 terra-double-pinyin-mspy to reverse lookup
-吴语（苏州话）=wugniu_soutseu= with tone marks, toggled by `;
+吴语（苏州话） wugniu_soutseu with tone marks, toggled by `;
 Use ASCII mode for several applications.
 "/>
 
@@ -167,7 +167,7 @@ Use ASCII mode for several applications.
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 566 字 </span>
+          <span class="more-meta"> 约 535 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -209,7 +209,7 @@ emoji;</li>
 <li>Feature 地球双拼 <code>terra-double-pinyin-mspy</code>, a double pinyin input
 method supporting tone marks;</li>
 <li>Use 地球双拼 <code>terra-double-pinyin-mspy</code> to reverse lookup
-吴语（苏州话）=wugniu_soutseu= with tone marks, toggled by <code>`</code>;</li>
+吴语（苏州话） <code>wugniu_soutseu</code> with tone marks, toggled by <code>`</code>;</li>
 <li>Use ASCII mode for several applications.</li>
 </ul>
 
@@ -253,8 +253,7 @@ curl -fsSL https://git.io/rime-install <span class="p">|</span> bash</code></pre
 bash rime-install :preset double-pinyin emoji NGLI/rime-wugniu_soutseu</code></pre></td></tr></table>
 </div>
 </div>
-<p>/
-Supported input methods ℞/</p>
+<p><em>Supported input methods ℞</em></p>
 
 <ul>
 <li><strong>Essentials:</strong> <a href="https://github.com/rime/rime-prelude">prelude</a> 基础配置 / <a href="https://github.com/rime/rime-essay">essay</a> 八股文</li>
@@ -298,7 +297,7 @@ git pull origin master</code></pre></td></tr></table>
 
 <p>Press <code>Control</code> + <code>Option</code> + <code>`</code> to deploy current configuration.</p>
 
-<p>Press <code>Control=+=`</code> to select input method.</p>
+<p>Press <code>Control</code> + <code>`</code> to select input method.</p>
 
 <h2 id="updates">Updates</h2>
 
@@ -377,7 +376,7 @@ out input methods no longer needed:</li>
 </div>
 <ul>
 <li>Delete <code>wugniu_soutseu.custom.yaml</code> to use the default 朙月拼音
-<code>luna_pinyin</code> reverse lookup 吴语（苏州话）=wugniu_soutseu=.</li>
+<code>luna_pinyin</code> reverse lookup 吴语（苏州话） <code>wugniu_soutseu</code>.</li>
 </ul>
     </div>
 
@@ -389,7 +388,7 @@ out input methods no longer needed:</li>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2019-08-31
+        2019-09-01
         
     </span>
   </p>

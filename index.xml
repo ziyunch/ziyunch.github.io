@@ -79,7 +79,7 @@ emoji;&lt;/li&gt;
 &lt;li&gt;Feature 地球双拼 &lt;code&gt;terra-double-pinyin-mspy&lt;/code&gt;, a double pinyin input
 method supporting tone marks;&lt;/li&gt;
 &lt;li&gt;Use 地球双拼 &lt;code&gt;terra-double-pinyin-mspy&lt;/code&gt; to reverse lookup
-吴语（苏州话）=wugniu_soutseu= with tone marks, toggled by &lt;code&gt;`&lt;/code&gt;;&lt;/li&gt;
+吴语（苏州话） &lt;code&gt;wugniu_soutseu&lt;/code&gt; with tone marks, toggled by &lt;code&gt;`&lt;/code&gt;;&lt;/li&gt;
 &lt;li&gt;Use ASCII mode for several applications.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
