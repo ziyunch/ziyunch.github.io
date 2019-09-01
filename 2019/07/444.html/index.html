@@ -89,7 +89,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blindwith.science/2019/07/444.html/" />
 <meta property="article:published_time" content="2019-07-04T12:58:00-04:00" />
-<meta property="article:modified_time" content="2019-08-27T18:23:21-04:00" />
+<meta property="article:modified_time" content="2019-09-01T16:42:42-04:00" />
 <meta itemprop="name" content="Emacs 记帐">
 <meta itemprop="description" content="昨天搞定 Emacs 的中文环境，今天想着好久没记帐了，随手记总是很花时间，干脆一鼓作气，将记帐一起搬过来。
 
@@ -131,8 +131,8 @@
 
 
 <meta itemprop="datePublished" content="2019-07-04T12:58:00-04:00" />
-<meta itemprop="dateModified" content="2019-08-27T18:23:21-04:00" />
-<meta itemprop="wordCount" content="3372">
+<meta itemprop="dateModified" content="2019-09-01T16:42:42-04:00" />
+<meta itemprop="wordCount" content="3348">
 
 
 
@@ -248,7 +248,7 @@
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 3372 字 </span>
+          <span class="more-meta"> 约 3348 字 </span>
           <span class="more-meta"> 预计阅读 7 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -325,11 +325,11 @@
 <p>有了之前的记录，就可以着手选择一款好用的记帐软件了。虽然有可以连接 postgresql 的记帐软件 gnucash，但我还是想用 Emacs 来进行记录操作。网上一搜，有一个 <a href="https://plaintextaccounting.org/">Plain Text Accounting</a> 网站做了详尽的整合。一路看下来，虽然 Ledger 是老前辈，可是 Beancount 的前端 Fava 效果实在好看，有这么一个轮子，为何不用呢？同时还搜到了一位中文博主 wzyboy 的三年的使用经验（<a href="https://wzyboy.im/post/1063.html">Beancount &mdash;&mdash; 命令行复式簿记</a>，<a href="https://wzyboy.im/post/1317.html">使用 Beancount 记录证券投资</a>），感觉非常不错，遂选定 Beancount。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">$ pip install beancount
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ pip install beancount
 $ pip install fava</code></pre></td></tr></table>
 </div>
 </div>
@@ -386,7 +386,7 @@ include &#34;points/bank-a.bean&#34; ; 记录里程、积分、礼品卡、预�
 <p>随手记帐本导出后是一个 EXCEL 文件，含有交易种类、类别、子类、帐户 1、帐户 2、花费、人员、商家、事件、日期、详细这些列，所以我的导入思路是：</p>
 
 <ul>
-<li><p>建立两个字典=account_dict=与=item_dict=，分别用于转换帐户1/2与子类；</p></li>
+<li><p>建立两个字典 <code>account_dict</code> 与 <code>item_dict</code> ，分别用于转换帐户1/2与子类；</p></li>
 
 <li><p>通过不同交易种类判断交易条目的正负号：</p>
 
@@ -527,7 +527,7 @@ include &#34;points/bank-a.bean&#34; ; 记录里程、积分、礼品卡、预�
 
 <h2 id="快捷记账">快捷记账</h2>
 
-<p>我写了一个简单的 <code>org-capture-templates</code> ，这样就可以通过 <code>C-c c b</code> 来进行快捷记账。</p>
+<p>我写了一个简单的 <code>org-capture-templates</code> ，这样就可以通过 <kbd>C-c c-b</kbd> 来进行快捷记账。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="lnt">1
@@ -565,7 +565,7 @@ include &#34;points/bank-a.bean&#34; ; 记录里程、积分、礼品卡、预�
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2019-08-27
+        2019-09-01
         
     </span>
   </p>

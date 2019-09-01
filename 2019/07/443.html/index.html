@@ -59,7 +59,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blindwith.science/2019/07/443.html/" />
 <meta property="article:published_time" content="2019-07-03T13:44:00-04:00" />
-<meta property="article:modified_time" content="2019-08-29T20:41:53-04:00" />
+<meta property="article:modified_time" content="2019-09-01T16:42:39-04:00" />
 <meta itemprop="name" content="Emacs 中文环境配置">
 <meta itemprop="description" content="使用 Emacs 三年多了，当时受了 一年成为 Emacs 高手 的蛊惑，且贪图便利，使用了 Purcell 的配置。正如 Purcell 所说，此配置相当 reasonable，用来入门确实让我受益匪浅，少走了很多弯路。三年使用下来，我需要添加的插件只有 org-ref 和 ob-smiles ，配置更新也仅须 git pull 外加 M-x package-list-packages U x 即可，非常方便。
 
@@ -75,7 +75,7 @@
 
 
 <meta itemprop="datePublished" content="2019-07-03T13:44:00-04:00" />
-<meta itemprop="dateModified" content="2019-08-29T20:41:53-04:00" />
+<meta itemprop="dateModified" content="2019-09-01T16:42:39-04:00" />
 <meta itemprop="wordCount" content="1561">
 
 
@@ -187,7 +187,7 @@
   </div>
 </div>
     <div class="post-content">
-      <p>使用 Emacs 三年多了，当时受了 <a href="https://github.com/redguardtoo/mastering-emacs-in-one-year-guide">一年成为 Emacs 高手</a> 的蛊惑，且贪图便利，使用了 <a href="https://github.com/purcell/emacs.d">Purcell 的配置</a>。正如 Purcell 所说，此配置相当 reasonable，用来入门确实让我受益匪浅，少走了很多弯路。三年使用下来，我需要添加的插件只有 <code>org-ref</code> 和 <code>ob-smiles</code> ，配置更新也仅须 <code>git pull</code> 外加 <code>M-x package-list-packages U x</code> 即可，非常方便。</p>
+      <p>使用 Emacs 三年多了，当时受了 <a href="https://github.com/redguardtoo/mastering-emacs-in-one-year-guide">一年成为 Emacs 高手</a> 的蛊惑，且贪图便利，使用了 <a href="https://github.com/purcell/emacs.d">Purcell 的配置</a>。正如 Purcell 所说，此配置相当 reasonable，用来入门确实让我受益匪浅，少走了很多弯路。三年使用下来，我需要添加的插件只有 <code>org-ref</code> 和 <code>ob-smiles</code> ，配置更新也仅须 <code>git pull</code> 外加 <kbd>M-x package-list-packages U x</kbd> 即可，非常方便。</p>
 
 <p>然而过去三年来，我主要是使用 Emacs 中的 org-mode 来记 Science 与 Tech 方面笔记，基于 Latex 的长文章 / 代码我更喜欢用 Atoms + Vim-mode 来写，基于 Markdown 的博客则用 MWeb 来写，中文笔记喜欢使用 Bears，最后却还是回到了苹果自带的免费 Notes。其他零零碎碎的场景则使用更为零碎的 app，餐馆用 DayGram + Workflowy，记账用随手记。非常不统一。</p>
 
@@ -201,9 +201,9 @@
 
 <h2 id="emacs-中文输入法">Emacs 中文输入法</h2>
 
-<p>Emacs 窗口左下角显示的是 character set 与 editing state，其中 character set 默认值为 U，即没有 input-mode 且使用 unicode 的 coding system，通过 <code>C-\</code> ，可以非常方便地设置输入法并进行切换。</p>
+<p>Emacs 窗口左下角显示的是 character set 与 editing state，其中 character set 默认值为 U，即没有 input-mode 且使用 unicode 的 coding system，通过 <kbd>C-\</kbd> ，可以非常方便地设置输入法并进行切换。</p>
 
-<p>Emacs 有一些自带的中文输入法，比如拼音（chinese-py）、自然码（chinese-ziranma），还有一些四声（chinese-sisheng）、英汉（chinese-ecdict）等输入法。我将简体编码的一些输入法列于下表，详见 <code>leim-lisp.el</code> （可通过 <code>M-x find-library</code> 迅速查看）。</p>
+<p>Emacs 有一些自带的中文输入法，比如拼音（chinese-py）、自然码（chinese-ziranma），还有一些四声（chinese-sisheng）、英汉（chinese-ecdict）等输入法。我将简体编码的一些输入法列于下表，详见 <code>leim-lisp.el</code> （可通过 <kbd>M-x find-library</kbd> 迅速查看）。</p>
 
 <table>
 <thead>
@@ -338,7 +338,7 @@
     <span class="ss">:size</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">chinese-font-scale</span> <span class="nv">english-font-size</span><span class="p">))</span></code></pre></td></tr></table>
 </div>
 </div>
-<p>然而当我用 <code>C-x C-+</code> 动态调整字体大小时，发现只有英文字体会缩放，中文则仍然蠢蠢地处于初始大小。查手册得可通过 <code>face-font-rescale-alist</code> 来设定特定字体缩放值。简单来说就是这样：</p>
+<p>然而当我用 <kbd>C-x C-+</kbd> 动态调整字体大小时，发现只有英文字体会缩放，中文则仍然蠢蠢地处于初始大小。查手册得可通过 <code>face-font-rescale-alist</code> 来设定特定字体缩放值。简单来说就是这样：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="lnt">1
@@ -483,7 +483,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2019-08-29
+        2019-09-01
         
     </span>
   </p>

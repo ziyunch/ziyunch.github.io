@@ -56,7 +56,7 @@ Use ASCII mode for several applications.
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blindwith.science/2019/07/445.html/" />
 <meta property="article:published_time" content="2019-07-20T20:58:00-04:00" />
-<meta property="article:modified_time" content="2019-09-01T13:49:04-04:00" />
+<meta property="article:modified_time" content="2019-09-01T16:42:44-04:00" />
 <meta itemprop="name" content="鼠须管傻瓜化配置">
 <meta itemprop="description" content="This configuration:
 
@@ -74,8 +74,8 @@ Use ASCII mode for several applications.
 
 
 <meta itemprop="datePublished" content="2019-07-20T20:58:00-04:00" />
-<meta itemprop="dateModified" content="2019-09-01T13:49:04-04:00" />
-<meta itemprop="wordCount" content="535">
+<meta itemprop="dateModified" content="2019-09-01T16:42:44-04:00" />
+<meta itemprop="wordCount" content="730">
 
 
 
@@ -167,7 +167,7 @@ Use ASCII mode for several applications.
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 535 字 </span>
+          <span class="more-meta"> 约 730 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -234,22 +234,22 @@ method supporting tone marks;</li>
 <p>Install <em>plum</em>, the configuration manager for Rime input method engine:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~/Library/Rime
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ~/Library/Rime
 curl -fsSL https://git.io/rime-install <span class="p">|</span> bash</code></pre></td></tr></table>
 </div>
 </div>
 <p>Then install packages:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> plum
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> plum
 bash rime-install :preset double-pinyin emoji NGLI/rime-wugniu_soutseu</code></pre></td></tr></table>
 </div>
 </div>
@@ -270,67 +270,67 @@ bash rime-install :preset double-pinyin emoji NGLI/rime-wugniu_soutseu</code></p
 <p>To install, clone this repo to <code>~/Library/Rime</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~/Library/Rime
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ~/Library/Rime
 git init
-<span class="nb">echo</span> -e <span class="s2">&#34;/*\n\!/README.md\n\!/dict\n\!/*.custom.yaml\n\!/*.extended.dict.yaml\n\!/terra_double_pinyin_mspy.*\n!/*pyim*&#34;</span> &gt;&gt; .gitignore
+<span class="nb">echo</span> -e <span class="s2">&#34;/*\n\!/README.org\n\!/dict\n\!/*.custom.yaml\n\!/*.extended.dict.yaml\n\!/terra_double_pinyin_mspy.*\n!/*pyim*&#34;</span> &gt;&gt; .gitignore
 git remote add origin https://github.com/ziyunch/Rime.git
 git pull origin master</code></pre></td></tr></table>
 </div>
 </div>
-<p>2019-08-31</p>
+<p>Update: 2019-08-31</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ln -s /Library/Input<span class="se">\ </span>Methods/Squirrel.app/Contents/SharedSupport/opencc/* ./opencc/</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-shell" data-lang="shell">ln -s /Library/Input<span class="se">\ </span>Methods/Squirrel.app/Contents/SharedSupport/opencc/* ./opencc/</code></pre></td></tr></table>
 </div>
 </div>
 <h2 id="deploy">Deploy</h2>
 
-<p>Press <code>Control</code> + <code>Option</code> + <code>`</code> to deploy current configuration.</p>
+<p>Press <kbd>Control + Option + `</kbd> to deploy current configuration.</p>
 
-<p>Press <code>Control</code> + <code>`</code> to select input method.</p>
+<p>Press <kbd>Control + `</kbd> to select input method.</p>
 
 <h2 id="updates">Updates</h2>
 
 <p>To update <em>plum</em> itself, run:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~/Library/Rime/plum
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ~/Library/Rime/plum
 bash rime-install plum</code></pre></td></tr></table>
 </div>
 </div>
 <p>To update the <em>plum</em> packages, run:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~/Library/Rime/plum
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ~/Library/Rime/plum
 bash rime-install :preset double-pinyin emoji NGLI/rime-wugniu_soutseu</code></pre></td></tr></table>
 </div>
 </div>
 <p>To update the config, run:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~/Library/Rime
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ~/Library/Rime
 git pull origin master</code></pre></td></tr></table>
 </div>
 </div>
@@ -344,7 +344,7 @@ out input methods no longer needed:</li>
 <!--listend-->
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text"><span class="lnt"> 1
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -359,19 +359,19 @@ out input methods no longer needed:</li>
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">schema_list:
-  - schema: luna_pinyin          # 朙月拼音
-  - schema: terra_pinyin         # 地球拼音 dì qiú pīn yīn
-  - schema: terra_double_pinyin_mspy # 地球双拼
-  - schema: double_pinyin_mspy   # 微软双拼
-  - schema: double_pinyin        # 自然码双拼
-  - schema: double_pinyin_abc    # 智能ABC双拼
-  - schema: double_pinyin_flypy  # 小鹤双拼
-  - schema: wugniu_soutseu       # 吴语（苏州话）
-  - schema: stroke               # 笔画
-  - schema: cangjie              # 仓颉输入法
-  - schema: bopomofo             # 注音
-  - schema: emoji                # 颜文字</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-yaml" data-lang="yaml">schema_list<span class="p">:</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>luna_pinyin<span class="w">          </span><span class="c"># 朙月拼音</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>terra_pinyin<span class="w">         </span><span class="c"># 地球拼音 dì qiú pīn yīn</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>terra_double_pinyin_mspy<span class="w"> </span><span class="c"># 地球双拼</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>double_pinyin_mspy<span class="w">   </span><span class="c"># 微软双拼</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>double_pinyin<span class="w">        </span><span class="c"># 自然码双拼</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>double_pinyin_abc<span class="w">    </span><span class="c"># 智能ABC双拼</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>double_pinyin_flypy<span class="w">  </span><span class="c"># 小鹤双拼</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>wugniu_soutseu<span class="w">       </span><span class="c"># 吴语（苏州话）</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>stroke<span class="w">               </span><span class="c"># 笔画</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>cangjie<span class="w">              </span><span class="c"># 仓颉输入法</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>bopomofo<span class="w">             </span><span class="c"># 注音</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>emoji<span class="w">                </span><span class="c"># 颜文字</span></code></pre></td></tr></table>
 </div>
 </div>
 <ul>

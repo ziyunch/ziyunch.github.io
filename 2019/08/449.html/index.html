@@ -44,14 +44,14 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blindwith.science/2019/08/449.html/" />
 <meta property="article:published_time" content="2019-08-31T20:40:00-04:00" />
-<meta property="article:modified_time" content="2019-09-01T15:59:39-04:00" />
+<meta property="article:modified_time" content="2019-09-01T16:42:51-04:00" />
 <meta itemprop="name" content="Mac 版 Emacs 中使用 Rime 输入法打带调双拼">
 <meta itemprop="description" content="由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。">
 
 
 <meta itemprop="datePublished" content="2019-08-31T20:40:00-04:00" />
-<meta itemprop="dateModified" content="2019-09-01T15:59:39-04:00" />
-<meta itemprop="wordCount" content="1105">
+<meta itemprop="dateModified" content="2019-09-01T16:42:51-04:00" />
+<meta itemprop="wordCount" content="1094">
 
 
 
@@ -131,7 +131,7 @@
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 1105 字 </span>
+          <span class="more-meta"> 约 1094 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -162,24 +162,24 @@
 <li><p>首先安装鼠须管，此一节可见 <a href="https://blindwith.science/2019/07/445.html/">鼠须管傻瓜化配置</a>，一句话概括呢就是：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">brew cask install squirrel</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-shell" data-lang="shell">brew cask install squirrel</code></pre></td></tr></table>
 </div>
 </div></li>
 
 <li><p>然后参考<a href="https://manateelazycat.github.io/emacs/2019/07/24/use-rime-in-emacs.html">前人经验</a>，下载 librime 获取源码并从鼠须管中获取编译好的 <code>librime.dylib</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ~
 git clone --recursive https://github.com/rime/librime.git --depth<span class="o">=</span><span class="m">1</span>
 mkdir -p ~/librime/xbuild/lib/Release/
 cp /Library/Input<span class="se">\ </span>Methods/Squirrel.app/Contents/Frameworks/librime.1.dylib ~/librime/xbuild/lib/Release/librime.dylib
@@ -190,36 +190,29 @@ sudo cp /Library/Input<span class="se">\ </span>Methods/Squirrel.app/Contents/Fr
 <li><p>然后下载并编译 liberime，需要提前安装 cmake 库来进行编译：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://gitlab.com/liberime/liberime.git --depth<span class="o">=</span><span class="m">1</span>
+<pre class="chroma"><code class="language-shell" data-lang="shell">git clone https://gitlab.com/liberime/liberime.git --depth<span class="o">=</span><span class="m">1</span>
 <span class="nb">cd</span> ~/liberime
 <span class="nb">export</span> <span class="nv">RIME_PATH</span><span class="o">=</span>~/librime
 make liberime</code></pre></td></tr></table>
 </div>
 </div></li>
 
-<li><p>然后需要在 emacs 中安装 pyim，此一节详见 <a href="https://blindwith.science/2019/07/443.html/">Emacs 中文环境配置</a> ，当然不看也行，毕竟具体设置在本篇中需要推倒重来；</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil">M-x package-install RET pyim RET</code></pre></td></tr></table>
-</div>
-</div></li>
+<li><p>然后需要在 emacs 中安装 pyim，此一节详见 <a href="https://blindwith.science/2019/07/443.html/">Emacs 中文环境配置</a> ，当然不看也行，毕竟具体设置在本篇中需要推倒重来；
+<kbd>M-x package-install RET pyim RET</kbd></p></li>
 
 <li><p>将 <code>liberime.so</code> 动态库存至 pyim 文件夹中：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">cp ~/liberime/buid/liberime.so ~/.emacs.d/pyim/</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-shell" data-lang="shell">cp ~/liberime/buid/liberime.so ~/.emacs.d/pyim/</code></pre></td></tr></table>
 </div>
 </div></li>
 </ol>
@@ -290,10 +283,10 @@ make liberime</code></pre></td></tr></table>
 <li><p>个人库无法显示繁体的原因其实很简单，由于鼠须管默认将 <a href="https://github.com/BYVoid/OpenCC">opencc 开放中文转换库</a> 放在共享库中，所以个人库中并不包含 opencc，这样 build 的时候就不能调用这些转换文件。所以，一行代码搞定。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ln -s /Library/Input<span class="se">\ </span>Methods/Squirrel.app/Contents/SharedSupport/opencc/* ~/Library/Rime/opencc/</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-shell" data-lang="shell">ln -s /Library/Input<span class="se">\ </span>Methods/Squirrel.app/Contents/SharedSupport/opencc/* ~/Library/Rime/opencc/</code></pre></td></tr></table>
 </div>
 </div></li>
 
@@ -374,7 +367,7 @@ make liberime</code></pre></td></tr></table>
 <p>另外，我在 <code>~/.emacs.d/pyim/rime/</code> 文件夹中添加了 pyim 作者推荐的优化配置文件 <code>default.custom.yaml</code> ，详见其 <a href="https://github.com/tumashu/pyim/blob/master/README.md">github</a>：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil"><span class="lnt">1
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -382,12 +375,12 @@ make liberime</code></pre></td></tr></table>
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil">patch:
-  schema_list:
-    - schema: terra_double_pinyin_pyim
-  &#34;menu/page_size&#34;: 50
-  &#34;speller/auto_select&#34;: false
-  &#34;speller/auto_select_unique_candidate&#34;: false</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-yaml" data-lang="yaml">patch<span class="p">:</span><span class="w">
+</span><span class="w">  </span>schema_list<span class="p">:</span><span class="w">
+</span><span class="w">    </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>terra_double_pinyin_pyim<span class="w">
+</span><span class="w">  </span><span class="s2">&#34;menu/page_size&#34;</span><span class="p">:</span><span class="w"> </span><span class="m">50</span><span class="w">
+</span><span class="w">  </span><span class="s2">&#34;speller/auto_select&#34;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="w">  </span><span class="s2">&#34;speller/auto_select_unique_candidate&#34;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
