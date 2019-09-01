@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>博客由 Hexo 迁移至 Hugo - Blind with Science</title>
+  <title>Sleep No More 小结 - Blind with Science</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,9 +16,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ziyunch" /><meta name="description" content=" 本篇博文使用 org-mode 书就，耶！
- 从 2016 将博客迁移至 Hexo&#43;Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。
-" /><meta name="keywords" content="ziyunch, blog" />
+<meta name="author" content="ziyunch" /><meta name="description" content="以下是当年（2017-08-26）周六下午看完五点场写的总结，当时想着要建个微信公众号，就想留着弄个十万加，然而两年了公众号都给销号了也一直没发，就放博客上吧。
+周六五点场，4点40左右到达酒店（McKittrick Hotel1），拿到Ace牌，持此牌可以第一批（大概二十人左右）入场。进入酒店，寄包 ($4)，穿过漆黑走廊以适应灯光晦暗的环境。而后进入酒吧等待酒保带领入场，并获得白色面具以佩戴于面2，进入电梯，开始演出。
+  Figure 1: 根据记忆推算的舞台调度示意图
+ " /><meta name="keywords" content="ziyunch, blog" />
 
 
 
@@ -40,38 +41,56 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="博客由 Hexo 迁移至 Hugo" />
-<meta property="og:description" content="
-本篇博文使用 org-mode 书就，耶！
+<meta property="og:title" content="Sleep No More 小结" />
+<meta property="og:description" content="以下是当年（2017-08-26）周六下午看完五点场写的总结，当时想着要建个微信公众号，就想留着弄个十万加，然而两年了公众号都给销号了也一直没发，就放博客上吧。
+
+周六五点场，4点40左右到达酒店（McKittrick
+Hotel1），拿到Ace牌，持此牌可以第一批（大概二十人左右）入场。进入酒店，寄包
+($4)，穿过漆黑走廊以适应灯光晦暗的环境。而后进入酒吧等待酒保带领入场，并获得白色面具以佩戴于面2，进入电梯，开始演出。
 
 
-从 2016 将博客迁移至 Hexo&#43;Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。" />
+     
+            Figure 1: 根据记忆推算的舞台调度示意图
+        
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blindwith.science/2019/08/446.html/" />
-<meta property="article:published_time" content="2019-08-26T23:49:00-04:00" />
-<meta property="article:modified_time" content="2019-08-27T18:23:22-04:00" />
-<meta itemprop="name" content="博客由 Hexo 迁移至 Hugo">
-<meta itemprop="description" content="
-本篇博文使用 org-mode 书就，耶！
+<meta property="article:published_time" content="2019-08-25T17:04:00-04:00" />
+<meta property="article:modified_time" content="2019-08-31T20:41:19-04:00" />
+<meta itemprop="name" content="Sleep No More 小结">
+<meta itemprop="description" content="以下是当年（2017-08-26）周六下午看完五点场写的总结，当时想着要建个微信公众号，就想留着弄个十万加，然而两年了公众号都给销号了也一直没发，就放博客上吧。
+
+周六五点场，4点40左右到达酒店（McKittrick
+Hotel1），拿到Ace牌，持此牌可以第一批（大概二十人左右）入场。进入酒店，寄包
+($4)，穿过漆黑走廊以适应灯光晦暗的环境。而后进入酒吧等待酒保带领入场，并获得白色面具以佩戴于面2，进入电梯，开始演出。
 
 
-从 2016 将博客迁移至 Hexo&#43;Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。">
+     
+            Figure 1: 根据记忆推算的舞台调度示意图
+        
+">
 
 
-<meta itemprop="datePublished" content="2019-08-26T23:49:00-04:00" />
-<meta itemprop="dateModified" content="2019-08-27T18:23:22-04:00" />
-<meta itemprop="wordCount" content="1017">
+<meta itemprop="datePublished" content="2019-08-25T17:04:00-04:00" />
+<meta itemprop="dateModified" content="2019-08-31T20:41:19-04:00" />
+<meta itemprop="wordCount" content="5864">
 
 
 
-<meta itemprop="keywords" content="Emacs,Hexo,Hugo," />
+<meta itemprop="keywords" content="音乐剧," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="博客由 Hexo 迁移至 Hugo"/>
-<meta name="twitter:description" content="
-本篇博文使用 org-mode 书就，耶！
+<meta name="twitter:title" content="Sleep No More 小结"/>
+<meta name="twitter:description" content="以下是当年（2017-08-26）周六下午看完五点场写的总结，当时想着要建个微信公众号，就想留着弄个十万加，然而两年了公众号都给销号了也一直没发，就放博客上吧。
+
+周六五点场，4点40左右到达酒店（McKittrick
+Hotel1），拿到Ace牌，持此牌可以第一批（大概二十人左右）入场。进入酒店，寄包
+($4)，穿过漆黑走廊以适应灯光晦暗的环境。而后进入酒吧等待酒保带领入场，并获得白色面具以佩戴于面2，进入电梯，开始演出。
 
 
-从 2016 将博客迁移至 Hexo&#43;Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。"/>
+     
+            Figure 1: 根据记忆推算的舞台调度示意图
+        
+"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -137,15 +156,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">博客由 Hexo 迁移至 Hugo</h1>
+      <h1 class="post-title">Sleep No More 小结</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2019-08-26 </span>
+        <span class="post-time"> 2019-08-25 </span>
         <div class="post-category">
-            <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
+            <a href="../../../categories/%E8%A7%82%E5%90%8E%E6%84%9F/"> 观后感 </a>
             </div>
-          <span class="more-meta"> 约 1017 字 </span>
-          <span class="more-meta"> 预计阅读 3 分钟 </span>
+          <span class="more-meta"> 约 5864 字 </span>
+          <span class="more-meta"> 预计阅读 12 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -157,259 +176,233 @@
 <ul>
 <li>
 <ul>
-<li><a href="#安装-hugo-并初始化">安装 Hugo 并初始化</a></li>
-<li><a href="#从-hexo-迁移">从 Hexo 迁移</a></li>
-<li><a href="#生成预览">生成预览</a></li>
-<li><a href="#配合-org-mode-使用更佳">配合 org-mode 使用更佳</a></li>
-<li><a href="#在-github-上发布">在 Github 上发布</a></li>
+<li><a href="#出场人物">出场人物</a></li>
+<li><a href="#舞台设置">舞台设置</a></li>
+<li><a href="#场景调度">场景调度</a></li>
+<li><a href="#我的路线">我的路线</a></li>
 </ul></li>
 </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <blockquote>
-<p>本篇博文使用 org-mode 书就，耶！</p>
+      <p>以下是当年（2017-08-26）周六下午看完五点场写的总结，当时想着要建个微信公众号，就想留着弄个十万加，然而两年了公众号都给销号了也一直没发，就放博客上吧。</p>
+
+<p>周六五点场，4点40左右到达酒店（McKittrick
+Hotel<sup class="footnote-ref" id="fnref:fn-1"><a href="#fn:fn-1">1</a></sup>），拿到Ace牌，持此牌可以第一批（大概二十人左右）入场。进入酒店，寄包
+($4)，穿过漆黑走廊以适应灯光晦暗的环境。而后进入酒吧等待酒保带领入场，并获得白色面具以佩戴于面<sup class="footnote-ref" id="fnref:fn-2"><a href="#fn:fn-2">2</a></sup>，进入电梯，开始演出。</p>
+
+<figure>
+    <img src="../../../ox-hugo/sleepnomore.png"
+         alt="Figure 1: 根据记忆推算的舞台调度示意图"/> <figcaption>
+            <p>Figure 1: 根据记忆推算的舞台调度示意图</p>
+        </figcaption>
+</figure>
+
+
+<h2 id="出场人物">出场人物</h2>
+
+<p>〖The King of Scottland〗 - 国王 (Duncan) - 王子 (Malcom)</p>
+
+<p>〖The Court〗 - 麦克白 (Macbeth)： - 麦克白夫人 (Lady Macbeth) - 班柯
+(Banquo) - 麦克德夫 (Macduff) - 麦克德夫夫人 (Lady Macduff)</p>
+
+<p>〖The McKittrick Hotel〗 - 女仆 (Catherine Campbell) - 门房 (Porter) -
+门童 (The Bell Hop)</p>
+
+<p>〖The Supernatural〗 - 巫神 (Hecate) - 三巫 (Witches)
+（媚巫，素巫，男巫） - 酒保 (The Speakeasy Bartender) - 女子 (Agnes
+Naismith)</p>
+
+<p>〖Gallow Green〗 - 标本师 (Mr. Bargarran, a taxidermist) - 裁缝
+(Mr. Fulton, a tailor)</p>
+
+<p>〖The King James Sanitorium〗 - 男护士 (Nurse Christian Shaw) - 护士长
+(Matron Long) - 护理员 (Orderly)</p>
+
+<h2 id="舞台设置">舞台设置</h2>
+
+<p>LL - 酒店 (The McKittrick Hotel) 〔舞厅 (Ballroom)，宴会厅〕，森林，墓室
+(Crypt)</p>
+
+<p>1 - 酒店 (The McKittrick Hotel) 〔眺台 (Mezzanine)〕，国王行宫，礼拜堂
+(Chapel)</p>
+
+<p>2 - 酒店 (The McKittrick Hotel) 〔大堂 (Lobby)，前台 (Check-in
+desk)，电话亭，更衣室 (Dressing room)，小舞台(Stage)，吧台 (Manderley
+Bar)，餐厅 (Dining Section)〕</p>
+
+<p>3 - 酒店 (The McKittrick Hotel)
+〔麦克白客房（床、步入式玻璃衣橱、浴缸），麦克杜夫客房，中庭
+(Courtyard)〕，墓地 (Cemetery)</p>
+
+<p>4 - 城镇 (Gallow
+Green)〔标本室，裁缝铺，药房（药橱），审讯室，侦探所（办公室，暗房），街道
+(High St)〕地下场所〔夜店 (Cabaret)，酒吧 (Speakeasy)，吧台 (Bar)〕</p>
+
+<p>5 - 疗养院 (The King James Sanitorium)〔病房 (Cots)，办公室，浴室
+(Bathtubs)〕，桦木林迷宫 (Birch Maze)</p>
+
+<p>6 - ？</p>
+
+<h2 id="场景调度">场景调度</h2>
+
+<p>〖更衣〗 0&rsquo;
+「2-更衣室」（麦克白，班柯）：麦克白与班柯战争结束，在更衣室换去血衣。</p>
+
+<p>〖读信〗 0&rsquo; 「3-麦克白卧室」（麦克白夫人）：麦克白夫人</p>
+
+<p>〖预言〗 0&rsquo; <Act 1 Scene III> 「2-吧台」（麦克白，三巫）</p>
+
+<p>〖怂恿〗 5&rsquo; 「3-麦克白卧室」（麦克白，麦克白夫人）</p>
+
+<p>〖班柯〗 5&rsquo; (1 v 1) 「2-更衣室」（班柯）：据说此处有1v1</p>
+
+<p>〖父子〗 5&rsquo;</p>
+
+<p>〖色诱〗 5&rsquo; 「2-餐厅」（麦克白夫人，女仆）</p>
+
+<p>〖舞会〗 10&rsquo; （第一遍从此开始）「LL-舞厅」（麦克白夫人，国王，麦克杜夫夫人，麦克杜夫，王子，班柯，三巫，女仆）：三巫先入场，麦克白夫人随后而至，拽住女仆，令其给麦克杜夫夫人献上药酒。国王、王子、班柯及麦克杜夫携其夫人随后而至。舞会开始，众人交相跳舞，时而交换舞伴。麦克白夫人与国王共舞，时不时望向眺台上的麦克白。国王赠项链与麦克白夫人，夫人款然收下。另一边，麦克杜夫夫人有孕在身，站于舞池之外。女仆向其献酒后离开。麦克杜夫夫人目睹麦克杜夫与媚巫舞蹈调笑，醋意十足，拿起酒杯一饮而尽。药性发作，麦克杜夫夫人摇晃着向后倒下昏厥。众人交换舞伴，继续跳舞。此场景中，众人最终的舞伴为：麦克白夫人与国王，王子与男巫，麦克杜夫与媚巫，班柯与素巫。</p>
+
+<p>〖妒恨〗 10&rsquo;
+「1-眺台」（麦克白）：麦克白趴在眺台上愤怒地看着麦克白夫人与国王跳舞。</p>
+
+<p>〖教唆〗 15&rsquo;
+「3-麦克白卧室」（麦克白，麦克白夫人）：麦克白回到卧室，痛苦不已。浴缸边散落着信件。麦克白夫人回来，他们在床上共舞，情绪十分激动。夫人教唆麦克白杀掉国王。</p>
+
+<p>〖侦探〗 15&rsquo;
+「4-侦探所」（王子，女子）：王子于舞会结束后飞快上楼，进入侦探所里间的暗房。暗房内挂满了鸟怪的照片。他在暗房的抽屉里拿出一个模型进行检查。而后他走出房间，在侦探所外间的办公桌前坐着一名女子。女子盯着桌上的女性人像照发呆，王子质问她是谁，她则拿出一张旧照，恰与桌上照片一模一样。原来她在寻找她的姐姐。王子探查其耳边痕迹，似乎认为她就是她所找的人。两人纠缠在一起，耳鬓厮磨，暧昧起舞。而后女子拿起旧照离开。</p>
+
+<p>〖私会〗 15&rsquo; 「2-吧台」（班柯，男巫，麦克杜夫夫人）</p>
+
+<p>〖弑君〗 20&rsquo;
+「1-国王行宫」（麦克白，国王）：国王在卧室休息，床上满是枕头。麦克白至，用枕头闷死国王。羽毛乱飞。麦克白在盆内的血水中洗手，奔溃地跑回卧室。</p>
+
+<p>〖进化〗 20&rsquo; (1 v 1)
+「4-审讯室内室」（王子）：王子回到暗房，从抽屉中取出一枚蛋状物体，向众人展示。我向前伸手，王子便拽住我的手，带我跑进一个小房间，反手关门，开启互动剧情：王子先带我进入第一进，然后拉帘进入内室。他打开桌上的小盒子，里面有五个蛋和一个空位。他将手中的蛋放入盒中，示意我去拿蛋。我伸手，王子阻止，将两个蛋调换位置后拿起一个蛋，将我的右手在空中展开后将蛋打在我的手中。蛋碎，一手的灰，王子将我的手捧在嘴边，吹飞灰尘。然后，王子转身，将我按在墙壁上，取下我的面具，在我耳边飞快地说了很长一段话，大致是人类与鸟类之间有什么进化关联。而后灯灭，王子突然剧烈地咳嗽起来，拿起我的右手，将一根黑色羽毛咳在我的手心。</p>
+
+<p>〖沉睡〗 20&rsquo; 「2-大堂」（班柯）</p>
+
+<p>〖暗涌〗 20&rsquo; 「2-吧台」（男巫，门房）</p>
+
+<p>〖善后〗 25&rsquo;
+「3-麦克白卧室」（麦克白，麦克白夫人）：麦克白回到卧室后，已经奔溃，与麦克白夫人共舞后，脱去所有衣服，步入浴缸。麦克白夫人为其洗澡并安抚他。</p>
+
+<p>〖案发〗 25&rsquo; 「1-国王行宫-LL-墓室」（王子，麦克杜夫，班柯）</p>
+
+<p>〖喂毒〗 25&rsquo; 「2-大堂」（麦克杜夫夫人，女仆，门房）</p>
+
+<p>〖祭祀〗 30&rsquo;
+「4-夜店」（麦克白，巫神，三巫）：麦克白跑去迷雾笼罩的祭祀场所，三巫跳着舞蹈，男巫戴着鹿头，浑身赤裸，性感女巫袒胸露乳，为婴儿喂食。灯光高频闪灭，音乐震耳欲聋，三人同麦克白一道，将婴儿献祭，场面及其震撼，颇似磕药高飞在云端。</p>
+
+<p>〖牌局〗 30&rsquo; 「4-酒吧」（王子，麦克杜夫，班柯）</p>
+
+<p>〖杀友〗 35&rsquo; 「4-酒吧」（麦克白，班柯）</p>
+
+<p>〖质询〗 35&rsquo; (limited 5) 「4-审讯室」（王子，麦克杜夫）</p>
+
+<p>〖密谋〗 35&rsquo; 「4-药房」（王子，麦克杜夫）</p>
+
+<p>〖失常〗 35&rsquo; 「4-街道」（麦克白夫人）</p>
+
+<p>〖相遇〗 40&rsquo; 「3-中庭」（麦克白，麦克白夫人）</p>
+
+<p>〖悲恸〗 40&rsquo; 「1-森林」（王子）</p>
+
+<p>〖夜宴〗 45&rsquo;
+「LL-宴会厅」（麦克白夫人，国王，麦克杜夫夫人，麦克杜夫，王子，班柯，三巫，女仆）人物座次（从左至右）：麦克白，麦克杜夫夫人，麦克杜夫，媚巫，王子，国王，素巫，班柯，男巫，麦克白夫人。</p>
+
+<p>〖杀胎〗 50&rsquo; 「2-餐厅」（麦克白，麦克杜夫夫人）</p>
+
+<p>〖奔溃〗 50&rsquo; 「5-疗养院」（麦克白夫人，男护士）</p>
+
+<p>〖伏罪〗 50&rsquo; （终场）</p>
+
+<p>〖溃逃〗 55&rsquo; 「3-墓地」（麦克白）</p>
+
+<p>〖净洗〗 55&rsquo; 「5-疗养院」（麦克白夫人）</p>
+
+<h2 id="我的路线">我的路线</h2>
+
+<blockquote>
+<p>TL;DR
+舞会-跟麦克白-夜宴-继续麦克白(1v1)-舞会-王子(1v1)-麦克杜夫夫人-王子(limited
+5)-夜宴-麦克白夫人(1v1)-舞会-班柯-麦克白夫人(1v1)-夜宴-伏罪-素巫带领离场献吻(1v1)</p>
 </blockquote>
 
-<p>从 2016 将博客迁移至 Hexo+Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。</p>
+<p>进入酒店后，众人与吧台等候，以扑克牌牌面依序坐电梯上去，站在最外面的人会在六楼被踢出去。到达五楼后在附近迅速看了一下，四下无人。我便下楼至1.5层去找麦克白，他在愤怒地看麦克白夫人与国王跳舞、调情。从这时我开始跟着麦克白，看他用枕头闷死国王，上楼看浴缸边散落的信，与麦克白夫人共舞，脱衣洗澡。然后麦克白跑去女巫祭祀的房间，三女巫跳着舞蹈，男巫戴着鹿头，浑身赤裸，性感女巫袒胸露乳，为婴儿喂食。灯光高频闪灭，音乐震耳欲聋，三人同麦克白一道，将婴儿献祭，场面及其震撼，颇似磕药高飞在云端。</p>
 
-<h2 id="安装-hugo-并初始化">安装 Hugo 并初始化</h2>
+<p>此后麦克白去吧台喝酒，与班柯搏斗，最后用砖砸死班柯。然后他与麦克德夫夫人碰面，争吵，搏斗，最后将怀孕的夫人当场打死。而后麦克白与夫人碰面，在一个过道处激烈争吵搏斗，最后齐聚饭桌。</p>
 
-<ul>
-<li>首先使用 Homebrew 安装 Hugo:</li>
-</ul>
+<p>所有人都会在饭桌场景会合，以非常慢的动作觥筹交错、抚摸接吻、扭曲身体。从左至右为女巫、国王、男巫。麦克白据最左，夫人最右。而后满头是血的班柯缓缓而上，坐与男巫左侧。饭局毕，众人离去，麦克白踟蹰不前，向饭桌中间走去，掀桌布而视桌底。麦克白夫人向麦克白走去，两人纠缠一番，麦克白跳下饭台，大步离去。</p>
 
-<!--listend-->
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ brew install hugo</code></pre></td></tr></table>
-</div>
-</div>
-<ul>
-<li>然后建立站点</li>
-</ul>
+<p>饭桌场景结束后继续跟随麦克白，与夫人与卧室碰面。而后来到墓地，麦克白挣扎舞蹈。先在圣像之前挣扎，再倒立。我和另一围观群众伸手，扶他落地。而后来到森林，因为我紧跟身后，在此触发互动剧情：麦克白回头，紧紧捧着我的脸，伏在耳边喃喃道：I&rsquo;m
+sorry. Nothing is more than revolution.</p>
 
-<!--listend-->
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ hugo new site blog</code></pre></td></tr></table>
-</div>
-</div>
-<ul>
-<li>安装主题，我采用比较简单的 even 主题</li>
-</ul>
+<p>而后麦克白与班柯碰面，进小屋换了套干净的衣服，第二轮开始。由于第一轮错过了开头，此时仍然跟着麦克白。</p>
 
-<!--listend-->
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ git clone https://github.com/olOwOlo/hugo-theme-even themes/even</code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="从-hexo-迁移">从 Hexo 迁移</h2>
+<p>麦克白先在吧台处，拿着桌上的K牌，遇到三女巫，与之共舞。我还被黑女巫摸了一下。</p>
 
-<p>好消息是，此迁移过程相当无痛。由于我之前将博客内容存在 Dropbox 上，所以只需要将相关文件 link 至 Hugo 的相关文件夹内。结构大致如下：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil">.
-├── content
-│   ├── about
-│   │   └── index.md
-│   └── post
-│       ├── post1.md
-│       └── ...
-├── static
-│   ├── images
-│   │   ├── image1.png
-│   │   └── ...
-│   └── CNAME
-...</code></pre></td></tr></table>
-</div>
-</div>
-<p>有一个需要注意的地方是 Hexo 与 Hugo 对于 markdown 头文件中的 url 定义不同，我采用 <code>grep</code> 将其批量改成 <code>slug</code> ，并在配置文件中添加了 permalinks 的生成方式，以保证超链接的稳定：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-  <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;/:year/:month/:slug&#34;</span></code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="生成预览">生成预览</h2>
+<p>回到他们房间，麦克白与夫人相见，脱衣，搏斗，亲吻，碰撞，而后麦克白夫人去舞厅，麦克白阴郁地去一层半看他们跳舞。</p>
 
-<p>输入 <code>hugo server</code> ，几乎是眨眼工夫，便已在内存中生成预览，而且对于博文可即时显示改动，非常方便。确实比 Hexo 快上百倍。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">                   <span class="p">|</span> ZH-CN
-+------------------+-------+
-  Pages            <span class="p">|</span>   <span class="m">956</span>
-  Paginator pages  <span class="p">|</span>   <span class="m">139</span>
-  Non-page files   <span class="p">|</span>     <span class="m">0</span>
-  Static files     <span class="p">|</span>    <span class="m">85</span>
-  Processed images <span class="p">|</span>     <span class="m">0</span>
-  Aliases          <span class="p">|</span>   <span class="m">254</span>
-  Sitemaps         <span class="p">|</span>     <span class="m">1</span>
-  Cleaned          <span class="p">|</span>     <span class="m">0</span>
+<p>此时我下去舞厅，在舞池观看舞蹈。</p>
 
-Total in <span class="m">820</span> ms</code></pre></td></tr></table>
+<p>舞蹈场景与饭桌场景一样，众人除麦克白外齐聚一堂。国王与麦克白夫人共舞，并将项链赠予她。麦克德夫与性感女巫、班柯与黑女巫、王子与男巫共舞。怀孕的麦克德夫夫人在一旁冷眼相看，突然向后晕倒。</p>
+
+<p>舞蹈结束之后，我开始跟随王子。</p>
+
+<p>王子飞快地上楼，进入照片洗印室，此处挂满了鸟怪的照片。他从抽屉中拿出什么，而后走出房间。在类似警察局的小桌子前坐着一位女子，看着桌上的女人半身照。王子质问她是谁，她拿出一张旧照，与桌上照片一模一样。王子探查其耳边痕迹，认定她是。两人纠缠在一起，耳鬓厮磨。而后女子拿起旧照，落荒而逃。</p>
+
+<p>王子回到暗房，拿着一颗白色球状物体，试探众人。我向前伸手，王子便拽住我的手，带我跑向一个小房间，反手关门，开启互动剧情：王子先带我进入第一进，然后拉帘进入内室。他打开桌上的小盒子，里面有五个蛋和一个空位。他将手中的蛋放入盒中，示意我去拿蛋。我伸手，王子阻止，将两个蛋调换位置后拿起一个蛋，将我的右手在空中展开后将蛋打在我的手中。蛋碎，一手的灰，王子将我的手捧在嘴边，吹飞灰尘。然后，王子转身，将我按在墙壁上，取下我的面具，在我耳边飞快地说了很长一段话，大致是人类与鸟类之间有什么进化关联。而后灯灭，王子突然剧烈地咳嗽起来，拿起我的右手，将一根黑色羽毛咳在我的手心。</p>
+
+<p>一对一场景结束后，王子飞快跑去一个大厅，与怀孕的麦克德夫夫人打了照面。我以为他们会有交流，然而王子飞速跑远，我跟丢了。</p>
+
+<p>这时我选择跟随麦克德夫夫人，她在酒保处与女酒保神情暧昧，一同到一旁的沙发处调情。两人被酒保打断。女酒保向其递酒，酒保试图劝阻。</p>
+
+<p>我还看到男巫在唱歌，酒保目不转睛地看着他。（也可能是在第三轮看到的？）</p>
+
+<p>这个场景结束时，王子突然又出现，我赶紧跑回跟住他。他跑到酒吧处，与班柯和麦克德夫会合。班柯支开此处的酒保，三人铺开放在桌上的三个酒杯与榔头与四角，以J为赌注，开始打牌，J轮流押在三人的酒杯之上。三人开始晃动头顶的吊灯，牌局愈发激烈。最后一人拿起榔头，将K钉于墙上。</p>
+
+<p>局毕，班柯留在原地（将被麦克白杀死），王子与麦克德夫跑到档案室，拉开抽屉，里面是一个放置很多树木模型的地形图。他拿着手里的树木模型（在之前一个场景看到过，记不清哪个了），恰好可以放在地形图上。两人跑进审讯室，放入五个围观群众后，开启五人限定剧情：两人将围观群众逼至靠门的一边后，王子让麦克德夫坐在房间中心的椅子上，开始审讯双人舞。头顶的吊灯晃动，幅度非常大，几乎要撞到两人与围观群众。两人一边搏斗，一边躲避吊灯。</p>
+
+<p>审讯场景结束后，王子回到一楼舞厅，此时空无一人。王子疾停，身体扭曲，向后臀桥。而后王子以怪态躺在地上划圈，跳着奇怪的舞蹈。或顺钢管而上，或贴地面而行。舞毕，王子步回饭桌。众人陆续赶到。</p>
+
+<p>第二轮饭桌场景结束，我留在舞台，看麦克白夫人独于桌前哭泣。饭台太高，麦克白夫人向前伸手，我伸出双手搀扶她下来，开启互动场景：然而由于我没扶稳，导致麦克白夫人摔下舞台，于是麦克白夫人一怒之下没有开启传说中的携手同行，捧头耳语剧情，我只能默默跟着她。</p>
+
+<p>她来到一个满是铁床的屋子，走到尽头后躺床上独舞。来了一名牧师，将她搀起，带入一间有很多浴缸的房间。牧师将夫人的衣衫尽除，让她步入一个装有锈色液体的浴缸。夫人洗着洗着发现满手是血，异常奔溃，努力将自己洗净。洗毕，夫人伸出双手，我与同伴将她搀扶出浴缸，开启互动剧情：夫人松开我的手，指向旁边的浴缸。我没会意，经同伴提醒后才意识到她要我拾起覆盖在那个浴缸上的纱巾，将她包裹起来。（其实是擦身福利，我真是太蠢了。）</p>
+
+<p>而后夫人走向她和麦克白的卧室，脱下纱巾，换上睡衣。麦克白亦出现，两人尽除衣衫，激烈地拥吻，直至争吵。而后麦克白穿上衣服离去，麦克白夫人一人在卧室，进入透明的玻璃化妆间更衣，并跳起高难度独舞。</p>
+
+<p>舞毕，夫人回到房中的浴缸，看到麦克白留在浴缸边上的信，读之潸然。直至麦克白回到房间，两人舞毕，我跟随麦克白夫人，看到她色诱女酒保，让她递喝的给麦克德夫夫人。随后来到舞池。</p>
+
+<p>三女巫已在场上，麦克德夫携怀孕的夫人到来。麦克白夫人拽住女酒保，令其给麦克德夫夫人献酒。舞会中女酒保来到舞池外的麦克德夫夫人身后，向其献酒后离开。麦克德夫夫人看着调笑的女巫与麦克德夫，醋意十足，拿起酒杯一饮而尽。麦克德夫夫人摇晃着向后倒下。</p>
+
+<p>这轮舞会场景后，我跟着班柯。班柯先与男巫在长廊上拥吻。而后他跑至吧台旁，麦克德夫夫人放下手提箱，两人看一封信，信上全是烟灰。两人来到沙发，跳起了激烈的舞蹈。然后麦克德夫夫人跑出来（与王子打了个照面），班柯睡倒在沙发上。</p>
+
+<p>班柯睡倒在沙发上的时候，我回到吧台读了信，没写什么有用的。然后在一旁的电报亭，看到男巫与麦克德夫纠缠在一起，共舞。</p>
+
+<p>舞毕，回到班柯处，发现他刚醒，被通知了国王死讯，摇着铃穿过标本室，跑去国王处，发现尸体。他与王子、麦克德夫三人将枕头收起，将国王尸体抬出，在一旁阶梯处商量后，头朝下抬下楼梯，停于一个房间，盖上毯子，令其安息。</p>
+
+<p>其后，三人齐至酒馆，打牌饮酒。结束后我跟随他们俩，发现五人小黑屋外面即是麦克白与夫人争吵的走廊。跟随奔溃的夫人，夫人四处捧人的脸，耳边私语。我紧跟其后，却发现站着不动的才会被她临幸。后来她抓住我和其他四人的手，说你们五个要好好在一起，大概算一种互动场景？而后我们跟着奔溃的夫人来到饭桌。</p>
+
+<p>最后一场饭桌戏。结束后夫人下台，走向饭桌左前方的角落，紧紧拉着一名看客的手，另一只手抱着他的手腕。</p>
+
+<p>台上，王子、麦克德夫等人将麦克白吊起（脖子套过脖圈，钩子挂住衣领），推向前方。全剧终。</p>
+
+<p>因为我站在饭桌最左侧的过道旁，黑女巫下场时拉住了我，将我带至最初等待召唤的大厅，脱下我的面具，在我左脸颊吻别。</p>
+
+<p>（期间有一处楼梯，上面有画着两个国王像的花窗，经过数次）</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:fn-1">a reference to Hitchcock film Vertigo and Rebecca
+ <a class="footnote-return" href="#fnref:fn-1"><sup>[return]</sup></a></li>
+<li id="fn:fn-2">最好戴隐形眼镜。我当时戴的镜片眼镜，全程都得腾出一只手来扶面具。
+ <a class="footnote-return" href="#fnref:fn-2"><sup>[return]</sup></a></li>
+</ol>
 </div>
-</div>
-<h2 id="配合-org-mode-使用更佳">配合 org-mode 使用更佳</h2>
-
-<p>以前使用 Hexo 写博客时，博文都分散于各种 <code>.md</code> 文件中，管理起来很不方便。另一方面，由于我平时习惯用 org-mode 记记笔记，管理生活。有了好轮子，我干脆想着一鼓作气把车换了。在此我使用的是 <code>ox-hugo</code> 的 One post per Org subtree 方案，配置如下(需手动删除 <code>\</code>)：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="nv">\#+HUGO_BASE_DIR:</span> <span class="nv">~/Dropbox/Blog/</span>
-<span class="nv">\#+HUGO_SECTION:</span> <span class="nv">post</span>
-<span class="nv">\#+HUGO_WEIGHT:</span> <span class="nv">auto</span>
-<span class="nv">\#+HUGO_AUTO_SET_LASTMOD:</span> <span class="no">t</span>
-<span class="nv">\#+author:</span>
-<span class="nv">\#+hugo_custom_front_matter:</span> <span class="ss">:author</span> <span class="s">&#34;ziyunch&#34;</span>
-<span class="nv">\*</span> <span class="nv">Technical</span>                                                       <span class="ss">:@技术宅:</span>
-<span class="nv">\**</span> <span class="nv">TODO</span> <span class="nv">博客由</span> <span class="nv">Hexo</span> <span class="nv">迁移至</span> <span class="nv">Hugo</span>                           <span class="ss">:Emacs:Hexo:Hugo:</span>
-<span class="nv">\ </span>  <span class="ss">:PROPERTIES:</span>
-<span class="nv">\ </span>  <span class="ss">:EXPORT_FILE_NAME:</span> <span class="nv">20190826-hexo-2-hugo</span>
-<span class="nv">\ </span>  <span class="ss">:END:</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>也就是说采用标签继承的方式，将博文分类。写完当篇博文，将 <code>TODO</code> 状态变更为 <code>DONE</code> 时， <code>ox-hugo</code> 会自动为文档生成时间戳。然后在 subtree 上 <code>C-c C-e H H</code> 即可在相应目录生成 <code>.md</code> 文档。此时如果后台正在运行着 <code>hugo server</code> ，即可在 <code>http://localhost:1313/</code> 看到即时更新。</p>
-
-<h2 id="在-github-上发布">在 Github 上发布</h2>
-
-<p>第一次部署，需要新建一个 public 文件夹，并将原来部署了 Hexo 博客的 repo 关联上，步骤如下：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ mkdir public
-$ hugo -t even
-$ <span class="nb">cd</span> public
-$ git init
-$ git remote add upstream https://github.com/ziyunch/ziyunch.github.io.git
-$ git add .
-$ git commit -m <span class="s2">&#34;switch to hugo&#34;</span>
-$ git push -f upstream master</code></pre></td></tr></table>
-</div>
-</div>
-<p>之后则可如官网<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">发布指南</a>所示编写一个可执行的 <code>.sh</code> 文件来自动化部署发布：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/sh
-</span><span class="cp"></span>
-<span class="c1"># If a command fails then the deploy stops</span>
-<span class="nb">set</span> -e
-
-<span class="nb">printf</span> <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[0m\n&#34;</span>
-
-<span class="c1"># Build the project.</span>
-hugo -t even
-
-<span class="c1"># Go To Public folder</span>
-<span class="nb">cd</span> public
-
-<span class="c1"># Add changes to git.</span>
-git add .
-
-<span class="c1"># Commit changes.</span>
-<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&#34;</span>
-<span class="k">if</span> <span class="o">[</span> -n <span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-        <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span>
-<span class="k">fi</span>
-git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
-
-<span class="c1"># Push source and build repos.</span>
-git push upstream master</code></pre></td></tr></table>
-</div>
-</div>
-<p>自此大功告成</p>
     </div>
 
     <div class="post-copyright">
@@ -420,7 +413,7 @@ git push upstream master</code></pre></td></tr></table>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2019-08-27
+        2019-08-31
         
     </span>
   </p>
@@ -440,18 +433,16 @@ git push upstream master</code></pre></td></tr></table>
   </div>
 </div><footer class="post-footer">
       <div class="post-tags">
-          <a href="../../../tags/emacs/">Emacs</a>
-          <a href="../../../tags/hexo/">Hexo</a>
-          <a href="../../../tags/hugo/">Hugo</a>
+          <a href="../../../tags/%E9%9F%B3%E4%B9%90%E5%89%A7/">音乐剧</a>
           </div>
       <nav class="post-nav">
         <a class="prev" href="../../../2019/08/447.html/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Hacking the Data Transformation Interview</span>
+            <span class="prev-text nav-default">博客由 Hexo 迁移至 Hugo</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="../../../2019/08/445.html/">
-            <span class="next-text nav-default">Sleep No More 小结</span>
+        <a class="next" href="../../../2019/07/445.html/">
+            <span class="next-text nav-default">鼠须管傻瓜化配置</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Mac 版 Emacs 中使用 Rime 输入法打带调双拼 - Blind with Science</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ziyunch" /><meta name="description" content="由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。 https://manateelazycat.github.io/emacs/2019/07/24/use-rime-in-emacs.html 基础配置 首先安装鼠须管，" /><meta name="keywords" content="ziyunch, blog" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://blindwith.science/2019/08/449.html/" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../favicon-16x16.png">
+<link rel="manifest" href="../../../manifest.json">
+<link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="../../../dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Mac 版 Emacs 中使用 Rime 输入法打带调双拼" />
+<meta property="og:description" content="由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。 https://manateelazycat.github.io/emacs/2019/07/24/use-rime-in-emacs.html 基础配置 首先安装鼠须管，" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blindwith.science/2019/08/449.html/" />
+<meta property="article:published_time" content="2019-08-31T20:40:00-04:00" />
+<meta property="article:modified_time" content="2019-08-31T21:11:53-04:00" />
+<meta itemprop="name" content="Mac 版 Emacs 中使用 Rime 输入法打带调双拼">
+<meta itemprop="description" content="由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。 https://manateelazycat.github.io/emacs/2019/07/24/use-rime-in-emacs.html 基础配置 首先安装鼠须管，">
+
+
+<meta itemprop="datePublished" content="2019-08-31T20:40:00-04:00" />
+<meta itemprop="dateModified" content="2019-08-31T21:11:53-04:00" />
+<meta itemprop="wordCount" content="1091">
+
+
+
+<meta itemprop="keywords" content="Emacs,pyim,liberime,Rime,鼠须管," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mac 版 Emacs 中使用 Rime 输入法打带调双拼"/>
+<meta name="twitter:description" content="由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。 https://manateelazycat.github.io/emacs/2019/07/24/use-rime-in-emacs.html 基础配置 首先安装鼠须管，"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="../../../" class="logo">Blind with Science</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="../../../">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="../../../post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="../../../tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="../../../categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="../../../about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="../../../" class="logo">Blind with Science</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="../../../">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Mac 版 Emacs 中使用 Rime 输入法打带调双拼</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-08-31 </span>
+        <div class="post-category">
+            <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
+            </div>
+          <span class="more-meta"> 约 1091 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#基础配置">基础配置</a></li>
+<li><a href="#初试啼声">初试啼声</a></li>
+<li><a href="#再接再厉">再接再厉</a></li>
+<li><a href="#最终解决方案">最终解决方案</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。</p>
+
+<p><a href="https://manateelazycat.github.io/emacs/2019/07/24/use-rime-in-emacs.html">https://manateelazycat.github.io/emacs/2019/07/24/use-rime-in-emacs.html</a></p>
+
+<h2 id="基础配置">基础配置</h2>
+
+<ol>
+<li>首先安装鼠须管，此一节可见 <a href="https://blindwith.science/2019/07/445.html/">鼠须管傻瓜化配置</a>，一句话概括呢就是：</li>
+</ol>
+
+<!--listend-->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">brew cask install squirrel</code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>然后下载 librime 获取源码并从鼠须管中获取编译好的 <code>librime.dylib</code>:</li>
+</ol>
+
+<!--listend-->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~
+git clone --recursive https://github.com/rime/librime.git --depth<span class="o">=</span><span class="m">1</span>
+mkdir -p ~/librime/xbuild/lib/Release/
+cp /Library/Input<span class="se">\ </span>Methods/Squirrel.app/Contents/Frameworks/librime.1.dylib ~/librime/xbuild/lib/Release/librime.dylib
+sudo cp /Library/Input<span class="se">\ </span>Methods/Squirrel.app/Contents/Frameworks/librime.1.dylib /usr/local/lib</code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>然后下载并编译 liberime，需要提前安装 cmake 库来进行编译：</li>
+</ol>
+
+<!--listend-->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://gitlab.com/liberime/liberime.git --depth<span class="o">=</span><span class="m">1</span>
+<span class="nb">cd</span> ~/liberime
+<span class="nb">export</span> <span class="nv">RIME_PATH</span><span class="o">=</span>~/librime
+make liberime</code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>然后需要在 emacs 中安装 pyim，此一节详见 <a href="https://blindwith.science/2019/07/443.html/">Emacs 中文环境配置</a> ，当然不看也行，毕竟具体设置在本篇中需要推倒重来；</li>
+</ol>
+
+<!--listend-->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-nil" data-lang="nil"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-nil" data-lang="nil">M-x package-install RET pyim RET</code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>将 <code>liberime.so</code> 动态库存至 pyim 文件夹中：</li>
+</ol>
+
+<!--listend-->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">cp ~/liberime/buid/liberime.so ~/.emacs.d/pyim/</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="初试啼声">初试啼声</h2>
+
+<p>接下来就是添加 emacs 对于 liberime 的配置，我先想当然地试了这个配置：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">liberime-start</span> <span class="p">(</span><span class="nv">expand-file-name</span> <span class="s">&#34;~/Library/Rime&#34;</span><span class="p">)</span>
+                <span class="p">(</span><span class="nv">expand-file-name</span> <span class="s">&#34;~/.emacs.d/pyim/rime/&#34;</span><span class="p">))</span>
+<span class="p">(</span><span class="nv">liberime-select-schema</span> <span class="s">&#34;terra_double_pinyin_mspy&#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="k">setq</span> <span class="nv">pyim-default-scheme</span> <span class="ss">&#39;rime</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>这个方法有几个问题，一是哪怕我在设置中采用了简体，输出依然为繁体字；二是不支持分号与声调，所以在微软双拼中不能输入元音为 ing 的字，也不能通过声调来选词；三则是由于引入了诸多词库，打字特别卡顿。</p>
+
+<h2 id="再接再厉">再接再厉</h2>
+
+<p>然后我可以通过添加新的 schema 来提供对分号的支持，但是声调比较麻烦。</p>
+
+<p>另一方面，我发现只要改回共享库，打出来的就是简体，但是我不明白为什么只能使用共享库，却不能使用个人库，毕竟我还魔改了我的鼠须管呀，万一我想打 emoji 呢，万一我想引用个古诗词呢？</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">add-to-list</span>
+ <span class="ss">&#39;pyim-schemes</span>
+ <span class="o">&#39;</span><span class="p">(</span><span class="nv">rime-mspy</span>
+   <span class="ss">:document</span> <span class="s">&#34;support ;&#34;</span>
+   <span class="ss">:class</span> <span class="nv">rime</span>
+   <span class="ss">:first-chars</span> <span class="s">&#34;abcdefghijklmnopqrstuvwxyz&#34;</span>
+   <span class="ss">:rest-chars</span> <span class="s">&#34;abcdefghijklmnopqrstuvwxyz;&#34;</span>
+   <span class="ss">:prefer-trigger-chars</span> <span class="no">nil</span>
+   <span class="p">))</span>
+
+<span class="p">(</span><span class="nv">liberime-start</span> <span class="p">(</span><span class="nv">expand-file-name</span> <span class="s">&#34;/Library/Input Methods/Squirrel.app/Contents/SharedSupport&#34;</span><span class="p">)</span>
+                <span class="p">(</span><span class="nv">expand-file-name</span> <span class="s">&#34;~/.emacs.d/pyim/rime/&#34;</span><span class="p">))</span>
+<span class="p">(</span><span class="nv">liberime-select-schema</span> <span class="s">&#34;double_pinyin_mspy&#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="k">setq</span> <span class="nv">pyim-default-scheme</span> <span class="ss">&#39;rime-mspy</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="最终解决方案">最终解决方案</h2>
+
+<p>一番折腾之后，终于找出了合适的方案：</p>
+
+<ul>
+<li>个人库无法显示繁体的原因其实很简单，由于鼠须管默认将 <a href="https://github.com/BYVoid/OpenCC">opencc 开放中文转换库</a> 放在共享库中，所以个人库中并不包含 opencc，这样 build 的时候就不能调用这些转换文件。所以，一行代码搞定。</li>
+</ul>
+
+<!--listend-->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ln -s /Library/Input<span class="se">\ </span>Methods/Squirrel.app/Contents/SharedSupport/opencc/* ~/Library/Rime/opencc/</code></pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li><p>输入分号的问题前面通过调用新写的 schema 解决，但是声调问题比较麻烦。由于 pyim 作者给减号键（我用作平声调的）赋予了太多用途，我这半调子 lisp 水平一时半会儿也写不了一个新的函数使此键在非后翻页状态作为简单的 <code>pyim-self-insert-command</code> ，而且还得把后面那个函数改了，事情实在太多，所以我将方括号改作翻页，并将长得差不多的等号键用作平声。以后有时间，可能还是会把它改回减号键，毕竟长得更像一点。</p></li>
+
+<li><p>其次则是卡顿的问题。我发现当 liberime build 时，由于在个人库中已经有过 build 好的文件，所以不会在 liberime 的库中重新 build 一份，这样非常影响速度。所以我复制了一份我写的地球双拼给 liberime 专用，效果拔群。</p></li>
+</ul>
+
+<p>具体配置如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;use-package</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">use-package</span> <span class="nv">pyim</span>
+    <span class="ss">:ensure</span> <span class="no">nil</span>
+    <span class="ss">:demand</span> <span class="no">t</span>
+    <span class="ss">:config</span>
+    <span class="p">(</span><span class="k">setq</span> <span class="nv">default-input-method</span> <span class="s">&#34;pyim&#34;</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">setq</span> <span class="nv">pyim-page-length</span> <span class="mi">9</span><span class="p">)</span>
+    <span class="ss">:bind</span>
+    <span class="p">(</span><span class="ss">:map</span> <span class="nv">pyim-mode-map</span>
+          <span class="p">(</span><span class="s">&#34;]&#34;</span> <span class="o">.</span> <span class="nv">pyim-page-next-page</span><span class="p">)</span>
+          <span class="p">(</span><span class="s">&#34;[&#34;</span> <span class="o">.</span> <span class="nv">pyim-page-previous-page</span><span class="p">)</span>
+          <span class="p">(</span><span class="s">&#34;-&#34;</span> <span class="o">.</span> <span class="nv">pyim-self-insert-command</span><span class="p">)</span>
+          <span class="p">(</span><span class="s">&#34;=&#34;</span> <span class="o">.</span> <span class="nv">pyim-self-insert-command</span><span class="p">))</span>
+    <span class="p">)</span>
+<span class="p">(</span><span class="nf">use-package</span> <span class="nv">liberime</span>
+    <span class="ss">:load-path</span> <span class="s">&#34;~/.emacs.d/pyim/&#34;</span>
+    <span class="ss">:config</span>
+    <span class="p">(</span><span class="nv">liberime-start</span> <span class="p">(</span><span class="nv">expand-file-name</span> <span class="s">&#34;~/Library/Rime/&#34;</span><span class="p">)</span>
+                    <span class="p">(</span><span class="nv">expand-file-name</span> <span class="s">&#34;~/.emacs.d/pyim/rime&#34;</span><span class="p">))</span>
+    <span class="p">(</span><span class="nv">liberime-select-schema</span> <span class="s">&#34;terra_double_pinyin_pyim&#34;</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">add-to-list</span>
+     <span class="ss">&#39;pyim-schemes</span>
+     <span class="o">&#39;</span><span class="p">(</span><span class="nv">rime-mspy</span>
+       <span class="ss">:document</span> <span class="s">&#34;support ;&#34;</span>
+       <span class="ss">:class</span> <span class="nv">rime</span>
+       <span class="ss">:first-chars</span> <span class="s">&#34;abcdefghijklmnopqrstuvwxyz/&#34;</span>
+       <span class="ss">:rest-chars</span> <span class="s">&#34;abcdefghijklmnopqrstuvwxyz;=/,\\&#34;</span>
+       <span class="ss">:prefer-trigger-chars</span> <span class="no">nil</span>
+       <span class="p">))</span>
+    <span class="p">(</span><span class="k">setq</span> <span class="nv">pyim-default-scheme</span> <span class="ss">&#39;rime-mspy</span><span class="p">)</span>
+    <span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>另外，我在 <code>~/.emacs.d/pyim/rime/</code> 文件夹中添加了 pyim 作者推荐的优化配置文件 <code>default.custom.yaml</code> ，详见其 <a href="https://github.com/tumashu/pyim/blob/master/README.md">github</a>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-nil" data-lang="nil"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-nil" data-lang="nil">patch:
+  schema_list:
+    - schema: terra_double_pinyin_pyim
+  &#34;menu/page_size&#34;: 50
+  &#34;speller/auto_select&#34;: false
+  &#34;speller/auto_select_unique_candidate&#34;: false</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">ziyunch</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-08-31
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="../../../images/wechatpay.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="../../../tags/emacs/">Emacs</a>
+          <a href="../../../tags/pyim/">pyim</a>
+          <a href="../../../tags/liberime/">liberime</a>
+          <a href="../../../tags/rime/">Rime</a>
+          <a href="../../../tags/%E9%BC%A0%E9%A1%BB%E7%AE%A1/">鼠须管</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="../../../2019/08/448.html/">
+            <span class="next-text nav-default">Hacking the Data Transformation Interview</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'kyXPptAG0HNFlxVP6PKtMG79-gzGzoHsz',
+        appKey: 'odsVXiu7qNwwQypz99atviXR',
+        notify:  false , 
+        verify:  false , 
+        avatar:'mm', 
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/ziyunch" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ziyunch" class="iconfont icon-github" title="github"></a>
+      <a href="http://weibo.com/ziyunc" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://douban.com/people/ziyunch" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ziyunch</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../../../dist/even.26188efa.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-86469737-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

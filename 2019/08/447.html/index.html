@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Hacking the Data Transformation Interview - Blind with Science</title>
+  <title>博客由 Hexo 迁移至 Hugo - Blind with Science</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ziyunch" /><meta name="description" content="I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation.
+<meta name="author" content="ziyunch" /><meta name="description" content=" 本篇博文使用 org-mode 书就，耶！
+ 从 2016 将博客迁移至 Hexo&#43;Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。
 " /><meta name="keywords" content="ziyunch, blog" />
 
 
@@ -39,26 +40,38 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Hacking the Data Transformation Interview" />
-<meta property="og:description" content="I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation." />
+<meta property="og:title" content="博客由 Hexo 迁移至 Hugo" />
+<meta property="og:description" content="
+本篇博文使用 org-mode 书就，耶！
+
+
+从 2016 将博客迁移至 Hexo&#43;Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blindwith.science/2019/08/447.html/" />
-<meta property="article:published_time" content="2019-08-30T11:14:00-04:00" />
-<meta property="article:modified_time" content="2019-08-30T11:36:47-04:00" />
-<meta itemprop="name" content="Hacking the Data Transformation Interview">
-<meta itemprop="description" content="I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation.">
+<meta property="article:published_time" content="2019-08-26T23:49:00-04:00" />
+<meta property="article:modified_time" content="2019-08-31T21:11:04-04:00" />
+<meta itemprop="name" content="博客由 Hexo 迁移至 Hugo">
+<meta itemprop="description" content="
+本篇博文使用 org-mode 书就，耶！
 
 
-<meta itemprop="datePublished" content="2019-08-30T11:14:00-04:00" />
-<meta itemprop="dateModified" content="2019-08-30T11:36:47-04:00" />
-<meta itemprop="wordCount" content="609">
+从 2016 将博客迁移至 Hexo&#43;Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。">
+
+
+<meta itemprop="datePublished" content="2019-08-26T23:49:00-04:00" />
+<meta itemprop="dateModified" content="2019-08-31T21:11:04-04:00" />
+<meta itemprop="wordCount" content="1017">
 
 
 
-<meta itemprop="keywords" content="Data-Engineering,Interview,Python," />
+<meta itemprop="keywords" content="Emacs,Hexo,Hugo," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hacking the Data Transformation Interview"/>
-<meta name="twitter:description" content="I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation."/>
+<meta name="twitter:title" content="博客由 Hexo 迁移至 Hugo"/>
+<meta name="twitter:description" content="
+本篇博文使用 org-mode 书就，耶！
+
+
+从 2016 将博客迁移至 Hexo&#43;Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -124,15 +137,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Hacking the Data Transformation Interview</h1>
+      <h1 class="post-title">博客由 Hexo 迁移至 Hugo</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2019-08-30 </span>
+        <span class="post-time"> 2019-08-26 </span>
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 609 字 </span>
-          <span class="more-meta"> 预计阅读 2 分钟 </span>
+          <span class="more-meta"> 约 1017 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -144,244 +157,205 @@
 <ul>
 <li>
 <ul>
-<li><a href="#prerequisites-boto3">Prerequisites: boto3</a></li>
-<li><a href="#prerequisites-psycopg2">Prerequisites: psycopg2</a></li>
-<li><a href="#upload-data-from-s3-into-redshift">Upload data from S3 into Redshift</a></li>
-<li><a href="#load-data-from-redshift-to-pandas">Load data from Redshift to pandas</a></li>
+<li><a href="#安装-hugo-并初始化">安装 Hugo 并初始化</a></li>
+<li><a href="#从-hexo-迁移">从 Hexo 迁移</a></li>
+<li><a href="#生成预览">生成预览</a></li>
+<li><a href="#配合-org-mode-使用更佳">配合 org-mode 使用更佳</a></li>
+<li><a href="#在-github-上发布">在 Github 上发布</a></li>
 </ul></li>
 </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <p>I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation.</p>
+      <blockquote>
+<p>本篇博文使用 org-mode 书就，耶！</p>
+</blockquote>
 
-<h2 id="prerequisites-boto3">Prerequisites: boto3</h2>
+<p>从 2016 将博客迁移至 Hexo+Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。</p>
 
-<p>Boto is the AWS SDK for python, which provides easy-to-use, object-oriented API and low-level access to AWS services. We could find the documentation <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html">here</a>.</p>
+<h2 id="安装-hugo-并初始化">安装 Hugo 并初始化</h2>
 
-<p>We could easily install the latest Boto 3 release via pip:</p>
+<ul>
+<li>首先使用 Homebrew 安装 Hugo:</li>
+</ul>
+
+<!--listend-->
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ pip install boto3</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ brew install hugo</code></pre></td></tr></table>
 </div>
 </div>
-<p>Then configure the credential file at <code>~/.aws/credentials</code>:</p>
+<ul>
+<li>然后建立站点</li>
+</ul>
+
+<!--listend-->
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil">[default]
-aws_access_key_id = YOUR_ACCESS_KEY
-aws_secret_access_key = YOUR_SECRET_KEY</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ hugo new site blog</code></pre></td></tr></table>
 </div>
 </div>
-<p>And set the default region at <code>~/.aws/config</code>:</p>
+<ul>
+<li>安装主题，我采用比较简单的 even 主题</li>
+</ul>
+
+<!--listend-->
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil"><span class="lnt">1
-</span><span class="lnt">2
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-nil" data-lang="nil">[default]
-region=us-east-1</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ git clone https://github.com/olOwOlo/hugo-theme-even themes/even</code></pre></td></tr></table>
 </div>
 </div>
-<p>To use boto3, we could import it and pass the service-to-use to it. For example, to use Amazon S3, we could choose a resource by:</p>
+<h2 id="从-hexo-迁移">从 Hexo 迁移</h2>
+
+<p>好消息是，此迁移过程相当无痛。由于我之前将博客内容存在 Dropbox 上，所以只需要将相关文件 link 至 Hugo 的相关文件夹内。结构大致如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
-</span><span class="lnt">2
+<pre class="chroma"><code class="language-nil" data-lang="nil"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">boto3</span>
-<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">resource</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-nil" data-lang="nil">.
+├── content
+│   ├── about
+│   │   └── index.md
+│   └── post
+│       ├── post1.md
+│       └── ...
+├── static
+│   ├── images
+│   │   ├── image1.png
+│   │   └── ...
+│   └── CNAME
+...</code></pre></td></tr></table>
 </div>
 </div>
-<p>Create a s3 bucket over client level:</p>
+<p>有一个需要注意的地方是 Hexo 与 Hugo 对于 markdown 头文件中的 url 定义不同，我采用 <code>grep</code> 将其批量改成 <code>slug</code> ，并在配置文件中添加了 permalinks 的生成方式，以保证超链接的稳定：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">s3_client</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
-<span class="n">s3_client</span><span class="o">.</span><span class="n">create_bucket</span><span class="p">(</span><span class="n">Bucket</span><span class="o">=</span><span class="s1">&#39;BUCKET_NAME&#39;</span><span class="p">)</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>List existing buckets for the AWS account:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">response</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">list_buckets</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">bucket</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;Buckets&#39;</span><span class="p">]:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;  {bucket[&#34;Name&#34;]}&#39;</span><span class="p">)</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>Upload file into a s3 bucket:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">response</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">upload_file</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">bucket</span><span class="p">,</span> <span class="n">object_name</span><span class="p">)</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>Or upload object in binary mode into a s3 bucket:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;test.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">s3</span><span class="o">.</span><span class="n">upload_fileobj</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s2">&#34;BUCKET_NAME&#34;</span><span class="p">,</span> <span class="s2">&#34;OBJECT_NAME&#34;</span><span class="p">)</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
+  <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;/:year/:month/:slug&#34;</span></code></pre></td></tr></table>
 </div>
 </div>
-<p>Or directly put object into a s3 bucket over the bucket level:</p>
+<h2 id="生成预览">生成预览</h2>
+
+<p>输入 <code>hugo server</code> ，几乎是眨眼工夫，便已在内存中生成预览，而且对于博文可即时显示改动，非常方便。确实比 Hexo 快上百倍。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">data</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;test.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span>
-<span class="n">bucket</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s1">&#39;my-bucket&#39;</span><span class="p">)</span>
-<span class="n">bucket</span><span class="o">.</span><span class="n">put_object</span><span class="p">(</span><span class="n">Key</span><span class="o">=</span><span class="n">object_name</span><span class="p">,</span> <span class="n">Body</span><span class="o">=</span><span class="n">data</span><span class="p">)</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">                   <span class="p">|</span> ZH-CN
++------------------+-------+
+  Pages            <span class="p">|</span>   <span class="m">956</span>
+  Paginator pages  <span class="p">|</span>   <span class="m">139</span>
+  Non-page files   <span class="p">|</span>     <span class="m">0</span>
+  Static files     <span class="p">|</span>    <span class="m">85</span>
+  Processed images <span class="p">|</span>     <span class="m">0</span>
+  Aliases          <span class="p">|</span>   <span class="m">254</span>
+  Sitemaps         <span class="p">|</span>     <span class="m">1</span>
+  Cleaned          <span class="p">|</span>     <span class="m">0</span>
+
+Total in <span class="m">820</span> ms</code></pre></td></tr></table>
 </div>
 </div>
-<p>To download file from a S3 bucket, we could:</p>
+<h2 id="配合-org-mode-使用更佳">配合 org-mode 使用更佳</h2>
+
+<p>以前使用 Hexo 写博客时，博文都分散于各种 <code>.md</code> 文件中，管理起来很不方便。另一方面，由于我平时习惯用 org-mode 记记笔记，管理生活。有了好轮子，我干脆想着一鼓作气把车换了。在此我使用的是 <code>ox-hugo</code> 的 One post per Org subtree 方案，配置如下(需手动删除 <code>\</code>)：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">s3</span><span class="o">.</span><span class="n">download_file</span><span class="p">(</span><span class="s1">&#39;BUCKET_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;OBJECT_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;FILE_NAME&#39;</span><span class="p">)</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="nv">\#+HUGO_BASE_DIR:</span> <span class="nv">~/Dropbox/Blog/</span>
+<span class="nv">\#+HUGO_SECTION:</span> <span class="nv">post</span>
+<span class="nv">\#+HUGO_WEIGHT:</span> <span class="nv">auto</span>
+<span class="nv">\#+HUGO_AUTO_SET_LASTMOD:</span> <span class="no">t</span>
+<span class="nv">\#+author:</span>
+<span class="nv">\#+hugo_custom_front_matter:</span> <span class="ss">:author</span> <span class="s">&#34;ziyunch&#34;</span>
+<span class="nv">\*</span> <span class="nv">Technical</span>                                                       <span class="ss">:@技术宅:</span>
+<span class="nv">\**</span> <span class="nv">TODO</span> <span class="nv">博客由</span> <span class="nv">Hexo</span> <span class="nv">迁移至</span> <span class="nv">Hugo</span>                           <span class="ss">:Emacs:Hexo:Hugo:</span>
+<span class="nv">\ </span>  <span class="ss">:PROPERTIES:</span>
+<span class="nv">\ </span>  <span class="ss">:EXPORT_FILE_NAME:</span> <span class="nv">20190826-hexo-2-hugo</span>
+<span class="nv">\ </span>  <span class="ss">:END:</span></code></pre></td></tr></table>
 </div>
 </div>
-<p>Or:</p>
+<p>也就是说采用标签继承的方式，将博文分类。写完当篇博文，将 <code>TODO</code> 状态变更为 <code>DONE</code> 时， <code>ox-hugo</code> 会自动为文档生成时间戳。然后在 subtree 上 <code>C-c C-e H H</code> 即可在相应目录生成 <code>.md</code> 文档。此时如果后台正在运行着 <code>hugo server</code> ，即可在 <code>http://localhost:1313/</code> 看到即时更新。</p>
+
+<h2 id="在-github-上发布">在 Github 上发布</h2>
+
+<p>第一次部署，需要新建一个 public 文件夹，并将原来部署了 Hexo 博客的 repo 关联上，步骤如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;FILE_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">s3</span><span class="o">.</span><span class="n">download_fileobj</span><span class="p">(</span><span class="s1">&#39;BUCKET_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;OBJECT_NAME&#39;</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>We could also set configuration when uploading, downloading, or copying a file or S3 object by:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">boto3.s3.transfer</span> <span class="kn">import</span> <span class="n">TransferConfig</span>
-<span class="n">GB</span> <span class="o">=</span> <span class="mi">1024</span> <span class="o">**</span> <span class="mi">3</span>
-<span class="n">config</span> <span class="o">=</span> <span class="n">TransferConfig</span><span class="p">(</span><span class="n">multipart_threshold</span><span class="o">=</span><span class="mi">5</span><span class="o">*</span><span class="n">GB</span><span class="p">)</span>
-<span class="n">config</span> <span class="o">=</span> <span class="n">TransferConfig</span><span class="p">(</span><span class="n">max_concurrency</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">config</span> <span class="o">=</span> <span class="n">TransferConfig</span><span class="p">(</span><span class="n">use_threads</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-<span class="n">s3</span><span class="o">.</span><span class="n">upload_file</span><span class="p">(</span><span class="s1">&#39;FILE_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;BUCKET_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;OBJECT_NAME&#39;</span><span class="p">,</span> <span class="n">Config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ mkdir public
+$ hugo -t even
+$ <span class="nb">cd</span> public
+$ git init
+$ git remote add upstream https://github.com/ziyunch/ziyunch.github.io.git
+$ git add .
+$ git commit -m <span class="s2">&#34;switch to hugo&#34;</span>
+$ git push -f upstream master</code></pre></td></tr></table>
 </div>
 </div>
-<h2 id="prerequisites-psycopg2">Prerequisites: psycopg2</h2>
-
-<p>Psycopg2 is a popular PostgreSQL database adapter for python. We could find documentation <a href="http://initd.org/psycopg/docs/">here</a>.</p>
-
-<p>We could easily install psycopg2 via pip:</p>
+<p>之后则可如官网<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">发布指南</a>所示编写一个可执行的 <code>.sh</code> 文件来自动化部署发布：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ pip install psycopg2-binary</code></pre></td></tr></table>
-</div>
-</div>
-<p>To use psycopg2, we could import it, connect to an existing database and open a cursor to perform database operations:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">psycopg2</span>
-<span class="n">conn</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="o">=</span><span class="s2">&#34;DATABASE_NAME&#34;</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s2">&#34;USER&#34;</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">&#34;HOST&#34;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="s2">&#34;PORT&#34;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&#34;PASSWORD&#34;</span><span class="p">)</span>
-<span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>Query the database and fetch data in an iteration-like way:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql_query</span><span class="p">)</span>
-<span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
-<span class="n">cur</span><span class="o">.</span><span class="n">fetchmany</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>Pass parameters to SQL queries:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&#34;&#34;&#34;
-</span><span class="s2">    INSERT INTO some_table (an_int, a_date, another_date, a_string)
-</span><span class="s2">    VALUES (</span><span class="si">%(int)s</span><span class="s2">, </span><span class="si">%(date)s</span><span class="s2">, </span><span class="si">%(date)s</span><span class="s2">, </span><span class="si">%(str)s</span><span class="s2">);
-</span><span class="s2">    &#34;&#34;&#34;</span><span class="p">,</span>
-    <span class="p">{</span><span class="s1">&#39;int&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">:</span> <span class="s2">&#34;O&#39;Reilly&#34;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">18</span><span class="p">)})</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>Make the changes to the database persistent:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>Close communication with the database</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="upload-data-from-s3-into-redshift">Upload data from S3 into Redshift</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -406,70 +380,36 @@ region=us-east-1</code></pre></td></tr></table>
 </span><span class="lnt">23
 </span><span class="lnt">24
 </span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">connection_parameters</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;dbname&#39;</span><span class="p">:</span> <span class="n">dbname</span><span class="p">,</span>
-        <span class="s1">&#39;user&#39;</span><span class="p">:</span> <span class="n">user</span><span class="p">,</span>
-        <span class="s1">&#39;host&#39;</span><span class="p">:</span> <span class="n">host</span><span class="p">,</span>
-        <span class="s1">&#39;port&#39;</span><span class="p">:</span> <span class="n">port</span><span class="p">,</span>
-        <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="n">password</span>
-    <span class="p">}</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">conn</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="o">**</span><span class="n">connection_parameters</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Connected to Redshift.&#34;</span><span class="p">)</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Unable to connect to Redshift.&#34;</span><span class="p">)</span>
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/sh
+</span><span class="cp"></span>
+<span class="c1"># If a command fails then the deploy stops</span>
+<span class="nb">set</span> -e
 
-    <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="nb">printf</span> <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[0m\n&#34;</span>
 
-    <span class="n">upload_statement</span> <span class="o">=</span> <span class="s2">&#34;</span>
-            <span class="n">COPY</span> <span class="p">{}</span><span class="o">.</span><span class="p">{}</span>
-            <span class="n">FROM</span> <span class="p">{}</span>
-            <span class="n">IAM_ROLE</span> <span class="p">{}</span>
-            <span class="n">CSV</span><span class="p">;</span>
-            <span class="n">COMMIT</span><span class="p">;</span>
-    <span class="s2">&#34;.format(table_name, schema, file_name, iam_role)</span>
+<span class="c1"># Build the project.</span>
+hugo -t even
 
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">upload_statement</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Upload successfully&#34;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">Error</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">ExecuteFailure</span><span class="p">(</span><span class="s2">&#34;Failed to upload the file.&#34;</span><span class="p">)</span>
-    <span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="c1"># Go To Public folder</span>
+<span class="nb">cd</span> public
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span></code></pre></td></tr></table>
+<span class="c1"># Add changes to git.</span>
+git add .
+
+<span class="c1"># Commit changes.</span>
+<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&#34;</span>
+<span class="k">if</span> <span class="o">[</span> -n <span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+        <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+
+<span class="c1"># Push source and build repos.</span>
+git push upstream master</code></pre></td></tr></table>
 </div>
 </div>
-<h2 id="load-data-from-redshift-to-pandas">Load data from Redshift to pandas</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">sqlalchemy</span> <span class="kn">as</span> <span class="nn">sa</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-<span class="n">surl</span> <span class="o">=</span> <span class="s1">&#39;redshift+psycopg2://&#39;</span>
-<span class="n">engine</span> <span class="o">=</span> <span class="n">sa</span><span class="o">.</span><span class="n">create_engine</span><span class="p">(</span><span class="n">surl</span><span class="o">+</span><span class="n">user</span><span class="o">+</span><span class="s1">&#39;:&#39;</span><span class="o">+</span><span class="n">password</span><span class="o">+</span><span class="s1">&#39;@&#39;</span><span class="o">+</span><span class="n">host</span><span class="o">+</span><span class="s1">&#39;:&#39;</span><span class="o">+</span><span class="n">port</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">dbname</span><span class="p">,</span><span class="n">echo</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM table ;&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span></code></pre></td></tr></table>
-</div>
-</div>
+<p>自此大功告成</p>
     </div>
 
     <div class="post-copyright">
@@ -480,7 +420,7 @@ region=us-east-1</code></pre></td></tr></table>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2019-08-30
+        2019-08-31
         
     </span>
   </p>
@@ -500,14 +440,18 @@ region=us-east-1</code></pre></td></tr></table>
   </div>
 </div><footer class="post-footer">
       <div class="post-tags">
-          <a href="../../../tags/data-engineering/">Data-Engineering</a>
-          <a href="../../../tags/interview/">Interview</a>
-          <a href="../../../tags/python/">Python</a>
+          <a href="../../../tags/emacs/">Emacs</a>
+          <a href="../../../tags/hexo/">Hexo</a>
+          <a href="../../../tags/hugo/">Hugo</a>
           </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="../../../2019/08/448.html/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Hacking the Data Transformation Interview</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
         <a class="next" href="../../../2019/08/446.html/">
-            <span class="next-text nav-default">博客由 Hexo 迁移至 Hugo</span>
+            <span class="next-text nav-default">Sleep No More 小结</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

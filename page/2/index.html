@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://blindwith.science/" />
 
-<meta property="og:updated_time" content="2019-08-30T11:14:00-04:00" />
+<meta property="og:updated_time" content="2019-08-31T20:40:00-04:00" />
 <meta itemprop="name" content="Blind with Science">
 <meta itemprop="description" content="Ziyunch&#39;s Blog">
 
@@ -115,6 +115,98 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="../../2019/07/444.html/">Emacs 记帐</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-07-04 </span>
+      <div class="post-category">
+          <a href="../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
+          </div>
+        <span class="more-meta"> 约 3372 字 </span>
+        <span class="more-meta"> 预计阅读 7 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>昨天搞定 Emacs 的中文环境，今天想着好久没记帐了，随手记总是很花时间，干脆一鼓作气，将记帐一起搬过来。</p>
+
+<h2 id="复式记帐">复式记帐</h2>
+
+<p>我本科时双修了一门金融，其中最为繁琐，也是最令人头疼的一门课便是会计学。我不爱听讲，毕业之后也将会计的知识点忘得查差不多了，然而其&rdquo;有借必有贷，借贷必相等&rdquo;的复式记帐法，反而是我生活中运用最多的。</p>
+
+<p>复式记帐法说起来复杂，对个人来说，就是将每笔交易分门别类，填入下面这条等式中：</p>
+
+<style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
+
+<div class="org-center">
+  <div></div>
+
+<p>资产 + 费用 = 负债 + 所有者权益 + 收入</p>
+
+<p></div></p>
+
+<p>在个人记帐中，这条等式辅以借贷概念会令人望而生畏，所以我将其略一变形：</p>
+
+<style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
+
+<div class="org-center">
+  <div></div>
+
+<p>（+资产）+（-负债）+（+费用）+（-收入）+（-所有者权益）= 0</p>
+
+<p></div></p>
+
+<ul>
+<li>资产与负债都是与金钱直接挂钩的，比如银行户头，比如人民币美钞，比如信用卡帐户，再比如借条，这些都可以算是货币的不同表示形式。</li>
+<li>费用与收入则是与金钱间接挂钩的，比如工资，比如商品，比如服务，这些都可以算是生产资本与商品资本的不同表现形式。其中收入与字面意思不同，可以理解为生产资本（劳动力等）。</li>
+<li>所有者权益对个人意义不大，一般用来记录历史盈余与糊涂帐。</li>
+</ul>
+
+<p>而这个变形公式中的正负号，则可以将各项目的符号关系，用作资金流向的参照。这么说有点玄乎，换个茨威格式的说法就是：&rdquo;人们从命运得到的一切，冥冥之中都记下了它的价钱。&rdquo;花钱买了服务，则是减少资产（花了钱），增加费用（得到服务）；工资到帐，则是增加资产（到帐），减少收入（既有劳动时间的减少）；别人跟你借了钱，则是资产减少（银行帐户或现金余额减少），负债增加（别人在你这儿的负债）。</p>
+
+<p>总结一下，由于人类暂时无法操控时间，所以费用一般为正，收入一般为负。而没有破产的情况下资产一般为正，别人欠你的钱为正，信用卡债（你欠别人的钱）为负。</p>
+    </div>
+    <div class="read-more">
+      <a href="../../2019/07/444.html/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="../../2019/07/443.html/">Emacs 中文环境配置</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-07-03 </span>
+      <div class="post-category">
+          <a href="../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
+          </div>
+        <span class="more-meta"> 约 1561 字 </span>
+        <span class="more-meta"> 预计阅读 4 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>使用 Emacs 三年多了，当时受了 <a href="https://github.com/redguardtoo/mastering-emacs-in-one-year-guide">一年成为 Emacs 高手</a> 的蛊惑，且贪图便利，使用了 <a href="https://github.com/purcell/emacs.d">Purcell 的配置</a>。正如 Purcell 所说，此配置相当 reasonable，用来入门确实让我受益匪浅，少走了很多弯路。三年使用下来，我需要添加的插件只有 <code>org-ref</code> 和 <code>ob-smiles</code> ，配置更新也仅须 <code>git pull</code> 外加 <code>M-x package-list-packages U x</code> 即可，非常方便。</p>
+
+<p>然而过去三年来，我主要是使用 Emacs 中的 org-mode 来记 Science 与 Tech 方面笔记，基于 Latex 的长文章 / 代码我更喜欢用 Atoms + Vim-mode 来写，基于 Markdown 的博客则用 MWeb 来写，中文笔记喜欢使用 Bears，最后却还是回到了苹果自带的免费 Notes。其他零零碎碎的场景则使用更为零碎的 app，餐馆用 DayGram + Workflowy，记账用随手记。非常不统一。</p>
+
+<p>也就是说，我并不是一个“running my life with Emacs”的重症者，Purcell 配置的 Emacs 中也有大量我用不到，或者需要使用却不甚了解的插件。所以失业在家这个契机恰好也是让我重新审视 Emacs，看看我能否最大化地使用 Emacs。</p>
+
+<p>对我而言，使用 Atoms 来写代码与 Latex，是由于我对使用 Emacs 调试还不甚熟练。所以这几天我花了一点时间重新阅读了 Emacs 手册。</p>
+
+<p>使用 MWeb 来写博客与使用 Notes 来记笔记的原因则比较可笑，因为我基本上都是使用英文记录 Science &amp; Tech 方面的笔记，我并没有配置 Emacs 的中文环境。所以需要使用中文来写东西时，我自然就得换用其他工具。这段时间准备面试，将 org-mode 的使用范围扩大到记录面试适宜，由于一亩三分地是一个主要资料来源，不免需要粘贴许多中文帖子进来。这时再将 Emacs 视为一个纯英文环境未免有些麻烦。而将 Emacs 中文化了，自然也不需要 MWeb 和 Notes 或者 Bear 什么事了。</p>
+
+<p>而记录餐馆和消费的需求比较麻烦，本文暂且搁置，今后有空再来研究。</p>
+    </div>
+    <div class="read-more">
+      <a href="../../2019/07/443.html/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="../../2018/10/442.html/">Gene Variation Analysis of Stomach Cancer</a></h1>
@@ -201,52 +293,6 @@
     </div>
     <div class="read-more">
       <a href="../../2018/10/440.html/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="../../2018/09/439.html/">lighthouse</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-09-04 </span>
-      <div class="post-category">
-          <a href="../../categories/%E5%8D%83%E9%87%8C%E8%A1%8C/"> 千里行 </a>
-          </div>
-        <span class="more-meta"> 约 270 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>到灯塔去</p>
-    </div>
-    <div class="read-more">
-      <a href="../../2018/09/439.html/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="../../2017/09/438.html/">新电脑折腾记录</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-09-24 </span>
-      <div class="post-category">
-          <a href="../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
-          </div>
-        <span class="more-meta"> 约 1065 字 </span>
-        <span class="more-meta"> 预计阅读 3 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>于 9 月 22 日买了个新电脑，发现我原来在 iMac 和 Thinkpad 上弄的那些东西，又需要重新安装配置在新电脑上，非常麻烦。之前看到别人为自己配置 HEXO 主题记录的小<a href="http://moxfive.xyz/2015/08/20/blog-building/">日志</a>，觉得很方便。为了避免以后购入新电脑后出现这样一个阶段，在此对这台电脑上进行的折腾进行记录。</p>
-    </div>
-    <div class="read-more">
-      <a href="../../2017/09/438.html/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>

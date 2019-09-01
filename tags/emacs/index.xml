@@ -7,17 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Mon, 26 Aug 2019 23:49:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 31 Aug 2019 20:40:00 -0400</lastBuildDate>
     
 	<atom:link href="http://blindwith.science/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Mac 版 Emacs 中使用 Rime 输入法打带调双拼</title>
+      <link>http://blindwith.science/2019/08/449.html/</link>
+      <pubDate>Sat, 31 Aug 2019 20:40:00 -0400</pubDate>
+      
+      <guid>http://blindwith.science/2019/08/449.html/</guid>
+      <description>由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。 https://manateelazycat.github.io/emacs/2019/07/24/use-rime-in-emacs.html 基础配置 首先安装鼠须管，</description>
+    </item>
+    
+    <item>
       <title>博客由 Hexo 迁移至 Hugo</title>
-      <link>http://blindwith.science/2019/08/446.html/</link>
+      <link>http://blindwith.science/2019/08/447.html/</link>
       <pubDate>Mon, 26 Aug 2019 23:49:00 -0400</pubDate>
       
-      <guid>http://blindwith.science/2019/08/446.html/</guid>
+      <guid>http://blindwith.science/2019/08/447.html/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;本篇博文使用 org-mode 书就，耶！&lt;/p&gt;
 &lt;/blockquote&gt;

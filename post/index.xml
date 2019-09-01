@@ -7,26 +7,35 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Fri, 30 Aug 2019 11:14:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 31 Aug 2019 20:40:00 -0400</lastBuildDate>
     
 	<atom:link href="http://blindwith.science/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Mac 版 Emacs 中使用 Rime 输入法打带调双拼</title>
+      <link>http://blindwith.science/2019/08/449.html/</link>
+      <pubDate>Sat, 31 Aug 2019 20:40:00 -0400</pubDate>
+      
+      <guid>http://blindwith.science/2019/08/449.html/</guid>
+      <description>由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。 https://manateelazycat.github.io/emacs/2019/07/24/use-rime-in-emacs.html 基础配置 首先安装鼠须管，</description>
+    </item>
+    
+    <item>
       <title>Hacking the Data Transformation Interview</title>
-      <link>http://blindwith.science/2019/08/447.html/</link>
+      <link>http://blindwith.science/2019/08/448.html/</link>
       <pubDate>Fri, 30 Aug 2019 11:14:00 -0400</pubDate>
       
-      <guid>http://blindwith.science/2019/08/447.html/</guid>
+      <guid>http://blindwith.science/2019/08/448.html/</guid>
       <description>&lt;p&gt;I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>博客由 Hexo 迁移至 Hugo</title>
-      <link>http://blindwith.science/2019/08/446.html/</link>
+      <link>http://blindwith.science/2019/08/447.html/</link>
       <pubDate>Mon, 26 Aug 2019 23:49:00 -0400</pubDate>
       
-      <guid>http://blindwith.science/2019/08/446.html/</guid>
+      <guid>http://blindwith.science/2019/08/447.html/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;本篇博文使用 org-mode 书就，耶！&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -36,10 +45,10 @@
     
     <item>
       <title>Sleep No More 小结</title>
-      <link>http://blindwith.science/2019/08/445.html/</link>
+      <link>http://blindwith.science/2019/08/446.html/</link>
       <pubDate>Sun, 25 Aug 2019 17:04:00 -0400</pubDate>
       
-      <guid>http://blindwith.science/2019/08/445.html/</guid>
+      <guid>http://blindwith.science/2019/08/446.html/</guid>
       <description>&lt;p&gt;以下是当年（2017-08-26）周六下午看完五点场写的总结，当时想着要建个微信公众号，就想留着弄个十万加，然而两年了公众号都给销号了也一直没发，就放博客上吧。&lt;/p&gt;
 
 &lt;p&gt;周六五点场，4点40左右到达酒店（McKittrick
@@ -52,6 +61,15 @@ Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=
             &lt;p&gt;Figure 1: 根据记忆推算的舞台调度示意图&lt;/p&gt;
         &lt;/figcaption&gt;
 &lt;/figure&gt;</description>
+    </item>
+    
+    <item>
+      <title>鼠须管傻瓜化配置</title>
+      <link>http://blindwith.science/2019/07/445.html/</link>
+      <pubDate>Sat, 20 Jul 2019 20:58:00 -0400</pubDate>
+      
+      <guid>http://blindwith.science/2019/07/445.html/</guid>
+      <description>This configuration: Optimized for simplified Chinese; Implement 朙月拼音 luna-pinyin, 微软双拼 double-pinyin-mspy and 地球拼音 terra-pinyin with 20+ dictionaries including symbols and emoji; Feature 地球双拼 terra-double-pinyin-mspy, a double pinyin input method supporting tone marks; Use 地球双拼 terra-double-pinyin-mspy to reverse lookup 吴语（苏州话）=wugniu_so</description>
     </item>
     
     <item>
