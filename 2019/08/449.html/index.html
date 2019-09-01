@@ -44,14 +44,14 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blindwith.science/2019/08/449.html/" />
 <meta property="article:published_time" content="2019-08-31T20:40:00-04:00" />
-<meta property="article:modified_time" content="2019-08-31T21:41:40-04:00" />
+<meta property="article:modified_time" content="2019-09-01T13:57:47-04:00" />
 <meta itemprop="name" content="Mac 版 Emacs 中使用 Rime 输入法打带调双拼">
 <meta itemprop="description" content="由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。">
 
 
 <meta itemprop="datePublished" content="2019-08-31T20:40:00-04:00" />
-<meta itemprop="dateModified" content="2019-08-31T21:41:40-04:00" />
-<meta itemprop="wordCount" content="1097">
+<meta itemprop="dateModified" content="2019-09-01T13:57:47-04:00" />
+<meta itemprop="wordCount" content="1108">
 
 
 
@@ -131,7 +131,7 @@
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 1097 字 </span>
+          <span class="more-meta"> 约 1108 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -299,7 +299,7 @@ make liberime</code></pre></td></tr></table>
 
 <li><p>输入分号的问题前面通过调用新写的 schema 解决，但是声调问题比较麻烦。由于 pyim 作者给减号键（我用作平声调的）赋予了太多用途，我这半调子 lisp 水平一时半会儿也写不了一个新的函数使此键在非后翻页状态作为简单的 <code>pyim-self-insert-command</code> ，而且还得把后面那个函数改了，事情实在太多，所以我将方括号改作翻页，并将长得差不多的等号键用作平声。以后有时间，可能还是会把它改回减号键，毕竟长得更像一点。</p></li>
 
-<li><p>其次则是卡顿的问题。我发现当 liberime build 时，由于在个人库中已经有过 build 好的文件，所以不会在 liberime 的库中重新 build 一份，这样非常影响速度。所以我复制了一份我写的地球双拼给 liberime 专用，效果拔群。</p></li>
+<li><p>其次则是卡顿的问题。我发现当 liberime build 时，由于在个人库中已经有过 build 好的文件，所以不会在 liberime 的库中重新 build 一份，这样非常影响速度。所以我复制了一份我写的地球双拼给 liberime 专用（yaml 文件见<a href="https://github.com/ziyunch/Rime/blob/master/terra%5Fdouble%5Fpinyin%5Fpyim.schema.yaml">这儿</a>），效果拔群。</p></li>
 </ul>
 
 <p>具体配置如下：</p>
@@ -400,7 +400,7 @@ make liberime</code></pre></td></tr></table>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2019-08-31
+        2019-09-01
         
     </span>
   </p>
