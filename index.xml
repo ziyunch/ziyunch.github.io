@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Sun, 01 Sep 2019 16:58:50 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 01 Sep 2019 17:01:01 -0400</lastBuildDate>
     
 	<atom:link href="http://blindwith.science/index.xml" rel="self" type="application/rss+xml" />
     
@@ -56,7 +56,7 @@ Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=
 ($4)，穿过漆黑走廊以适应灯光晦暗的环境。而后进入酒吧等待酒保带领入场，并获得白色面具以佩戴于面&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-2&#34;&gt;&lt;a href=&#34;#fn:fn-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;，进入电梯，开始演出。&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&#34;./ox-hugo/sleepnomore.png&#34;
+    &lt;img src=&#34;./ox-hugo/sleepnomore.svg&#34;
          alt=&#34;Figure 1: 根据记忆推算的舞台调度示意图&#34;/&gt; &lt;figcaption&gt;
             &lt;p&gt;Figure 1: 根据记忆推算的舞台调度示意图&lt;/p&gt;
         &lt;/figcaption&gt;
@@ -4159,7 +4159,7 @@ method supporting tone marks;&lt;/li&gt;
     <item>
       <title>About</title>
       <link>http://blindwith.science/about/</link>
-      <pubDate>Sun, 01 Sep 2019 16:58:50 -0400</pubDate>
+      <pubDate>Sun, 01 Sep 2019 17:01:01 -0400</pubDate>
       
       <guid>http://blindwith.science/about/</guid>
       <description>关于我 常用ID是「Ziyunch」，来源是初一练习建站时胡诌的紫云茶室的拼音与英文的混合体，后来也被我衍生为无意义的「梓韵岑和」，皆是中二时</description>
