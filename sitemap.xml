@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blindwith.science/2019/09/450.html/</loc>
+    <lastmod>2019-09-04T20:06:04-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://blindwith.science/2019/08/449.html/</loc>
     <lastmod>2019-09-01T16:42:51-04:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -3104,21 +3111,49 @@
   
   <url>
     <loc>http://blindwith.science/</loc>
-    <lastmod>2019-09-03T13:50:52-04:00</lastmod>
+    <lastmod>2019-09-04T20:06:04-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blindwith.science/categories/</loc>
-    <lastmod>2019-09-03T13:50:52-04:00</lastmod>
+    <lastmod>2019-09-04T20:06:04-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blindwith.science/tags/emacs/</loc>
-    <lastmod>2019-09-01T16:42:51-04:00</lastmod>
+    <lastmod>2019-09-04T20:06:04-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/tags/org-mode/</loc>
+    <lastmod>2019-09-04T20:06:04-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/post/</loc>
+    <lastmod>2019-09-04T20:06:04-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/tags/</loc>
+    <lastmod>2019-09-04T20:06:04-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/categories/%E6%8A%80%E6%9C%AF%E5%AE%85/</loc>
+    <lastmod>2019-09-04T20:06:04-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -3126,13 +3161,6 @@
   <url>
     <loc>http://blindwith.science/tags/liberime/</loc>
     <lastmod>2019-09-01T16:42:51-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blindwith.science/post/</loc>
-    <lastmod>2019-09-03T13:50:52-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -3146,20 +3174,6 @@
   
   <url>
     <loc>http://blindwith.science/tags/rime/</loc>
-    <lastmod>2019-09-01T16:42:51-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blindwith.science/tags/</loc>
-    <lastmod>2019-09-03T13:50:52-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blindwith.science/categories/%E6%8A%80%E6%9C%AF%E5%AE%85/</loc>
     <lastmod>2019-09-01T16:42:51-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

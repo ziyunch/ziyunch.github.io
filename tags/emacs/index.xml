@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Sat, 31 Aug 2019 20:40:00 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 04 Sep 2019 20:06:00 -0400</lastBuildDate>
     
 	<atom:link href="http://blindwith.science/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Emacs 中添加结构模板</title>
+      <link>http://blindwith.science/2019/09/450.html/</link>
+      <pubDate>Wed, 04 Sep 2019 20:06:00 -0400</pubDate>
+      
+      <guid>http://blindwith.science/2019/09/450.html/</guid>
+      <description>作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 会自动生成 1 2 3 #+BEGIN_SRC #+END_SRC 这样插入代码或者引用这类结构非常方便。 在 org-structure-template-alist 这</description>
+    </item>
     
     <item>
       <title>Mac 版 Emacs 中使用 Rime 输入法打带调双拼</title>
