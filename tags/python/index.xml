@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Fri, 30 Aug 2019 11:14:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 13:58:00 -0700</lastBuildDate>
     
 	<atom:link href="http://blindwith.science/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,15 @@
       
       <guid>http://blindwith.science/2019/08/448.html/</guid>
       <description>&lt;p&gt;I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>My first Django app</title>
+      <link>http://blindwith.science/2019/10/444.html/</link>
+      <pubDate>Fri, 11 Oct 2019 13:58:00 -0700</pubDate>
+      
+      <guid>http://blindwith.science/2019/10/444.html/</guid>
+      <description>This is my implementaion on the Django tutorial. Create Django project and a polls app First, I verify my Django installation and version by: 1 python -m django --version If Python (use 3 here) or Django (1.11.23 here) is not installed, go by: 1 2 3 4 5 6 brew install python mkdir ~/.venvs/venv python3 -m venv ~/.venvs/venv source ~/.venvs/venv/bin/activate pip install django==1.11.23 pip install psycopg2 Now I could create</description>
     </item>
     
     <item>

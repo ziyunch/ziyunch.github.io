@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Wed, 04 Sep 2019 20:06:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 13:58:00 -0700</lastBuildDate>
     
 	<atom:link href="http://blindwith.science/index.xml" rel="self" type="application/rss+xml" />
     
@@ -104,6 +104,15 @@ method supporting tone marks;&lt;/li&gt;
 吴语（苏州话） &lt;code&gt;wugniu_soutseu&lt;/code&gt; with tone marks, toggled by &lt;code&gt;`&lt;/code&gt;;&lt;/li&gt;
 &lt;li&gt;Use ASCII mode for several applications.&lt;/li&gt;
 &lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>My first Django app</title>
+      <link>http://blindwith.science/2019/10/444.html/</link>
+      <pubDate>Fri, 11 Oct 2019 13:58:00 -0700</pubDate>
+      
+      <guid>http://blindwith.science/2019/10/444.html/</guid>
+      <description>This is my implementaion on the Django tutorial. Create Django project and a polls app First, I verify my Django installation and version by: 1 python -m django --version If Python (use 3 here) or Django (1.11.23 here) is not installed, go by: 1 2 3 4 5 6 brew install python mkdir ~/.venvs/venv python3 -m venv ~/.venvs/venv source ~/.venvs/venv/bin/activate pip install django==1.11.23 pip install psycopg2 Now I could create</description>
     </item>
     
     <item>
@@ -4046,46 +4055,46 @@ method supporting tone marks;&lt;/li&gt;
     <item>
       <title>家长会惊魂</title>
       <link>http://blindwith.science/2005/11/17.html/</link>
-      <pubDate>Sat, 19 Nov 2005 19:50:17 +0000</pubDate>
+      <pubDate>Sat, 19 Nov 2005 19:50:00 -0500</pubDate>
       
       <guid>http://blindwith.science/2005/11/17.html/</guid>
-      <description>ziyunch 发表于 2005-11-19 19:50:07 @MSN Live 今天老妈去开家长会，我是心里忐忑不安。Why？就在星期三我上课明目张胆玩文曲星，张默还走过来专门看了一眼……何况我数学这次考</description>
+      <description>ziyunch @ MSN Live 今天老妈去开家长会，我是心里忐忑不安。Why？就在星期三我上课明目张胆玩文曲星，张默还走过来专门看了一眼……何况我数学这次考砸了，才</description>
     </item>
     
     <item>
       <title>杂志</title>
       <link>http://blindwith.science/2005/11/16.html/</link>
-      <pubDate>Wed, 09 Nov 2005 18:16:08 +0000</pubDate>
+      <pubDate>Wed, 09 Nov 2005 18:16:00 -0500</pubDate>
       
       <guid>http://blindwith.science/2005/11/16.html/</guid>
-      <description>ziyunch 发表于 2005-11-09 18:16:00 @MSN Live 又到了订报刊杂志的时候，心中有n多想订的杂志，可是经济有限，只能绞尽脑汁地来筛选。不禁开始回想我所看过的报刊杂志，忍不住评点</description>
+      <description>ziyunch @ MSN Live 又到了订报刊杂志的时候，心中有n多想订的杂志，可是经济有限，只能绞尽脑汁地来筛选。不禁开始回想我所看过的报刊杂志，忍不住评点起来：（</description>
     </item>
     
     <item>
       <title>王成语录之天蝎座</title>
       <link>http://blindwith.science/2005/10/15.html/</link>
-      <pubDate>Sat, 22 Oct 2005 19:50:04 +0000</pubDate>
+      <pubDate>Sat, 22 Oct 2005 19:50:00 -0400</pubDate>
       
       <guid>http://blindwith.science/2005/10/15.html/</guid>
-      <description>ziyunch 发表于 2005-10-22 19:50:40 @MSN Live 10月21日： 杆呢,有两个可能.一种是救人:一个掉进河里,就用杆去拉拉拉;一种是戳人,那一定是垂直于自己的肚子 .(边说边示意</description>
+      <description>ziyunch @ MSN Live 10月21日： 杆呢，有两个可能。一种是救人：一个掉进河里，就用杆去拉拉拉；一种是戳人，那一定是垂直于自己的肚子。（边说边示意） 大家看</description>
     </item>
     
     <item>
       <title>苏中——不一定要选择它</title>
       <link>http://blindwith.science/2005/10/14.html/</link>
-      <pubDate>Thu, 06 Oct 2005 21:35:20 +0000</pubDate>
+      <pubDate>Thu, 06 Oct 2005 21:35:00 -0400</pubDate>
       
       <guid>http://blindwith.science/2005/10/14.html/</guid>
-      <description>ziyunch 发表于 2005-10-06 21:35:37 @MSN Live 如果你不是苏州人就不用问了，可如果是苏州的，一定会冒出个大大的问号——为什么？ 我原来也认为苏中好啊，苏中的高考状元，竞赛冠军</description>
+      <description>ziyunch @ MSN Live 如果你不是苏州人就不用问了，可如果是苏州的，一定会冒出个大大的问号——为什么？ 我原来也认为苏中好啊，苏中的高考状元，竞赛冠军，李政道</description>
     </item>
     
     <item>
       <title>小蹄蹄眼中的我</title>
       <link>http://blindwith.science/2005/09/13.html/</link>
-      <pubDate>Sun, 18 Sep 2005 16:55:18 +0000</pubDate>
+      <pubDate>Sun, 18 Sep 2005 16:55:00 -0400</pubDate>
       
       <guid>http://blindwith.science/2005/09/13.html/</guid>
-      <description>ziyunch 发表于 2005-09-18 16:55:03 @QQ空间 我眼中的他/它/她 XXX，听到这个名字首先会想到什么？不认识她的人就不说了，小学时的同学我也不知道，初中同学嘛，首先一</description>
+      <description>ziyunch @ QQ空间 我眼中的他/它/她 XXX，听到这个名字首先会想到什么？不认识她的人就不说了，小学时的同学我也不知道，初中同学嘛，首先一定会想到…</description>
     </item>
     
     <item>
