@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PostgreSQL on Blind with Science</title>
+    <link>http://blindwith.science/tags/postgresql/</link>
+    <description>Recent content in PostgreSQL on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Tue, 05 Nov 2019 11:23:00 -0800</lastBuildDate>
+    
+	<atom:link href="http://blindwith.science/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Postgresql server did not shutdown correctly</title>
+      <link>http://blindwith.science/2019/11/452.html/</link>
+      <pubDate>Tue, 05 Nov 2019 11:23:00 -0800</pubDate>
+      
+      <guid>http://blindwith.science/2019/11/452.html/</guid>
+      <description>I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django. 1 2 3 4 5 6 7 conn = _connect(dsn, connection_factory=connection_factory, **kwasync) django.db.utils.OperationalError: could not connect to server: Connection refused Is the server running on host &amp;#34;localhost&amp;#34; (::1) and accepting TCP/IP connections on port 5432? could not connect to server: Connection refused Is</description>
+    </item>
+    
+  </channel>
+</rss>
