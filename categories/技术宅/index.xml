@@ -18,7 +18,27 @@
       <pubDate>Tue, 05 Nov 2019 11:23:00 -0800</pubDate>
       
       <guid>http://blindwith.science/2019/11/452.html/</guid>
-      <description>I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django. 1 2 3 4 5 6 7 conn = _connect(dsn, connection_factory=connection_factory, **kwasync) django.db.utils.OperationalError: could not connect to server: Connection refused Is the server running on host &amp;#34;localhost&amp;#34; (::1) and accepting TCP/IP connections on port 5432? could not connect to server: Connection refused Is</description>
+      <description>&lt;p&gt;I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+        Is the server running on host &amp;#34;localhost&amp;#34; (::1) and accepting
+        TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+        Is the server running on host &amp;#34;localhost&amp;#34; (127.0.0.1) and accepting
+        TCP/IP connections on port 5432?&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -27,7 +47,7 @@
       <pubDate>Fri, 11 Oct 2019 13:58:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/10/451.html/</guid>
-      <description>This is my implementaion on the Django tutorial. Create Django project and a polls app First, I verify my Django installation and version by: 1 python -m django --version If Python (use 3 here) or Django (1.11.23 here) is not installed, go by: 1 2 3 4 5 6 brew install python mkdir ~/.venvs/venv python3 -m venv ~/.venvs/venv source ~/.venvs/venv/bin/activate pip install django==1.11.23 pip install psycopg2 Now I could create</description>
+      <description>&lt;p&gt;This is my implementaion on the &lt;a href=&#34;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&#34;&gt;Django tutorial&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>

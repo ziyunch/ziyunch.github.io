@@ -16,7 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ziyunch" /><meta name="description" content="I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django. 1 2 3 4 5 6 7 conn = _connect(dsn, connection_factory=connection_factory, **kwasync) django.db.utils.OperationalError: could not connect to server: Connection refused Is the server running on host &amp;#34;localhost&amp;#34; (::1) and accepting TCP/IP connections on port 5432? could not connect to server: Connection refused Is" /><meta name="keywords" content="ziyunch, blog" />
+<meta name="author" content="ziyunch" /><meta name="description" content="I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.
+1 2 3 4 5 6 7  conn = _connect(dsn, connection_factory=connection_factory, **kwasync) django.db.utils.OperationalError: could not connect to server: Connection refused Is the server running on host &amp;#34;localhost&amp;#34; (::1) and accepting TCP/IP connections on port 5432? could not connect to server: Connection refused Is the server running on host &amp;#34;localhost&amp;#34; (127.0.0.1) and accepting TCP/IP connections on port 5432?  " /><meta name="keywords" content="ziyunch, blog" />
 
 
 
@@ -39,17 +40,57 @@
 
 
 <meta property="og:title" content="Postgresql server did not shutdown correctly" />
-<meta property="og:description" content="I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django. 1 2 3 4 5 6 7 conn = _connect(dsn, connection_factory=connection_factory, **kwasync) django.db.utils.OperationalError: could not connect to server: Connection refused Is the server running on host &#34;localhost&#34; (::1) and accepting TCP/IP connections on port 5432? could not connect to server: Connection refused Is" />
+<meta property="og:description" content="I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+        Is the server running on host &#34;localhost&#34; (::1) and accepting
+        TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+        Is the server running on host &#34;localhost&#34; (127.0.0.1) and accepting
+        TCP/IP connections on port 5432?
+
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blindwith.science/2019/11/452.html/" />
 <meta property="article:published_time" content="2019-11-05T11:23:00-08:00" />
-<meta property="article:modified_time" content="2019-11-05T22:51:50-08:00" />
+<meta property="article:modified_time" content="2019-11-05T22:57:25-08:00" />
 <meta itemprop="name" content="Postgresql server did not shutdown correctly">
-<meta itemprop="description" content="I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django. 1 2 3 4 5 6 7 conn = _connect(dsn, connection_factory=connection_factory, **kwasync) django.db.utils.OperationalError: could not connect to server: Connection refused Is the server running on host &#34;localhost&#34; (::1) and accepting TCP/IP connections on port 5432? could not connect to server: Connection refused Is">
+<meta itemprop="description" content="I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+        Is the server running on host &#34;localhost&#34; (::1) and accepting
+        TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+        Is the server running on host &#34;localhost&#34; (127.0.0.1) and accepting
+        TCP/IP connections on port 5432?
+
+">
 
 
 <meta itemprop="datePublished" content="2019-11-05T11:23:00-08:00" />
-<meta itemprop="dateModified" content="2019-11-05T22:51:50-08:00" />
+<meta itemprop="dateModified" content="2019-11-05T22:57:25-08:00" />
 <meta itemprop="wordCount" content="228">
 
 
@@ -57,7 +98,27 @@
 <meta itemprop="keywords" content="PostgreSQL," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Postgresql server did not shutdown correctly"/>
-<meta name="twitter:description" content="I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django. 1 2 3 4 5 6 7 conn = _connect(dsn, connection_factory=connection_factory, **kwasync) django.db.utils.OperationalError: could not connect to server: Connection refused Is the server running on host &#34;localhost&#34; (::1) and accepting TCP/IP connections on port 5432? could not connect to server: Connection refused Is"/>
+<meta name="twitter:description" content="I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+        Is the server running on host &#34;localhost&#34; (::1) and accepting
+        TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+        Is the server running on host &#34;localhost&#34; (127.0.0.1) and accepting
+        TCP/IP connections on port 5432?
+
+"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -190,7 +251,6 @@ It doesn&rsquo;t give the process a chance to cleanly:</p>
 <li>reset its terminal characteristics</li>
 </ol>
 </blockquote>
-
     </div>
 
     <div class="post-copyright">
