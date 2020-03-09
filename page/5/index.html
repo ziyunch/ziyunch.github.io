@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://blindwith.science/" />
 
-<meta property="og:updated_time" content="2019-12-21T23:05:00-08:00" />
+<meta property="og:updated_time" content="2020-03-08T20:26:04-07:00" />
 <meta itemprop="name" content="Blind with Science">
 <meta itemprop="description" content="Ziyunch&#39;s Blog">
 
@@ -115,6 +115,45 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="../../2017/02/434.html/">Enzyme Evolution and Vim</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-02-04 </span>
+      <div class="post-category">
+          <a href="../../categories/%E7%A7%91%E7%A0%94%E5%9C%88/"> 科研圈 </a>
+          </div>
+        <span class="more-meta"> 约 1241 字 </span>
+        <span class="more-meta"> 预计阅读 3 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h1 id="enzyme-evolution">Enzyme evolution</h1>
+
+<p>我一直都对比较大的蓝图感兴趣，如果当时有意识地去选择，自己可能就会去做Bioinformatics相关的研究了。（为什么不去当码农。。。）可能因为这个的缘故，我对enzyme evolution也一直有那么点兴趣。</p>
+
+<p>去年 Doug sabbatical，于是他们组有半年与我们组一起开联合组会，我也得知这一与我们同幢楼的实验室具体是做的什么。今年年初的时候学校搞了个 <a href="https://kb.brandeis.edu/display/SCI/MiniCourse+in+Statistics">minicourse in statistics</a>，Doug也在其中开了一门 *Bayesian Methods for Analysis of Protein Evolution*。一眼督见后面两个单词的我想着正和朕意，便报名上课。课程很短，除去一天基本上是<del>废话</del>基础介绍的Linux/R的入门课外，正式课程只有三天。而在其中Doug讲了两天的概率（我还没带纸笔，只能用Emacs来记笔记，简直头大）。不过第三天的实战(BLAST+ClustalOmega+Phyml+BAli-Phy)确实算带我入了门。不得不说一个搞生化研究的老师比一个搞计算机的老师在演示BLAST时，关注的重点要实用许多。</p>
+
+<p>不过虽然有上手操作，这毕竟还是课程，而我缺少课堂学习的能力，所以还需实例演示。也是凑巧，Doug昨天讲了个seminar，正是关于他如何用evolutionary手段玩弄LDH和MDH两种酶的，听完之后基本上明白了实战的思路，回家又顶着高烧扫了一遍他的文章们，大致也摸出了基本的套路：</p>
+
+<ul>
+<li>他们组自己关于LDH/MDH的几篇文章：和seminar上讲的差不多，但是有具体的实验方法说明呀；</li>
+<li>他的几篇理论性文章：跟他上课的内容互为补充；</li>
+<li>他和其他组合作的文章：和Miller爷爷合作的ion channel的，和Oprian合作的rhodopsin的，和Kern合作的thermoadaptation的，和Garrity合作的果蝇thermosensor的。只想吐槽好多Nature Science啊。。</li>
+</ul>
+
+<p>然后我就跃跃欲试了。然后就遇到了fasta文件预处理的问题，然后不折腾不死星人便想着，刚好最近用过几次Vim，要不就用它来预处理吧。于是文章的第二部分诞生了。</p>
+
+<h1 id="vim中查找与替换">Vim中查找与替换</h1>
+    </div>
+    <div class="read-more">
+      <a href="../../2017/02/434.html/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="../../2016/11/433.html/">完美的一周</a></h1>
@@ -217,31 +256,6 @@
   </div>
 </article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="../../2016/05/429.html/">也谈高考择校选专业</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-05-20 </span>
-      <div class="post-category">
-          <a href="../../categories/%E9%A3%8E%E6%9C%88%E8%B0%88/"> 风月谈 </a>
-          </div>
-        <span class="more-meta"> 约 3418 字 </span>
-        <span class="more-meta"> 预计阅读 7 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>题目中有个也字，是因为今天在微信某公众号上看到一篇文章，是关于高考和学校专业选择的。作者的建议是“选择难度高的专业，选择喜欢的专业，选择好的学校，刻苦读书，只争朝夕。”</p>
-
-<p>看到这篇文章，我不禁回想起自己在八年之前择校的画面。高三恰巧是我写博客最为频繁的阶段，事无大小，都被我像日记一般存于网络，供友人讨论。因此之后的高考、出分、择校、录取，我也都一一记录于案。当年是江苏高考改革的第一年，我的分数又是尴尬的物理 B+，使我无法简单地根据排名来判断是否能被各校录取，因此选校对我来说变得异常复杂。当时的我，手持厚厚的招生计划，搜集参考了过去好几年的录取情况，分析在我之前那上千人的理化成绩，揣度他们的择校心理。另一方面，我又对自己符合招生条件（即不要求物理 A）的学校的优势专业进行分析评估，选出那三个平行志愿，以及各自六个专业意向。八年之后来看，当时的选择也许不能令我满意，但已经是我个人条件限制下所能达到的最优解了。在这八年之中，也许因为自己一直在校园里待着，便总会思考起高考如何择校选专业这个命题。受那篇文章启发，在此我也想和大家来分享自己对于这个命题的一些想法。当然，由于自己涉世不深，许多想法也许十分幼稚，但请见谅。</p>
-    </div>
-    <div class="read-more">
-      <a href="../../2016/05/429.html/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
     </section>
   
   <nav class="pagination">
@@ -287,7 +301,8 @@
 
   <span class="copyright-year">
     &copy; 
-    2019
+    2019 - 
+    2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

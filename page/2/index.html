@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://blindwith.science/" />
 
-<meta property="og:updated_time" content="2019-12-21T23:05:00-08:00" />
+<meta property="og:updated_time" content="2020-03-08T20:26:04-07:00" />
 <meta itemprop="name" content="Blind with Science">
 <meta itemprop="description" content="Ziyunch&#39;s Blog">
 
@@ -115,6 +115,29 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="../../2019/08/449.html/">Mac 版 Emacs 中使用 Rime 输入法打带调双拼</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-08-31 </span>
+      <div class="post-category">
+          <a href="../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
+          </div>
+        <span class="more-meta"> 约 1094 字 </span>
+        <span class="more-meta"> 预计阅读 3 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。</p>
+    </div>
+    <div class="read-more">
+      <a href="../../2019/08/449.html/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="../../2019/08/448.html/">Hacking the Data Transformation Interview</a></h1>
@@ -234,65 +257,6 @@ method supporting tone marks;</li>
   </div>
 </article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="../../2019/07/444.html/">Emacs 记帐</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-07-04 </span>
-      <div class="post-category">
-          <a href="../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
-          </div>
-        <span class="more-meta"> 约 3348 字 </span>
-        <span class="more-meta"> 预计阅读 7 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>昨天搞定 Emacs 的中文环境，今天想着好久没记帐了，随手记总是很花时间，干脆一鼓作气，将记帐一起搬过来。</p>
-
-<h2 id="复式记帐">复式记帐</h2>
-
-<p>我本科时双修了一门金融，其中最为繁琐，也是最令人头疼的一门课便是会计学。我不爱听讲，毕业之后也将会计的知识点忘得查差不多了，然而其&rdquo;有借必有贷，借贷必相等&rdquo;的复式记帐法，反而是我生活中运用最多的。</p>
-
-<p>复式记帐法说起来复杂，对个人来说，就是将每笔交易分门别类，填入下面这条等式中：</p>
-
-<style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
-
-<div class="org-center">
-  <div></div>
-
-<p>资产 + 费用 = 负债 + 所有者权益 + 收入</p>
-
-<p></div></p>
-
-<p>在个人记帐中，这条等式辅以借贷概念会令人望而生畏，所以我将其略一变形：</p>
-
-<style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
-
-<div class="org-center">
-  <div></div>
-
-<p>（+资产）+（-负债）+（+费用）+（-收入）+（-所有者权益）= 0</p>
-
-<p></div></p>
-
-<ul>
-<li>资产与负债都是与金钱直接挂钩的，比如银行户头，比如人民币美钞，比如信用卡帐户，再比如借条，这些都可以算是货币的不同表示形式。</li>
-<li>费用与收入则是与金钱间接挂钩的，比如工资，比如商品，比如服务，这些都可以算是生产资本与商品资本的不同表现形式。其中收入与字面意思不同，可以理解为生产资本（劳动力等）。</li>
-<li>所有者权益对个人意义不大，一般用来记录历史盈余与糊涂帐。</li>
-</ul>
-
-<p>而这个变形公式中的正负号，则可以将各项目的符号关系，用作资金流向的参照。这么说有点玄乎，换个茨威格式的说法就是：&rdquo;人们从命运得到的一切，冥冥之中都记下了它的价钱。&rdquo;花钱买了服务，则是减少资产（花了钱），增加费用（得到服务）；工资到帐，则是增加资产（到帐），减少收入（既有劳动时间的减少）；别人跟你借了钱，则是资产减少（银行帐户或现金余额减少），负债增加（别人在你这儿的负债）。</p>
-
-<p>总结一下，由于人类暂时无法操控时间，所以费用一般为正，收入一般为负。而没有破产的情况下资产一般为正，别人欠你的钱为正，信用卡债（你欠别人的钱）为负。</p>
-    </div>
-    <div class="read-more">
-      <a href="../../2019/07/444.html/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
     </section>
   
   <nav class="pagination">
@@ -338,7 +302,8 @@ method supporting tone marks;</li>
 
   <span class="copyright-year">
     &copy; 
-    2019
+    2019 - 
+    2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
