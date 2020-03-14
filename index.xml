@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Sun, 08 Mar 2020 21:18:52 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2020 11:48:04 -0700</lastBuildDate>
     
 	<atom:link href="http://blindwith.science/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>宅家腻了怎么办？做个新型冠状病毒（COVID-19）资源小总结吧</title>
       <link>http://blindwith.science/2020/03/454.html/</link>
-      <pubDate>Sun, 08 Mar 2020 21:18:52 -0700</pubDate>
+      <pubDate>Sat, 14 Mar 2020 11:48:04 -0700</pubDate>
       
       <guid>http://blindwith.science/2020/03/454.html/</guid>
       <description>&lt;p&gt;之前新冠在国内爆发时，我虽然也有天天关注，但还是一种隔岸观火的状态。家乡疫情并不严重，母上也恰好来陪我了，所以每天关注得更多的可能还是疫情背后的一些问题。然而这些天西雅图疫情爆发，几天时间死了17人，多个养老院成为瘟疫中心，各个公司亦受波及。自上周起，我即在家办公，也算切身体验到了新冠带来的恐慌与不适。周末对我而言，无非就是继续在家宅着罢了。&lt;/p&gt;
@@ -64,6 +64,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://coronavirus.1point3acres.com&#34;&gt;一亩三分地&lt;/a&gt;: 北美各州疫情实时动态地图，人工录入，北美信息似乎最全。 &lt;code&gt;中&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dealmoon.com/guide/934164&#34;&gt;北美省钱快报&lt;/a&gt;: 北美各州疫情分布图，人工录入，有较大的广告条。 &lt;code&gt;中&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://ncov.dxy.cn/ncovh5/view/pneumonia&#34;&gt;丁香园&lt;/a&gt;: 国内各省及全球各国疫情实时动态地图，人工录入，国内较可靠的信息来源。 &lt;code&gt;中&lt;/code&gt;
 
 &lt;ul&gt;
@@ -101,7 +102,15 @@
 &lt;ul&gt;
 &lt;li&gt;WHO: 新冠病毒科普 &lt;a href=&#34;https://www.youtube.com/watch?v=mOV1aBVYKGA&#34;&gt;YouTube&lt;/a&gt; &lt;a href=&#34;https://www.bilibili.com/video/av87734082&#34;&gt;Bilibili&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;回形针: 关于新冠病毒的一切 &lt;a href=&#34;https://www.youtube.com/watch?v=0ySYM4kRJVY&#34;&gt;YouTube&lt;/a&gt; &lt;a href=&#34;https://www.bilibili.com/video/av86216616&#34;&gt;Bilibili&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;3Blue1Brown: 新冠病毒指数传播数学模型 &lt;a href=&#34;https://www.youtube.com/watch?v=Kas0tIxDvrg&#34;&gt;YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;3Blue1Brown: 指数增长与流行病 &lt;a href=&#34;https://www.youtube.com/watch?v=Kas0tIxDvrg&#34;&gt;YouTube&lt;/a&gt; &lt;a href=&#34;https://www.bilibili.com/video/av95917816&#34;&gt;Bilibili&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;科普文章&#34;&gt;科普文章&lt;/h2&gt;
+
+&lt;p&gt;比较靠谱的科普文章。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.nytimes.com/interactive/2020/03/11/science/how-coronavirus-hijacks-your-cells.html&#34;&gt;New York Times&lt;/a&gt;: How Coronavirus Hijacks Your Cells。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;疫情记录&#34;&gt;疫情记录&lt;/h2&gt;
