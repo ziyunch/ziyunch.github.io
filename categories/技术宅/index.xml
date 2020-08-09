@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Tue, 05 Nov 2019 11:23:00 -0800</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2020 22:41:00 -0700</lastBuildDate>
     
 	<atom:link href="http://blindwith.science/categories/%E6%8A%80%E6%9C%AF%E5%AE%85/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用 pandoc 转换 ox-hugo 支持的 org 文件</title>
+      <link>http://blindwith.science/2020/06/455.html/</link>
+      <pubDate>Wed, 10 Jun 2020 22:41:00 -0700</pubDate>
+      
+      <guid>http://blindwith.science/2020/06/455.html/</guid>
+      <description>&lt;p&gt;之前从 hexo 转成 hugo 的时候，顺便用了使用非常方便的 ox-hugo 这个轮子。当时贪图省力，就直接用 pandoc 将 markdown 文件批量转换成了 orgmode，但是所有的 metadata 全都没能转换，后期还是得一个一个改。虽然是一个重新审阅自己黑历史的方式，但是要改四百多篇确实还是太过费心费力了。事情一变得繁杂起来，我的拖延症就犯了，于是直到现在我还是只改好了十几篇。今天终于忍不住了，动手看起了 pandoc 文档。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Postgresql server did not shutdown correctly</title>
@@ -53,7 +62,7 @@ could not connect to server: Connection refused
     <item>
       <title>Org-mode 中添加结构模板</title>
       <link>http://blindwith.science/2019/09/450.html/</link>
-      <pubDate>Wed, 04 Sep 2019 20:06:00 -0400</pubDate>
+      <pubDate>Wed, 04 Sep 2019 20:06:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/09/450.html/</guid>
       <description>&lt;p&gt;作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &lt;code&gt;&amp;lt;s&lt;/code&gt; &lt;kbd&gt;TAB&lt;/kbd&gt; 会自动生成&lt;/p&gt;
@@ -75,7 +84,7 @@ could not connect to server: Connection refused
     <item>
       <title>Mac 版 Emacs 中使用 Rime 输入法打带调双拼</title>
       <link>http://blindwith.science/2019/08/449.html/</link>
-      <pubDate>Sat, 31 Aug 2019 20:40:00 -0400</pubDate>
+      <pubDate>Sat, 31 Aug 2019 20:40:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/08/449.html/</guid>
       <description>&lt;p&gt;由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。&lt;/p&gt;</description>
@@ -84,7 +93,7 @@ could not connect to server: Connection refused
     <item>
       <title>Hacking the Data Transformation Interview</title>
       <link>http://blindwith.science/2019/08/448.html/</link>
-      <pubDate>Fri, 30 Aug 2019 11:14:00 -0400</pubDate>
+      <pubDate>Fri, 30 Aug 2019 11:14:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/08/448.html/</guid>
       <description>&lt;p&gt;I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation.&lt;/p&gt;</description>
@@ -93,7 +102,7 @@ could not connect to server: Connection refused
     <item>
       <title>博客由 Hexo 迁移至 Hugo</title>
       <link>http://blindwith.science/2019/08/447.html/</link>
-      <pubDate>Mon, 26 Aug 2019 23:49:00 -0400</pubDate>
+      <pubDate>Mon, 26 Aug 2019 23:49:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/08/447.html/</guid>
       <description>&lt;blockquote&gt;
@@ -106,7 +115,7 @@ could not connect to server: Connection refused
     <item>
       <title>鼠须管傻瓜化配置</title>
       <link>http://blindwith.science/2019/07/445.html/</link>
-      <pubDate>Sat, 20 Jul 2019 20:58:00 -0400</pubDate>
+      <pubDate>Sat, 20 Jul 2019 20:58:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/07/445.html/</guid>
       <description>&lt;p&gt;This configuration:&lt;/p&gt;
@@ -127,7 +136,7 @@ method supporting tone marks;&lt;/li&gt;
     <item>
       <title>Emacs 记帐</title>
       <link>http://blindwith.science/2019/07/444.html/</link>
-      <pubDate>Thu, 04 Jul 2019 12:58:00 -0400</pubDate>
+      <pubDate>Thu, 04 Jul 2019 12:58:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/07/444.html/</guid>
       <description>&lt;p&gt;昨天搞定 Emacs 的中文环境，今天想着好久没记帐了，随手记总是很花时间，干脆一鼓作气，将记帐一起搬过来。&lt;/p&gt;
@@ -172,7 +181,7 @@ method supporting tone marks;&lt;/li&gt;
     <item>
       <title>Emacs 中文环境配置</title>
       <link>http://blindwith.science/2019/07/443.html/</link>
-      <pubDate>Wed, 03 Jul 2019 13:44:00 -0400</pubDate>
+      <pubDate>Wed, 03 Jul 2019 13:44:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/07/443.html/</guid>
       <description>&lt;p&gt;使用 Emacs 三年多了，当时受了 &lt;a href=&#34;https://github.com/redguardtoo/mastering-emacs-in-one-year-guide&#34;&gt;一年成为 Emacs 高手&lt;/a&gt; 的蛊惑，且贪图便利，使用了 &lt;a href=&#34;https://github.com/purcell/emacs.d&#34;&gt;Purcell 的配置&lt;/a&gt;。正如 Purcell 所说，此配置相当 reasonable，用来入门确实让我受益匪浅，少走了很多弯路。三年使用下来，我需要添加的插件只有 &lt;code&gt;org-ref&lt;/code&gt; 和 &lt;code&gt;ob-smiles&lt;/code&gt; ，配置更新也仅须 &lt;code&gt;git pull&lt;/code&gt; 外加 &lt;kbd&gt;M-x package-list-packages U x&lt;/kbd&gt; 即可，非常方便。&lt;/p&gt;
@@ -186,239 +195,6 @@ method supporting tone marks;&lt;/li&gt;
 &lt;p&gt;使用 MWeb 来写博客与使用 Notes 来记笔记的原因则比较可笑，因为我基本上都是使用英文记录 Science &amp;amp; Tech 方面的笔记，我并没有配置 Emacs 的中文环境。所以需要使用中文来写东西时，我自然就得换用其他工具。这段时间准备面试，将 org-mode 的使用范围扩大到记录面试适宜，由于一亩三分地是一个主要资料来源，不免需要粘贴许多中文帖子进来。这时再将 Emacs 视为一个纯英文环境未免有些麻烦。而将 Emacs 中文化了，自然也不需要 MWeb 和 Notes 或者 Bear 什么事了。&lt;/p&gt;
 
 &lt;p&gt;而记录餐馆和消费的需求比较麻烦，本文暂且搁置，今后有空再来研究。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>小议双拼</title>
-      <link>http://blindwith.science/2018/10/441.html/</link>
-      <pubDate>Wed, 10 Oct 2018 14:42:57 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2018/10/441.html/</guid>
-      <description>&lt;div class=&#34;note default&#34;&gt;&lt;p&gt;tl;dr 微软双拼好，鼠须管很妙，iOS 上却没有一个容器呱呱叫。&lt;/p&gt;&lt;/div&gt;
-
-&lt;p&gt;我的朋友们都不爱用我手机，原因很简单，不知道怎么打中文。然而由于我也算半个老司机，出行的时候总有让副驾帮忙回信或是代查些东西的时候，往往副驾便会骂道：“你这啥玩意呀我不会打”，而我则只能一字一句教道：“知打成 vi，道打成 dk，了就是 le”。对方不耐烦，我也不会硬去安利，因为我也知道在这个年代，对于很多人来说，双拼对于全拼来说未必有那么大的效率提升。不少人说双拼和五笔一样，都是上个世纪的产物，其实也没错。&lt;/p&gt;
-
-&lt;p&gt;说起来其实我并不是从上个世纪起便开始使用双拼的，相反，我接触双拼不过十年，全平台统一使用双拼也就是近两年的事。那我为什么没有放弃使用它，反而越用越起劲了呢，可能还是因为双拼和我的打字风格还是有许多契合点吧。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>SSH 免密远程登录</title>
-      <link>http://blindwith.science/2018/10/440.html/</link>
-      <pubDate>Mon, 01 Oct 2018 23:40:25 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2018/10/440.html/</guid>
-      <description>&lt;h1 id=&#34;缘起&#34;&gt;缘起&lt;/h1&gt;
-
-&lt;p&gt;平时实验需要在 HPC 上进行一些计算，而那些比较占空间的结果则会存储在 lab server 上。照理说，在这三处转移数据，使用 &lt;code&gt;rsync&lt;/code&gt; 命令的话，应该是十分方便快捷的。然而由于总是不能成功设置密钥，这些愉快的操作总是会被密码输入框打断。今天仔细研究了一下这个问题，终于可以成功进行免密远程登录了。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>新电脑折腾记录</title>
-      <link>http://blindwith.science/2017/09/438.html/</link>
-      <pubDate>Sun, 24 Sep 2017 13:27:15 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2017/09/438.html/</guid>
-      <description>&lt;p&gt;于 9 月 22 日买了个新电脑，发现我原来在 iMac 和 Thinkpad 上弄的那些东西，又需要重新安装配置在新电脑上，非常麻烦。之前看到别人为自己配置 HEXO 主题记录的小&lt;a href=&#34;http://moxfive.xyz/2015/08/20/blog-building/&#34;&gt;日志&lt;/a&gt;，觉得很方便。为了避免以后购入新电脑后出现这样一个阶段，在此对这台电脑上进行的折腾进行记录。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Git笔记</title>
-      <link>http://blindwith.science/2017/09/436.html/</link>
-      <pubDate>Tue, 19 Sep 2017 18:43:16 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2017/09/436.html/</guid>
-      <description>&lt;p&gt;为了一些软件的配置（包括这个博客），一直有在断断续续地使用Github。由于对一些概念始终有一些疑惑，所以来读一下著名的&lt;a href=&#34;https://git-scm.com/book/zh/v2/&#34;&gt;Pro Git v2&lt;/a&gt;，顺便记笔记。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Python入门</title>
-      <link>http://blindwith.science/2017/03/435.html/</link>
-      <pubDate>Mon, 20 Mar 2017 22:06:11 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2017/03/435.html/</guid>
-      <description>最近在处理 pre-steady-state data，一不小心每次都要处理几十组，加上 cross-fit 后每次都要上百组，已非手动可以完成的数据量了。虽然一直都是在 cluster 上跑数据，但是文本预处</description>
-    </item>
-    
-    <item>
-      <title>效率规划新方案</title>
-      <link>http://blindwith.science/2016/10/431.html/</link>
-      <pubDate>Thu, 13 Oct 2016 13:19:42 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2016/10/431.html/</guid>
-      <description>个人在效率规划方面（+笔记整理）笃行的是轻量级。倒不是说自己有多么地不喜欢使用工具，而是用过的一些工具(Things, Clear, OneNote, Evernote等</description>
-    </item>
-    
-    <item>
-      <title>修车小记</title>
-      <link>http://blindwith.science/2016/03/424.html/</link>
-      <pubDate>Thu, 24 Mar 2016 22:51:25 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2016/03/424.html/</guid>
-      <description>&lt;p&gt;都说在美帝呀，得先在国内两大高校进修过：新东方厨师学校和蓝翔高级技工学校。烧菜与汽修，看起来都很高大上，其实仔细想想，似乎和搬砖也差不了太多：烧菜跟搭反应很像，汽修则跟修仪器差不多。在烧菜领域小有所成（指除口味以外的那些，比如装盘啊拍照啊什么的）的我，最近也开始手痒，想着跟蓝翔抢饭碗了~&lt;/p&gt;
-
-&lt;p&gt;其实就是车坏了，又没钱修。&lt;/p&gt;
-
-&lt;p&gt;去年冬天后备箱打不开的时候，去传说中附近最良心的修车铺 Longlife 检查过。作为拿着最底时薪的小砖工，看到高昂的 Labor fee 就知道得靠自己的双手了。然后就拖了一年。转眼又一个冬天过去了，不仅后备箱没修好，其他地方也出现了许多小毛病。昨天拉人去 Costco 时狼狈地钻进后备箱手动打开它，又想着五月的 inspection 恐怕也会过不了，就觉得自己不能再拖了。&lt;/p&gt;
-
-&lt;p&gt;先把未来需要在车上花费的时间精力金钱列个表吧：&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>LaTeX 笔记2</title>
-      <link>http://blindwith.science/2016/03/421.html/</link>
-      <pubDate>Wed, 02 Mar 2016 23:40:00 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2016/03/421.html/</guid>
-      <description>&lt;p&gt;今天努了把力终于把初稿写完了。话说 LaTeX 真是超级容易上手啊，感觉看过入门手册和描述文档后，今天基本上可以脱手写论文了。&lt;/p&gt;
-
-&lt;p&gt;写完之后去吃了东北菜，然后回家又开始摸鱼，研究起了 Emacs + AucTeX 的组合。&lt;/p&gt;
-
-&lt;p&gt;受了&lt;a href=&#34;https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org&#34;&gt;一年成为 Emacs 高手&lt;/a&gt;的蛊惑，我使用了 &lt;a href=&#34;https://github.com/purcell/emacs.d&#34;&gt;Purcell 的配置&lt;/a&gt;，花了一点时间把 tutorial 读了一遍，做了笔记，并通过&lt;a href=&#34;http://www.cnblogs.com/robertzml/archive/2010/03/31/1701374.html&#34;&gt;别人的教程&lt;/a&gt;将不理解的部分大致搞了清楚。之后我便按照不&lt;a href=&#34;http://cs2.swfc.edu.cn/~wx672/lecture_notes/linux/latex/latex_tutorial.html&#34;&gt;知道是哪个学校出的快速上手教程&lt;/a&gt;过了一遍。&lt;/p&gt;
-
-&lt;p&gt;不过这个教程的配置和我的有所不同:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;在 minibuffer 进行选项补完时，我只能使用RET，C-j 会导致补完失败.
-还有一些教程里没有提到的 AucTeX 的特性：&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;可以直接使用 C-c C-c 编译，C-c C-v 预览 pdf，并不需要像文中一样在 &lt;em&gt;shell&lt;/em&gt; 里敲命令进行调用;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;TAB&gt; LaTeX-indent-line will indent the current line；&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;C-j newline-and-indent inserts a new line (much like &lt;RET&gt;) and moves the cursor to an appropriate position by the left margin；&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;RET&gt; no indent.
-感觉还蛮顺利的，下次摸鱼时可以研究一下 org-mode，以后说不定就能在 Emacs 里管理文献了~&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;感觉明天可以去搞这些的 Reference Card，让生活更简单一些~&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>LaTeX 笔记 1</title>
-      <link>http://blindwith.science/2016/03/420.html/</link>
-      <pubDate>Tue, 01 Mar 2016 18:47:39 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2016/03/420.html/</guid>
-      <description>&lt;p&gt;其实转投 LaTeX 的念头大学时就有了：写各种作业、报告时，写两本毕业论文时。然而大学的我实在懒惰，虽然在排版方面认真地似有强迫症，但也只是徒增一些 Office 排版技巧罢了。这次写文章，只觉受够了 Word 的繁琐操作，便在前几日磨着洋工扫了眼大家推荐的 LaTeX 配置，在昨日分别下载安装了 TexLive 和 MacTex，并在今日把写好的部分用 LaTeX 格式重写，输出的排版真是赏心悦目，不经感叹 LaTeX 真是一个美观易用零学习成本的好工具。&lt;/p&gt;
-
-&lt;p&gt;LaTeX 2e，经历了 Knuth 大神 (Plain TeX)，敝校数学博士 Lamport (LaTeX)，Mittelbach (LaTeX 2e) 一系列人的开发，已是一个非常好用的格式，并有着较为完善的引擎、宏包、驱动。软件方面，作为一个入门者，同时提供后台处理机制与前台编辑器的发行包是最傻瓜易用的。比较常用的发行版是 MikTeX 与 TeXLive，由于后者是通用的，适合我这种家里用 Mac OS，实验室用 Windows 及 Ubuntu 的小朋友，所以我就给 Mac 装了基于 TeXLive 的 MacTeX，Windows 装了 TexLive，编辑器也就是相应的 TeXshop 与 TeXworks。&lt;/p&gt;
-
-&lt;p&gt;入门手册我看的是 Oetiker 的 &lt;a href=&#34;https://www.ctan.org/tex-archive/info/lshort/english&#34;&gt;lshort&lt;/a&gt; 和包太雷的 &lt;a href=&#34;http://math.nju.edu.cn/~meijq/tex/lnotes2.pdf&#34;&gt;lnotes2&lt;/a&gt;，同时参考了 Math mode 的那篇 &lt;a href=&#34;https://www.ctan.org/tex-archive/info/math/voss/mathmode/?lang=en&#34;&gt;review&lt;/a&gt; 及各包的描述文件，感觉写写论文是足够了。&lt;/p&gt;
-
-&lt;p&gt;对于 Science 论文写作来说，今天用到的 Package 有 siunitx （用来写单位）, mhchem（用来写化学式）, natbib（用来加引用文献） 和 achemos（ACS投稿用）。&lt;/p&gt;
-
-&lt;p&gt;感觉以后还可以用LaTeX格式来做文献笔记（各家文献管理软件/笔记软件没一个好用的，对于阅读文献的整理还得靠手写），等我转移到 Emacs 后，用 org-mode 来管理文献，大概就能走上摸鱼的人生巅峰了吧（请去做实验，苦笑）。&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>[R] 久不编程爪已疏 —— R初学以及挣扎于非线性拟合与bquote的用法上</title>
-      <link>http://blindwith.science/2015/09/394.html/</link>
-      <pubDate>Mon, 14 Sep 2015 02:45:13 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2015/09/394.html/</guid>
-      <description>像我这种做Enzyme kinetic的砖工，每天都有大把时间耗在处理数据+作图上。过去的几年里，懒惰的我都是先从运行软件（UVProbe）上</description>
-    </item>
-    
-    <item>
-      <title>史上最糟糕重装历程。。</title>
-      <link>http://blindwith.science/2013/10/390.html/</link>
-      <pubDate>Tue, 29 Oct 2013 10:13:25 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2013/10/390.html/</guid>
-      <description>虽然对于一个考虑问题足够全面的人来说，这样一个标题如果不加上“之一”两字实在欠妥，但是我也不想再在重装系统这样一桩毫无技术含量的小事上大动干</description>
-    </item>
-    
-    <item>
-      <title>Kindle DXG(2.5.8) 中文字体手记</title>
-      <link>http://blindwith.science/2013/04/389.html/</link>
-      <pubDate>Sun, 21 Apr 2013 06:21:20 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2013/04/389.html/</guid>
-      <description>Kindle DXG是一款霸气却又被遗弃的半成品。用其来看漫画和古籍扫描本堪称完美，但因为便携性、价格、以及市场选取等因素而惨遭降价停产，版本号永久停留</description>
-    </item>
-    
-    <item>
-      <title>伪全息投影DIY~</title>
-      <link>http://blindwith.science/2012/05/380.html/</link>
-      <pubDate>Sun, 20 May 2012 23:49:38 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2012/05/380.html/</guid>
-      <description>首先放上成品图 前两天在机锋看到一个做手机全息投影的帖子 （果壳上也有一个，可是那个我实在吐槽无力了 无视之。。），一直心心念念地想做来着。后来写</description>
-    </item>
-    
-    <item>
-      <title>qq啊~你让我情何以堪</title>
-      <link>http://blindwith.science/2010/11/372.html/</link>
-      <pubDate>Mon, 29 Nov 2010 18:48:06 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2010/11/372.html/</guid>
-      <description>先是十几天前提示我“您的qq版本即将过期”神马的。。。——2009才过去多久啊。。。 然后几天前我想登qq时告诉我您的qq版本太旧不能使用，让</description>
-    </item>
-    
-    <item>
-      <title>iTunes的bug？</title>
-      <link>http://blindwith.science/2010/02/357.html/</link>
-      <pubDate>Mon, 22 Feb 2010 14:00:18 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2010/02/357.html/</guid>
-      <description>今天给自己的小nano传歌。有一个网上下载的podcast集，放在音乐里，看着乱奇怪的。于是就在选项的媒体选项里把它改成podcast了。经</description>
-    </item>
-    
-    <item>
-      <title>关于那个【第六感运算装置和纸“计算机”】瞎想想……</title>
-      <link>http://blindwith.science/2010/02/353.html/</link>
-      <pubDate>Thu, 11 Feb 2010 00:42:47 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2010/02/353.html/</guid>
-      <description>刚刚看了一个TED大会的视频，就是一个印度人的设计。他那个图像扫描一下子让我想到了“东之伊甸”计划。那个需要强大的图像辨识系统和数据库支持，</description>
-    </item>
-    
-    <item>
-      <title>悼念我掉水里的ipod</title>
-      <link>http://blindwith.science/2009/08/338.html/</link>
-      <pubDate>Sun, 30 Aug 2009 17:02:45 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2009/08/338.html/</guid>
-      <description>ipod进水了，然后报废了。 某天我洗衣服的时候让ipod头朝下载到水里面，于是它湿了。很快从肥皂水里捞起来，而之后它还在放音乐，我便轻易以为</description>
-    </item>
-    
-    <item>
-      <title>关于小黑的一键恢复</title>
-      <link>http://blindwith.science/2009/02/326.html/</link>
-      <pubDate>Wed, 18 Feb 2009 10:50:00 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2009/02/326.html/</guid>
-      <description>昨天因为sid的问题搞得头大（不是性手枪主唱！跟nancy无关！也别跟我想众多drama中的昵称，比如skins！……是不是有点愤然了？……</description>
-    </item>
-    
-    <item>
-      <title>俺想认真地学习计算机技术……</title>
-      <link>http://blindwith.science/2009/02/325.html/</link>
-      <pubDate>Tue, 17 Feb 2009 23:21:39 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2009/02/325.html/</guid>
-      <description>在美化系统方面，stardock的东东可谓独占鳌头。其中某款cursorxp即是好东西之一。不过网上搜搜发现老早有新版的cursorfx出现</description>
-    </item>
-    
-    <item>
-      <title>双系统小记</title>
-      <link>http://blindwith.science/2009/02/324.html/</link>
-      <pubDate>Tue, 17 Feb 2009 01:20:32 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2009/02/324.html/</guid>
-      <description>虽然网上找了不少资料（以跨过第一二道坎），不过自己操作的时候并不是那么简单 Thinkpad X200，预装的Vista。想用但又不想被其兼容性所左右的我，还</description>
-    </item>
-    
-    <item>
-      <title>帮小蹄蹄解决无法上网问题</title>
-      <link>http://blindwith.science/2006/07/42.html/</link>
-      <pubDate>Sun, 16 Jul 2006 21:13:47 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2006/07/42.html/</guid>
-      <description>ziyunch 发表于 2006-07-16 21:13:10 @MSN Live 小TT上网，不用防火墙，我就叫她装卡巴，结果～～ 她只能上QQ不能浏览网页。看来是UDP正常，TCP/IP设置有问题。首先看她</description>
     </item>
     
   </channel>

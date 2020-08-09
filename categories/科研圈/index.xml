@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Sat, 14 Mar 2020 11:48:04 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 19:14:00 -0700</lastBuildDate>
     
 	<atom:link href="http://blindwith.science/categories/%E7%A7%91%E7%A0%94%E5%9C%88/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>宅家腻了怎么办？做个新型冠状病毒（COVID-19）资源小总结吧</title>
       <link>http://blindwith.science/2020/03/454.html/</link>
-      <pubDate>Sat, 14 Mar 2020 11:48:04 -0700</pubDate>
+      <pubDate>Sun, 15 Mar 2020 19:14:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2020/03/454.html/</guid>
       <description>&lt;p&gt;之前新冠在国内爆发时，我虽然也有天天关注，但还是一种隔岸观火的状态。家乡疫情并不严重，母上也恰好来陪我了，所以每天关注得更多的可能还是疫情背后的一些问题。然而这些天西雅图疫情爆发，几天时间死了17人，多个养老院成为瘟疫中心，各个公司亦受波及。自上周起，我即在家办公，也算切身体验到了新冠带来的恐慌与不适。周末对我而言，无非就是继续在家宅着罢了。&lt;/p&gt;
@@ -141,79 +141,6 @@
 &lt;li&gt;&lt;a href=&#34;https://www.cdc.gov/niosh/npptl/topics/respirators/disp%5Fpart/n95list1.html&#34;&gt;NIOSH-Approved N95&lt;/a&gt;: CDC/NIOSH 认可的 N95 口罩列表。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.cdc.gov/coronavirus/2019-ncov/release-stockpiled-N95.html&#34;&gt;Release Stockpiled N95&lt;/a&gt;: CDC/NIOSH 认可的过期后仍对新冠病毒有效的 N95 口罩列表。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Gene Variation Analysis of Stomach Cancer</title>
-      <link>http://blindwith.science/2018/10/442.html/</link>
-      <pubDate>Wed, 17 Oct 2018 22:46:28 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2018/10/442.html/</guid>
-      <description>&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;
-
-&lt;div class=&#34;note info&#34;&gt;&lt;p&gt;Cancer is the second leading cause of death globally, and is responsible for an estimated 9.6 million deaths in 2018. Globally, about 1 in 6 deaths is due to cancer. &lt;br&gt;--World Health Organization
-&lt;/p&gt;&lt;/div&gt;
-
-&lt;p&gt;Cancer is the second leading cause of death globally &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. Cancer generally arises when normal cells transform from pre-cancerous lesion to malignant tumour cells. This transformation is a result of the interaction between a person&amp;rsquo;s genetic factors and three categories of external agents including physical, chemical and biological carcinogens. Cancer mortality can be reduced if cases are detected and treated early.&lt;/p&gt;
-
-&lt;div class=&#34;note info&#34;&gt;&lt;p&gt;For stomach cancer in the United States for 2018:&lt;br&gt;About 26,240 cases of stomach cancer will be diagnosed (16,520 in men and 9,720 in women)&lt;br&gt;About 10,800 people will die from this type of cancer (6,510 men and 4,290 women)&lt;br&gt;--The American Cancer Society&lt;/p&gt;&lt;/div&gt;
-
-&lt;p&gt;Stomach cancer is the world&amp;rsquo;s third leading cause of cancer-related death &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. It is responsible for an estimated 783, 000 deaths globally in 2018 &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;. Stomach cancers can be classified as adenocarcinoma, lymphoma, gastrointestinal stromal tumor, carcinoid tumor and other rare cancers. The majority (about 90% to 95%) of stomach cancers are adenocarcinomas &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;. Thus, if adenocarcinomas can be further classified into subgroups, it will be beneficial in clinical care:
-1. Appropriate screening tests can be developed based on information of each subgroup.
-2. Effective treatment can be achieved by better defined drug targets for each subgroup.&lt;/p&gt;
-
-&lt;p&gt;Recently, The Cancer Genome Atlas Network (TCGA) obtained gastric adenocarcinoma primary tumour tissue from 295 patients, in order to purse molecular sub-group classification &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;. On this tissue whole-exome sequencing, array-based somatic copy number analysis, array-based DNA methylation profiling, messenger RNA (mRNA) sequencing, microRNA sequencing and reverse-phase protein array (RPPA) molecular classification was performed. Unsupervised clustering of the data resulted in 4 subgroups; characterized by EBV-positivity, high microsatellite-instability, genomically stability or chromosomal instability.&lt;/p&gt;
-
-&lt;p&gt;Here I explored this TCGA dataset, started with a gene copy number variation analysis for an expanded set (443 patients), identified differentially expressed genes in comparison to normal matched tissues by hierarchical clustering.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Enzyme Evolution and Vim</title>
-      <link>http://blindwith.science/2017/02/434.html/</link>
-      <pubDate>Sat, 04 Feb 2017 13:57:03 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2017/02/434.html/</guid>
-      <description>&lt;h1 id=&#34;enzyme-evolution&#34;&gt;Enzyme evolution&lt;/h1&gt;
-
-&lt;p&gt;我一直都对比较大的蓝图感兴趣，如果当时有意识地去选择，自己可能就会去做Bioinformatics相关的研究了。（为什么不去当码农。。。）可能因为这个的缘故，我对enzyme evolution也一直有那么点兴趣。&lt;/p&gt;
-
-&lt;p&gt;去年 Doug sabbatical，于是他们组有半年与我们组一起开联合组会，我也得知这一与我们同幢楼的实验室具体是做的什么。今年年初的时候学校搞了个 &lt;a href=&#34;https://kb.brandeis.edu/display/SCI/MiniCourse+in+Statistics&#34;&gt;minicourse in statistics&lt;/a&gt;，Doug也在其中开了一门 *Bayesian Methods for Analysis of Protein Evolution*。一眼督见后面两个单词的我想着正和朕意，便报名上课。课程很短，除去一天基本上是&lt;del&gt;废话&lt;/del&gt;基础介绍的Linux/R的入门课外，正式课程只有三天。而在其中Doug讲了两天的概率（我还没带纸笔，只能用Emacs来记笔记，简直头大）。不过第三天的实战(BLAST+ClustalOmega+Phyml+BAli-Phy)确实算带我入了门。不得不说一个搞生化研究的老师比一个搞计算机的老师在演示BLAST时，关注的重点要实用许多。&lt;/p&gt;
-
-&lt;p&gt;不过虽然有上手操作，这毕竟还是课程，而我缺少课堂学习的能力，所以还需实例演示。也是凑巧，Doug昨天讲了个seminar，正是关于他如何用evolutionary手段玩弄LDH和MDH两种酶的，听完之后基本上明白了实战的思路，回家又顶着高烧扫了一遍他的文章们，大致也摸出了基本的套路：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;他们组自己关于LDH/MDH的几篇文章：和seminar上讲的差不多，但是有具体的实验方法说明呀；&lt;/li&gt;
-&lt;li&gt;他的几篇理论性文章：跟他上课的内容互为补充；&lt;/li&gt;
-&lt;li&gt;他和其他组合作的文章：和Miller爷爷合作的ion channel的，和Oprian合作的rhodopsin的，和Kern合作的thermoadaptation的，和Garrity合作的果蝇thermosensor的。只想吐槽好多Nature Science啊。。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;然后我就跃跃欲试了。然后就遇到了fasta文件预处理的问题，然后不折腾不死星人便想着，刚好最近用过几次Vim，要不就用它来预处理吧。于是文章的第二部分诞生了。&lt;/p&gt;
-
-&lt;h1 id=&#34;vim中查找与替换&#34;&gt;Vim中查找与替换&lt;/h1&gt;</description>
-    </item>
-    
-    <item>
-      <title>第26个第一届搞笑诺贝尔奖现场观后感</title>
-      <link>http://blindwith.science/2016/09/430.html/</link>
-      <pubDate>Fri, 23 Sep 2016 00:03:23 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2016/09/430.html/</guid>
-      <description>&lt;p&gt;来 Boston 几年，每次都等搞笑诺贝尔奖颁完奖后才发现自己又错过了这个活动，心颇有不甘。今天早上刷微博发现国内某伪科学媒体摆了个乌龙，搞错了这届颁奖的时间，恰好给我了买票围观的时机。正好刷到了不错的座位，晚上便驱车进城围观了一发。&lt;/p&gt;
-
-&lt;p&gt;感想：要好好学习折纸飞机的技术。&lt;/p&gt;
-
-&lt;p&gt;今年的主题是 Time，即时间。颁奖间隙时钟合唱团深情地为大家表演了精彩的三幕剧：“我为长者续一秒”（大误）。&lt;/p&gt;
-
-&lt;p&gt;两个小实验则是共振与干涉。（感觉又学了一遍物理）&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>有机全合成之美</title>
-      <link>http://blindwith.science/2016/04/426.html/</link>
-      <pubDate>Thu, 28 Apr 2016 23:05:55 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2016/04/426.html/</guid>
-      <description>虽然名义上我是有机方向的，但我一直都不太喜欢现有的体系。可能是自己不长于记诵的缘故吧，我一直觉得记忆那么多反应没什么必要。等到人们对有机反应</description>
     </item>
     
   </channel>

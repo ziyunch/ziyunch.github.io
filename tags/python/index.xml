@@ -24,7 +24,7 @@
     <item>
       <title>Hacking the Data Transformation Interview</title>
       <link>http://blindwith.science/2019/08/448.html/</link>
-      <pubDate>Fri, 30 Aug 2019 11:14:00 -0400</pubDate>
+      <pubDate>Fri, 30 Aug 2019 11:14:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/08/448.html/</guid>
       <description>&lt;p&gt;I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation.&lt;/p&gt;</description>
@@ -33,7 +33,7 @@
     <item>
       <title>Emacs 记帐</title>
       <link>http://blindwith.science/2019/07/444.html/</link>
-      <pubDate>Thu, 04 Jul 2019 12:58:00 -0400</pubDate>
+      <pubDate>Thu, 04 Jul 2019 12:58:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/07/444.html/</guid>
       <description>&lt;p&gt;昨天搞定 Emacs 的中文环境，今天想着好久没记帐了，随手记总是很花时间，干脆一鼓作气，将记帐一起搬过来。&lt;/p&gt;
@@ -73,15 +73,6 @@
 &lt;p&gt;而这个变形公式中的正负号，则可以将各项目的符号关系，用作资金流向的参照。这么说有点玄乎，换个茨威格式的说法就是：&amp;rdquo;人们从命运得到的一切，冥冥之中都记下了它的价钱。&amp;rdquo;花钱买了服务，则是减少资产（花了钱），增加费用（得到服务）；工资到帐，则是增加资产（到帐），减少收入（既有劳动时间的减少）；别人跟你借了钱，则是资产减少（银行帐户或现金余额减少），负债增加（别人在你这儿的负债）。&lt;/p&gt;
 
 &lt;p&gt;总结一下，由于人类暂时无法操控时间，所以费用一般为正，收入一般为负。而没有破产的情况下资产一般为正，别人欠你的钱为正，信用卡债（你欠别人的钱）为负。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Python入门</title>
-      <link>http://blindwith.science/2017/03/435.html/</link>
-      <pubDate>Mon, 20 Mar 2017 22:06:11 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2017/03/435.html/</guid>
-      <description>最近在处理 pre-steady-state data，一不小心每次都要处理几十组，加上 cross-fit 后每次都要上百组，已非手动可以完成的数据量了。虽然一直都是在 cluster 上跑数据，但是文本预处</description>
     </item>
     
   </channel>

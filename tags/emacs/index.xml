@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Wed, 04 Sep 2019 20:06:00 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 04 Sep 2019 20:06:00 -0700</lastBuildDate>
     
 	<atom:link href="http://blindwith.science/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Org-mode 中添加结构模板</title>
       <link>http://blindwith.science/2019/09/450.html/</link>
-      <pubDate>Wed, 04 Sep 2019 20:06:00 -0400</pubDate>
+      <pubDate>Wed, 04 Sep 2019 20:06:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/09/450.html/</guid>
       <description>&lt;p&gt;作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &lt;code&gt;&amp;lt;s&lt;/code&gt; &lt;kbd&gt;TAB&lt;/kbd&gt; 会自动生成&lt;/p&gt;
@@ -37,7 +37,7 @@
     <item>
       <title>Mac 版 Emacs 中使用 Rime 输入法打带调双拼</title>
       <link>http://blindwith.science/2019/08/449.html/</link>
-      <pubDate>Sat, 31 Aug 2019 20:40:00 -0400</pubDate>
+      <pubDate>Sat, 31 Aug 2019 20:40:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/08/449.html/</guid>
       <description>&lt;p&gt;由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。&lt;/p&gt;</description>
@@ -46,7 +46,7 @@
     <item>
       <title>博客由 Hexo 迁移至 Hugo</title>
       <link>http://blindwith.science/2019/08/447.html/</link>
-      <pubDate>Mon, 26 Aug 2019 23:49:00 -0400</pubDate>
+      <pubDate>Mon, 26 Aug 2019 23:49:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/08/447.html/</guid>
       <description>&lt;blockquote&gt;
@@ -59,7 +59,7 @@
     <item>
       <title>Emacs 记帐</title>
       <link>http://blindwith.science/2019/07/444.html/</link>
-      <pubDate>Thu, 04 Jul 2019 12:58:00 -0400</pubDate>
+      <pubDate>Thu, 04 Jul 2019 12:58:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/07/444.html/</guid>
       <description>&lt;p&gt;昨天搞定 Emacs 的中文环境，今天想着好久没记帐了，随手记总是很花时间，干脆一鼓作气，将记帐一起搬过来。&lt;/p&gt;
@@ -104,7 +104,7 @@
     <item>
       <title>Emacs 中文环境配置</title>
       <link>http://blindwith.science/2019/07/443.html/</link>
-      <pubDate>Wed, 03 Jul 2019 13:44:00 -0400</pubDate>
+      <pubDate>Wed, 03 Jul 2019 13:44:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/07/443.html/</guid>
       <description>&lt;p&gt;使用 Emacs 三年多了，当时受了 &lt;a href=&#34;https://github.com/redguardtoo/mastering-emacs-in-one-year-guide&#34;&gt;一年成为 Emacs 高手&lt;/a&gt; 的蛊惑，且贪图便利，使用了 &lt;a href=&#34;https://github.com/purcell/emacs.d&#34;&gt;Purcell 的配置&lt;/a&gt;。正如 Purcell 所说，此配置相当 reasonable，用来入门确实让我受益匪浅，少走了很多弯路。三年使用下来，我需要添加的插件只有 &lt;code&gt;org-ref&lt;/code&gt; 和 &lt;code&gt;ob-smiles&lt;/code&gt; ，配置更新也仅须 &lt;code&gt;git pull&lt;/code&gt; 外加 &lt;kbd&gt;M-x package-list-packages U x&lt;/kbd&gt; 即可，非常方便。&lt;/p&gt;
@@ -118,37 +118,6 @@
 &lt;p&gt;使用 MWeb 来写博客与使用 Notes 来记笔记的原因则比较可笑，因为我基本上都是使用英文记录 Science &amp;amp; Tech 方面的笔记，我并没有配置 Emacs 的中文环境。所以需要使用中文来写东西时，我自然就得换用其他工具。这段时间准备面试，将 org-mode 的使用范围扩大到记录面试适宜，由于一亩三分地是一个主要资料来源，不免需要粘贴许多中文帖子进来。这时再将 Emacs 视为一个纯英文环境未免有些麻烦。而将 Emacs 中文化了，自然也不需要 MWeb 和 Notes 或者 Bear 什么事了。&lt;/p&gt;
 
 &lt;p&gt;而记录餐馆和消费的需求比较麻烦，本文暂且搁置，今后有空再来研究。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>LaTeX 笔记2</title>
-      <link>http://blindwith.science/2016/03/421.html/</link>
-      <pubDate>Wed, 02 Mar 2016 23:40:00 +0000</pubDate>
-      
-      <guid>http://blindwith.science/2016/03/421.html/</guid>
-      <description>&lt;p&gt;今天努了把力终于把初稿写完了。话说 LaTeX 真是超级容易上手啊，感觉看过入门手册和描述文档后，今天基本上可以脱手写论文了。&lt;/p&gt;
-
-&lt;p&gt;写完之后去吃了东北菜，然后回家又开始摸鱼，研究起了 Emacs + AucTeX 的组合。&lt;/p&gt;
-
-&lt;p&gt;受了&lt;a href=&#34;https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org&#34;&gt;一年成为 Emacs 高手&lt;/a&gt;的蛊惑，我使用了 &lt;a href=&#34;https://github.com/purcell/emacs.d&#34;&gt;Purcell 的配置&lt;/a&gt;，花了一点时间把 tutorial 读了一遍，做了笔记，并通过&lt;a href=&#34;http://www.cnblogs.com/robertzml/archive/2010/03/31/1701374.html&#34;&gt;别人的教程&lt;/a&gt;将不理解的部分大致搞了清楚。之后我便按照不&lt;a href=&#34;http://cs2.swfc.edu.cn/~wx672/lecture_notes/linux/latex/latex_tutorial.html&#34;&gt;知道是哪个学校出的快速上手教程&lt;/a&gt;过了一遍。&lt;/p&gt;
-
-&lt;p&gt;不过这个教程的配置和我的有所不同:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;在 minibuffer 进行选项补完时，我只能使用RET，C-j 会导致补完失败.
-还有一些教程里没有提到的 AucTeX 的特性：&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;可以直接使用 C-c C-c 编译，C-c C-v 预览 pdf，并不需要像文中一样在 &lt;em&gt;shell&lt;/em&gt; 里敲命令进行调用;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;TAB&gt; LaTeX-indent-line will indent the current line；&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;C-j newline-and-indent inserts a new line (much like &lt;RET&gt;) and moves the cursor to an appropriate position by the left margin；&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;RET&gt; no indent.
-感觉还蛮顺利的，下次摸鱼时可以研究一下 org-mode，以后说不定就能在 Emacs 里管理文献了~&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;感觉明天可以去搞这些的 Reference Card，让生活更简单一些~&lt;/p&gt;</description>
     </item>
     
   </channel>

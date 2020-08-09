@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Sat, 31 Aug 2019 20:40:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 31 Aug 2019 20:40:00 -0700</lastBuildDate>
     
 	<atom:link href="http://blindwith.science/tags/liberime/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Mac 版 Emacs 中使用 Rime 输入法打带调双拼</title>
       <link>http://blindwith.science/2019/08/449.html/</link>
-      <pubDate>Sat, 31 Aug 2019 20:40:00 -0400</pubDate>
+      <pubDate>Sat, 31 Aug 2019 20:40:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/08/449.html/</guid>
       <description>&lt;p&gt;由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。&lt;/p&gt;</description>

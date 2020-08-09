@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Sat, 31 Aug 2019 20:40:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 31 Aug 2019 20:40:00 -0700</lastBuildDate>
     
 	<atom:link href="http://blindwith.science/tags/pyim/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Mac 版 Emacs 中使用 Rime 输入法打带调双拼</title>
       <link>http://blindwith.science/2019/08/449.html/</link>
-      <pubDate>Sat, 31 Aug 2019 20:40:00 -0400</pubDate>
+      <pubDate>Sat, 31 Aug 2019 20:40:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/08/449.html/</guid>
       <description>&lt;p&gt;由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。&lt;/p&gt;</description>
@@ -24,7 +24,7 @@
     <item>
       <title>Emacs 中文环境配置</title>
       <link>http://blindwith.science/2019/07/443.html/</link>
-      <pubDate>Wed, 03 Jul 2019 13:44:00 -0400</pubDate>
+      <pubDate>Wed, 03 Jul 2019 13:44:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/07/443.html/</guid>
       <description>&lt;p&gt;使用 Emacs 三年多了，当时受了 &lt;a href=&#34;https://github.com/redguardtoo/mastering-emacs-in-one-year-guide&#34;&gt;一年成为 Emacs 高手&lt;/a&gt; 的蛊惑，且贪图便利，使用了 &lt;a href=&#34;https://github.com/purcell/emacs.d&#34;&gt;Purcell 的配置&lt;/a&gt;。正如 Purcell 所说，此配置相当 reasonable，用来入门确实让我受益匪浅，少走了很多弯路。三年使用下来，我需要添加的插件只有 &lt;code&gt;org-ref&lt;/code&gt; 和 &lt;code&gt;ob-smiles&lt;/code&gt; ，配置更新也仅须 &lt;code&gt;git pull&lt;/code&gt; 外加 &lt;kbd&gt;M-x package-list-packages U x&lt;/kbd&gt; 即可，非常方便。&lt;/p&gt;
