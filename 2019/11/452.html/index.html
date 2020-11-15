@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="ziyunch" /><meta name="description" content="I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.
-1 2 3 4 5 6 7  conn = _connect(dsn, connection_factory=connection_factory, **kwasync) django.db.utils.OperationalError: could not connect to server: Connection refused Is the server running on host &amp;#34;localhost&amp;#34; (::1) and accepting TCP/IP connections on port 5432? could not connect to server: Connection refused Is the server running on host &amp;#34;localhost&amp;#34; (127.0.0.1) and accepting TCP/IP connections on port 5432?  " /><meta name="keywords" content="ziyunch, blog" />
+1 2 3 4 5 6 7  conn = _connect(dsn, connection_factory=connection_factory, **kwasync) django.db.utils.OperationalError: could not connect to server: Connection refused Is the server running on host &amp;#34;localhost&amp;#34; (::1) and accepting TCP/IP connections on port 5432? could not connect to server: Connection refused Is the server running on host &amp;#34;localhost&amp;#34; (127.0.0.1) and accepting TCP/IP connections on port 5432?   " /><meta name="keywords" content="ziyunch, blog" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.76.5 with theme even" />
 
 
 <link rel="canonical" href="http://blindwith.science/2019/11/452.html/" />
@@ -35,7 +35,8 @@
 <link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<link href="../../../dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="../../../sass/main.min.c7bc1becf36bcf6a9ebd25d2947e43a2eb745ddb0c9a32b43126fd7fa460c351.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -59,6 +60,7 @@ django.db.utils.OperationalError: could not connect to server: Connection refuse
 could not connect to server: Connection refused
         Is the server running on host &#34;localhost&#34; (127.0.0.1) and accepting
         TCP/IP connections on port 5432?
+
 
 " />
 <meta property="og:type" content="article" />
@@ -86,9 +88,8 @@ could not connect to server: Connection refused
         Is the server running on host &#34;localhost&#34; (127.0.0.1) and accepting
         TCP/IP connections on port 5432?
 
+
 ">
-
-
 <meta itemprop="datePublished" content="2019-11-05T11:23:00-08:00" />
 <meta itemprop="dateModified" content="2020-06-15T21:09:11-07:00" />
 <meta itemprop="wordCount" content="228">
@@ -118,6 +119,7 @@ could not connect to server: Connection refused
         Is the server running on host &#34;localhost&#34; (127.0.0.1) and accepting
         TCP/IP connections on port 5432?
 
+
 "/>
 
 <!--[if lte IE 9]>
@@ -128,6 +130,7 @@ could not connect to server: Connection refused
   <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
 <![endif]-->
+
 </head>
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
@@ -200,14 +203,14 @@ could not connect to server: Connection refused
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -222,28 +225,24 @@ django.db.utils.OperationalError: could not connect to server: Connection refuse
         TCP/IP connections on port 5432?
 could not connect to server: Connection refused
         Is the server running on host &#34;localhost&#34; (127.0.0.1) and accepting
-        TCP/IP connections on port 5432?</code></pre></td></tr></table>
+        TCP/IP connections on port 5432?
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>And <code>sudo lsof -i :5432</code> returned nothing. It looks that my local database is down, so I tried <code>brew services start postgresql@10</code>, and got message:</p>
+</div><p>And <code>sudo lsof -i :5432</code> returned nothing. It looks that my local database is down, so I tried <code>brew services start postgresql@10</code>, and got message:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">Service `postgresql@10` already started, use `brew services restart postgresql@10` to restart.</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-text" data-lang="text">Service `postgresql@10` already started, use `brew services restart postgresql@10` to restart.
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>I tried to restart postgresql, but it did not help.</p>
-
+</div><p>I tried to restart postgresql, but it did not help.</p>
 <p>Maybe there is a stuck lockfile somewhere? Here is a <a href="https://stackoverflow.com/questions/37307346/is-the-server-running-on-host-localhost-1-and-accepting-tcp-ip-connections/37307420">clue</a> as well as a few workarounds. I examine the content of <code>postmaster.pid</code> by <code>cat /usr/local/var/postgresql@10/postmaster.pid</code> and kill the lock file by <code>kill -9 &lt;PID&gt;</code>. Upon restarting the services, now it works again.</p>
-
 <p>p.s. <code>kill -9</code> might not be a good way to kill the process here. See the <a href="http://web.archive.org/web/20110730051506/http://partmaps.org/era/unix/award.html#uuk9letter">quote</a> here:</p>
-
 <blockquote>
 <p>No no no.  Don&rsquo;t use kill -9.
 It doesn&rsquo;t give the process a chance to cleanly:</p>
-
 <ol>
 <li>shut down socket connections</li>
 <li>clean up temp files</li>
@@ -299,7 +298,7 @@ It doesn&rsquo;t give the process a chance to cleanly:</p>
   </article>
         </div>
         
-  
+
   
   <div id="vcomments"></div>
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
@@ -309,9 +308,9 @@ It doesn&rsquo;t give the process a chance to cleanly:</p>
         el: '#vcomments' ,
         appId: 'kyXPptAG0HNFlxVP6PKtMG79-gzGzoHsz',
         appKey: 'odsVXiu7qNwwQypz99atviXR',
-        notify:  false , 
-        verify:  false , 
-        avatar:'mm', 
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
         placeholder: '说点什么吧...',
         visitor:  false 
     });
@@ -350,13 +349,10 @@ It doesn&rsquo;t give the process a chance to cleanly:</p>
   <span class="copyright-year">
     &copy; 
     2019 - 
-    2020
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">ziyunch</span>
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -367,7 +363,10 @@ It doesn&rsquo;t give the process a chance to cleanly:</p>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../../../dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
 
 
 <script type="application/javascript">

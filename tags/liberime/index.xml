@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>liberime on Blind with Science</title>
@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Sat, 31 Aug 2019 20:40:00 -0700</lastBuildDate>
-    
-	<atom:link href="http://blindwith.science/tags/liberime/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 31 Aug 2019 20:40:00 -0700</lastBuildDate><atom:link href="http://blindwith.science/tags/liberime/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mac 版 Emacs 中使用 Rime 输入法打带调双拼</title>
       <link>http://blindwith.science/2019/08/449.html/</link>

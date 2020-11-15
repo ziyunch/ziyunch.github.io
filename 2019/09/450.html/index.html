@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ziyunch" /><meta name="description" content="作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &amp;lt;s TAB 会自动生成
+<meta name="author" content="ziyunch" /><meta name="description" content="作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &amp;lt;s TAB会自动生成
 1 2 3  #&#43;BEGIN_SRC #&#43;END_SRC   这样插入代码或者引用这类结构非常方便。
 " /><meta name="keywords" content="ziyunch, blog" />
 
@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.76.5 with theme even" />
 
 
 <link rel="canonical" href="http://blindwith.science/2019/09/450.html/" />
@@ -36,7 +36,8 @@
 <link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<link href="../../../dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="../../../sass/main.min.c7bc1becf36bcf6a9ebd25d2947e43a2eb745ddb0c9a32b43126fd7fa460c351.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -74,11 +75,9 @@
 
 
 这样插入代码或者引用这类结构非常方便。">
-
-
 <meta itemprop="datePublished" content="2019-09-04T20:06:00-07:00" />
 <meta itemprop="dateModified" content="2020-06-15T21:09:10-07:00" />
-<meta itemprop="wordCount" content="616">
+<meta itemprop="wordCount" content="618">
 
 
 
@@ -108,6 +107,7 @@
   <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
 <![endif]-->
+
 </head>
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
@@ -171,7 +171,7 @@
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 616 字 </span>
+          <span class="more-meta"> 约 618 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -180,27 +180,25 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
-      <p>作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 <code>&lt;s</code> <kbd>TAB</kbd> 会自动生成</p>
+      <p>作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 <code>&lt;s</code> <!-- raw HTML omitted -->TAB<!-- raw HTML omitted --> 会自动生成</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-org" data-lang="org"><span class="c">#+BEGIN_SRC</span>
 
-<span class="c">#+END_SRC</span></code></pre></td></tr></table>
+<span class="c">#+END_SRC</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>这样插入代码或者引用这类结构非常方便。</p>
-
+</div><p>这样插入代码或者引用这类结构非常方便。</p>
 <p>在 <code>org-structure-template-alist</code> 这个列表中预置了许多常用结构，如<a href="https://orgmode.org/manual/Structure-Templates.html">官方文档</a>所示:</p>
-
 <table>
 <thead>
 <tr>
@@ -208,86 +206,74 @@
 <th>Structure Template</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>a</td>
 <td>‘#+BEGIN_EXPORT ascii’ … ‘#+END_EXPORT’</td>
 </tr>
-
 <tr>
 <td>c</td>
 <td>‘#+BEGIN_CENTER’ … ‘#+END_CENTER’</td>
 </tr>
-
 <tr>
 <td>C</td>
 <td>‘#+BEGIN_COMMENT’ … ‘#+END_COMMENT’</td>
 </tr>
-
 <tr>
 <td>e</td>
 <td>‘#+BEGIN_EXAMPLE’ … ‘#+END_EXAMPLE’</td>
 </tr>
-
 <tr>
 <td>E</td>
 <td>‘#+BEGIN_EXPORT’ … ‘#+END_EXPORT’</td>
 </tr>
-
 <tr>
 <td>h</td>
 <td>‘#+BEGIN_EXPORT html’ … ‘#+END_EXPORT’</td>
 </tr>
-
 <tr>
 <td>l</td>
 <td>‘#+BEGIN_EXPORT latex’ … ‘#+END_EXPORT’</td>
 </tr>
-
 <tr>
 <td>q</td>
 <td>‘#+BEGIN_QUOTE’ … ‘#+END_QUOTE’</td>
 </tr>
-
 <tr>
 <td>s</td>
 <td>‘#+BEGIN_SRC’ … ‘#+END_SRC’</td>
 </tr>
-
 <tr>
 <td>v</td>
 <td>‘#+BEGIN_VERSE’ … ‘#+END_VERSE’</td>
 </tr>
 </tbody>
 </table>
-
 <p>不过有时也会想要自己造个轮子，比如我平时写博客，有时需要插入按键标签 <code>&lt;kbd&gt;</code> 。此时可用 lisp 的 <a href="https://www.gnu.org/software/emacs/manual/html%5Fnode/elisp/List-Variables.html">add-to-list 语法</a>来添加新的结构模板：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="nv">add-to-list</span> <span class="nc">symbol</span> <span class="nv">element</span> <span class="k">&amp;optional</span> <span class="nf">append</span> <span class="nv">compare-fn</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="nv">add-to-list</span> <span class="nc">symbol</span> <span class="nv">element</span> <span class="k">&amp;optional</span> <span class="nf">append</span> <span class="nv">compare-fn</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>即</p>
+</div><p>即</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;org-structure-template-alist</span>
-             <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;k&#34;</span> <span class="s">&#34;@@html:&lt;kbd&gt;@@?@@html:&lt;/kbd&gt;@@&#34;</span><span class="p">))</span></code></pre></td></tr></table>
+             <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;k&#34;</span> <span class="s">&#34;@@html:&lt;kbd&gt;@@?@@html:&lt;/kbd&gt;@@&#34;</span><span class="p">))</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>这个语法的优点在于它会对比原列表内的元素以避免添加重复元素。</p>
-
+</div><p>这个语法的优点在于它会对比原列表内的元素以避免添加重复元素。</p>
 <p>这个 <code>add-to-list</code> 语法每次只能添加一个元素进入列表，并不能添加多个元素。而简单执行 <a href="http://clhs.lisp.se/Body/f%5Fappend.htm">append</a> ，则无法避免重复元素的添加。所以我采用 <a href="http://clhs.lisp.se/Body/m%5Fdolist.htm">dolist</a> 指令来添加多个元素：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -300,10 +286,10 @@
      <span class="o">&#39;</span><span class="p">((</span><span class="s">&#34;k&#34;</span> <span class="s">&#34;@@html:&lt;kbd&gt;@@?@@html:&lt;/kbd&gt;@@&#34;</span><span class="p">)</span>
        <span class="p">(</span><span class="s">&#34;spy&#34;</span> <span class="s">&#34;#+BEGIN_SRC python\n?\n#+END_SRC&#34;</span><span class="p">)</span>
        <span class="p">(</span><span class="s">&#34;son&#34;</span> <span class="s">&#34;#+BEGIN_SRC org :eval never-export\n,?\n#+END_SRC&#34;</span><span class="p">)))</span>
-  <span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;org-structure-template-alist</span> <span class="nv">my-org-structure-template</span><span class="p">))</span></code></pre></td></tr></table>
+  <span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;org-structure-template-alist</span> <span class="nv">my-org-structure-template</span><span class="p">))</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>效果拔群。</p>
+</div><p>效果拔群。</p>
     </div>
 
     <div class="post-copyright">
@@ -354,7 +340,7 @@
   </article>
         </div>
         
-  
+
   
   <div id="vcomments"></div>
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
@@ -364,9 +350,9 @@
         el: '#vcomments' ,
         appId: 'kyXPptAG0HNFlxVP6PKtMG79-gzGzoHsz',
         appKey: 'odsVXiu7qNwwQypz99atviXR',
-        notify:  false , 
-        verify:  false , 
-        avatar:'mm', 
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
         placeholder: '说点什么吧...',
         visitor:  false 
     });
@@ -405,13 +391,10 @@
   <span class="copyright-year">
     &copy; 
     2019 - 
-    2020
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">ziyunch</span>
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -422,7 +405,10 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../../../dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
 
 
 <script type="application/javascript">

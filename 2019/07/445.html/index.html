@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.76.5 with theme even" />
 
 
 <link rel="canonical" href="http://blindwith.science/2019/07/445.html/" />
@@ -35,13 +35,13 @@
 <link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<link href="../../../dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="../../../sass/main.min.c7bc1becf36bcf6a9ebd25d2947e43a2eb745ddb0c9a32b43126fd7fa460c351.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="鼠须管傻瓜化配置" />
 <meta property="og:description" content="This configuration:
-
 
 Optimized for simplified Chinese;
 Implement 朙月拼音 luna-pinyin, 微软双拼 double-pinyin-mspy and
@@ -60,7 +60,6 @@ Use ASCII mode for several applications.
 <meta itemprop="name" content="鼠须管傻瓜化配置">
 <meta itemprop="description" content="This configuration:
 
-
 Optimized for simplified Chinese;
 Implement 朙月拼音 luna-pinyin, 微软双拼 double-pinyin-mspy and
 地球拼音 terra-pinyin with 20&#43; dictionaries including symbols and
@@ -71,11 +70,9 @@ Use 地球双拼 terra-double-pinyin-mspy to reverse lookup
 吴语（苏州话） wugniu_soutseu with tone marks, toggled by `;
 Use ASCII mode for several applications.
 ">
-
-
 <meta itemprop="datePublished" content="2019-07-20T20:58:00-07:00" />
 <meta itemprop="dateModified" content="2020-06-15T21:09:07-07:00" />
-<meta itemprop="wordCount" content="730">
+<meta itemprop="wordCount" content="520">
 
 
 
@@ -83,7 +80,6 @@ Use ASCII mode for several applications.
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="鼠须管傻瓜化配置"/>
 <meta name="twitter:description" content="This configuration:
-
 
 Optimized for simplified Chinese;
 Implement 朙月拼音 luna-pinyin, 微软双拼 double-pinyin-mspy and
@@ -104,6 +100,7 @@ Use ASCII mode for several applications.
   <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
 <![endif]-->
+
 </head>
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
@@ -167,7 +164,7 @@ Use ASCII mode for several applications.
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 730 字 </span>
+          <span class="more-meta"> 约 520 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -177,30 +174,28 @@ Use ASCII mode for several applications.
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#supported-rime-version">Supported Rime Version</a>
-<ul>
-<li><a href="#macos">MacOS</a></li>
-</ul></li>
-<li><a href="#installation">Installation</a>
-<ul>
-<li><a href="#鼠鬚管-squirrel--macos"><a href="https://rime.im">鼠鬚管</a> Squirrel (MacOS)</a></li>
-<li><a href="#東風破-plum"><a href="https://github.com/rime/plum">東風破</a> <em>plum</em></a></li>
-<li><a href="#personalized-configuration-and-dictionaries">Personalized configuration and dictionaries</a></li>
-</ul></li>
-<li><a href="#deploy">Deploy</a></li>
-<li><a href="#updates">Updates</a></li>
-<li><a href="#customerization">Customerization</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#supported-rime-version">Supported Rime Version</a>
+      <ul>
+        <li><a href="#macos">MacOS</a></li>
+      </ul>
+    </li>
+    <li><a href="#installation">Installation</a>
+      <ul>
+        <li><a href="#鼠鬚管-squirrel--macos"><a href="https://rime.im">鼠鬚管</a> Squirrel (MacOS)</a></li>
+        <li><a href="#東風破-plum"><a href="https://github.com/rime/plum">東風破</a> <em>plum</em></a></li>
+        <li><a href="#personalized-configuration-and-dictionaries">Personalized configuration and dictionaries</a></li>
+      </ul>
+    </li>
+    <li><a href="#deploy">Deploy</a></li>
+    <li><a href="#updates">Updates</a></li>
+    <li><a href="#customerization">Customerization</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
       <p>This configuration:</p>
-
 <ul>
 <li>Optimized for simplified Chinese;</li>
 <li>Implement 朙月拼音 <code>luna-pinyin</code>, 微软双拼 <code>double-pinyin-mspy</code> and
@@ -212,49 +207,40 @@ method supporting tone marks;</li>
 吴语（苏州话） <code>wugniu_soutseu</code> with tone marks, toggled by <code>`</code>;</li>
 <li>Use ASCII mode for several applications.</li>
 </ul>
-
 <h2 id="supported-rime-version">Supported Rime Version</h2>
-
 <h3 id="macos">MacOS</h3>
-
 <p>The config should run on Squarrel 0.14.0 or greater.</p>
-
 <h2 id="installation">Installation</h2>
-
 <h3 id="鼠鬚管-squirrel--macos"><a href="https://rime.im">鼠鬚管</a> Squirrel (MacOS)</h3>
-
 <ul>
 <li>via <a href="https://rime.im">Latest release</a></li>
 <li>via <a href="https://github.com/rime/squirrel">source code</a>: <a href="https://github.com/rime/squirrel/blob/master/INSTALL.md">Build instruction</a></li>
 <li>via <a href="https://brew.sh">Homebrew</a>: <code>brew cask install squirrel</code></li>
 </ul>
-
 <h3 id="東風破-plum"><a href="https://github.com/rime/plum">東風破</a> <em>plum</em></h3>
-
 <p>Install <em>plum</em>, the configuration manager for Rime input method engine:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ~/Library/Rime
-curl -fsSL https://git.io/rime-install <span class="p">|</span> bash</code></pre></td></tr></table>
+curl -fsSL https://git.io/rime-install <span class="p">|</span> bash
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Then install packages:</p>
+</div><p>Then install packages:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> plum
-bash rime-install :preset double-pinyin emoji NGLI/rime-wugniu_soutseu</code></pre></td></tr></table>
+bash rime-install :preset double-pinyin emoji NGLI/rime-wugniu_soutseu
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><em>Supported input methods ℞</em></p>
-
+</div><p><em>Supported input methods ℞</em></p>
 <ul>
 <li><strong>Essentials:</strong> <a href="https://github.com/rime/rime-prelude">prelude</a> 基础配置 / <a href="https://github.com/rime/rime-essay">essay</a> 八股文</li>
 <li><strong>Phonetic-based:</strong> <a href="https://github.com/rime/rime-luna-pinyin">luna-pinyin</a> 朙月拼音 / <a href="https://github.com/rime/rime-terra-pinyin">terra-pinyin</a> 地球拼音 / <a href="https://github.com/rime/rime-bopomofo">bopomofo</a> 注音 / <a href="https://github.com/rime/rime-pinyin-simp">pinyin-simp</a> 袖珍简化字拼音</li>
@@ -264,13 +250,11 @@ bash rime-install :preset double-pinyin emoji NGLI/rime-wugniu_soutseu</code></p
 <li><strong>Shape-based:</strong> <a href="https://github.com/rime/rime-stroke">stroke</a> 笔画 / <a href="https://github.com/rime/rime-cangjie">cangjie</a> 仓颉输入法 / <a href="https://github.com/rime/rime-quick">quick</a> 速成 / <a href="https://github.com/rime/rime-wubi">wubi</a> 五笔字型 / <a href="https://github.com/rime/rime-array">array</a> 行列输入法 / <a href="https://github.com/rime/rime-scj">scj</a> 快速仓颉</li>
 <li><strong>Miscellaneous:</strong> <a href="https://github.com/rime/rime-emoji">emoji</a> 颜文字 / <a href="https://github.com/rime/rime-ipa">ipa</a>: 国际音标</li>
 </ul>
-
 <h3 id="personalized-configuration-and-dictionaries">Personalized configuration and dictionaries</h3>
-
 <p>To install, clone this repo to <code>~/Library/Rime</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -281,70 +265,64 @@ bash rime-install :preset double-pinyin emoji NGLI/rime-wugniu_soutseu</code></p
 git init
 <span class="nb">echo</span> -e <span class="s2">&#34;/*\n\!/README.org\n\!/dict\n\!/*.custom.yaml\n\!/*.extended.dict.yaml\n\!/terra_double_pinyin_mspy.*\n!/*pyim*&#34;</span> &gt;&gt; .gitignore
 git remote add origin https://github.com/ziyunch/Rime.git
-git pull origin master</code></pre></td></tr></table>
+git pull origin master
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Update: 2019-08-31</p>
+</div><p>Update: 2019-08-31</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">ln -s /Library/Input<span class="se">\ </span>Methods/Squirrel.app/Contents/SharedSupport/opencc/* ./opencc/</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-shell" data-lang="shell">ln -s /Library/Input<span class="se">\ </span>Methods/Squirrel.app/Contents/SharedSupport/opencc/* ./opencc/
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="deploy">Deploy</h2>
-
-<p>Press <kbd>Control + Option + `</kbd> to deploy current configuration.</p>
-
-<p>Press <kbd>Control + `</kbd> to select input method.</p>
-
+</div><h2 id="deploy">Deploy</h2>
+<p>Press <!-- raw HTML omitted -->Control + Option + `<!-- raw HTML omitted --> to deploy current configuration.</p>
+<p>Press <!-- raw HTML omitted -->Control + `<!-- raw HTML omitted --> to select input method.</p>
 <h2 id="updates">Updates</h2>
-
 <p>To update <em>plum</em> itself, run:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ~/Library/Rime/plum
-bash rime-install plum</code></pre></td></tr></table>
+bash rime-install plum
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>To update the <em>plum</em> packages, run:</p>
+</div><p>To update the <em>plum</em> packages, run:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ~/Library/Rime/plum
-bash rime-install :preset double-pinyin emoji NGLI/rime-wugniu_soutseu</code></pre></td></tr></table>
+bash rime-install :preset double-pinyin emoji NGLI/rime-wugniu_soutseu
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>To update the config, run:</p>
+</div><p>To update the config, run:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ~/Library/Rime
-git pull origin master</code></pre></td></tr></table>
+git pull origin master
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="customerization">Customerization</h2>
-
+</div><h2 id="customerization">Customerization</h2>
 <ul>
 <li>Modify <code>default.custom.yaml</code> to select more input methods or comment
 out input methods no longer needed:</li>
 </ul>
-
-<!--listend-->
+<!-- raw HTML omitted -->
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -359,22 +337,22 @@ out input methods no longer needed:</li>
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml">schema_list<span class="p">:</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>luna_pinyin<span class="w">          </span><span class="c"># 朙月拼音</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>terra_pinyin<span class="w">         </span><span class="c"># 地球拼音 dì qiú pīn yīn</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>terra_double_pinyin_mspy<span class="w"> </span><span class="c"># 地球双拼</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>double_pinyin_mspy<span class="w">   </span><span class="c"># 微软双拼</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>double_pinyin<span class="w">        </span><span class="c"># 自然码双拼</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>double_pinyin_abc<span class="w">    </span><span class="c"># 智能ABC双拼</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>double_pinyin_flypy<span class="w">  </span><span class="c"># 小鹤双拼</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>wugniu_soutseu<span class="w">       </span><span class="c"># 吴语（苏州话）</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>stroke<span class="w">               </span><span class="c"># 笔画</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>cangjie<span class="w">              </span><span class="c"># 仓颉输入法</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>bopomofo<span class="w">             </span><span class="c"># 注音</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>schema<span class="p">:</span><span class="w"> </span>emoji<span class="w">                </span><span class="c"># 颜文字</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">schema_list</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l">luna_pinyin         </span><span class="w"> </span><span class="c"># 朙月拼音</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l">terra_pinyin        </span><span class="w"> </span><span class="c"># 地球拼音 dì qiú pīn yīn</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l">terra_double_pinyin_mspy</span><span class="w"> </span><span class="c"># 地球双拼</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l">double_pinyin_mspy  </span><span class="w"> </span><span class="c"># 微软双拼</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l">double_pinyin       </span><span class="w"> </span><span class="c"># 自然码双拼</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l">double_pinyin_abc   </span><span class="w"> </span><span class="c"># 智能ABC双拼</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l">double_pinyin_flypy </span><span class="w"> </span><span class="c"># 小鹤双拼</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l">wugniu_soutseu      </span><span class="w"> </span><span class="c"># 吴语（苏州话）</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l">stroke              </span><span class="w"> </span><span class="c"># 笔画</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l">cangjie             </span><span class="w"> </span><span class="c"># 仓颉输入法</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l">bopomofo            </span><span class="w"> </span><span class="c"># 注音</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l">emoji               </span><span class="w"> </span><span class="c"># 颜文字</span><span class="w">
+</span></code></pre></td></tr></table>
 </div>
-</div>
-<ul>
+</div><ul>
 <li>Delete <code>wugniu_soutseu.custom.yaml</code> to use the default 朙月拼音
 <code>luna_pinyin</code> reverse lookup 吴语（苏州话） <code>wugniu_soutseu</code>.</li>
 </ul>
@@ -427,7 +405,7 @@ out input methods no longer needed:</li>
   </article>
         </div>
         
-  
+
   
   <div id="vcomments"></div>
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
@@ -437,9 +415,9 @@ out input methods no longer needed:</li>
         el: '#vcomments' ,
         appId: 'kyXPptAG0HNFlxVP6PKtMG79-gzGzoHsz',
         appKey: 'odsVXiu7qNwwQypz99atviXR',
-        notify:  false , 
-        verify:  false , 
-        avatar:'mm', 
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
         placeholder: '说点什么吧...',
         visitor:  false 
     });
@@ -478,13 +456,10 @@ out input methods no longer needed:</li>
   <span class="copyright-year">
     &copy; 
     2019 - 
-    2020
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">ziyunch</span>
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -495,7 +470,10 @@ out input methods no longer needed:</li>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../../../dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
 
 
 <script type="application/javascript">

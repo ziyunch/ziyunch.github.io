@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.76.5 with theme even" />
 
 
 <link rel="canonical" href="http://blindwith.science/2019/10/451.html/" />
@@ -35,7 +35,8 @@
 <link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<link href="../../../dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="../../../sass/main.min.c7bc1becf36bcf6a9ebd25d2947e43a2eb745ddb0c9a32b43126fd7fa460c351.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -47,8 +48,6 @@
 <meta property="article:modified_time" content="2020-06-15T21:09:11-07:00" />
 <meta itemprop="name" content="My first Django app">
 <meta itemprop="description" content="This is my implementaion on the Django tutorial.">
-
-
 <meta itemprop="datePublished" content="2019-10-11T13:58:00-07:00" />
 <meta itemprop="dateModified" content="2020-06-15T21:09:11-07:00" />
 <meta itemprop="wordCount" content="3388">
@@ -68,6 +67,7 @@
   <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
 <![endif]-->
+
 </head>
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
@@ -141,55 +141,52 @@
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#create-django-project-and-a-polls-app">Create Django project and a <code>polls</code> app</a></li>
-<li><a href="#write-my-first-view-for-the-polls-app">Write my first <code>view</code> for the <code>polls</code> app</a></li>
-<li><a href="#setup-database-for-django-apps">Setup database for Django apps</a></li>
-<li><a href="#create-models-for-the-polls-app">Create Models for the <code>polls</code> app</a>
-<ul>
-<li><a href="#change-models-in-models-dot-py">Change models in <code>models.py</code></a></li>
-<li><a href="#run-python-manage-dot-py-makemigrations-to-create-migrations-for-those-changes">Run <code>python manage.py makemigrations</code> to create migrations for those changes</a></li>
-<li><a href="#run-python-manage-dot-py-migrate-to-apply-those-changes-to-the-database">Run <code>python manage.py migrate</code> to apply those changes to the database</a></li>
-</ul></li>
-<li><a href="#use-django-apis-to-interact-with-the-polls-app">Use Django APIs to interact with the <code>polls</code> app</a></li>
-<li><a href="#use-django-admin-to-manage-the-question-object">Use Django Admin to manage the <code>Question</code> object</a></li>
-<li><a href="#four-public-interface-views-for-the-polls-app">Four public interface <code>views</code> for the <code>polls</code> app</a>
-<ul>
-<li><a href="#index-view">Index view</a></li>
-<li><a href="#detail-view-or-raise-a-404-error">Detail view or raise a 404 error</a></li>
-<li><a href="#vote-view-creating-a-simple-form">Vote view: creating a simple form</a></li>
-<li><a href="#result-view">Result view</a></li>
-</ul></li>
-<li><a href="#use-django-s-generic-views-instead-for-some-simple-views-in-the-polls-app">Use Django&rsquo;s generic views instead for some simple views in the <code>polls</code> app</a></li>
-<li><a href="#automated-testing">Automated testing</a></li>
-<li><a href="#customize-the-polls-app-s-look-and-feel">Customize the <code>polls</code> app&rsquo;s look and feel</a></li>
-<li><a href="#customize-the-admin-site">Customize the admin site</a></li>
-<li><a href="#wrap-up">Wrap up</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#create-django-project-and-a-polls-app">Create Django project and a <code>polls</code> app</a></li>
+    <li><a href="#write-my-first-view-for-the-polls-app">Write my first <code>view</code> for the <code>polls</code> app</a></li>
+    <li><a href="#setup-database-for-django-apps">Setup database for Django apps</a></li>
+    <li><a href="#create-models-for-the-polls-app">Create Models for the <code>polls</code> app</a>
+      <ul>
+        <li><a href="#change-models-in-models-dot-py">Change models in <code>models.py</code></a></li>
+        <li><a href="#run-python-manage-dot-py-makemigrations-to-create-migrations-for-those-changes">Run <code>python manage.py makemigrations</code> to create migrations for those changes</a></li>
+        <li><a href="#run-python-manage-dot-py-migrate-to-apply-those-changes-to-the-database">Run <code>python manage.py migrate</code> to apply those changes to the database</a></li>
+      </ul>
+    </li>
+    <li><a href="#use-django-apis-to-interact-with-the-polls-app">Use Django APIs to interact with the <code>polls</code> app</a></li>
+    <li><a href="#use-django-admin-to-manage-the-question-object">Use Django Admin to manage the <code>Question</code> object</a></li>
+    <li><a href="#four-public-interface-views-for-the-polls-app">Four public interface <code>views</code> for the <code>polls</code> app</a>
+      <ul>
+        <li><a href="#index-view">Index view</a></li>
+        <li><a href="#detail-view-or-raise-a-404-error">Detail view or raise a 404 error</a></li>
+        <li><a href="#vote-view-creating-a-simple-form">Vote view: creating a simple form</a></li>
+        <li><a href="#result-view">Result view</a></li>
+      </ul>
+    </li>
+    <li><a href="#use-django-s-generic-views-instead-for-some-simple-views-in-the-polls-app">Use Django&rsquo;s generic views instead for some simple views in the <code>polls</code> app</a></li>
+    <li><a href="#automated-testing">Automated testing</a></li>
+    <li><a href="#customize-the-polls-app-s-look-and-feel">Customize the <code>polls</code> app&rsquo;s look and feel</a></li>
+    <li><a href="#customize-the-admin-site">Customize the admin site</a></li>
+    <li><a href="#wrap-up">Wrap up</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
       <p>This is my implementaion on the <a href="https://docs.djangoproject.com/en/1.11/intro/tutorial01/">Django tutorial</a>.</p>
-
 <h2 id="create-django-project-and-a-polls-app">Create Django project and a <code>polls</code> app</h2>
-
 <p>First, I verify my Django installation and version by:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">python -m django --version</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-sh" data-lang="sh">python -m django --version
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>If Python (use 3 here) or Django (1.11.23 here) is not installed, go by:</p>
+</div><p>If Python (use 3 here) or Django (1.11.23 here) is not installed, go by:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -201,23 +198,23 @@
 mkdir ~/.venvs/venv
 python3 -m venv ~/.venvs/venv
 <span class="nb">source</span> ~/.venvs/venv/bin/activate
-pip install <span class="nv">django</span><span class="o">==</span><span class="m">1</span>.11.23
-pip install psycopg2</code></pre></td></tr></table>
+pip install <span class="nv">django</span><span class="o">==</span>1.11.23
+pip install psycopg2
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Now I could create a project with a collection of settings for an instance of Django. Avoid naming projects after built-in Python (<code>test</code>) or Django (<code>django</code>) components. And for security, put codes in some directory outside of the document root, such as <code>/home/mycode</code>.</p>
+</div><p>Now I could create a project with a collection of settings for an instance of Django. Avoid naming projects after built-in Python (<code>test</code>) or Django (<code>django</code>) components. And for security, put codes in some directory outside of the document root, such as <code>/home/mycode</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">django-admin startproject mysite</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-sh" data-lang="sh">django-admin startproject mysite
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>And this creates:</p>
+</div><p>And this creates:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -232,33 +229,32 @@ pip install psycopg2</code></pre></td></tr></table>
     ├── __init__.py
     ├── settings.py # settings/configuration
     ├── urls.py # URL declaration; a &#39;table of contents&#39; of the Django-powered site
-    └── wsgi.py # entry-point for WSGI-compatible web servers to serve the project</code></pre></td></tr></table>
+    └── wsgi.py # entry-point for WSGI-compatible web servers to serve the project
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>I could run and verify the function of the development server (default port is 8000)</p>
+</div><p>I could run and verify the function of the development server (default port is 8000)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py runserver <span class="m">8001</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py runserver <span class="m">8001</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>The development server automatically reloads Python code for each request as needed.</p>
-
+</div><p>The development server automatically reloads Python code for each request as needed.</p>
 <p>Now I have a project (a collection of configuration), I want to create some apps for the website right next to my <code>manage.py</code> as a top-level module. So I create the Polls app by:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py startapp polls</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py startapp polls
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>And this creates:</p>
+</div><p>And this creates:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -277,15 +273,14 @@ pip install psycopg2</code></pre></td></tr></table>
 │   └── __init__.py
 ├── models.py
 ├── tests.py
-└── views.py</code></pre></td></tr></table>
+└── views.py
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="write-my-first-view-for-the-polls-app">Write my first <code>view</code> for the <code>polls</code> app</h2>
-
+</div><h2 id="write-my-first-view-for-the-polls-app">Write my first <code>view</code> for the <code>polls</code> app</h2>
 <p>Edit <code>polls/views.py</code> as:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -296,15 +291,14 @@ pip install psycopg2</code></pre></td></tr></table>
 <span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
 
 <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">&#34;Hello, world. You&#39;re at the polls index.&#34;</span><span class="p">)</span></code></pre></td></tr></table>
+    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">&#34;Hello, world. You&#39;re at the polls index.&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Map the view it to a URL by URLconf <code>polls/urls.py</code>:</p>
-
-<p><a id="code-snippet--polls-urls.py"></a></p>
+</div><p>Map the view it to a URL by URLconf <code>polls/urls.py</code>:</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -319,15 +313,14 @@ pip install psycopg2</code></pre></td></tr></table>
 
 <span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
     <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">),</span>
-<span class="p">]</span></code></pre></td></tr></table>
+<span class="p">]</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>And point the root URLconf at the <code>polls.urls</code> module by editing <code>mysite/urls.py</code>:</p>
-
-<p><a id="code-snippet--mysite-urls.py"></a></p>
+</div><p>And point the root URLconf at the <code>polls.urls</code> module by editing <code>mysite/urls.py</code>:</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -342,20 +335,17 @@ pip install psycopg2</code></pre></td></tr></table>
 <span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
     <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^polls/&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;polls.urls&#39;</span><span class="p">)),</span>
     <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^admin/&#39;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
-<span class="p">]</span></code></pre></td></tr></table>
+<span class="p">]</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>The <code>include()</code> function allows referencing other URLconfs. You should always use <code>include()</code> when you include other URL patterns. <code>admin.site.urls</code> is the only exception to this.</p>
-
+</div><p>The <code>include()</code> function allows referencing other URLconfs. You should always use <code>include()</code> when you include other URL patterns. <code>admin.site.urls</code> is the only exception to this.</p>
 <p>The <code>url(regex, view, [kwargs, name])</code> function is passed four arguments.
 Note that the <code>regex</code> does not search GET and POST parameters, or the domain name.</p>
-
 <h2 id="setup-database-for-django-apps">Setup database for Django apps</h2>
-
 <p>Prepare PostgreSQL database:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -368,15 +358,14 @@ brew link postgresql@10 --force
 brew services start postgresql@10
 createuser --superuser djangouser
 createdb -O djangouser djangodb
-psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class="s1">&#39;mypassword&#39;</span><span class="p">;</span></code></pre></td></tr></table>
+psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class="s1">&#39;mypassword&#39;</span><span class="p">;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Setup database in <code>mysite/settings.py</code>:</p>
-
-<p><a id="code-snippet--mysite-settings.py"></a></p>
+</div><p>Setup database in <code>mysite/settings.py</code>:</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -397,30 +386,26 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
         <span class="s1">&#39;HOST&#39;</span><span class="p">:</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span>
         <span class="s1">&#39;PORT&#39;</span><span class="p">:</span> <span class="s1">&#39;5432&#39;</span>
     <span class="p">}</span>
-<span class="p">}</span></code></pre></td></tr></table>
+<span class="p">}</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Then run <code>migrate</code> command to create the tables for <code>INSTALLED_APPS</code> in the database, currently for <code>admin</code>, <code>auth</code>, <code>contenttypes</code> and <code>sessions</code>:</p>
+</div><p>Then run <code>migrate</code> command to create the tables for <code>INSTALLED_APPS</code> in the database, currently for <code>admin</code>, <code>auth</code>, <code>contenttypes</code> and <code>sessions</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py migrate</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py migrate
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="create-models-for-the-polls-app">Create Models for the <code>polls</code> app</h2>
-
+</div><h2 id="create-models-for-the-polls-app">Create Models for the <code>polls</code> app</h2>
 <h3 id="change-models-in-models-dot-py">Change models in <code>models.py</code></h3>
-
 <p>Now I will define my models, essentially my database layout with additional metadata. Note Django follows the DRY (Don&rsquo;t Repeat Yourself, every piece of knowledge must have a single, unambiguous, authoritative representation within a system) principle.</p>
-
 <p>I create two models <code>Questions</code> and <code>Choice</code> in my simple poll app:</p>
-
-<p><a id="code-snippet--polls-models.py"></a></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -479,15 +464,14 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
     <span class="n">choice_text</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
     <span class="n">votes</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">choice_text</span></code></pre></td></tr></table>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">choice_text</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Then I could add a reference of <code>polls</code> app to its configuration class in the <code>INSTALLED_APPS</code> setting.</p>
-
-<p><a id="code-snippet--mysite-settings.py"></a></p>
+</div><p>Then I could add a reference of <code>polls</code> app to its configuration class in the <code>INSTALLED_APPS</code> setting.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -506,31 +490,31 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
     <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
     <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
     <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
-<span class="p">]</span></code></pre></td></tr></table>
+<span class="p">]</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="run-python-manage-dot-py-makemigrations-to-create-migrations-for-those-changes">Run <code>python manage.py makemigrations</code> to create migrations for those changes</h3>
-
+</div><h3 id="run-python-manage-dot-py-makemigrations-to-create-migrations-for-those-changes">Run <code>python manage.py makemigrations</code> to create migrations for those changes</h3>
 <p>Now run the command to tell Django that I would like store the changes for <code>polls</code> as a <em>migration</em>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py makemigrations polls</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py makemigrations polls
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>I could also see the SQL that migration would run by:</p>
+</div><p>I could also see the SQL that migration would run by:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py sqlmigrate polls <span class="m">0001</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py sqlmigrate polls <span class="m">0001</span>
+</code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -571,26 +555,24 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
 <span class="k">ALTER</span> <span class="k">TABLE</span> <span class="s2">&#34;polls_choice&#34;</span> <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="s2">&#34;polls_choice_question_id_c5b4b260_fk_polls_qu
 </span><span class="s2">estion_id&#34;</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="s2">&#34;question_id&#34;</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="s2">&#34;polls_question&#34;</span> <span class="p">(</span><span class="s2">&#34;id&#34;</span><span class="p">)</span> <span class="k">DEFERRABLE</span> <span class="n">INI</span>
 <span class="n">TIALLY</span> <span class="k">DEFERRED</span><span class="p">;</span>
-<span class="k">COMMIT</span><span class="p">;</span></code></pre></td></tr></table>
+<span class="k">COMMIT</span><span class="p">;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="run-python-manage-dot-py-migrate-to-apply-those-changes-to-the-database">Run <code>python manage.py migrate</code> to apply those changes to the database</h3>
-
+</div><h3 id="run-python-manage-dot-py-migrate-to-apply-those-changes-to-the-database">Run <code>python manage.py migrate</code> to apply those changes to the database</h3>
 <p>Then I create those model tables in my database by running <code>migrate</code> again:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py migrate</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py migrate
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="use-django-apis-to-interact-with-the-polls-app">Use Django APIs to interact with the <code>polls</code> app</h2>
-
+</div><h2 id="use-django-apis-to-interact-with-the-polls-app">Use Django APIs to interact with the <code>polls</code> app</h2>
 <p>Now I could play with the Django API using the Python shell under <code>DJANGO_SETTINGS_MODULE environment variable</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -614,31 +596,27 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
 &gt;&gt;&gt; q.question_text
 &gt;&gt;&gt; q.pub_date
 &gt;&gt;&gt; Question.objects.get<span class="o">(</span><span class="nv">pub_date__year</span><span class="o">=</span>timezone.now<span class="o">()</span>.year<span class="o">)</span>
-&gt;&gt;&gt; Question.objects.get<span class="o">(</span><span class="nv">id</span><span class="o">=</span><span class="m">1</span><span class="o">)</span> <span class="c1"># identical to Question.objects.get(pk=1)</span>
-&gt;&gt;&gt; q.was_published_recently<span class="o">()</span></code></pre></td></tr></table>
+&gt;&gt;&gt; Question.objects.get<span class="o">(</span><span class="nv">id</span><span class="o">=</span>1<span class="o">)</span> <span class="c1"># identical to Question.objects.get(pk=1)</span>
+&gt;&gt;&gt; q.was_published_recently<span class="o">()</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="use-django-admin-to-manage-the-question-object">Use Django Admin to manage the <code>Question</code> object</h2>
-
+</div><h2 id="use-django-admin-to-manage-the-question-object">Use Django Admin to manage the <code>Question</code> object</h2>
 <p>Django was written in a newsroom environment. The admin is intended to be used for site managers to edit content.</p>
-
 <p>An admin could be created by:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py createsuperuser</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py createsuperuser
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Then I could login through <a href="http://127.0.0.1:8001/admin/">http://127.0.0.1:8001/admin/</a></p>
-
+</div><p>Then I could login through <a href="http://127.0.0.1:8001/admin/">http://127.0.0.1:8001/admin/</a></p>
 <p>Don&rsquo;t forget to register the Question object with an admin interface by:</p>
-
-<p><a id="code-snippet--polls-admin.py"></a></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -647,26 +625,22 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
 <span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Question</span>
 
-<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Question</span><span class="p">)</span></code></pre></td></tr></table>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Question</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="four-public-interface-views-for-the-polls-app">Four public interface <code>views</code> for the <code>polls</code> app</h2>
-
+</div><h2 id="four-public-interface-views-for-the-polls-app">Four public interface <code>views</code> for the <code>polls</code> app</h2>
 <p>I will create four views for the <code>polls</code> app:</p>
-
 <ul>
 <li>Question &ldquo;index&rdquo; page: displays the latest few questions.</li>
 <li>Question &ldquo;detail&rdquo; page: displays a question text, with no results but with a form to vote.</li>
 <li>Question &ldquo;results&rdquo; page: displays results for a particular question.</li>
 <li>Vote action: handles voting for a particular choice in a particular question.</li>
 </ul>
-
-<!--listend-->
-
-<p><a id="code-snippet--polls-views.py"></a></p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -695,13 +669,13 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
     <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">response</span> <span class="o">%</span> <span class="n">question_id</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">vote</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">question_id</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">&#34;You&#39;re voting on question </span><span class="si">%s</span><span class="s2">.&#34;</span> <span class="o">%</span> <span class="n">question_id</span><span class="p">)</span></code></pre></td></tr></table>
+    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">&#34;You&#39;re voting on question </span><span class="si">%s</span><span class="s2">.&#34;</span> <span class="o">%</span> <span class="n">question_id</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><a id="code-snippet--polls-urls.py"></a></p>
+</div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -732,17 +706,15 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
     <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^(?P&lt;question_id&gt;[0-9]+)/results/$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">results</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;results&#39;</span><span class="p">),</span>
     <span class="c1"># e.g. /polls/5/vote/</span>
     <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^(?P&lt;question_id&gt;[0-9]+)/vote/$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">vote</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;vote&#39;</span><span class="p">),</span>
-<span class="p">]</span></code></pre></td></tr></table>
+<span class="p">]</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="index-view">Index view</h3>
-
+</div><h3 id="index-view">Index view</h3>
 <p>I could use <code>templates</code> directory to seperate design from Python:</p>
-
-<p><a id="code-snippet--polls-templates-polls-index.html"></a></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -761,15 +733,14 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
     <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 {% else %}
     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>No polls are available.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-{% endif %}</code></pre></td></tr></table>
+{% endif %}
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Here I use <code>&lt;a href=&quot;{% url 'polls:detail' question.id %}&quot;&gt;</code> to avoid hardcoded link like <code>&lt;a href=&quot;/polls/{{ question.id }}/&quot;&gt;</code>, so that it look up the URL definition as specified in the <code>polls.url</code> module. I use <code>polls:detail</code> here to point at the namespaced detail view, as <code>'polls'</code> is specified as <code>app_name</code> in <code>polls/urls.py</code>.</p>
-
-<p><a id="code-snippet--polls-views.py"></a></p>
+</div><p>Here I use <code>&lt;a href=&quot;{% url 'polls:detail' question.id %}&quot;&gt;</code> to avoid hardcoded link like <code>&lt;a href=&quot;/polls/{{ question.id }}/&quot;&gt;</code>, so that it look up the URL definition as specified in the <code>polls.url</code> module. I use <code>polls:detail</code> here to point at the namespaced detail view, as <code>'polls'</code> is specified as <code>app_name</code> in <code>polls/urls.py</code>.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -792,19 +763,16 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
     <span class="p">)</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s1">&#39;-pub_date&#39;</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
     <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;latest_question_list&#39;</span><span class="p">:</span> <span class="n">latest_question_list</span><span class="p">}</span>
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;polls/index.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
-<span class="c1"># ...</span></code></pre></td></tr></table>
+<span class="c1"># ...</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Here I use <code>render()</code> shortcut for <code>HttpResponse(loader.get_template(file).render(context, request))</code>.</p>
-
+</div><p>Here I use <code>render()</code> shortcut for <code>HttpResponse(loader.get_template(file).render(context, request))</code>.</p>
 <h3 id="detail-view-or-raise-a-404-error">Detail view or raise a 404 error</h3>
-
 <p>Each view is responsible for doing one of two things: returning an <code>HttpResponse</code> object containing the content for the requested page, or raising an exception such as <code>Http404</code>.</p>
-
-<p><a id="code-snippet--polls-templates-polls-detail.html"></a></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -817,13 +785,13 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
 {% for choice in question.choice_set.all %}
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>{{ choice.choice_text }}<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 {% endfor %}
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></td></tr></table>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><a id="code-snippet--polls-views.py"></a></p>
+</div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -842,19 +810,16 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
         <span class="n">Question</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">pub_date__lte</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">now</span><span class="p">()),</span> <span class="n">pk</span><span class="o">=</span><span class="n">question_id</span>
     <span class="p">)</span>
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;polls/detail.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;question&#39;</span><span class="p">:</span> <span class="n">question</span><span class="p">})</span>
-<span class="c1"># ...</span></code></pre></td></tr></table>
+<span class="c1"># ...</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Here I use <code>get_object_or_404()</code> shortcut for <code>Http404</code> exception.</p>
-
+</div><p>Here I use <code>get_object_or_404()</code> shortcut for <code>Http404</code> exception.</p>
 <h3 id="vote-view-creating-a-simple-form">Vote view: creating a simple form</h3>
-
 <p>Now I update my poll detail template and add a simple form to it.</p>
-
-<p><a id="code-snippet--polls-templates-polls-detail.html"></a></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -885,17 +850,15 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
   <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;choice{{ forloop.counter }}&#34;</span><span class="p">&gt;</span>{{ choice.choice_text }}<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
   {% endfor %}
   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Vote&#34;</span> <span class="p">/&gt;</span>
-<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></td></tr></table>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Note all POST forms that are targeted at internal URLs should use the <code>{% csrf_token %}</code> template tag to protect from Cross Site Request Forgeries.</p>
-
+</div><p>Note all POST forms that are targeted at internal URLs should use the <code>{% csrf_token %}</code> template tag to protect from Cross Site Request Forgeries.</p>
 <p>And I also replace the dummy implementation of the <code>vote()</code> function with a real one.</p>
-
-<p><a id="code-snippet--polls-views.py"></a></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -942,21 +905,17 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
         <span class="c1"># Always return an HttpResponseRedirect after successfully dealing</span>
         <span class="c1"># with POST data. This prevents data from being posted twice if a</span>
         <span class="c1"># user hits the Back button.</span>
-        <span class="k">return</span> <span class="n">HttpResponseRedirect</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;polls:results&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">question</span><span class="o">.</span><span class="n">id</span><span class="p">,)))</span></code></pre></td></tr></table>
+        <span class="k">return</span> <span class="n">HttpResponseRedirect</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;polls:results&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">question</span><span class="o">.</span><span class="n">id</span><span class="p">,)))</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Note that always return an HttpResponseRedirect after successfully dealing with POST data to prevent from posting data twice if a user hits the Back button. And I use the <code>reverse()</code> function in the <code>HttpResponseRedirect</code> constructor to help avoid hardcoding a URL in the view function.</p>
-
+</div><p>Note that always return an HttpResponseRedirect after successfully dealing with POST data to prevent from posting data twice if a user hits the Back button. And I use the <code>reverse()</code> function in the <code>HttpResponseRedirect</code> constructor to help avoid hardcoding a URL in the view function.</p>
 <p>And note that this <code>vote()</code> have a <em>race condition</em> problem: if two users of my website try to vote at <em>exactly the same time</em>, the computed new value of <code>votes</code> might go wrong.</p>
-
 <h3 id="result-view">Result view</h3>
-
 <p>Now I implement the <code>result()</code> view by creating a result template and update the view.</p>
-
-<p><a id="code-snippet--polls-templates-polls-results.html"></a></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -975,13 +934,13 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
   {% endfor %}
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{% url &#39;polls:detail&#39; question.id %}&#34;</span><span class="p">&gt;</span>Vote again?<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></td></tr></table>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{% url &#39;polls:detail&#39; question.id %}&#34;</span><span class="p">&gt;</span>Vote again?<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><a id="code-snippet--polls-view.py"></a></p>
+</div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -996,21 +955,17 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
         <span class="n">Question</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">pub_date__lte</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">now</span><span class="p">),</span> <span class="n">pk</span><span class="o">=</span><span class="n">question_id</span>
     <span class="p">)</span>
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;polls/results.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;question&#39;</span><span class="p">:</span> <span class="n">question</span><span class="p">})</span>
-<span class="c1"># ...</span></code></pre></td></tr></table>
+<span class="c1"># ...</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="use-django-s-generic-views-instead-for-some-simple-views-in-the-polls-app">Use Django&rsquo;s generic views instead for some simple views in the <code>polls</code> app</h2>
-
+</div><h2 id="use-django-s-generic-views-instead-for-some-simple-views-in-the-polls-app">Use Django&rsquo;s generic views instead for some simple views in the <code>polls</code> app</h2>
 <p>Since it is pretty common for basic Web development to get data from the database according a passing parameter in the URL, loading a template and returning template, Django provides generic views for the simple  <code>detail()</code>, <code>results()</code> and <code>index()</code> views.</p>
-
 <p>In practice, when writing a Django app, people evaluate whether generic views are a good fit for their problem, and use them from the beginning.</p>
-
 <p>I amend the <code>polls/urls.py</code> URLconf:</p>
-
-<p><a id="code-snippet--polls-urls.py"></a></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1041,17 +996,15 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
     <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^(?P&lt;pk&gt;[0-9]+)/results/$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">ResultsView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;results&#39;</span><span class="p">),</span>
     <span class="c1"># e.g. /polls/5/vote/</span>
     <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^(?P&lt;question_id&gt;[0-9]+)/vote/$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">vote</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;vote&#39;</span><span class="p">),</span>
-<span class="p">]</span></code></pre></td></tr></table>
+<span class="p">]</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Note <code>&lt;question_id&gt;</code> in second and third patterns changes to <code>&lt;pk&gt;</code>.</p>
-
+</div><p>Note <code>&lt;question_id&gt;</code> in second and third patterns changes to <code>&lt;pk&gt;</code>.</p>
 <p>I also amend <code>index()</code>, <code>detail()</code> and <code>results()</code> views with Django&rsquo;s generic views:</p>
-
-<p><a id="code-snippet--polls-view.py"></a></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1122,34 +1075,28 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
     <span class="k">def</span> <span class="nf">get_queryset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">Question</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">pub_date__lte</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
 
-<span class="c1"># ...</span></code></pre></td></tr></table>
+<span class="c1"># ...</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="automated-testing">Automated testing</h2>
-
+</div><h2 id="automated-testing">Automated testing</h2>
 <p>I will create some automated tests so that as I make changes to my app, I could check that my code still works well. Besides,</p>
-
 <ul>
 <li>Tests will save time</li>
 <li>Tests don&rsquo;t just identify problems, they prevent them</li>
 <li>Tests make my code more attractive</li>
 <li>Tests help teams work together</li>
 </ul>
-
 <p>Rules of thumb:</p>
-
 <ul>
 <li>a separate TestClass for each model or view</li>
 <li>a separate test method for each set of conditions you want to test</li>
 <li>test method names that describe their function</li>
 </ul>
-
 <p>Here is some tests to check if the <code>polls</code> app not deals with future questions.</p>
-
-<p><a id="code-snippet--polls-tests.py"></a></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">  1
+<pre class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -1404,17 +1351,15 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
         <span class="n">past_question</span> <span class="o">=</span> <span class="n">create_question</span><span class="p">(</span><span class="n">question_text</span><span class="o">=</span><span class="s1">&#39;Past Question.&#39;</span><span class="p">,</span> <span class="n">days</span><span class="o">=-</span><span class="mi">5</span><span class="p">)</span>
         <span class="n">url</span> <span class="o">=</span> <span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;polls:detail&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">past_question</span><span class="o">.</span><span class="n">id</span><span class="p">,))</span>
         <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertContains</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">past_question</span><span class="o">.</span><span class="n">question_text</span><span class="p">)</span></code></pre></td></tr></table>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertContains</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">past_question</span><span class="o">.</span><span class="n">question_text</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="customize-the-polls-app-s-look-and-feel">Customize the <code>polls</code> app&rsquo;s look and feel</h2>
-
+</div><h2 id="customize-the-polls-app-s-look-and-feel">Customize the <code>polls</code> app&rsquo;s look and feel</h2>
 <p>Django will look for statis files in the <code>polls/static/</code> directory. Its <code>STATICFILES_FINDERS</code> setting contains a list of finders that know how to discover static files from various source. <code>AppDirectoriesFinder</code> staticfile finder finds the stylesheet at <code>polls/static/polls/style.css</code>.</p>
-
-<p><a id="code-snippet--polls-static-polls-style.css"></a></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-css" data-lang="css"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1429,34 +1374,30 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
 
 <span class="nt">body</span> <span class="p">{</span>
     <span class="k">background</span><span class="p">:</span> <span class="kc">white</span> <span class="nb">url</span><span class="p">(</span><span class="s2">&#34;images/background.gif&#34;</span><span class="p">)</span> <span class="kc">no-repeat</span> <span class="kc">right</span> <span class="kc">bottom</span><span class="p">;</span>
-<span class="p">}</span></code></pre></td></tr></table>
+<span class="p">}</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>And I add the <code>{% static %}</code> template tag at the top of <code>polls/templates/polls/index.html</code>.</p>
-
-<p><a id="code-snippet--polls-templates-polls-index.html"></a></p>
+</div><p>And I add the <code>{% static %}</code> template tag at the top of <code>polls/templates/polls/index.html</code>.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-html" data-lang="html">{% load static %}
 
-<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{% static &#39;polls/style.css&#39; %}&#34;</span><span class="p">&gt;</span></code></pre></td></tr></table>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{% static &#39;polls/style.css&#39; %}&#34;</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Note always use relative paths to link static files between each other.</p>
-
+</div><p>Note always use relative paths to link static files between each other.</p>
 <h2 id="customize-the-admin-site">Customize the admin site</h2>
-
 <p>I customize the admin form by editing <code>polls/admin.py</code>:</p>
-
-<p><a id="code-snippet--polls-admin.py"></a></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1499,19 +1440,16 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
     <span class="n">list_filter</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pub_date&#39;</span><span class="p">]</span>
     <span class="n">search_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;question_text&#39;</span><span class="p">]</span>
 
-<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Question</span><span class="p">,</span> <span class="n">QuestionAdmin</span><span class="p">)</span></code></pre></td></tr></table>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Question</span><span class="p">,</span> <span class="n">QuestionAdmin</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>I use <code>fieldsets</code> to split the form up and provide an usability detail. Alternatively, <code>fields</code> could be directly used here serving only a few fields.</p>
-
+</div><p>I use <code>fieldsets</code> to split the form up and provide an usability detail. Alternatively, <code>fields</code> could be directly used here serving only a few fields.</p>
 <p>For <code>ChoiceInline</code>, with <code>TabularInline</code>, the related objects are displayed in a compact, table-based format. I could also spread it out using <code>StackInline</code>.</p>
-
 <p>I can also customize the Django admin itself. First I add a <code>DIRS</code> option in the <code>TEMPLATES</code> setting in the setting files:</p>
-
-<p><a id="code-snippet--mysite-setting.py"></a></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1526,28 +1464,27 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
         <span class="s1">&#39;DIRS&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;templates&#39;</span><span class="p">)],</span>
         <span class="c1"># ...</span>
     <span class="p">},</span>
-<span class="p">]</span></code></pre></td></tr></table>
+<span class="p">]</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Find the Django source file, and copy the <code>django/contrib/admin/templates/admin/base_site.html</code> into <code>templates/admin/</code>:</p>
+</div><p>Find the Django source file, and copy the <code>django/contrib/admin/templates/admin/base_site.html</code> into <code>templates/admin/</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-sh" data-lang="sh">python -c <span class="s2">&#34;import django; print(django.__path__)&#34;</span>
 mkdir templates/admin
-cp PATH/django/contrib/admin/templates/admin/base_site.html templates/admin/base_site.html</code></pre></td></tr></table>
+cp PATH/django/contrib/admin/templates/admin/base_site.html templates/admin/base_site.html
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Edit as:</p>
-
-<p><a id="code-snippet--templates-admin-base-site.html"></a></p>
+</div><p>Edit as:</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1566,15 +1503,14 @@ cp PATH/django/contrib/admin/templates/admin/base_site.html templates/admin/base
 <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;site-name&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{% url &#39;admin:index&#39; %}&#34;</span><span class="p">&gt;</span>Polls Administration<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 {% endblock %}
 
-{% block nav-global %}{% endblock %}</code></pre></td></tr></table>
+{% block nav-global %}{% endblock %}
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="wrap-up">Wrap up</h2>
-
+</div><h2 id="wrap-up">Wrap up</h2>
 <p>Now my Django app looks like this:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1639,10 +1575,10 @@ cp PATH/django/contrib/admin/templates/admin/base_site.html templates/admin/base
 │   └── views.py
 └── templates
     └── admin
-        └── base_site.html</code></pre></td></tr></table>
+        └── base_site.html
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>It is also useful to turn the <code>polls</code> app into a standalone Python package, but it is another story.</p>
+</div><p>It is also useful to turn the <code>polls</code> app into a standalone Python package, but it is another story.</p>
     </div>
 
     <div class="post-copyright">
@@ -1692,7 +1628,7 @@ cp PATH/django/contrib/admin/templates/admin/base_site.html templates/admin/base
   </article>
         </div>
         
-  
+
   
   <div id="vcomments"></div>
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
@@ -1702,9 +1638,9 @@ cp PATH/django/contrib/admin/templates/admin/base_site.html templates/admin/base
         el: '#vcomments' ,
         appId: 'kyXPptAG0HNFlxVP6PKtMG79-gzGzoHsz',
         appKey: 'odsVXiu7qNwwQypz99atviXR',
-        notify:  false , 
-        verify:  false , 
-        avatar:'mm', 
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
         placeholder: '说点什么吧...',
         visitor:  false 
     });
@@ -1743,13 +1679,10 @@ cp PATH/django/contrib/admin/templates/admin/base_site.html templates/admin/base
   <span class="copyright-year">
     &copy; 
     2019 - 
-    2020
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">ziyunch</span>
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -1760,7 +1693,10 @@ cp PATH/django/contrib/admin/templates/admin/base_site.html templates/admin/base
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../../../dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
 
 
 <script type="application/javascript">

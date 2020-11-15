@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.76.5 with theme even" />
 
 
 <link rel="canonical" href="http://blindwith.science/2005/12/19.html/" />
@@ -34,7 +34,8 @@
 <link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<link href="../../../dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="../../../sass/main.min.c7bc1becf36bcf6a9ebd25d2947e43a2eb745ddb0c9a32b43126fd7fa460c351.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -46,8 +47,6 @@
 <meta property="article:modified_time" content="2020-06-15T21:09:20-07:00" />
 <meta itemprop="name" content="关于冲动">
 <meta itemprop="description" content="ziyunch @ MSN Live 有句话说：冲动是魔鬼。我想这句话自有他的道理，当然本文与感情无关，只是用此句入题。由于最近又冲动了一次，半路上便拟出了此题。 小学时的">
-
-
 <meta itemprop="datePublished" content="2005-12-10T19:33:00-08:00" />
 <meta itemprop="dateModified" content="2020-06-15T21:09:20-07:00" />
 <meta itemprop="wordCount" content="394">
@@ -67,6 +66,7 @@
   <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
 <![endif]-->
+
 </head>
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
@@ -139,28 +139,19 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p><em>ziyunch @ MSN Live</em></p>
-
 <p>有句话说：冲动是魔鬼。我想这句话自有他的道理，当然本文与感情无关，只是用此句入题。由于最近又冲动了一次，半路上便拟出了此题。</p>
-
 <p>小学时的我就很冲动，体现在打架方面，虽然女子打架总不那么文雅。现在得我就好多了，可能是把冲动转移到别处的原因吧。</p>
-
 <p>转移到哪处呢？购物。主要是买书。</p>
-
 <p>我自己分析了一下，我这冲动主要从几方面造成：</p>
-
 <p>一、当最近对此事感兴趣时看到此书，那么完了，可能翻翻几遍便购入囊中；</p>
-
 <p>二、在上网浏览时看到网友对此评论尚好时，一旦兜书店时看到此书，&hellip;&hellip;；</p>
-
 <p>三、在某书评上看到对此书的评论或摘录的此书内容与本人所见略同，然后看到此书，付钞票；四、逛书店时看第一眼很顺，第二眼，第三眼，&hellip;&hellip;，买了。</p>
-
 <p>这个冲动有好有坏。好的是让我各方面都有涉猎，但也有书买回来后只看过一边就束之高阁的。</p>
-
 <p>但照政治课上那个说法：不要一时冲动购物，好像并不全对。</p>
 
     </div>
@@ -211,7 +202,7 @@
   </article>
         </div>
         
-  
+
   
   <div id="vcomments"></div>
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
@@ -221,9 +212,9 @@
         el: '#vcomments' ,
         appId: 'kyXPptAG0HNFlxVP6PKtMG79-gzGzoHsz',
         appKey: 'odsVXiu7qNwwQypz99atviXR',
-        notify:  false , 
-        verify:  false , 
-        avatar:'mm', 
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
         placeholder: '说点什么吧...',
         visitor:  false 
     });
@@ -262,13 +253,10 @@
   <span class="copyright-year">
     &copy; 
     2019 - 
-    2020
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">ziyunch</span>
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -279,7 +267,10 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../../../dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
 
 
 <script type="application/javascript">

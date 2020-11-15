@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.76.5 with theme even" />
 
 
 <link rel="canonical" href="http://blindwith.science/2020/06/455.html/" />
@@ -35,7 +35,8 @@
 <link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<link href="../../../dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="../../../sass/main.min.c7bc1becf36bcf6a9ebd25d2947e43a2eb745ddb0c9a32b43126fd7fa460c351.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -47,11 +48,9 @@
 <meta property="article:modified_time" content="2020-08-08T20:16:10-07:00" />
 <meta itemprop="name" content="使用 pandoc 转换 ox-hugo 支持的 org 文件">
 <meta itemprop="description" content="之前从 hexo 转成 hugo 的时候，顺便用了使用非常方便的 ox-hugo 这个轮子。当时贪图省力，就直接用 pandoc 将 markdown 文件批量转换成了 orgmode，但是所有的 metadata 全都没能转换，后期还是得一个一个改。虽然是一个重新审阅自己黑历史的方式，但是要改四百多篇确实还是太过费心费力了。事情一变得繁杂起来，我的拖延症就犯了，于是直到现在我还是只改好了十几篇。今天终于忍不住了，动手看起了 pandoc 文档。">
-
-
 <meta itemprop="datePublished" content="2020-06-10T22:41:00-07:00" />
 <meta itemprop="dateModified" content="2020-08-08T20:16:10-07:00" />
-<meta itemprop="wordCount" content="783">
+<meta itemprop="wordCount" content="784">
 
 
 
@@ -68,6 +67,7 @@
   <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
 <![endif]-->
+
 </head>
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
@@ -131,7 +131,7 @@
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 783 字 </span>
+          <span class="more-meta"> 约 784 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -140,16 +140,15 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>之前从 hexo 转成 hugo 的时候，顺便用了使用非常方便的 ox-hugo 这个轮子。当时贪图省力，就直接用 pandoc 将 markdown 文件批量转换成了 orgmode，但是所有的 metadata 全都没能转换，后期还是得一个一个改。虽然是一个重新审阅自己黑历史的方式，但是要改四百多篇确实还是太过费心费力了。事情一变得繁杂起来，我的拖延症就犯了，于是直到现在我还是只改好了十几篇。今天终于忍不住了，动手看起了 pandoc 文档。</p>
-
 <p>Pandoc 可以自己设置 template，其中 orgmode 的 template 长这样：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -198,13 +197,13 @@ $body$
 $for(include-after)$
 
 $include-after$
-$endfor$</code></pre></td></tr></table>
+$endfor$
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>所以我重新写了一个 orgmode 的 template，这样可以按照 ox-hugo 的模板导出 org 文档。</p>
+</div><p>所以我重新写了一个 orgmode 的 template，这样可以按照 ox-hugo 的模板导出 org 文档。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -225,45 +224,42 @@ $endfor$</code></pre></td></tr></table>
 </span><span class="cs">    :EXPORT_HUGO_CATEGORIES: $for(categories)$$categories$$sep$, $endfor$
 </span><span class="cs"></span><span class="c">    :END:</span>
 
-$body$</code></pre></td></tr></table>
+$body$
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>但是 pandoc 1.17.1 的更新中还赋予了 org writer 在每级标题下添加 <code>:PROPERTIES:</code> 抽屉和 <code>CUSTOM_ID</code> 的功能，这对我来说有些累赘。所以需要写一个 Lua filter来避免：</p>
+</div><p>但是 pandoc 1.17.1 的更新中还赋予了 org writer 在每级标题下添加 <code>:PROPERTIES:</code> 抽屉和 <code>CUSTOM_ID</code> 的功能，这对我来说有些累赘。所以需要写一个 Lua filter来避免：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-lua" data-lang="lua"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-lua" data-lang="lua"><span class="kr">function</span> <span class="nf">Header</span> <span class="p">(</span><span class="n">header</span><span class="p">)</span>
   <span class="kr">return</span> <span class="n">pandoc.Header</span><span class="p">(</span><span class="n">header.level</span><span class="o">+</span><span class="mi">3</span><span class="p">,</span> <span class="n">header.content</span><span class="p">,</span> <span class="n">pandoc.Attr</span><span class="p">())</span>
-<span class="kr">end</span></code></pre></td></tr></table>
+<span class="kr">end</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>本来还想使用 Lua filter 把之前导出的 markdown 文件中误识别的四级标题也处理掉，无奈实在看不明白 Pandoc 作者弄的Header.content 为什么是 list of inlines，sed 对中文支持又不好，只能手动替换了。</p>
-
+</div><p>本来还想使用 Lua filter 把之前导出的 markdown 文件中误识别的四级标题也处理掉，无奈实在看不明白 Pandoc 作者弄的Header.content 为什么是 list of inlines，sed 对中文支持又不好，只能手动替换了。</p>
 <p>另外我还使用了几个extension</p>
-
 <ul>
 <li>markdown去除了span和div标记</li>
-<li>hard_line_breaks将hard_line_breaks改成\\\<br /></li>
+<li>hard_line_breaks将hard_line_breaks改成\\\\</li>
 <li>lists_without_preceding_blankline来避免列表不被识别</li>
 </ul>
-
 <p>很奇怪的是所有中英交杂的文字中的英文间的空格都会被pandoc识别为换行，由于code之类并未被替换，所以一时我也想不到什么比较好的方法来恢复空格，这能先这样了。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">pandoc -f markdown+lists_without_preceding_blankline+hard_line_breaks --template template.org --lua-filter<span class="o">=</span>remove_custom_id.lua ./posts/*.md -o output.org</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-sh" data-lang="sh">pandoc -f markdown+lists_without_preceding_blankline+hard_line_breaks --template template.org --lua-filter<span class="o">=</span>remove_custom_id.lua ./posts/*.md -o output.org
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>由于使用了 template 和 Lua filter，所以不能像上面这样简单地 bulk convert，在这儿我使用find指令批量转换并合并为一个org文档：</p>
+</div><p>由于使用了 template 和 Lua filter，所以不能像上面这样简单地 bulk convert，在这儿我使用find指令批量转换并合并为一个org文档：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -272,7 +268,8 @@ $body$</code></pre></td></tr></table>
 <pre class="chroma"><code class="language-sh" data-lang="sh">mkdir output
 find . -name <span class="s2">&#34;*.md&#34;</span> -type f -exec sh -c <span class="s1">&#39;pandoc -f markdown+lists_without_preceding_blankline+hard_line_breaks --template ./../template.org --lua-filter=./../remove_custom_id.lua &#34;${0}&#34; -o &#34;./output/$(basename ${0%.md}.org)&#34;&#39;</span> <span class="o">{}</span> <span class="se">\;</span>
 cat ./output/*.org &gt; all.org
-rm -r output</code></pre></td></tr></table>
+rm -r output
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -324,7 +321,7 @@ rm -r output</code></pre></td></tr></table>
   </article>
         </div>
         
-  
+
   
   <div id="vcomments"></div>
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
@@ -334,9 +331,9 @@ rm -r output</code></pre></td></tr></table>
         el: '#vcomments' ,
         appId: 'kyXPptAG0HNFlxVP6PKtMG79-gzGzoHsz',
         appKey: 'odsVXiu7qNwwQypz99atviXR',
-        notify:  false , 
-        verify:  false , 
-        avatar:'mm', 
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
         placeholder: '说点什么吧...',
         visitor:  false 
     });
@@ -375,13 +372,10 @@ rm -r output</code></pre></td></tr></table>
   <span class="copyright-year">
     &copy; 
     2019 - 
-    2020
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">ziyunch</span>
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -392,7 +386,10 @@ rm -r output</code></pre></td></tr></table>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../../../dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
 
 
 <script type="application/javascript">

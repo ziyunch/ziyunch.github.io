@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.76.5 with theme even" />
 
 
 <link rel="canonical" href="http://blindwith.science/2019/08/447.html/" />
@@ -36,14 +36,14 @@
 <link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<link href="../../../dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="../../../sass/main.min.c7bc1becf36bcf6a9ebd25d2947e43a2eb745ddb0c9a32b43126fd7fa460c351.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="博客由 Hexo 迁移至 Hugo" />
 <meta property="og:description" content="
 本篇博文使用 org-mode 书就，耶！
-
 
 从 2016 将博客迁移至 Hexo&#43;Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。" />
 <meta property="og:type" content="article" />
@@ -54,10 +54,7 @@
 <meta itemprop="description" content="
 本篇博文使用 org-mode 书就，耶！
 
-
 从 2016 将博客迁移至 Hexo&#43;Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。">
-
-
 <meta itemprop="datePublished" content="2019-08-26T23:49:00-07:00" />
 <meta itemprop="dateModified" content="2020-06-15T21:09:08-07:00" />
 <meta itemprop="wordCount" content="1004">
@@ -70,7 +67,6 @@
 <meta name="twitter:description" content="
 本篇博文使用 org-mode 书就，耶！
 
-
 从 2016 将博客迁移至 Hexo&#43;Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。"/>
 
 <!--[if lte IE 9]>
@@ -81,6 +77,7 @@
   <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
 <![endif]-->
+
 </head>
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
@@ -154,16 +151,13 @@
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#安装-hugo-并初始化">安装 Hugo 并初始化</a></li>
-<li><a href="#从-hexo-迁移">从 Hexo 迁移</a></li>
-<li><a href="#生成预览">生成预览</a></li>
-<li><a href="#配合-org-mode-使用更佳">配合 org-mode 使用更佳</a></li>
-<li><a href="#在-github-上发布">在 Github 上发布</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#安装-hugo-并初始化">安装 Hugo 并初始化</a></li>
+    <li><a href="#从-hexo-迁移">从 Hexo 迁移</a></li>
+    <li><a href="#生成预览">生成预览</a></li>
+    <li><a href="#配合-org-mode-使用更佳">配合 org-mode 使用更佳</a></li>
+    <li><a href="#在-github-上发布">在 Github 上发布</a></li>
+  </ul>
 </nav>
   </div>
 </div>
@@ -171,56 +165,49 @@
       <blockquote>
 <p>本篇博文使用 org-mode 书就，耶！</p>
 </blockquote>
-
 <p>从 2016 将博客迁移至 Hexo+Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。</p>
-
 <h2 id="安装-hugo-并初始化">安装 Hugo 并初始化</h2>
-
 <ul>
 <li>首先使用 Homebrew 安装 Hugo:</li>
 </ul>
-
-<!--listend-->
+<!-- raw HTML omitted -->
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ brew install hugo</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ brew install hugo
+</code></pre></td></tr></table>
 </div>
-</div>
-<ul>
+</div><ul>
 <li>然后建立站点</li>
 </ul>
-
-<!--listend-->
+<!-- raw HTML omitted -->
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ hugo new site blog</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ hugo new site blog
+</code></pre></td></tr></table>
 </div>
-</div>
-<ul>
+</div><ul>
 <li>安装主题，我采用比较简单的 even 主题</li>
 </ul>
-
-<!--listend-->
+<!-- raw HTML omitted -->
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ git clone https://github.com/olOwOlo/hugo-theme-even themes/even</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ git clone https://github.com/olOwOlo/hugo-theme-even themes/even
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="从-hexo-迁移">从 Hexo 迁移</h2>
-
+</div><h2 id="从-hexo-迁移">从 Hexo 迁移</h2>
 <p>好消息是，此迁移过程相当无痛。由于我之前将博客内容存在 Dropbox 上，所以只需要将相关文件 link 至 Hugo 的相关文件夹内。结构大致如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -247,26 +234,25 @@
 │   │   ├── image1.png
 │   │   └── ...
 │   └── CNAME
-...</code></pre></td></tr></table>
+...
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>有一个需要注意的地方是 Hexo 与 Hugo 对于 markdown 头文件中的 url 定义不同，我采用 <code>grep</code> 将其批量改成 <code>slug</code> ，并在配置文件中添加了 permalinks 的生成方式，以保证超链接的稳定：</p>
+</div><p>有一个需要注意的地方是 Hexo 与 Hugo 对于 markdown 头文件中的 url 定义不同，我采用 <code>grep</code> 将其批量改成 <code>slug</code> ，并在配置文件中添加了 permalinks 的生成方式，以保证超链接的稳定：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-  <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;/:year/:month/:slug&#34;</span></code></pre></td></tr></table>
+  <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;/:year/:month/:slug&#34;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="生成预览">生成预览</h2>
-
+</div><h2 id="生成预览">生成预览</h2>
 <p>输入 <code>hugo server</code> ，几乎是眨眼工夫，便已在内存中生成预览，而且对于博文可即时显示改动，非常方便。确实比 Hexo 快上百倍。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -291,15 +277,14 @@
   Sitemaps         <span class="p">|</span>     <span class="m">1</span>
   Cleaned          <span class="p">|</span>     <span class="m">0</span>
 
-Total in <span class="m">820</span> ms</code></pre></td></tr></table>
+Total in <span class="m">820</span> ms
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="配合-org-mode-使用更佳">配合 org-mode 使用更佳</h2>
-
+</div><h2 id="配合-org-mode-使用更佳">配合 org-mode 使用更佳</h2>
 <p>以前使用 Hexo 写博客时，博文都分散于各种 <code>.md</code> 文件中，管理起来很不方便。另一方面，由于我平时习惯用 org-mode 记记笔记，管理生活。有了好轮子，我干脆想着一鼓作气把车换了。在此我使用的是 <code>ox-hugo</code> 的 One post per Org subtree 方案，配置如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -322,17 +307,15 @@ Total in <span class="m">820</span> ms</code></pre></td></tr></table>
 <span class="gu">**</span><span class="err"> TODO</span> 博客由 Hexo 迁移至 Hugo                           :Emacs:Hexo:Hugo:
 <span class="c">   :PROPERTIES:
 </span><span class="c"></span><span class="cs">   :EXPORT_FILE_NAME: 20190826-hexo-2-hugo
-</span><span class="cs"></span><span class="c">   :END:</span></code></pre></td></tr></table>
+</span><span class="cs"></span><span class="c">   :END:</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>也就是说采用标签继承的方式，将博文分类。写完当篇博文，将 <code>TODO</code> 状态变更为 <code>DONE</code> 时， <code>ox-hugo</code> 会自动为文档生成时间戳。然后在 subtree 上 <kbd>C-c C-e H H</kbd> 即可在相应目录生成 <code>.md</code> 文档。此时如果后台正在运行着 <code>hugo server</code> ，即可在 <code>http://localhost:1313/</code> 看到即时更新。</p>
-
+</div><p>也就是说采用标签继承的方式，将博文分类。写完当篇博文，将 <code>TODO</code> 状态变更为 <code>DONE</code> 时， <code>ox-hugo</code> 会自动为文档生成时间戳。然后在 subtree 上 <!-- raw HTML omitted -->C-c C-e H H<!-- raw HTML omitted --> 即可在相应目录生成 <code>.md</code> 文档。此时如果后台正在运行着 <code>hugo server</code> ，即可在 <code>http://localhost:1313/</code> 看到即时更新。</p>
 <h2 id="在-github-上发布">在 Github 上发布</h2>
-
 <p>第一次部署，需要新建一个 public 文件夹，并将原来部署了 Hexo 博客的 repo 关联上，步骤如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -349,13 +332,13 @@ $ git init
 $ git remote add upstream https://github.com/ziyunch/ziyunch.github.io.git
 $ git add .
 $ git commit -m <span class="s2">&#34;switch to hugo&#34;</span>
-$ git push -f upstream master</code></pre></td></tr></table>
+$ git push -f upstream master
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>之后则可如官网<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">发布指南</a>所示编写一个可执行的 <code>.sh</code> 文件来自动化部署发布：</p>
+</div><p>之后则可如官网<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">发布指南</a>所示编写一个可执行的 <code>.sh</code> 文件来自动化部署发布：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -406,10 +389,10 @@ git add .
 git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
 
 <span class="c1"># Push source and build repos.</span>
-git push upstream master</code></pre></td></tr></table>
+git push upstream master
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>自此大功告成</p>
+</div><p>自此大功告成</p>
     </div>
 
     <div class="post-copyright">
@@ -460,7 +443,7 @@ git push upstream master</code></pre></td></tr></table>
   </article>
         </div>
         
-  
+
   
   <div id="vcomments"></div>
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
@@ -470,9 +453,9 @@ git push upstream master</code></pre></td></tr></table>
         el: '#vcomments' ,
         appId: 'kyXPptAG0HNFlxVP6PKtMG79-gzGzoHsz',
         appKey: 'odsVXiu7qNwwQypz99atviXR',
-        notify:  false , 
-        verify:  false , 
-        avatar:'mm', 
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
         placeholder: '说点什么吧...',
         visitor:  false 
     });
@@ -511,13 +494,10 @@ git push upstream master</code></pre></td></tr></table>
   <span class="copyright-year">
     &copy; 
     2019 - 
-    2020
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">ziyunch</span>
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -528,7 +508,10 @@ git push upstream master</code></pre></td></tr></table>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../../../dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
 
 
 <script type="application/javascript">

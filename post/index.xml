@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Blind with Science</title>
@@ -7,10 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Sat, 08 Aug 2020 20:10:00 -0700</lastBuildDate>
-    
-	<atom:link href="http://blindwith.science/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sat, 14 Nov 2020 22:23:00 -0800</lastBuildDate><atom:link href="http://blindwith.science/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>波特兰买书小结之一：一些英译初版书</title>
+      <link>http://blindwith.science/2020/11/457.html/</link>
+      <pubDate>Sat, 14 Nov 2020 22:23:00 -0800</pubDate>
+      
+      <guid>http://blindwith.science/2020/11/457.html/</guid>
+      <description>&lt;p&gt;最近去 Portland 玩（烤）耍（鸭），在女票的安利下去了传说中美帝最大的她每任都会拖着她去的独立书店 Powell&amp;rsquo;s Books 。时值新冠第三次爆发前夕，人们对知（出）识（门）的渴望压过了对疫情已有些麻木的警惕，商家们也急切营业来维持生计。书店将营业时间缩短至每日六点歇业，只开放了一层的区域，并对进出顾客逐个计数，仍抑不住书店内部攒动的人头与结帐区前排出的长龙。&lt;/p&gt;
+&lt;p&gt;书店内部是以颜色进行区分（波特兰的地铁似乎也是），第一次来的我便去要了张地图，背面是张书店的画报，还挺好看的。然而开放的多是文学与儿童区，而非我爱逛的画册区，还是有些遗憾的。既来之，我还是在书架中徜徉一阵，倒也发现了一些心头好。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>七狸山塘？七里山塘。</title>
@@ -19,9 +25,7 @@
       
       <guid>http://blindwith.science/2020/08/456.html/</guid>
       <description>&lt;p&gt;最近在玩江南百景图，为了能开苏州府，倒也是花费了一些心力。然而我总能在微博上看到路人或是营销号吹捧这个游戏多么考据，倒是大可不必。还有人去实地踏访，说苏州这七只狸猫还真在山塘街上，甚至说七里山塘其实是七狸山塘之误，更让我头上冒出无数问号。&lt;/p&gt;
-
 &lt;p&gt;江南百景图营销其有所考据，我是真的不以为然。并不是在游戏中贴一些出处，照搬一些画像名词，就能和严谨的考据挂上钩的。我可以忍冠云峰横跨苏州城从留园去了东园，但无法忍冠云峰的相关诗句是《题瑞云峰》，毕竟这瑞云峰虽与冠云峰同在留园待了百余年，却并非一石，现亦早已迁离留园，耸立十中。&lt;/p&gt;
-
 &lt;p&gt;而现在有人言之凿凿称苏州人世爱狸猫故有七狸，称七里山塘为七狸山塘之误，更是让我在无法忍受之外，更添无数疑惑。山塘街上真的有狸猫么？真的有狸猫困妖虎或狸猫锁龙脉的民间传说么？我寓居海外多年，今年又遭新冠之虞，出行都有困难，更别提回乡实地考察了，只能在故纸堆里探寻一二。&lt;/p&gt;</description>
     </item>
     
@@ -41,62 +45,53 @@
       
       <guid>http://blindwith.science/2020/03/454.html/</guid>
       <description>&lt;p&gt;之前新冠在国内爆发时，我虽然也有天天关注，但还是一种隔岸观火的状态。家乡疫情并不严重，母上也恰好来陪我了，所以每天关注得更多的可能还是疫情背后的一些问题。然而这些天西雅图疫情爆发，几天时间死了17人，多个养老院成为瘟疫中心，各个公司亦受波及。自上周起，我即在家办公，也算切身体验到了新冠带来的恐慌与不适。周末对我而言，无非就是继续在家宅着罢了。&lt;/p&gt;
-
 &lt;p&gt;虽然我已弃了科研大坑，但是还留着一些科研公众号未曾取关。这几天读着各种二手消息，总觉得关注点有些片面，便想着干脆找点一手论文来看。今天一查，倒是发现很多有用的资源，干脆来做个小总结吧。&lt;/p&gt;
-
 &lt;h2 id=&#34;学术论文&#34;&gt;学术论文&lt;/h2&gt;
-
 &lt;p&gt;各大杂志和出版商还是相当重视这次新冠的，一齐&lt;a href=&#34;https://wellcome.ac.uk/press-release/sharing-research-data-and-findings-relevant-novel-coronavirus-covid-19-outbreak&#34;&gt;缔结联盟&lt;/a&gt;，纷纷将相关文章免费并推出了汇总站。有空的时候，我会再把重要的文章也总结一下。&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.nejm.org/coronavirus&#34;&gt;New England Journal of Medicine&lt;/a&gt;: NEJM 的汇总做得是可读性最好的，重点文章有配图有中文翻译，侧边也附上了很多有用的资源，不愧是麻省的杂志。 &lt;code&gt;中英&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.elsevier.com/connect/coronavirus-information-center&#34;&gt;Elsevier&lt;/a&gt;: Elsevier这个资源汇总站内容非常全面，涵盖专家导览、临床信息、中文资源、科研进展和新闻资源，让我不仅对这老牌出版商刮目相看。尤其是中文资源这一块，把碎片化的资源都串了起来，非常实用。 &lt;code&gt;中英&lt;/code&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.thelancet.com/coronavirus&#34;&gt;Lancet&lt;/a&gt;: 柳叶刀的汇总比较简洁，文章分类清楚，有中文翻译，也在小角落里放了些需要点开放大才能看清的信息图。 &lt;code&gt;中英&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.cell.com/2019-nCOV&#34;&gt;Cell&lt;/a&gt;: Cell 的汇总比较简单，列出了 Cell 系的一些重点论文，有中文翻译。 &lt;code&gt;中英&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.bmj.com/coronavirus&#34;&gt;BMJ&lt;/a&gt;: BMJ 的资源站上除了学术文章汇总以外，还附上了他们为英国医学工作者做的&lt;a href=&#34;https://www.bmj.com/content/368/bmj.m800&#34;&gt;信息图&lt;/a&gt;和他们整理的时间线，信息量很大。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.springernature.com/gp/researchers/campaigns/coronavirus&#34;&gt;Springer Nature&lt;/a&gt;: Nature 的汇总相对来说比较简单，列出了 Nature 系的一些重点论文。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://novel-coronavirus.onlinelibrary.wiley.com&#34;&gt;Wiley&lt;/a&gt;: Wiley 的汇总一如既往地不走心和难用（我为什么要用一如既往），只显示了 Wiley 旗下的最近研究（那我还不如去 PubMed 上看呢）。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://asm.org/Press-Releases/2020/COVID-19-Resources&#34;&gt;American Society of Microbiology&lt;/a&gt;: 更多的是通告，也许是没发什么相关论文？ &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;病毒信息&#34;&gt;病毒信息&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://bigd.big.ac.cn/ncov&#34;&gt;国家生物信息中心&lt;/a&gt;: 新冠病毒信息库。 &lt;code&gt;中&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.gisaid.org&#34;&gt;GISAID&lt;/a&gt;: 全球流感信息库。 &lt;code&gt;英&lt;/code&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://nextstrain.org/ncov&#34;&gt;Nextstrain&lt;/a&gt;: 新型冠状病毒（hCoV-19）的基因组流行病学。 &lt;code&gt;中英&lt;/code&gt; &lt;a href=&#34;https://github.com/nextstrain/ncov&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/genbank/sars-cov-2-seqs/&#34;&gt;GenBank&lt;/a&gt;: 新冠病毒 SARS-CoV-2 基因序列库。 &lt;code&gt;英&lt;/code&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType%5Fs=Nucleotide&amp;amp;VirusLineage%5Fss=Wuhan%20seafood%20market%20pneumonia%20virus,%20taxid:2697049&amp;amp;utm%5Fcampaign=wuhan%5FnCoV&amp;amp;utm%5Fsource=insights&amp;amp;utm%5Fmedium=referral&#34;&gt;NCBI Virus&lt;/a&gt;: 新冠病毒 SARS-CoV-2 基因序列库。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE%5FTYPE=BlastSearch&amp;amp;BLAST%5FSPEC=Betacoronavirus&amp;amp;utm%5Fcampaign=wuhan%5FnCoV&amp;amp;utm%5Fsource=insights&amp;amp;utm%5Fmedium=referral&#34;&gt;Betacoronavirus BLAST&lt;/a&gt; &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.rcsb.org/news?year=2020&amp;amp;article=5e3c4bcba5007a04a313edcc&#34;&gt;PDB&lt;/a&gt;: 新冠病毒结构。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;动态图表&#34;&gt;动态图表&lt;/h2&gt;
-
 &lt;p&gt;整理过程中，找到了不同机构做的动态图表，发现每个图表的数字都不一样，很难判断，顺便也都列在这里。&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://coronavirus.1point3acres.com&#34;&gt;一亩三分地&lt;/a&gt;: 北美各州疫情实时动态地图，人工录入，北美信息似乎最全。 &lt;code&gt;中&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.dealmoon.com/guide/934164&#34;&gt;北美省钱快报&lt;/a&gt;: 北美各州疫情分布图，人工录入，有较大的广告条。 &lt;code&gt;中&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://ncov.dxy.cn/ncovh5/view/pneumonia&#34;&gt;丁香园&lt;/a&gt;: 国内各省及全球各国疫情实时动态地图，人工录入，国内较可靠的信息来源。 &lt;code&gt;中&lt;/code&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://lab.isaaclin.cn/nCoV/zh&#34;&gt;Issac Lin&lt;/a&gt;: 2019 新型冠状病毒疫情实时爬虫及 API。 &lt;code&gt;中英&lt;/code&gt; &lt;a href=&#34;https://github.com/BlankerL/DXY-COVID-19-Crawler&#34;&gt;Github&lt;/a&gt; &lt;a href=&#34;https://github.com/BlankerL/DXY-COVID-19-Data&#34;&gt;Data@Github&lt;/a&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://covid19.tk/&#34;&gt;ohdarling&lt;/a&gt;: 全国及全球时间序列疫情地图及趋势图。 &lt;code&gt;中英&lt;/code&gt; &lt;a href=&#34;https://github.com/ohdarling/COVID-19-Charts&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://ncov.deepeye.tech&#34;&gt;清华&lt;/a&gt;: 县市级时间序列疫情地图，病患年龄性别分布，疫情小区及分析报告，数据略有不全。 &lt;code&gt;中英&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://2019ncov.chinacdc.cn/2019-nCoV/&#34;&gt;中国疾病预防控制中心&lt;/a&gt;: 国内各省疫情分布地图，信息略有滞后。 &lt;code&gt;中&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6&#34;&gt;Johns Hopkins CSSE&lt;/a&gt;: 全球各国/省份/城市疫情实时动态地图，更新较为及时。 &lt;code&gt;英&lt;/code&gt; &lt;a href=&#34;https://doi.org/10.1016/S1473-3099(20)30120-1&#34;&gt;Lancet&lt;/a&gt; &lt;a href=&#34;https://github.com/CSSEGISandData/COVID-19&#34;&gt;Data@Github&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://hgis.uw.edu/virus/&#34;&gt;University of Washington HGIS&lt;/a&gt;: 美国各州及全球疫情实时动态地图及趋势图，信息略有滞后。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
@@ -104,11 +99,8 @@
 &lt;li&gt;&lt;a href=&#34;https://news.ifeng.com/c/special/7tPlDSzDgVk&#34;&gt;凤凰新闻&lt;/a&gt;: 国内各省及全球各国疫情实时动态地图。 &lt;code&gt;中&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://wh.opensource-service.cn&#34;&gt;Wuhan 2020&lt;/a&gt;: 除国内疫情地图外，还有医院、物流、生产渠道、捐款、义诊等信息。 &lt;code&gt;中&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;机构部门&#34;&gt;机构部门&lt;/h2&gt;
-
 &lt;p&gt;整理了学术出版商的汇总，顺便把各机构部门的也整理了一下，我的措辞都不由得严肃认真谨慎了起来。&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.cdc.gov/coronavirus/2019-ncov/index.html&#34;&gt;CDC&lt;/a&gt;: &lt;a href=&#34;https://www.cdc.gov/coronavirus/2019-ncov/about/index.html&#34;&gt;COVID-19 疾病介绍&lt;/a&gt;，情况通报、&lt;a href=&#34;https://www.cdc.gov/coronavirus/2019-ncov/hcp/index.html&#34;&gt;医护指导&lt;/a&gt;等。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.who.int/emergencies/diseases/novel-coronavirus-2019&#34;&gt;WHO&lt;/a&gt;: 常见问题答疑、&lt;a href=&#34;https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/&#34;&gt;每日情况通报&lt;/a&gt;、旅行建议、技术指导等。 &lt;code&gt;中英&lt;/code&gt;&lt;/li&gt;
@@ -116,29 +108,20 @@
 &lt;li&gt;&lt;a href=&#34;http://www.nhc.gov.cn/xcs/xxgzbd/gzbd%5Findex.shtml&#34;&gt;国家卫生健康委办公厅&lt;/a&gt;: 疫情通报、防控动态、诊疗方案通知及全文等。 &lt;code&gt;中&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.cma.org.cn/col/col2924/index.html&#34;&gt;中华医学会&lt;/a&gt;: 通知公告、防控科普、方案指南及建议等，含&lt;a href=&#34;https://www.cma.org.cn/art/2020/2/26/art%5F2928%5F33048.html&#34;&gt;超声诊疗方案&lt;/a&gt;及&lt;a href=&#34;https://www.cma.org.cn/art/2020/2/26/art%5F2928%5F33048.html&#34;&gt;重症诊疗方案&lt;/a&gt;。 &lt;code&gt;中&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;科普视频&#34;&gt;科普视频&lt;/h2&gt;
-
 &lt;p&gt;顺便也记录一下最近看到的比较靠谱的科普视频。&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;WHO: 新冠病毒科普 &lt;a href=&#34;https://www.youtube.com/watch?v=mOV1aBVYKGA&#34;&gt;YouTube&lt;/a&gt; &lt;a href=&#34;https://www.bilibili.com/video/av87734082&#34;&gt;Bilibili&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;回形针: 关于新冠病毒的一切 &lt;a href=&#34;https://www.youtube.com/watch?v=0ySYM4kRJVY&#34;&gt;YouTube&lt;/a&gt; &lt;a href=&#34;https://www.bilibili.com/video/av86216616&#34;&gt;Bilibili&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;3Blue1Brown: 指数增长与流行病 &lt;a href=&#34;https://www.youtube.com/watch?v=Kas0tIxDvrg&#34;&gt;YouTube&lt;/a&gt; &lt;a href=&#34;https://www.bilibili.com/video/av95917816&#34;&gt;Bilibili&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;科普文章&#34;&gt;科普文章&lt;/h2&gt;
-
 &lt;p&gt;比较靠谱的科普文章。&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.nytimes.com/interactive/2020/03/11/science/how-coronavirus-hijacks-your-cells.html&#34;&gt;New York Times&lt;/a&gt;: How Coronavirus Hijacks Your Cells。&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;疫情记录&#34;&gt;疫情记录&lt;/h2&gt;
-
 &lt;p&gt;最近关注疫情，看到了很多令人心塞的文章，想要分享却给 404 或限制访问了。我也发现了一些给报道、日记存档的项目，一并汇总于下。&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/Academic-nCoV/2019-nCoV/wiki&#34;&gt;Academic-nCoV&lt;/a&gt;: 全球非学术与学术信息每日简报。&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://2019ncovmemory.github.io/nCovMemory/&#34;&gt;2020新冠肺炎记忆&lt;/a&gt;: 报道、非虚构与个人叙述原文链接、截图及网页存档。&lt;a href=&#34;https://github.com/2019ncovmemory/nCovMemory&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
@@ -153,11 +136,8 @@
 &lt;li&gt;&lt;a href=&#34;https://freewuhan2020.gitbook.io/wuhan2020/&#34;&gt;新冠肺炎：内地传媒深度报道选编&lt;/a&gt;: 内地传媒深度报道，更新至 2/17。&lt;a href=&#34;https://github.com/SaveWuhan/NewsCoverageOnWuhan&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/lalambdada/2019-nCoV&#34;&gt;2019-nCoV 社交媒体文章列表&lt;/a&gt;: 微信与豆瓣文章 yaml 列表，更新至 2/6。&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;囤货指南&#34;&gt;囤货指南&lt;/h2&gt;
-
 &lt;p&gt;好吧，其实啥都买不到，聊以自慰罢了。欢迎给我捐赠口罩和消毒剂（大误，好像也没啥人看我的博客）。&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.epa.gov/sites/production/files/2020-03/documents/sars-cov-2-list%5F03-03-2020.pdf&#34;&gt;EPA List N&lt;/a&gt;: EPA 认为对新冠病毒有效的消毒剂列表。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.cdc.gov/niosh/npptl/topics/respirators/disp%5Fpart/n95list1.html&#34;&gt;NIOSH-Approved N95&lt;/a&gt;: CDC/NIOSH 认可的 N95 口罩列表。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
@@ -183,7 +163,7 @@
       <description>&lt;p&gt;I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
@@ -198,7 +178,8 @@ django.db.utils.OperationalError: could not connect to server: Connection refuse
         TCP/IP connections on port 5432?
 could not connect to server: Connection refused
         Is the server running on host &amp;#34;localhost&amp;#34; (127.0.0.1) and accepting
-        TCP/IP connections on port 5432?&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+        TCP/IP connections on port 5432?
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>
     </item>
@@ -218,20 +199,20 @@ could not connect to server: Connection refused
       <pubDate>Wed, 04 Sep 2019 20:06:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/09/450.html/</guid>
-      <description>&lt;p&gt;作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &lt;code&gt;&amp;lt;s&lt;/code&gt; &lt;kbd&gt;TAB&lt;/kbd&gt; 会自动生成&lt;/p&gt;
+      <description>&lt;p&gt;作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &lt;code&gt;&amp;lt;s&lt;/code&gt; &lt;!-- raw HTML omitted --&gt;TAB&lt;!-- raw HTML omitted --&gt; 会自动生成&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;c&#34;&gt;#+BEGIN_SRC&lt;/span&gt;
 
-&lt;span class=&#34;c&#34;&gt;#+END_SRC&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;span class=&#34;c&#34;&gt;#+END_SRC&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;这样插入代码或者引用这类结构非常方便。&lt;/p&gt;</description>
+&lt;/div&gt;&lt;p&gt;这样插入代码或者引用这类结构非常方便。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -261,7 +242,6 @@ could not connect to server: Connection refused
       <description>&lt;blockquote&gt;
 &lt;p&gt;本篇博文使用 org-mode 书就，耶！&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;从 2016 将博客迁移至 Hexo+Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。&lt;/p&gt;</description>
     </item>
     
@@ -272,11 +252,9 @@ could not connect to server: Connection refused
       
       <guid>http://blindwith.science/2019/08/446.html/</guid>
       <description>&lt;p&gt;以下是当年（2017-08-26）周六下午看完五点场写的总结，当时想着要建个微信公众号，就想留着弄个十万加，然而两年了公众号都给销号了也一直没发，就放博客上吧。&lt;/p&gt;
-
 &lt;p&gt;周六五点场，4点40左右到达酒店（McKittrick
-Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=&#34;#fn:fn-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;），拿到Ace牌，持此牌可以第一批（大概二十人左右）入场。进入酒店，寄包
-($4)，穿过漆黑走廊以适应灯光晦暗的环境。而后进入酒吧等待酒保带领入场，并获得白色面具以佩戴于面&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-2&#34;&gt;&lt;a href=&#34;#fn:fn-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;，进入电梯，开始演出。&lt;/p&gt;
-
+Hotel&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;），拿到Ace牌，持此牌可以第一批（大概二十人左右）入场。进入酒店，寄包
+($4)，穿过漆黑走廊以适应灯光晦暗的环境。而后进入酒吧等待酒保带领入场，并获得白色面具以佩戴于面&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;，进入电梯，开始演出。&lt;/p&gt;
 &lt;figure&gt;
     &lt;img src=&#34;../ox-hugo/sleepnomore.svg&#34;
          alt=&#34;Figure 1: 根据记忆推算的舞台调度示意图&#34;/&gt; &lt;figcaption&gt;
@@ -292,7 +270,6 @@ Hotel&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=
       
       <guid>http://blindwith.science/2019/07/445.html/</guid>
       <description>&lt;p&gt;This configuration:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Optimized for simplified Chinese;&lt;/li&gt;
 &lt;li&gt;Implement 朙月拼音 &lt;code&gt;luna-pinyin&lt;/code&gt;, 微软双拼 &lt;code&gt;double-pinyin-mspy&lt;/code&gt; and
@@ -313,41 +290,24 @@ method supporting tone marks;&lt;/li&gt;
       
       <guid>http://blindwith.science/2019/07/444.html/</guid>
       <description>&lt;p&gt;昨天搞定 Emacs 的中文环境，今天想着好久没记帐了，随手记总是很花时间，干脆一鼓作气，将记帐一起搬过来。&lt;/p&gt;
-
 &lt;h2 id=&#34;复式记帐&#34;&gt;复式记帐&lt;/h2&gt;
-
-&lt;p&gt;我本科时双修了一门金融，其中最为繁琐，也是最令人头疼的一门课便是会计学。我不爱听讲，毕业之后也将会计的知识点忘得查差不多了，然而其&amp;rdquo;有借必有贷，借贷必相等&amp;rdquo;的复式记帐法，反而是我生活中运用最多的。&lt;/p&gt;
-
+&lt;p&gt;我本科时双修了一门金融，其中最为繁琐，也是最令人头疼的一门课便是会计学。我不爱听讲，毕业之后也将会计的知识点忘得查差不多了，然而其&amp;quot;有借必有贷，借贷必相等&amp;quot;的复式记帐法，反而是我生活中运用最多的。&lt;/p&gt;
 &lt;p&gt;复式记帐法说起来复杂，对个人来说，就是将每笔交易分门别类，填入下面这条等式中：&lt;/p&gt;
-
-&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
-
-&lt;div class=&#34;org-center&#34;&gt;
-  &lt;div&gt;&lt;/div&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;资产 + 费用 = 负债 + 所有者权益 + 收入&lt;/p&gt;
-
-&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;在个人记帐中，这条等式辅以借贷概念会令人望而生畏，所以我将其略一变形：&lt;/p&gt;
-
-&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
-
-&lt;div class=&#34;org-center&#34;&gt;
-  &lt;div&gt;&lt;/div&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;（+资产）+（-负债）+（+费用）+（-收入）+（-所有者权益）= 0&lt;/p&gt;
-
-&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;ul&gt;
 &lt;li&gt;资产与负债都是与金钱直接挂钩的，比如银行户头，比如人民币美钞，比如信用卡帐户，再比如借条，这些都可以算是货币的不同表示形式。&lt;/li&gt;
 &lt;li&gt;费用与收入则是与金钱间接挂钩的，比如工资，比如商品，比如服务，这些都可以算是生产资本与商品资本的不同表现形式。其中收入与字面意思不同，可以理解为生产资本（劳动力等）。&lt;/li&gt;
 &lt;li&gt;所有者权益对个人意义不大，一般用来记录历史盈余与糊涂帐。&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;而这个变形公式中的正负号，则可以将各项目的符号关系，用作资金流向的参照。这么说有点玄乎，换个茨威格式的说法就是：&amp;rdquo;人们从命运得到的一切，冥冥之中都记下了它的价钱。&amp;rdquo;花钱买了服务，则是减少资产（花了钱），增加费用（得到服务）；工资到帐，则是增加资产（到帐），减少收入（既有劳动时间的减少）；别人跟你借了钱，则是资产减少（银行帐户或现金余额减少），负债增加（别人在你这儿的负债）。&lt;/p&gt;
-
+&lt;p&gt;而这个变形公式中的正负号，则可以将各项目的符号关系，用作资金流向的参照。这么说有点玄乎，换个茨威格式的说法就是：&amp;ldquo;人们从命运得到的一切，冥冥之中都记下了它的价钱。&amp;ldquo;花钱买了服务，则是减少资产（花了钱），增加费用（得到服务）；工资到帐，则是增加资产（到帐），减少收入（既有劳动时间的减少）；别人跟你借了钱，则是资产减少（银行帐户或现金余额减少），负债增加（别人在你这儿的负债）。&lt;/p&gt;
 &lt;p&gt;总结一下，由于人类暂时无法操控时间，所以费用一般为正，收入一般为负。而没有破产的情况下资产一般为正，别人欠你的钱为正，信用卡债（你欠别人的钱）为负。&lt;/p&gt;</description>
     </item>
     
@@ -357,16 +317,11 @@ method supporting tone marks;&lt;/li&gt;
       <pubDate>Wed, 03 Jul 2019 13:44:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/07/443.html/</guid>
-      <description>&lt;p&gt;使用 Emacs 三年多了，当时受了 &lt;a href=&#34;https://github.com/redguardtoo/mastering-emacs-in-one-year-guide&#34;&gt;一年成为 Emacs 高手&lt;/a&gt; 的蛊惑，且贪图便利，使用了 &lt;a href=&#34;https://github.com/purcell/emacs.d&#34;&gt;Purcell 的配置&lt;/a&gt;。正如 Purcell 所说，此配置相当 reasonable，用来入门确实让我受益匪浅，少走了很多弯路。三年使用下来，我需要添加的插件只有 &lt;code&gt;org-ref&lt;/code&gt; 和 &lt;code&gt;ob-smiles&lt;/code&gt; ，配置更新也仅须 &lt;code&gt;git pull&lt;/code&gt; 外加 &lt;kbd&gt;M-x package-list-packages U x&lt;/kbd&gt; 即可，非常方便。&lt;/p&gt;
-
+      <description>&lt;p&gt;使用 Emacs 三年多了，当时受了 &lt;a href=&#34;https://github.com/redguardtoo/mastering-emacs-in-one-year-guide&#34;&gt;一年成为 Emacs 高手&lt;/a&gt; 的蛊惑，且贪图便利，使用了 &lt;a href=&#34;https://github.com/purcell/emacs.d&#34;&gt;Purcell 的配置&lt;/a&gt;。正如 Purcell 所说，此配置相当 reasonable，用来入门确实让我受益匪浅，少走了很多弯路。三年使用下来，我需要添加的插件只有 &lt;code&gt;org-ref&lt;/code&gt; 和 &lt;code&gt;ob-smiles&lt;/code&gt; ，配置更新也仅须 &lt;code&gt;git pull&lt;/code&gt; 外加 &lt;!-- raw HTML omitted --&gt;M-x package-list-packages U x&lt;!-- raw HTML omitted --&gt; 即可，非常方便。&lt;/p&gt;
 &lt;p&gt;然而过去三年来，我主要是使用 Emacs 中的 org-mode 来记 Science 与 Tech 方面笔记，基于 Latex 的长文章 / 代码我更喜欢用 Atoms + Vim-mode 来写，基于 Markdown 的博客则用 MWeb 来写，中文笔记喜欢使用 Bears，最后却还是回到了苹果自带的免费 Notes。其他零零碎碎的场景则使用更为零碎的 app，餐馆用 DayGram + Workflowy，记账用随手记。非常不统一。&lt;/p&gt;
-
 &lt;p&gt;也就是说，我并不是一个“running my life with Emacs”的重症者，Purcell 配置的 Emacs 中也有大量我用不到，或者需要使用却不甚了解的插件。所以失业在家这个契机恰好也是让我重新审视 Emacs，看看我能否最大化地使用 Emacs。&lt;/p&gt;
-
 &lt;p&gt;对我而言，使用 Atoms 来写代码与 Latex，是由于我对使用 Emacs 调试还不甚熟练。所以这几天我花了一点时间重新阅读了 Emacs 手册。&lt;/p&gt;
-
 &lt;p&gt;使用 MWeb 来写博客与使用 Notes 来记笔记的原因则比较可笑，因为我基本上都是使用英文记录 Science &amp;amp; Tech 方面的笔记，我并没有配置 Emacs 的中文环境。所以需要使用中文来写东西时，我自然就得换用其他工具。这段时间准备面试，将 org-mode 的使用范围扩大到记录面试适宜，由于一亩三分地是一个主要资料来源，不免需要粘贴许多中文帖子进来。这时再将 Emacs 视为一个纯英文环境未免有些麻烦。而将 Emacs 中文化了，自然也不需要 MWeb 和 Notes 或者 Bear 什么事了。&lt;/p&gt;
-
 &lt;p&gt;而记录餐馆和消费的需求比较麻烦，本文暂且搁置，今后有空再来研究。&lt;/p&gt;</description>
     </item>
     
@@ -457,7 +412,7 @@ method supporting tone marks;&lt;/li&gt;
       <pubDate>Sun, 18 Sep 2005 16:51:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2005/09/12.html/</guid>
-      <description>ziyunch @ QQ空间 诉衷情 桃花粉色薛涛笺 金笔换青竹 清晨日变阴雨 朔方为何物 天靉靆（应用简体破，无奈电脑上打不出简体） 去浮云 晴不如 此文书罢 刀已横旁 女子亭</description>
+      <description>ziyunch @ QQ空间 （初三时写的，凭记忆默了下来，可能有些不同了。似乎写的是一位妇人自杀前的情感倾诉，可实际上，大部分是隐语，藏着 6 个字，一句我乱喜</description>
     </item>
     
     <item>
@@ -466,7 +421,7 @@ method supporting tone marks;&lt;/li&gt;
       <pubDate>Thu, 18 Aug 2005 12:56:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2005/08/11.html/</guid>
-      <description>ziyunch @ QQ空间 或许有人会笑我白痴 把往事写出作为别人的谈资 那么将它遗失 成为月光下的冷尸 我又一遍为之 那段不堪的历史？ 可我似乎并没有忏悔的意思 依然妄</description>
+      <description>ziyunch @ QQ空间 第一条线：位子变化线 初中入校时的位子还是不错的，后面两大高手&amp;mdash;&amp;mdash;一为班长&amp;quot;校花&amp;quot;，一</description>
     </item>
     
     <item>
@@ -529,7 +484,7 @@ method supporting tone marks;&lt;/li&gt;
       <pubDate>Thu, 07 Jul 2005 10:06:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2005/07/2.html/</guid>
-      <description>ziyunch @ Blogbus 沉默是指缝间的流水 一不留神忘了它 失去 顺带走了时间 缺一片哗哗 沉默是时间里的风 微微的远去 时间流逝 怎是那无言的倾诉 沉默就那么清澈 透明 时间的小</description>
+      <description>ziyunch @ Blogbus</description>
     </item>
     
     <item>
@@ -538,7 +493,7 @@ method supporting tone marks;&lt;/li&gt;
       <pubDate>Thu, 07 Jul 2005 10:04:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2005/07/1.html/</guid>
-      <description>ziyunch @ BlogBus 最近很颓废 似乎每天都是沙发动物 什么都不能吃 牙很疼 医生说是长牙的原因，却又不是智齿 或许不是一般的牙 它刺在我心 将我扼的难受 评论 （没有名称）</description>
+      <description>ziyunch @ BlogBus 评论 （没有名称） 2006/12/16 11:55 我们喜欢的东西很相近哦，动漫也好，音乐也好还有学科。 中考失利不算什么，高考败退才是真正的惨。不同大学经历可能决定不</description>
     </item>
     
   </channel>
