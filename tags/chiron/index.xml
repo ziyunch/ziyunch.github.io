@@ -9,12 +9,12 @@
     <copyright>ziyunch</copyright>
     <lastBuildDate>Tue, 08 Dec 2020 19:45:00 -0800</lastBuildDate><atom:link href="http://blindwith.science/tags/chiron/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>乐高 42083 布佳迪奇龙传动系统解构</title>
+      <title>乐高 42083 布加迪奇龙传动系统解构</title>
       <link>http://blindwith.science/2020/12/459.html/</link>
       <pubDate>Tue, 08 Dec 2020 19:45:00 -0800</pubDate>
       
       <guid>http://blindwith.science/2020/12/459.html/</guid>
-      <description>&lt;p&gt;最近西雅图进入了雨季，周末不是阴天便是淅淅沥沥的小雨，不宜出行。于是我们又把年初拼了一半的 42083 布佳迪奇龙拿出来拼。这次女票自信非常，坚决不要监工。一本书结束，完成了 marriage process 后，我们装上轮胎测试传动系统，却发现好像哪里不太对。转向和轮轴的小问题很容易就能找到并修正，但是发动机似乎还是有点卡。我网上想搜一下原理，却发现所有的攻略似乎都默认拼装此模型的人对车非常熟悉，对其中的传动原理都一笔带过。我都不知道动力应该从哪里来。所以我干脆来个 reverse engineering，尝试以一个不懂车辆构造的理科生视角来解构这辆车。&lt;/p&gt;</description>
+      <description>&lt;p&gt;最近西雅图进入了雨季，周末不是阴天便是淅淅沥沥的小雨，不宜出行。于是我们又把年初拼了一半的 42083 布加迪奇龙拿出来拼。这次女票自信非常，坚决不要监工。一本书结束，完成了 marriage process 后，我们装上轮胎测试传动系统，却发现好像哪里不太对。转向和轮轴的小问题很容易就能找到并修正，但是发动机似乎还是有点卡。我网上想搜一下原理，却发现所有的攻略似乎都默认拼装此模型的人对车非常熟悉，对其中的传动原理都一笔带过。我都不知道动力应该从哪里来。所以我干脆来个 reverse engineering，尝试以一个不懂车辆构造的理科生视角来解构这辆车。&lt;/p&gt;</description>
     </item>
     
   </channel>
