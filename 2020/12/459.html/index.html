@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>42083 传动系统解构 - Blind with Science</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ziyunch" /><meta name="description" content="最近西雅图进入了雨季，周末不是阴天便是淅淅沥沥的小雨，不宜出行。于是我们又把年初拼了一半的 42083 布佳迪奇龙拿出来拼。这次女票自信非常，坚决不要监工。一本书结束，完成了 marriage process 后，我们装上轮胎测试传动系统，却发现好像哪里不太对。转向和轮轴的小问题很容易就能找到并修正，但是发动机似乎还是有点卡。我网上想搜一下原理，却发现所有的攻略似乎都默认拼装此模型的人对车非常熟悉，对其中的传动原理都一笔带过。我都不知道动力应该从哪里来。所以我干脆来个 reverse engineering，尝试以一个不懂车辆构造的理科生视角来解构这辆车。
+" /><meta name="keywords" content="ziyunch, blog" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.76.5 with theme even" />
+
+
+<link rel="canonical" href="http://blindwith.science/2020/12/459.html/" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../favicon-16x16.png">
+<link rel="manifest" href="../../../manifest.json">
+<link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="../../../sass/main.min.c7bc1becf36bcf6a9ebd25d2947e43a2eb745ddb0c9a32b43126fd7fa460c351.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="42083 传动系统解构" />
+<meta property="og:description" content="最近西雅图进入了雨季，周末不是阴天便是淅淅沥沥的小雨，不宜出行。于是我们又把年初拼了一半的 42083 布佳迪奇龙拿出来拼。这次女票自信非常，坚决不要监工。一本书结束，完成了 marriage process 后，我们装上轮胎测试传动系统，却发现好像哪里不太对。转向和轮轴的小问题很容易就能找到并修正，但是发动机似乎还是有点卡。我网上想搜一下原理，却发现所有的攻略似乎都默认拼装此模型的人对车非常熟悉，对其中的传动原理都一笔带过。我都不知道动力应该从哪里来。所以我干脆来个 reverse engineering，尝试以一个不懂车辆构造的理科生视角来解构这辆车。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blindwith.science/2020/12/459.html/" />
+<meta property="article:published_time" content="2020-12-08T19:45:00-08:00" />
+<meta property="article:modified_time" content="2020-12-08T19:52:23-08:00" />
+<meta itemprop="name" content="42083 传动系统解构">
+<meta itemprop="description" content="最近西雅图进入了雨季，周末不是阴天便是淅淅沥沥的小雨，不宜出行。于是我们又把年初拼了一半的 42083 布佳迪奇龙拿出来拼。这次女票自信非常，坚决不要监工。一本书结束，完成了 marriage process 后，我们装上轮胎测试传动系统，却发现好像哪里不太对。转向和轮轴的小问题很容易就能找到并修正，但是发动机似乎还是有点卡。我网上想搜一下原理，却发现所有的攻略似乎都默认拼装此模型的人对车非常熟悉，对其中的传动原理都一笔带过。我都不知道动力应该从哪里来。所以我干脆来个 reverse engineering，尝试以一个不懂车辆构造的理科生视角来解构这辆车。">
+<meta itemprop="datePublished" content="2020-12-08T19:45:00-08:00" />
+<meta itemprop="dateModified" content="2020-12-08T19:52:23-08:00" />
+<meta itemprop="wordCount" content="3329">
+
+
+
+<meta itemprop="keywords" content="Lego,Bugatti,Chiron," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="42083 传动系统解构"/>
+<meta name="twitter:description" content="最近西雅图进入了雨季，周末不是阴天便是淅淅沥沥的小雨，不宜出行。于是我们又把年初拼了一半的 42083 布佳迪奇龙拿出来拼。这次女票自信非常，坚决不要监工。一本书结束，完成了 marriage process 后，我们装上轮胎测试传动系统，却发现好像哪里不太对。转向和轮轴的小问题很容易就能找到并修正，但是发动机似乎还是有点卡。我网上想搜一下原理，却发现所有的攻略似乎都默认拼装此模型的人对车非常熟悉，对其中的传动原理都一笔带过。我都不知道动力应该从哪里来。所以我干脆来个 reverse engineering，尝试以一个不懂车辆构造的理科生视角来解构这辆车。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="../../../" class="logo">Blind with Science</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="../../../">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="../../../post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="../../../tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="../../../categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="../../../about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="../../../" class="logo">Blind with Science</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="../../../">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">42083 传动系统解构</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-12-08 </span>
+        <div class="post-category">
+            <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
+            </div>
+          <span class="more-meta"> 约 3329 字 </span>
+          <span class="more-meta"> 预计阅读 7 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>最近西雅图进入了雨季，周末不是阴天便是淅淅沥沥的小雨，不宜出行。于是我们又把年初拼了一半的 42083 布佳迪奇龙拿出来拼。这次女票自信非常，坚决不要监工。一本书结束，完成了 marriage process 后，我们装上轮胎测试传动系统，却发现好像哪里不太对。转向和轮轴的小问题很容易就能找到并修正，但是发动机似乎还是有点卡。我网上想搜一下原理，却发现所有的攻略似乎都默认拼装此模型的人对车非常熟悉，对其中的传动原理都一笔带过。我都不知道动力应该从哪里来。所以我干脆来个 reverse engineering，尝试以一个不懂车辆构造的理科生视角来解构这辆车。</p>
+<p>首先，这辆车用到的齿轮类零件如下图所示。我大概将齿轮分为几种，分别是常规（仅水平传动），双斜（可垂直传动），单斜（仅垂直传动），带离合/离合（齿轮+带小齿牙的环）以及齿条。</p>
+<figure>
+    <img src="images/42083_gear.png"
+         alt="Figure 1: 齿轮类零件"/> <figcaption>
+            <p>Figure 1: 齿轮类零件</p>
+        </figcaption>
+</figure>
+
+<p>这辆车的传动系统由前后两段组成。后段从图1到图199，完成了后桥及差速器，引擎与变速箱。前段则从图200到图464，完成了前桥及差速器与转向系统和悬吊，以及变速器中的挡位模式与换挡拨片。最后经由 marriage process 完成前后两段的连接，使所有部件完成联动。如果按照部件所在位置进行介绍，可能会和乐高说明书一样给人一种割裂感，所以在此我以动力传送的顺序进行介绍。</p>
+<p>首先是位于后段的引擎。布佳迪奇龙采用的 W16 引擎，是四组四排活塞气缸（piston）以 W 型排列组成的往复活塞式内燃机。这么说可能很难理解，更形象地说，是由两组小夹角的 VR8 发动机组成的，每个 VR8 发动机，都将八个气缸以 V 字形分列在曲轴两侧来减少发动机长度高度与重量。从外部来看，这款乐高还挺像 W16 引擎的，然而翻个面看内部，则可以看出乐高实际上采用了 L4（直列四缸发动机） + V8（夹角为 60° 的八缸 V 型发动机） + L4 的排布方式。发动机连接一个12 齿黑色小齿轮，经与之啮合的 20 齿淡黄色大齿轮将动力传至换挡选择器，传动比为 3/5。气缸半径大概为 0.6 个乐高单位，行程长度大概为1个乐高单位，一个乐高单位为 8 毫米，所以排量为 pi * 气缸半径^2 * 行程长度 * 缸数 = 10 mm^3 = 10 microL，超级超级小。当然这里的气缸是虚拟的，所以如果我们仍然想模拟出引擎动力的话，可以将灰箭头处 1.5 乐高单位长的插销（connector）换成 1 单位长的十字轴套，方便未来玩耍。</p>
+<figure>
+    <img src="images/42083_engine.png"
+         alt="Figure 2: 引擎"/> <figcaption>
+            <p>Figure 2: 引擎</p>
+        </figcaption>
+</figure>
+
+<p>动力接下来传至位于前段的变速杆（gear shifter），我们可以在这里选择三种挡位模式（transmission mode）。</p>
+<figure>
+    <img src="images/42083_shifter.png"
+         alt="Figure 3: 变速杆"/> <figcaption>
+            <p>Figure 3: 变速杆</p>
+        </figcaption>
+</figure>
+
+<p>空挡（neutral）时，变速杆与变速器齿轮分离。</p>
+<p>挂行驶挡（Drive）时，变速杆与蓝色的行驶齿轮结合。此时动力从引擎进去，通过灰线代表的 8 齿小齿轮，传递至与之啮合的粉线标示的 24 齿白色大齿轮（传动比为 1/3），并传动至与之同轴的 20 齿蓝色行驶齿轮（传动比为 1），和与其相啮合的 24 齿灰色大齿轮（传动比为 5/6），最后传至变速箱。</p>
+<p>挂倒挡（Reverse）时，变速杆与红色的倒挡齿轮结合。此时动力经由 8 齿小齿轮与 24 齿白色大齿轮（传动比为 1/3）传动至与之同轴的 16 齿红色倒挡齿轮（传动比为 1），和与其相啮合的 16 齿灰色齿轮（传动比为 1），最后进入差速器所在轴，传至四个动力轮。</p>
+<p>倒挡会直接将动力经中轴传至四个动力轮，而行驶挡时则需要经过变速箱进行变速后再传往中轴。所以在此我以行驶挡的动力传送顺序来介绍所经部件。</p>
+<p>前面说了，挂行驶挡时动力会传至变速箱，而变速箱的挡位是通过位于前段的挡位拨片（paddle shifter）进行换挡的。推动位于方向盘右侧的升挡拨片，带动推杆推动装在灰色齿轮上的白色柱体，带动同轴的黄色 4 齿锥形齿轮逆时针转动 90 度，后者则带动与之啮合的锥形齿轮顺时针转动 90 度，再通过同轴的锥形齿轮带动与其啮合的锥形齿轮，带动变速箱的换挡红色转轴逆时针转动 90 度。</p>
+<figure>
+    <img src="images/42083_paddle.png"
+         alt="Figure 4: 换档拨片"/> <figcaption>
+            <p>Figure 4: 换档拨片</p>
+        </figcaption>
+</figure>
+
+<p>变速箱位于后段，由四组离合器（gear shifter）组成，乃这款乐高的高光之处，齿轮组设计非常炫酷。齿轮多以轴连接，不过红色与蓝色的齿轮仅当离合选择器与之结合时才会与轴联动，另外粉线两侧为不同的轴，并不会联动。动力从黄色转轴进入，经过16 齿灰色齿轮 o，从24 齿灰色大齿轮传至与之啮合的位于后桥的 8 齿小齿轮（传动比为 3）。</p>
+<figure>
+    <img src="images/42083_transmission_principle.png"
+         alt="Figure 5: 变速箱原理"/> <figcaption>
+            <p>Figure 5: 变速箱原理</p>
+        </figcaption>
+</figure>
+
+<p>换挡拨片带动白色转轴 E 逆时针转动，离合选择器（gear shifter）带动 CD 两组离合形成四种组合，当转四圈时 F 杆带动杆 G 转动 90 度，所以 AB 也会被离合选择器带动形成四种组合，一共 16 种组合。</p>
+<figure>
+    <img src="images/42083_transmission.png"
+         alt="Figure 6: 变速箱"/> <figcaption>
+            <p>Figure 6: 变速箱</p>
+        </figcaption>
+</figure>
+
+<p>然而由于 AB 选择的 abcdef 相互啮合，所以只存在（i）A 空选 B 选择 j/k 或（ii） A 选择 a/b B 空选两种组合。组合 i 时（黄色字母），动力经 j/k 传至与之啮合的 f/g，后者带动与之同轴的 h 并通过相啮合的 lmn 传至 o，此时所经齿轮齿数均为 16 齿，总传动比为 1。组合 ii 时（绿色字母），动力经 i 传至与之啮合的 d（传动比为 5/3），再通过同轴的 e 传至 c（传动比为 5/3），带动 同轴的 a/b 传至与之啮合的 f/g，后者再带动与之同轴的 h 并通过相啮合的 lmn 传至 o，此时总传动比为 25/9。</p>
+<p>到达 o 后，则有四种组合。分别为（I）D空选 C选q（II）D选u C空选（III）D空选 C选p（IV）D选 t C空选。组合 I 时（红色字母），动力从 xq 传至灰色大齿轮，传动比为3/5。组合II时（橙色字母），动力从 v 传动至与之啮合的 z，再通过 αβ 传至 γ，再传至与之啮合的 u（传动比为4/5)，u带动s，并经 yr 传至灰色大齿轮。组合III时（蓝色字母），动力经 wp 传至灰色大齿轮，传动比为1。组合IV时（浅蓝字母），动力从 vz 经 αβ 传至 δ，再传至与之啮合的 t（传动比为5/4），再带动 s 经 yr 传至灰色大齿轮。</p>
+<p>而后，动力通过灰色大齿轮与后桥橙圈内的与之啮合的 8 齿小齿轮传送至中轴（传动比为 3）。中轴连接前后桥，由于这辆车是四驱，所以前后桥还装有差速器（differential）。动力由差速器输入轴进入，通过 20 齿主动齿轮与 28 齿环齿轮（传动比为 5/7）带动两个 12 齿半轴齿轮（传动比为 1）来驱动两个前轮。当两个驱动轮所受阻力一致时，行星轴跟着两个半轴齿轮转动，不会自转。而当车辆转弯时，两侧轮胎所受阻力不同，行星轴会开始转动来平衡两侧驱动力。</p>
+<figure>
+    <img src="images/42083_front_differential.png"
+         alt="Figure 7: 前桥差速器"/> <figcaption>
+            <p>Figure 7: 前桥差速器</p>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="images/42083_rare_differential.png"
+         alt="Figure 8: 后桥差速器"/> <figcaption>
+            <p>Figure 8: 后桥差速器</p>
+        </figcaption>
+</figure>
+
+<p>所以最终如下表所示</p>
+<table>
+<thead>
+<tr>
+<th>挡位</th>
+<th>引擎</th>
+<th>引擎-变速杆</th>
+<th>变速杆</th>
+<th>变速箱</th>
+<th>变速箱-差速器</th>
+<th>差速器</th>
+<th>总</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&mdash;-</td>
+<td>&mdash;-</td>
+<td>&mdash;&mdash;&mdash;&ndash;</td>
+<td>&mdash;&mdash;</td>
+<td>&mdash;&mdash;</td>
+<td>&mdash;&mdash;&mdash;&mdash;-</td>
+<td>&mdash;&mdash;</td>
+<td>&mdash;&mdash;-</td>
+</tr>
+<tr>
+<td>D1</td>
+<td>3/5</td>
+<td>1/3</td>
+<td>5/6</td>
+<td>3/5</td>
+<td>3</td>
+<td>5/7</td>
+<td>3/14</td>
+</tr>
+<tr>
+<td>D2</td>
+<td>3/5</td>
+<td>1/3</td>
+<td>5/6</td>
+<td>4/5</td>
+<td>3</td>
+<td>5/7</td>
+<td>4/7</td>
+</tr>
+<tr>
+<td>D3</td>
+<td>3/5</td>
+<td>1/3</td>
+<td>5/6</td>
+<td>1</td>
+<td>3</td>
+<td>5/7</td>
+<td>5/14</td>
+</tr>
+<tr>
+<td>D4</td>
+<td>3/5</td>
+<td>1/3</td>
+<td>5/6</td>
+<td>5/4</td>
+<td>3</td>
+<td>5/7</td>
+<td>25/56</td>
+</tr>
+<tr>
+<td>D5</td>
+<td>3/5</td>
+<td>1/3</td>
+<td>5/6</td>
+<td>5/3</td>
+<td>3</td>
+<td>5/7</td>
+<td>25/42</td>
+</tr>
+<tr>
+<td>D6</td>
+<td>3/5</td>
+<td>1/3</td>
+<td>5/6</td>
+<td>20/9</td>
+<td>3</td>
+<td>5/7</td>
+<td>50/63</td>
+</tr>
+<tr>
+<td>D7</td>
+<td>3/5</td>
+<td>1/3</td>
+<td>5/6</td>
+<td>25/9</td>
+<td>3</td>
+<td>5/7</td>
+<td>125/126</td>
+</tr>
+<tr>
+<td>D8</td>
+<td>3/5</td>
+<td>1/3</td>
+<td>5/6</td>
+<td>125/36</td>
+<td>3</td>
+<td>5/7</td>
+<td>625/504</td>
+</tr>
+<tr>
+<td>R</td>
+<td>3/5</td>
+<td>1/3</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>5/7</td>
+<td>1/7</td>
+</tr>
+</tbody>
+</table>
+<p>这辆车采用的是双叉臂独立悬挂（suspension），由上下两个叉臂（beam）连接阻尼器（shock absorber）同时吸收横向力，横向刚度大，转弯侧倾小，适合跑车。乐高采用齿轮齿条来实现转向，由转向系统中的齿轮带动 22 齿的齿条，通过转向横拉杆带动左右轮毂转向。</p>
+<figure>
+    <img src="images/42083_front_axle.png"
+         alt="Figure 9: 前桥"/> <figcaption>
+            <p>Figure 9: 前桥</p>
+        </figcaption>
+</figure>
+
+<p>我将转向系统（steering system）单独拿出来，这样可以更清晰地显示方向盘是如何带动齿轮组，将转向动力传动到齿轮，从而带动齿条转向的。方向盘转 90 度，相当于与其同轴的 12 齿半轴齿轮与之后啮合的一系列 12 齿黑色小齿轮转 90 度（传动比为 1），带动与黄线标示的黑色小齿轮啮合的 20 齿淡黄色大齿轮转 54 度（传动比为 12 / 20 = 0.6)，也就相当于与淡黄色大齿轮同轴的 16 齿灰色齿轮转 54 度（传动比为 1），也就相当于与灰色齿轮同轴的 12 齿黑色小齿轮转 54 度（传动比为 1），即 1.8 齿，并带动齿条移动。齿条长 13 个乐高单位，齿共占 9 个乐高单位，1.8 齿相当于 0.78 个乐高单位，即轮胎转动了 arcsin(0.78/2.5) = 17.45 度。</p>
+<figure>
+    <img src="images/42083_steering.png"
+         alt="Figure 10: 转向系统"/> <figcaption>
+            <p>Figure 10: 转向系统</p>
+        </figcaption>
+</figure>
+
+<p>将这辆车的传动系统研究了一番之后，我发现设计者虽然很厉害，但还是有些许瑕疵。比如发动机卡顿的问题，这是由于多个离合齿轮造成的打滑而导致的动力滞后。另一个则是悬挂，这个有待计算，但我明显感觉前悬挂比后悬挂软很多，这在超重的全车组装完成后很可能是个问题。所以虽然拆了一遍车，为了之后能更顺利地玩耍此车，我打算再花一些时间，参考<a href="https://www.eurobricks.com/forum/index.php?/forums/topic/162092-42083-bugatti-chiron-mods-and-improvements/">这篇讨论</a>， 研究其他人是怎么针对这些问题进行改装，并找出花费最小的改造方案。</p>
+<p>后续：花了好几周时间拆车研究，拍照p图，写了这篇博客。最后想在网上找一张 marriage process 的图的时候（太大了以至于我的简陋白板背景不够用），发现有人做了一个类似的<a href="https://www.eurobricks.com/forum/index.php?/forums/topic/163087-review-42083-bugatti-chiron/">评测</a> ，有很多动图，感觉可以作为我这篇博客的动态补充，在此也推荐一下。</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">ziyunch</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-12-08
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="../../../images/wechatpay.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="../../../tags/lego/">Lego</a>
+          <a href="../../../tags/bugatti/">Bugatti</a>
+          <a href="../../../tags/chiron/">Chiron</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="../../../2020/11/458.html/">
+            <span class="next-text nav-default">波特兰买书小结之二：藏书票的书</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'ziyunch';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'kyXPptAG0HNFlxVP6PKtMG79-gzGzoHsz',
+        appKey: 'odsVXiu7qNwwQypz99atviXR',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/ziyunch" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ziyunch" class="iconfont icon-github" title="github"></a>
+      <a href="http://weibo.com/ziyunc" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://douban.com/people/ziyunch" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-86469737-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

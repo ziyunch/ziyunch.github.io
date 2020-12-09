@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Mon, 16 Nov 2020 00:34:00 -0800</lastBuildDate><atom:link href="http://blindwith.science/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Dec 2020 19:45:00 -0800</lastBuildDate><atom:link href="http://blindwith.science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>42083 传动系统解构</title>
+      <link>http://blindwith.science/2020/12/459.html/</link>
+      <pubDate>Tue, 08 Dec 2020 19:45:00 -0800</pubDate>
+      
+      <guid>http://blindwith.science/2020/12/459.html/</guid>
+      <description>&lt;p&gt;最近西雅图进入了雨季，周末不是阴天便是淅淅沥沥的小雨，不宜出行。于是我们又把年初拼了一半的 42083 布佳迪奇龙拿出来拼。这次女票自信非常，坚决不要监工。一本书结束，完成了 marriage process 后，我们装上轮胎测试传动系统，却发现好像哪里不太对。转向和轮轴的小问题很容易就能找到并修正，但是发动机似乎还是有点卡。我网上想搜一下原理，却发现所有的攻略似乎都默认拼装此模型的人对车非常熟悉，对其中的传动原理都一笔带过。我都不知道动力应该从哪里来。所以我干脆来个 reverse engineering，尝试以一个不懂车辆构造的理科生视角来解构这辆车。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>波特兰买书小结之二：藏书票的书</title>
       <link>http://blindwith.science/2020/11/458.html/</link>
@@ -51,108 +60,11 @@
     <item>
       <title>宅家腻了怎么办？做个新型冠状病毒（COVID-19）资源小总结吧</title>
       <link>http://blindwith.science/2020/03/454.html/</link>
-      <pubDate>Sun, 15 Mar 2020 19:14:00 -0700</pubDate>
+      <pubDate>Sun, 08 Mar 2020 19:14:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2020/03/454.html/</guid>
       <description>&lt;p&gt;之前新冠在国内爆发时，我虽然也有天天关注，但还是一种隔岸观火的状态。家乡疫情并不严重，母上也恰好来陪我了，所以每天关注得更多的可能还是疫情背后的一些问题。然而这些天西雅图疫情爆发，几天时间死了17人，多个养老院成为瘟疫中心，各个公司亦受波及。自上周起，我即在家办公，也算切身体验到了新冠带来的恐慌与不适。周末对我而言，无非就是继续在家宅着罢了。&lt;/p&gt;
-&lt;p&gt;虽然我已弃了科研大坑，但是还留着一些科研公众号未曾取关。这几天读着各种二手消息，总觉得关注点有些片面，便想着干脆找点一手论文来看。今天一查，倒是发现很多有用的资源，干脆来做个小总结吧。&lt;/p&gt;
-&lt;h2 id=&#34;学术论文&#34;&gt;学术论文&lt;/h2&gt;
-&lt;p&gt;各大杂志和出版商还是相当重视这次新冠的，一齐&lt;a href=&#34;https://wellcome.ac.uk/press-release/sharing-research-data-and-findings-relevant-novel-coronavirus-covid-19-outbreak&#34;&gt;缔结联盟&lt;/a&gt;，纷纷将相关文章免费并推出了汇总站。有空的时候，我会再把重要的文章也总结一下。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.nejm.org/coronavirus&#34;&gt;New England Journal of Medicine&lt;/a&gt;: NEJM 的汇总做得是可读性最好的，重点文章有配图有中文翻译，侧边也附上了很多有用的资源，不愧是麻省的杂志。 &lt;code&gt;中英&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.elsevier.com/connect/coronavirus-information-center&#34;&gt;Elsevier&lt;/a&gt;: Elsevier这个资源汇总站内容非常全面，涵盖专家导览、临床信息、中文资源、科研进展和新闻资源，让我不仅对这老牌出版商刮目相看。尤其是中文资源这一块，把碎片化的资源都串了起来，非常实用。 &lt;code&gt;中英&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.thelancet.com/coronavirus&#34;&gt;Lancet&lt;/a&gt;: 柳叶刀的汇总比较简洁，文章分类清楚，有中文翻译，也在小角落里放了些需要点开放大才能看清的信息图。 &lt;code&gt;中英&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.cell.com/2019-nCOV&#34;&gt;Cell&lt;/a&gt;: Cell 的汇总比较简单，列出了 Cell 系的一些重点论文，有中文翻译。 &lt;code&gt;中英&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.bmj.com/coronavirus&#34;&gt;BMJ&lt;/a&gt;: BMJ 的资源站上除了学术文章汇总以外，还附上了他们为英国医学工作者做的&lt;a href=&#34;https://www.bmj.com/content/368/bmj.m800&#34;&gt;信息图&lt;/a&gt;和他们整理的时间线，信息量很大。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.springernature.com/gp/researchers/campaigns/coronavirus&#34;&gt;Springer Nature&lt;/a&gt;: Nature 的汇总相对来说比较简单，列出了 Nature 系的一些重点论文。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://novel-coronavirus.onlinelibrary.wiley.com&#34;&gt;Wiley&lt;/a&gt;: Wiley 的汇总一如既往地不走心和难用（我为什么要用一如既往），只显示了 Wiley 旗下的最近研究（那我还不如去 PubMed 上看呢）。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://asm.org/Press-Releases/2020/COVID-19-Resources&#34;&gt;American Society of Microbiology&lt;/a&gt;: 更多的是通告，也许是没发什么相关论文？ &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;病毒信息&#34;&gt;病毒信息&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://bigd.big.ac.cn/ncov&#34;&gt;国家生物信息中心&lt;/a&gt;: 新冠病毒信息库。 &lt;code&gt;中&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.gisaid.org&#34;&gt;GISAID&lt;/a&gt;: 全球流感信息库。 &lt;code&gt;英&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://nextstrain.org/ncov&#34;&gt;Nextstrain&lt;/a&gt;: 新型冠状病毒（hCoV-19）的基因组流行病学。 &lt;code&gt;中英&lt;/code&gt; &lt;a href=&#34;https://github.com/nextstrain/ncov&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/genbank/sars-cov-2-seqs/&#34;&gt;GenBank&lt;/a&gt;: 新冠病毒 SARS-CoV-2 基因序列库。 &lt;code&gt;英&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType%5Fs=Nucleotide&amp;amp;VirusLineage%5Fss=Wuhan%20seafood%20market%20pneumonia%20virus,%20taxid:2697049&amp;amp;utm%5Fcampaign=wuhan%5FnCoV&amp;amp;utm%5Fsource=insights&amp;amp;utm%5Fmedium=referral&#34;&gt;NCBI Virus&lt;/a&gt;: 新冠病毒 SARS-CoV-2 基因序列库。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE%5FTYPE=BlastSearch&amp;amp;BLAST%5FSPEC=Betacoronavirus&amp;amp;utm%5Fcampaign=wuhan%5FnCoV&amp;amp;utm%5Fsource=insights&amp;amp;utm%5Fmedium=referral&#34;&gt;Betacoronavirus BLAST&lt;/a&gt; &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.rcsb.org/news?year=2020&amp;amp;article=5e3c4bcba5007a04a313edcc&#34;&gt;PDB&lt;/a&gt;: 新冠病毒结构。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;动态图表&#34;&gt;动态图表&lt;/h2&gt;
-&lt;p&gt;整理过程中，找到了不同机构做的动态图表，发现每个图表的数字都不一样，很难判断，顺便也都列在这里。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://coronavirus.1point3acres.com&#34;&gt;一亩三分地&lt;/a&gt;: 北美各州疫情实时动态地图，人工录入，北美信息似乎最全。 &lt;code&gt;中&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.dealmoon.com/guide/934164&#34;&gt;北美省钱快报&lt;/a&gt;: 北美各州疫情分布图，人工录入，有较大的广告条。 &lt;code&gt;中&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ncov.dxy.cn/ncovh5/view/pneumonia&#34;&gt;丁香园&lt;/a&gt;: 国内各省及全球各国疫情实时动态地图，人工录入，国内较可靠的信息来源。 &lt;code&gt;中&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://lab.isaaclin.cn/nCoV/zh&#34;&gt;Issac Lin&lt;/a&gt;: 2019 新型冠状病毒疫情实时爬虫及 API。 &lt;code&gt;中英&lt;/code&gt; &lt;a href=&#34;https://github.com/BlankerL/DXY-COVID-19-Crawler&#34;&gt;Github&lt;/a&gt; &lt;a href=&#34;https://github.com/BlankerL/DXY-COVID-19-Data&#34;&gt;Data@Github&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://covid19.tk/&#34;&gt;ohdarling&lt;/a&gt;: 全国及全球时间序列疫情地图及趋势图。 &lt;code&gt;中英&lt;/code&gt; &lt;a href=&#34;https://github.com/ohdarling/COVID-19-Charts&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ncov.deepeye.tech&#34;&gt;清华&lt;/a&gt;: 县市级时间序列疫情地图，病患年龄性别分布，疫情小区及分析报告，数据略有不全。 &lt;code&gt;中英&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://2019ncov.chinacdc.cn/2019-nCoV/&#34;&gt;中国疾病预防控制中心&lt;/a&gt;: 国内各省疫情分布地图，信息略有滞后。 &lt;code&gt;中&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6&#34;&gt;Johns Hopkins CSSE&lt;/a&gt;: 全球各国/省份/城市疫情实时动态地图，更新较为及时。 &lt;code&gt;英&lt;/code&gt; &lt;a href=&#34;https://doi.org/10.1016/S1473-3099(20)30120-1&#34;&gt;Lancet&lt;/a&gt; &lt;a href=&#34;https://github.com/CSSEGISandData/COVID-19&#34;&gt;Data@Github&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://hgis.uw.edu/virus/&#34;&gt;University of Washington HGIS&lt;/a&gt;: 美国各州及全球疫情实时动态地图及趋势图，信息略有滞后。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://experience.arcgis.com/experience/685d0ace521648f8a5beeeee1b9125cd&#34;&gt;WHO&lt;/a&gt;: 全球各国疫情动态地图，信息滞后略多。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://news.ifeng.com/c/special/7tPlDSzDgVk&#34;&gt;凤凰新闻&lt;/a&gt;: 国内各省及全球各国疫情实时动态地图。 &lt;code&gt;中&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://wh.opensource-service.cn&#34;&gt;Wuhan 2020&lt;/a&gt;: 除国内疫情地图外，还有医院、物流、生产渠道、捐款、义诊等信息。 &lt;code&gt;中&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;机构部门&#34;&gt;机构部门&lt;/h2&gt;
-&lt;p&gt;整理了学术出版商的汇总，顺便把各机构部门的也整理了一下，我的措辞都不由得严肃认真谨慎了起来。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.cdc.gov/coronavirus/2019-ncov/index.html&#34;&gt;CDC&lt;/a&gt;: &lt;a href=&#34;https://www.cdc.gov/coronavirus/2019-ncov/about/index.html&#34;&gt;COVID-19 疾病介绍&lt;/a&gt;，情况通报、&lt;a href=&#34;https://www.cdc.gov/coronavirus/2019-ncov/hcp/index.html&#34;&gt;医护指导&lt;/a&gt;等。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.who.int/emergencies/diseases/novel-coronavirus-2019&#34;&gt;WHO&lt;/a&gt;: 常见问题答疑、&lt;a href=&#34;https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/&#34;&gt;每日情况通报&lt;/a&gt;、旅行建议、技术指导等。 &lt;code&gt;中英&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.chinacdc.cn/jkzt/crb/zl/szkb%5F11803/&#34;&gt;中国疾病预防控制中心&lt;/a&gt;: &lt;a href=&#34;http://www.chinacdc.cn/jkzt/crb/zl/szkb%5F11803/jszl%5F11809/&#34;&gt;疫情动态&lt;/a&gt;、&lt;a href=&#34;http://www.chinacdc.cn/jkzt/crb/zl/szkb%5F11803/jszl%5F11815/&#34;&gt;诊疗方案通知及全文&lt;/a&gt;、&lt;a href=&#34;http://weekly.chinacdc.cn/news/TrackingtheEpidemic.htm&#34;&gt;每日疫情更新&lt;/a&gt;、&lt;a href=&#34;http://weekly.chinacdc.cn/index.htm&#34;&gt;周报&lt;/a&gt;等。 &lt;code&gt;中英&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.nhc.gov.cn/xcs/xxgzbd/gzbd%5Findex.shtml&#34;&gt;国家卫生健康委办公厅&lt;/a&gt;: 疫情通报、防控动态、诊疗方案通知及全文等。 &lt;code&gt;中&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.cma.org.cn/col/col2924/index.html&#34;&gt;中华医学会&lt;/a&gt;: 通知公告、防控科普、方案指南及建议等，含&lt;a href=&#34;https://www.cma.org.cn/art/2020/2/26/art%5F2928%5F33048.html&#34;&gt;超声诊疗方案&lt;/a&gt;及&lt;a href=&#34;https://www.cma.org.cn/art/2020/2/26/art%5F2928%5F33048.html&#34;&gt;重症诊疗方案&lt;/a&gt;。 &lt;code&gt;中&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;科普视频&#34;&gt;科普视频&lt;/h2&gt;
-&lt;p&gt;顺便也记录一下最近看到的比较靠谱的科普视频。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;WHO: 新冠病毒科普 &lt;a href=&#34;https://www.youtube.com/watch?v=mOV1aBVYKGA&#34;&gt;YouTube&lt;/a&gt; &lt;a href=&#34;https://www.bilibili.com/video/av87734082&#34;&gt;Bilibili&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;回形针: 关于新冠病毒的一切 &lt;a href=&#34;https://www.youtube.com/watch?v=0ySYM4kRJVY&#34;&gt;YouTube&lt;/a&gt; &lt;a href=&#34;https://www.bilibili.com/video/av86216616&#34;&gt;Bilibili&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;3Blue1Brown: 指数增长与流行病 &lt;a href=&#34;https://www.youtube.com/watch?v=Kas0tIxDvrg&#34;&gt;YouTube&lt;/a&gt; &lt;a href=&#34;https://www.bilibili.com/video/av95917816&#34;&gt;Bilibili&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;科普文章&#34;&gt;科普文章&lt;/h2&gt;
-&lt;p&gt;比较靠谱的科普文章。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.nytimes.com/interactive/2020/03/11/science/how-coronavirus-hijacks-your-cells.html&#34;&gt;New York Times&lt;/a&gt;: How Coronavirus Hijacks Your Cells。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;疫情记录&#34;&gt;疫情记录&lt;/h2&gt;
-&lt;p&gt;最近关注疫情，看到了很多令人心塞的文章，想要分享却给 404 或限制访问了。我也发现了一些给报道、日记存档的项目，一并汇总于下。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Academic-nCoV/2019-nCoV/wiki&#34;&gt;Academic-nCoV&lt;/a&gt;: 全球非学术与学术信息每日简报。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://2019ncovmemory.github.io/nCovMemory/&#34;&gt;2020新冠肺炎记忆&lt;/a&gt;: 报道、非虚构与个人叙述原文链接、截图及网页存档。&lt;a href=&#34;https://github.com/2019ncovmemory/nCovMemory&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://2020ncov-individual-archives.netlify.com&#34;&gt;2020 Wuhan Individual Stories&lt;/a&gt;: 豆瓣疫情日记原文链接及文字存档。&lt;a href=&#34;https://github.com/jiayiliujiayi/2020nCov%5Findividual%5Farchives&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/wuhancensored&#34;&gt;2019肺炎疫情新闻赛博坟场&lt;/a&gt;: Telegram 记录。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.wuhancrisis.com&#34;&gt;武汉・人间&lt;/a&gt;: 微博超级话题＃肺炎患者求助＃记录。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://weileizeng.github.io/Open-Source-COVID-19/&#34;&gt;Open Source COVID 19&lt;/a&gt;: Github 相关开源项目汇总。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://covid19-chronicle.com&#34;&gt;COVID-19 Chronicle&lt;/a&gt;: 实时新闻链接记录。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Pratitya/wuhan2020-timeline&#34;&gt;Wuhan2020 Timeline&lt;/a&gt;: 社会学年鉴模式的武汉新冠肺炎时间线，以官媒信息为经，以民营媒体、自媒体为纬。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://2019-ncov.sogiecn.com&#34;&gt;Sogiecn&lt;/a&gt;: 微信公共号文章原文及网页存档，更新至 2/27。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://shimo.im/sheets/QjTYy6rgVV3WDRkh/MODOC&#34;&gt;2020新型冠状病毒报道汇总&lt;/a&gt;: 媒体报道、自媒体评论或报道及热门微博列表，更新至 2/26。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://freewuhan2020.gitbook.io/wuhan2020/&#34;&gt;新冠肺炎：内地传媒深度报道选编&lt;/a&gt;: 内地传媒深度报道，更新至 2/17。&lt;a href=&#34;https://github.com/SaveWuhan/NewsCoverageOnWuhan&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/lalambdada/2019-nCoV&#34;&gt;2019-nCoV 社交媒体文章列表&lt;/a&gt;: 微信与豆瓣文章 yaml 列表，更新至 2/6。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;囤货指南&#34;&gt;囤货指南&lt;/h2&gt;
-&lt;p&gt;好吧，其实啥都买不到，聊以自慰罢了。欢迎给我捐赠口罩和消毒剂（大误，好像也没啥人看我的博客）。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.epa.gov/sites/production/files/2020-03/documents/sars-cov-2-list%5F03-03-2020.pdf&#34;&gt;EPA List N&lt;/a&gt;: EPA 认为对新冠病毒有效的消毒剂列表。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.cdc.gov/niosh/npptl/topics/respirators/disp%5Fpart/n95list1.html&#34;&gt;NIOSH-Approved N95&lt;/a&gt;: CDC/NIOSH 认可的 N95 口罩列表。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.cdc.gov/coronavirus/2019-ncov/release-stockpiled-N95.html&#34;&gt;Release Stockpiled N95&lt;/a&gt;: CDC/NIOSH 认可的过期后仍对新冠病毒有效的 N95 口罩列表。 &lt;code&gt;英&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;p&gt;虽然我已弃了科研大坑，但是还留着一些科研公众号未曾取关。这几天读着各种二手消息，总觉得关注点有些片面，便想着干脆找点一手论文来看。今天一查，倒是发现很多有用的资源，干脆来做个小总结吧。&lt;/p&gt;</description>
     </item>
     
     <item>
