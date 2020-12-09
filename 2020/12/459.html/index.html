@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>42083 传动系统解构 - Blind with Science</title>
+  <title>乐高 42083 布佳迪奇龙传动系统解构 - Blind with Science</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -40,23 +40,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="42083 传动系统解构" />
+<meta property="og:title" content="乐高 42083 布佳迪奇龙传动系统解构" />
 <meta property="og:description" content="最近西雅图进入了雨季，周末不是阴天便是淅淅沥沥的小雨，不宜出行。于是我们又把年初拼了一半的 42083 布佳迪奇龙拿出来拼。这次女票自信非常，坚决不要监工。一本书结束，完成了 marriage process 后，我们装上轮胎测试传动系统，却发现好像哪里不太对。转向和轮轴的小问题很容易就能找到并修正，但是发动机似乎还是有点卡。我网上想搜一下原理，却发现所有的攻略似乎都默认拼装此模型的人对车非常熟悉，对其中的传动原理都一笔带过。我都不知道动力应该从哪里来。所以我干脆来个 reverse engineering，尝试以一个不懂车辆构造的理科生视角来解构这辆车。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blindwith.science/2020/12/459.html/" />
 <meta property="article:published_time" content="2020-12-08T19:45:00-08:00" />
-<meta property="article:modified_time" content="2020-12-08T21:20:32-08:00" />
-<meta itemprop="name" content="42083 传动系统解构">
+<meta property="article:modified_time" content="2020-12-08T21:32:02-08:00" />
+<meta itemprop="name" content="乐高 42083 布佳迪奇龙传动系统解构">
 <meta itemprop="description" content="最近西雅图进入了雨季，周末不是阴天便是淅淅沥沥的小雨，不宜出行。于是我们又把年初拼了一半的 42083 布佳迪奇龙拿出来拼。这次女票自信非常，坚决不要监工。一本书结束，完成了 marriage process 后，我们装上轮胎测试传动系统，却发现好像哪里不太对。转向和轮轴的小问题很容易就能找到并修正，但是发动机似乎还是有点卡。我网上想搜一下原理，却发现所有的攻略似乎都默认拼装此模型的人对车非常熟悉，对其中的传动原理都一笔带过。我都不知道动力应该从哪里来。所以我干脆来个 reverse engineering，尝试以一个不懂车辆构造的理科生视角来解构这辆车。">
 <meta itemprop="datePublished" content="2020-12-08T19:45:00-08:00" />
-<meta itemprop="dateModified" content="2020-12-08T21:20:32-08:00" />
+<meta itemprop="dateModified" content="2020-12-08T21:32:02-08:00" />
 <meta itemprop="wordCount" content="3324">
 
 
 
 <meta itemprop="keywords" content="Lego,Bugatti,Chiron," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="42083 传动系统解构"/>
+<meta name="twitter:title" content="乐高 42083 布佳迪奇龙传动系统解构"/>
 <meta name="twitter:description" content="最近西雅图进入了雨季，周末不是阴天便是淅淅沥沥的小雨，不宜出行。于是我们又把年初拼了一半的 42083 布佳迪奇龙拿出来拼。这次女票自信非常，坚决不要监工。一本书结束，完成了 marriage process 后，我们装上轮胎测试传动系统，却发现好像哪里不太对。转向和轮轴的小问题很容易就能找到并修正，但是发动机似乎还是有点卡。我网上想搜一下原理，却发现所有的攻略似乎都默认拼装此模型的人对车非常熟悉，对其中的传动原理都一笔带过。我都不知道动力应该从哪里来。所以我干脆来个 reverse engineering，尝试以一个不懂车辆构造的理科生视角来解构这辆车。"/>
 
 <!--[if lte IE 9]>
@@ -124,7 +124,7 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">42083 传动系统解构</h1>
+      <h1 class="post-title">乐高 42083 布佳迪奇龙传动系统解构</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2020-12-08 </span>
