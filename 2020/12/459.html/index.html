@@ -45,11 +45,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blindwith.science/2020/12/459.html/" />
 <meta property="article:published_time" content="2020-12-08T19:45:00-08:00" />
-<meta property="article:modified_time" content="2020-12-08T19:52:23-08:00" />
+<meta property="article:modified_time" content="2020-12-08T20:04:50-08:00" />
 <meta itemprop="name" content="42083 传动系统解构">
 <meta itemprop="description" content="最近西雅图进入了雨季，周末不是阴天便是淅淅沥沥的小雨，不宜出行。于是我们又把年初拼了一半的 42083 布佳迪奇龙拿出来拼。这次女票自信非常，坚决不要监工。一本书结束，完成了 marriage process 后，我们装上轮胎测试传动系统，却发现好像哪里不太对。转向和轮轴的小问题很容易就能找到并修正，但是发动机似乎还是有点卡。我网上想搜一下原理，却发现所有的攻略似乎都默认拼装此模型的人对车非常熟悉，对其中的传动原理都一笔带过。我都不知道动力应该从哪里来。所以我干脆来个 reverse engineering，尝试以一个不懂车辆构造的理科生视角来解构这辆车。">
 <meta itemprop="datePublished" content="2020-12-08T19:45:00-08:00" />
-<meta itemprop="dateModified" content="2020-12-08T19:52:23-08:00" />
+<meta itemprop="dateModified" content="2020-12-08T20:04:50-08:00" />
 <meta itemprop="wordCount" content="3329">
 
 
@@ -147,7 +147,7 @@
       <p>最近西雅图进入了雨季，周末不是阴天便是淅淅沥沥的小雨，不宜出行。于是我们又把年初拼了一半的 42083 布佳迪奇龙拿出来拼。这次女票自信非常，坚决不要监工。一本书结束，完成了 marriage process 后，我们装上轮胎测试传动系统，却发现好像哪里不太对。转向和轮轴的小问题很容易就能找到并修正，但是发动机似乎还是有点卡。我网上想搜一下原理，却发现所有的攻略似乎都默认拼装此模型的人对车非常熟悉，对其中的传动原理都一笔带过。我都不知道动力应该从哪里来。所以我干脆来个 reverse engineering，尝试以一个不懂车辆构造的理科生视角来解构这辆车。</p>
 <p>首先，这辆车用到的齿轮类零件如下图所示。我大概将齿轮分为几种，分别是常规（仅水平传动），双斜（可垂直传动），单斜（仅垂直传动），带离合/离合（齿轮+带小齿牙的环）以及齿条。</p>
 <figure>
-    <img src="images/42083_gear.png"
+    <img src="42083_gear.png"
          alt="Figure 1: 齿轮类零件"/> <figcaption>
             <p>Figure 1: 齿轮类零件</p>
         </figcaption>
@@ -156,7 +156,7 @@
 <p>这辆车的传动系统由前后两段组成。后段从图1到图199，完成了后桥及差速器，引擎与变速箱。前段则从图200到图464，完成了前桥及差速器与转向系统和悬吊，以及变速器中的挡位模式与换挡拨片。最后经由 marriage process 完成前后两段的连接，使所有部件完成联动。如果按照部件所在位置进行介绍，可能会和乐高说明书一样给人一种割裂感，所以在此我以动力传送的顺序进行介绍。</p>
 <p>首先是位于后段的引擎。布佳迪奇龙采用的 W16 引擎，是四组四排活塞气缸（piston）以 W 型排列组成的往复活塞式内燃机。这么说可能很难理解，更形象地说，是由两组小夹角的 VR8 发动机组成的，每个 VR8 发动机，都将八个气缸以 V 字形分列在曲轴两侧来减少发动机长度高度与重量。从外部来看，这款乐高还挺像 W16 引擎的，然而翻个面看内部，则可以看出乐高实际上采用了 L4（直列四缸发动机） + V8（夹角为 60° 的八缸 V 型发动机） + L4 的排布方式。发动机连接一个12 齿黑色小齿轮，经与之啮合的 20 齿淡黄色大齿轮将动力传至换挡选择器，传动比为 3/5。气缸半径大概为 0.6 个乐高单位，行程长度大概为1个乐高单位，一个乐高单位为 8 毫米，所以排量为 pi * 气缸半径^2 * 行程长度 * 缸数 = 10 mm^3 = 10 microL，超级超级小。当然这里的气缸是虚拟的，所以如果我们仍然想模拟出引擎动力的话，可以将灰箭头处 1.5 乐高单位长的插销（connector）换成 1 单位长的十字轴套，方便未来玩耍。</p>
 <figure>
-    <img src="images/42083_engine.png"
+    <img src="42083_engine.png"
          alt="Figure 2: 引擎"/> <figcaption>
             <p>Figure 2: 引擎</p>
         </figcaption>
@@ -164,7 +164,7 @@
 
 <p>动力接下来传至位于前段的变速杆（gear shifter），我们可以在这里选择三种挡位模式（transmission mode）。</p>
 <figure>
-    <img src="images/42083_shifter.png"
+    <img src="42083_shifter.png"
          alt="Figure 3: 变速杆"/> <figcaption>
             <p>Figure 3: 变速杆</p>
         </figcaption>
@@ -176,7 +176,7 @@
 <p>倒挡会直接将动力经中轴传至四个动力轮，而行驶挡时则需要经过变速箱进行变速后再传往中轴。所以在此我以行驶挡的动力传送顺序来介绍所经部件。</p>
 <p>前面说了，挂行驶挡时动力会传至变速箱，而变速箱的挡位是通过位于前段的挡位拨片（paddle shifter）进行换挡的。推动位于方向盘右侧的升挡拨片，带动推杆推动装在灰色齿轮上的白色柱体，带动同轴的黄色 4 齿锥形齿轮逆时针转动 90 度，后者则带动与之啮合的锥形齿轮顺时针转动 90 度，再通过同轴的锥形齿轮带动与其啮合的锥形齿轮，带动变速箱的换挡红色转轴逆时针转动 90 度。</p>
 <figure>
-    <img src="images/42083_paddle.png"
+    <img src="42083_paddle.png"
          alt="Figure 4: 换档拨片"/> <figcaption>
             <p>Figure 4: 换档拨片</p>
         </figcaption>
@@ -184,7 +184,7 @@
 
 <p>变速箱位于后段，由四组离合器（gear shifter）组成，乃这款乐高的高光之处，齿轮组设计非常炫酷。齿轮多以轴连接，不过红色与蓝色的齿轮仅当离合选择器与之结合时才会与轴联动，另外粉线两侧为不同的轴，并不会联动。动力从黄色转轴进入，经过16 齿灰色齿轮 o，从24 齿灰色大齿轮传至与之啮合的位于后桥的 8 齿小齿轮（传动比为 3）。</p>
 <figure>
-    <img src="images/42083_transmission_principle.png"
+    <img src="42083_transmission_principle.png"
          alt="Figure 5: 变速箱原理"/> <figcaption>
             <p>Figure 5: 变速箱原理</p>
         </figcaption>
@@ -192,7 +192,7 @@
 
 <p>换挡拨片带动白色转轴 E 逆时针转动，离合选择器（gear shifter）带动 CD 两组离合形成四种组合，当转四圈时 F 杆带动杆 G 转动 90 度，所以 AB 也会被离合选择器带动形成四种组合，一共 16 种组合。</p>
 <figure>
-    <img src="images/42083_transmission.png"
+    <img src="42083_transmission.png"
          alt="Figure 6: 变速箱"/> <figcaption>
             <p>Figure 6: 变速箱</p>
         </figcaption>
@@ -202,14 +202,14 @@
 <p>到达 o 后，则有四种组合。分别为（I）D空选 C选q（II）D选u C空选（III）D空选 C选p（IV）D选 t C空选。组合 I 时（红色字母），动力从 xq 传至灰色大齿轮，传动比为3/5。组合II时（橙色字母），动力从 v 传动至与之啮合的 z，再通过 αβ 传至 γ，再传至与之啮合的 u（传动比为4/5)，u带动s，并经 yr 传至灰色大齿轮。组合III时（蓝色字母），动力经 wp 传至灰色大齿轮，传动比为1。组合IV时（浅蓝字母），动力从 vz 经 αβ 传至 δ，再传至与之啮合的 t（传动比为5/4），再带动 s 经 yr 传至灰色大齿轮。</p>
 <p>而后，动力通过灰色大齿轮与后桥橙圈内的与之啮合的 8 齿小齿轮传送至中轴（传动比为 3）。中轴连接前后桥，由于这辆车是四驱，所以前后桥还装有差速器（differential）。动力由差速器输入轴进入，通过 20 齿主动齿轮与 28 齿环齿轮（传动比为 5/7）带动两个 12 齿半轴齿轮（传动比为 1）来驱动两个前轮。当两个驱动轮所受阻力一致时，行星轴跟着两个半轴齿轮转动，不会自转。而当车辆转弯时，两侧轮胎所受阻力不同，行星轴会开始转动来平衡两侧驱动力。</p>
 <figure>
-    <img src="images/42083_front_differential.png"
+    <img src="42083_front_differential.png"
          alt="Figure 7: 前桥差速器"/> <figcaption>
             <p>Figure 7: 前桥差速器</p>
         </figcaption>
 </figure>
 
 <figure>
-    <img src="images/42083_rare_differential.png"
+    <img src="42083_rare_differential.png"
          alt="Figure 8: 后桥差速器"/> <figcaption>
             <p>Figure 8: 后桥差速器</p>
         </figcaption>
@@ -334,7 +334,7 @@
 </table>
 <p>这辆车采用的是双叉臂独立悬挂（suspension），由上下两个叉臂（beam）连接阻尼器（shock absorber）同时吸收横向力，横向刚度大，转弯侧倾小，适合跑车。乐高采用齿轮齿条来实现转向，由转向系统中的齿轮带动 22 齿的齿条，通过转向横拉杆带动左右轮毂转向。</p>
 <figure>
-    <img src="images/42083_front_axle.png"
+    <img src="42083_front_axle.png"
          alt="Figure 9: 前桥"/> <figcaption>
             <p>Figure 9: 前桥</p>
         </figcaption>
@@ -342,7 +342,7 @@
 
 <p>我将转向系统（steering system）单独拿出来，这样可以更清晰地显示方向盘是如何带动齿轮组，将转向动力传动到齿轮，从而带动齿条转向的。方向盘转 90 度，相当于与其同轴的 12 齿半轴齿轮与之后啮合的一系列 12 齿黑色小齿轮转 90 度（传动比为 1），带动与黄线标示的黑色小齿轮啮合的 20 齿淡黄色大齿轮转 54 度（传动比为 12 / 20 = 0.6)，也就相当于与淡黄色大齿轮同轴的 16 齿灰色齿轮转 54 度（传动比为 1），也就相当于与灰色齿轮同轴的 12 齿黑色小齿轮转 54 度（传动比为 1），即 1.8 齿，并带动齿条移动。齿条长 13 个乐高单位，齿共占 9 个乐高单位，1.8 齿相当于 0.78 个乐高单位，即轮胎转动了 arcsin(0.78/2.5) = 17.45 度。</p>
 <figure>
-    <img src="images/42083_steering.png"
+    <img src="42083_steering.png"
          alt="Figure 10: 转向系统"/> <figcaption>
             <p>Figure 10: 转向系统</p>
         </figcaption>
