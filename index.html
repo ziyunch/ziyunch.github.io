@@ -45,7 +45,7 @@
 <meta property="og:description" content="Ziyunch&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://blindwith.science/" />
-<meta property="og:updated_time" content="2020-12-08T21:36:02-08:00" />
+<meta property="og:updated_time" content="2020-12-13T20:57:47-08:00" />
 <meta itemprop="name" content="Blind with Science">
 <meta itemprop="description" content="Ziyunch&#39;s Blog">
 <meta name="twitter:card" content="summary"/>
@@ -115,6 +115,30 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="./2020/12/460.html/">从 pyim 换到 emacs-rime 了</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-12-13 </span>
+      <div class="post-category">
+          <a href="./categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
+          </div>
+        <span class="more-meta"> 约 639 字 </span>
+        <span class="more-meta"> 预计阅读 2 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>之前我一直使用的是 pyim，见 <a href="https://blindwith.science/2019/08/449.html/">Mac 版 Emacs 中使用 Rime 输入法打带调双拼</a>。前段时间手贱把 Mac 升至 Catalina 后，Emacs 便出现了各种各样的问题。捣鼓了一圈后发现了一个致命问题，那就是我对 pyim 的双拼定义不管用了。捣鼓了许久，都没搞明白原因是什么。不过 pyim 本身也有一些缺陷，安装复杂，和鼠须管并非无缝衔接，打字有卡顿，缓存限制对生僻字不友好，我的带调双拼也需要在 init 中另行设置，所以在发现 <a href="https://github.com/DogLooksGood/emacs-rime">emacs-rime</a> 后，我便起了换个轮子用的想法。</p>
+<p>emacs-rime 的安装非常简单，从 <a href="https://github.com/rime/librime">rime/librime</a> 那儿下了最新的 Release 并解压至 <code>~/.emacs.d/librime</code> 即可。更棒的是，由于 emacs-rime 仅仅是 rime 在 emacs 中的前端，所以其体验与鼠须管是完全一致的。也就是说，我再也不用为了实现带调双拼而写一个专用的 schema 并在 init 中另行设置了，而用起方言输入法也是顺滑非常。另外，在中英文混输时，也不需要切换输入法了，超级棒。</p>
+    </div>
+    <div class="read-more">
+      <a href="./2020/12/460.html/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="./2020/12/459.html/">乐高 42083 布加迪奇龙传动系统解构</a></h1>
@@ -211,29 +235,6 @@
   </div>
 </article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="./2020/06/455.html/">使用 pandoc 转换 ox-hugo 支持的 org 文件</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-06-10 </span>
-      <div class="post-category">
-          <a href="./categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
-          </div>
-        <span class="more-meta"> 约 784 字 </span>
-        <span class="more-meta"> 预计阅读 2 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>之前从 hexo 转成 hugo 的时候，顺便用了使用非常方便的 ox-hugo 这个轮子。当时贪图省力，就直接用 pandoc 将 markdown 文件批量转换成了 orgmode，但是所有的 metadata 全都没能转换，后期还是得一个一个改。虽然是一个重新审阅自己黑历史的方式，但是要改四百多篇确实还是太过费心费力了。事情一变得繁杂起来，我的拖延症就犯了，于是直到现在我还是只改好了十几篇。今天终于忍不住了，动手看起了 pandoc 文档。</p>
-    </div>
-    <div class="read-more">
-      <a href="./2020/06/455.html/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
     </section>
   
   <nav class="pagination">
@@ -291,6 +292,13 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
 
 
 

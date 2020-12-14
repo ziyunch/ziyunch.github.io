@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Tue, 08 Dec 2020 19:45:00 -0800</lastBuildDate><atom:link href="http://blindwith.science/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Dec 2020 17:49:00 -0800</lastBuildDate><atom:link href="http://blindwith.science/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从 pyim 换到 emacs-rime 了</title>
+      <link>http://blindwith.science/2020/12/460.html/</link>
+      <pubDate>Sun, 13 Dec 2020 17:49:00 -0800</pubDate>
+      
+      <guid>http://blindwith.science/2020/12/460.html/</guid>
+      <description>&lt;p&gt;之前我一直使用的是 pyim，见 &lt;a href=&#34;https://blindwith.science/2019/08/449.html/&#34;&gt;Mac 版 Emacs 中使用 Rime 输入法打带调双拼&lt;/a&gt;。前段时间手贱把 Mac 升至 Catalina 后，Emacs 便出现了各种各样的问题。捣鼓了一圈后发现了一个致命问题，那就是我对 pyim 的双拼定义不管用了。捣鼓了许久，都没搞明白原因是什么。不过 pyim 本身也有一些缺陷，安装复杂，和鼠须管并非无缝衔接，打字有卡顿，缓存限制对生僻字不友好，我的带调双拼也需要在 init 中另行设置，所以在发现 &lt;a href=&#34;https://github.com/DogLooksGood/emacs-rime&#34;&gt;emacs-rime&lt;/a&gt; 后，我便起了换个轮子用的想法。&lt;/p&gt;
+&lt;p&gt;emacs-rime 的安装非常简单，从 &lt;a href=&#34;https://github.com/rime/librime&#34;&gt;rime/librime&lt;/a&gt; 那儿下了最新的 Release 并解压至 &lt;code&gt;~/.emacs.d/librime&lt;/code&gt; 即可。更棒的是，由于 emacs-rime 仅仅是 rime 在 emacs 中的前端，所以其体验与鼠须管是完全一致的。也就是说，我再也不用为了实现带调双拼而写一个专用的 schema 并在 init 中另行设置了，而用起方言输入法也是顺滑非常。另外，在中英文混输时，也不需要切换输入法了，超级棒。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>乐高 42083 布加迪奇龙传动系统解构</title>
       <link>http://blindwith.science/2020/12/459.html/</link>
@@ -143,7 +153,8 @@ could not connect to server: Connection refused
       <pubDate>Sat, 31 Aug 2019 20:40:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/08/449.html/</guid>
-      <description>&lt;p&gt;由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。&lt;/p&gt;</description>
+      <description>&lt;p&gt;注：已换成 emacs-rime，详见 &lt;a href=&#34;https://blindwith.science/2020/12/460.html/&#34;&gt;从 pyim 换到 emacs-rime 了&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。&lt;/p&gt;</description>
     </item>
     
     <item>

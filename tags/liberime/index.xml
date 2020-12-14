@@ -14,7 +14,8 @@
       <pubDate>Sat, 31 Aug 2019 20:40:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2019/08/449.html/</guid>
-      <description>&lt;p&gt;由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。&lt;/p&gt;</description>
+      <description>&lt;p&gt;注：已换成 emacs-rime，详见 &lt;a href=&#34;https://blindwith.science/2020/12/460.html/&#34;&gt;从 pyim 换到 emacs-rime 了&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。&lt;/p&gt;</description>
     </item>
     
   </channel>

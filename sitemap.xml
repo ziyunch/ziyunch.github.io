@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blindwith.science/2020/12/460.html/</loc>
+    <lastmod>2020-12-13T20:57:47-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://blindwith.science/2020/12/459.html/</loc>
     <lastmod>2020-12-08T21:36:02-08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -73,7 +80,7 @@
   
   <url>
     <loc>http://blindwith.science/2019/08/449.html/</loc>
-    <lastmod>2020-06-15T21:09:09-07:00</lastmod>
+    <lastmod>2020-12-13T20:54:09-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -262,20 +269,55 @@
   
   <url>
     <loc>http://blindwith.science/</loc>
-    <lastmod>2020-12-08T21:36:02-08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blindwith.science/tags/bugatti/</loc>
-    <lastmod>2020-12-08T21:36:02-08:00</lastmod>
+    <lastmod>2020-12-13T20:57:47-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blindwith.science/categories/</loc>
+    <lastmod>2020-12-13T20:57:47-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/tags/emacs/</loc>
+    <lastmod>2020-12-13T20:57:47-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/post/</loc>
+    <lastmod>2020-12-13T20:57:47-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/tags/rime/</loc>
+    <lastmod>2020-12-13T20:57:47-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/tags/</loc>
+    <lastmod>2020-12-13T20:57:47-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/categories/%E6%8A%80%E6%9C%AF%E5%AE%85/</loc>
+    <lastmod>2020-12-13T20:57:47-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/tags/bugatti/</loc>
     <lastmod>2020-12-08T21:36:02-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -290,27 +332,6 @@
   
   <url>
     <loc>http://blindwith.science/tags/lego/</loc>
-    <lastmod>2020-12-08T21:36:02-08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blindwith.science/post/</loc>
-    <lastmod>2020-12-08T21:36:02-08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blindwith.science/tags/</loc>
-    <lastmod>2020-12-08T21:36:02-08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blindwith.science/categories/%E6%8A%80%E6%9C%AF%E5%AE%85/</loc>
     <lastmod>2020-12-08T21:36:02-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -436,13 +457,6 @@
   </url>
   
   <url>
-    <loc>http://blindwith.science/tags/emacs/</loc>
-    <lastmod>2020-06-15T21:09:10-07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://blindwith.science/tags/lisp/</loc>
     <lastmod>2020-06-15T21:09:10-07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -451,28 +465,21 @@
   
   <url>
     <loc>http://blindwith.science/tags/liberime/</loc>
-    <lastmod>2020-06-15T21:09:09-07:00</lastmod>
+    <lastmod>2020-12-13T20:54:09-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blindwith.science/tags/pyim/</loc>
-    <lastmod>2020-06-15T21:09:09-07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blindwith.science/tags/rime/</loc>
-    <lastmod>2020-06-15T21:09:09-07:00</lastmod>
+    <lastmod>2020-12-13T20:54:09-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blindwith.science/tags/%E9%BC%A0%E9%A1%BB%E7%AE%A1/</loc>
-    <lastmod>2020-06-15T21:09:09-07:00</lastmod>
+    <lastmod>2020-12-13T20:54:09-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
