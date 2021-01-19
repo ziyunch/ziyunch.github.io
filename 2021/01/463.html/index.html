@@ -45,11 +45,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blindwith.science/2021/01/463.html/" />
 <meta property="article:published_time" content="2021-01-18T18:33:00-08:00" />
-<meta property="article:modified_time" content="2021-01-18T19:05:29-08:00" />
+<meta property="article:modified_time" content="2021-01-18T20:33:39-08:00" />
 <meta itemprop="name" content="Beancount 记帐小进阶之三–常见场景">
 <meta itemprop="description" content="书接上文，这次分享一下我对工资单，共享帐簿以及医疗帐单，炒币这些常用场景的处理方式。">
 <meta itemprop="datePublished" content="2021-01-18T18:33:00-08:00" />
-<meta itemprop="dateModified" content="2021-01-18T19:05:29-08:00" />
+<meta itemprop="dateModified" content="2021-01-18T20:33:39-08:00" />
 <meta itemprop="wordCount" content="2241">
 
 
@@ -156,7 +156,7 @@
       <p>书接上文，这次分享一下我对工资单，共享帐簿以及医疗帐单，炒币这些常用场景的处理方式。</p>
 <h2 id="工资记录">工资记录</h2>
 <p>一张工资单上会有很多条目，所以我会单开一个文件来放工资详情，记录税务，保险，401k 和公司福利。</p>
-<p>这里比较复杂的是税务的记录。以前我将税务算为负收入，这样在看每月支出时可以比较直观地看到自己的每月花销。但是实际上这不太准确。所以还是将税务其算作支出。另外，由于每年会根据收入以及代扣税费来报税，之后也会补税或退税，所以如果单列一个 Expenses:Tax 会将年末的税务计算复杂化，所以我以财年 (fiscal year) 为单位来记录每张工资单的税务。以下以互利公司的工资单为例，：</p>
+<p>这里比较复杂的是税务的记录。以前我将税务算为负收入，这样在看每月支出时可以比较直观地看到自己的每月花销。但是实际上这不太准确。所以还是将税务其算作支出。另外，由于每年会根据收入以及代扣税费来报税，之后也会补税或退税，所以如果单列一个 <code>Expenses:Tax</code> 会将年末的税务计算复杂化，所以我以财年 (fiscal year) 为单位来记录每张工资单的税务。以下以互利公司的工资单为例，：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -243,7 +243,7 @@
   Liabilities:Receivables:小红                   -5 USD
 </code></pre></td></tr></table>
 </div>
-</div><p>以后和小红同学结算的时候就看 Liabilities:Receivables:小红 这个帐户里还有多少钱，如果是正的对方就欠我钱，如果是负的我就需要还对方钱。</p>
+</div><p>以后和小红同学结算的时候就看 <code>Liabilities:Receivables:小红</code> 这个帐户里还有多少钱，如果是正的对方就欠我钱，如果是负的我就需要还对方钱。</p>
 <p>不过今年和女票同住，大家的共同花销都记在她的一张信用卡上，再像上面那样一条一条记录，就有些头大了。所以此处我用了两个插件来记录共享和实际支出对象：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -290,7 +290,7 @@ plugin &#34;beancount_share.share&#34; &#34;{
   Expenses:Food:Takeout
 </code></pre></td></tr></table>
 </div>
-</div><p>如果她使用这张共享的卡给自己买了狮子头却没有和我分（哼），则可以将标签改成 #GF 来改变实际支出对象。</p>
+</div><p>如果她使用这张共享的卡给自己买了狮子头却没有和我分（哼），则可以将标签改成 <code>#GF</code> 来改变实际支出对象。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -343,7 +343,7 @@ plugin &#34;beancount_share.share&#34; &#34;{
   Liabilities:Receivables:GF                    -20 USD
 </code></pre></td></tr></table>
 </div>
-</div><p>如此记录，方便简洁，最后一看 Liabilities:Receivables:GF 的余额是 -5，所以我要还她 5 块钱。</p>
+</div><p>如此记录，方便简洁，最后一看 <code>Liabilities:Receivables:GF</code> 的余额是 -5，所以我要还她 5 块钱。</p>
 <h2 id="医疗帐单">医疗帐单</h2>
 <p>在美国，医保是一项产业，工作之后医保与学生时期的医保相比差了不少，与之相关的帐务记录也变得非常麻烦。我的思路就是在实际发生日，按照医保公司给的帐单进行记录，并对 deductible 按年记付。这样可以方便地看出每年 deductible 额能否用完，日后需不需要更换更合适自己的医保。下面是一个例子：</p>
 <div class="highlight"><div class="chroma">
@@ -425,7 +425,7 @@ plugin &#34;beancount_share.share&#34; &#34;{
   name: &#34;Bitcoin&#34;
 </code></pre></td></tr></table>
 </div>
-</div><p>在使用美元买进虚拟货币的时候，可以用 {} 表示每一币的持有成本，并用 @@ 表示买入总价。</p>
+</div><p>在使用美元买进虚拟货币的时候，可以用 <code>{}</code> 表示每一币的持有成本，并用 <code>@@</code> 表示买入总价。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
