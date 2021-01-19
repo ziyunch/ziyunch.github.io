@@ -45,12 +45,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blindwith.science/2021/01/463.html/" />
 <meta property="article:published_time" content="2021-01-18T18:33:00-08:00" />
-<meta property="article:modified_time" content="2021-01-18T19:03:01-08:00" />
+<meta property="article:modified_time" content="2021-01-18T19:05:29-08:00" />
 <meta itemprop="name" content="Beancount 记帐小进阶之三–常见场景">
 <meta itemprop="description" content="书接上文，这次分享一下我对工资单，共享帐簿以及医疗帐单，炒币这些常用场景的处理方式。">
 <meta itemprop="datePublished" content="2021-01-18T18:33:00-08:00" />
-<meta itemprop="dateModified" content="2021-01-18T19:03:01-08:00" />
-<meta itemprop="wordCount" content="2236">
+<meta itemprop="dateModified" content="2021-01-18T19:05:29-08:00" />
+<meta itemprop="wordCount" content="2241">
 
 
 
@@ -131,7 +131,7 @@
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 2236 字 </span>
+          <span class="more-meta"> 约 2241 字 </span>
           <span class="more-meta"> 预计阅读 5 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -277,7 +277,7 @@ plugin &#34;beancount_share.share&#34; &#34;{
   }&#34;
 </code></pre></td></tr></table>
 </div>
-</div><p>这样，我可以将她信用卡的帐单导入（具体设置见前文），然后通过添加标签的方式设置共享支出，这样对方如果在结清我们双方债务后又帮我付钱买狮子头就可以这样记录：</p>
+</div><p>这样，我可以将她信用卡的帐单导入（具体设置见前文），然后通过添加标签的方式设置共享支出，这样如果我们使用女票名下的信用卡帮我俩付钱买狮子头就可以这样记录：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -290,7 +290,7 @@ plugin &#34;beancount_share.share&#34; &#34;{
   Expenses:Food:Takeout
 </code></pre></td></tr></table>
 </div>
-</div><p>如果对方使用这张共享的卡给自己买了狮子头没和我分，则可以将标签改成 #GF 来改变实际支出对象。</p>
+</div><p>如果她使用这张共享的卡给自己买了狮子头却没有和我分（哼），则可以将标签改成 #GF 来改变实际支出对象。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -343,7 +343,7 @@ plugin &#34;beancount_share.share&#34; &#34;{
   Liabilities:Receivables:GF                    -20 USD
 </code></pre></td></tr></table>
 </div>
-</div><p>如此记录，方便简洁，最后一看 Liabilities:Receivables:GF 的余额是 -5，所以我要还她 5 块。</p>
+</div><p>如此记录，方便简洁，最后一看 Liabilities:Receivables:GF 的余额是 -5，所以我要还她 5 块钱。</p>
 <h2 id="医疗帐单">医疗帐单</h2>
 <p>在美国，医保是一项产业，工作之后医保与学生时期的医保相比差了不少，与之相关的帐务记录也变得非常麻烦。我的思路就是在实际发生日，按照医保公司给的帐单进行记录，并对 deductible 按年记付。这样可以方便地看出每年 deductible 额能否用完，日后需不需要更换更合适自己的医保。下面是一个例子：</p>
 <div class="highlight"><div class="chroma">
