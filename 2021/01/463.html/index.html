@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ziyunch" /><meta name="description" content="书接上文，这次分享我对几种常见场景的处理方式。
+<meta name="author" content="ziyunch" /><meta name="description" content="书接上文，这次分享一下我对工资单，共享帐簿以及医疗帐单，炒币这些常用场景的处理方式。
 " /><meta name="keywords" content="ziyunch, blog" />
 
 
@@ -41,23 +41,23 @@
 
 
 <meta property="og:title" content="Beancount 记帐小进阶之三–常见场景" />
-<meta property="og:description" content="书接上文，这次分享我对几种常见场景的处理方式。" />
+<meta property="og:description" content="书接上文，这次分享一下我对工资单，共享帐簿以及医疗帐单，炒币这些常用场景的处理方式。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blindwith.science/2021/01/463.html/" />
 <meta property="article:published_time" content="2021-01-18T18:33:00-08:00" />
-<meta property="article:modified_time" content="2021-01-18T18:35:43-08:00" />
+<meta property="article:modified_time" content="2021-01-18T19:03:01-08:00" />
 <meta itemprop="name" content="Beancount 记帐小进阶之三–常见场景">
-<meta itemprop="description" content="书接上文，这次分享我对几种常见场景的处理方式。">
+<meta itemprop="description" content="书接上文，这次分享一下我对工资单，共享帐簿以及医疗帐单，炒币这些常用场景的处理方式。">
 <meta itemprop="datePublished" content="2021-01-18T18:33:00-08:00" />
-<meta itemprop="dateModified" content="2021-01-18T18:35:43-08:00" />
-<meta itemprop="wordCount" content="1941">
+<meta itemprop="dateModified" content="2021-01-18T19:03:01-08:00" />
+<meta itemprop="wordCount" content="2236">
 
 
 
 <meta itemprop="keywords" content="Beancount," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Beancount 记帐小进阶之三–常见场景"/>
-<meta name="twitter:description" content="书接上文，这次分享我对几种常见场景的处理方式。"/>
+<meta name="twitter:description" content="书接上文，这次分享一下我对工资单，共享帐簿以及医疗帐单，炒币这些常用场景的处理方式。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -131,8 +131,8 @@
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 1941 字 </span>
-          <span class="more-meta"> 预计阅读 4 分钟 </span>
+          <span class="more-meta"> 约 2236 字 </span>
+          <span class="more-meta"> 预计阅读 5 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -147,15 +147,16 @@
     <li><a href="#医疗帐单">医疗帐单</a></li>
     <li><a href="#rsu">RSU</a></li>
     <li><a href="#虚拟货币">虚拟货币</a></li>
+    <li><a href="#系列链接">系列链接</a></li>
   </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <p>书接上文，这次分享我对几种常见场景的处理方式。</p>
+      <p>书接上文，这次分享一下我对工资单，共享帐簿以及医疗帐单，炒币这些常用场景的处理方式。</p>
 <h2 id="工资记录">工资记录</h2>
 <p>一张工资单上会有很多条目，所以我会单开一个文件来放工资详情，记录税务，保险，401k 和公司福利。</p>
-<p>这里比较复杂的是税务的记录。以前我将税务算为负收入，这样在看每月支出时可以比较直观地看到自己的每月花销。但是实际上这不太准确。所以还是将税务其算作支出。另外，由于每年会根据收入以及代扣税费来报税，之后也会补税或退税，所以如果单列一个 Expenses:Tax 会将年末的税务计算复杂化，所以我以财年 (fiscal year) 为单位来记录每张工资单的税务。以下是互利工资单的记录：</p>
+<p>这里比较复杂的是税务的记录。以前我将税务算为负收入，这样在看每月支出时可以比较直观地看到自己的每月花销。但是实际上这不太准确。所以还是将税务其算作支出。另外，由于每年会根据收入以及代扣税费来报税，之后也会补税或退税，所以如果单列一个 Expenses:Tax 会将年末的税务计算复杂化，所以我以财年 (fiscal year) 为单位来记录每张工资单的税务。以下以互利公司的工资单为例，：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -214,7 +215,7 @@
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="共享帐簿">共享帐簿</h2>
-<p>平时和小伙伴们一起玩耍，总会遇到一人付款事后分帐的情况。这种债务的记录在会计上是应该分为资产和负债的，但是对于个人帐目而言，每个人开两个帐目也挺麻烦，所以我一律记载在负债中，如果说我付钱替 AA 与我买一份狮子头分着吃，就这么记录：</p>
+<p>平时和小伙伴们一起玩耍，总会遇到一人付款事后分帐的情况。这种债务的记录在会计上是应该分为资产和负债的，但是对于个人帐目而言，每个人开两个帐目也挺麻烦，所以我一律记载在负债中，如果说我付钱帮小红同学与我买一份狮子头分着吃，就这么记录：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -223,13 +224,13 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2020-01-01 * &#34;AA Restaurant&#34; &#34;狮子头&#34;
-  Liabilities:Receivables:AA                     +5 USD
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">2020-01-01 * &#34;X Restaurant&#34; &#34;狮子头&#34;
+  Liabilities:Receivables:小红                   +5 USD
   Expenses:Food:Takeout                          +5 USD
   Liabilities:US:Chase:Freedom                  -10 USD
 </code></pre></td></tr></table>
 </div>
-</div><p>如果 AA 帮我付钱两人又分了一份狮子头，就这样：</p>
+</div><p>如果小红帮我付钱两人又分了一份狮子头，就这样：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -237,12 +238,12 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2020-01-02 * &#34;AA Restaurant&#34; &#34;狮子头&#34;
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">2020-01-02 * &#34;X Restaurant&#34; &#34;狮子头&#34;
   Expenses:Food:Takeout                          +5 USD
-  Liabilities:Receivables:AA                     -5 USD
+  Liabilities:Receivables:小红                   -5 USD
 </code></pre></td></tr></table>
 </div>
-</div><p>以后和 AA 结算的时候就看 Liabilities:Receivables:A 这个帐户里还有多少钱，如果是正的对方就欠我钱，如果是负的我就需要还对方钱。</p>
+</div><p>以后和小红同学结算的时候就看 Liabilities:Receivables:小红 这个帐户里还有多少钱，如果是正的对方就欠我钱，如果是负的我就需要还对方钱。</p>
 <p>不过今年和女票同住，大家的共同花销都记在她的一张信用卡上，再像上面那样一条一条记录，就有些头大了。所以此处我用了两个插件来记录共享和实际支出对象：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -262,8 +263,8 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">plugin &#34;beancount.plugins.divert_expenses&#34; &#34;{
-    &#39;tag&#39;: &#39;A&#39;,
-    &#39;account&#39;: &#39;Liabilities:Receivables:A&#39;
+    &#39;tag&#39;: &#39;GF&#39;,
+    &#39;account&#39;: &#39;Liabilities:Receivables:GF&#39;
 }&#34;
 
 plugin &#34;beancount_share.share&#34; &#34;{
@@ -284,12 +285,12 @@ plugin &#34;beancount_share.share&#34; &#34;{
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2021-01-01 * &#34;AA Restaurant&#34; &#34;狮子头&#34; #share-AA
-  Liabilities:AA:Chase:Freedom                  -10 USD
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">2021-01-01 * &#34;X Restaurant&#34; &#34;狮子头&#34; #share-GF
+  Liabilities:GF:Chase:Freedom                  -10 USD
   Expenses:Food:Takeout
 </code></pre></td></tr></table>
 </div>
-</div><p>如果对方使用这张共享的卡给自己买了狮子头没和我分，则可以将标签改成 #AA 来改变实际支出对象。</p>
+</div><p>如果对方使用这张共享的卡给自己买了狮子头没和我分，则可以将标签改成 #GF 来改变实际支出对象。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -297,8 +298,8 @@ plugin &#34;beancount_share.share&#34; &#34;{
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2021-01-02 * &#34;AA Restaurant&#34; &#34;狮子头&#34; #AA
-  Liabilities:AA:Chase:Freedom                  -10 USD
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">2021-01-02 * &#34;X Restaurant&#34; &#34;狮子头&#34; #GF
+  Liabilities:GF:Chase:Freedom                  -10 USD
   Expenses:Food:Takeout
 </code></pre></td></tr></table>
 </div>
@@ -315,17 +316,17 @@ plugin &#34;beancount_share.share&#34; &#34;{
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2021-01-01 * &#34;AA Restaurant&#34; &#34;狮子头&#34; #share-AA
-  Liabilities:AA:Chase:Freedom                  -10 USD
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">2021-01-01 * &#34;X Restaurant&#34; &#34;狮子头&#34; #share-GF
+  Liabilities:GF:Chase:Freedom                  -10 USD
   Expenses:Food:Takeout                          +5 USD
-  Liabilities:Receivables:AA                     +5 USD
+  Liabilities:Receivables:GF                     +5 USD
 
-2021-01-02 * &#34;AA Restaurant&#34; &#34;狮子头&#34; #AA
-  Liabilities:AA:Chase:Freedom                  -10 USD
-  Liabilities:Receivables:AA                    +10 USD
+2021-01-02 * &#34;X Restaurant&#34; &#34;狮子头&#34; #GF
+  Liabilities:GF:Chase:Freedom                  -10 USD
+  Liabilities:Receivables:GF                    +10 USD
 </code></pre></td></tr></table>
 </div>
-</div><p>而 AA 对她信用卡的付款记录则可以移除标签，直接记录，如果不放心的话还可以加个余额的对帐。</p>
+</div><p>而女票对她信用卡的付款记录则可以移除标签，直接记录，如果不放心的话还可以加个余额的对帐。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -335,14 +336,14 @@ plugin &#34;beancount_share.share&#34; &#34;{
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2021-01-03 balance Liabilities:AA:Chase:Freedom -20 USD
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">2021-01-03 balance Liabilities:GF:Chase:Freedom -20 USD
 
 2021-01-15 * &#34;Automatic Payment - Thank&#34;
-  Liabilities:AA:Chase:Freedom                  +20 USD
-  Liabilities:Receivables:AA                    -20 USD
+  Liabilities:GF:Chase:Freedom                  +20 USD
+  Liabilities:Receivables:GF                    -20 USD
 </code></pre></td></tr></table>
 </div>
-</div><p>如此记录，方便简洁，最后一看 Liabilities:Receivables:AA 的余额是 -5，所以我要还对方 5 块。</p>
+</div><p>如此记录，方便简洁，最后一看 Liabilities:Receivables:GF 的余额是 -5，所以我要还她 5 块。</p>
 <h2 id="医疗帐单">医疗帐单</h2>
 <p>在美国，医保是一项产业，工作之后医保与学生时期的医保相比差了不少，与之相关的帐务记录也变得非常麻烦。我的思路就是在实际发生日，按照医保公司给的帐单进行记录，并对 deductible 按年记付。这样可以方便地看出每年 deductible 额能否用完，日后需不需要更换更合适自己的医保。下面是一个例子：</p>
 <div class="highlight"><div class="chroma">
@@ -471,7 +472,13 @@ plugin &#34;beancount_share.share&#34; &#34;{
   Expenses:Crypto:Commissions           +0.00010000 BTC @ USD
 </code></pre></td></tr></table>
 </div>
-</div>
+</div><h2 id="系列链接">系列链接</h2>
+<ul>
+<li><a href="https://blindwith.science/2019/07/444.html/">Emacs 上使用 Beancount 记帐</a>：这篇对复式记帐法进行了一个简单的介绍，并记录了我是如何从随手记改用 beancount 的。</li>
+<li><a href="https://blindwith.science/2020/12/461.html/">Beancount 记帐小进阶之一&ndash;环境配置</a>：这篇讨论了我是如何配置 beancount 本地环境的。</li>
+<li><a href="https://blindwith.science/2021/01/462.html/">Beancount 记帐小进阶之二&ndash;优化导入</a>：这篇讨论了我是如何优化帐目帐本并批量从银行帐单导入帐务的。</li>
+<li><a href="https://blindwith.science/2021/01/463.html/">Beancount 记帐小进阶之三&ndash;常见场景</a>：这篇讨论了我对工资单，共享帐簿以及医疗帐单，炒币这些常用场景的处理方式。</li>
+</ul>
     </div>
 
     <div class="post-copyright">
