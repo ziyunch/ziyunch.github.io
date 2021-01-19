@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Beancount 记帐小进阶之三–常见场景 - Blind with Science</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ziyunch" /><meta name="description" content="书接上文，这次分享我对几种常见场景的处理方式。
+" /><meta name="keywords" content="ziyunch, blog" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.76.5 with theme even" />
+
+
+<link rel="canonical" href="http://blindwith.science/2021/01/463.html/" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../favicon-16x16.png">
+<link rel="manifest" href="../../../manifest.json">
+<link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="../../../sass/main.min.c7bc1becf36bcf6a9ebd25d2947e43a2eb745ddb0c9a32b43126fd7fa460c351.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Beancount 记帐小进阶之三–常见场景" />
+<meta property="og:description" content="书接上文，这次分享我对几种常见场景的处理方式。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blindwith.science/2021/01/463.html/" />
+<meta property="article:published_time" content="2021-01-18T17:23:04-08:00" />
+<meta property="article:modified_time" content="2021-01-18T17:23:04-08:00" />
+<meta itemprop="name" content="Beancount 记帐小进阶之三–常见场景">
+<meta itemprop="description" content="书接上文，这次分享我对几种常见场景的处理方式。">
+<meta itemprop="dateModified" content="2021-01-18T17:23:04-08:00" />
+<meta itemprop="wordCount" content="1750">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Beancount 记帐小进阶之三–常见场景"/>
+<meta name="twitter:description" content="书接上文，这次分享我对几种常见场景的处理方式。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="../../../" class="logo">Blind with Science</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="../../../">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="../../../post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="../../../tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="../../../categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="../../../about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="../../../" class="logo">Blind with Science</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="../../../">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Beancount 记帐小进阶之三–常见场景</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-01-18 </span>
+        <div class="post-category">
+            <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
+            </div>
+          <span class="more-meta"> 约 1750 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#工资记录">工资记录</a></li>
+    <li><a href="#共享帐簿">共享帐簿</a></li>
+    <li><a href="#医疗帐单">医疗帐单</a></li>
+    <li><a href="#rsu">RSU</a></li>
+    <li><a href="#虚拟货币">虚拟货币</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>书接上文，这次分享我对几种常见场景的处理方式。</p>
+<h2 id="工资记录">工资记录</h2>
+<p>一张工资单上会有很多条目，所以我会单开一个文件来放工资详情，记录税务，保险，401k 和公司福利。</p>
+<p>这里比较复杂的是税务的记录。以前我将税务算为负收入，这样在看每月支出时可以比较直观地看到自己的每月花销。但是实际上这不太准确。所以还是将税务其算作支出。另外，由于每年会根据收入以及代扣税费来报税，之后也会补税或退税，所以如果单列一个 Expenses:Tax 会将年末的税务计算复杂化，所以我以财年 (fiscal year) 为单位来记录每张工资单的税务。以下是互利工资单的记录：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">2019-10-31 * &#34;Hooli&#34; &#34;Paycheck&#34;
+  Income:Hooli:Pay:Salary                     -7000 USD
+  Income:Hooli:Pay:Bonus                      -3000 USD
+  Expenses:Tax:FY2019:US:Federal              +1660 USD
+  Expenses:Tax:FY2019:US:SocialSecurity        +620 USD
+  Expenses:Tax:FY2019:US:Medicare              +145 USD
+  Expenses:Health:Dental:Insurance               +5 USD
+  Expenses:Health:Medical:Insurance             +50 USD
+  Expenses:Health:Vision:Insurance               +5 USD
+  Assets:Retirement:Roth:Fidelity              +500 USD
+  Assets:US:Chase:Checking                    +7015 USD
+  Income:Hooli:Benefits:Match401K              -500 USD
+  Assets:Retirement:T401K:Fidelity             +500 USD
+  Income:Hooli:Benefits:HSA                     -40 USD
+  Assets:Health:HSA                             +40 USD
+</code></pre></td></tr></table>
+</div>
+</div><p>这样每年报税的时候，可以将应付或应收税额记录，在实际补税或退税时予以扣除。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">2019-12-31 * &#34;TurboTax&#34; &#34;Tax Return&#34;
+  Liabilities:Tax:Payables                    +2000 USD
+  Expenses:Tax:FY2019:US:Federal              -2000 USD
+
+2020-04-15 * &#34;Federal&#34;  &#34;Tax return&#34;
+  Liabilities:Tax:Payables                    -2000 USD
+  Assets:US:Chase:Checking                    +2000 USD
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="共享帐簿">共享帐簿</h2>
+<p>平时和小伙伴们一起玩耍，总会遇到一人付款事后分帐的情况。这种债务的记录在会计上是应该分为资产和负债的，但是对于个人帐目而言，每个人开两个帐目也挺麻烦，所以我一律记载在负债中，如果说我付钱替 AA 与我买一份狮子头分着吃，就这么记录：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">2020-01-01 * &#34;AA Restaurant&#34; &#34;狮子头&#34;
+  Liabilities:Receivables:AA                     +5 USD
+  Expenses:Food:Takeout                          +5 USD
+  Liabilities:US:Chase:Freedom                  -10 USD
+</code></pre></td></tr></table>
+</div>
+</div><p>如果 AA 帮我付钱两人又分了一份狮子头，就这样：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">2020-01-02 * &#34;AA Restaurant&#34; &#34;狮子头&#34;
+  Expenses:Food:Takeout                          +5 USD
+  Liabilities:Receivables:AA                     -5 USD
+</code></pre></td></tr></table>
+</div>
+</div><p>以后和 AA 结算的时候就看 Liabilities:Receivables:A 这个帐户里还有多少钱，如果是正的对方就欠我钱，如果是负的我就需要还对方钱。</p>
+<p>不过今年和女票同住，大家的共同花销都记在她的一张信用卡上，再像上面那样一条一条记录，就有些头大了。所以此处我用了两个插件来记录共享和实际支出对象：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">plugin &#34;beancount.plugins.divert_expenses&#34; &#34;{
+    &#39;tag&#39;: &#39;A&#39;,
+    &#39;account&#39;: &#39;Liabilities:Receivables:A&#39;
+}&#34;
+
+plugin &#34;beancount_share.share&#34; &#34;{
+    &#39;mark_name&#39;: &#39;share&#39;,
+    &#39;meta_name&#39;: &#39;shared&#39;,
+    &#39;account_debtors&#39;: &#39;Liabilities:Receivables&#39;,
+    &#39;account_creditors&#39;: &#39;Liabilities:Receivables&#39;,
+    &#39;open_date&#39;: None,
+    &#39;quantize&#39;: &#39;0.01&#39;
+  }&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>这样，我可以将她信用卡的帐单导入（具体设置见前文），然后通过添加标签的方式设置共享支出，这样对方如果在结清我们双方债务后又帮我付钱买狮子头就可以这样记录：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">2021-01-01 * &#34;AA Restaurant&#34; &#34;狮子头&#34; #share-AA
+  Liabilities:AA:Chase:Freedom                   -10 USD
+  Expenses:Food:Takeout
+</code></pre></td></tr></table>
+</div>
+</div><p>如果对方使用这张共享的卡给自己买了狮子头没和我分，则可以将标签改成 #AA 来改变实际支出对象。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">2021-01-02 * &#34;AA Restaurant&#34; &#34;狮子头&#34; #AA
+  Liabilities:AA:Chase:Freedom                   -10 USD
+  Expenses:Food:Takeout
+</code></pre></td></tr></table>
+</div>
+</div><p>这样在 beancount 后端，这两条记录会变成如下形式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">2021-01-01 * &#34;AA Restaurant&#34; &#34;狮子头&#34; #share-AA
+  Liabilities:AA:Chase:Freedom                   -10 USD
+  Expenses:Food:Takeout                           +5 USD
+  Liabilities:Receivables:AA                      +5 USD
+
+2021-01-02 * &#34;AA Restaurant&#34; &#34;狮子头&#34; #AA
+  Liabilities:AA:Chase:Freedom                   -10 USD
+  Liabilities:Receivables:AA                     +10 USD
+</code></pre></td></tr></table>
+</div>
+</div><p>而 AA 对她信用卡的付款记录则可以移除标签，直接记录，如果不放心的话还可以加个余额的对帐。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">2021-01-03 balance Liabilities:AA:Chase:Freedom  -20 USD
+
+2021-01-15 * &#34;Automatic Payment - Thank&#34;
+  Liabilities:AA:Chase:Freedom                    20 USD
+  Liabilities:Receivables:AA                     -20 USD
+</code></pre></td></tr></table>
+</div>
+</div><p>如此记录，方便简洁，最后一看 Liabilities:Receivables:AA 的余额是 -5，所以我要还对方 5 块。</p>
+<h2 id="医疗帐单">医疗帐单</h2>
+<p>在美国，医保是一项产业，工作之后医保与学生时期的医保相比差了不少，与之相关的帐务记录也变得非常麻烦。</p>
+<h2 id="rsu">RSU</h2>
+<p>工作以后，会得到一些 RSU，即限制性股票，这一般是作为股票奖励写在 offer 中，按一定比例分四年发放。这在税务记录上会有一些复杂，所幸的是 Beancount 官方文档中给出了很好的<a href="https://beancount.github.io/docs/stock%5Fvesting%5Fin%5Fbeancount.html">示例</a>。由于我还没被 vest，在此先不赘述，以后拿到股票了再补完。</p>
+<h2 id="虚拟货币">虚拟货币</h2>
+<p>17 年的时候我有买过一点点比特币，虽然基本上都被不靠谱的我给玩没了，也算交了比小小的学费。由于虚拟货币的特殊性，当时用随手记记录的时候从税务角度来看帐目有一些不清晰。研究了一下发现，beancount 也可以比较好地处理这种场景。</p>
+<p>首先是开户，可以使用类似股票的形式开户，并以 FIFO 的形式计算盈余。除了资产以外，还有支出和收入来记录手续费与盈余收入。此外将虚拟货币记录为一种通货。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">2017-06-01 open Assets:Crypto:Coinbase:Wallet &#34;FIFO&#34;
+2017-06-01 open Assets:Crypto:Bittrex:Wallet &#34;FIFO&#34;
+
+2017-06-01 open Expenses:Crypto:Commissions
+2017-06-01 open Income:Crypto:PnL
+
+2008-01-01 commodity BTC
+  export: &#34;BTC&#34;
+  name: &#34;Bitcoin&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>在使用美元买进虚拟货币的时候，可以用 {} 表示每一币的持有成本，并用 @@ 表示买入总价。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">2017-06-01 * &#34;Coinbase&#34; &#34;BTC&#34;
+  Assets:Crypto:Coinbase:Wallet        +0.03000000 BTC {3000.00 USD} @@ 90 USD
+  Expenses:Crypto:Commissions                +3.00 USD
+  Liabilities:US:Chase:Freedom              -93.00 USD
+</code></pre></td></tr></table>
+</div>
+</div><p>而卖出的时候，由于我对这个钱包采用的是先进先出 (FIFO) 的模式，可以不指明卖出比特币的持有成本，这样 Beancount 会直接以最早买入的比特币的持有成本来计算盈余。卖出时可以用 @ 表示卖出时每币的价格。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">2017-07-30 * &#34;Coinbase&#34; &#34;BTC-&gt; USD&#34;
+  Assets:Crypto:Coinbase:Wallet        -0.02000000 BTC {} @ 4500.00 USD
+  Expenses:Crypto:Commissions                +3.00 USD
+  Income:Crypto:PnL                         -30.00 USD
+  Assets:Crypto:Coinbase:Wallet             +87.00 USD
+</code></pre></td></tr></table>
+</div>
+</div><p>虽然人们对虚拟货币的货币属性仍有争议，但是对于比特币的转帐行为，交易费用是采用比特币结算的。这就给传统记帐手段带来了问题。对于 Beancount 来说，也比较 tricky，我也是找到这个<a href="https://groups.google.com/g/beancount/c/Qvbcq-Sk5NY/m/evxSnb6nAQAJ">讨论帖</a>才找到如下这种记录方式。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">2017-08-01 * &#34;Bittrex&#34; &#34;Coinbase -&gt; Bittrex&#34;
+  Assets:Crypto:Coinbase:Wallet        -0.01000000 BTC {}
+  Assets:Crypto:Bittrex:Wallet         +0.00990000 BTC @ BTC
+  Expenses:Crypto:Commissions          +0.00010000 BTC @ USD
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">ziyunch</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2021-01-18
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="../../../images/wechatpay.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="../../../2021/01/462.html/">
+            <span class="next-text nav-default">Beancount 记帐小进阶之二–优化导入</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'ziyunch';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'kyXPptAG0HNFlxVP6PKtMG79-gzGzoHsz',
+        appKey: 'odsVXiu7qNwwQypz99atviXR',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/ziyunch" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ziyunch" class="iconfont icon-github" title="github"></a>
+      <a href="http://weibo.com/ziyunc" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://douban.com/people/ziyunch" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-86469737-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>
