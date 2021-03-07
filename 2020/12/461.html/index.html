@@ -17,9 +17,7 @@
 
 
 <meta name="author" content="ziyunch" /><meta name="description" content="记帐是我的一个习惯，也是爱好。自Emacs 上使用 Beancount 记帐起，我改用 Beancount 记帐已有一年有余。Beancount 简便轻巧，帐目亦是非常清晰。通过其前端 fava 对帐目进行可视化后，还能获得很多平时不会注意到的信息。下图是我 2020 年的支出，很明显地可以看到在疫情之下，我的支出以解决生理与安全需求为主，也可以看到由于支出大幅缩减，税居然占了我去年支出的一半。
-  Figure 1: 我的 2020 支出可视化
-  这张图则是我自记帐以来在电影方面的支出，可以看到 2018-2019 年由于毕业找工作，出现了一个很大的平台期，也可以看到自今年三月疫情爆发以来，我再也没有去过电影院。
-  Figure 2: 电影类支出
+  下图则是我自记帐以来在电影方面的支出，可以看到 2018-2019 年由于毕业找工作，出现了一个很大的平台期，也可以看到自今年三月疫情爆发以来，我再也没有去过电影院。
   不过这一年来，我开始工作，也和女票同住，出现了更多类型的帐目。而这半年因新冠宅家，花销颇少，反而便懒于记帐了，一不小心便产生了好几个月的 lag，如何高效地记录各种类型的帐目反而成了一个问题。Beancount 虽然用的人不少，可是官方 document 写得非常硬核，中文资源又多浅尝辄止，我越是想要简化自己的流程，越是产生了更多的疑惑。最近花了圣诞元旦 MLK 三个长周末，总算将各种疑惑都理清了。
 " /><meta name="keywords" content="ziyunch, blog" />
 
@@ -48,41 +46,33 @@
 <meta property="og:description" content="记帐是我的一个习惯，也是爱好。自Emacs 上使用 Beancount 记帐起，我改用 Beancount 记帐已有一年有余。Beancount 简便轻巧，帐目亦是非常清晰。通过其前端 fava 对帐目进行可视化后，还能获得很多平时不会注意到的信息。下图是我 2020 年的支出，很明显地可以看到在疫情之下，我的支出以解决生理与安全需求为主，也可以看到由于支出大幅缩减，税居然占了我去年支出的一半。
 
      
-            Figure 1: 我的 2020 支出可视化
-        
 
 
-这张图则是我自记帐以来在电影方面的支出，可以看到 2018-2019 年由于毕业找工作，出现了一个很大的平台期，也可以看到自今年三月疫情爆发以来，我再也没有去过电影院。
+下图则是我自记帐以来在电影方面的支出，可以看到 2018-2019 年由于毕业找工作，出现了一个很大的平台期，也可以看到自今年三月疫情爆发以来，我再也没有去过电影院。
 
      
-            Figure 2: 电影类支出
-        
 
 
 不过这一年来，我开始工作，也和女票同住，出现了更多类型的帐目。而这半年因新冠宅家，花销颇少，反而便懒于记帐了，一不小心便产生了好几个月的 lag，如何高效地记录各种类型的帐目反而成了一个问题。Beancount 虽然用的人不少，可是官方 document 写得非常硬核，中文资源又多浅尝辄止，我越是想要简化自己的流程，越是产生了更多的疑惑。最近花了圣诞元旦 MLK 三个长周末，总算将各种疑惑都理清了。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blindwith.science/2020/12/461.html/" />
 <meta property="article:published_time" content="2020-12-27T18:33:00-08:00" />
-<meta property="article:modified_time" content="2021-01-18T20:30:45-08:00" />
+<meta property="article:modified_time" content="2021-03-06T16:09:11-08:00" />
 <meta itemprop="name" content="Beancount 记帐小进阶之一–环境配置">
 <meta itemprop="description" content="记帐是我的一个习惯，也是爱好。自Emacs 上使用 Beancount 记帐起，我改用 Beancount 记帐已有一年有余。Beancount 简便轻巧，帐目亦是非常清晰。通过其前端 fava 对帐目进行可视化后，还能获得很多平时不会注意到的信息。下图是我 2020 年的支出，很明显地可以看到在疫情之下，我的支出以解决生理与安全需求为主，也可以看到由于支出大幅缩减，税居然占了我去年支出的一半。
 
      
-            Figure 1: 我的 2020 支出可视化
-        
 
 
-这张图则是我自记帐以来在电影方面的支出，可以看到 2018-2019 年由于毕业找工作，出现了一个很大的平台期，也可以看到自今年三月疫情爆发以来，我再也没有去过电影院。
+下图则是我自记帐以来在电影方面的支出，可以看到 2018-2019 年由于毕业找工作，出现了一个很大的平台期，也可以看到自今年三月疫情爆发以来，我再也没有去过电影院。
 
      
-            Figure 2: 电影类支出
-        
 
 
 不过这一年来，我开始工作，也和女票同住，出现了更多类型的帐目。而这半年因新冠宅家，花销颇少，反而便懒于记帐了，一不小心便产生了好几个月的 lag，如何高效地记录各种类型的帐目反而成了一个问题。Beancount 虽然用的人不少，可是官方 document 写得非常硬核，中文资源又多浅尝辄止，我越是想要简化自己的流程，越是产生了更多的疑惑。最近花了圣诞元旦 MLK 三个长周末，总算将各种疑惑都理清了。">
 <meta itemprop="datePublished" content="2020-12-27T18:33:00-08:00" />
-<meta itemprop="dateModified" content="2021-01-18T20:30:45-08:00" />
-<meta itemprop="wordCount" content="1076">
+<meta itemprop="dateModified" content="2021-03-06T16:09:11-08:00" />
+<meta itemprop="wordCount" content="1058">
 
 
 
@@ -92,15 +82,11 @@
 <meta name="twitter:description" content="记帐是我的一个习惯，也是爱好。自Emacs 上使用 Beancount 记帐起，我改用 Beancount 记帐已有一年有余。Beancount 简便轻巧，帐目亦是非常清晰。通过其前端 fava 对帐目进行可视化后，还能获得很多平时不会注意到的信息。下图是我 2020 年的支出，很明显地可以看到在疫情之下，我的支出以解决生理与安全需求为主，也可以看到由于支出大幅缩减，税居然占了我去年支出的一半。
 
      
-            Figure 1: 我的 2020 支出可视化
-        
 
 
-这张图则是我自记帐以来在电影方面的支出，可以看到 2018-2019 年由于毕业找工作，出现了一个很大的平台期，也可以看到自今年三月疫情爆发以来，我再也没有去过电影院。
+下图则是我自记帐以来在电影方面的支出，可以看到 2018-2019 年由于毕业找工作，出现了一个很大的平台期，也可以看到自今年三月疫情爆发以来，我再也没有去过电影院。
 
      
-            Figure 2: 电影类支出
-        
 
 
 不过这一年来，我开始工作，也和女票同住，出现了更多类型的帐目。而这半年因新冠宅家，花销颇少，反而便懒于记帐了，一不小心便产生了好几个月的 lag，如何高效地记录各种类型的帐目反而成了一个问题。Beancount 虽然用的人不少，可是官方 document 写得非常硬核，中文资源又多浅尝辄止，我越是想要简化自己的流程，越是产生了更多的疑惑。最近花了圣诞元旦 MLK 三个长周末，总算将各种疑惑都理清了。"/>
@@ -177,7 +163,7 @@
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 1076 字 </span>
+          <span class="more-meta"> 约 1058 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -198,18 +184,12 @@
     <div class="post-content">
       <p>记帐是我的一个习惯，也是爱好。自<a href="https://blindwith.science/2019/07/444.html/">Emacs 上使用 Beancount 记帐</a>起，我改用 Beancount 记帐已有一年有余。Beancount 简便轻巧，帐目亦是非常清晰。通过其前端 fava 对帐目进行可视化后，还能获得很多平时不会注意到的信息。下图是我 2020 年的支出，很明显地可以看到在疫情之下，我的支出以解决生理与安全需求为主，也可以看到由于支出大幅缩减，税居然占了我去年支出的一半。</p>
 <figure>
-    <img src="../../../ox-hugo/fava_1.png"
-         alt="Figure 1: 我的 2020 支出可视化"/> <figcaption>
-            <p>Figure 1: 我的 2020 支出可视化</p>
-        </figcaption>
+    <img src="../../../ox-hugo/fava_1.png"/> 
 </figure>
 
-<p>这张图则是我自记帐以来在电影方面的支出，可以看到 2018-2019 年由于毕业找工作，出现了一个很大的平台期，也可以看到自今年三月疫情爆发以来，我再也没有去过电影院。</p>
+<p>下图则是我自记帐以来在电影方面的支出，可以看到 2018-2019 年由于毕业找工作，出现了一个很大的平台期，也可以看到自今年三月疫情爆发以来，我再也没有去过电影院。</p>
 <figure>
-    <img src="../../../ox-hugo/fava_2.png"
-         alt="Figure 2: 电影类支出"/> <figcaption>
-            <p>Figure 2: 电影类支出</p>
-        </figcaption>
+    <img src="../../../ox-hugo/fava_2.png"/> 
 </figure>
 
 <p>不过这一年来，我开始工作，也和女票同住，出现了更多类型的帐目。而这半年因新冠宅家，花销颇少，反而便懒于记帐了，一不小心便产生了好几个月的 lag，如何高效地记录各种类型的帐目反而成了一个问题。Beancount 虽然用的人不少，可是官方 document 写得非常硬核，中文资源又多浅尝辄止，我越是想要简化自己的流程，越是产生了更多的疑惑。最近花了圣诞元旦 MLK 三个长周末，总算将各种疑惑都理清了。</p>
@@ -374,7 +354,7 @@ docker run --detach --name<span class="o">=</span><span class="s2">&#34;beancoun
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2021-01-18
+        2021-03-06
         
     </span>
   </p>

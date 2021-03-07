@@ -34,18 +34,12 @@
       <guid>http://blindwith.science/2020/12/461.html/</guid>
       <description>&lt;p&gt;记帐是我的一个习惯，也是爱好。自&lt;a href=&#34;https://blindwith.science/2019/07/444.html/&#34;&gt;Emacs 上使用 Beancount 记帐&lt;/a&gt;起，我改用 Beancount 记帐已有一年有余。Beancount 简便轻巧，帐目亦是非常清晰。通过其前端 fava 对帐目进行可视化后，还能获得很多平时不会注意到的信息。下图是我 2020 年的支出，很明显地可以看到在疫情之下，我的支出以解决生理与安全需求为主，也可以看到由于支出大幅缩减，税居然占了我去年支出的一半。&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img src=&#34;../../ox-hugo/fava_1.png&#34;
-         alt=&#34;Figure 1: 我的 2020 支出可视化&#34;/&gt; &lt;figcaption&gt;
-            &lt;p&gt;Figure 1: 我的 2020 支出可视化&lt;/p&gt;
-        &lt;/figcaption&gt;
+    &lt;img src=&#34;../../ox-hugo/fava_1.png&#34;/&gt; 
 &lt;/figure&gt;
 
-&lt;p&gt;这张图则是我自记帐以来在电影方面的支出，可以看到 2018-2019 年由于毕业找工作，出现了一个很大的平台期，也可以看到自今年三月疫情爆发以来，我再也没有去过电影院。&lt;/p&gt;
+&lt;p&gt;下图则是我自记帐以来在电影方面的支出，可以看到 2018-2019 年由于毕业找工作，出现了一个很大的平台期，也可以看到自今年三月疫情爆发以来，我再也没有去过电影院。&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img src=&#34;../../ox-hugo/fava_2.png&#34;
-         alt=&#34;Figure 2: 电影类支出&#34;/&gt; &lt;figcaption&gt;
-            &lt;p&gt;Figure 2: 电影类支出&lt;/p&gt;
-        &lt;/figcaption&gt;
+    &lt;img src=&#34;../../ox-hugo/fava_2.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;不过这一年来，我开始工作，也和女票同住，出现了更多类型的帐目。而这半年因新冠宅家，花销颇少，反而便懒于记帐了，一不小心便产生了好几个月的 lag，如何高效地记录各种类型的帐目反而成了一个问题。Beancount 虽然用的人不少，可是官方 document 写得非常硬核，中文资源又多浅尝辄止，我越是想要简化自己的流程，越是产生了更多的疑惑。最近花了圣诞元旦 MLK 三个长周末，总算将各种疑惑都理清了。&lt;/p&gt;</description>
