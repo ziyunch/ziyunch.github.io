@@ -147,6 +147,11 @@ emacs-rime 的安装非常简单，从 rime/librime 那儿下了最新的 Releas
     <nav id="TableOfContents"></nav>
   </div>
 </div>
+  <div class="post-outdated">
+    <div class="hint">
+      <p>【注意】最后更新于 <span class="timeago" datetime="2021-01-18T17:23:03" title="January 18, 2021">January 18, 2021</span>，文中内容可能已过时，请谨慎使用。</p>
+    </div>
+  </div>
     <div class="post-content">
       <p>之前我一直使用的是 pyim，见 <a href="https://blindwith.science/2019/08/449.html/">Mac 版 Emacs 中使用 Rime 输入法打带调双拼</a>。前段时间手贱把 Mac 升至 Catalina 后，Emacs 便出现了各种各样的问题。捣鼓了一圈后发现了一个致命问题，那就是我对 pyim 的双拼定义不管用了。捣鼓了许久，都没搞明白原因是什么。不过 pyim 本身也有一些缺陷，安装复杂，和鼠须管并非无缝衔接，打字有卡顿，缓存限制对生僻字不友好，我的带调双拼也需要在 init 中另行设置，所以在发现 <a href="https://github.com/DogLooksGood/emacs-rime">emacs-rime</a> 后，我便起了换个轮子用的想法。</p>
 <p>emacs-rime 的安装非常简单，从 <a href="https://github.com/rime/librime">rime/librime</a> 那儿下了最新的 Release 并解压至 <code>~/.emacs.d/librime</code> 即可。更棒的是，由于 emacs-rime 仅仅是 rime 在 emacs 中的前端，所以其体验与鼠须管是完全一致的。也就是说，我再也不用为了实现带调双拼而写一个专用的 schema 并在 init 中另行设置了，而用起方言输入法也是顺滑非常。另外，在中英文混输时，也不需要切换输入法了，超级棒。</p>
