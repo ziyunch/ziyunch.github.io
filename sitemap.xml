@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blindwith.science/2021/09/465.html/</loc>
+    <lastmod>2021-09-28T00:16:56-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://blindwith.science/2021/06/464.html/</loc>
     <lastmod>2021-06-13T14:35:58-07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -304,21 +311,28 @@
   
   <url>
     <loc>http://blindwith.science/</loc>
-    <lastmod>2021-09-26T00:03:42-07:00</lastmod>
+    <lastmod>2021-09-28T00:16:56-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blindwith.science/categories/</loc>
-    <lastmod>2021-09-26T00:03:42-07:00</lastmod>
+    <lastmod>2021-09-28T00:16:56-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blindwith.science/post/</loc>
-    <lastmod>2021-09-26T00:03:42-07:00</lastmod>
+    <lastmod>2021-09-28T00:16:56-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/categories/%E9%A3%8E%E6%9C%88%E8%B0%88/</loc>
+    <lastmod>2021-09-28T00:16:56-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -396,13 +410,6 @@
   <url>
     <loc>http://blindwith.science/tags/lego/</loc>
     <lastmod>2021-01-18T17:23:02-08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blindwith.science/categories/%E9%A3%8E%E6%9C%88%E8%B0%88/</loc>
-    <lastmod>2021-01-18T17:23:13-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
