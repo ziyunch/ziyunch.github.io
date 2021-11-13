@@ -54,8 +54,8 @@ Emacs是什么呢？最简单的解释，便是Emacs是一种基于Lisp的具有
 Org-mode的宣传语就是 your life in plain text，可以说很好地概括了Org-mode的能力。最重要的一点是Org是纯文本文档，具有体积小结构简单的优点。在此我先简单介绍一下Org-mode的特性，就不一一展开了。毕竟如果展开来讲，那可能得出一个系列文章。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blindwith.science/2021/11/466.html/" />
-<meta property="article:published_time" content="2021-11-10T11:12:00-08:00" />
-<meta property="article:modified_time" content="2021-11-10T11:12:00-08:00" />
+<meta property="article:published_time" content="2021-11-12T23:14:00-08:00" />
+<meta property="article:modified_time" content="2021-11-13T09:54:18-08:00" />
 <meta itemprop="name" content="继续吹一波Org-mode">
 <meta itemprop="description" content="最近Notion大火，从二手买卖到菜谱分享，隔三差五就会看到它的推荐和应用。出于好奇，我也去开了个帐户用了一番，确实不错，然而我对其持谨慎态度。一方面，作为在线产品，它的使用场景灵活，但又会受网络限制，假如所在单位或者地区禁止使用，那就徒增烦恼。而且，它并非开源产品，公司一旦跑路或者改变其业务重心，那会造成非常高的转移成本，前车之鉴便有Evernote。另一方面，它作为一个笔记产品，架构强大，也更复杂，有着较高的学习成本，也许用起来很sexy，但也会让人疑惑在有更好替代品的情况下，是否值得花费这么多时间来学习使用这个产品。
 说了这么多，其实我只是想引出这个更好的替代品，也就是我用了多年的Emacs。
@@ -63,8 +63,9 @@ Org-mode的宣传语就是 your life in plain text，可以说很好地概括了
 Emacs是什么呢？最简单的解释，便是Emacs是一种基于Lisp的具有可扩展性的文本编辑器。文本编辑器，意味着平时不管在上面记录什么，大小都以kb计，最基础的Dropbox plan就能轻松对其进行云端备份，哪怕在一个没有Emacs的环境，也能用任何文本编辑器打开使用Emacs处理的文档。而Lisp的强扩展性，则赋予Emacs一切可能，你可以用它记笔记（Org-mode），管理文件（Dired），编辑远程档案（Tramp），版本控制（Magit），收发邮件（Gnus），用作IDE，甚至上网发推。有一个著名的说法称Emacs为操作系统，倒也并非言过其实。不过我也不至于真的将Emacs当操作系统使用，毕竟我们已经一只脚跨入了Meta时代（狗头）。不过Emacs，尤其是无人可出其右的Org-mode，也确实渗透了我的学习、工作、生活。
 那么，Org-mode又是什么呢？Org-mode是Emacs的一种支持内容分级显示的主编辑模式。在Emacs中，每种主模式都有特殊的Emacs Lisp变量和函数来使处理文档变得更便捷，而Org作为Emacs特有的文本格式，更是有着非常出色的原生支持。其他主流编辑器（Vim, Atom, VSCode, Sublime）也都有对应相应的Org模式，但只能支持基础的语法高亮功能。
 Org-mode的宣传语就是 your life in plain text，可以说很好地概括了Org-mode的能力。最重要的一点是Org是纯文本文档，具有体积小结构简单的优点。在此我先简单介绍一下Org-mode的特性，就不一一展开了。毕竟如果展开来讲，那可能得出一个系列文章。">
-<meta itemprop="dateModified" content="2021-11-10T11:12:00-08:00" />
-<meta itemprop="wordCount" content="3698">
+<meta itemprop="datePublished" content="2021-11-12T23:14:00-08:00" />
+<meta itemprop="dateModified" content="2021-11-13T09:54:18-08:00" />
+<meta itemprop="wordCount" content="4260">
 
 
 
@@ -146,12 +147,12 @@ Org-mode的宣传语就是 your life in plain text，可以说很好地概括了
       <h1 class="post-title">继续吹一波Org-mode</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-11-10 </span>
+        <span class="post-time"> 2021-11-12 </span>
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 3698 字 </span>
-          <span class="more-meta"> 预计阅读 8 分钟 </span>
+          <span class="more-meta"> 约 4260 字 </span>
+          <span class="more-meta"> 预计阅读 9 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -165,7 +166,7 @@ Org-mode的宣传语就是 your life in plain text，可以说很好地概括了
     <li><a href="#文献记录-org-ref">文献记录 org-ref</a></li>
     <li><a href="#面试准备">面试准备</a></li>
     <li><a href="#工作笔记">工作笔记</a></li>
-    <li><a href="#写博客-easy-hugo">写博客 easy-hugo</a></li>
+    <li><a href="#写博客-ox-hugo">写博客 ox-hugo</a></li>
     <li><a href="#记帐-beancount">记帐 beancount</a></li>
   </ul>
 </nav>
@@ -254,7 +255,7 @@ Org-mode的宣传语就是 your life in plain text，可以说很好地概括了
 <span class="c">#+END_SRC</span>
 
 <span class="cs">#+RESULTS</span><span class="c">:</span>
-,: Hello World!
+: Hello World!
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -286,7 +287,7 @@ Org-mode的宣传语就是 your life in plain text，可以说很好地概括了
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="gh">*</span><span class="gs"> Journals</span>
+<pre class="chroma"><code class="language-org" data-lang="org"><span class="gh">*</span><span class="gs"> 文献</span>
 <span class="gu">**</span><span class="err"> TODO</span> [#A] 2009 - Imp Dehydrogenase: Structure, Mechanism, and Inhibition :review:
 <span class="c"> :PROPERTIES:
 </span><span class="c"></span><span class="cs">  :Custom_ID: hedstrom-2009-cr
@@ -301,7 +302,7 @@ Org-mode的宣传语就是 your life in plain text，可以说很好地概括了
 
 cite:hedstrom-2009-cr
 
-IMPDH best review!
+最棒的IMPDH综述！
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="面试准备">面试准备</h2>
@@ -318,6 +319,24 @@ IMPDH best review!
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-org" data-lang="org"><span class="gh">*</span><span class="gs"> NEXT Leetcode [1/1]</span>
@@ -328,8 +347,26 @@ IMPDH best review!
 <span class="gu">**</span> NEXT [[https://leetcode.com/problems/two-sum/][1. Two Sum]]                               :Array:HashTable:Amazon:%:
 <span class="c">#+BEGIN_EXAMPLE</span>
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+Example:
+
+Given nums = [2, 7, 11, 15], target = 9,
+
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
 <span class="c">#+END_EXAMPLE</span>
 <span class="gu">***</span> Solution
+<span class="c">#+BEGIN_SRC </span><span class="cs">python</span><span class="c">
+</span><span class="c"></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">twoSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">target</span> <span class="o">-</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">target</span> <span class="o">-</span> <span class="n">num</span><span class="p">],</span> <span class="n">i</span><span class="p">)</span>
+            <span class="n">d</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+<span class="c">#+END_SRC</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>而当进行面试的时候，Org-mode也特别适合用来放各种面试相关的准备材料，跟踪各个公司的进度，记录各个公司的面试经历。我将每个公司单列一级，并为任务状态增加了Screen, Tech, Onsite, Reject和Offer几项，这样可以更直观地显示每个公司到了那一步。</p>
@@ -337,23 +374,29 @@ Given an array of integers, return indices of the two numbers such that they add
 <p>我很喜欢给我所负责的项目做记录。在实验室的时候，大家都用耐酸碱且能经历时间考验的厚重的实验记录本，但是我总觉得纸质的东西虽然方便翻找，但还是容易丢失毁损。所以我都会用Org-mode整理我的工作笔记。等工作以后，我也依然保持着用Org-mode记录工作的习惯。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="gh">*</span><span class="gs"> Meeting</span>
-<span class="gu">**</span> Manager 1:1
-<span class="gh">*</span><span class="gs"> Project</span>
-<span class="gu">**</span> Project a
-<span class="gu">**</span> Project b
-<span class="gh">*</span><span class="gs"> Work log</span>
+<pre class="chroma"><code class="language-org" data-lang="org"><span class="gh">*</span><span class="gs"> 会议记录</span>
+<span class="gu">**</span> 老板
+1:1记录
+<span class="gh">*</span><span class="gs"> 项目记录</span>
+<span class="gu">**</span> 项目甲
+我对项目甲做了什么
+<span class="gu">**</span> 项目乙
+我对项目乙做了什么
+<span class="gh">*</span><span class="gs"> 实验/工作日志</span>
 <span class="gu">**</span> Week 1-2 / Sprint A
 <span class="gu">***</span> [2021-11-03 Wed]
 <span class="k">- [X]</span> 写博客
@@ -384,8 +427,40 @@ Given an array of integers, return indices of the two numbers such that they add
 <span class="c">#+END_SRC</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="写博客-easy-hugo">写博客 easy-hugo</h2>
-<h2 id="记帐-beancount">记帐 beancount</h2>
+</div><h2 id="写博客-ox-hugo">写博客 ox-hugo</h2>
+<p>我几年前从hexo转投hugo后，就一直以hugo作为我博客的后端。Hugo中，每篇博客都是一个Markdown文档。如果博客数量不多的话，管理起来还挺方便的。但是我有几百篇博客，哪怕我用一个高效的方式去命名每篇博客，真找起来也比较头疼。而我也正是由于几百篇博客在hexo上渲染太慢才转投hugo的，以前还因为某tag系统有上限而给其file过bug。</p>
+<p>解决方案则是使用Org-mode，我可以方便地在Org-mode里写博客，将所有博客都放在一个Org-mode中。但是怎么将一个Org文档到处为几百个Markdown文件呢？有一个很好用的插件叫<a href="https://ox-hugo.scripter.co/">ox-hugo</a>。有了这个轮子，我可以将任意大纲级别下的日记导出为Hugo需要的markdown格式。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-org" data-lang="org"><span class="gh">*</span><span class="gs"> 博客</span>
+<span class="c">  :PROPERTIES:
+</span><span class="c"></span><span class="cs">  :EXPORT_HUGO_SECTION: post
+</span><span class="cs"></span><span class="c">  :END:</span>
+<span class="gu">**</span> 技术                                                       :@技术宅:
+<span class="gu">***</span><span class="sr"> DONE</span> 继续吹一波Org-mode                                 :Org_mode:Emacs:
+<span class="c">    :PROPERTIES:
+</span><span class="c"></span><span class="cs">    :EXPORT_FILE_NAME: 20211108-org-mode
+</span><span class="cs">    :EXPORT_HUGO_SLUG: 466.html
+</span><span class="cs">    :EXPORT_HUGO_WEIGHT: -466
+</span><span class="cs"></span><span class="c">    :END:</span>
+最近Notion大火，从二手买卖到菜谱分享，隔三差五就会看到它的推荐和应用。……
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="记帐-beancount">记帐 beancount</h2>
 <p>这个我在之前的三部曲(<a href="https://blindwith.science/2020/12/461.html/">1</a> <a href="https://blindwith.science/2021/01/462.html/">2</a> <a href="https://blindwith.science/2021/01/463.html/">3</a>)里已经详细提过了，Emacs可以使用beancount-mode轻松处理Beancount文件，在此便不赘述。</p>
     </div>
 
@@ -397,7 +472,7 @@ Given an array of integers, return indices of the two numbers such that they add
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2021-11-10
+        2021-11-13
         
     </span>
   </p>
