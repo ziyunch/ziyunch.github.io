@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>xargs on Blind with Science</title>
+    <link>http://blindwith.science/tags/xargs/</link>
+    <description>Recent content in xargs on Blind with Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ziyunch</copyright>
+    <lastBuildDate>Wed, 17 Nov 2021 23:11:00 -0800</lastBuildDate><atom:link href="http://blindwith.science/tags/xargs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>后台运行多任务</title>
+      <link>http://blindwith.science/2021/11/468.html/</link>
+      <pubDate>Wed, 17 Nov 2021 23:11:00 -0800</pubDate>
+      
+      <guid>http://blindwith.science/2021/11/468.html/</guid>
+      <description>最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比pyth</description>
+    </item>
+    
+  </channel>
+</rss>
