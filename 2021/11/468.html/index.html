@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>后台运行多任务 - Blind with Science</title>
+  <title>并行运行多任务 - Blind with Science</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,9 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ziyunch" /><meta name="description" content="最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比pyth" /><meta name="keywords" content="ziyunch, blog" />
+<meta name="author" content="ziyunch" /><meta name="description" content="最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比python java这些简明易懂的现代语言什么的有用多了。
+这个问题是我用loop-level parallelism来同时后台运行多个进程，怎么样可以只在所有进程都成功的情况下才会 exit 0 。
+" /><meta name="keywords" content="ziyunch, blog" />
 
 
 
@@ -39,24 +41,27 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="后台运行多任务" />
-<meta property="og:description" content="最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比pyth" />
+<meta property="og:title" content="并行运行多任务" />
+<meta property="og:description" content="最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比python java这些简明易懂的现代语言什么的有用多了。
+这个问题是我用loop-level parallelism来同时后台运行多个进程，怎么样可以只在所有进程都成功的情况下才会 exit 0 。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blindwith.science/2021/11/468.html/" />
 <meta property="article:published_time" content="2021-11-17T23:11:00-08:00" />
-<meta property="article:modified_time" content="2021-11-17T23:12:04-08:00" />
-<meta itemprop="name" content="后台运行多任务">
-<meta itemprop="description" content="最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比pyth">
+<meta property="article:modified_time" content="2021-11-18T21:47:41-08:00" />
+<meta itemprop="name" content="并行运行多任务">
+<meta itemprop="description" content="最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比python java这些简明易懂的现代语言什么的有用多了。
+这个问题是我用loop-level parallelism来同时后台运行多个进程，怎么样可以只在所有进程都成功的情况下才会 exit 0 。">
 <meta itemprop="datePublished" content="2021-11-17T23:11:00-08:00" />
-<meta itemprop="dateModified" content="2021-11-17T23:12:04-08:00" />
+<meta itemprop="dateModified" content="2021-11-18T21:47:41-08:00" />
 <meta itemprop="wordCount" content="2527">
 
 
 
 <meta itemprop="keywords" content="Bash,xargs," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="后台运行多任务"/>
-<meta name="twitter:description" content="最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比pyth"/>
+<meta name="twitter:title" content="并行运行多任务"/>
+<meta name="twitter:description" content="最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比python java这些简明易懂的现代语言什么的有用多了。
+这个问题是我用loop-level parallelism来同时后台运行多个进程，怎么样可以只在所有进程都成功的情况下才会 exit 0 。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -123,7 +128,7 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">后台运行多任务</h1>
+      <h1 class="post-title">并行运行多任务</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2021-11-17 </span>
@@ -527,7 +532,7 @@ sleep 1m
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2021-11-17
+        2021-11-18
         
     </span>
   </p>

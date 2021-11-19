@@ -9,12 +9,13 @@
     <copyright>ziyunch</copyright>
     <lastBuildDate>Wed, 17 Nov 2021 23:11:00 -0800</lastBuildDate><atom:link href="http://blindwith.science/tags/bash/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>后台运行多任务</title>
+      <title>并行运行多任务</title>
       <link>http://blindwith.science/2021/11/468.html/</link>
       <pubDate>Wed, 17 Nov 2021 23:11:00 -0800</pubDate>
       
       <guid>http://blindwith.science/2021/11/468.html/</guid>
-      <description>最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比pyth</description>
+      <description>&lt;p&gt;最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比python java这些简明易懂的现代语言什么的有用多了。&lt;/p&gt;
+&lt;p&gt;这个问题是我用&lt;a href=&#34;https://en.wikipedia.org/wiki/Loop-level%5Fparallelism&#34;&gt;loop-level parallelism&lt;/a&gt;来同时后台运行多个进程，怎么样可以只在所有进程都成功的情况下才会 &lt;code&gt;exit 0&lt;/code&gt; 。&lt;/p&gt;</description>
     </item>
     
   </channel>

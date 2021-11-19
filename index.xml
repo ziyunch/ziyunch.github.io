@@ -9,12 +9,13 @@
     <copyright>ziyunch</copyright>
     <lastBuildDate>Wed, 17 Nov 2021 23:11:00 -0800</lastBuildDate><atom:link href="http://blindwith.science/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>后台运行多任务</title>
+      <title>并行运行多任务</title>
       <link>http://blindwith.science/2021/11/468.html/</link>
       <pubDate>Wed, 17 Nov 2021 23:11:00 -0800</pubDate>
       
       <guid>http://blindwith.science/2021/11/468.html/</guid>
-      <description>最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比pyth</description>
+      <description>&lt;p&gt;最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比python java这些简明易懂的现代语言什么的有用多了。&lt;/p&gt;
+&lt;p&gt;这个问题是我用&lt;a href=&#34;https://en.wikipedia.org/wiki/Loop-level%5Fparallelism&#34;&gt;loop-level parallelism&lt;/a&gt;来同时后台运行多个进程，怎么样可以只在所有进程都成功的情况下才会 &lt;code&gt;exit 0&lt;/code&gt; 。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -37,7 +38,7 @@
       <pubDate>Fri, 01 Oct 2021 23:14:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2021/10/466.html/</guid>
-      <description>我和大多数人一样，都在疫情wfh初期便搭建了符合人体工学的在家办公小角落。当时各大公司纷纷宣布在家办公，显示器升降桌等设备一度供不应求，不是</description>
+      <description>&lt;p&gt;我和大多数人一样，都在疫情wfh初期便搭建了符合人体工学的在家办公小角落。当时各大公司纷纷宣布在家办公，显示器升降桌等设备一度供不应求，不是全网断货就是价格暴涨。而我因为刚搬来西雅图，什么都没有，只能硬着头皮凑齐装备。花了几个月时间，终于配齐了一个符合我无线+舒服的桌面。&lt;/p&gt;</description>
     </item>
     
     <item>
