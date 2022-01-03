@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blindwith.science/2022/01/470.html/</loc>
+    <lastmod>2022-01-02T22:28:06-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/2022/01/469.html/</loc>
+    <lastmod>2022-01-02T22:27:20-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://blindwith.science/2021/11/468.html/</loc>
     <lastmod>2021-11-18T21:47:41-08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -331,29 +345,43 @@
   </url>
   
   <url>
-    <loc>http://blindwith.science/tags/bash/</loc>
-    <lastmod>2021-11-18T21:47:41-08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://blindwith.science/</loc>
-    <lastmod>2021-11-18T21:47:58-08:00</lastmod>
+    <lastmod>2022-01-02T22:28:06-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blindwith.science/categories/</loc>
-    <lastmod>2021-11-18T21:47:58-08:00</lastmod>
+    <lastmod>2022-01-02T22:28:06-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blindwith.science/post/</loc>
-    <lastmod>2021-11-18T21:47:58-08:00</lastmod>
+    <lastmod>2022-01-02T22:28:06-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/categories/%E6%B5%81%E6%B0%B4%E5%B8%90/</loc>
+    <lastmod>2022-01-02T22:27:20-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/categories/%E9%A3%8E%E6%9C%88%E8%B0%88/</loc>
+    <lastmod>2022-01-02T22:28:06-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/tags/bash/</loc>
+    <lastmod>2021-11-18T21:47:41-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -403,20 +431,6 @@
   <url>
     <loc>http://blindwith.science/tags/%E6%A1%8C%E9%9D%A2/</loc>
     <lastmod>2021-11-18T21:47:58-08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blindwith.science/categories/%E6%B5%81%E6%B0%B4%E5%B8%90/</loc>
-    <lastmod>2021-11-18T21:47:58-08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blindwith.science/categories/%E9%A3%8E%E6%9C%88%E8%B0%88/</loc>
-    <lastmod>2021-09-29T16:51:37-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
