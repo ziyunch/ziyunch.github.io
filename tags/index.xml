@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Wed, 17 Nov 2021 23:11:00 -0800</lastBuildDate><atom:link href="http://blindwith.science/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jan 2022 22:26:00 -0800</lastBuildDate><atom:link href="http://blindwith.science/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>买书</title>
+      <link>http://blindwith.science/tags/%E4%B9%B0%E4%B9%A6/</link>
+      <pubDate>Sun, 02 Jan 2022 22:26:00 -0800</pubDate>
+      
+      <guid>http://blindwith.science/tags/%E4%B9%B0%E4%B9%A6/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Bash</title>
       <link>http://blindwith.science/tags/bash/</link>
@@ -126,36 +135,9 @@
     </item>
     
     <item>
-      <title>Books</title>
-      <link>http://blindwith.science/tags/books/</link>
-      <pubDate>Sat, 14 Nov 2020 22:23:00 -0800</pubDate>
-      
-      <guid>http://blindwith.science/tags/books/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Powell</title>
-      <link>http://blindwith.science/tags/powell/</link>
-      <pubDate>Sat, 14 Nov 2020 22:23:00 -0800</pubDate>
-      
-      <guid>http://blindwith.science/tags/powell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>s</title>
-      <link>http://blindwith.science/tags/s/</link>
-      <pubDate>Sat, 14 Nov 2020 22:23:00 -0800</pubDate>
-      
-      <guid>http://blindwith.science/tags/s/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>波特兰</title>
       <link>http://blindwith.science/tags/%E6%B3%A2%E7%89%B9%E5%85%B0/</link>
-      <pubDate>Sat, 14 Nov 2020 22:23:00 -0800</pubDate>
+      <pubDate>Mon, 16 Nov 2020 00:34:00 -0800</pubDate>
       
       <guid>http://blindwith.science/tags/%E6%B3%A2%E7%89%B9%E5%85%B0/</guid>
       <description></description>
