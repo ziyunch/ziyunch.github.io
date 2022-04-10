@@ -37,7 +37,7 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="../../sass/main.min.c7bc1becf36bcf6a9ebd25d2947e43a2eb745ddb0c9a32b43126fd7fa460c351.css" rel="stylesheet">
+<link href="../../sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -45,7 +45,7 @@
 <meta property="og:description" content="Ziyunch&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://blindwith.science/" />
-<meta property="og:updated_time" content="2022-02-20T18:36:28-08:00" />
+<meta property="og:updated_time" content="2022-04-09T23:20:24-07:00" />
 <meta itemprop="name" content="Blind with Science">
 <meta itemprop="description" content="Ziyunch&#39;s Blog">
 <meta name="twitter:card" content="summary"/>
@@ -87,12 +87,21 @@
         <li class="mobile-menu-item">关于我</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="../../" class="logo">Blind with Science</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -109,12 +118,57 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="../../2019/11/452.html/">Postgresql server did not shutdown correctly</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-11-05 </span>
+      <div class="post-category">
+          <a href="../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
+          </div>
+        <span class="more-meta"> 约 228 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+        Is the server running on host &#34;localhost&#34; (::1) and accepting
+        TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+        Is the server running on host &#34;localhost&#34; (127.0.0.1) and accepting
+        TCP/IP connections on port 5432?
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+    <div class="read-more">
+      <a href="../../2019/11/452.html/" class="read-more-link">阅读全文</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="../../2019/10/451.html/">My first Django app</a></h1>
@@ -217,32 +271,6 @@
     </div>
     <div class="read-more">
       <a href="../../2019/08/448.html/" class="read-more-link">阅读全文</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="../../2019/08/447.html/">博客由 Hexo 迁移至 Hugo</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-08-26 </span>
-      <div class="post-category">
-          <a href="../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
-          </div>
-        <span class="more-meta"> 约 1004 字 </span>
-        <span class="more-meta"> 预计阅读 3 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <blockquote>
-<p>本篇博文使用 org-mode 书就，耶！</p>
-</blockquote>
-<p>从 2016 将博客迁移至 Hexo+Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。</p>
-    </div>
-    <div class="read-more">
-      <a href="../../2019/08/447.html/" class="read-more-link">阅读全文</a>
     </div>
   </div>
 </article>
