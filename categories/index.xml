@@ -7,11 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Sat, 09 Apr 2022 23:34:01 -0700</lastBuildDate><atom:link href="http://blindwith.science/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 May 2022 22:44:00 -0700</lastBuildDate><atom:link href="http://blindwith.science/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>技术宅</title>
+      <link>http://blindwith.science/categories/%E6%8A%80%E6%9C%AF%E5%AE%85/</link>
+      <pubDate>Sat, 21 May 2022 22:44:00 -0700</pubDate>
+      
+      <guid>http://blindwith.science/categories/%E6%8A%80%E6%9C%AF%E5%AE%85/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>科研圈</title>
       <link>http://blindwith.science/categories/%E7%A7%91%E7%A0%94%E5%9C%88/</link>
-      <pubDate>Sat, 09 Apr 2022 23:34:01 -0700</pubDate>
+      <pubDate>Sat, 09 Apr 2022 20:46:00 -0700</pubDate>
       
       <guid>http://blindwith.science/categories/%E7%A7%91%E7%A0%94%E5%9C%88/</guid>
       <description></description>
@@ -32,15 +41,6 @@
       <pubDate>Sun, 02 Jan 2022 22:26:00 -0800</pubDate>
       
       <guid>http://blindwith.science/categories/%E9%A3%8E%E6%9C%88%E8%B0%88/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>技术宅</title>
-      <link>http://blindwith.science/categories/%E6%8A%80%E6%9C%AF%E5%AE%85/</link>
-      <pubDate>Wed, 17 Nov 2021 23:11:00 -0800</pubDate>
-      
-      <guid>http://blindwith.science/categories/%E6%8A%80%E6%9C%AF%E5%AE%85/</guid>
       <description></description>
     </item>
     
