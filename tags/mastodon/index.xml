@@ -14,7 +14,26 @@
       <pubDate>Sat, 21 May 2022 22:44:00 -0700</pubDate>
       
       <guid>http://blindwith.science/2022/05/473.html/</guid>
-      <description>我一直都想有一个自己的微博系统，因为自己逐渐回复社恐状态，愈发不习惯在公共平台如豆瓣、微博、朋友圈吐槽。而自己也没有当年日更一博的劲头，几句</description>
+      <description>&lt;p&gt;我一直都想有一个自己的微博系统，因为自己逐渐回复社恐状态，愈发不习惯在公共平台如豆瓣、微博、朋友圈吐槽。而自己也没有当年日更一博的劲头，几句话就发一篇博客的话好像也不妥。但是微博和博客不同，很难复用我所用的静态系统搭建。几个月前，我才孤陋寡闻得知了长毛象这么一个系统，发现其正符合我的需求，便入了坑。&lt;/p&gt;
+&lt;p&gt;长毛象并不像Hugo这类静态架构，可以直接架在免费的Github pages上，所以第一步是挑选一个合适的云平台。我没有使用东家的产品，而是跟风使用Digital Ocean，开了一个每月5刀左右的Ubuntu instance。Digital Ocean上可以直接从marketplace选image直接搭建，但是版本比较老。Mastodon的文档比较完整，所以我便一路跟着从头开始搭建了。&lt;/p&gt;
+&lt;p&gt;首先是一些&lt;a href=&#34;https://docs.joinmastodon.org/admin/prerequisites/&#34;&gt;准备工作&lt;/a&gt;，比如禁用 &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt; 中的 &lt;code&gt;PasswordAuthentication&lt;/code&gt; 并通过 &lt;code&gt;systemctl restart ssh.service&lt;/code&gt; 重启，这样只能使用SSH Key登陆；通过 &lt;code&gt;apt update &amp;amp;&amp;amp; apt upgrade -y&lt;/code&gt; 更新package后安装fail2ban和iptables-persistent并添加相关设置；由于Mastodon是内存大户，还根据&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04&#34;&gt;Digital Ocean的教程&lt;/a&gt;增加了4G的swap。&lt;/p&gt;
+&lt;p&gt;接下来便是&lt;a href=&#34;https://docs.joinmastodon.org/admin/install/&#34;&gt;安装Mastodon&lt;/a&gt;了。我没有使用docker，而是从源中直接安装。Mastodon基于Ruby on rails (REST API)，React.js（前端），Node.js（Streaming API），Redis（队列），PostgreSQL（数据库），自然也要安装这几个。其中Ruby需要通过rbenv来管理，而后者必须安装在单独的Linux用户中，所以可以创建一个mastodon用户（之后也会在这个用户下下载安装Mastodon）。Ruby会装很久，可以使用 &lt;code&gt;--verbose&lt;/code&gt; 来确保还在安装而不是卡了。&lt;/p&gt;
+&lt;p&gt;全部安装完成后，即可运行交互式安装向导来生成配置文件~.env.production~，预编译静态文件，并创建数据库的schema：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;RAILS_ENV=production bundle exec rake mastodon:setup
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这一步在Mastodon文档中略过，不过基本上也可以一路回车。需要注意的是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;如果打算采用二级域名，但是想让用户名采用一级域名即可搜到，则需要在交互中提供一级域名。我后面会细说。&lt;/li&gt;
+&lt;li&gt;需要提前准备好SMTP的配置。比如gmail就需要设置应用专用密码，并使用plain模式来验证。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一般来说，之后跟着文档配置完nginx，SSL证书，以及一系列systemd服务后就可以使用Mastodon了。&lt;/p&gt;
+&lt;p&gt;但是。&lt;/p&gt;</description>
     </item>
     
   </channel>
