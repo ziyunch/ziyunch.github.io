@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Fri, 12 Nov 2021 23:14:00 -0800</lastBuildDate><atom:link href="http://blindwith.science/tags/org-mode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 May 2022 12:34:00 -0700</lastBuildDate><atom:link href="http://blindwith.science/tags/org-mode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>逃离豆瓣 - 使用Org-mode管理我的书影音</title>
+      <link>http://blindwith.science/2022/05/475.html/</link>
+      <pubDate>Mon, 30 May 2022 12:34:00 -0700</pubDate>
+      
+      <guid>http://blindwith.science/2022/05/475.html/</guid>
+      <description>&lt;div class=&#34;admonition tip&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;小贴士&lt;/p&gt;
+  
+我的豆瓣书影音替代方案基于Org-mode，如果对此感兴趣的话可以阅读我的另一篇博客《继续吹一波Org-mode》了解Org-mode以及更多用法。
+
+&lt;/div&gt;
+&lt;p&gt;最近豆瓣开始搞激烈的实名认证，而不愿献祭隐私的我，也只能和豆瓣说再见了。豆瓣十几年的情谊化为乌有，我也无法相信其他书影音数据库能够天长地久。另一方面，IMDB，Letterbox，TMDB，Goodreads这类美国数据库对于动漫和国产书还有水土不服的问题，我曾经暂别豆瓣，用过挺长一段时间的IMDB+Letterbox，却还是回归豆瓣后觉得顺手。查了一下，似乎没有什么自架豆瓣替代品的开源软件，大家常用的方案也是我不太喜欢的Notion（我在&lt;a href=&#34;https://blindwith.science/2021/11/467.html/&#34;&gt;继续吹一波Org-mode&lt;/a&gt;里曾经详述过），于是趁着小长假，我便将豆瓣转移到了Org-mode。&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;../../ox-hugo/org_mode_douban.png&#34;
+         alt=&#34;Figure 1: 最终效果长这样&#34;/&gt; &lt;figcaption&gt;
+            &lt;p&gt;&lt;!-- raw HTML omitted --&gt;Figure 1: &lt;!-- raw HTML omitted --&gt;最终效果长这样&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;</description>
+    </item>
+    
     <item>
       <title>继续吹一波Org-mode</title>
       <link>http://blindwith.science/2021/11/467.html/</link>
