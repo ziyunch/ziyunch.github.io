@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blindwith.science/2022/09/479.html/</loc>
+    <lastmod>2022-09-07T15:48:45-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://blindwith.science/2022/08/478.html/</loc>
     <lastmod>2022-08-30T14:45:13-07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -402,21 +409,42 @@
   
   <url>
     <loc>http://blindwith.science/</loc>
-    <lastmod>2022-09-06T23:02:03-07:00</lastmod>
+    <lastmod>2022-09-07T15:48:45-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blindwith.science/categories/</loc>
-    <lastmod>2022-09-06T23:02:03-07:00</lastmod>
+    <lastmod>2022-09-07T15:48:45-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blindwith.science/post/</loc>
-    <lastmod>2022-09-06T23:02:03-07:00</lastmod>
+    <lastmod>2022-09-07T15:48:45-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/tags/</loc>
+    <lastmod>2022-09-07T15:48:45-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/tags/%E7%AD%BE%E8%AF%81/</loc>
+    <lastmod>2022-09-07T15:48:45-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/categories/%E9%A3%8E%E6%9C%88%E8%B0%88/</loc>
+    <lastmod>2022-09-07T15:48:45-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -450,13 +478,6 @@
   </url>
   
   <url>
-    <loc>http://blindwith.science/tags/</loc>
-    <lastmod>2022-05-30T14:19:13-07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://blindwith.science/categories/%E6%8A%80%E6%9C%AF%E5%AE%85/</loc>
     <lastmod>2022-05-30T14:19:13-07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -472,20 +493,6 @@
   
   <url>
     <loc>http://blindwith.science/tags/niw/</loc>
-    <lastmod>2022-05-27T17:17:27-07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blindwith.science/tags/%E7%AD%BE%E8%AF%81/</loc>
-    <lastmod>2022-05-27T17:17:27-07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blindwith.science/categories/%E9%A3%8E%E6%9C%88%E8%B0%88/</loc>
     <lastmod>2022-05-27T17:17:27-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
