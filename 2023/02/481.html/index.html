@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>跟风AI炼图 - Blind with Science</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ziyunch" /><meta name="description" content="Stable Diffusion 发布以来，逼真的画风就让大家感慨画师的饭碗是不是要被抢了。当时女票用 Stable Diffusion 重绘了几张狗子的照片，但我总觉得用别人的搭好的服务会有隐私隐患。最近 ControlNet 出来后，当时被大家吐槽的六指问题似乎得到了解决，于是我这两天就尝试着在 Colab 上搭了 Stable Diffusion 炼炼图玩。 &amp;ndash; 为什么不用亚麻的Sagemaker？当然是因为 colab免费易用 要支持女票工作咯。
+" /><meta name="keywords" content="ziyunch, blog" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.76.5 with theme even" />
+
+
+<link rel="canonical" href="http://blindwith.science/2023/02/481.html/" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../favicon-16x16.png">
+<link rel="manifest" href="../../../manifest.json">
+<link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="../../../sass/main.min.f346f1cd7c119368051aba0791b1276d109b14d2a0fcefac9fe27d9ba680605a.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="跟风AI炼图" />
+<meta property="og:description" content="Stable Diffusion 发布以来，逼真的画风就让大家感慨画师的饭碗是不是要被抢了。当时女票用 Stable Diffusion 重绘了几张狗子的照片，但我总觉得用别人的搭好的服务会有隐私隐患。最近 ControlNet 出来后，当时被大家吐槽的六指问题似乎得到了解决，于是我这两天就尝试着在 Colab 上搭了 Stable Diffusion 炼炼图玩。 &ndash; 为什么不用亚麻的Sagemaker？当然是因为 colab免费易用 要支持女票工作咯。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blindwith.science/2023/02/481.html/" />
+<meta property="article:published_time" content="2023-02-26T22:35:00-08:00" />
+<meta property="article:modified_time" content="2023-02-26T22:41:43-08:00" />
+<meta itemprop="name" content="跟风AI炼图">
+<meta itemprop="description" content="Stable Diffusion 发布以来，逼真的画风就让大家感慨画师的饭碗是不是要被抢了。当时女票用 Stable Diffusion 重绘了几张狗子的照片，但我总觉得用别人的搭好的服务会有隐私隐患。最近 ControlNet 出来后，当时被大家吐槽的六指问题似乎得到了解决，于是我这两天就尝试着在 Colab 上搭了 Stable Diffusion 炼炼图玩。 &ndash; 为什么不用亚麻的Sagemaker？当然是因为 colab免费易用 要支持女票工作咯。">
+<meta itemprop="datePublished" content="2023-02-26T22:35:00-08:00" />
+<meta itemprop="dateModified" content="2023-02-26T22:41:43-08:00" />
+<meta itemprop="wordCount" content="760">
+
+
+
+<meta itemprop="keywords" content="AI," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="跟风AI炼图"/>
+<meta name="twitter:description" content="Stable Diffusion 发布以来，逼真的画风就让大家感慨画师的饭碗是不是要被抢了。当时女票用 Stable Diffusion 重绘了几张狗子的照片，但我总觉得用别人的搭好的服务会有隐私隐患。最近 ControlNet 出来后，当时被大家吐槽的六指问题似乎得到了解决，于是我这两天就尝试着在 Colab 上搭了 Stable Diffusion 炼炼图玩。 &ndash; 为什么不用亚麻的Sagemaker？当然是因为 colab免费易用 要支持女票工作咯。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="../../../" class="logo">Blind with Science</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="../../../">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="../../../post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="../../../tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="../../../categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="../../../about/">
+        <li class="mobile-menu-item">关于我</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="../../../" class="logo">Blind with Science</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="../../../">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../about/">关于我</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">跟风AI炼图</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-02-26 </span>
+        <div class="post-category">
+            <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
+            </div>
+          <span class="more-meta"> 约 760 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>Stable Diffusion 发布以来，逼真的画风就让大家感慨画师的饭碗是不是要被抢了。当时女票用 Stable Diffusion 重绘了几张狗子的照片，但我总觉得用别人的搭好的服务会有隐私隐患。最近 ControlNet 出来后，当时被大家吐槽的六指问题似乎得到了解决，于是我这两天就尝试着在 Colab 上搭了 Stable Diffusion 炼炼图玩。 &ndash; 为什么不用亚麻的Sagemaker？当然是因为 <del>colab免费易用</del> 要支持女票工作咯。</p>
+<p>AI炼图得用GPU，所以打开Colab后第一件事就是要将 <code>runtime type</code> 改为GPU。然后可以确认GPU实例型号。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="err">!</span><span class="n">nvidia</span><span class="o">-</span><span class="n">smi</span> <span class="o">-</span><span class="n">L</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>然后便是要安装 conda 以及配置环境。由于我并不关心安装的细节，所以用 <code>%%capture</code> 来避免不必要的输出显示。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="o">%%</span><span class="n">capture</span>
+<span class="c1">#@markdown ## Install colab related conda</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="err">!</span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">anaconda</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
+<span class="err">!</span><span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
+<span class="err">!</span><span class="n">bash</span> <span class="o">./</span><span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">b</span> <span class="o">-</span><span class="n">f</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;/usr/local/lib/python3.7/site-packages/&#39;</span><span class="p">)</span>
+<span class="err">!</span><span class="n">rm</span> <span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
+
+<span class="c1">#@markdown ## Download the stable-diffusion webui repo</span>
+<span class="o">%</span><span class="n">cd</span> <span class="o">/</span><span class="n">content</span>
+<span class="err">!</span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">AUTOMATIC1111</span><span class="o">/</span><span class="n">stable</span><span class="o">-</span><span class="n">diffusion</span><span class="o">-</span><span class="n">webui</span>
+<span class="o">%</span><span class="n">cd</span> <span class="n">stable</span><span class="o">-</span><span class="n">diffusion</span><span class="o">-</span><span class="n">webui</span>
+
+<span class="c1">#@markdown ## Set up python environment</span>
+<span class="err">!</span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">-</span><span class="n">wsl2</span><span class="o">.</span><span class="n">yaml</span>
+<span class="err">!</span><span class="n">conda</span> <span class="n">activate</span> <span class="n">automatic</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>对于 Stable Diffusion 来说，配置好环境后，可以一键安装。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="err">!</span><span class="n">python</span> <span class="n">launch</span><span class="o">.</span><span class="n">py</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>不过我发现这时候虽然可以在本地启动，使用 <code>--share</code> 却不能启动 gradio.live。所以我会使用单独的语句启动，这个时候还可以加上 <code>--auth</code> 参数来保护我的 gradio.live 不被外人使用。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">#@markdown # Launch</span>
+<span class="n">username</span><span class="o">=</span><span class="s2">&#34;&#34;</span> <span class="c1">#@param {type:&#34;string&#34;}</span>
+<span class="n">password</span><span class="o">=</span><span class="s2">&#34;&#34;</span> <span class="c1">#@param {type:&#34;string&#34;}</span>
+<span class="err">!</span><span class="n">python</span> <span class="n">webui</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">share</span> <span class="o">--</span><span class="n">gradio</span><span class="o">-</span><span class="n">auth</span> <span class="s1">&#39;{username}&#39;</span><span class="p">:</span><span class="s1">&#39;{password}&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>这个时候打开相应的 gradio.live 网址，就可以开始调教AI了。但是这个时候AI画出的画要不就是特别像真人，要不就是像儿童画，都不太好看。此时，就要祭出大家放在 huggingface上 调教好的模型并存在 <code>models/</code> 文件夹内，并通过 <code>ckpt</code> 参数指定模型，或直接在gradio中选定模型。比如我想画二次元小姐姐，我就可以下一个 trinart 模型来炼图。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="o">%</span><span class="n">cd</span> <span class="n">models</span>
+<span class="err">!</span><span class="n">git</span> <span class="n">lfs</span> <span class="n">install</span>
+<span class="err">!</span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">huggingface</span><span class="o">.</span><span class="n">co</span><span class="o">/</span><span class="n">naclbit</span><span class="o">/</span><span class="n">trinart_stable_diffusion_v2</span>
+
+<span class="o">%</span><span class="n">cd</span> <span class="o">..</span>
+<span class="err">!</span><span class="n">python</span> <span class="n">webui</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">share</span> <span class="o">--</span><span class="n">ckpt</span> <span class="o">./</span><span class="n">models</span><span class="o">/</span><span class="n">trinart_stable_diffusion_v2</span><span class="o">/</span><span class="n">trinart2_step115000</span><span class="o">.</span><span class="n">ckpt</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>而对于 ControlNet，则可已 Stable Diffusion 插件的形式使用。首先，在启动 gradio 的时候要加上 <code>--enable-insecure-extension-access</code> 参数；然后在 Extensions 页选择 <code>Install from URL</code> 并输入 <code>https://github.com/Mikubill/sd-webui-controlnet</code> 。安装后 <code>Reload Web UI</code> 即可。</p>
+<p>这样基本上就可以薅 Colab 的羊毛来炼图了。我感觉炼图的时候，选择 model 和 prompt 是两个大坑，不是简单尝试就能搞定的。等我哪天有点心得了，就再来就这一部分水篇博客吧。</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">ziyunch</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2023-02-26
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="../../../images/wechatpay.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="../../../tags/ai/">AI</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="../../../2023/02/480.html/">
+            <span class="next-text nav-default">墨水屏阅读器小横评</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+    />
+  <div id="waline"></div>
+  <script>
+    Waline.init({
+      el: '#waline',
+      serverURL: 'https:\/\/waline-ziyunch.vercel.app',
+      pageview:  true ,
+      avatar: 'robohash',
+    });
+  </script>
+
+  
+
+  
+    <div class="comtodon" data-domain="mastodon.blindwith.science" data-status="109935334604055871" ></div>
+    <script src="../../../comtodon.min.js" defer></script>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ziyunch" class="iconfont icon-github" title="github">
+      </a>
+      <a href="http://weibo.com/ziyunch" class="iconfont icon-weibo" title="weibo">
+      </a>
+      <a href="http://douban.com/people/ziyunch" class="iconfont icon-douban" title="douban">
+      </a>
+      <a href="https://mastodon.blindwith.science" class="iconfont icon-mastodon" title="mastodon"><svg class="icon" style="" viewBox="0 0 448 512" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="28" height="28"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
+      </a>
+  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2005 - 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-86469737-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Fri, 24 Feb 2023 22:19:00 -0800</lastBuildDate><atom:link href="http://blindwith.science/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Feb 2023 22:35:00 -0800</lastBuildDate><atom:link href="http://blindwith.science/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>跟风AI炼图</title>
+      <link>http://blindwith.science/2023/02/481.html/</link>
+      <pubDate>Sun, 26 Feb 2023 22:35:00 -0800</pubDate>
+      
+      <guid>http://blindwith.science/2023/02/481.html/</guid>
+      <description>&lt;p&gt;Stable Diffusion 发布以来，逼真的画风就让大家感慨画师的饭碗是不是要被抢了。当时女票用 Stable Diffusion 重绘了几张狗子的照片，但我总觉得用别人的搭好的服务会有隐私隐患。最近 ControlNet 出来后，当时被大家吐槽的六指问题似乎得到了解决，于是我这两天就尝试着在 Colab 上搭了 Stable Diffusion 炼炼图玩。 &amp;ndash; 为什么不用亚麻的Sagemaker？当然是因为 &lt;del&gt;colab免费易用&lt;/del&gt; 要支持女票工作咯。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>墨水屏阅读器小横评</title>
       <link>http://blindwith.science/2023/02/480.html/</link>
