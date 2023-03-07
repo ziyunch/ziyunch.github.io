@@ -45,12 +45,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blindwith.science/2023/02/481.html/" />
 <meta property="article:published_time" content="2023-02-26T22:35:00-08:00" />
-<meta property="article:modified_time" content="2023-02-26T22:41:43-08:00" />
+<meta property="article:modified_time" content="2023-02-26T22:56:23-08:00" />
 <meta itemprop="name" content="跟风AI炼图">
 <meta itemprop="description" content="Stable Diffusion 发布以来，逼真的画风就让大家感慨画师的饭碗是不是要被抢了。当时女票用 Stable Diffusion 重绘了几张狗子的照片，但我总觉得用别人的搭好的服务会有隐私隐患。最近 ControlNet 出来后，当时被大家吐槽的六指问题似乎得到了解决，于是我这两天就尝试着在 Colab 上搭了 Stable Diffusion 炼炼图玩。 &ndash; 为什么不用亚麻的Sagemaker？当然是因为 colab免费易用 要支持女票工作咯。">
 <meta itemprop="datePublished" content="2023-02-26T22:35:00-08:00" />
-<meta itemprop="dateModified" content="2023-02-26T22:41:43-08:00" />
-<meta itemprop="wordCount" content="760">
+<meta itemprop="dateModified" content="2023-02-26T22:56:23-08:00" />
+<meta itemprop="wordCount" content="822">
 
 
 
@@ -141,7 +141,7 @@
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 760 字 </span>
+          <span class="more-meta"> 约 822 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -249,7 +249,11 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>而对于 ControlNet，则可已 Stable Diffusion 插件的形式使用。首先，在启动 gradio 的时候要加上 <code>--enable-insecure-extension-access</code> 参数；然后在 Extensions 页选择 <code>Install from URL</code> 并输入 <code>https://github.com/Mikubill/sd-webui-controlnet</code> 。安装后 <code>Reload Web UI</code> 即可。</p>
-<p>这样基本上就可以薅 Colab 的羊毛来炼图了。我感觉炼图的时候，选择 model 和 prompt 是两个大坑，不是简单尝试就能搞定的。等我哪天有点心得了，就再来就这一部分水篇博客吧。</p>
+<p>这样基本上就可以薅 Colab 的羊毛来炼图了。我感觉炼图的时候，选择 model 和 prompt 是两个大坑，不是简单尝试就能搞定的。我抄了一些常用的negative prompt，对于剩下的，等我哪天有点心得了，就再来就这一部分水篇博客吧。</p>
+<blockquote>
+<p>negative prompt:
+lowres, bad anatomy, bad hands, text, error, missing fingers, missing arms, long neck, humpbacked, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry</p>
+</blockquote>
     </div>
 
     <div class="post-copyright">
@@ -283,7 +287,11 @@
           <a href="../../../tags/ai/">AI</a>
           </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="../../../2023/03/482.html/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Everdell 仙境幽谷的简介与牌组分析</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
         <a class="next" href="../../../2023/02/480.html/">
             <span class="next-text nav-default">墨水屏阅读器小横评</span>
             <span class="next-text nav-mobile">下一篇</span>
