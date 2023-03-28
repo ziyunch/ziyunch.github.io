@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>从LLM到AGI，AI时代我们该何去何从 - Blind with Science</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ziyunch" /><meta name="description" content="去年七月我去体验了一下 NAACL，对于一个外行人来说，听听报告看看海报，只留下 few-shot 和 zero-shot 还挺热门这一印象，仿佛最新的 NLP 技术也不过如此。没想到这还没到一年，AI 新闻便从月更变成了日更，接二连三地轰炸着新闻头条（为2023年 AI Index 的作者捏一把汗）。而随着 GPT-4 联了网（POI 警告），还没有任何准备的我们就进入了 AI 时代。
+我先盘点一下过去一年都发生了什么吧。（也许是因为我还没用上联网的 ChatGPT，GPT4 偷懒大法在此失败了）
+ 2022-07-12: Midjourney 开始公测 🔗 2022-07-20: OpenAI DALL-E 开始公测 🔗 2022-08-10: Stability AI 以开源形式发布 Stable Diffusion 🔗 2022-11-24: Stability AI 以开源形式发布 Stable Diffusion 2.0 🔗 2022-11-30: OpenAI 发布以 GPT-3.5 为后端的 ChatGPT，开启指令引导的流畅文本生成范式 🔗 2023-02-06: 谷歌公布 Bard 以挑战 ChatGPT 🔗 2023-02-07: 微软发布 New Bing，重新定义搜索引擎 🔗 2023-02-22: 微软公布手机版 Bing 🔗 2023-02-24: Meta 发布 LLaMA 并开放代码，堪称 ChatGPT 平替 🔗 2023-03-01: OpenAI 开放 ChatGPT &amp;amp; Whisper API 🔗 2023-03-06: 谷歌发布通用语言识别模型 USM 🔗 2023-03-10: 谷歌发布 PaLM-E 🔗 2023-03-14: 谷歌开放 PaLM API 🔗 2023-03-14: OpenAI 发布 GPT-4，较 GPT3.5 实现飞跃式提升 🔗 2023-03-14: Anthropic 发布 Claude 🔗 2023-03-15: 百度发布文心一言 🔗 2023-03-15: Midjourney 发布 Midjourney v5 🔗 2023-03-16: 微软发布 Microsoft 365 Copilot ，登陆微软全家桶🔗 2023-03-17: Stability AI 发布 Stable Diffusion Reimagine 🔗 2023-03-21: 谷歌 Bard 开始公测 🔗 2023-03-21: 微软发布 Bing Image Creator，接入 DALL-E 生成图像 🔗 2023-03-21: Adobe 发布 Adobe Firefly 🔗 2023-03-21: NVIDIA 与谷歌，微软，甲骨文，Adobe 于 AI 领域展开深度合作 2023-03-23: Github 发布 Copilot X，接入 GPT4 🔗 2023-03-23: ChatGPT 联网，开放第三方插件 🔗  总结一下，过去一年，随着 ChatGPT 的发布与 Stable Diffusion 的开源， 文本生成与图片生成产品蓬勃发展。三月以来，AI 的曝光率猛增，这两周甚至是每天都有大新闻。说实话，如果我说我不焦虑，这是不可能的。我对于这一年的热门技术，都是只闻其名，不解其意。我虽然也有去凑热闹通过新闻或者试用去了解这些技术都是做什么的，却不知道这些技术是如何发展的，也不知道我该如何应用这些技术，未来我能做些什么才不会被时代淘汰。最近有两篇论文，就直接讨论了现有 AI 模型的通用性，其对人类工作的影响，与 AGI 时代的到来，更是加剧了我的焦虑情绪，于是我便先从这两篇论文谈起吧。
+" /><meta name="keywords" content="ziyunch, blog" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.76.5 with theme even" />
+
+
+<link rel="canonical" href="http://blindwith.science/2023/03/483.html/" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../favicon-16x16.png">
+<link rel="manifest" href="../../../manifest.json">
+<link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="../../../sass/main.min.f346f1cd7c119368051aba0791b1276d109b14d2a0fcefac9fe27d9ba680605a.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="从LLM到AGI，AI时代我们该何去何从" />
+<meta property="og:description" content="去年七月我去体验了一下 NAACL，对于一个外行人来说，听听报告看看海报，只留下 few-shot 和 zero-shot 还挺热门这一印象，仿佛最新的 NLP 技术也不过如此。没想到这还没到一年，AI 新闻便从月更变成了日更，接二连三地轰炸着新闻头条（为2023年 AI Index 的作者捏一把汗）。而随着 GPT-4 联了网（POI 警告），还没有任何准备的我们就进入了 AI 时代。
+我先盘点一下过去一年都发生了什么吧。（也许是因为我还没用上联网的 ChatGPT，GPT4 偷懒大法在此失败了）
+
+2022-07-12: Midjourney 开始公测 🔗
+2022-07-20: OpenAI DALL-E 开始公测 🔗
+2022-08-10: Stability AI 以开源形式发布 Stable Diffusion 🔗
+2022-11-24: Stability AI 以开源形式发布 Stable Diffusion 2.0 🔗
+2022-11-30: OpenAI 发布以 GPT-3.5 为后端的 ChatGPT，开启指令引导的流畅文本生成范式 🔗
+2023-02-06: 谷歌公布 Bard 以挑战 ChatGPT 🔗
+2023-02-07: 微软发布 New Bing，重新定义搜索引擎 🔗
+2023-02-22: 微软公布手机版 Bing 🔗
+2023-02-24: Meta 发布 LLaMA 并开放代码，堪称 ChatGPT 平替 🔗
+2023-03-01: OpenAI 开放 ChatGPT &amp; Whisper API 🔗
+2023-03-06: 谷歌发布通用语言识别模型 USM 🔗
+2023-03-10: 谷歌发布 PaLM-E 🔗
+2023-03-14: 谷歌开放 PaLM API 🔗
+2023-03-14: OpenAI 发布 GPT-4，较 GPT3.5 实现飞跃式提升 🔗
+2023-03-14: Anthropic 发布 Claude 🔗
+2023-03-15: 百度发布文心一言 🔗
+2023-03-15: Midjourney 发布 Midjourney v5 🔗
+2023-03-16: 微软发布 Microsoft 365 Copilot ，登陆微软全家桶🔗
+2023-03-17: Stability AI 发布 Stable Diffusion Reimagine 🔗
+2023-03-21: 谷歌 Bard 开始公测 🔗
+2023-03-21: 微软发布 Bing Image Creator，接入 DALL-E 生成图像 🔗
+2023-03-21: Adobe 发布 Adobe Firefly 🔗
+2023-03-21: NVIDIA 与谷歌，微软，甲骨文，Adobe 于 AI 领域展开深度合作
+2023-03-23: Github 发布 Copilot X，接入 GPT4 🔗
+2023-03-23: ChatGPT 联网，开放第三方插件 🔗
+
+总结一下，过去一年，随着 ChatGPT 的发布与 Stable Diffusion 的开源， 文本生成与图片生成产品蓬勃发展。三月以来，AI 的曝光率猛增，这两周甚至是每天都有大新闻。说实话，如果我说我不焦虑，这是不可能的。我对于这一年的热门技术，都是只闻其名，不解其意。我虽然也有去凑热闹通过新闻或者试用去了解这些技术都是做什么的，却不知道这些技术是如何发展的，也不知道我该如何应用这些技术，未来我能做些什么才不会被时代淘汰。最近有两篇论文，就直接讨论了现有 AI 模型的通用性，其对人类工作的影响，与 AGI 时代的到来，更是加剧了我的焦虑情绪，于是我便先从这两篇论文谈起吧。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blindwith.science/2023/03/483.html/" />
+<meta property="article:published_time" content="2023-03-27T22:20:00-07:00" />
+<meta property="article:modified_time" content="2023-03-27T22:34:50-07:00" />
+<meta itemprop="name" content="从LLM到AGI，AI时代我们该何去何从">
+<meta itemprop="description" content="去年七月我去体验了一下 NAACL，对于一个外行人来说，听听报告看看海报，只留下 few-shot 和 zero-shot 还挺热门这一印象，仿佛最新的 NLP 技术也不过如此。没想到这还没到一年，AI 新闻便从月更变成了日更，接二连三地轰炸着新闻头条（为2023年 AI Index 的作者捏一把汗）。而随着 GPT-4 联了网（POI 警告），还没有任何准备的我们就进入了 AI 时代。
+我先盘点一下过去一年都发生了什么吧。（也许是因为我还没用上联网的 ChatGPT，GPT4 偷懒大法在此失败了）
+
+2022-07-12: Midjourney 开始公测 🔗
+2022-07-20: OpenAI DALL-E 开始公测 🔗
+2022-08-10: Stability AI 以开源形式发布 Stable Diffusion 🔗
+2022-11-24: Stability AI 以开源形式发布 Stable Diffusion 2.0 🔗
+2022-11-30: OpenAI 发布以 GPT-3.5 为后端的 ChatGPT，开启指令引导的流畅文本生成范式 🔗
+2023-02-06: 谷歌公布 Bard 以挑战 ChatGPT 🔗
+2023-02-07: 微软发布 New Bing，重新定义搜索引擎 🔗
+2023-02-22: 微软公布手机版 Bing 🔗
+2023-02-24: Meta 发布 LLaMA 并开放代码，堪称 ChatGPT 平替 🔗
+2023-03-01: OpenAI 开放 ChatGPT &amp; Whisper API 🔗
+2023-03-06: 谷歌发布通用语言识别模型 USM 🔗
+2023-03-10: 谷歌发布 PaLM-E 🔗
+2023-03-14: 谷歌开放 PaLM API 🔗
+2023-03-14: OpenAI 发布 GPT-4，较 GPT3.5 实现飞跃式提升 🔗
+2023-03-14: Anthropic 发布 Claude 🔗
+2023-03-15: 百度发布文心一言 🔗
+2023-03-15: Midjourney 发布 Midjourney v5 🔗
+2023-03-16: 微软发布 Microsoft 365 Copilot ，登陆微软全家桶🔗
+2023-03-17: Stability AI 发布 Stable Diffusion Reimagine 🔗
+2023-03-21: 谷歌 Bard 开始公测 🔗
+2023-03-21: 微软发布 Bing Image Creator，接入 DALL-E 生成图像 🔗
+2023-03-21: Adobe 发布 Adobe Firefly 🔗
+2023-03-21: NVIDIA 与谷歌，微软，甲骨文，Adobe 于 AI 领域展开深度合作
+2023-03-23: Github 发布 Copilot X，接入 GPT4 🔗
+2023-03-23: ChatGPT 联网，开放第三方插件 🔗
+
+总结一下，过去一年，随着 ChatGPT 的发布与 Stable Diffusion 的开源， 文本生成与图片生成产品蓬勃发展。三月以来，AI 的曝光率猛增，这两周甚至是每天都有大新闻。说实话，如果我说我不焦虑，这是不可能的。我对于这一年的热门技术，都是只闻其名，不解其意。我虽然也有去凑热闹通过新闻或者试用去了解这些技术都是做什么的，却不知道这些技术是如何发展的，也不知道我该如何应用这些技术，未来我能做些什么才不会被时代淘汰。最近有两篇论文，就直接讨论了现有 AI 模型的通用性，其对人类工作的影响，与 AGI 时代的到来，更是加剧了我的焦虑情绪，于是我便先从这两篇论文谈起吧。">
+<meta itemprop="datePublished" content="2023-03-27T22:20:00-07:00" />
+<meta itemprop="dateModified" content="2023-03-27T22:34:50-07:00" />
+<meta itemprop="wordCount" content="3376">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="从LLM到AGI，AI时代我们该何去何从"/>
+<meta name="twitter:description" content="去年七月我去体验了一下 NAACL，对于一个外行人来说，听听报告看看海报，只留下 few-shot 和 zero-shot 还挺热门这一印象，仿佛最新的 NLP 技术也不过如此。没想到这还没到一年，AI 新闻便从月更变成了日更，接二连三地轰炸着新闻头条（为2023年 AI Index 的作者捏一把汗）。而随着 GPT-4 联了网（POI 警告），还没有任何准备的我们就进入了 AI 时代。
+我先盘点一下过去一年都发生了什么吧。（也许是因为我还没用上联网的 ChatGPT，GPT4 偷懒大法在此失败了）
+
+2022-07-12: Midjourney 开始公测 🔗
+2022-07-20: OpenAI DALL-E 开始公测 🔗
+2022-08-10: Stability AI 以开源形式发布 Stable Diffusion 🔗
+2022-11-24: Stability AI 以开源形式发布 Stable Diffusion 2.0 🔗
+2022-11-30: OpenAI 发布以 GPT-3.5 为后端的 ChatGPT，开启指令引导的流畅文本生成范式 🔗
+2023-02-06: 谷歌公布 Bard 以挑战 ChatGPT 🔗
+2023-02-07: 微软发布 New Bing，重新定义搜索引擎 🔗
+2023-02-22: 微软公布手机版 Bing 🔗
+2023-02-24: Meta 发布 LLaMA 并开放代码，堪称 ChatGPT 平替 🔗
+2023-03-01: OpenAI 开放 ChatGPT &amp; Whisper API 🔗
+2023-03-06: 谷歌发布通用语言识别模型 USM 🔗
+2023-03-10: 谷歌发布 PaLM-E 🔗
+2023-03-14: 谷歌开放 PaLM API 🔗
+2023-03-14: OpenAI 发布 GPT-4，较 GPT3.5 实现飞跃式提升 🔗
+2023-03-14: Anthropic 发布 Claude 🔗
+2023-03-15: 百度发布文心一言 🔗
+2023-03-15: Midjourney 发布 Midjourney v5 🔗
+2023-03-16: 微软发布 Microsoft 365 Copilot ，登陆微软全家桶🔗
+2023-03-17: Stability AI 发布 Stable Diffusion Reimagine 🔗
+2023-03-21: 谷歌 Bard 开始公测 🔗
+2023-03-21: 微软发布 Bing Image Creator，接入 DALL-E 生成图像 🔗
+2023-03-21: Adobe 发布 Adobe Firefly 🔗
+2023-03-21: NVIDIA 与谷歌，微软，甲骨文，Adobe 于 AI 领域展开深度合作
+2023-03-23: Github 发布 Copilot X，接入 GPT4 🔗
+2023-03-23: ChatGPT 联网，开放第三方插件 🔗
+
+总结一下，过去一年，随着 ChatGPT 的发布与 Stable Diffusion 的开源， 文本生成与图片生成产品蓬勃发展。三月以来，AI 的曝光率猛增，这两周甚至是每天都有大新闻。说实话，如果我说我不焦虑，这是不可能的。我对于这一年的热门技术，都是只闻其名，不解其意。我虽然也有去凑热闹通过新闻或者试用去了解这些技术都是做什么的，却不知道这些技术是如何发展的，也不知道我该如何应用这些技术，未来我能做些什么才不会被时代淘汰。最近有两篇论文，就直接讨论了现有 AI 模型的通用性，其对人类工作的影响，与 AGI 时代的到来，更是加剧了我的焦虑情绪，于是我便先从这两篇论文谈起吧。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="../../../" class="logo">Blind with Science</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="../../../">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="../../../post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="../../../tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="../../../categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="../../../about/">
+        <li class="mobile-menu-item">关于我</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="../../../" class="logo">Blind with Science</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="../../../">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="../../../about/">关于我</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">从LLM到AGI，AI时代我们该何去何从</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-03-27 </span>
+        <div class="post-category">
+            <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
+            </div>
+          <span class="more-meta"> 约 3376 字 </span>
+          <span class="more-meta"> 预计阅读 7 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>去年七月我去体验了一下 NAACL，对于一个外行人来说，听听报告看看海报，只留下 few-shot 和 zero-shot 还挺热门这一印象，仿佛最新的 NLP 技术也不过如此。没想到这还没到一年，AI 新闻便从月更变成了日更，接二连三地轰炸着新闻头条（为2023年 AI Index 的作者捏一把汗）。而随着 GPT-4 联了网（POI 警告），还没有任何准备的我们就进入了 AI 时代。</p>
+<p>我先盘点一下过去一年都发生了什么吧。（也许是因为我还没用上联网的 ChatGPT，GPT4 偷懒大法在此失败了）</p>
+<ul>
+<li>2022-07-12: Midjourney 开始公测 <a href="https://twitter.com/midjourney/status/1547108864788553729">🔗</a></li>
+<li>2022-07-20: OpenAI DALL-E 开始公测 <a href="https://openai.com/blog/dall-e-now-available-in-beta">🔗</a></li>
+<li>2022-08-10: Stability AI 以开源形式发布 Stable Diffusion <a href="https://stability.ai/blog/stable-diffusion-announcement">🔗</a></li>
+<li>2022-11-24: Stability AI 以开源形式发布 Stable Diffusion 2.0 <a href="https://stability.ai/blog/stable-diffusion-v2-release">🔗</a></li>
+<li>2022-11-30: OpenAI 发布以 GPT-3.5 为后端的 ChatGPT，开启指令引导的流畅文本生成范式 <a href="https://openai.com/blog/chatgpt">🔗</a></li>
+<li>2023-02-06: 谷歌公布 Bard 以挑战 ChatGPT <a href="https://blog.google/technology/ai/bard-google-ai-search-updates">🔗</a></li>
+<li>2023-02-07: 微软发布 New Bing，重新定义搜索引擎 <a href="https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/">🔗</a></li>
+<li>2023-02-22: 微软公布手机版 Bing <a href="https://blogs.microsoft.com/blog/2023/02/22/the-new-bing-preview-experience-arrives-on-bing-and-edge-mobile-apps-introducing-bing-now-in-skype">🔗</a></li>
+<li>2023-02-24: Meta 发布 LLaMA 并开放代码，堪称 ChatGPT 平替 <a href="https://ai.facebook.com/blog/large-language-model-llama-meta-ai">🔗</a></li>
+<li>2023-03-01: OpenAI 开放 ChatGPT &amp; Whisper API <a href="https://openai.com/blog/introducing-chatgpt-and-whisper-apis">🔗</a></li>
+<li>2023-03-06: 谷歌发布通用语言识别模型 USM <a href="https://ai.googleblog.com/2023/03/universal-speech-model-usm-state-of-art.html">🔗</a></li>
+<li>2023-03-10: 谷歌发布 PaLM-E <a href="https://ai.googleblog.com/2023/03/palm-e-embodied-multimodal-language.html">🔗</a></li>
+<li>2023-03-14: 谷歌开放 PaLM API <a href="https://blog.google/technology/ai/ai-developers-google-cloud-workspace">🔗</a></li>
+<li>2023-03-14: OpenAI 发布 GPT-4，较 GPT3.5 实现飞跃式提升 <a href="https://openai.com/research/gpt-4">🔗</a></li>
+<li>2023-03-14: Anthropic 发布 Claude <a href="https://www.anthropic.com/index/introducing-claude">🔗</a></li>
+<li>2023-03-15: 百度发布文心一言 <a href="https://www.youtube.com/watch?v=ukvEUI3x0vI">🔗</a></li>
+<li>2023-03-15: Midjourney 发布 Midjourney v5 <a href="https://twitter.com/midjourney/status/1636130389365497857">🔗</a></li>
+<li>2023-03-16: 微软发布 Microsoft 365 Copilot ，登陆微软全家桶<a href="https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work">🔗</a></li>
+<li>2023-03-17: Stability AI 发布 Stable Diffusion Reimagine <a href="https://stability.ai/blog/stable-diffusion-reimagine">🔗</a></li>
+<li>2023-03-21: 谷歌 Bard 开始公测 <a href="https://blog.google/technology/ai/try-bard">🔗</a></li>
+<li>2023-03-21: 微软发布 Bing Image Creator，接入 DALL-E 生成图像 <a href="https://blogs.microsoft.com/blog/2023/03/21/create-images-with-your-words-bing-image-creator-comes-to-the-new-bing">🔗</a></li>
+<li>2023-03-21: Adobe 发布 Adobe Firefly <a href="https://news.adobe.com/news/news-details/2023/Adobe-Unveils-Firefly-a-Family-of-new-Creative-Generative-AI">🔗</a></li>
+<li>2023-03-21: NVIDIA 与谷歌，微软，甲骨文，Adobe 于 AI 领域展开深度合作</li>
+<li>2023-03-23: Github 发布 Copilot X，接入 GPT4 <a href="https://github.blog/2023-03-22-github-copilot-x-the-ai-powered-developer-experience">🔗</a></li>
+<li>2023-03-23: ChatGPT 联网，开放第三方插件 <a href="https://openai.com/blog/chatgpt-plugins">🔗</a></li>
+</ul>
+<p>总结一下，过去一年，随着 ChatGPT 的发布与 Stable Diffusion 的开源， 文本生成与图片生成产品蓬勃发展。三月以来，AI 的曝光率猛增，这两周甚至是每天都有大新闻。说实话，如果我说我不焦虑，这是不可能的。我对于这一年的热门技术，都是只闻其名，不解其意。我虽然也有去凑热闹通过新闻或者试用去了解这些技术都是做什么的，却不知道这些技术是如何发展的，也不知道我该如何应用这些技术，未来我能做些什么才不会被时代淘汰。最近有两篇论文，就直接讨论了现有 AI 模型的通用性，其对人类工作的影响，与 AGI 时代的到来，更是加剧了我的焦虑情绪，于是我便先从这两篇论文谈起吧。</p>
+<p>第一篇是OpenAI与沃顿商学院教授合作的对于 GPT 模型对美国劳工市场的潜在影响分析 (<a href="https://arxiv.org/abs/2303.10130">🔗</a>)。这篇经济学论文讨论了虽然由于可信度、偏见、隐私等原因现有GPT模型并不能直接取代人类工作，其在一些专业领域已经可以成为人类很好的助手，并有极大的潜力跨越性能门槛，对劳工市场产生威胁。文章定义了曝露度 (exposure)，即 GPT 是否会减少 50% 工作量，来作为评估大型语言模型 (LLM) 尤其是 GPT 是否会对工作产生影响的参数。文章将曝露度细分为无曝露 (E0)，基于ChatGPT的直接曝露 (E1) 与基于LLM软件应用的间接曝露 (E2) 三个类目，并针对 E1 与 E2 的不同权重给出 α (E1), β (E1+0.5E2), γ (E1+E2)三个度量以衡量曝露度的上下限。文章发现对于美国劳工部 (BLS) 从准入资格的角度划分的五大类职业 (job zone) 来说，越是培训时间长学历要求高的高精尖职业，曝露度也越高。其中对于 job zone 4 和 5 的工种（比如码农和律师等），平均来说分别会有 34.5% 和 26.5% 的工作者会受到 β exposure，也就是 ChatGPT 及其配套应用可以降低 50% 的工作量。值得一提的是，文章让人和 GPT4 分别对曝露程度进行评估，1016 个职业中，人类将数学家，报税员，作家等 15 个职业标记为完全曝露 (fully exposed)，而 GPT4 则标记了 86 个。</p>
+<p>这篇论文一经发布，便被各种大小媒体自媒体取了“AI 会优先取代脑力工作者”这种耸人听闻的标题而广泛报道。而实际上，首先，论文讨论的是 GPT 是否会减少工作量，高曝露度下，GPT 作为高效的助手，可能会造成相应岗位的减少，但由于可信度等因素，最终还是需要人去确认执行，GPT无法完全取代这个岗位。其次，曝露度只是针对语言模型而言，未必是评判职业可取代性的唯一标准，比如洗碗工虽然曝露度低，但可能在很多地方早就被不需要AI 的洗碗机取代了。第三，如同论文在 Limitations 里一笔带过的那样，这篇论文并没有考虑到各种职业在理论描述与现实操作之间的差异，比如说码农并不是只需要写码，也需要沟通协作来灵活解决复杂的系统问题。第四，对于脑力工作来说，我们并非只会用到编程写作这类具有高曝露性的技能，文章中也明确表示 science, critical thinking, learning strategies, monitoring（hmm，我其实不太明白为什么 monitoring 也是负相关）这类与曝露度有负相关性的技能是不太可能受到现有GPT模型影响的。而这些技能，才是脑力工作者的立身之本。当然，从 GPT3.5 到 GPT4 的应试分数的显著改善来看，GPT 模型也许很快就会跨越这些门槛，影响到这些技能，但至少从现阶段来看，这些技能还是可以将我们与 AI 区别开来的。（似乎缓解了一点我的焦虑）</p>
+<p>注：我尝试用 <a href="https://huggingface.co/spaces/souljoy/chatPDF">chatPDF</a> 来解析这篇文章并与其对话，但好像得到的都是些车轱辘话，不是很有价值。（好像更不焦虑了）</p>
+<blockquote>
+<p>Q: 这篇文章是否说明AI会优先取代脑力工作者？</p>
+<p>A: 从这篇文章中提供的信息来看，并没有明确说明在工作中使用人工智能会优先取代脑力工作者。文章探讨了语言模型和机器学习对职业和工作的影响，但并没有提到这些技术和工具能够在多大程度上取代人类的脑力劳动。文章中提到的职业结构和机器学习技术也可能会因为各种复杂的因素而在不同程度上得到受挫或者促进。需要注意的是，文章中提供的一些数据和信息，可以用作参考，但并不是足以证明AI是否会优先取代脑力工作者的充分证据。</p>
+</blockquote>
+<p>第二篇则是微软研究院 150 页的长文 (<a href="https://arxiv.org/abs/2303.12712">🔗</a>)，这篇论文从现象学的 (phenomological) 角度出发，列举了大量的案例，以编程、数学、与世界与人类的交互来讨论 GPT4 已经不是简单的语言模型，而是在深度与广度上与人类能力相当的通用人工智能 (AGI) 的雏形。而这一断言又刺激了我刚缓解的焦虑情绪——这已经不是我会不会因为 AI 丢工作的问题了，这是科幻小说会不会成为现实，技术奇点会不会不日到来，人会不会被 AI 统治的问题（Skynet, Machine, Sibyl在向我们招手）。</p>
+<p>文章借用 1994 年 52 位心理学家对智力的定义，将通用人工智能定义为具有归因，计划，解决问题，抽象思维，理解复杂想法，快速学习和学习经验能力的系统 (a very general mental capability that, among other things, involves the ability to reason, plan, solve problems, think abstractly, comprehend complex ideas, learn quickly and learn from experience)。文章设计了一系列实验来论证 GPT4 是否具有这些能力，比如通过总结，翻译，回答问题来展示 GPT4 具有理解复杂想法的能力；通过编程（写代码，读代码）与解数学题来展示归因和抽象思维能力；通过做任务玩游戏这类与世界的交互来展示计划，解决问题，快速学习和学习经验这些能力，且能够使用工具；通过与人的交互来展示 GPT4 能够理解人类且具有常识，达到了与人类相当的程度。</p>
+<p>当然，现阶段的GPT4也有一些不足。在解决数学问题时，GPT4 展现出了创造性思维能力与一定的解题熟练度（相信接入 Wolfram 后这一点可以得到更大的提升），却缺少批判性思维能力。在计划性上，GPT4 展现出快速思考的能力，但在一些需要全局思考的问题上表现不太好，缺乏长期记忆，持续学习能力，也不会有Eureka时刻。我觉得这点可能与现有模型的记忆与其他人为限制有关，ChatGPT 最近将一次对话的次数限制在十几个来回上，恐怕也是担心AI懂得太多后不受控制。而最大的问题，则是现有模型缺乏校准能力，回答经常真假参半，模型不知道自己说的正确的还是错误的信息，会误导使用者。也许我们可以让模型给出较为一致的解释来证实过程的准确性，但是这样还是不能保证模型的回答是完全准确的。GPT4 甚至还会继承人类的偏见，这样的模型如果不加监管与提示，可能会对社会造成严重的破坏。这么看来，除非突然出现一个技术狂人（好像也不是没有）直接让这个不完备的模型不受监管地进化，离 AI 统治我们，应该还有个几年吧……</p>
+<p>这篇论文试图从各种方面展示 GPT4 的能力，但没有讨论 GPT4 为什么具有这些能力，没有阐述为什么这些实验能够展示这些能力，也没有展示作者是如何选择一个较为平衡没有偏向性的问题集的（文章中也承认诸如理解讽刺幽默的不少方面都未经测试），所以文章的结论，GPT4 是 AGI 的雏形，有多大的可信度，还是值得商榷的。不过由于有着大量实例，这篇长文可以当成一个 prompt 学习手册来使用，比如可以先 warmup 一下，教 ChatGPT 可以通过查询一定资料来回答问题。不过我实际应用时发现有一些方法不管用（比如教它上网搜索），不知道是我的打开方式不对，还是现有版本的 ChatGPT 加了什么限制。</p>
+<p>静下心来，我觉得对于一个外行人来说，此时应该做的，一是了解 AI 是什么，大型语言模型 (LLM)，或者说自然语言处理 (NLP)，是如何发展到现在这个阶段的；二则是积极试用现有的产品，善用 AI 来提升自己的工作效率。以后有时间的话，我应该会再写两篇文章来聊一下这两点。</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">ziyunch</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2023-03-27
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="../../../images/wechatpay.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="../../../2023/03/482.html/">
+            <span class="next-text nav-default">Everdell 仙境幽谷的简介与牌组分析</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+    />
+  <div id="waline"></div>
+  <script>
+    Waline.init({
+      el: '#waline',
+      serverURL: 'https:\/\/waline-ziyunch.vercel.app',
+      pageview:  true ,
+      avatar: 'robohash',
+    });
+  </script>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ziyunch" class="iconfont icon-github" title="github">
+      </a>
+      <a href="http://weibo.com/ziyunch" class="iconfont icon-weibo" title="weibo">
+      </a>
+      <a href="http://douban.com/people/ziyunch" class="iconfont icon-douban" title="douban">
+      </a>
+      <a href="https://mastodon.blindwith.science" class="iconfont icon-mastodon" title="mastodon"><svg class="icon" style="" viewBox="0 0 448 512" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="28" height="28"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
+      </a>
+  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2005 - 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-86469737-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

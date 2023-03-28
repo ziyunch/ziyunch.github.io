@@ -45,7 +45,7 @@
 <meta property="og:description" content="Ziyunch&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://blindwith.science/" />
-<meta property="og:updated_time" content="2023-03-06T20:15:05-08:00" />
+<meta property="og:updated_time" content="2023-03-27T22:34:50-07:00" />
 <meta itemprop="name" content="Blind with Science">
 <meta itemprop="description" content="Ziyunch&#39;s Blog">
 <meta name="twitter:card" content="summary"/>
@@ -125,6 +125,58 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="./2023/03/483.html/">从LLM到AGI，AI时代我们该何去何从</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2023-03-27 </span>
+      <div class="post-category">
+          <a href="./categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
+          </div>
+        <span class="more-meta"> 约 3376 字 </span>
+        <span class="more-meta"> 预计阅读 7 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>去年七月我去体验了一下 NAACL，对于一个外行人来说，听听报告看看海报，只留下 few-shot 和 zero-shot 还挺热门这一印象，仿佛最新的 NLP 技术也不过如此。没想到这还没到一年，AI 新闻便从月更变成了日更，接二连三地轰炸着新闻头条（为2023年 AI Index 的作者捏一把汗）。而随着 GPT-4 联了网（POI 警告），还没有任何准备的我们就进入了 AI 时代。</p>
+<p>我先盘点一下过去一年都发生了什么吧。（也许是因为我还没用上联网的 ChatGPT，GPT4 偷懒大法在此失败了）</p>
+<ul>
+<li>2022-07-12: Midjourney 开始公测 <a href="https://twitter.com/midjourney/status/1547108864788553729">🔗</a></li>
+<li>2022-07-20: OpenAI DALL-E 开始公测 <a href="https://openai.com/blog/dall-e-now-available-in-beta">🔗</a></li>
+<li>2022-08-10: Stability AI 以开源形式发布 Stable Diffusion <a href="https://stability.ai/blog/stable-diffusion-announcement">🔗</a></li>
+<li>2022-11-24: Stability AI 以开源形式发布 Stable Diffusion 2.0 <a href="https://stability.ai/blog/stable-diffusion-v2-release">🔗</a></li>
+<li>2022-11-30: OpenAI 发布以 GPT-3.5 为后端的 ChatGPT，开启指令引导的流畅文本生成范式 <a href="https://openai.com/blog/chatgpt">🔗</a></li>
+<li>2023-02-06: 谷歌公布 Bard 以挑战 ChatGPT <a href="https://blog.google/technology/ai/bard-google-ai-search-updates">🔗</a></li>
+<li>2023-02-07: 微软发布 New Bing，重新定义搜索引擎 <a href="https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/">🔗</a></li>
+<li>2023-02-22: 微软公布手机版 Bing <a href="https://blogs.microsoft.com/blog/2023/02/22/the-new-bing-preview-experience-arrives-on-bing-and-edge-mobile-apps-introducing-bing-now-in-skype">🔗</a></li>
+<li>2023-02-24: Meta 发布 LLaMA 并开放代码，堪称 ChatGPT 平替 <a href="https://ai.facebook.com/blog/large-language-model-llama-meta-ai">🔗</a></li>
+<li>2023-03-01: OpenAI 开放 ChatGPT &amp; Whisper API <a href="https://openai.com/blog/introducing-chatgpt-and-whisper-apis">🔗</a></li>
+<li>2023-03-06: 谷歌发布通用语言识别模型 USM <a href="https://ai.googleblog.com/2023/03/universal-speech-model-usm-state-of-art.html">🔗</a></li>
+<li>2023-03-10: 谷歌发布 PaLM-E <a href="https://ai.googleblog.com/2023/03/palm-e-embodied-multimodal-language.html">🔗</a></li>
+<li>2023-03-14: 谷歌开放 PaLM API <a href="https://blog.google/technology/ai/ai-developers-google-cloud-workspace">🔗</a></li>
+<li>2023-03-14: OpenAI 发布 GPT-4，较 GPT3.5 实现飞跃式提升 <a href="https://openai.com/research/gpt-4">🔗</a></li>
+<li>2023-03-14: Anthropic 发布 Claude <a href="https://www.anthropic.com/index/introducing-claude">🔗</a></li>
+<li>2023-03-15: 百度发布文心一言 <a href="https://www.youtube.com/watch?v=ukvEUI3x0vI">🔗</a></li>
+<li>2023-03-15: Midjourney 发布 Midjourney v5 <a href="https://twitter.com/midjourney/status/1636130389365497857">🔗</a></li>
+<li>2023-03-16: 微软发布 Microsoft 365 Copilot ，登陆微软全家桶<a href="https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work">🔗</a></li>
+<li>2023-03-17: Stability AI 发布 Stable Diffusion Reimagine <a href="https://stability.ai/blog/stable-diffusion-reimagine">🔗</a></li>
+<li>2023-03-21: 谷歌 Bard 开始公测 <a href="https://blog.google/technology/ai/try-bard">🔗</a></li>
+<li>2023-03-21: 微软发布 Bing Image Creator，接入 DALL-E 生成图像 <a href="https://blogs.microsoft.com/blog/2023/03/21/create-images-with-your-words-bing-image-creator-comes-to-the-new-bing">🔗</a></li>
+<li>2023-03-21: Adobe 发布 Adobe Firefly <a href="https://news.adobe.com/news/news-details/2023/Adobe-Unveils-Firefly-a-Family-of-new-Creative-Generative-AI">🔗</a></li>
+<li>2023-03-21: NVIDIA 与谷歌，微软，甲骨文，Adobe 于 AI 领域展开深度合作</li>
+<li>2023-03-23: Github 发布 Copilot X，接入 GPT4 <a href="https://github.blog/2023-03-22-github-copilot-x-the-ai-powered-developer-experience">🔗</a></li>
+<li>2023-03-23: ChatGPT 联网，开放第三方插件 <a href="https://openai.com/blog/chatgpt-plugins">🔗</a></li>
+</ul>
+<p>总结一下，过去一年，随着 ChatGPT 的发布与 Stable Diffusion 的开源， 文本生成与图片生成产品蓬勃发展。三月以来，AI 的曝光率猛增，这两周甚至是每天都有大新闻。说实话，如果我说我不焦虑，这是不可能的。我对于这一年的热门技术，都是只闻其名，不解其意。我虽然也有去凑热闹通过新闻或者试用去了解这些技术都是做什么的，却不知道这些技术是如何发展的，也不知道我该如何应用这些技术，未来我能做些什么才不会被时代淘汰。最近有两篇论文，就直接讨论了现有 AI 模型的通用性，其对人类工作的影响，与 AGI 时代的到来，更是加剧了我的焦虑情绪，于是我便先从这两篇论文谈起吧。</p>
+    </div>
+    <div class="read-more">
+      <a href="./2023/03/483.html/" class="read-more-link">更多 &gt;&gt;</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="./2023/03/482.html/">Everdell 仙境幽谷的简介与牌组分析</a></h1>
@@ -220,32 +272,6 @@
     </div>
     <div class="read-more">
       <a href="./2022/09/479.html/" class="read-more-link">更多 &gt;&gt;</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="./2022/08/478.html/">开个桌游评测的新坑</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-08-29 </span>
-      <div class="post-category">
-          <a href="./categories/%E8%AF%9D%E6%A1%8C%E6%B8%B8/"> 话桌游 </a>
-          </div>
-        <span class="more-meta"> 约 3180 字 </span>
-        <span class="more-meta"> 预计阅读 7 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <h2 id="引子">引子</h2>
-<p>新冠爆发以来娱乐方式骤减，而西雅图的雨季湿冷漫长，所以这几年来我也变得越来越宅，大部分周末都消耗在桌游局或是剧本杀上。桌游价贵，这儿的线下二手如 Craiglist 与线上二手如 Ebay 交易都没国内那么方便，幸好 Redmond 有一家有不少桌游 demo 可供试玩的桌游店，不然买新桌游的时候哪怕看了好几个视频，都还是会担心买来了不喜欢而落尘。然而能找到的桌游评测以国外的为主，会有一些喜好上的差异。我们便想着要不要开个桌游评测的大坑，博客与视频（如果有这个精力的话）顺次更新。这一篇先当一个引子，或者是目录，列出我玩过的桌游和剧本杀，未来买了或者玩到新的桌游也会更新于此。如果写了专门的桌游评测，也会在此添加链接。</p>
-<p>不过评测确实是个大坑，需要找准定位才能持久。我们找桌游评测，发现一个很好玩的现象，桌游在不同国家和地区的接受度不同，评测的方式与受众都不太相同。比如桌游在美国有一个长久已有的偏见，即这是中年肥宅玩的次文化，Stranger Things 里的 Hellfire 俱乐部还被当成异教徒。我们组里的线上 happy hour 一般都是你画我猜和 codenames，我有次带大家玩一夜狼，发现十几个人中只有一人听说过。我们去桌游店也确实看到了很多中年男子，不过桌游店的戴口罩率是远超于其他地方的。也许有着这层缘故，英文评测多对游戏机制很看重，偏硬核，甚至还有 one stop co-op shop的 Mike 这样的 solo 玩家。</p>
-<p>而中文世界里，台湾的情形与美国的有些类似，Youtube 前排的几个博主似乎都有看美漫，不过 somehow 有些猥琐，我看的不多。华人的桌游评测相对更偏家庭和聚会。大陆平台上B站专门做桌游的博主比较少，相关的博客也不多，不过由于人口优势再加上三国杀剧本杀的出圈，集石上桌游评测非常可观，桌游也更容易出现在主流视线中。</p>
-    </div>
-    <div class="read-more">
-      <a href="./2022/08/478.html/" class="read-more-link">更多 &gt;&gt;</a>
     </div>
   </div>
 </article>

@@ -45,7 +45,7 @@
 <meta property="og:description" content="Ziyunch&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://blindwith.science/" />
-<meta property="og:updated_time" content="2023-03-06T20:15:05-08:00" />
+<meta property="og:updated_time" content="2023-03-27T22:34:50-07:00" />
 <meta itemprop="name" content="Blind with Science">
 <meta itemprop="description" content="Ziyunch&#39;s Blog">
 <meta name="twitter:card" content="summary"/>
@@ -125,6 +125,48 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="../../2022/05/473.html/">我有长毛象啦</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-05-21 </span>
+      <div class="post-category">
+          <a href="../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
+          </div>
+        <span class="more-meta"> 约 1908 字 </span>
+        <span class="more-meta"> 预计阅读 4 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>我一直都想有一个自己的微博系统，因为自己逐渐回复社恐状态，愈发不习惯在公共平台如豆瓣、微博、朋友圈吐槽。而自己也没有当年日更一博的劲头，几句话就发一篇博客的话好像也不妥。但是微博和博客不同，很难复用我所用的静态系统搭建。几个月前，我才孤陋寡闻得知了长毛象这么一个系统，发现其正符合我的需求，便入了坑。</p>
+<p>长毛象并不像Hugo这类静态架构，可以直接架在免费的Github pages上，所以第一步是挑选一个合适的云平台。我没有使用东家的产品，而是跟风使用Digital Ocean，开了一个每月5刀左右的Ubuntu instance。Digital Ocean上可以直接从marketplace选image直接搭建，但是版本比较老。Mastodon的文档比较完整，所以我便一路跟着从头开始搭建了。</p>
+<p>首先是一些<a href="https://docs.joinmastodon.org/admin/prerequisites/">准备工作</a>，比如禁用 <code>/etc/ssh/sshd_config</code> 中的 <code>PasswordAuthentication</code> 并通过 <code>systemctl restart ssh.service</code> 重启，这样只能使用SSH Key登陆；通过 <code>apt update &amp;&amp; apt upgrade -y</code> 更新package后安装fail2ban和iptables-persistent并添加相关设置；由于Mastodon是内存大户，还根据<a href="https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04">Digital Ocean的教程</a>增加了4G的swap。</p>
+<p>接下来便是<a href="https://docs.joinmastodon.org/admin/install/">安装Mastodon</a>了。我没有使用docker，而是从源中直接安装。Mastodon基于Ruby on rails (REST API)，React.js（前端），Node.js（Streaming API），Redis（队列），PostgreSQL（数据库），自然也要安装这几个。其中Ruby需要通过rbenv来管理，而后者必须安装在单独的Linux用户中，所以可以创建一个mastodon用户（之后也会在这个用户下下载安装Mastodon）。Ruby会装很久，可以使用 <code>--verbose</code> 来确保还在安装而不是卡了。</p>
+<p>全部安装完成后，即可运行交互式安装向导来生成配置文件~.env.production~，预编译静态文件，并创建数据库的schema：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">RAILS_ENV=production bundle exec rake mastodon:setup
+</code></pre></td></tr></table>
+</div>
+</div><p>这一步在Mastodon文档中略过，不过基本上也可以一路回车。需要注意的是：</p>
+<ol>
+<li>如果打算采用二级域名，但是想让用户名采用一级域名即可搜到，则需要在交互中提供一级域名。我后面会细说。</li>
+<li>需要提前准备好SMTP的配置。比如gmail就需要设置应用专用密码，并使用plain模式来验证。</li>
+</ol>
+<p>一般来说，之后跟着文档配置完nginx，SSL证书，以及一系列systemd服务后就可以使用Mastodon了。</p>
+<p>但是。</p>
+    </div>
+    <div class="read-more">
+      <a href="../../2022/05/473.html/" class="read-more-link">更多 &gt;&gt;</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="../../2022/04/472.html/">非常时期囤货清单</a></h1>
@@ -215,30 +257,6 @@
     </div>
     <div class="read-more">
       <a href="../../2022/01/469.html/" class="read-more-link">更多 &gt;&gt;</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="../../2021/11/468.html/">并行运行多任务</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2021-11-17 </span>
-      <div class="post-category">
-          <a href="../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
-          </div>
-        <span class="more-meta"> 约 2527 字 </span>
-        <span class="more-meta"> 预计阅读 6 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比python java这些简明易懂的现代语言什么的有用多了。</p>
-<p>这个问题是我用<a href="https://en.wikipedia.org/wiki/Loop-level%5Fparallelism">loop-level parallelism</a>来同时后台运行多个进程，怎么样可以只在所有进程都成功的情况下才会 <code>exit 0</code> 。</p>
-    </div>
-    <div class="read-more">
-      <a href="../../2021/11/468.html/" class="read-more-link">更多 &gt;&gt;</a>
     </div>
   </div>
 </article>
