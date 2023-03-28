@@ -47,6 +47,44 @@
     </item>
     
     <item>
+      <title>从LLM到AGI，AI时代我们该何去何从</title>
+      <link>http://blindwith.science/2023/03/483.html/</link>
+      <pubDate>Mon, 27 Mar 2023 22:20:00 -0700</pubDate>
+      
+      <guid>http://blindwith.science/2023/03/483.html/</guid>
+      <description>&lt;p&gt;去年七月我去体验了一下 NAACL，对于一个外行人来说，听听报告看看海报，只留下 few-shot 和 zero-shot 还挺热门这一印象，仿佛最新的 NLP 技术也不过如此。没想到这还没到一年，AI 新闻便从月更变成了日更，接二连三地轰炸着新闻头条（为2023年 AI Index 的作者捏一把汗）。而随着 GPT-4 联了网（POI 警告），还没有任何准备的我们就进入了 AI 时代。&lt;/p&gt;
+&lt;p&gt;我先盘点一下过去一年都发生了什么吧。（也许是因为我还没用上联网的 ChatGPT，GPT4 偷懒大法在此失败了）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2022-07-12: Midjourney 开始公测 &lt;a href=&#34;https://twitter.com/midjourney/status/1547108864788553729&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2022-07-20: OpenAI DALL-E 开始公测 &lt;a href=&#34;https://openai.com/blog/dall-e-now-available-in-beta&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2022-08-10: Stability AI 以开源形式发布 Stable Diffusion &lt;a href=&#34;https://stability.ai/blog/stable-diffusion-announcement&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2022-11-24: Stability AI 以开源形式发布 Stable Diffusion 2.0 &lt;a href=&#34;https://stability.ai/blog/stable-diffusion-v2-release&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2022-11-30: OpenAI 发布以 GPT-3.5 为后端的 ChatGPT，开启指令引导的流畅文本生成范式 &lt;a href=&#34;https://openai.com/blog/chatgpt&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-02-06: 谷歌公布 Bard 以挑战 ChatGPT &lt;a href=&#34;https://blog.google/technology/ai/bard-google-ai-search-updates&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-02-07: 微软发布 New Bing，重新定义搜索引擎 &lt;a href=&#34;https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-02-22: 微软公布手机版 Bing &lt;a href=&#34;https://blogs.microsoft.com/blog/2023/02/22/the-new-bing-preview-experience-arrives-on-bing-and-edge-mobile-apps-introducing-bing-now-in-skype&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-02-24: Meta 发布 LLaMA 并开放代码，堪称 ChatGPT 平替 &lt;a href=&#34;https://ai.facebook.com/blog/large-language-model-llama-meta-ai&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-03-01: OpenAI 开放 ChatGPT &amp;amp; Whisper API &lt;a href=&#34;https://openai.com/blog/introducing-chatgpt-and-whisper-apis&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-03-06: 谷歌发布通用语言识别模型 USM &lt;a href=&#34;https://ai.googleblog.com/2023/03/universal-speech-model-usm-state-of-art.html&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-03-10: 谷歌发布 PaLM-E &lt;a href=&#34;https://ai.googleblog.com/2023/03/palm-e-embodied-multimodal-language.html&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-03-14: 谷歌开放 PaLM API &lt;a href=&#34;https://blog.google/technology/ai/ai-developers-google-cloud-workspace&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-03-14: OpenAI 发布 GPT-4，较 GPT3.5 实现飞跃式提升 &lt;a href=&#34;https://openai.com/research/gpt-4&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-03-14: Anthropic 发布 Claude &lt;a href=&#34;https://www.anthropic.com/index/introducing-claude&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-03-15: 百度发布文心一言 &lt;a href=&#34;https://www.youtube.com/watch?v=ukvEUI3x0vI&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-03-15: Midjourney 发布 Midjourney v5 &lt;a href=&#34;https://twitter.com/midjourney/status/1636130389365497857&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-03-16: 微软发布 Microsoft 365 Copilot ，登陆微软全家桶&lt;a href=&#34;https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-03-17: Stability AI 发布 Stable Diffusion Reimagine &lt;a href=&#34;https://stability.ai/blog/stable-diffusion-reimagine&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-03-21: 谷歌 Bard 开始公测 &lt;a href=&#34;https://blog.google/technology/ai/try-bard&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-03-21: 微软发布 Bing Image Creator，接入 DALL-E 生成图像 &lt;a href=&#34;https://blogs.microsoft.com/blog/2023/03/21/create-images-with-your-words-bing-image-creator-comes-to-the-new-bing&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-03-21: Adobe 发布 Adobe Firefly &lt;a href=&#34;https://news.adobe.com/news/news-details/2023/Adobe-Unveils-Firefly-a-Family-of-new-Creative-Generative-AI&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-03-21: NVIDIA 与谷歌，微软，甲骨文，Adobe 于 AI 领域展开深度合作&lt;/li&gt;
+&lt;li&gt;2023-03-23: Github 发布 Copilot X，接入 GPT4 &lt;a href=&#34;https://github.blog/2023-03-22-github-copilot-x-the-ai-powered-developer-experience&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2023-03-23: ChatGPT 联网，开放第三方插件 &lt;a href=&#34;https://openai.com/blog/chatgpt-plugins&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;总结一下，过去一年，随着 ChatGPT 的发布与 Stable Diffusion 的开源， 文本生成与图片生成产品蓬勃发展。三月以来，AI 的曝光率猛增，这两周甚至是每天都有大新闻。说实话，如果我说我不焦虑，这是不可能的。我对于这一年的热门技术，都是只闻其名，不解其意。我虽然也有去凑热闹通过新闻或者试用去了解这些技术都是做什么的，却不知道这些技术是如何发展的，也不知道我该如何应用这些技术，未来我能做些什么才不会被时代淘汰。最近有两篇论文，就直接讨论了现有 AI 模型的通用性，其对人类工作的影响，与 AGI 时代的到来，更是加剧了我的焦虑情绪，于是我便先从这两篇论文谈起吧。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Everdell 仙境幽谷的简介与牌组分析</title>
       <link>http://blindwith.science/2023/03/482.html/</link>
       <pubDate>Mon, 06 Mar 2023 20:11:00 -0800</pubDate>
