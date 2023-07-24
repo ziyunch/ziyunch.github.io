@@ -41,6 +41,8 @@
 <link rel="manifest" href="../../../manifest.json">
 <link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
 
+
+
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 <link href="../../../sass/main.min.f346f1cd7c119368051aba0791b1276d109b14d2a0fcefac9fe27d9ba680605a.css" rel="stylesheet">
@@ -217,6 +219,11 @@ RAILS_ENV=production bundle exec rake mastodon:setup
     <nav id="TableOfContents"></nav>
   </div>
 </div>
+  <div class="post-outdated">
+    <div class="hint">
+      <p>【注意】最后更新于 <span class="timeago" datetime="2022-05-22T21:28:07" title="May 22, 2022">May 22, 2022</span>，文中内容可能已过时，请谨慎使用。</p>
+    </div>
+  </div>
     <div class="post-content">
       <p>我一直都想有一个自己的微博系统，因为自己逐渐回复社恐状态，愈发不习惯在公共平台如豆瓣、微博、朋友圈吐槽。而自己也没有当年日更一博的劲头，几句话就发一篇博客的话好像也不妥。但是微博和博客不同，很难复用我所用的静态系统搭建。几个月前，我才孤陋寡闻得知了长毛象这么一个系统，发现其正符合我的需求，便入了坑。</p>
 <p>长毛象并不像Hugo这类静态架构，可以直接架在免费的Github pages上，所以第一步是挑选一个合适的云平台。我没有使用东家的产品，而是跟风使用Digital Ocean，开了一个每月5刀左右的Ubuntu instance。Digital Ocean上可以直接从marketplace选image直接搭建，但是版本比较老。Mastodon的文档比较完整，所以我便一路跟着从头开始搭建了。</p>

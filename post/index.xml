@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Mon, 27 Mar 2023 22:20:00 -0700</lastBuildDate><atom:link href="http://blindwith.science/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Jul 2023 18:19:38 -0700</lastBuildDate><atom:link href="http://blindwith.science/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Orgmode 的优化</title>
+      <link>http://blindwith.science/2023/07/484.html/</link>
+      <pubDate>Sun, 23 Jul 2023 18:19:38 -0700</pubDate>
+      
+      <guid>http://blindwith.science/2023/07/484.html/</guid>
+      <description>&lt;p&gt;最近从 Prime Day 解放，我终于又有时间捣鼓我的 Orgmode 了。其实缘起是同事给我看了他直接用 vscode ssh 到 cloud desktop 上写码运行 debug 的流程，让我很是心动。但是作为一个 Emacs 资深病患，我的第一反应是能不能用 Emacs 实现这套流程。不过我一直没怎么搞明白如何不卡顿地使用 Tramp，Emacs 在运行 Jupyter Notebook 上也需要更多的设置，就此作罢。&lt;/p&gt;
+&lt;p&gt;不过既然起了这个钻研 Orgmode 的头，我不经又想起了几个让我很纠结的问题。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>从LLM到AGI，AI时代我们该何去何从</title>
       <link>http://blindwith.science/2023/03/483.html/</link>
