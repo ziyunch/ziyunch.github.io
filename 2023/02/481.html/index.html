@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ziyunch" /><meta name="description" content="Stable Diffusion 发布以来，逼真的画风就让大家感慨画师的饭碗是不是要被抢了。当时女票用 Stable Diffusion 重绘了几张狗子的照片，但我总觉得用别人的搭好的服务会有隐私隐患。最近 ControlNet 出来后，当时被大家吐槽的六指问题似乎得到了解决，于是我这两天就尝试着在 Colab 上搭了 Stable Diffusion 炼炼图玩。 &amp;ndash; 为什么不用亚麻的Sagemaker？当然是因为 colab免费易用 要支持女票工作咯。
+<meta name="author" content="" /><meta name="description" content="Stable Diffusion 发布以来，逼真的画风就让大家感慨画师的饭碗是不是要被抢了。当时女票用 Stable Diffusion 重绘了几张狗子的照片，但我总觉得用别人的搭好的服务会有隐私隐患。最近 ControlNet 出来后，当时被大家吐槽的六指问题似乎得到了解决，于是我这两天就尝试着在 Colab 上搭了 Stable Diffusion 炼炼图玩。 &ndash; 为什么不用亚麻的Sagemaker？当然是因为 colab免费易用 要支持女票工作咯。
 " /><meta name="keywords" content="ziyunch, blog" />
 
 
@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.76.5 with theme even" />
+<meta name="generator" content="Hugo 0.149.0 with theme even" />
 
 
 <link rel="canonical" href="http://blindwith.science/2023/02/481.html/" />
@@ -38,28 +38,30 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="../../../sass/main.min.f346f1cd7c119368051aba0791b1276d109b14d2a0fcefac9fe27d9ba680605a.css" rel="stylesheet">
+<link href="../../../sass/main.min.22b0d99d8a618713080069182ee3608a4528452925f4324879d7352bfccb78bd.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="跟风AI炼图" />
-<meta property="og:description" content="Stable Diffusion 发布以来，逼真的画风就让大家感慨画师的饭碗是不是要被抢了。当时女票用 Stable Diffusion 重绘了几张狗子的照片，但我总觉得用别人的搭好的服务会有隐私隐患。最近 ControlNet 出来后，当时被大家吐槽的六指问题似乎得到了解决，于是我这两天就尝试着在 Colab 上搭了 Stable Diffusion 炼炼图玩。 &ndash; 为什么不用亚麻的Sagemaker？当然是因为 colab免费易用 要支持女票工作咯。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://blindwith.science/2023/02/481.html/" />
-<meta property="article:published_time" content="2023-02-26T22:35:00-08:00" />
-<meta property="article:modified_time" content="2023-02-26T22:56:23-08:00" />
-<meta itemprop="name" content="跟风AI炼图">
-<meta itemprop="description" content="Stable Diffusion 发布以来，逼真的画风就让大家感慨画师的饭碗是不是要被抢了。当时女票用 Stable Diffusion 重绘了几张狗子的照片，但我总觉得用别人的搭好的服务会有隐私隐患。最近 ControlNet 出来后，当时被大家吐槽的六指问题似乎得到了解决，于是我这两天就尝试着在 Colab 上搭了 Stable Diffusion 炼炼图玩。 &ndash; 为什么不用亚麻的Sagemaker？当然是因为 colab免费易用 要支持女票工作咯。">
-<meta itemprop="datePublished" content="2023-02-26T22:35:00-08:00" />
-<meta itemprop="dateModified" content="2023-02-26T22:56:23-08:00" />
-<meta itemprop="wordCount" content="822">
+<meta property="og:url" content="http://blindwith.science/2023/02/481.html/">
+  <meta property="og:site_name" content="Blind with Science">
+  <meta property="og:title" content="跟风AI炼图">
+  <meta property="og:description" content="Stable Diffusion 发布以来，逼真的画风就让大家感慨画师的饭碗是不是要被抢了。当时女票用 Stable Diffusion 重绘了几张狗子的照片，但我总觉得用别人的搭好的服务会有隐私隐患。最近 ControlNet 出来后，当时被大家吐槽的六指问题似乎得到了解决，于是我这两天就尝试着在 Colab 上搭了 Stable Diffusion 炼炼图玩。 – 为什么不用亚麻的Sagemaker？当然是因为 colab免费易用 要支持女票工作咯。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-02-26T22:35:00-08:00">
+    <meta property="article:modified_time" content="2023-02-26T22:56:23-08:00">
+    <meta property="article:tag" content="AI">
 
-
-
-<meta itemprop="keywords" content="AI," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="跟风AI炼图"/>
-<meta name="twitter:description" content="Stable Diffusion 发布以来，逼真的画风就让大家感慨画师的饭碗是不是要被抢了。当时女票用 Stable Diffusion 重绘了几张狗子的照片，但我总觉得用别人的搭好的服务会有隐私隐患。最近 ControlNet 出来后，当时被大家吐槽的六指问题似乎得到了解决，于是我这两天就尝试着在 Colab 上搭了 Stable Diffusion 炼炼图玩。 &ndash; 为什么不用亚麻的Sagemaker？当然是因为 colab免费易用 要支持女票工作咯。"/>
+  <meta itemprop="name" content="跟风AI炼图">
+  <meta itemprop="description" content="Stable Diffusion 发布以来，逼真的画风就让大家感慨画师的饭碗是不是要被抢了。当时女票用 Stable Diffusion 重绘了几张狗子的照片，但我总觉得用别人的搭好的服务会有隐私隐患。最近 ControlNet 出来后，当时被大家吐槽的六指问题似乎得到了解决，于是我这两天就尝试着在 Colab 上搭了 Stable Diffusion 炼炼图玩。 – 为什么不用亚麻的Sagemaker？当然是因为 colab免费易用 要支持女票工作咯。">
+  <meta itemprop="datePublished" content="2023-02-26T22:35:00-08:00">
+  <meta itemprop="dateModified" content="2023-02-26T22:56:23-08:00">
+  <meta itemprop="wordCount" content="793">
+  <meta itemprop="keywords" content="AI">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="跟风AI炼图">
+  <meta name="twitter:description" content="Stable Diffusion 发布以来，逼真的画风就让大家感慨画师的饭碗是不是要被抢了。当时女票用 Stable Diffusion 重绘了几张狗子的照片，但我总觉得用别人的搭好的服务会有隐私隐患。最近 ControlNet 出来后，当时被大家吐槽的六指问题似乎得到了解决，于是我这两天就尝试着在 Colab 上搭了 Stable Diffusion 炼炼图玩。 – 为什么不用亚麻的Sagemaker？当然是因为 colab免费易用 要支持女票工作咯。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -143,7 +145,7 @@
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 822 字 </span>
+          <span class="more-meta"> 约 793 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -155,113 +157,58 @@
     <nav id="TableOfContents"></nav>
   </div>
 </div>
+  <div class="post-outdated">
+    <div class="hint">
+      <p>【注意】最后更新于 <span class="timeago" datetime="2023-02-26T22:56:23" title="February 26, 2023">February 26, 2023</span>，文中内容可能已过时，请谨慎使用。</p>
+    </div>
+  </div>
     <div class="post-content">
       <p>Stable Diffusion 发布以来，逼真的画风就让大家感慨画师的饭碗是不是要被抢了。当时女票用 Stable Diffusion 重绘了几张狗子的照片，但我总觉得用别人的搭好的服务会有隐私隐患。最近 ControlNet 出来后，当时被大家吐槽的六指问题似乎得到了解决，于是我这两天就尝试着在 Colab 上搭了 Stable Diffusion 炼炼图玩。 &ndash; 为什么不用亚麻的Sagemaker？当然是因为 <del>colab免费易用</del> 要支持女票工作咯。</p>
 <p>AI炼图得用GPU，所以打开Colab后第一件事就是要将 <code>runtime type</code> 改为GPU。然后可以确认GPU实例型号。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="err">!</span><span class="n">nvidia</span><span class="o">-</span><span class="n">smi</span> <span class="o">-</span><span class="n">L</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>然后便是要安装 conda 以及配置环境。由于我并不关心安装的细节，所以用 <code>%%capture</code> 来避免不必要的输出显示。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="o">%%</span><span class="n">capture</span>
-<span class="c1">#@markdown ## Install colab related conda</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="err">!</span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">anaconda</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
-<span class="err">!</span><span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
-<span class="err">!</span><span class="n">bash</span> <span class="o">./</span><span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">b</span> <span class="o">-</span><span class="n">f</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;/usr/local/lib/python3.7/site-packages/&#39;</span><span class="p">)</span>
-<span class="err">!</span><span class="n">rm</span> <span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
-
-<span class="c1">#@markdown ## Download the stable-diffusion webui repo</span>
-<span class="o">%</span><span class="n">cd</span> <span class="o">/</span><span class="n">content</span>
-<span class="err">!</span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">AUTOMATIC1111</span><span class="o">/</span><span class="n">stable</span><span class="o">-</span><span class="n">diffusion</span><span class="o">-</span><span class="n">webui</span>
-<span class="o">%</span><span class="n">cd</span> <span class="n">stable</span><span class="o">-</span><span class="n">diffusion</span><span class="o">-</span><span class="n">webui</span>
-
-<span class="c1">#@markdown ## Set up python environment</span>
-<span class="err">!</span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">-</span><span class="n">wsl2</span><span class="o">.</span><span class="n">yaml</span>
-<span class="err">!</span><span class="n">conda</span> <span class="n">activate</span> <span class="n">automatic</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>对于 Stable Diffusion 来说，配置好环境后，可以一键安装。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="err">!</span><span class="n">python</span> <span class="n">launch</span><span class="o">.</span><span class="n">py</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>不过我发现这时候虽然可以在本地启动，使用 <code>--share</code> 却不能启动 gradio.live。所以我会使用单独的语句启动，这个时候还可以加上 <code>--auth</code> 参数来保护我的 gradio.live 不被外人使用。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">#@markdown # Launch</span>
-<span class="n">username</span><span class="o">=</span><span class="s2">&#34;&#34;</span> <span class="c1">#@param {type:&#34;string&#34;}</span>
-<span class="n">password</span><span class="o">=</span><span class="s2">&#34;&#34;</span> <span class="c1">#@param {type:&#34;string&#34;}</span>
-<span class="err">!</span><span class="n">python</span> <span class="n">webui</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">share</span> <span class="o">--</span><span class="n">gradio</span><span class="o">-</span><span class="n">auth</span> <span class="s1">&#39;{username}&#39;</span><span class="p">:</span><span class="s1">&#39;{password}&#39;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>这个时候打开相应的 gradio.live 网址，就可以开始调教AI了。但是这个时候AI画出的画要不就是特别像真人，要不就是像儿童画，都不太好看。此时，就要祭出大家放在 huggingface上 调教好的模型并存在 <code>models/</code> 文件夹内，并通过 <code>ckpt</code> 参数指定模型，或直接在gradio中选定模型。比如我想画二次元小姐姐，我就可以下一个 trinart 模型来炼图。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="o">%</span><span class="n">cd</span> <span class="n">models</span>
-<span class="err">!</span><span class="n">git</span> <span class="n">lfs</span> <span class="n">install</span>
-<span class="err">!</span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">huggingface</span><span class="o">.</span><span class="n">co</span><span class="o">/</span><span class="n">naclbit</span><span class="o">/</span><span class="n">trinart_stable_diffusion_v2</span>
-
-<span class="o">%</span><span class="n">cd</span> <span class="o">..</span>
-<span class="err">!</span><span class="n">python</span> <span class="n">webui</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">share</span> <span class="o">--</span><span class="n">ckpt</span> <span class="o">./</span><span class="n">models</span><span class="o">/</span><span class="n">trinart_stable_diffusion_v2</span><span class="o">/</span><span class="n">trinart2_step115000</span><span class="o">.</span><span class="n">ckpt</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>而对于 ControlNet，则可已 Stable Diffusion 插件的形式使用。首先，在启动 gradio 的时候要加上 <code>--enable-insecure-extension-access</code> 参数；然后在 Extensions 页选择 <code>Install from URL</code> 并输入 <code>https://github.com/Mikubill/sd-webui-controlnet</code> 。安装后 <code>Reload Web UI</code> 即可。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">!</span>nvidia<span style="color:#f92672">-</span>smi <span style="color:#f92672">-</span>L
+</span></span></code></pre></div><p>然后便是要安装 conda 以及配置环境。由于我并不关心安装的细节，所以用 <code>%%capture</code> 来避免不必要的输出显示。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">%%</span>capture
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#@markdown ## Install colab related conda</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> sys
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">!</span>wget https:<span style="color:#f92672">//</span>repo<span style="color:#f92672">.</span>anaconda<span style="color:#f92672">.</span>com<span style="color:#f92672">/</span>miniconda<span style="color:#f92672">/</span>Miniconda3<span style="color:#f92672">-</span>latest<span style="color:#f92672">-</span>Linux<span style="color:#f92672">-</span>x86_64<span style="color:#f92672">.</span>sh
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">!</span>chmod <span style="color:#f92672">+</span>x Miniconda3<span style="color:#f92672">-</span>latest<span style="color:#f92672">-</span>Linux<span style="color:#f92672">-</span>x86_64<span style="color:#f92672">.</span>sh
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">!</span>bash <span style="color:#f92672">./</span>Miniconda3<span style="color:#f92672">-</span>latest<span style="color:#f92672">-</span>Linux<span style="color:#f92672">-</span>x86_64<span style="color:#f92672">.</span>sh <span style="color:#f92672">-</span>b <span style="color:#f92672">-</span>f <span style="color:#f92672">-</span>p <span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>local
+</span></span><span style="display:flex;"><span>sys<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#39;/usr/local/lib/python3.7/site-packages/&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">!</span>rm Miniconda3<span style="color:#f92672">-</span>latest<span style="color:#f92672">-</span>Linux<span style="color:#f92672">-</span>x86_64<span style="color:#f92672">.</span>sh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#@markdown ## Download the stable-diffusion webui repo</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>cd <span style="color:#f92672">/</span>content
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">!</span>git clone https:<span style="color:#f92672">//</span>github<span style="color:#f92672">.</span>com<span style="color:#f92672">/</span>AUTOMATIC1111<span style="color:#f92672">/</span>stable<span style="color:#f92672">-</span>diffusion<span style="color:#f92672">-</span>webui
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>cd stable<span style="color:#f92672">-</span>diffusion<span style="color:#f92672">-</span>webui
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#@markdown ## Set up python environment</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">!</span>conda env create <span style="color:#f92672">-</span>f environment<span style="color:#f92672">-</span>wsl2<span style="color:#f92672">.</span>yaml
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">!</span>conda activate automatic
+</span></span></code></pre></div><p>对于 Stable Diffusion 来说，配置好环境后，可以一键安装。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">!</span>python launch<span style="color:#f92672">.</span>py
+</span></span></code></pre></div><p>不过我发现这时候虽然可以在本地启动，使用 <code>--share</code> 却不能启动 gradio.live。所以我会使用单独的语句启动，这个时候还可以加上 <code>--auth</code> 参数来保护我的 gradio.live 不被外人使用。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#@markdown # Launch</span>
+</span></span><span style="display:flex;"><span>username<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#75715e">#@param {type:&#34;string&#34;}</span>
+</span></span><span style="display:flex;"><span>password<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#75715e">#@param {type:&#34;string&#34;}</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">!</span>python webui<span style="color:#f92672">.</span>py <span style="color:#f92672">--</span>share <span style="color:#f92672">--</span>gradio<span style="color:#f92672">-</span>auth <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{username}</span><span style="color:#e6db74">&#39;</span>:<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{password}</span><span style="color:#e6db74">&#39;</span>
+</span></span></code></pre></div><p>这个时候打开相应的 gradio.live 网址，就可以开始调教AI了。但是这个时候AI画出的画要不就是特别像真人，要不就是像儿童画，都不太好看。此时，就要祭出大家放在 huggingface上 调教好的模型并存在 <code>models/</code> 文件夹内，并通过 <code>ckpt</code> 参数指定模型，或直接在gradio中选定模型。比如我想画二次元小姐姐，我就可以下一个 trinart 模型来炼图。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">%</span>cd models
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">!</span>git lfs install
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">!</span>git clone https:<span style="color:#f92672">//</span>huggingface<span style="color:#f92672">.</span>co<span style="color:#f92672">/</span>naclbit<span style="color:#f92672">/</span>trinart_stable_diffusion_v2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>cd <span style="color:#f92672">..</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">!</span>python webui<span style="color:#f92672">.</span>py <span style="color:#f92672">--</span>share <span style="color:#f92672">--</span>ckpt <span style="color:#f92672">./</span>models<span style="color:#f92672">/</span>trinart_stable_diffusion_v2<span style="color:#f92672">/</span>trinart2_step115000<span style="color:#f92672">.</span>ckpt
+</span></span></code></pre></div><p>而对于 ControlNet，则可已 Stable Diffusion 插件的形式使用。首先，在启动 gradio 的时候要加上 <code>--enable-insecure-extension-access</code> 参数；然后在 Extensions 页选择 <code>Install from URL</code> 并输入 <code>https://github.com/Mikubill/sd-webui-controlnet</code> 。安装后 <code>Reload Web UI</code> 即可。</p>
 <p>这样基本上就可以薅 Colab 的羊毛来炼图了。我感觉炼图的时候，选择 model 和 prompt 是两个大坑，不是简单尝试就能搞定的。我抄了一些常用的negative prompt，对于剩下的，等我哪天有点心得了，就再来就这一部分水篇博客吧。</p>
 <blockquote>
 <p>negative prompt:
-lowres, bad anatomy, bad hands, text, error, missing fingers, missing arms, long neck, humpbacked, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry</p>
-</blockquote>
+lowres, bad anatomy, bad hands, text, error, missing fingers, missing arms, long neck, humpbacked, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry</p></blockquote>
     </div>
 
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">文章作者</span>
-    <span class="item-content">ziyunch</span>
+    <span class="item-content"></span>
   </p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
@@ -343,7 +290,7 @@ lowres, bad anatomy, bad hands, text, error, missing fingers, missing arms, long
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   width="28" height="28"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
       </a>
-  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -365,7 +312,7 @@ lowres, bad anatomy, bad hands, text, error, missing fingers, missing arms, long
   <span class="copyright-year">
     &copy; 
     2005 - 
-    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
   </span>
 </div>
 
@@ -381,7 +328,7 @@ lowres, bad anatomy, bad hands, text, error, missing fingers, missing arms, long
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script>
     var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -389,19 +336,8 @@ lowres, bad anatomy, bad hands, text, error, missing fingers, missing arms, long
 
 
 
-<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="../../../js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-86469737-1', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

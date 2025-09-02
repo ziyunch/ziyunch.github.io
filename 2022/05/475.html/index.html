@@ -16,17 +16,17 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ziyunch" /><meta name="description" content="小贴士
-我的豆瓣书影音替代方案基于Org-mode，如果对此感兴趣的话可以阅读我的另一篇博客《继续吹一波Org-mode》了解Org-mode以及更多用法。  最近豆瓣开始搞激烈的实名认证，而不愿献祭隐私的我，也只能和豆瓣说再见了。豆瓣十几年的情谊化为乌有，我也无法相信其他书影音数据库能够天长地久。另一方面，IMDB，Letterbox，TMDB，Goodreads这类美国数据库对于动漫和国产书还有水土不服的问题，我曾经暂别豆瓣，用过挺长一段时间的IMDB&#43;Letterbox，却还是回归豆瓣后觉得顺手。查了一下，似乎没有什么自架豆瓣替代品的开源软件，大家常用的方案也是我不太喜欢的Notion（我在继续吹一波Org-mode里曾经详述过），于是趁着小长假，我便将豆瓣转移到了Org-mode。
-  Figure 1: 最终效果长这样
- " /><meta name="keywords" content="ziyunch, blog" />
+<meta name="author" content="" /><meta name="description" content="小贴士
+我的豆瓣书影音替代方案基于Org-mode，如果对此感兴趣的话可以阅读我的另一篇博客《继续吹一波Org-mode》了解Org-mode以及更多用法。 最近豆瓣开始搞激烈的实名认证，而不愿献祭隐私的我，也只能和豆瓣说再见了。豆瓣十几年的情谊化为乌有，我也无法相信其他书影音数据库能够天长地久。另一方面，IMDB，Letterbox，TMDB，Goodreads这类美国数据库对于动漫和国产书还有水土不服的问题，我曾经暂别豆瓣，用过挺长一段时间的IMDB&#43;Letterbox，却还是回归豆瓣后觉得顺手。查了一下，似乎没有什么自架豆瓣替代品的开源软件，大家常用的方案也是我不太喜欢的Notion（我在继续吹一波Org-mode里曾经详述过），于是趁着小长假，我便将豆瓣转移到了Org-mode。
+Figure 1: 最终效果长这样
+" /><meta name="keywords" content="ziyunch, blog" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.76.5 with theme even" />
+<meta name="generator" content="Hugo 0.149.0 with theme even" />
 
 
 <link rel="canonical" href="http://blindwith.science/2022/05/475.html/" />
@@ -40,58 +40,38 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="../../../sass/main.min.f346f1cd7c119368051aba0791b1276d109b14d2a0fcefac9fe27d9ba680605a.css" rel="stylesheet">
+<link href="../../../sass/main.min.22b0d99d8a618713080069182ee3608a4528452925f4324879d7352bfccb78bd.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="逃离豆瓣 - 使用Org-mode管理我的书影音" />
-<meta property="og:description" content="小贴士
-  
-我的豆瓣书影音替代方案基于Org-mode，如果对此感兴趣的话可以阅读我的另一篇博客《继续吹一波Org-mode》了解Org-mode以及更多用法。
+<meta property="og:url" content="http://blindwith.science/2022/05/475.html/">
+  <meta property="og:site_name" content="Blind with Science">
+  <meta property="og:title" content="逃离豆瓣 - 使用Org-mode管理我的书影音">
+  <meta property="og:description" content="小贴士
+我的豆瓣书影音替代方案基于Org-mode，如果对此感兴趣的话可以阅读我的另一篇博客《继续吹一波Org-mode》了解Org-mode以及更多用法。 最近豆瓣开始搞激烈的实名认证，而不愿献祭隐私的我，也只能和豆瓣说再见了。豆瓣十几年的情谊化为乌有，我也无法相信其他书影音数据库能够天长地久。另一方面，IMDB，Letterbox，TMDB，Goodreads这类美国数据库对于动漫和国产书还有水土不服的问题，我曾经暂别豆瓣，用过挺长一段时间的IMDB&#43;Letterbox，却还是回归豆瓣后觉得顺手。查了一下，似乎没有什么自架豆瓣替代品的开源软件，大家常用的方案也是我不太喜欢的Notion（我在继续吹一波Org-mode里曾经详述过），于是趁着小长假，我便将豆瓣转移到了Org-mode。
+Figure 1: 最终效果长这样">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-05-30T12:34:00-07:00">
+    <meta property="article:modified_time" content="2022-05-30T14:19:13-07:00">
+    <meta property="article:tag" content="Org-Mode">
+    <meta property="article:tag" content="Emacs">
+    <meta property="article:tag" content="豆瓣">
 
-
-最近豆瓣开始搞激烈的实名认证，而不愿献祭隐私的我，也只能和豆瓣说再见了。豆瓣十几年的情谊化为乌有，我也无法相信其他书影音数据库能够天长地久。另一方面，IMDB，Letterbox，TMDB，Goodreads这类美国数据库对于动漫和国产书还有水土不服的问题，我曾经暂别豆瓣，用过挺长一段时间的IMDB&#43;Letterbox，却还是回归豆瓣后觉得顺手。查了一下，似乎没有什么自架豆瓣替代品的开源软件，大家常用的方案也是我不太喜欢的Notion（我在继续吹一波Org-mode里曾经详述过），于是趁着小长假，我便将豆瓣转移到了Org-mode。
-
-     
-            Figure 1: 最终效果长这样
-        
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://blindwith.science/2022/05/475.html/" />
-<meta property="article:published_time" content="2022-05-30T12:34:00-07:00" />
-<meta property="article:modified_time" content="2022-05-30T14:19:13-07:00" />
-<meta itemprop="name" content="逃离豆瓣 - 使用Org-mode管理我的书影音">
-<meta itemprop="description" content="小贴士
-  
-我的豆瓣书影音替代方案基于Org-mode，如果对此感兴趣的话可以阅读我的另一篇博客《继续吹一波Org-mode》了解Org-mode以及更多用法。
-
-
-最近豆瓣开始搞激烈的实名认证，而不愿献祭隐私的我，也只能和豆瓣说再见了。豆瓣十几年的情谊化为乌有，我也无法相信其他书影音数据库能够天长地久。另一方面，IMDB，Letterbox，TMDB，Goodreads这类美国数据库对于动漫和国产书还有水土不服的问题，我曾经暂别豆瓣，用过挺长一段时间的IMDB&#43;Letterbox，却还是回归豆瓣后觉得顺手。查了一下，似乎没有什么自架豆瓣替代品的开源软件，大家常用的方案也是我不太喜欢的Notion（我在继续吹一波Org-mode里曾经详述过），于是趁着小长假，我便将豆瓣转移到了Org-mode。
-
-     
-            Figure 1: 最终效果长这样
-        
-">
-<meta itemprop="datePublished" content="2022-05-30T12:34:00-07:00" />
-<meta itemprop="dateModified" content="2022-05-30T14:19:13-07:00" />
-<meta itemprop="wordCount" content="1958">
-
-
-
-<meta itemprop="keywords" content="Org-mode,Emacs,豆瓣," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="逃离豆瓣 - 使用Org-mode管理我的书影音"/>
-<meta name="twitter:description" content="小贴士
-  
-我的豆瓣书影音替代方案基于Org-mode，如果对此感兴趣的话可以阅读我的另一篇博客《继续吹一波Org-mode》了解Org-mode以及更多用法。
-
-
-最近豆瓣开始搞激烈的实名认证，而不愿献祭隐私的我，也只能和豆瓣说再见了。豆瓣十几年的情谊化为乌有，我也无法相信其他书影音数据库能够天长地久。另一方面，IMDB，Letterbox，TMDB，Goodreads这类美国数据库对于动漫和国产书还有水土不服的问题，我曾经暂别豆瓣，用过挺长一段时间的IMDB&#43;Letterbox，却还是回归豆瓣后觉得顺手。查了一下，似乎没有什么自架豆瓣替代品的开源软件，大家常用的方案也是我不太喜欢的Notion（我在继续吹一波Org-mode里曾经详述过），于是趁着小长假，我便将豆瓣转移到了Org-mode。
-
-     
-            Figure 1: 最终效果长这样
-        
-"/>
+  <meta itemprop="name" content="逃离豆瓣 - 使用Org-mode管理我的书影音">
+  <meta itemprop="description" content="小贴士
+我的豆瓣书影音替代方案基于Org-mode，如果对此感兴趣的话可以阅读我的另一篇博客《继续吹一波Org-mode》了解Org-mode以及更多用法。 最近豆瓣开始搞激烈的实名认证，而不愿献祭隐私的我，也只能和豆瓣说再见了。豆瓣十几年的情谊化为乌有，我也无法相信其他书影音数据库能够天长地久。另一方面，IMDB，Letterbox，TMDB，Goodreads这类美国数据库对于动漫和国产书还有水土不服的问题，我曾经暂别豆瓣，用过挺长一段时间的IMDB&#43;Letterbox，却还是回归豆瓣后觉得顺手。查了一下，似乎没有什么自架豆瓣替代品的开源软件，大家常用的方案也是我不太喜欢的Notion（我在继续吹一波Org-mode里曾经详述过），于是趁着小长假，我便将豆瓣转移到了Org-mode。
+Figure 1: 最终效果长这样">
+  <meta itemprop="datePublished" content="2022-05-30T12:34:00-07:00">
+  <meta itemprop="dateModified" content="2022-05-30T14:19:13-07:00">
+  <meta itemprop="wordCount" content="1932">
+  <meta itemprop="keywords" content="Org-Mode,Emacs,豆瓣">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="逃离豆瓣 - 使用Org-mode管理我的书影音">
+  <meta name="twitter:description" content="小贴士
+我的豆瓣书影音替代方案基于Org-mode，如果对此感兴趣的话可以阅读我的另一篇博客《继续吹一波Org-mode》了解Org-mode以及更多用法。 最近豆瓣开始搞激烈的实名认证，而不愿献祭隐私的我，也只能和豆瓣说再见了。豆瓣十几年的情谊化为乌有，我也无法相信其他书影音数据库能够天长地久。另一方面，IMDB，Letterbox，TMDB，Goodreads这类美国数据库对于动漫和国产书还有水土不服的问题，我曾经暂别豆瓣，用过挺长一段时间的IMDB&#43;Letterbox，却还是回归豆瓣后觉得顺手。查了一下，似乎没有什么自架豆瓣替代品的开源软件，大家常用的方案也是我不太喜欢的Notion（我在继续吹一波Org-mode里曾经详述过），于是趁着小长假，我便将豆瓣转移到了Org-mode。
+Figure 1: 最终效果长这样">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -175,7 +155,7 @@
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 1958 字 </span>
+          <span class="more-meta"> 约 1932 字 </span>
           <span class="more-meta"> 预计阅读 4 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -206,111 +186,58 @@
 
 </div>
 <p>最近豆瓣开始搞激烈的实名认证，而不愿献祭隐私的我，也只能和豆瓣说再见了。豆瓣十几年的情谊化为乌有，我也无法相信其他书影音数据库能够天长地久。另一方面，IMDB，Letterbox，TMDB，Goodreads这类美国数据库对于动漫和国产书还有水土不服的问题，我曾经暂别豆瓣，用过挺长一段时间的IMDB+Letterbox，却还是回归豆瓣后觉得顺手。查了一下，似乎没有什么自架豆瓣替代品的开源软件，大家常用的方案也是我不太喜欢的Notion（我在<a href="https://blindwith.science/2021/11/467.html/">继续吹一波Org-mode</a>里曾经详述过），于是趁着小长假，我便将豆瓣转移到了Org-mode。</p>
-<figure>
-    <img src="../../../ox-hugo/org_mode_douban.png"
-         alt="Figure 1: 最终效果长这样"/> <figcaption>
-            <p><!-- raw HTML omitted -->Figure 1: <!-- raw HTML omitted -->最终效果长这样</p>
-        </figcaption>
+<figure><img src="../../../ox-hugo/org_mode_douban.png"
+    alt="Figure 1: 最终效果长这样"><figcaption>
+      <p><!-- raw HTML omitted -->Figure 1: <!-- raw HTML omitted -->最终效果长这样</p>
+    </figcaption>
 </figure>
 
 <h2 id="导出我的书影音">导出我的书影音</h2>
 <p>因为懒得造轮子，我便找了几个导出方案。一个是<a href="https://blog.doufen.org/">基于Chrome扩展的豆坟</a>，另一个则是<a href="https://zhuzi.dev/2021/06/05/douban-backup-sync-notion/">这位博主写的使用Greasemonkey的脚本</a>。这两个都是基于我看，我读，我听这些页面导出的，好处是快捷且不容易被当成机器人被封禁，坏处是没有imdb和isbn等条目信息，无法获得更详尽的资料。我也尝试了爬虫，但是没几页ip就被封了。我最大的意见是这两个导出方案缺少电影，电视剧，动漫，综艺的分类。</p>
 <h2 id="转换为org-file">转换为org file</h2>
 <p>我将这两个方案得到的文件进行交叉比对后，就可以转换为org文件了。这一步我用了pandas，先生成一个和org properties格式对应的列（通过\n来换行），然后再将该列输出为后缀为org的csv，最后使用通配符将需要双引号删除即可。我的org文件大概长这样：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="gu">**</span> 小妈妈 / Petite maman &lt;-这里是脚本得到的标题
-CLOSED: [2022-05-09 11:37:52] &lt;-这里是豆坟导出的创建时间
-<span class="c">  :PROPERTIES:
-</span><span class="c"></span><span class="cs">  :标题: 小妈妈
-</span><span class="cs">  :原名: Petite maman
-</span><span class="cs">  :上映年份: 2021
-</span><span class="cs">  :上映日期: 2021-03-03
-</span><span class="cs">  :制片国家: 法国 &lt;-注意脚本得到的制片国家是错误的，使用豆坟即可
-</span><span class="cs">  :类型: 剧情 奇幻
-</span><span class="cs">  :导演: 瑟琳·席安玛
-</span><span class="cs">  :主演: 约瑟芬·桑兹 加布里埃尔·桑兹
-</span><span class="cs">  :豆瓣链接: https://movie.douban.com/subject/35225859/
-</span><span class="cs">  :豆瓣评分: 7.9
-</span><span class="cs">  :我的评分: 5.0
-</span><span class="cs"></span><span class="c">  :END:</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="快速查询与管理">快速查询与管理</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-org" data-lang="org"><span style="display:flex;"><span><span style="color:#75715e">**</span> 小妈妈 / Petite maman &lt;-这里是脚本得到的标题
+</span></span><span style="display:flex;"><span>CLOSED: [2022-05-09 11:37:52] &lt;-这里是豆坟导出的创建时间
+</span></span><span style="display:flex;"><span><span style="color:#75715e">  :PROPERTIES:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">  :标题: 小妈妈
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  :原名: Petite maman
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  :上映年份: 2021
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  :上映日期: 2021-03-03
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  :制片国家: 法国 &lt;-注意脚本得到的制片国家是错误的，使用豆坟即可
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  :类型: 剧情 奇幻
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  :导演: 瑟琳·席安玛
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  :主演: 约瑟芬·桑兹 加布里埃尔·桑兹
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  :豆瓣链接: https://movie.douban.com/subject/35225859/
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  :豆瓣评分: 7.9
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  :我的评分: 5.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">  :END:</span>
+</span></span></code></pre></div><h2 id="快速查询与管理">快速查询与管理</h2>
 <p>使用Org-mode管理的最大优势就是作为纯文本，却可以使用<a href="https://orgmode.org/manual/Sparse-Trees.html">sparse tree</a>来筛选特定条目或者通过<a href="https://orgmode.org/manual/Column-View.html">column view</a>方便地将内容转为表格进行查询和函数运算。</p>
 <p>我使用 <code>C-c /</code> 开启 sparse tree后，我可以方便地通过 <code>p</code> 筛选特定 property，也可以通过 <code>m</code> 去筛选特定 match pattern。比如我想筛选日本动画，即可打 <code>C-c / m</code> 后在mini buffer输入 <code>制片国家={日本}&amp;类型={动画}</code> ，这个org文件中所有日本动画便会高亮，而不满足此条件的条目则会暂时隐藏。</p>
 <p>我也可以使用 <code>C-c C-x C-c</code> 开启 column view，方便地进行各种操作。默认的column view是和项目完成度相关的，在书影音的管理上用处不大。所以我需要先定义 <code>#+COLUMNS</code> 或是 <code>COLUMNS</code> property，然后开启 column view 后，便会显示相应的列。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="cs">#+COLUMNS</span><span class="c">: %标题 %制片国家 %上映年份 %豆瓣评分 %导演</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Column view 其实就是改变了 buffer 的显示方式，但是有的时候我想将筛选的结果分享。这时候就可以和Orgmode的动态模块 <a href="https://orgmode.org/manual/Dynamic-Blocks.html">dynamic blocks</a> 相结合了。比如说我想找到所有2021年后我看完之后非常喜欢而打了5分的日本动漫，就可以在文件中写以下的动态模块。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="c">#+BEGIN: </span><span class="cs">columnview</span><span class="c"> :hlines 1 :id local :match &#34;制片国家={日本}&amp;类型={动画}&amp;我的评分=5.0&amp;CLOSED&gt;=\&#34;&lt;2021-01-01&gt;\&#34;&#34;
-</span><span class="c">#+END:</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>然后，在动态模块上 <code>C-c C-c</code> ，Org-mode就会自动帮我找到所有满足条件的条目，并以纯文本的形式填充这个动态模块，非常方便。不过column view相比sparse tree，在速度上明显要慢很多。相比sparse tree的即时性，column view在我八百多条记录里要找大概两三秒才能生成最后的结果。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="c">#+BEGIN: </span><span class="cs">columnview</span><span class="c"> :hlines 1 :id local :match &#34;制片国家={日本}&amp;类型={动画}&amp;我的评分=5.0&amp;CLOSED&gt;=\&#34;&lt;2021-01-01&gt;\&#34;&#34;
-</span><span class="c"></span><span class="s">| 标题             | 制片国家 | 上映年份 | 豆瓣评分 | 导演                           |</span>
-<span class="s">|-------------------+---------+------+--------------+-------------------------------------|</span>
-<span class="s">| 地球外少年少女    | 日本    | 2022 |          7.7 | 矶光雄                              |</span>
-<span class="s">| 动物狂想曲 第二季 | 日本    | 2021 |          8.5 | 松见真一                            |</span>
-<span class="s">| 漂流少年          | 日本    | 2021 |          9.1 | 夏目真悟                            |</span>
-<span class="s">| 奇蛋物语          | 日本    | 2021 |          8.5 | 若林信 山崎雄太 高雄统子 牛岛新一郎 |</span>
-<span class="s">| 天竺鼠车车        | 日本    | 2021 |          9.3 | 见里朝希                            |</span>
-<span class="s">| 龙与魔女          | 日本    | 2020 |          8.5 | 川野达朗                            |</span>
-<span class="c">#+END:</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="添加新条目">添加新条目</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-org" data-lang="org"><span style="display:flex;"><span><span style="color:#75715e">#+COLUMNS</span><span style="color:#75715e">: %标题 %制片国家 %上映年份 %豆瓣评分 %导演</span>
+</span></span></code></pre></div><p>Column view 其实就是改变了 buffer 的显示方式，但是有的时候我想将筛选的结果分享。这时候就可以和Orgmode的动态模块 <a href="https://orgmode.org/manual/Dynamic-Blocks.html">dynamic blocks</a> 相结合了。比如说我想找到所有2021年后我看完之后非常喜欢而打了5分的日本动漫，就可以在文件中写以下的动态模块。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-org" data-lang="org"><span style="display:flex;"><span><span style="color:#75715e">#+BEGIN: </span><span style="color:#75715e">columnview</span><span style="color:#75715e"> :hlines 1 :id local :match &#34;制片国家={日本}&amp;类型={动画}&amp;我的评分=5.0&amp;CLOSED&gt;=\&#34;&lt;2021-01-01&gt;\&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#+END:</span>
+</span></span></code></pre></div><p>然后，在动态模块上 <code>C-c C-c</code> ，Org-mode就会自动帮我找到所有满足条件的条目，并以纯文本的形式填充这个动态模块，非常方便。不过column view相比sparse tree，在速度上明显要慢很多。相比sparse tree的即时性，column view在我八百多条记录里要找大概两三秒才能生成最后的结果。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-org" data-lang="org"><span style="display:flex;"><span><span style="color:#75715e">#+BEGIN: </span><span style="color:#75715e">columnview</span><span style="color:#75715e"> :hlines 1 :id local :match &#34;制片国家={日本}&amp;类型={动画}&amp;我的评分=5.0&amp;CLOSED&gt;=\&#34;&lt;2021-01-01&gt;\&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#e6db74">| 标题             | 制片国家 | 上映年份 | 豆瓣评分 | 导演                           |</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">|-------------------+---------+------+--------------+-------------------------------------|</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">| 地球外少年少女    | 日本    | 2022 |          7.7 | 矶光雄                              |</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">| 动物狂想曲 第二季 | 日本    | 2021 |          8.5 | 松见真一                            |</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">| 漂流少年          | 日本    | 2021 |          9.1 | 夏目真悟                            |</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">| 奇蛋物语          | 日本    | 2021 |          8.5 | 若林信 山崎雄太 高雄统子 牛岛新一郎 |</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">| 天竺鼠车车        | 日本    | 2021 |          9.3 | 见里朝希                            |</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">| 龙与魔女          | 日本    | 2020 |          8.5 | 川野达朗                            |</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+END:</span>
+</span></span></code></pre></div><h2 id="添加新条目">添加新条目</h2>
 <p>最后一个问题就是如何更新条目了。由于是纯文本，我可以直接手打来添加条目，这样也可以增加一些豆瓣缺少的信息，比如系列构成，出品公司等。我也打算写一个简单的脚本来从豆瓣，IMDB，Bangumi上自动获取信息加入org文件中。</p>
     </div>
 
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">文章作者</span>
-    <span class="item-content">ziyunch</span>
+    <span class="item-content"></span>
   </p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
@@ -394,7 +321,7 @@ CLOSED: [2022-05-09 11:37:52] &lt;-这里是豆坟导出的创建时间
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   width="28" height="28"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
       </a>
-  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -416,7 +343,7 @@ CLOSED: [2022-05-09 11:37:52] &lt;-这里是豆坟导出的创建时间
   <span class="copyright-year">
     &copy; 
     2005 - 
-    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
   </span>
 </div>
 
@@ -432,7 +359,7 @@ CLOSED: [2022-05-09 11:37:52] &lt;-这里是豆坟导出的创建时间
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script>
     var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -440,19 +367,8 @@ CLOSED: [2022-05-09 11:37:52] &lt;-这里是豆坟导出的创建时间
 
 
 
-<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="../../../js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-86469737-1', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

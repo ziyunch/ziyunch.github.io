@@ -4,39 +4,24 @@
     <title>鼠须管 on Blind with Science</title>
     <link>http://blindwith.science/tags/%E9%BC%A0%E9%A1%BB%E7%AE%A1/</link>
     <description>Recent content in 鼠须管 on Blind with Science</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Sat, 31 Aug 2019 20:40:00 -0700</lastBuildDate><atom:link href="http://blindwith.science/tags/%E9%BC%A0%E9%A1%BB%E7%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Mar 2021 16:09:00 -0800</lastBuildDate>
+    <atom:link href="http://blindwith.science/tags/%E9%BC%A0%E9%A1%BB%E7%AE%A1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mac 版 Emacs 中使用 Rime 输入法打带调双拼</title>
       <link>http://blindwith.science/2019/08/449.html/</link>
       <pubDate>Sat, 31 Aug 2019 20:40:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/08/449.html/</guid>
-      <description>&lt;p&gt;注：已换成 emacs-rime，详见 &lt;a href=&#34;https://blindwith.science/2020/12/460.html/&#34;&gt;从 pyim 换到 emacs-rime 了&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。&lt;/p&gt;</description>
+      <description>&lt;p&gt;注：已换成 emacs-rime，详见 &lt;a href=&#34;https://blindwith.science/2020/12/460.html/&#34;&gt;从 pyim 换到 emacs-rime 了&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;p&gt;由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>鼠须管傻瓜化配置</title>
       <link>http://blindwith.science/2019/07/445.html/</link>
       <pubDate>Sat, 20 Jul 2019 20:58:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/07/445.html/</guid>
-      <description>&lt;p&gt;This configuration:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Optimized for simplified Chinese;&lt;/li&gt;
-&lt;li&gt;Implement 朙月拼音 &lt;code&gt;luna-pinyin&lt;/code&gt;, 微软双拼 &lt;code&gt;double-pinyin-mspy&lt;/code&gt; and
-地球拼音 &lt;code&gt;terra-pinyin&lt;/code&gt; with 20+ dictionaries including symbols and
-emoji;&lt;/li&gt;
-&lt;li&gt;Feature 地球双拼 &lt;code&gt;terra-double-pinyin-mspy&lt;/code&gt;, a double pinyin input
-method supporting tone marks;&lt;/li&gt;
-&lt;li&gt;Use 地球双拼 &lt;code&gt;terra-double-pinyin-mspy&lt;/code&gt; to reverse lookup
-吴语（苏州话） &lt;code&gt;wugniu_soutseu&lt;/code&gt; with tone marks, toggled by &lt;code&gt;`&lt;/code&gt;;&lt;/li&gt;
-&lt;li&gt;Use ASCII mode for several applications.&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;This configuration:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Optimized for simplified Chinese;&lt;/li&gt;&#xA;&lt;li&gt;Implement 朙月拼音 &lt;code&gt;luna-pinyin&lt;/code&gt;, 微软双拼 &lt;code&gt;double-pinyin-mspy&lt;/code&gt; and&#xA;地球拼音 &lt;code&gt;terra-pinyin&lt;/code&gt; with 20+ dictionaries including symbols and&#xA;emoji;&lt;/li&gt;&#xA;&lt;li&gt;Feature 地球双拼 &lt;code&gt;terra-double-pinyin-mspy&lt;/code&gt;, a double pinyin input&#xA;method supporting tone marks;&lt;/li&gt;&#xA;&lt;li&gt;Use 地球双拼 &lt;code&gt;terra-double-pinyin-mspy&lt;/code&gt; to reverse lookup&#xA;吴语（苏州话） &lt;code&gt;wugniu_soutseu&lt;/code&gt; with tone marks, toggled by &lt;code&gt;`&lt;/code&gt;;&lt;/li&gt;&#xA;&lt;li&gt;Use ASCII mode for several applications.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>

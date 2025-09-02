@@ -29,7 +29,7 @@ Org-mode的宣传语就是 your life in plain text，可以说很好地概括了
 
 
 
-<meta name="generator" content="Hugo 0.76.5 with theme even" />
+<meta name="generator" content="Hugo 0.149.0 with theme even" />
 
 
 <link rel="canonical" href="http://blindwith.science/2021/11/467.html/" />
@@ -43,43 +43,46 @@ Org-mode的宣传语就是 your life in plain text，可以说很好地概括了
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="../../../sass/main.min.f346f1cd7c119368051aba0791b1276d109b14d2a0fcefac9fe27d9ba680605a.css" rel="stylesheet">
+<link href="../../../sass/main.min.22b0d99d8a618713080069182ee3608a4528452925f4324879d7352bfccb78bd.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="继续吹一波Org-mode" />
-<meta property="og:description" content="最近Notion大火，从二手买卖到菜谱分享，隔三差五就会看到它的推荐和应用。出于好奇，我也去开了个帐户用了一番，确实不错，然而我对其持谨慎态度。一方面，作为在线产品，它的使用场景灵活，但又会受网络限制，假如所在单位或者地区禁止使用，那就徒增烦恼。而且，它并非开源产品，公司一旦跑路或者改变其业务重心，那会造成非常高的转移成本，前车之鉴便有Evernote。另一方面，它作为一个笔记产品，架构强大，也更复杂，有着较高的学习成本，也许用起来很sexy，但也会让人疑惑在有更好替代品的情况下，是否值得花费这么多时间来学习使用这个产品。
-说了这么多，其实我只是想引出这个更好的替代品，也就是我用了多年的Emacs。
-在数字化时代，我们需要用到各种各样的工具来记录管理我们的生活，这也催生了各种工具和网站。比如日程管理有Things、Bear等，文献管理软件有Endnote、NoteExpress等，记帐软件有随手记、Splitwise等，编辑器有VSCode、Atom等，博客写作软件有Typora、MWeb等，菜谱有下厨房。但是工具太多协作性便会变弱，在线产品更是逃不脱对厂商的依赖，一旦厂商缺钱改成了订阅付费模式，除了叫苦不迭也只能乖乖付钱，而如果厂商保持免费，那也有可能通过其他方式比如出售隐私增加广告来保持盈利。其实对于这些，Emacs的Org mode都可以胜任。
-Emacs是什么呢？最简单的解释，便是Emacs是一种基于Lisp的具有可扩展性的文本编辑器。文本编辑器，意味着平时不管在上面记录什么，大小都以kb计，最基础的Dropbox plan就能轻松对其进行云端备份，哪怕在一个没有Emacs的环境，也能用任何文本编辑器打开使用Emacs处理的文档。而Lisp的强扩展性，则赋予Emacs一切可能，你可以用它记笔记（Org-mode），管理文件（Dired），编辑远程档案（Tramp），版本控制（Magit），收发邮件（Gnus），用作IDE，甚至上网发推。有一个著名的说法称Emacs为操作系统，倒也并非言过其实。不过我也不至于真的将Emacs当操作系统使用，毕竟我们已经一只脚跨入了Meta时代（狗头）。不过Emacs，尤其是无人可出其右的Org-mode，也确实渗透了我的学习、工作、生活。
-那么，Org-mode又是什么呢？Org-mode是Emacs的一种支持内容分级显示的主编辑模式。在Emacs中，每种主模式都有特殊的Emacs Lisp变量和函数来使处理文档变得更便捷，而Org作为Emacs特有的文本格式，更是有着非常出色的原生支持。其他主流编辑器（Vim, Atom, VSCode, Sublime）也都有对应相应的Org模式，但只能支持基础的语法高亮功能。
-Org-mode的宣传语就是 your life in plain text，可以说很好地概括了Org-mode的能力。最重要的一点是Org是纯文本文档，具有体积小结构简单的优点。在此我先简单介绍一下Org-mode的特性，就不一一展开了。毕竟如果展开来讲，那可能得出一个系列文章。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://blindwith.science/2021/11/467.html/" />
-<meta property="article:published_time" content="2021-11-12T23:14:00-08:00" />
-<meta property="article:modified_time" content="2021-11-17T23:11:17-08:00" />
-<meta itemprop="name" content="继续吹一波Org-mode">
-<meta itemprop="description" content="最近Notion大火，从二手买卖到菜谱分享，隔三差五就会看到它的推荐和应用。出于好奇，我也去开了个帐户用了一番，确实不错，然而我对其持谨慎态度。一方面，作为在线产品，它的使用场景灵活，但又会受网络限制，假如所在单位或者地区禁止使用，那就徒增烦恼。而且，它并非开源产品，公司一旦跑路或者改变其业务重心，那会造成非常高的转移成本，前车之鉴便有Evernote。另一方面，它作为一个笔记产品，架构强大，也更复杂，有着较高的学习成本，也许用起来很sexy，但也会让人疑惑在有更好替代品的情况下，是否值得花费这么多时间来学习使用这个产品。
+<meta property="og:url" content="http://blindwith.science/2021/11/467.html/">
+  <meta property="og:site_name" content="Blind with Science">
+  <meta property="og:title" content="继续吹一波Org-mode">
+  <meta property="og:description" content="最近Notion大火，从二手买卖到菜谱分享，隔三差五就会看到它的推荐和应用。出于好奇，我也去开了个帐户用了一番，确实不错，然而我对其持谨慎态度。一方面，作为在线产品，它的使用场景灵活，但又会受网络限制，假如所在单位或者地区禁止使用，那就徒增烦恼。而且，它并非开源产品，公司一旦跑路或者改变其业务重心，那会造成非常高的转移成本，前车之鉴便有Evernote。另一方面，它作为一个笔记产品，架构强大，也更复杂，有着较高的学习成本，也许用起来很sexy，但也会让人疑惑在有更好替代品的情况下，是否值得花费这么多时间来学习使用这个产品。
 说了这么多，其实我只是想引出这个更好的替代品，也就是我用了多年的Emacs。
 在数字化时代，我们需要用到各种各样的工具来记录管理我们的生活，这也催生了各种工具和网站。比如日程管理有Things、Bear等，文献管理软件有Endnote、NoteExpress等，记帐软件有随手记、Splitwise等，编辑器有VSCode、Atom等，博客写作软件有Typora、MWeb等，菜谱有下厨房。但是工具太多协作性便会变弱，在线产品更是逃不脱对厂商的依赖，一旦厂商缺钱改成了订阅付费模式，除了叫苦不迭也只能乖乖付钱，而如果厂商保持免费，那也有可能通过其他方式比如出售隐私增加广告来保持盈利。其实对于这些，Emacs的Org mode都可以胜任。
 Emacs是什么呢？最简单的解释，便是Emacs是一种基于Lisp的具有可扩展性的文本编辑器。文本编辑器，意味着平时不管在上面记录什么，大小都以kb计，最基础的Dropbox plan就能轻松对其进行云端备份，哪怕在一个没有Emacs的环境，也能用任何文本编辑器打开使用Emacs处理的文档。而Lisp的强扩展性，则赋予Emacs一切可能，你可以用它记笔记（Org-mode），管理文件（Dired），编辑远程档案（Tramp），版本控制（Magit），收发邮件（Gnus），用作IDE，甚至上网发推。有一个著名的说法称Emacs为操作系统，倒也并非言过其实。不过我也不至于真的将Emacs当操作系统使用，毕竟我们已经一只脚跨入了Meta时代（狗头）。不过Emacs，尤其是无人可出其右的Org-mode，也确实渗透了我的学习、工作、生活。
 那么，Org-mode又是什么呢？Org-mode是Emacs的一种支持内容分级显示的主编辑模式。在Emacs中，每种主模式都有特殊的Emacs Lisp变量和函数来使处理文档变得更便捷，而Org作为Emacs特有的文本格式，更是有着非常出色的原生支持。其他主流编辑器（Vim, Atom, VSCode, Sublime）也都有对应相应的Org模式，但只能支持基础的语法高亮功能。
 Org-mode的宣传语就是 your life in plain text，可以说很好地概括了Org-mode的能力。最重要的一点是Org是纯文本文档，具有体积小结构简单的优点。在此我先简单介绍一下Org-mode的特性，就不一一展开了。毕竟如果展开来讲，那可能得出一个系列文章。">
-<meta itemprop="datePublished" content="2021-11-12T23:14:00-08:00" />
-<meta itemprop="dateModified" content="2021-11-17T23:11:17-08:00" />
-<meta itemprop="wordCount" content="4260">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-11-12T23:14:00-08:00">
+    <meta property="article:modified_time" content="2021-11-17T23:11:17-08:00">
+    <meta property="article:tag" content="Org-Mode">
+    <meta property="article:tag" content="Emacs">
 
-
-
-<meta itemprop="keywords" content="Org-mode,Emacs," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="继续吹一波Org-mode"/>
-<meta name="twitter:description" content="最近Notion大火，从二手买卖到菜谱分享，隔三差五就会看到它的推荐和应用。出于好奇，我也去开了个帐户用了一番，确实不错，然而我对其持谨慎态度。一方面，作为在线产品，它的使用场景灵活，但又会受网络限制，假如所在单位或者地区禁止使用，那就徒增烦恼。而且，它并非开源产品，公司一旦跑路或者改变其业务重心，那会造成非常高的转移成本，前车之鉴便有Evernote。另一方面，它作为一个笔记产品，架构强大，也更复杂，有着较高的学习成本，也许用起来很sexy，但也会让人疑惑在有更好替代品的情况下，是否值得花费这么多时间来学习使用这个产品。
+  <meta itemprop="name" content="继续吹一波Org-mode">
+  <meta itemprop="description" content="最近Notion大火，从二手买卖到菜谱分享，隔三差五就会看到它的推荐和应用。出于好奇，我也去开了个帐户用了一番，确实不错，然而我对其持谨慎态度。一方面，作为在线产品，它的使用场景灵活，但又会受网络限制，假如所在单位或者地区禁止使用，那就徒增烦恼。而且，它并非开源产品，公司一旦跑路或者改变其业务重心，那会造成非常高的转移成本，前车之鉴便有Evernote。另一方面，它作为一个笔记产品，架构强大，也更复杂，有着较高的学习成本，也许用起来很sexy，但也会让人疑惑在有更好替代品的情况下，是否值得花费这么多时间来学习使用这个产品。
 说了这么多，其实我只是想引出这个更好的替代品，也就是我用了多年的Emacs。
 在数字化时代，我们需要用到各种各样的工具来记录管理我们的生活，这也催生了各种工具和网站。比如日程管理有Things、Bear等，文献管理软件有Endnote、NoteExpress等，记帐软件有随手记、Splitwise等，编辑器有VSCode、Atom等，博客写作软件有Typora、MWeb等，菜谱有下厨房。但是工具太多协作性便会变弱，在线产品更是逃不脱对厂商的依赖，一旦厂商缺钱改成了订阅付费模式，除了叫苦不迭也只能乖乖付钱，而如果厂商保持免费，那也有可能通过其他方式比如出售隐私增加广告来保持盈利。其实对于这些，Emacs的Org mode都可以胜任。
 Emacs是什么呢？最简单的解释，便是Emacs是一种基于Lisp的具有可扩展性的文本编辑器。文本编辑器，意味着平时不管在上面记录什么，大小都以kb计，最基础的Dropbox plan就能轻松对其进行云端备份，哪怕在一个没有Emacs的环境，也能用任何文本编辑器打开使用Emacs处理的文档。而Lisp的强扩展性，则赋予Emacs一切可能，你可以用它记笔记（Org-mode），管理文件（Dired），编辑远程档案（Tramp），版本控制（Magit），收发邮件（Gnus），用作IDE，甚至上网发推。有一个著名的说法称Emacs为操作系统，倒也并非言过其实。不过我也不至于真的将Emacs当操作系统使用，毕竟我们已经一只脚跨入了Meta时代（狗头）。不过Emacs，尤其是无人可出其右的Org-mode，也确实渗透了我的学习、工作、生活。
 那么，Org-mode又是什么呢？Org-mode是Emacs的一种支持内容分级显示的主编辑模式。在Emacs中，每种主模式都有特殊的Emacs Lisp变量和函数来使处理文档变得更便捷，而Org作为Emacs特有的文本格式，更是有着非常出色的原生支持。其他主流编辑器（Vim, Atom, VSCode, Sublime）也都有对应相应的Org模式，但只能支持基础的语法高亮功能。
-Org-mode的宣传语就是 your life in plain text，可以说很好地概括了Org-mode的能力。最重要的一点是Org是纯文本文档，具有体积小结构简单的优点。在此我先简单介绍一下Org-mode的特性，就不一一展开了。毕竟如果展开来讲，那可能得出一个系列文章。"/>
+Org-mode的宣传语就是 your life in plain text，可以说很好地概括了Org-mode的能力。最重要的一点是Org是纯文本文档，具有体积小结构简单的优点。在此我先简单介绍一下Org-mode的特性，就不一一展开了。毕竟如果展开来讲，那可能得出一个系列文章。">
+  <meta itemprop="datePublished" content="2021-11-12T23:14:00-08:00">
+  <meta itemprop="dateModified" content="2021-11-17T23:11:17-08:00">
+  <meta itemprop="wordCount" content="4171">
+  <meta itemprop="keywords" content="Org-Mode,Emacs">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="继续吹一波Org-mode">
+  <meta name="twitter:description" content="最近Notion大火，从二手买卖到菜谱分享，隔三差五就会看到它的推荐和应用。出于好奇，我也去开了个帐户用了一番，确实不错，然而我对其持谨慎态度。一方面，作为在线产品，它的使用场景灵活，但又会受网络限制，假如所在单位或者地区禁止使用，那就徒增烦恼。而且，它并非开源产品，公司一旦跑路或者改变其业务重心，那会造成非常高的转移成本，前车之鉴便有Evernote。另一方面，它作为一个笔记产品，架构强大，也更复杂，有着较高的学习成本，也许用起来很sexy，但也会让人疑惑在有更好替代品的情况下，是否值得花费这么多时间来学习使用这个产品。
+说了这么多，其实我只是想引出这个更好的替代品，也就是我用了多年的Emacs。
+在数字化时代，我们需要用到各种各样的工具来记录管理我们的生活，这也催生了各种工具和网站。比如日程管理有Things、Bear等，文献管理软件有Endnote、NoteExpress等，记帐软件有随手记、Splitwise等，编辑器有VSCode、Atom等，博客写作软件有Typora、MWeb等，菜谱有下厨房。但是工具太多协作性便会变弱，在线产品更是逃不脱对厂商的依赖，一旦厂商缺钱改成了订阅付费模式，除了叫苦不迭也只能乖乖付钱，而如果厂商保持免费，那也有可能通过其他方式比如出售隐私增加广告来保持盈利。其实对于这些，Emacs的Org mode都可以胜任。
+Emacs是什么呢？最简单的解释，便是Emacs是一种基于Lisp的具有可扩展性的文本编辑器。文本编辑器，意味着平时不管在上面记录什么，大小都以kb计，最基础的Dropbox plan就能轻松对其进行云端备份，哪怕在一个没有Emacs的环境，也能用任何文本编辑器打开使用Emacs处理的文档。而Lisp的强扩展性，则赋予Emacs一切可能，你可以用它记笔记（Org-mode），管理文件（Dired），编辑远程档案（Tramp），版本控制（Magit），收发邮件（Gnus），用作IDE，甚至上网发推。有一个著名的说法称Emacs为操作系统，倒也并非言过其实。不过我也不至于真的将Emacs当操作系统使用，毕竟我们已经一只脚跨入了Meta时代（狗头）。不过Emacs，尤其是无人可出其右的Org-mode，也确实渗透了我的学习、工作、生活。
+那么，Org-mode又是什么呢？Org-mode是Emacs的一种支持内容分级显示的主编辑模式。在Emacs中，每种主模式都有特殊的Emacs Lisp变量和函数来使处理文档变得更便捷，而Org作为Emacs特有的文本格式，更是有着非常出色的原生支持。其他主流编辑器（Vim, Atom, VSCode, Sublime）也都有对应相应的Org模式，但只能支持基础的语法高亮功能。
+Org-mode的宣传语就是 your life in plain text，可以说很好地概括了Org-mode的能力。最重要的一点是Org是纯文本文档，具有体积小结构简单的优点。在此我先简单介绍一下Org-mode的特性，就不一一展开了。毕竟如果展开来讲，那可能得出一个系列文章。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -163,7 +166,7 @@ Org-mode的宣传语就是 your life in plain text，可以说很好地概括了
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 4260 字 </span>
+          <span class="more-meta"> 约 4171 字 </span>
           <span class="more-meta"> 预计阅读 9 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -185,7 +188,7 @@ Org-mode的宣传语就是 your life in plain text，可以说很好地概括了
   </div>
 </div>
   <div class="post-outdated">
-    <div class="hint">
+    <div class="warn">
       <p>【注意】最后更新于 <span class="timeago" datetime="2021-11-17T23:11:17" title="November 17, 2021">November 17, 2021</span>，文中内容可能已过时，请谨慎使用。</p>
     </div>
   </div>
@@ -200,82 +203,35 @@ Org-mode的宣传语就是 your life in plain text，可以说很好地概括了
 <ul>
 <li>标记语言：Org-mode有自己的标记语言，虽然和最流行的Markdown不同，但是可以通过pandoc进行双向转换。那为什么不用Markdown呢，因为标记只是Org-mode最基础的特性。</li>
 </ul>
-<!-- raw HTML omitted -->
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org">*加粗*
-<span class="ge">/斜体/</span>
-<span class="gl">_下划线_</span>
-<span class="nc">=逐字=</span>
-<span class="nc">~代码~</span>
-<span class="gd">+删除线+</span>
-[[<span class="na">https://blindwith.science</span>][<span class="nt">链接</span>]]
-[[<span class="na">file:文件.txt</span>]]
-</code></pre></td></tr></table>
-</div>
-</div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-org" data-lang="org"><span style="display:flex;"><span>*加粗*
+</span></span><span style="display:flex;"><span><span style="font-style:italic">/斜体/</span>
+</span></span><span style="display:flex;"><span>_下划线_
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">=逐字=</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">~代码~</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+删除线+</span>
+</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">https://blindwith.science</span>][<span style="color:#f92672">链接</span>]]
+</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">file:文件.txt</span>]]
+</span></span></code></pre></div><ul>
 <li>树状结构：Org-mode的一大特色就是采用星号来标定所属层级，可以通过 <code>C-c *</code> 和 <code>C-c -</code> 快速地转换为大纲或列表，并可通过Tab键切换是否折叠显示层级、列表和代码块，还可以通过 <code>C-c C-n/p/f/b/u</code> 这样来浏览同级或上级标题。在大纲处还可以通过 <code>C-c C-c</code> 来加入标签，方便跳转。这样哪怕在一篇Org文档中记了几万行文字，也可以轻松导览到所需内容。</li>
 </ul>
-<!-- raw HTML omitted -->
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="gh">*</span><span class="gs"> 一级大纲</span>
-<span class="gu">**</span> 二级大纲
-</code></pre></td></tr></table>
-</div>
-</div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-org" data-lang="org"><span style="display:flex;"><span>*<span style="font-weight:bold"> 一级大纲</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">**</span> 二级大纲
+</span></span></code></pre></div><ul>
 <li>表格：Org-mode采用纯文本的方式管理表格，通过Tab键补完表格并调整大小。而且它还支持表格运算，可以通过 <code>C-c '</code> 来插入公式。</li>
 </ul>
-<!-- raw HTML omitted -->
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="s">| a | b | a + b |</span>
-<span class="s">| 1 | 2 |     3 |</span>
-<span class="cs">#+TBLFM</span><span class="c">: $3=$1+$2</span>
-</code></pre></td></tr></table>
-</div>
-</div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-org" data-lang="org"><span style="display:flex;"><span><span style="color:#e6db74">| a | b | a + b |</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">| 1 | 2 |     3 |</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+TBLFM</span><span style="color:#75715e">: $3=$1+$2</span>
+</span></span></code></pre></div><ul>
 <li>文学编程：Org-mode最令人心动的则是Babel功能，可以直接在Org文件中通过 <code>C-c C-c</code> 直接运行代码块，并直接储存结果。由于Org-mode是纯文本文件，这可比Jupyter-notebook好用多了。</li>
 </ul>
-<!-- raw HTML omitted -->
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="c">#+BEGIN_SRC </span><span class="cs">python</span><span class="c"> :results output
-</span><span class="c"></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
-<span class="c">#+END_SRC</span>
-
-<span class="cs">#+RESULTS</span><span class="c">:</span>
-: Hello World!
-</code></pre></td></tr></table>
-</div>
-</div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-org" data-lang="org"><span style="display:flex;"><span><span style="color:#75715e">#+BEGIN_SRC </span><span style="color:#75715e">python</span><span style="color:#75715e"> :results output
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>print(<span style="color:#e6db74">&#39;Hello World!&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+END_SRC</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+RESULTS</span><span style="color:#75715e">:</span>
+</span></span><span style="display:flex;"><span>: Hello World!
+</span></span></code></pre></div><ul>
 <li>导出发布：Org作为纯文本文档，可以很方便地分享给任何人用任何文本编辑器来查看内容。但是如果朋友是见到奇怪后缀就会发怵的人，也可以通过 <code>C-c C-e</code> 将文档导出为pdf, odt, markdown或网页。</li>
 <li>任务管理：Org-mode中可以很方便地通过 <code>S-&lt;left&gt;</code> 或 <code>S-&lt;right&gt;</code> 来修改大纲或列表的任务状态来管理代办事项，添加 <code>[%]</code> 和 <code>[/]</code> 来跟踪任务进度，通过 <code>[ ]</code> 来标记任务完成情况，而且支持自定义不同级别的任务状态（默认有TODO和DONE）。</li>
 <li>日程管理：Org-mode的日程管理功能也非常优异，可以通过 <code>C-c [</code> 来将当前文件加入任务清单，通过 <code>C-c C-s</code> 和 <code>C-c C-d</code> 来设置计划时间和截止时间，通过 <code>C-c C-x C-i</code> 和 <code>C-c C-x C-o</code> 来记录在每项任务上的时间花费。另外，还可以通过 <code>C-c a a</code> 进入日程表视图，通过移动光标来显示每个条目所在的源文件。</li>
@@ -284,200 +240,93 @@ Org-mode的宣传语就是 your life in plain text，可以说很好地概括了
 <p>那么这些特性在实际生活中有什么用呢？用处可大了。在此我便抛砖引玉，聊一聊我都用Emacs和Org-mode来做什么。</p>
 <h2 id="文献记录-org-ref">文献记录 org-ref</h2>
 <p>读博的时候，看Paper基本上是每日必需。我虽然懒惰，但是也读了不少文献。在国内的时候我用过NoteExpress，来美国后便用了Endnote，虽然都是成熟产品，但还是有很多问题。比如导入pdf操作不是很方便，而且还会为pdf强制重命名，我离开软件就无法分辨这些pdf谁才是谁。而且这些软件价格普遍不便宜，虽然学校图书馆会提供免费使用的版本，但是还是让人担心毕业之后怎么办。另外，这些软件只能写一些纯文本的笔记，有的时候想写个化学式就无处下手。而基于Org-mode的<a href="https://github.com/jkitchin/org-ref">org-ref</a>，不仅提供了Endnote所有我需要的功能，还完美解决了这些痛点。这好像是CMU化学系的一个教授开发的，他们组似乎会直接使用Org-mode写paper，所以理科文献记录的痛点他们都会考虑到。需要用doi或者arxiv导入文献？没问题！想要写个化学式或者数学表达式？没问题！想要自动导入pdf并关联打开？没问题！想要使用多个bibtex来和Latex联动？没问题！想要使用标签或者交叉引用？没问题！这个工具真的是极大地节约了我花在文献综述上的时间。而使用起来也很简单， <code>C-c ]</code> 即可插入引用，拖pdf或者 <code>M-x doi-add-bibtex-entry</code> 即可添加引用。以下是一个例子：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="gh">*</span><span class="gs"> 文献</span>
-<span class="gu">**</span><span class="err"> TODO</span> [#A] 2009 - Imp Dehydrogenase: Structure, Mechanism, and Inhibition :review:
-<span class="c"> :PROPERTIES:
-</span><span class="c"></span><span class="cs">  :Custom_ID: hedstrom-2009-cr
-</span><span class="cs">  :AUTHOR: Lizbeth Hedstrom
-</span><span class="cs">  :JOURNAL: Chemical Reviews
-</span><span class="cs">  :YEAR: 2009
-</span><span class="cs">  :VOLUME: 109
-</span><span class="cs">  :PAGES: 2903-2928
-</span><span class="cs">  :DOI: 10.1021/cr900021w
-</span><span class="cs">  :URL: https://doi.org/10.1021/cr900021w
-</span><span class="cs"></span><span class="c"> :END:</span>
-
-cite:hedstrom-2009-cr
-
-最棒的IMPDH综述！
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="面试准备">面试准备</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-org" data-lang="org"><span style="display:flex;"><span>*<span style="font-weight:bold"> 文献</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">**</span><span style="color:#960050;background-color:#1e0010"> TODO</span> [#A] 2009 - Imp Dehydrogenase: Structure, Mechanism, and Inhibition :review:
+</span></span><span style="display:flex;"><span><span style="color:#75715e"> :PROPERTIES:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">  :Custom_ID: hedstrom-2009-cr
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  :AUTHOR: Lizbeth Hedstrom
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  :JOURNAL: Chemical Reviews
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  :YEAR: 2009
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  :VOLUME: 109
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  :PAGES: 2903-2928
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  :DOI: 10.1021/cr900021w
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  :URL: https://doi.org/10.1021/cr900021w
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e"> :END:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cite:hedstrom-2009-cr
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>最棒的IMPDH综述！
+</span></span></code></pre></div><h2 id="面试准备">面试准备</h2>
 <p>我转行找工作的时候，Org-mode也派上了大用场。它特别适合用来刷题。可以用超链接来跳转原题页面，用任务管理来看自己的刷题进度，高亮重点题目，用日程来安排每日刷题时间，也可以加标签来做专题复习，最棒的是每道题写完后可以直接运行代码，检查对错。这样可以将所有刷过的题目和解答都放在一个文档中，方便浏览复习。我的刷题文档大概长这样：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="gh">*</span><span class="gs"> NEXT Leetcode [1/1]</span>
-<span class="c">  SCHEDULED: </span><span class="cs">&lt;2021-11-03 Wed 22:00 .+1w&gt;</span>
-<span class="c">  :PROPERTIES:
-</span><span class="c"></span><span class="cs">  :STYLE: habit
-</span><span class="cs"></span><span class="c">  :END:</span>
-<span class="gu">**</span> NEXT [[https://leetcode.com/problems/two-sum/][1. Two Sum]]                               :Array:HashTable:Amazon:%:
-<span class="c">#+BEGIN_EXAMPLE</span>
-Given an array of integers, return indices of the two numbers such that they add up to a specific target.
-
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
-Example:
-
-Given nums = [2, 7, 11, 15], target = 9,
-
-Because nums[0] + nums[1] = 2 + 7 = 9,
-return [0, 1].
-<span class="c">#+END_EXAMPLE</span>
-<span class="gu">***</span> Solution
-<span class="c">#+BEGIN_SRC </span><span class="cs">python</span><span class="c">
-</span><span class="c"></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">twoSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-        <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
-            <span class="k">if</span> <span class="n">target</span> <span class="o">-</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
-                <span class="k">return</span> <span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">target</span> <span class="o">-</span> <span class="n">num</span><span class="p">],</span> <span class="n">i</span><span class="p">)</span>
-            <span class="n">d</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
-<span class="c">#+END_SRC</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>而当进行面试的时候，Org-mode也特别适合用来放各种面试相关的准备材料，跟踪各个公司的进度，记录各个公司的面试经历。我将每个公司单列一级，并为任务状态增加了Screen, Tech, Onsite, Reject和Offer几项，这样可以更直观地显示每个公司到了那一步。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-org" data-lang="org"><span style="display:flex;"><span>*<span style="font-weight:bold"> NEXT Leetcode [1/1]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">  SCHEDULED: </span><span style="color:#75715e">&lt;2021-11-03 Wed 22:00 .+1w&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">  :PROPERTIES:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">  :STYLE: habit
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">  :END:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">**</span> NEXT [[https://leetcode.com/problems/two-sum/][1. Two Sum]]                               :Array:HashTable:Amazon:%:
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+BEGIN_EXAMPLE</span>
+</span></span><span style="display:flex;"><span>Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>You may assume that each input would have exactly one solution, and you may not use the same element twice.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Example:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Given nums = [2, 7, 11, 15], target = 9,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Because nums[0] + nums[1] = 2 + 7 = 9,
+</span></span><span style="display:flex;"><span>return [0, 1].
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+END_EXAMPLE</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">***</span> Solution
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+BEGIN_SRC </span><span style="color:#75715e">python</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">twoSum</span>(self, nums: List[int], target: int) <span style="color:#f92672">-&gt;</span> List[int]:
+</span></span><span style="display:flex;"><span>        d <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i, num <span style="color:#f92672">in</span> enumerate(nums):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> target <span style="color:#f92672">-</span> num <span style="color:#f92672">in</span> d:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> (d[target <span style="color:#f92672">-</span> num], i)
+</span></span><span style="display:flex;"><span>            d[num] <span style="color:#f92672">=</span> i
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+END_SRC</span>
+</span></span></code></pre></div><p>而当进行面试的时候，Org-mode也特别适合用来放各种面试相关的准备材料，跟踪各个公司的进度，记录各个公司的面试经历。我将每个公司单列一级，并为任务状态增加了Screen, Tech, Onsite, Reject和Offer几项，这样可以更直观地显示每个公司到了那一步。</p>
 <h2 id="工作笔记">工作笔记</h2>
 <p>我很喜欢给我所负责的项目做记录。在实验室的时候，大家都用耐酸碱且能经历时间考验的厚重的实验记录本，但是我总觉得纸质的东西虽然方便翻找，但还是容易丢失毁损。所以我都会用Org-mode整理我的工作笔记。等工作以后，我也依然保持着用Org-mode记录工作的习惯。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="gh">*</span><span class="gs"> 会议记录</span>
-<span class="gu">**</span> 老板
-1:1记录
-<span class="gh">*</span><span class="gs"> 项目记录</span>
-<span class="gu">**</span> 项目甲
-我对项目甲做了什么
-<span class="gu">**</span> 项目乙
-我对项目乙做了什么
-<span class="gh">*</span><span class="gs"> 实验/工作日志</span>
-<span class="gu">**</span> Week 1-2 / Sprint A
-<span class="gu">***</span> [2021-11-03 Wed]
-<span class="k">- [X]</span> 写博客
-</code></pre></td></tr></table>
-</div>
-</div><p>Org-mode的文学编程在这儿也特别好用。一方面可以将一些code snippets以及diff和自己的想法方便地记录，另一方面也可以记录很多adhoc操作。我平时会有一些terminal上的操作和数据库的操作，比如给别人权限，query一个小table，或者查看数据库的状态。这些小操作单独存档很麻烦也没必要，但是如果不记录的话过几天可能就不记得自己做了什么。这时我就会写在我的工作笔记上，然后直接运行，这样运行结果也会一同保存在文档中，非常方便。这是一个直接query数据库的例子：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="gh">*</span><span class="gs"> SQL</span>
-<span class="c">  :PROPERTIES:
-</span><span class="c"></span><span class="cs">  :header-args:sql: :engine postgresql :dbhost host :dbuser user :dbpassword pwd :database dbname
-</span><span class="cs">  :header-args: :exports both
-</span><span class="cs"></span><span class="c">  :END:</span>
-<span class="gu">**</span> query table_a
-<span class="c">#+BEGIN_SRC </span><span class="cs">sql</span><span class="c">
-</span><span class="c"></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">table_a</span> <span class="k">LIMIT</span> <span class="mi">10</span>
-<span class="c">#+END_SRC</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="写博客-ox-hugo">写博客 ox-hugo</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-org" data-lang="org"><span style="display:flex;"><span>*<span style="font-weight:bold"> 会议记录</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">**</span> 老板
+</span></span><span style="display:flex;"><span>1:1记录
+</span></span><span style="display:flex;"><span>*<span style="font-weight:bold"> 项目记录</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">**</span> 项目甲
+</span></span><span style="display:flex;"><span>我对项目甲做了什么
+</span></span><span style="display:flex;"><span><span style="color:#75715e">**</span> 项目乙
+</span></span><span style="display:flex;"><span>我对项目乙做了什么
+</span></span><span style="display:flex;"><span>*<span style="font-weight:bold"> 实验/工作日志</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">**</span> Week 1-2 / Sprint A
+</span></span><span style="display:flex;"><span><span style="color:#75715e">***</span> [2021-11-03 Wed]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [X]</span> 写博客
+</span></span></code></pre></div><p>Org-mode的文学编程在这儿也特别好用。一方面可以将一些code snippets以及diff和自己的想法方便地记录，另一方面也可以记录很多adhoc操作。我平时会有一些terminal上的操作和数据库的操作，比如给别人权限，query一个小table，或者查看数据库的状态。这些小操作单独存档很麻烦也没必要，但是如果不记录的话过几天可能就不记得自己做了什么。这时我就会写在我的工作笔记上，然后直接运行，这样运行结果也会一同保存在文档中，非常方便。这是一个直接query数据库的例子：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-org" data-lang="org"><span style="display:flex;"><span>*<span style="font-weight:bold"> SQL</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">  :PROPERTIES:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">  :header-args:sql: :engine postgresql :dbhost host :dbuser user :dbpassword pwd :database dbname
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  :header-args: :exports both
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">  :END:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">**</span> query table_a
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+BEGIN_SRC </span><span style="color:#75715e">sql</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> table_a <span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+END_SRC</span>
+</span></span></code></pre></div><h2 id="写博客-ox-hugo">写博客 ox-hugo</h2>
 <p>我几年前从hexo转投hugo后，就一直以hugo作为我博客的后端。Hugo中，每篇博客都是一个Markdown文档。如果博客数量不多的话，管理起来还挺方便的。但是我有几百篇博客，哪怕我用一个高效的方式去命名每篇博客，真找起来也比较头疼。而我也正是由于几百篇博客在hexo上渲染太慢才转投hugo的，以前还因为某tag系统有上限而给其file过bug。</p>
 <p>解决方案则是使用Org-mode，我可以方便地在Org-mode里写博客，将所有博客都放在一个Org-mode中。但是怎么将一个Org文档到处为几百个Markdown文件呢？有一个很好用的插件叫<a href="https://ox-hugo.scripter.co/">ox-hugo</a>。有了这个轮子，我可以将任意大纲级别下的日记导出为Hugo需要的markdown格式。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="gh">*</span><span class="gs"> 博客</span>
-<span class="c">  :PROPERTIES:
-</span><span class="c"></span><span class="cs">  :EXPORT_HUGO_SECTION: post
-</span><span class="cs"></span><span class="c">  :END:</span>
-<span class="gu">**</span> 技术                                                       :@技术宅:
-<span class="gu">***</span><span class="sr"> DONE</span> 继续吹一波Org-mode                                 :Org_mode:Emacs:
-<span class="c">    :PROPERTIES:
-</span><span class="c"></span><span class="cs">    :EXPORT_FILE_NAME: 20211108-org-mode
-</span><span class="cs">    :EXPORT_HUGO_SLUG: 466.html
-</span><span class="cs">    :EXPORT_HUGO_WEIGHT: -466
-</span><span class="cs"></span><span class="c">    :END:</span>
-最近Notion大火，从二手买卖到菜谱分享，隔三差五就会看到它的推荐和应用。……
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="记帐-beancount">记帐 beancount</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-org" data-lang="org"><span style="display:flex;"><span>*<span style="font-weight:bold"> 博客</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">  :PROPERTIES:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">  :EXPORT_HUGO_SECTION: post
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">  :END:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">**</span> 技术                                                       :@技术宅:
+</span></span><span style="display:flex;"><span><span style="color:#75715e">***</span><span style="color:#e6db74"> DONE</span> 继续吹一波Org-mode                                 :Org_mode:Emacs:
+</span></span><span style="display:flex;"><span><span style="color:#75715e">    :PROPERTIES:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">    :EXPORT_FILE_NAME: 20211108-org-mode
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    :EXPORT_HUGO_SLUG: 466.html
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    :EXPORT_HUGO_WEIGHT: -466
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">    :END:</span>
+</span></span><span style="display:flex;"><span>最近Notion大火，从二手买卖到菜谱分享，隔三差五就会看到它的推荐和应用。……
+</span></span></code></pre></div><h2 id="记帐-beancount">记帐 beancount</h2>
 <p>这个我在之前的三部曲(<a href="https://blindwith.science/2020/12/461.html/">1</a> <a href="https://blindwith.science/2021/01/462.html/">2</a> <a href="https://blindwith.science/2021/01/463.html/">3</a>)里已经详细提过了，Emacs可以使用beancount-mode轻松处理Beancount文件，在此便不赘述。</p>
     </div>
 
@@ -565,7 +414,7 @@ return [0, 1].
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   width="28" height="28"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
       </a>
-  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -587,7 +436,7 @@ return [0, 1].
   <span class="copyright-year">
     &copy; 
     2005 - 
-    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
   </span>
 </div>
 
@@ -603,7 +452,7 @@ return [0, 1].
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script>
     var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -611,19 +460,8 @@ return [0, 1].
 
 
 
-<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="../../../js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-86469737-1', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

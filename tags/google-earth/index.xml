@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Google-earth on Blind with Science</title>
+    <title>Google-Earth on Blind with Science</title>
     <link>http://blindwith.science/tags/google-earth/</link>
-    <description>Recent content in Google-earth on Blind with Science</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Google-Earth on Blind with Science</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Sun, 31 Jul 2005 16:21:00 -0700</lastBuildDate><atom:link href="http://blindwith.science/tags/google-earth/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Jan 2021 17:23:09 -0800</lastBuildDate>
+    <atom:link href="http://blindwith.science/tags/google-earth/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>eyes in Nazca,Peru</title>
       <link>http://blindwith.science/2005/07/3.html/</link>
       <pubDate>Sun, 31 Jul 2005 16:21:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2005/07/3.html/</guid>
-      <description>ziyunch @ Blogbus 今天用google earth想看纳斯卡线条的，结果没找到。却发现了个很奇怪的东东。纳斯卡边上竟有一双大眼睛&amp;hellip;&amp;helli</description>
+      <description>&lt;p&gt;&lt;em&gt;ziyunch @ Blogbus&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;今天用google earth想看纳斯卡线条的，结果没找到。却发现了个很奇怪的东东。纳斯卡边上竟有一双大眼睛&amp;hellip;&amp;hellip;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -4,74 +4,38 @@
     <title>Beancount on Blind with Science</title>
     <link>http://blindwith.science/tags/beancount/</link>
     <description>Recent content in Beancount on Blind with Science</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Mon, 18 Jan 2021 18:33:00 -0800</lastBuildDate><atom:link href="http://blindwith.science/tags/beancount/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Sep 2021 00:03:42 -0700</lastBuildDate>
+    <atom:link href="http://blindwith.science/tags/beancount/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Beancount 记帐小进阶之三–常见场景</title>
       <link>http://blindwith.science/2021/01/463.html/</link>
       <pubDate>Mon, 18 Jan 2021 18:33:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/2021/01/463.html/</guid>
       <description>&lt;p&gt;书接上文，这次分享一下我对工资单，共享帐簿以及医疗帐单，炒币这些常用场景的处理方式。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Beancount 记帐小进阶之二–优化导入</title>
       <link>http://blindwith.science/2021/01/462.html/</link>
       <pubDate>Sun, 03 Jan 2021 18:33:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/2021/01/462.html/</guid>
       <description>&lt;p&gt;上文中我将本地环境重新配置，又加上了远程记帐的功能。此文主要讨论我会如何优化帐目账本，并批量从银行帐单导入帐务。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Beancount 记帐小进阶之一–环境配置</title>
       <link>http://blindwith.science/2020/12/461.html/</link>
       <pubDate>Sun, 27 Dec 2020 18:33:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/2020/12/461.html/</guid>
-      <description>&lt;p&gt;记帐是我的一个习惯，也是爱好。自&lt;a href=&#34;https://blindwith.science/2019/07/444.html/&#34;&gt;Emacs 上使用 Beancount 记帐&lt;/a&gt;起，我改用 Beancount 记帐已有一年有余。Beancount 简便轻巧，帐目亦是非常清晰。通过其前端 fava 对帐目进行可视化后，还能获得很多平时不会注意到的信息。下图是我 2020 年的支出，很明显地可以看到在疫情之下，我的支出以解决生理与安全需求为主，也可以看到由于支出大幅缩减，税居然占了我去年支出的一半。&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src=&#34;../../ox-hugo/fava_1.png&#34;/&gt; 
-&lt;/figure&gt;
-
-&lt;p&gt;下图则是我自记帐以来在电影方面的支出，可以看到 2018-2019 年由于毕业找工作，出现了一个很大的平台期，也可以看到自今年三月疫情爆发以来，我再也没有去过电影院。&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src=&#34;../../ox-hugo/fava_2.png&#34;/&gt; 
-&lt;/figure&gt;
-
-&lt;p&gt;不过这一年来，我开始工作，也和女票同住，出现了更多类型的帐目。而这半年因新冠宅家，花销颇少，反而便懒于记帐了，一不小心便产生了好几个月的 lag，如何高效地记录各种类型的帐目反而成了一个问题。Beancount 虽然用的人不少，可是官方 document 写得非常硬核，中文资源又多浅尝辄止，我越是想要简化自己的流程，越是产生了更多的疑惑。最近花了圣诞元旦 MLK 三个长周末，总算将各种疑惑都理清了。&lt;/p&gt;</description>
+      <description>&lt;p&gt;记帐是我的一个习惯，也是爱好。自&lt;a href=&#34;https://blindwith.science/2019/07/444.html/&#34;&gt;Emacs 上使用 Beancount 记帐&lt;/a&gt;起，我改用 Beancount 记帐已有一年有余。Beancount 简便轻巧，帐目亦是非常清晰。通过其前端 fava 对帐目进行可视化后，还能获得很多平时不会注意到的信息。下图是我 2020 年的支出，很明显地可以看到在疫情之下，我的支出以解决生理与安全需求为主，也可以看到由于支出大幅缩减，税居然占了我去年支出的一半。&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;../../ox-hugo/fava_1.png&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;下图则是我自记帐以来在电影方面的支出，可以看到 2018-2019 年由于毕业找工作，出现了一个很大的平台期，也可以看到自今年三月疫情爆发以来，我再也没有去过电影院。&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;../../ox-hugo/fava_2.png&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;不过这一年来，我开始工作，也和女票同住，出现了更多类型的帐目。而这半年因新冠宅家，花销颇少，反而便懒于记帐了，一不小心便产生了好几个月的 lag，如何高效地记录各种类型的帐目反而成了一个问题。Beancount 虽然用的人不少，可是官方 document 写得非常硬核，中文资源又多浅尝辄止，我越是想要简化自己的流程，越是产生了更多的疑惑。最近花了圣诞元旦 MLK 三个长周末，总算将各种疑惑都理清了。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Emacs 上使用 Beancount 记帐</title>
       <link>http://blindwith.science/2019/07/444.html/</link>
       <pubDate>Thu, 04 Jul 2019 12:58:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/07/444.html/</guid>
-      <description>&lt;p&gt;昨天搞定 Emacs 的中文环境，今天想着好久没记帐了，随手记总是很花时间，干脆一鼓作气，将记帐一起搬过来。&lt;/p&gt;
-&lt;h2 id=&#34;复式记帐&#34;&gt;复式记帐&lt;/h2&gt;
-&lt;p&gt;我本科时双修了一门金融，其中最为繁琐，也是最令人头疼的一门课便是会计学。我不爱听讲，毕业之后也将会计的知识点忘得查差不多了，然而其&amp;quot;有借必有贷，借贷必相等&amp;quot;的复式记帐法，反而是我生活中运用最多的。&lt;/p&gt;
-&lt;p&gt;复式记帐法说起来复杂，对个人来说，就是将每笔交易分门别类，填入下面这条等式中：&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;资产 + 费用 = 负债 + 所有者权益 + 收入&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;在个人记帐中，这条等式辅以借贷概念会令人望而生畏，所以我将其略一变形：&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;（+资产）+（-负债）+（+费用）+（-收入）+（-所有者权益）= 0&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;ul&gt;
-&lt;li&gt;资产与负债都是与金钱直接挂钩的，比如银行户头，比如人民币美钞，比如信用卡帐户，再比如借条，这些都可以算是货币的不同表示形式。&lt;/li&gt;
-&lt;li&gt;费用与收入则是与金钱间接挂钩的，比如工资，比如商品，比如服务，这些都可以算是生产资本与商品资本的不同表现形式。其中收入与字面意思不同，可以理解为生产资本（劳动力等）。&lt;/li&gt;
-&lt;li&gt;所有者权益对个人意义不大，一般用来记录历史盈余与糊涂帐。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;而这个变形公式中的正负号，则可以将各项目的符号关系，用作资金流向的参照。这么说有点玄乎，换个茨威格式的说法就是：&amp;ldquo;人们从命运得到的一切，冥冥之中都记下了它的价钱。&amp;ldquo;花钱买了服务，则是减少资产（花了钱），增加费用（得到服务）；工资到帐，则是增加资产（到帐），减少收入（既有劳动时间的减少）；别人跟你借了钱，则是资产减少（银行帐户或现金余额减少），负债增加（别人在你这儿的负债）。&lt;/p&gt;
-&lt;p&gt;总结一下，由于人类暂时无法操控时间，所以费用一般为正，收入一般为负。而没有破产的情况下资产一般为正，别人欠你的钱为正，信用卡债（你欠别人的钱）为负。&lt;/p&gt;</description>
+      <description>&lt;p&gt;昨天搞定 Emacs 的中文环境，今天想着好久没记帐了，随手记总是很花时间，干脆一鼓作气，将记帐一起搬过来。&lt;/p&gt;&#xA;&lt;h2 id=&#34;复式记帐&#34;&gt;复式记帐&lt;/h2&gt;&#xA;&lt;p&gt;我本科时双修了一门金融，其中最为繁琐，也是最令人头疼的一门课便是会计学。我不爱听讲，毕业之后也将会计的知识点忘得查差不多了，然而其&amp;quot;有借必有贷，借贷必相等&amp;quot;的复式记帐法，反而是我生活中运用最多的。&lt;/p&gt;&#xA;&lt;p&gt;复式记帐法说起来复杂，对个人来说，就是将每笔交易分门别类，填入下面这条等式中：&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;资产 + 费用 = 负债 + 所有者权益 + 收入&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;在个人记帐中，这条等式辅以借贷概念会令人望而生畏，所以我将其略一变形：&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;（+资产）+（-负债）+（+费用）+（-收入）+（-所有者权益）= 0&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;资产与负债都是与金钱直接挂钩的，比如银行户头，比如人民币美钞，比如信用卡帐户，再比如借条，这些都可以算是货币的不同表示形式。&lt;/li&gt;&#xA;&lt;li&gt;费用与收入则是与金钱间接挂钩的，比如工资，比如商品，比如服务，这些都可以算是生产资本与商品资本的不同表现形式。其中收入与字面意思不同，可以理解为生产资本（劳动力等）。&lt;/li&gt;&#xA;&lt;li&gt;所有者权益对个人意义不大，一般用来记录历史盈余与糊涂帐。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;而这个变形公式中的正负号，则可以将各项目的符号关系，用作资金流向的参照。这么说有点玄乎，换个茨威格式的说法就是：&amp;ldquo;人们从命运得到的一切，冥冥之中都记下了它的价钱。&amp;ldquo;花钱买了服务，则是减少资产（花了钱），增加费用（得到服务）；工资到帐，则是增加资产（到帐），减少收入（既有劳动时间的减少）；别人跟你借了钱，则是资产减少（银行帐户或现金余额减少），负债增加（别人在你这儿的负债）。&lt;/p&gt;&#xA;&lt;p&gt;总结一下，由于人类暂时无法操控时间，所以费用一般为正，收入一般为负。而没有破产的情况下资产一般为正，别人欠你的钱为正，信用卡债（你欠别人的钱）为负。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,77 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Org-mode on Blind with Science</title>
+    <title>Org-Mode on Blind with Science</title>
     <link>http://blindwith.science/tags/org-mode/</link>
-    <description>Recent content in Org-mode on Blind with Science</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Org-Mode on Blind with Science</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Mon, 30 May 2022 12:34:00 -0700</lastBuildDate><atom:link href="http://blindwith.science/tags/org-mode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 May 2022 14:19:13 -0700</lastBuildDate>
+    <atom:link href="http://blindwith.science/tags/org-mode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>逃离豆瓣 - 使用Org-mode管理我的书影音</title>
       <link>http://blindwith.science/2022/05/475.html/</link>
       <pubDate>Mon, 30 May 2022 12:34:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2022/05/475.html/</guid>
-      <description>&lt;div class=&#34;admonition tip&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;小贴士&lt;/p&gt;
-  
-我的豆瓣书影音替代方案基于Org-mode，如果对此感兴趣的话可以阅读我的另一篇博客《继续吹一波Org-mode》了解Org-mode以及更多用法。
-
-&lt;/div&gt;
-&lt;p&gt;最近豆瓣开始搞激烈的实名认证，而不愿献祭隐私的我，也只能和豆瓣说再见了。豆瓣十几年的情谊化为乌有，我也无法相信其他书影音数据库能够天长地久。另一方面，IMDB，Letterbox，TMDB，Goodreads这类美国数据库对于动漫和国产书还有水土不服的问题，我曾经暂别豆瓣，用过挺长一段时间的IMDB+Letterbox，却还是回归豆瓣后觉得顺手。查了一下，似乎没有什么自架豆瓣替代品的开源软件，大家常用的方案也是我不太喜欢的Notion（我在&lt;a href=&#34;https://blindwith.science/2021/11/467.html/&#34;&gt;继续吹一波Org-mode&lt;/a&gt;里曾经详述过），于是趁着小长假，我便将豆瓣转移到了Org-mode。&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src=&#34;../../ox-hugo/org_mode_douban.png&#34;
-         alt=&#34;Figure 1: 最终效果长这样&#34;/&gt; &lt;figcaption&gt;
-            &lt;p&gt;&lt;!-- raw HTML omitted --&gt;Figure 1: &lt;!-- raw HTML omitted --&gt;最终效果长这样&lt;/p&gt;
-        &lt;/figcaption&gt;
-&lt;/figure&gt;</description>
+      <description>&lt;div class=&#34;admonition tip&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;小贴士&lt;/p&gt;&#xA;  &#xA;我的豆瓣书影音替代方案基于Org-mode，如果对此感兴趣的话可以阅读我的另一篇博客《继续吹一波Org-mode》了解Org-mode以及更多用法。&#xA;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;最近豆瓣开始搞激烈的实名认证，而不愿献祭隐私的我，也只能和豆瓣说再见了。豆瓣十几年的情谊化为乌有，我也无法相信其他书影音数据库能够天长地久。另一方面，IMDB，Letterbox，TMDB，Goodreads这类美国数据库对于动漫和国产书还有水土不服的问题，我曾经暂别豆瓣，用过挺长一段时间的IMDB+Letterbox，却还是回归豆瓣后觉得顺手。查了一下，似乎没有什么自架豆瓣替代品的开源软件，大家常用的方案也是我不太喜欢的Notion（我在&lt;a href=&#34;https://blindwith.science/2021/11/467.html/&#34;&gt;继续吹一波Org-mode&lt;/a&gt;里曾经详述过），于是趁着小长假，我便将豆瓣转移到了Org-mode。&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;../../ox-hugo/org_mode_douban.png&#34;&#xA;    alt=&#34;Figure 1: 最终效果长这样&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;&lt;!-- raw HTML omitted --&gt;Figure 1: &lt;!-- raw HTML omitted --&gt;最终效果长这样&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;</description>
     </item>
-    
     <item>
       <title>继续吹一波Org-mode</title>
       <link>http://blindwith.science/2021/11/467.html/</link>
       <pubDate>Fri, 12 Nov 2021 23:14:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/2021/11/467.html/</guid>
-      <description>&lt;p&gt;最近Notion大火，从二手买卖到菜谱分享，隔三差五就会看到它的推荐和应用。出于好奇，我也去开了个帐户用了一番，确实不错，然而我对其持谨慎态度。一方面，作为在线产品，它的使用场景灵活，但又会受网络限制，假如所在单位或者地区禁止使用，那就徒增烦恼。而且，它并非开源产品，公司一旦跑路或者改变其业务重心，那会造成非常高的转移成本，前车之鉴便有Evernote。另一方面，它作为一个笔记产品，架构强大，也更复杂，有着较高的学习成本，也许用起来很sexy，但也会让人疑惑在有更好替代品的情况下，是否值得花费这么多时间来学习使用这个产品。&lt;/p&gt;
-&lt;p&gt;说了这么多，其实我只是想引出这个更好的替代品，也就是我用了多年的Emacs。&lt;/p&gt;
-&lt;p&gt;在数字化时代，我们需要用到各种各样的工具来记录管理我们的生活，这也催生了各种工具和网站。比如日程管理有Things、Bear等，文献管理软件有Endnote、NoteExpress等，记帐软件有随手记、Splitwise等，编辑器有VSCode、Atom等，博客写作软件有Typora、MWeb等，菜谱有下厨房。但是工具太多协作性便会变弱，在线产品更是逃不脱对厂商的依赖，一旦厂商缺钱改成了订阅付费模式，除了叫苦不迭也只能乖乖付钱，而如果厂商保持免费，那也有可能通过其他方式比如出售隐私增加广告来保持盈利。其实对于这些，Emacs的Org mode都可以胜任。&lt;/p&gt;
-&lt;p&gt;Emacs是什么呢？最简单的解释，便是Emacs是一种基于Lisp的具有可扩展性的文本编辑器。文本编辑器，意味着平时不管在上面记录什么，大小都以kb计，最基础的Dropbox plan就能轻松对其进行云端备份，哪怕在一个没有Emacs的环境，也能用任何文本编辑器打开使用Emacs处理的文档。而Lisp的强扩展性，则赋予Emacs一切可能，你可以用它记笔记（Org-mode），管理文件（Dired），编辑远程档案（Tramp），版本控制（Magit），收发邮件（Gnus），用作IDE，甚至上网发推。有一个著名的说法称Emacs为操作系统，倒也并非言过其实。不过我也不至于真的将Emacs当操作系统使用，毕竟我们已经一只脚跨入了Meta时代（狗头）。不过Emacs，尤其是无人可出其右的Org-mode，也确实渗透了我的学习、工作、生活。&lt;/p&gt;
-&lt;p&gt;那么，Org-mode又是什么呢？Org-mode是Emacs的一种支持内容分级显示的主编辑模式。在Emacs中，每种主模式都有特殊的Emacs Lisp变量和函数来使处理文档变得更便捷，而Org作为Emacs特有的文本格式，更是有着非常出色的原生支持。其他主流编辑器（Vim, Atom, VSCode, Sublime）也都有对应相应的Org模式，但只能支持基础的语法高亮功能。&lt;/p&gt;
-&lt;p&gt;Org-mode的宣传语就是 your life in plain text，可以说很好地概括了Org-mode的能力。最重要的一点是Org是纯文本文档，具有体积小结构简单的优点。在此我先简单介绍一下Org-mode的特性，就不一一展开了。毕竟如果展开来讲，那可能得出一个系列文章。&lt;/p&gt;</description>
+      <description>&lt;p&gt;最近Notion大火，从二手买卖到菜谱分享，隔三差五就会看到它的推荐和应用。出于好奇，我也去开了个帐户用了一番，确实不错，然而我对其持谨慎态度。一方面，作为在线产品，它的使用场景灵活，但又会受网络限制，假如所在单位或者地区禁止使用，那就徒增烦恼。而且，它并非开源产品，公司一旦跑路或者改变其业务重心，那会造成非常高的转移成本，前车之鉴便有Evernote。另一方面，它作为一个笔记产品，架构强大，也更复杂，有着较高的学习成本，也许用起来很sexy，但也会让人疑惑在有更好替代品的情况下，是否值得花费这么多时间来学习使用这个产品。&lt;/p&gt;&#xA;&lt;p&gt;说了这么多，其实我只是想引出这个更好的替代品，也就是我用了多年的Emacs。&lt;/p&gt;&#xA;&lt;p&gt;在数字化时代，我们需要用到各种各样的工具来记录管理我们的生活，这也催生了各种工具和网站。比如日程管理有Things、Bear等，文献管理软件有Endnote、NoteExpress等，记帐软件有随手记、Splitwise等，编辑器有VSCode、Atom等，博客写作软件有Typora、MWeb等，菜谱有下厨房。但是工具太多协作性便会变弱，在线产品更是逃不脱对厂商的依赖，一旦厂商缺钱改成了订阅付费模式，除了叫苦不迭也只能乖乖付钱，而如果厂商保持免费，那也有可能通过其他方式比如出售隐私增加广告来保持盈利。其实对于这些，Emacs的Org mode都可以胜任。&lt;/p&gt;&#xA;&lt;p&gt;Emacs是什么呢？最简单的解释，便是Emacs是一种基于Lisp的具有可扩展性的文本编辑器。文本编辑器，意味着平时不管在上面记录什么，大小都以kb计，最基础的Dropbox plan就能轻松对其进行云端备份，哪怕在一个没有Emacs的环境，也能用任何文本编辑器打开使用Emacs处理的文档。而Lisp的强扩展性，则赋予Emacs一切可能，你可以用它记笔记（Org-mode），管理文件（Dired），编辑远程档案（Tramp），版本控制（Magit），收发邮件（Gnus），用作IDE，甚至上网发推。有一个著名的说法称Emacs为操作系统，倒也并非言过其实。不过我也不至于真的将Emacs当操作系统使用，毕竟我们已经一只脚跨入了Meta时代（狗头）。不过Emacs，尤其是无人可出其右的Org-mode，也确实渗透了我的学习、工作、生活。&lt;/p&gt;&#xA;&lt;p&gt;那么，Org-mode又是什么呢？Org-mode是Emacs的一种支持内容分级显示的主编辑模式。在Emacs中，每种主模式都有特殊的Emacs Lisp变量和函数来使处理文档变得更便捷，而Org作为Emacs特有的文本格式，更是有着非常出色的原生支持。其他主流编辑器（Vim, Atom, VSCode, Sublime）也都有对应相应的Org模式，但只能支持基础的语法高亮功能。&lt;/p&gt;&#xA;&lt;p&gt;Org-mode的宣传语就是 your life in plain text，可以说很好地概括了Org-mode的能力。最重要的一点是Org是纯文本文档，具有体积小结构简单的优点。在此我先简单介绍一下Org-mode的特性，就不一一展开了。毕竟如果展开来讲，那可能得出一个系列文章。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>使用 pandoc 转换 ox-hugo 支持的 org 文件</title>
       <link>http://blindwith.science/2020/06/455.html/</link>
       <pubDate>Wed, 10 Jun 2020 22:41:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2020/06/455.html/</guid>
       <description>&lt;p&gt;之前从 hexo 转成 hugo 的时候，顺便用了使用非常方便的 ox-hugo 这个轮子。当时贪图省力，就直接用 pandoc 将 markdown 文件批量转换成了 orgmode，但是所有的 metadata 全都没能转换，后期还是得一个一个改。虽然是一个重新审阅自己黑历史的方式，但是要改四百多篇确实还是太过费心费力了。事情一变得繁杂起来，我的拖延症就犯了，于是直到现在我还是只改好了十几篇。今天终于忍不住了，动手看起了 pandoc 文档。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Org-mode 中添加结构模板</title>
       <link>http://blindwith.science/2019/09/450.html/</link>
       <pubDate>Wed, 04 Sep 2019 20:06:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/09/450.html/</guid>
-      <description>&lt;p&gt;作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &lt;code&gt;&amp;lt;s&lt;/code&gt; &lt;!-- raw HTML omitted --&gt;TAB&lt;!-- raw HTML omitted --&gt; 会自动生成&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;c&#34;&gt;#+BEGIN_SRC&lt;/span&gt;
-
-&lt;span class=&#34;c&#34;&gt;#+END_SRC&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;这样插入代码或者引用这类结构非常方便。&lt;/p&gt;</description>
+      <description>&lt;p&gt;作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &lt;code&gt;&amp;lt;s&lt;/code&gt; &lt;!-- raw HTML omitted --&gt;TAB&lt;!-- raw HTML omitted --&gt; 会自动生成&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#+BEGIN_SRC&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#+END_SRC&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这样插入代码或者引用这类结构非常方便。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.76.5 with theme even" />
+<meta name="generator" content="Hugo 0.149.0 with theme even" />
 
 
 <link rel="canonical" href="http://blindwith.science/2019/08/448.html/" />
@@ -38,28 +38,32 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="../../../sass/main.min.f346f1cd7c119368051aba0791b1276d109b14d2a0fcefac9fe27d9ba680605a.css" rel="stylesheet">
+<link href="../../../sass/main.min.22b0d99d8a618713080069182ee3608a4528452925f4324879d7352bfccb78bd.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Hacking the Data Transformation Interview" />
-<meta property="og:description" content="I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://blindwith.science/2019/08/448.html/" />
-<meta property="article:published_time" content="2019-08-30T11:14:00-07:00" />
-<meta property="article:modified_time" content="2021-01-18T17:22:59-08:00" />
-<meta itemprop="name" content="Hacking the Data Transformation Interview">
-<meta itemprop="description" content="I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation.">
-<meta itemprop="datePublished" content="2019-08-30T11:14:00-07:00" />
-<meta itemprop="dateModified" content="2021-01-18T17:22:59-08:00" />
-<meta itemprop="wordCount" content="609">
+<meta property="og:url" content="http://blindwith.science/2019/08/448.html/">
+  <meta property="og:site_name" content="Blind with Science">
+  <meta property="og:title" content="Hacking the Data Transformation Interview">
+  <meta property="og:description" content="I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2019-08-30T11:14:00-07:00">
+    <meta property="article:modified_time" content="2021-01-18T17:22:59-08:00">
+    <meta property="article:tag" content="Data-Engineering">
+    <meta property="article:tag" content="Interview">
+    <meta property="article:tag" content="Python">
 
-
-
-<meta itemprop="keywords" content="Data-Engineering,Interview,Python," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hacking the Data Transformation Interview"/>
-<meta name="twitter:description" content="I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation."/>
+  <meta itemprop="name" content="Hacking the Data Transformation Interview">
+  <meta itemprop="description" content="I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation.">
+  <meta itemprop="datePublished" content="2019-08-30T11:14:00-07:00">
+  <meta itemprop="dateModified" content="2021-01-18T17:22:59-08:00">
+  <meta itemprop="wordCount" content="526">
+  <meta itemprop="keywords" content="Data-Engineering,Interview,Python">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hacking the Data Transformation Interview">
+  <meta name="twitter:description" content="I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -143,7 +147,7 @@
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 609 字 </span>
+          <span class="more-meta"> 约 526 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -163,7 +167,7 @@
   </div>
 </div>
   <div class="post-outdated">
-    <div class="hint">
+    <div class="warn">
       <p>【注意】最后更新于 <span class="timeago" datetime="2021-01-18T17:22:59" title="January 18, 2021">January 18, 2021</span>，文中内容可能已过时，请谨慎使用。</p>
     </div>
   </div>
@@ -172,314 +176,111 @@
 <h2 id="prerequisites-boto3">Prerequisites: boto3</h2>
 <p>Boto is the AWS SDK for python, which provides easy-to-use, object-oriented API and low-level access to AWS services. We could find the documentation <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html">here</a>.</p>
 <p>We could easily install the latest Boto 3 release via pip:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ pip install boto3
-</code></pre></td></tr></table>
-</div>
-</div><p>Then configure the credential file at <code>~/.aws/credentials</code>:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[default]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ pip install boto3
+</span></span></code></pre></div><p>Then configure the credential file at <code>~/.aws/credentials</code>:</p>
+<pre tabindex="0"><code class="language-nil" data-lang="nil">[default]
 aws_access_key_id = YOUR_ACCESS_KEY
 aws_secret_access_key = YOUR_SECRET_KEY
-</code></pre></td></tr></table>
-</div>
-</div><p>And set the default region at <code>~/.aws/config</code>:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[default]
+</code></pre><p>And set the default region at <code>~/.aws/config</code>:</p>
+<pre tabindex="0"><code class="language-nil" data-lang="nil">[default]
 region=us-east-1
-</code></pre></td></tr></table>
-</div>
-</div><p>To use boto3, we could import it and pass the service-to-use to it. For example, to use Amazon S3, we could choose a resource by:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">boto3</span>
-<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">resource</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Create a s3 bucket over client level:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">s3_client</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
-<span class="n">s3_client</span><span class="o">.</span><span class="n">create_bucket</span><span class="p">(</span><span class="n">Bucket</span><span class="o">=</span><span class="s1">&#39;BUCKET_NAME&#39;</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>List existing buckets for the AWS account:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">response</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">list_buckets</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">bucket</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;Buckets&#39;</span><span class="p">]:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;  {bucket[&#34;Name&#34;]}&#39;</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Upload file into a s3 bucket:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">response</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">upload_file</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">bucket</span><span class="p">,</span> <span class="n">object_name</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Or upload object in binary mode into a s3 bucket:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;test.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">s3</span><span class="o">.</span><span class="n">upload_fileobj</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s2">&#34;BUCKET_NAME&#34;</span><span class="p">,</span> <span class="s2">&#34;OBJECT_NAME&#34;</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Or directly put object into a s3 bucket over the bucket level:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">data</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;test.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span>
-<span class="n">bucket</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s1">&#39;my-bucket&#39;</span><span class="p">)</span>
-<span class="n">bucket</span><span class="o">.</span><span class="n">put_object</span><span class="p">(</span><span class="n">Key</span><span class="o">=</span><span class="n">object_name</span><span class="p">,</span> <span class="n">Body</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>To download file from a S3 bucket, we could:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">s3</span><span class="o">.</span><span class="n">download_file</span><span class="p">(</span><span class="s1">&#39;BUCKET_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;OBJECT_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;FILE_NAME&#39;</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Or:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;FILE_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">s3</span><span class="o">.</span><span class="n">download_fileobj</span><span class="p">(</span><span class="s1">&#39;BUCKET_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;OBJECT_NAME&#39;</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>We could also set configuration when uploading, downloading, or copying a file or S3 object by:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">boto3.s3.transfer</span> <span class="kn">import</span> <span class="n">TransferConfig</span>
-<span class="n">GB</span> <span class="o">=</span> <span class="mi">1024</span> <span class="o">**</span> <span class="mi">3</span>
-<span class="n">config</span> <span class="o">=</span> <span class="n">TransferConfig</span><span class="p">(</span><span class="n">multipart_threshold</span><span class="o">=</span><span class="mi">5</span><span class="o">*</span><span class="n">GB</span><span class="p">)</span>
-<span class="n">config</span> <span class="o">=</span> <span class="n">TransferConfig</span><span class="p">(</span><span class="n">max_concurrency</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">config</span> <span class="o">=</span> <span class="n">TransferConfig</span><span class="p">(</span><span class="n">use_threads</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-<span class="n">s3</span><span class="o">.</span><span class="n">upload_file</span><span class="p">(</span><span class="s1">&#39;FILE_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;BUCKET_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;OBJECT_NAME&#39;</span><span class="p">,</span> <span class="n">Config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="prerequisites-psycopg2">Prerequisites: psycopg2</h2>
+</code></pre><p>To use boto3, we could import it and pass the service-to-use to it. For example, to use Amazon S3, we could choose a resource by:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> boto3
+</span></span><span style="display:flex;"><span>s3 <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>resource(<span style="color:#e6db74">&#39;s3&#39;</span>)
+</span></span></code></pre></div><p>Create a s3 bucket over client level:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>s3_client <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(<span style="color:#e6db74">&#39;s3&#39;</span>)
+</span></span><span style="display:flex;"><span>s3_client<span style="color:#f92672">.</span>create_bucket(Bucket<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;BUCKET_NAME&#39;</span>)
+</span></span></code></pre></div><p>List existing buckets for the AWS account:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>response <span style="color:#f92672">=</span> s3_client<span style="color:#f92672">.</span>list_buckets()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> bucket <span style="color:#f92672">in</span> response[<span style="color:#e6db74">&#39;Buckets&#39;</span>]:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;  </span><span style="color:#e6db74">{</span>bucket[<span style="color:#e6db74">&#34;Name&#34;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span></code></pre></div><p>Upload file into a s3 bucket:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>response <span style="color:#f92672">=</span> s3_client<span style="color:#f92672">.</span>upload_file(file_name, bucket, object_name)
+</span></span></code></pre></div><p>Or upload object in binary mode into a s3 bucket:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;test.jpg&#39;</span>, <span style="color:#e6db74">&#39;rb&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>    s3<span style="color:#f92672">.</span>upload_fileobj(f, <span style="color:#e6db74">&#34;BUCKET_NAME&#34;</span>, <span style="color:#e6db74">&#34;OBJECT_NAME&#34;</span>)
+</span></span></code></pre></div><p>Or directly put object into a s3 bucket over the bucket level:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>data <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;test.jpg&#39;</span>, <span style="color:#e6db74">&#39;rb&#39;</span>)
+</span></span><span style="display:flex;"><span>bucket <span style="color:#f92672">=</span> s3<span style="color:#f92672">.</span>Bucket(<span style="color:#e6db74">&#39;my-bucket&#39;</span>)
+</span></span><span style="display:flex;"><span>bucket<span style="color:#f92672">.</span>put_object(Key<span style="color:#f92672">=</span>object_name, Body<span style="color:#f92672">=</span>data)
+</span></span></code></pre></div><p>To download file from a S3 bucket, we could:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>s3<span style="color:#f92672">.</span>download_file(<span style="color:#e6db74">&#39;BUCKET_NAME&#39;</span>, <span style="color:#e6db74">&#39;OBJECT_NAME&#39;</span>, <span style="color:#e6db74">&#39;FILE_NAME&#39;</span>)
+</span></span></code></pre></div><p>Or:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;FILE_NAME&#39;</span>, <span style="color:#e6db74">&#39;wb&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>    s3<span style="color:#f92672">.</span>download_fileobj(<span style="color:#e6db74">&#39;BUCKET_NAME&#39;</span>, <span style="color:#e6db74">&#39;OBJECT_NAME&#39;</span>, f)
+</span></span></code></pre></div><p>We could also set configuration when uploading, downloading, or copying a file or S3 object by:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> boto3.s3.transfer <span style="color:#f92672">import</span> TransferConfig
+</span></span><span style="display:flex;"><span>GB <span style="color:#f92672">=</span> <span style="color:#ae81ff">1024</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>config <span style="color:#f92672">=</span> TransferConfig(multipart_threshold<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span><span style="color:#f92672">*</span>GB)
+</span></span><span style="display:flex;"><span>config <span style="color:#f92672">=</span> TransferConfig(max_concurrency<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>config <span style="color:#f92672">=</span> TransferConfig(use_threads<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>s3<span style="color:#f92672">.</span>upload_file(<span style="color:#e6db74">&#39;FILE_NAME&#39;</span>, <span style="color:#e6db74">&#39;BUCKET_NAME&#39;</span>, <span style="color:#e6db74">&#39;OBJECT_NAME&#39;</span>, Config<span style="color:#f92672">=</span>config)
+</span></span></code></pre></div><h2 id="prerequisites-psycopg2">Prerequisites: psycopg2</h2>
 <p>Psycopg2 is a popular PostgreSQL database adapter for python. We could find documentation <a href="http://initd.org/psycopg/docs/">here</a>.</p>
 <p>We could easily install psycopg2 via pip:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ pip install psycopg2-binary
-</code></pre></td></tr></table>
-</div>
-</div><p>To use psycopg2, we could import it, connect to an existing database and open a cursor to perform database operations:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">psycopg2</span>
-<span class="n">conn</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="o">=</span><span class="s2">&#34;DATABASE_NAME&#34;</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s2">&#34;USER&#34;</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">&#34;HOST&#34;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="s2">&#34;PORT&#34;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&#34;PASSWORD&#34;</span><span class="p">)</span>
-<span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Query the database and fetch data in an iteration-like way:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql_query</span><span class="p">)</span>
-<span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
-<span class="n">cur</span><span class="o">.</span><span class="n">fetchmany</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Pass parameters to SQL queries:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&#34;&#34;&#34;
-</span><span class="s2">    INSERT INTO some_table (an_int, a_date, another_date, a_string)
-</span><span class="s2">    VALUES (</span><span class="si">%(int)s</span><span class="s2">, </span><span class="si">%(date)s</span><span class="s2">, </span><span class="si">%(date)s</span><span class="s2">, </span><span class="si">%(str)s</span><span class="s2">);
-</span><span class="s2">    &#34;&#34;&#34;</span><span class="p">,</span>
-    <span class="p">{</span><span class="s1">&#39;int&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">:</span> <span class="s2">&#34;O&#39;Reilly&#34;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">18</span><span class="p">)})</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Make the changes to the database persistent:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Close communication with the database</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="upload-data-from-s3-into-redshift">Upload data from S3 into Redshift</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">connection_parameters</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;dbname&#39;</span><span class="p">:</span> <span class="n">dbname</span><span class="p">,</span>
-        <span class="s1">&#39;user&#39;</span><span class="p">:</span> <span class="n">user</span><span class="p">,</span>
-        <span class="s1">&#39;host&#39;</span><span class="p">:</span> <span class="n">host</span><span class="p">,</span>
-        <span class="s1">&#39;port&#39;</span><span class="p">:</span> <span class="n">port</span><span class="p">,</span>
-        <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="n">password</span>
-    <span class="p">}</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">conn</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="o">**</span><span class="n">connection_parameters</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Connected to Redshift.&#34;</span><span class="p">)</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Unable to connect to Redshift.&#34;</span><span class="p">)</span>
-
-    <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-
-    <span class="n">upload_statement</span> <span class="o">=</span> <span class="s2">&#34;</span>
-            <span class="n">COPY</span> <span class="p">{}</span><span class="o">.</span><span class="p">{}</span>
-            <span class="n">FROM</span> <span class="p">{}</span>
-            <span class="n">IAM_ROLE</span> <span class="p">{}</span>
-            <span class="n">CSV</span><span class="p">;</span>
-            <span class="n">COMMIT</span><span class="p">;</span>
-    <span class="s2">&#34;.format(table_name, schema, file_name, iam_role)</span>
-
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">upload_statement</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Upload successfully&#34;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">Error</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">ExecuteFailure</span><span class="p">(</span><span class="s2">&#34;Failed to upload the file.&#34;</span><span class="p">)</span>
-    <span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="load-data-from-redshift-to-pandas">Load data from Redshift to pandas</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">sqlalchemy</span> <span class="kn">as</span> <span class="nn">sa</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-<span class="n">surl</span> <span class="o">=</span> <span class="s1">&#39;redshift+psycopg2://&#39;</span>
-<span class="n">engine</span> <span class="o">=</span> <span class="n">sa</span><span class="o">.</span><span class="n">create_engine</span><span class="p">(</span><span class="n">surl</span><span class="o">+</span><span class="n">user</span><span class="o">+</span><span class="s1">&#39;:&#39;</span><span class="o">+</span><span class="n">password</span><span class="o">+</span><span class="s1">&#39;@&#39;</span><span class="o">+</span><span class="n">host</span><span class="o">+</span><span class="s1">&#39;:&#39;</span><span class="o">+</span><span class="n">port</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">dbname</span><span class="p">,</span><span class="n">echo</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM table ;&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ pip install psycopg2-binary
+</span></span></code></pre></div><p>To use psycopg2, we could import it, connect to an existing database and open a cursor to perform database operations:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> psycopg2
+</span></span><span style="display:flex;"><span>conn <span style="color:#f92672">=</span> psycopg2<span style="color:#f92672">.</span>connect(dbname<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;DATABASE_NAME&#34;</span>, user<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;USER&#34;</span>, host<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;HOST&#34;</span>, port<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;PORT&#34;</span>, password<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;PASSWORD&#34;</span>)
+</span></span><span style="display:flex;"><span>cur <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span>cursor()
+</span></span></code></pre></div><p>Query the database and fetch data in an iteration-like way:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>cur<span style="color:#f92672">.</span>execute(sql_query)
+</span></span><span style="display:flex;"><span>cur<span style="color:#f92672">.</span>fetchone()
+</span></span><span style="display:flex;"><span>cur<span style="color:#f92672">.</span>fetchmany(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>cur<span style="color:#f92672">.</span>fetchall()
+</span></span></code></pre></div><p>Pass parameters to SQL queries:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>cur<span style="color:#f92672">.</span>execute(<span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    INSERT INTO some_table (an_int, a_date, another_date, a_string)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    VALUES (</span><span style="color:#e6db74">%(int)s</span><span style="color:#e6db74">, </span><span style="color:#e6db74">%(date)s</span><span style="color:#e6db74">, </span><span style="color:#e6db74">%(date)s</span><span style="color:#e6db74">, </span><span style="color:#e6db74">%(str)s</span><span style="color:#e6db74">);
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>    {<span style="color:#e6db74">&#39;int&#39;</span>: <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;str&#39;</span>: <span style="color:#e6db74">&#34;O&#39;Reilly&#34;</span>, <span style="color:#e6db74">&#39;date&#39;</span>: datetime<span style="color:#f92672">.</span>date(<span style="color:#ae81ff">2005</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">18</span>)})
+</span></span></code></pre></div><p>Make the changes to the database persistent:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>conn<span style="color:#f92672">.</span>commit()
+</span></span></code></pre></div><p>Close communication with the database</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>cur<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>conn<span style="color:#f92672">.</span>close()
+</span></span></code></pre></div><h2 id="upload-data-from-s3-into-redshift">Upload data from S3 into Redshift</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    connection_parameters <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;dbname&#39;</span>: dbname,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;user&#39;</span>: user,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;host&#39;</span>: host,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;port&#39;</span>: port,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;password&#39;</span>: password
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        conn <span style="color:#f92672">=</span> psycopg2<span style="color:#f92672">.</span>connect(<span style="color:#f92672">**</span>connection_parameters)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Connected to Redshift.&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Unable to connect to Redshift.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cur <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span>cursor()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    upload_statement <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>            COPY {}<span style="color:#f92672">.</span>{}
+</span></span><span style="display:flex;"><span>            FROM {}
+</span></span><span style="display:flex;"><span>            IAM_ROLE {}
+</span></span><span style="display:flex;"><span>            CSV;
+</span></span><span style="display:flex;"><span>            COMMIT;
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;.format(table_name, schema, file_name, iam_role)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        cur<span style="color:#f92672">.</span>execute(upload_statement)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Upload successfully&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> psycopg2<span style="color:#f92672">.</span>Error:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> ExecuteFailure(<span style="color:#e6db74">&#34;Failed to upload the file.&#34;</span>)
+</span></span><span style="display:flex;"><span>    cur<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>    conn<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span></code></pre></div><h2 id="load-data-from-redshift-to-pandas">Load data from Redshift to pandas</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sqlalchemy <span style="color:#66d9ef">as</span> sa
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>surl <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;redshift+psycopg2://&#39;</span>
+</span></span><span style="display:flex;"><span>engine <span style="color:#f92672">=</span> sa<span style="color:#f92672">.</span>create_engine(surl<span style="color:#f92672">+</span>user<span style="color:#f92672">+</span><span style="color:#e6db74">&#39;:&#39;</span><span style="color:#f92672">+</span>password<span style="color:#f92672">+</span><span style="color:#e6db74">&#39;@&#39;</span><span style="color:#f92672">+</span>host<span style="color:#f92672">+</span><span style="color:#e6db74">&#39;:&#39;</span><span style="color:#f92672">+</span>port<span style="color:#f92672">+</span><span style="color:#e6db74">&#39;/&#39;</span><span style="color:#f92672">+</span>dbname,echo<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_sql_query(<span style="color:#e6db74">&#39;SELECT * FROM table ;&#39;</span>, engine)
+</span></span></code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -567,7 +368,7 @@ region=us-east-1
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   width="28" height="28"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
       </a>
-  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -589,7 +390,7 @@ region=us-east-1
   <span class="copyright-year">
     &copy; 
     2005 - 
-    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
   </span>
 </div>
 
@@ -605,7 +406,7 @@ region=us-east-1
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script>
     var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -613,19 +414,8 @@ region=us-east-1
 
 
 
-<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="../../../js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-86469737-1', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

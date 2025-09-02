@@ -4,55 +4,31 @@
     <title>Python on Blind with Science</title>
     <link>http://blindwith.science/tags/python/</link>
     <description>Recent content in Python on Blind with Science</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Fri, 11 Oct 2019 13:58:00 -0700</lastBuildDate><atom:link href="http://blindwith.science/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Jan 2021 19:01:58 -0800</lastBuildDate>
+    <atom:link href="http://blindwith.science/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My first Django app</title>
       <link>http://blindwith.science/2019/10/451.html/</link>
       <pubDate>Fri, 11 Oct 2019 13:58:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/10/451.html/</guid>
       <description>&lt;p&gt;This is my implementaion on the &lt;a href=&#34;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&#34;&gt;Django tutorial&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Hacking the Data Transformation Interview</title>
       <link>http://blindwith.science/2019/08/448.html/</link>
       <pubDate>Fri, 30 Aug 2019 11:14:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/08/448.html/</guid>
       <description>&lt;p&gt;I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Emacs 上使用 Beancount 记帐</title>
       <link>http://blindwith.science/2019/07/444.html/</link>
       <pubDate>Thu, 04 Jul 2019 12:58:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/07/444.html/</guid>
-      <description>&lt;p&gt;昨天搞定 Emacs 的中文环境，今天想着好久没记帐了，随手记总是很花时间，干脆一鼓作气，将记帐一起搬过来。&lt;/p&gt;
-&lt;h2 id=&#34;复式记帐&#34;&gt;复式记帐&lt;/h2&gt;
-&lt;p&gt;我本科时双修了一门金融，其中最为繁琐，也是最令人头疼的一门课便是会计学。我不爱听讲，毕业之后也将会计的知识点忘得查差不多了，然而其&amp;quot;有借必有贷，借贷必相等&amp;quot;的复式记帐法，反而是我生活中运用最多的。&lt;/p&gt;
-&lt;p&gt;复式记帐法说起来复杂，对个人来说，就是将每笔交易分门别类，填入下面这条等式中：&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;资产 + 费用 = 负债 + 所有者权益 + 收入&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;在个人记帐中，这条等式辅以借贷概念会令人望而生畏，所以我将其略一变形：&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;（+资产）+（-负债）+（+费用）+（-收入）+（-所有者权益）= 0&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;ul&gt;
-&lt;li&gt;资产与负债都是与金钱直接挂钩的，比如银行户头，比如人民币美钞，比如信用卡帐户，再比如借条，这些都可以算是货币的不同表示形式。&lt;/li&gt;
-&lt;li&gt;费用与收入则是与金钱间接挂钩的，比如工资，比如商品，比如服务，这些都可以算是生产资本与商品资本的不同表现形式。其中收入与字面意思不同，可以理解为生产资本（劳动力等）。&lt;/li&gt;
-&lt;li&gt;所有者权益对个人意义不大，一般用来记录历史盈余与糊涂帐。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;而这个变形公式中的正负号，则可以将各项目的符号关系，用作资金流向的参照。这么说有点玄乎，换个茨威格式的说法就是：&amp;ldquo;人们从命运得到的一切，冥冥之中都记下了它的价钱。&amp;ldquo;花钱买了服务，则是减少资产（花了钱），增加费用（得到服务）；工资到帐，则是增加资产（到帐），减少收入（既有劳动时间的减少）；别人跟你借了钱，则是资产减少（银行帐户或现金余额减少），负债增加（别人在你这儿的负债）。&lt;/p&gt;
-&lt;p&gt;总结一下，由于人类暂时无法操控时间，所以费用一般为正，收入一般为负。而没有破产的情况下资产一般为正，别人欠你的钱为正，信用卡债（你欠别人的钱）为负。&lt;/p&gt;</description>
+      <description>&lt;p&gt;昨天搞定 Emacs 的中文环境，今天想着好久没记帐了，随手记总是很花时间，干脆一鼓作气，将记帐一起搬过来。&lt;/p&gt;&#xA;&lt;h2 id=&#34;复式记帐&#34;&gt;复式记帐&lt;/h2&gt;&#xA;&lt;p&gt;我本科时双修了一门金融，其中最为繁琐，也是最令人头疼的一门课便是会计学。我不爱听讲，毕业之后也将会计的知识点忘得查差不多了，然而其&amp;quot;有借必有贷，借贷必相等&amp;quot;的复式记帐法，反而是我生活中运用最多的。&lt;/p&gt;&#xA;&lt;p&gt;复式记帐法说起来复杂，对个人来说，就是将每笔交易分门别类，填入下面这条等式中：&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;资产 + 费用 = 负债 + 所有者权益 + 收入&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;在个人记帐中，这条等式辅以借贷概念会令人望而生畏，所以我将其略一变形：&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;（+资产）+（-负债）+（+费用）+（-收入）+（-所有者权益）= 0&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;资产与负债都是与金钱直接挂钩的，比如银行户头，比如人民币美钞，比如信用卡帐户，再比如借条，这些都可以算是货币的不同表示形式。&lt;/li&gt;&#xA;&lt;li&gt;费用与收入则是与金钱间接挂钩的，比如工资，比如商品，比如服务，这些都可以算是生产资本与商品资本的不同表现形式。其中收入与字面意思不同，可以理解为生产资本（劳动力等）。&lt;/li&gt;&#xA;&lt;li&gt;所有者权益对个人意义不大，一般用来记录历史盈余与糊涂帐。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;而这个变形公式中的正负号，则可以将各项目的符号关系，用作资金流向的参照。这么说有点玄乎，换个茨威格式的说法就是：&amp;ldquo;人们从命运得到的一切，冥冥之中都记下了它的价钱。&amp;ldquo;花钱买了服务，则是减少资产（花了钱），增加费用（得到服务）；工资到帐，则是增加资产（到帐），减少收入（既有劳动时间的减少）；别人跟你借了钱，则是资产减少（银行帐户或现金余额减少），负债增加（别人在你这儿的负债）。&lt;/p&gt;&#xA;&lt;p&gt;总结一下，由于人类暂时无法操控时间，所以费用一般为正，收入一般为负。而没有破产的情况下资产一般为正，别人欠你的钱为正，信用卡债（你欠别人的钱）为负。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

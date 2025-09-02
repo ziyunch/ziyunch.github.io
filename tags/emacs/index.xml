@@ -4,139 +4,66 @@
     <title>Emacs on Blind with Science</title>
     <link>http://blindwith.science/tags/emacs/</link>
     <description>Recent content in Emacs on Blind with Science</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Mon, 30 May 2022 12:34:00 -0700</lastBuildDate><atom:link href="http://blindwith.science/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 May 2022 14:19:13 -0700</lastBuildDate>
+    <atom:link href="http://blindwith.science/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>逃离豆瓣 - 使用Org-mode管理我的书影音</title>
       <link>http://blindwith.science/2022/05/475.html/</link>
       <pubDate>Mon, 30 May 2022 12:34:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2022/05/475.html/</guid>
-      <description>&lt;div class=&#34;admonition tip&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;小贴士&lt;/p&gt;
-  
-我的豆瓣书影音替代方案基于Org-mode，如果对此感兴趣的话可以阅读我的另一篇博客《继续吹一波Org-mode》了解Org-mode以及更多用法。
-
-&lt;/div&gt;
-&lt;p&gt;最近豆瓣开始搞激烈的实名认证，而不愿献祭隐私的我，也只能和豆瓣说再见了。豆瓣十几年的情谊化为乌有，我也无法相信其他书影音数据库能够天长地久。另一方面，IMDB，Letterbox，TMDB，Goodreads这类美国数据库对于动漫和国产书还有水土不服的问题，我曾经暂别豆瓣，用过挺长一段时间的IMDB+Letterbox，却还是回归豆瓣后觉得顺手。查了一下，似乎没有什么自架豆瓣替代品的开源软件，大家常用的方案也是我不太喜欢的Notion（我在&lt;a href=&#34;https://blindwith.science/2021/11/467.html/&#34;&gt;继续吹一波Org-mode&lt;/a&gt;里曾经详述过），于是趁着小长假，我便将豆瓣转移到了Org-mode。&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src=&#34;../../ox-hugo/org_mode_douban.png&#34;
-         alt=&#34;Figure 1: 最终效果长这样&#34;/&gt; &lt;figcaption&gt;
-            &lt;p&gt;&lt;!-- raw HTML omitted --&gt;Figure 1: &lt;!-- raw HTML omitted --&gt;最终效果长这样&lt;/p&gt;
-        &lt;/figcaption&gt;
-&lt;/figure&gt;</description>
+      <description>&lt;div class=&#34;admonition tip&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;小贴士&lt;/p&gt;&#xA;  &#xA;我的豆瓣书影音替代方案基于Org-mode，如果对此感兴趣的话可以阅读我的另一篇博客《继续吹一波Org-mode》了解Org-mode以及更多用法。&#xA;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;最近豆瓣开始搞激烈的实名认证，而不愿献祭隐私的我，也只能和豆瓣说再见了。豆瓣十几年的情谊化为乌有，我也无法相信其他书影音数据库能够天长地久。另一方面，IMDB，Letterbox，TMDB，Goodreads这类美国数据库对于动漫和国产书还有水土不服的问题，我曾经暂别豆瓣，用过挺长一段时间的IMDB+Letterbox，却还是回归豆瓣后觉得顺手。查了一下，似乎没有什么自架豆瓣替代品的开源软件，大家常用的方案也是我不太喜欢的Notion（我在&lt;a href=&#34;https://blindwith.science/2021/11/467.html/&#34;&gt;继续吹一波Org-mode&lt;/a&gt;里曾经详述过），于是趁着小长假，我便将豆瓣转移到了Org-mode。&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;../../ox-hugo/org_mode_douban.png&#34;&#xA;    alt=&#34;Figure 1: 最终效果长这样&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;&lt;!-- raw HTML omitted --&gt;Figure 1: &lt;!-- raw HTML omitted --&gt;最终效果长这样&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;</description>
     </item>
-    
     <item>
       <title>继续吹一波Org-mode</title>
       <link>http://blindwith.science/2021/11/467.html/</link>
       <pubDate>Fri, 12 Nov 2021 23:14:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/2021/11/467.html/</guid>
-      <description>&lt;p&gt;最近Notion大火，从二手买卖到菜谱分享，隔三差五就会看到它的推荐和应用。出于好奇，我也去开了个帐户用了一番，确实不错，然而我对其持谨慎态度。一方面，作为在线产品，它的使用场景灵活，但又会受网络限制，假如所在单位或者地区禁止使用，那就徒增烦恼。而且，它并非开源产品，公司一旦跑路或者改变其业务重心，那会造成非常高的转移成本，前车之鉴便有Evernote。另一方面，它作为一个笔记产品，架构强大，也更复杂，有着较高的学习成本，也许用起来很sexy，但也会让人疑惑在有更好替代品的情况下，是否值得花费这么多时间来学习使用这个产品。&lt;/p&gt;
-&lt;p&gt;说了这么多，其实我只是想引出这个更好的替代品，也就是我用了多年的Emacs。&lt;/p&gt;
-&lt;p&gt;在数字化时代，我们需要用到各种各样的工具来记录管理我们的生活，这也催生了各种工具和网站。比如日程管理有Things、Bear等，文献管理软件有Endnote、NoteExpress等，记帐软件有随手记、Splitwise等，编辑器有VSCode、Atom等，博客写作软件有Typora、MWeb等，菜谱有下厨房。但是工具太多协作性便会变弱，在线产品更是逃不脱对厂商的依赖，一旦厂商缺钱改成了订阅付费模式，除了叫苦不迭也只能乖乖付钱，而如果厂商保持免费，那也有可能通过其他方式比如出售隐私增加广告来保持盈利。其实对于这些，Emacs的Org mode都可以胜任。&lt;/p&gt;
-&lt;p&gt;Emacs是什么呢？最简单的解释，便是Emacs是一种基于Lisp的具有可扩展性的文本编辑器。文本编辑器，意味着平时不管在上面记录什么，大小都以kb计，最基础的Dropbox plan就能轻松对其进行云端备份，哪怕在一个没有Emacs的环境，也能用任何文本编辑器打开使用Emacs处理的文档。而Lisp的强扩展性，则赋予Emacs一切可能，你可以用它记笔记（Org-mode），管理文件（Dired），编辑远程档案（Tramp），版本控制（Magit），收发邮件（Gnus），用作IDE，甚至上网发推。有一个著名的说法称Emacs为操作系统，倒也并非言过其实。不过我也不至于真的将Emacs当操作系统使用，毕竟我们已经一只脚跨入了Meta时代（狗头）。不过Emacs，尤其是无人可出其右的Org-mode，也确实渗透了我的学习、工作、生活。&lt;/p&gt;
-&lt;p&gt;那么，Org-mode又是什么呢？Org-mode是Emacs的一种支持内容分级显示的主编辑模式。在Emacs中，每种主模式都有特殊的Emacs Lisp变量和函数来使处理文档变得更便捷，而Org作为Emacs特有的文本格式，更是有着非常出色的原生支持。其他主流编辑器（Vim, Atom, VSCode, Sublime）也都有对应相应的Org模式，但只能支持基础的语法高亮功能。&lt;/p&gt;
-&lt;p&gt;Org-mode的宣传语就是 your life in plain text，可以说很好地概括了Org-mode的能力。最重要的一点是Org是纯文本文档，具有体积小结构简单的优点。在此我先简单介绍一下Org-mode的特性，就不一一展开了。毕竟如果展开来讲，那可能得出一个系列文章。&lt;/p&gt;</description>
+      <description>&lt;p&gt;最近Notion大火，从二手买卖到菜谱分享，隔三差五就会看到它的推荐和应用。出于好奇，我也去开了个帐户用了一番，确实不错，然而我对其持谨慎态度。一方面，作为在线产品，它的使用场景灵活，但又会受网络限制，假如所在单位或者地区禁止使用，那就徒增烦恼。而且，它并非开源产品，公司一旦跑路或者改变其业务重心，那会造成非常高的转移成本，前车之鉴便有Evernote。另一方面，它作为一个笔记产品，架构强大，也更复杂，有着较高的学习成本，也许用起来很sexy，但也会让人疑惑在有更好替代品的情况下，是否值得花费这么多时间来学习使用这个产品。&lt;/p&gt;&#xA;&lt;p&gt;说了这么多，其实我只是想引出这个更好的替代品，也就是我用了多年的Emacs。&lt;/p&gt;&#xA;&lt;p&gt;在数字化时代，我们需要用到各种各样的工具来记录管理我们的生活，这也催生了各种工具和网站。比如日程管理有Things、Bear等，文献管理软件有Endnote、NoteExpress等，记帐软件有随手记、Splitwise等，编辑器有VSCode、Atom等，博客写作软件有Typora、MWeb等，菜谱有下厨房。但是工具太多协作性便会变弱，在线产品更是逃不脱对厂商的依赖，一旦厂商缺钱改成了订阅付费模式，除了叫苦不迭也只能乖乖付钱，而如果厂商保持免费，那也有可能通过其他方式比如出售隐私增加广告来保持盈利。其实对于这些，Emacs的Org mode都可以胜任。&lt;/p&gt;&#xA;&lt;p&gt;Emacs是什么呢？最简单的解释，便是Emacs是一种基于Lisp的具有可扩展性的文本编辑器。文本编辑器，意味着平时不管在上面记录什么，大小都以kb计，最基础的Dropbox plan就能轻松对其进行云端备份，哪怕在一个没有Emacs的环境，也能用任何文本编辑器打开使用Emacs处理的文档。而Lisp的强扩展性，则赋予Emacs一切可能，你可以用它记笔记（Org-mode），管理文件（Dired），编辑远程档案（Tramp），版本控制（Magit），收发邮件（Gnus），用作IDE，甚至上网发推。有一个著名的说法称Emacs为操作系统，倒也并非言过其实。不过我也不至于真的将Emacs当操作系统使用，毕竟我们已经一只脚跨入了Meta时代（狗头）。不过Emacs，尤其是无人可出其右的Org-mode，也确实渗透了我的学习、工作、生活。&lt;/p&gt;&#xA;&lt;p&gt;那么，Org-mode又是什么呢？Org-mode是Emacs的一种支持内容分级显示的主编辑模式。在Emacs中，每种主模式都有特殊的Emacs Lisp变量和函数来使处理文档变得更便捷，而Org作为Emacs特有的文本格式，更是有着非常出色的原生支持。其他主流编辑器（Vim, Atom, VSCode, Sublime）也都有对应相应的Org模式，但只能支持基础的语法高亮功能。&lt;/p&gt;&#xA;&lt;p&gt;Org-mode的宣传语就是 your life in plain text，可以说很好地概括了Org-mode的能力。最重要的一点是Org是纯文本文档，具有体积小结构简单的优点。在此我先简单介绍一下Org-mode的特性，就不一一展开了。毕竟如果展开来讲，那可能得出一个系列文章。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>从 pyim 换到 emacs-rime 了</title>
       <link>http://blindwith.science/2020/12/460.html/</link>
       <pubDate>Sun, 13 Dec 2020 17:49:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/2020/12/460.html/</guid>
-      <description>&lt;p&gt;之前我一直使用的是 pyim，见 &lt;a href=&#34;https://blindwith.science/2019/08/449.html/&#34;&gt;Mac 版 Emacs 中使用 Rime 输入法打带调双拼&lt;/a&gt;。前段时间手贱把 Mac 升至 Catalina 后，Emacs 便出现了各种各样的问题。捣鼓了一圈后发现了一个致命问题，那就是我对 pyim 的双拼定义不管用了。捣鼓了许久，都没搞明白原因是什么。不过 pyim 本身也有一些缺陷，安装复杂，和鼠须管并非无缝衔接，打字有卡顿，缓存限制对生僻字不友好，我的带调双拼也需要在 init 中另行设置，所以在发现 &lt;a href=&#34;https://github.com/DogLooksGood/emacs-rime&#34;&gt;emacs-rime&lt;/a&gt; 后，我便起了换个轮子用的想法。&lt;/p&gt;
-&lt;p&gt;emacs-rime 的安装非常简单，从 &lt;a href=&#34;https://github.com/rime/librime&#34;&gt;rime/librime&lt;/a&gt; 那儿下了最新的 Release 并解压至 &lt;code&gt;~/.emacs.d/librime&lt;/code&gt; 即可。更棒的是，由于 emacs-rime 仅仅是 rime 在 emacs 中的前端，所以其体验与鼠须管是完全一致的。也就是说，我再也不用为了实现带调双拼而写一个专用的 schema 并在 init 中另行设置了，而用起方言输入法也是顺滑非常。另外，在中英文混输时，也不需要切换输入法了，超级棒。&lt;/p&gt;</description>
+      <description>&lt;p&gt;之前我一直使用的是 pyim，见 &lt;a href=&#34;https://blindwith.science/2019/08/449.html/&#34;&gt;Mac 版 Emacs 中使用 Rime 输入法打带调双拼&lt;/a&gt;。前段时间手贱把 Mac 升至 Catalina 后，Emacs 便出现了各种各样的问题。捣鼓了一圈后发现了一个致命问题，那就是我对 pyim 的双拼定义不管用了。捣鼓了许久，都没搞明白原因是什么。不过 pyim 本身也有一些缺陷，安装复杂，和鼠须管并非无缝衔接，打字有卡顿，缓存限制对生僻字不友好，我的带调双拼也需要在 init 中另行设置，所以在发现 &lt;a href=&#34;https://github.com/DogLooksGood/emacs-rime&#34;&gt;emacs-rime&lt;/a&gt; 后，我便起了换个轮子用的想法。&lt;/p&gt;&#xA;&lt;p&gt;emacs-rime 的安装非常简单，从 &lt;a href=&#34;https://github.com/rime/librime&#34;&gt;rime/librime&lt;/a&gt; 那儿下了最新的 Release 并解压至 &lt;code&gt;~/.emacs.d/librime&lt;/code&gt; 即可。更棒的是，由于 emacs-rime 仅仅是 rime 在 emacs 中的前端，所以其体验与鼠须管是完全一致的。也就是说，我再也不用为了实现带调双拼而写一个专用的 schema 并在 init 中另行设置了，而用起方言输入法也是顺滑非常。另外，在中英文混输时，也不需要切换输入法了，超级棒。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Org-mode 中添加结构模板</title>
       <link>http://blindwith.science/2019/09/450.html/</link>
       <pubDate>Wed, 04 Sep 2019 20:06:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/09/450.html/</guid>
-      <description>&lt;p&gt;作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &lt;code&gt;&amp;lt;s&lt;/code&gt; &lt;!-- raw HTML omitted --&gt;TAB&lt;!-- raw HTML omitted --&gt; 会自动生成&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;c&#34;&gt;#+BEGIN_SRC&lt;/span&gt;
-
-&lt;span class=&#34;c&#34;&gt;#+END_SRC&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;这样插入代码或者引用这类结构非常方便。&lt;/p&gt;</description>
+      <description>&lt;p&gt;作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &lt;code&gt;&amp;lt;s&lt;/code&gt; &lt;!-- raw HTML omitted --&gt;TAB&lt;!-- raw HTML omitted --&gt; 会自动生成&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#+BEGIN_SRC&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#+END_SRC&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这样插入代码或者引用这类结构非常方便。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Mac 版 Emacs 中使用 Rime 输入法打带调双拼</title>
       <link>http://blindwith.science/2019/08/449.html/</link>
       <pubDate>Sat, 31 Aug 2019 20:40:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/08/449.html/</guid>
-      <description>&lt;p&gt;注：已换成 emacs-rime，详见 &lt;a href=&#34;https://blindwith.science/2020/12/460.html/&#34;&gt;从 pyim 换到 emacs-rime 了&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。&lt;/p&gt;</description>
+      <description>&lt;p&gt;注：已换成 emacs-rime，详见 &lt;a href=&#34;https://blindwith.science/2020/12/460.html/&#34;&gt;从 pyim 换到 emacs-rime 了&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;p&gt;由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>博客由 Hexo 迁移至 Hugo</title>
       <link>http://blindwith.science/2019/08/447.html/</link>
       <pubDate>Mon, 26 Aug 2019 23:49:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/08/447.html/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;本篇博文使用 org-mode 书就，耶！&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;从 2016 将博客迁移至 Hexo+Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。&lt;/p&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;本篇博文使用 org-mode 书就，耶！&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;从 2016 将博客迁移至 Hexo+Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Emacs 上使用 Beancount 记帐</title>
       <link>http://blindwith.science/2019/07/444.html/</link>
       <pubDate>Thu, 04 Jul 2019 12:58:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/07/444.html/</guid>
-      <description>&lt;p&gt;昨天搞定 Emacs 的中文环境，今天想着好久没记帐了，随手记总是很花时间，干脆一鼓作气，将记帐一起搬过来。&lt;/p&gt;
-&lt;h2 id=&#34;复式记帐&#34;&gt;复式记帐&lt;/h2&gt;
-&lt;p&gt;我本科时双修了一门金融，其中最为繁琐，也是最令人头疼的一门课便是会计学。我不爱听讲，毕业之后也将会计的知识点忘得查差不多了，然而其&amp;quot;有借必有贷，借贷必相等&amp;quot;的复式记帐法，反而是我生活中运用最多的。&lt;/p&gt;
-&lt;p&gt;复式记帐法说起来复杂，对个人来说，就是将每笔交易分门别类，填入下面这条等式中：&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;资产 + 费用 = 负债 + 所有者权益 + 收入&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;在个人记帐中，这条等式辅以借贷概念会令人望而生畏，所以我将其略一变形：&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;（+资产）+（-负债）+（+费用）+（-收入）+（-所有者权益）= 0&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;ul&gt;
-&lt;li&gt;资产与负债都是与金钱直接挂钩的，比如银行户头，比如人民币美钞，比如信用卡帐户，再比如借条，这些都可以算是货币的不同表示形式。&lt;/li&gt;
-&lt;li&gt;费用与收入则是与金钱间接挂钩的，比如工资，比如商品，比如服务，这些都可以算是生产资本与商品资本的不同表现形式。其中收入与字面意思不同，可以理解为生产资本（劳动力等）。&lt;/li&gt;
-&lt;li&gt;所有者权益对个人意义不大，一般用来记录历史盈余与糊涂帐。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;而这个变形公式中的正负号，则可以将各项目的符号关系，用作资金流向的参照。这么说有点玄乎，换个茨威格式的说法就是：&amp;ldquo;人们从命运得到的一切，冥冥之中都记下了它的价钱。&amp;ldquo;花钱买了服务，则是减少资产（花了钱），增加费用（得到服务）；工资到帐，则是增加资产（到帐），减少收入（既有劳动时间的减少）；别人跟你借了钱，则是资产减少（银行帐户或现金余额减少），负债增加（别人在你这儿的负债）。&lt;/p&gt;
-&lt;p&gt;总结一下，由于人类暂时无法操控时间，所以费用一般为正，收入一般为负。而没有破产的情况下资产一般为正，别人欠你的钱为正，信用卡债（你欠别人的钱）为负。&lt;/p&gt;</description>
+      <description>&lt;p&gt;昨天搞定 Emacs 的中文环境，今天想着好久没记帐了，随手记总是很花时间，干脆一鼓作气，将记帐一起搬过来。&lt;/p&gt;&#xA;&lt;h2 id=&#34;复式记帐&#34;&gt;复式记帐&lt;/h2&gt;&#xA;&lt;p&gt;我本科时双修了一门金融，其中最为繁琐，也是最令人头疼的一门课便是会计学。我不爱听讲，毕业之后也将会计的知识点忘得查差不多了，然而其&amp;quot;有借必有贷，借贷必相等&amp;quot;的复式记帐法，反而是我生活中运用最多的。&lt;/p&gt;&#xA;&lt;p&gt;复式记帐法说起来复杂，对个人来说，就是将每笔交易分门别类，填入下面这条等式中：&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;资产 + 费用 = 负债 + 所有者权益 + 收入&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;在个人记帐中，这条等式辅以借贷概念会令人望而生畏，所以我将其略一变形：&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;（+资产）+（-负债）+（+费用）+（-收入）+（-所有者权益）= 0&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;资产与负债都是与金钱直接挂钩的，比如银行户头，比如人民币美钞，比如信用卡帐户，再比如借条，这些都可以算是货币的不同表示形式。&lt;/li&gt;&#xA;&lt;li&gt;费用与收入则是与金钱间接挂钩的，比如工资，比如商品，比如服务，这些都可以算是生产资本与商品资本的不同表现形式。其中收入与字面意思不同，可以理解为生产资本（劳动力等）。&lt;/li&gt;&#xA;&lt;li&gt;所有者权益对个人意义不大，一般用来记录历史盈余与糊涂帐。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;而这个变形公式中的正负号，则可以将各项目的符号关系，用作资金流向的参照。这么说有点玄乎，换个茨威格式的说法就是：&amp;ldquo;人们从命运得到的一切，冥冥之中都记下了它的价钱。&amp;ldquo;花钱买了服务，则是减少资产（花了钱），增加费用（得到服务）；工资到帐，则是增加资产（到帐），减少收入（既有劳动时间的减少）；别人跟你借了钱，则是资产减少（银行帐户或现金余额减少），负债增加（别人在你这儿的负债）。&lt;/p&gt;&#xA;&lt;p&gt;总结一下，由于人类暂时无法操控时间，所以费用一般为正，收入一般为负。而没有破产的情况下资产一般为正，别人欠你的钱为正，信用卡债（你欠别人的钱）为负。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Emacs 中文环境配置</title>
       <link>http://blindwith.science/2019/07/443.html/</link>
       <pubDate>Wed, 03 Jul 2019 13:44:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/07/443.html/</guid>
-      <description>&lt;p&gt;使用 Emacs 三年多了，当时受了 &lt;a href=&#34;https://github.com/redguardtoo/mastering-emacs-in-one-year-guide&#34;&gt;一年成为 Emacs 高手&lt;/a&gt; 的蛊惑，且贪图便利，使用了 &lt;a href=&#34;https://github.com/purcell/emacs.d&#34;&gt;Purcell 的配置&lt;/a&gt;。正如 Purcell 所说，此配置相当 reasonable，用来入门确实让我受益匪浅，少走了很多弯路。三年使用下来，我需要添加的插件只有 &lt;code&gt;org-ref&lt;/code&gt; 和 &lt;code&gt;ob-smiles&lt;/code&gt; ，配置更新也仅须 &lt;code&gt;git pull&lt;/code&gt; 外加 &lt;!-- raw HTML omitted --&gt;M-x package-list-packages U x&lt;!-- raw HTML omitted --&gt; 即可，非常方便。&lt;/p&gt;
-&lt;p&gt;然而过去三年来，我主要是使用 Emacs 中的 org-mode 来记 Science 与 Tech 方面笔记，基于 Latex 的长文章 / 代码我更喜欢用 Atoms + Vim-mode 来写，基于 Markdown 的博客则用 MWeb 来写，中文笔记喜欢使用 Bears，最后却还是回到了苹果自带的免费 Notes。其他零零碎碎的场景则使用更为零碎的 app，餐馆用 DayGram + Workflowy，记账用随手记。非常不统一。&lt;/p&gt;
-&lt;p&gt;也就是说，我并不是一个“running my life with Emacs”的重症者，Purcell 配置的 Emacs 中也有大量我用不到，或者需要使用却不甚了解的插件。所以失业在家这个契机恰好也是让我重新审视 Emacs，看看我能否最大化地使用 Emacs。&lt;/p&gt;
-&lt;p&gt;对我而言，使用 Atoms 来写代码与 Latex，是由于我对使用 Emacs 调试还不甚熟练。所以这几天我花了一点时间重新阅读了 Emacs 手册。&lt;/p&gt;
-&lt;p&gt;使用 MWeb 来写博客与使用 Notes 来记笔记的原因则比较可笑，因为我基本上都是使用英文记录 Science &amp;amp; Tech 方面的笔记，我并没有配置 Emacs 的中文环境。所以需要使用中文来写东西时，我自然就得换用其他工具。这段时间准备面试，将 org-mode 的使用范围扩大到记录面试适宜，由于一亩三分地是一个主要资料来源，不免需要粘贴许多中文帖子进来。这时再将 Emacs 视为一个纯英文环境未免有些麻烦。而将 Emacs 中文化了，自然也不需要 MWeb 和 Notes 或者 Bear 什么事了。&lt;/p&gt;
-&lt;p&gt;而记录餐馆和消费的需求比较麻烦，本文暂且搁置，今后有空再来研究。&lt;/p&gt;</description>
+      <description>&lt;p&gt;使用 Emacs 三年多了，当时受了 &lt;a href=&#34;https://github.com/redguardtoo/mastering-emacs-in-one-year-guide&#34;&gt;一年成为 Emacs 高手&lt;/a&gt; 的蛊惑，且贪图便利，使用了 &lt;a href=&#34;https://github.com/purcell/emacs.d&#34;&gt;Purcell 的配置&lt;/a&gt;。正如 Purcell 所说，此配置相当 reasonable，用来入门确实让我受益匪浅，少走了很多弯路。三年使用下来，我需要添加的插件只有 &lt;code&gt;org-ref&lt;/code&gt; 和 &lt;code&gt;ob-smiles&lt;/code&gt; ，配置更新也仅须 &lt;code&gt;git pull&lt;/code&gt; 外加 &lt;!-- raw HTML omitted --&gt;M-x package-list-packages U x&lt;!-- raw HTML omitted --&gt; 即可，非常方便。&lt;/p&gt;&#xA;&lt;p&gt;然而过去三年来，我主要是使用 Emacs 中的 org-mode 来记 Science 与 Tech 方面笔记，基于 Latex 的长文章 / 代码我更喜欢用 Atoms + Vim-mode 来写，基于 Markdown 的博客则用 MWeb 来写，中文笔记喜欢使用 Bears，最后却还是回到了苹果自带的免费 Notes。其他零零碎碎的场景则使用更为零碎的 app，餐馆用 DayGram + Workflowy，记账用随手记。非常不统一。&lt;/p&gt;&#xA;&lt;p&gt;也就是说，我并不是一个“running my life with Emacs”的重症者，Purcell 配置的 Emacs 中也有大量我用不到，或者需要使用却不甚了解的插件。所以失业在家这个契机恰好也是让我重新审视 Emacs，看看我能否最大化地使用 Emacs。&lt;/p&gt;&#xA;&lt;p&gt;对我而言，使用 Atoms 来写代码与 Latex，是由于我对使用 Emacs 调试还不甚熟练。所以这几天我花了一点时间重新阅读了 Emacs 手册。&lt;/p&gt;&#xA;&lt;p&gt;使用 MWeb 来写博客与使用 Notes 来记笔记的原因则比较可笑，因为我基本上都是使用英文记录 Science &amp;amp; Tech 方面的笔记，我并没有配置 Emacs 的中文环境。所以需要使用中文来写东西时，我自然就得换用其他工具。这段时间准备面试，将 org-mode 的使用范围扩大到记录面试适宜，由于一亩三分地是一个主要资料来源，不免需要粘贴许多中文帖子进来。这时再将 Emacs 视为一个纯英文环境未免有些麻烦。而将 Emacs 中文化了，自然也不需要 MWeb 和 Notes 或者 Bear 什么事了。&lt;/p&gt;&#xA;&lt;p&gt;而记录餐馆和消费的需求比较麻烦，本文暂且搁置，今后有空再来研究。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

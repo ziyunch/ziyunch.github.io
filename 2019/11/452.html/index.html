@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="ziyunch" /><meta name="description" content="I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.
-1 2 3 4 5 6 7  conn = _connect(dsn, connection_factory=connection_factory, **kwasync) django.db.utils.OperationalError: could not connect to server: Connection refused Is the server running on host &amp;#34;localhost&amp;#34; (::1) and accepting TCP/IP connections on port 5432? could not connect to server: Connection refused Is the server running on host &amp;#34;localhost&amp;#34; (127.0.0.1) and accepting TCP/IP connections on port 5432?   " /><meta name="keywords" content="ziyunch, blog" />
+conn = _connect(dsn, connection_factory=connection_factory, **kwasync) django.db.utils.OperationalError: could not connect to server: Connection refused Is the server running on host &#34;localhost&#34; (::1) and accepting TCP/IP connections on port 5432? could not connect to server: Connection refused Is the server running on host &#34;localhost&#34; (127.0.0.1) and accepting TCP/IP connections on port 5432? " /><meta name="keywords" content="ziyunch, blog" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.76.5 with theme even" />
+<meta name="generator" content="Hugo 0.149.0 with theme even" />
 
 
 <link rel="canonical" href="http://blindwith.science/2019/11/452.html/" />
@@ -38,91 +38,33 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="../../../sass/main.min.f346f1cd7c119368051aba0791b1276d109b14d2a0fcefac9fe27d9ba680605a.css" rel="stylesheet">
+<link href="../../../sass/main.min.22b0d99d8a618713080069182ee3608a4528452925f4324879d7352bfccb78bd.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Postgresql server did not shutdown correctly" />
-<meta property="og:description" content="I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.
+<meta property="og:url" content="http://blindwith.science/2019/11/452.html/">
+  <meta property="og:site_name" content="Blind with Science">
+  <meta property="og:title" content="Postgresql server did not shutdown correctly">
+  <meta property="og:description" content="I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.
+conn = _connect(dsn, connection_factory=connection_factory, **kwasync) django.db.utils.OperationalError: could not connect to server: Connection refused Is the server running on host &#34;localhost&#34; (::1) and accepting TCP/IP connections on port 5432? could not connect to server: Connection refused Is the server running on host &#34;localhost&#34; (127.0.0.1) and accepting TCP/IP connections on port 5432?">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2019-11-05T11:23:00-08:00">
+    <meta property="article:modified_time" content="2021-01-18T17:23:01-08:00">
+    <meta property="article:tag" content="PostgreSQL">
 
-
-1
-2
-3
-4
-5
-6
-7
-
-
-    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
-django.db.utils.OperationalError: could not connect to server: Connection refused
-        Is the server running on host &#34;localhost&#34; (::1) and accepting
-        TCP/IP connections on port 5432?
-could not connect to server: Connection refused
-        Is the server running on host &#34;localhost&#34; (127.0.0.1) and accepting
-        TCP/IP connections on port 5432?
-
-
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://blindwith.science/2019/11/452.html/" />
-<meta property="article:published_time" content="2019-11-05T11:23:00-08:00" />
-<meta property="article:modified_time" content="2021-01-18T17:23:01-08:00" />
-<meta itemprop="name" content="Postgresql server did not shutdown correctly">
-<meta itemprop="description" content="I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.
-
-
-1
-2
-3
-4
-5
-6
-7
-
-
-    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
-django.db.utils.OperationalError: could not connect to server: Connection refused
-        Is the server running on host &#34;localhost&#34; (::1) and accepting
-        TCP/IP connections on port 5432?
-could not connect to server: Connection refused
-        Is the server running on host &#34;localhost&#34; (127.0.0.1) and accepting
-        TCP/IP connections on port 5432?
-
-
-">
-<meta itemprop="datePublished" content="2019-11-05T11:23:00-08:00" />
-<meta itemprop="dateModified" content="2021-01-18T17:23:01-08:00" />
-<meta itemprop="wordCount" content="228">
-
-
-
-<meta itemprop="keywords" content="PostgreSQL," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Postgresql server did not shutdown correctly"/>
-<meta name="twitter:description" content="I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.
-
-
-1
-2
-3
-4
-5
-6
-7
-
-
-    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
-django.db.utils.OperationalError: could not connect to server: Connection refused
-        Is the server running on host &#34;localhost&#34; (::1) and accepting
-        TCP/IP connections on port 5432?
-could not connect to server: Connection refused
-        Is the server running on host &#34;localhost&#34; (127.0.0.1) and accepting
-        TCP/IP connections on port 5432?
-
-
-"/>
+  <meta itemprop="name" content="Postgresql server did not shutdown correctly">
+  <meta itemprop="description" content="I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.
+conn = _connect(dsn, connection_factory=connection_factory, **kwasync) django.db.utils.OperationalError: could not connect to server: Connection refused Is the server running on host &#34;localhost&#34; (::1) and accepting TCP/IP connections on port 5432? could not connect to server: Connection refused Is the server running on host &#34;localhost&#34; (127.0.0.1) and accepting TCP/IP connections on port 5432?">
+  <meta itemprop="datePublished" content="2019-11-05T11:23:00-08:00">
+  <meta itemprop="dateModified" content="2021-01-18T17:23:01-08:00">
+  <meta itemprop="wordCount" content="220">
+  <meta itemprop="keywords" content="PostgreSQL">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Postgresql server did not shutdown correctly">
+  <meta name="twitter:description" content="I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.
+conn = _connect(dsn, connection_factory=connection_factory, **kwasync) django.db.utils.OperationalError: could not connect to server: Connection refused Is the server running on host &#34;localhost&#34; (::1) and accepting TCP/IP connections on port 5432? could not connect to server: Connection refused Is the server running on host &#34;localhost&#34; (127.0.0.1) and accepting TCP/IP connections on port 5432?">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -206,7 +148,7 @@ could not connect to server: Connection refused
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 228 字 </span>
+          <span class="more-meta"> 约 220 字 </span>
           <span class="more-meta"> 预计阅读 1 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -219,42 +161,22 @@ could not connect to server: Connection refused
   </div>
 </div>
   <div class="post-outdated">
-    <div class="hint">
+    <div class="warn">
       <p>【注意】最后更新于 <span class="timeago" datetime="2021-01-18T17:23:01" title="January 18, 2021">January 18, 2021</span>，文中内容可能已过时，请谨慎使用。</p>
     </div>
   </div>
     <div class="post-content">
       <p>I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
-django.db.utils.OperationalError: could not connect to server: Connection refused
-        Is the server running on host &#34;localhost&#34; (::1) and accepting
-        TCP/IP connections on port 5432?
-could not connect to server: Connection refused
-        Is the server running on host &#34;localhost&#34; (127.0.0.1) and accepting
-        TCP/IP connections on port 5432?
-</code></pre></td></tr></table>
-</div>
-</div><p>And <code>sudo lsof -i :5432</code> returned nothing. It looks that my local database is down, so I tried <code>brew services start postgresql@10</code>, and got message:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">Service `postgresql@10` already started, use `brew services restart postgresql@10` to restart.
-</code></pre></td></tr></table>
-</div>
-</div><p>I tried to restart postgresql, but it did not help.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+</span></span><span style="display:flex;"><span>django.db.utils.OperationalError: could not connect to server: Connection refused
+</span></span><span style="display:flex;"><span>        Is the server running on host &#34;localhost&#34; (::1) and accepting
+</span></span><span style="display:flex;"><span>        TCP/IP connections on port 5432?
+</span></span><span style="display:flex;"><span>could not connect to server: Connection refused
+</span></span><span style="display:flex;"><span>        Is the server running on host &#34;localhost&#34; (127.0.0.1) and accepting
+</span></span><span style="display:flex;"><span>        TCP/IP connections on port 5432?
+</span></span></code></pre></div><p>And <code>sudo lsof -i :5432</code> returned nothing. It looks that my local database is down, so I tried <code>brew services start postgresql@10</code>, and got message:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Service `postgresql@10` already started, use `brew services restart postgresql@10` to restart.
+</span></span></code></pre></div><p>I tried to restart postgresql, but it did not help.</p>
 <p>Maybe there is a stuck lockfile somewhere? Here is a <a href="https://stackoverflow.com/questions/37307346/is-the-server-running-on-host-localhost-1-and-accepting-tcp-ip-connections/37307420">clue</a> as well as a few workarounds. I examine the content of <code>postmaster.pid</code> by <code>cat /usr/local/var/postgresql@10/postmaster.pid</code> and kill the lock file by <code>kill -9 &lt;PID&gt;</code>. Upon restarting the services, now it works again.</p>
 <p>p.s. <code>kill -9</code> might not be a good way to kill the process here. See the <a href="http://web.archive.org/web/20110730051506/http://partmaps.org/era/unix/award.html#uuk9letter">quote</a> here:</p>
 <blockquote>
@@ -265,8 +187,7 @@ It doesn&rsquo;t give the process a chance to cleanly:</p>
 <li>clean up temp files</li>
 <li>inform its children that it is going away</li>
 <li>reset its terminal characteristics</li>
-</ol>
-</blockquote>
+</ol></blockquote>
     </div>
 
     <div class="post-copyright">
@@ -352,7 +273,7 @@ It doesn&rsquo;t give the process a chance to cleanly:</p>
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   width="28" height="28"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
       </a>
-  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -374,7 +295,7 @@ It doesn&rsquo;t give the process a chance to cleanly:</p>
   <span class="copyright-year">
     &copy; 
     2005 - 
-    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
   </span>
 </div>
 
@@ -390,7 +311,7 @@ It doesn&rsquo;t give the process a chance to cleanly:</p>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script>
     var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -398,19 +319,8 @@ It doesn&rsquo;t give the process a chance to cleanly:</p>
 
 
 
-<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="../../../js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-86469737-1', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>liberime on Blind with Science</title>
+    <title>Liberime on Blind with Science</title>
     <link>http://blindwith.science/tags/liberime/</link>
-    <description>Recent content in liberime on Blind with Science</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Liberime on Blind with Science</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Sat, 31 Aug 2019 20:40:00 -0700</lastBuildDate><atom:link href="http://blindwith.science/tags/liberime/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Jan 2021 17:23:00 -0800</lastBuildDate>
+    <atom:link href="http://blindwith.science/tags/liberime/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mac 版 Emacs 中使用 Rime 输入法打带调双拼</title>
       <link>http://blindwith.science/2019/08/449.html/</link>
       <pubDate>Sat, 31 Aug 2019 20:40:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/08/449.html/</guid>
-      <description>&lt;p&gt;注：已换成 emacs-rime，详见 &lt;a href=&#34;https://blindwith.science/2020/12/460.html/&#34;&gt;从 pyim 换到 emacs-rime 了&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。&lt;/p&gt;</description>
+      <description>&lt;p&gt;注：已换成 emacs-rime，详见 &lt;a href=&#34;https://blindwith.science/2020/12/460.html/&#34;&gt;从 pyim 换到 emacs-rime 了&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;p&gt;由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

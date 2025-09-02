@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.76.5 with theme even" />
+<meta name="generator" content="Hugo 0.149.0 with theme even" />
 
 
 <link rel="canonical" href="http://blindwith.science/2021/01/463.html/" />
@@ -38,28 +38,30 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="../../../sass/main.min.f346f1cd7c119368051aba0791b1276d109b14d2a0fcefac9fe27d9ba680605a.css" rel="stylesheet">
+<link href="../../../sass/main.min.22b0d99d8a618713080069182ee3608a4528452925f4324879d7352bfccb78bd.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Beancount 记帐小进阶之三–常见场景" />
-<meta property="og:description" content="书接上文，这次分享一下我对工资单，共享帐簿以及医疗帐单，炒币这些常用场景的处理方式。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://blindwith.science/2021/01/463.html/" />
-<meta property="article:published_time" content="2021-01-18T18:33:00-08:00" />
-<meta property="article:modified_time" content="2021-01-18T20:33:39-08:00" />
-<meta itemprop="name" content="Beancount 记帐小进阶之三–常见场景">
-<meta itemprop="description" content="书接上文，这次分享一下我对工资单，共享帐簿以及医疗帐单，炒币这些常用场景的处理方式。">
-<meta itemprop="datePublished" content="2021-01-18T18:33:00-08:00" />
-<meta itemprop="dateModified" content="2021-01-18T20:33:39-08:00" />
-<meta itemprop="wordCount" content="2241">
+<meta property="og:url" content="http://blindwith.science/2021/01/463.html/">
+  <meta property="og:site_name" content="Blind with Science">
+  <meta property="og:title" content="Beancount 记帐小进阶之三–常见场景">
+  <meta property="og:description" content="书接上文，这次分享一下我对工资单，共享帐簿以及医疗帐单，炒币这些常用场景的处理方式。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-01-18T18:33:00-08:00">
+    <meta property="article:modified_time" content="2021-01-18T20:33:39-08:00">
+    <meta property="article:tag" content="Beancount">
 
-
-
-<meta itemprop="keywords" content="Beancount," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Beancount 记帐小进阶之三–常见场景"/>
-<meta name="twitter:description" content="书接上文，这次分享一下我对工资单，共享帐簿以及医疗帐单，炒币这些常用场景的处理方式。"/>
+  <meta itemprop="name" content="Beancount 记帐小进阶之三–常见场景">
+  <meta itemprop="description" content="书接上文，这次分享一下我对工资单，共享帐簿以及医疗帐单，炒币这些常用场景的处理方式。">
+  <meta itemprop="datePublished" content="2021-01-18T18:33:00-08:00">
+  <meta itemprop="dateModified" content="2021-01-18T20:33:39-08:00">
+  <meta itemprop="wordCount" content="2143">
+  <meta itemprop="keywords" content="Beancount">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Beancount 记帐小进阶之三–常见场景">
+  <meta name="twitter:description" content="书接上文，这次分享一下我对工资单，共享帐簿以及医疗帐单，炒币这些常用场景的处理方式。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -143,7 +145,7 @@
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 2241 字 </span>
+          <span class="more-meta"> 约 2143 字 </span>
           <span class="more-meta"> 预计阅读 5 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -165,7 +167,7 @@
   </div>
 </div>
   <div class="post-outdated">
-    <div class="hint">
+    <div class="warn">
       <p>【注意】最后更新于 <span class="timeago" datetime="2021-01-18T20:33:39" title="January 18, 2021">January 18, 2021</span>，文中内容可能已过时，请谨慎使用。</p>
     </div>
   </div>
@@ -174,26 +176,7 @@
 <h2 id="工资记录">工资记录</h2>
 <p>一张工资单上会有很多条目，所以我会单开一个文件来放工资详情，记录税务，保险，401k 和公司福利。</p>
 <p>这里比较复杂的是税务的记录。以前我将税务算为负收入，这样在看每月支出时可以比较直观地看到自己的每月花销。但是实际上这不太准确。所以还是将税务其算作支出。另外，由于每年会根据收入以及代扣税费来报税，之后也会补税或退税，所以如果单列一个 <code>Expenses:Tax</code> 会将年末的税务计算复杂化，所以我以财年 (fiscal year) 为单位来记录每张工资单的税务。以下以互利公司的工资单为例，：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2019-10-31 * &#34;Hooli&#34; &#34;Paycheck&#34;
+<pre tabindex="0"><code class="language-beancount" data-lang="beancount">2019-10-31 * &#34;Hooli&#34; &#34;Paycheck&#34;
   Income:Hooli:Pay:Salary                     -7000 USD
   Income:Hooli:Pay:Bonus                      -3000 USD
   Expenses:Tax:FY2019:US:Federal              +1660 USD
@@ -208,78 +191,27 @@
   Assets:Retirement:T401K:Fidelity             +500 USD
   Income:Hooli:Benefits:HSA                     -40 USD
   Assets:Health:HSA                             +40 USD
-</code></pre></td></tr></table>
-</div>
-</div><p>这样每年报税的时候，可以将应付或应收税额记录，在实际补税或退税时予以扣除。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2019-12-31 * &#34;TurboTax&#34; &#34;Tax Return&#34;
+</code></pre><p>这样每年报税的时候，可以将应付或应收税额记录，在实际补税或退税时予以扣除。</p>
+<pre tabindex="0"><code class="language-beancount" data-lang="beancount">2019-12-31 * &#34;TurboTax&#34; &#34;Tax Return&#34;
   Liabilities:Tax:Payables                    +2000 USD
   Expenses:Tax:FY2019:US:Federal              -2000 USD
 
 2020-04-15 * &#34;Federal&#34;  &#34;Tax return&#34;
   Liabilities:Tax:Payables                    -2000 USD
   Assets:US:Chase:Checking                    +2000 USD
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="共享帐簿">共享帐簿</h2>
+</code></pre><h2 id="共享帐簿">共享帐簿</h2>
 <p>平时和小伙伴们一起玩耍，总会遇到一人付款事后分帐的情况。这种债务的记录在会计上是应该分为资产和负债的，但是对于个人帐目而言，每个人开两个帐目也挺麻烦，所以我一律记载在负债中，如果说我付钱帮小红同学与我买一份狮子头分着吃，就这么记录：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2020-01-01 * &#34;X Restaurant&#34; &#34;狮子头&#34;
+<pre tabindex="0"><code class="language-beancount" data-lang="beancount">2020-01-01 * &#34;X Restaurant&#34; &#34;狮子头&#34;
   Liabilities:Receivables:小红                   +5 USD
   Expenses:Food:Takeout                          +5 USD
   Liabilities:US:Chase:Freedom                  -10 USD
-</code></pre></td></tr></table>
-</div>
-</div><p>如果小红帮我付钱两人又分了一份狮子头，就这样：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2020-01-02 * &#34;X Restaurant&#34; &#34;狮子头&#34;
+</code></pre><p>如果小红帮我付钱两人又分了一份狮子头，就这样：</p>
+<pre tabindex="0"><code class="language-beancount" data-lang="beancount">2020-01-02 * &#34;X Restaurant&#34; &#34;狮子头&#34;
   Expenses:Food:Takeout                          +5 USD
   Liabilities:Receivables:小红                   -5 USD
-</code></pre></td></tr></table>
-</div>
-</div><p>以后和小红同学结算的时候就看 <code>Liabilities:Receivables:小红</code> 这个帐户里还有多少钱，如果是正的对方就欠我钱，如果是负的我就需要还对方钱。</p>
+</code></pre><p>以后和小红同学结算的时候就看 <code>Liabilities:Receivables:小红</code> 这个帐户里还有多少钱，如果是正的对方就欠我钱，如果是负的我就需要还对方钱。</p>
 <p>不过今年和女票同住，大家的共同花销都记在她的一张信用卡上，再像上面那样一条一条记录，就有些头大了。所以此处我用了两个插件来记录共享和实际支出对象：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">plugin &#34;beancount.plugins.divert_expenses&#34; &#34;{
+<pre tabindex="0"><code class="language-beancount" data-lang="beancount">plugin &#34;beancount.plugins.divert_expenses&#34; &#34;{
     &#39;tag&#39;: &#39;GF&#39;,
     &#39;account&#39;: &#39;Liabilities:Receivables:GF&#39;
 }&#34;
@@ -292,48 +224,16 @@ plugin &#34;beancount_share.share&#34; &#34;{
     &#39;open_date&#39;: None,
     &#39;quantize&#39;: &#39;0.01&#39;
   }&#34;
-</code></pre></td></tr></table>
-</div>
-</div><p>这样，我可以将她信用卡的帐单导入（具体设置见前文），然后通过添加标签的方式设置共享支出，这样如果我们使用女票名下的信用卡帮我俩付钱买狮子头就可以这样记录：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2021-01-01 * &#34;X Restaurant&#34; &#34;狮子头&#34; #share-GF
+</code></pre><p>这样，我可以将她信用卡的帐单导入（具体设置见前文），然后通过添加标签的方式设置共享支出，这样如果我们使用女票名下的信用卡帮我俩付钱买狮子头就可以这样记录：</p>
+<pre tabindex="0"><code class="language-beancount" data-lang="beancount">2021-01-01 * &#34;X Restaurant&#34; &#34;狮子头&#34; #share-GF
   Liabilities:GF:Chase:Freedom                  -10 USD
   Expenses:Food:Takeout
-</code></pre></td></tr></table>
-</div>
-</div><p>如果她使用这张共享的卡给自己买了狮子头却没有和我分（哼），则可以将标签改成 <code>#GF</code> 来改变实际支出对象。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2021-01-02 * &#34;X Restaurant&#34; &#34;狮子头&#34; #GF
+</code></pre><p>如果她使用这张共享的卡给自己买了狮子头却没有和我分（哼），则可以将标签改成 <code>#GF</code> 来改变实际支出对象。</p>
+<pre tabindex="0"><code class="language-beancount" data-lang="beancount">2021-01-02 * &#34;X Restaurant&#34; &#34;狮子头&#34; #GF
   Liabilities:GF:Chase:Freedom                  -10 USD
   Expenses:Food:Takeout
-</code></pre></td></tr></table>
-</div>
-</div><p>这样在 beancount 后端，这两条记录会变成如下形式：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2021-01-01 * &#34;X Restaurant&#34; &#34;狮子头&#34; #share-GF
+</code></pre><p>这样在 beancount 后端，这两条记录会变成如下形式：</p>
+<pre tabindex="0"><code class="language-beancount" data-lang="beancount">2021-01-01 * &#34;X Restaurant&#34; &#34;狮子头&#34; #share-GF
   Liabilities:GF:Chase:Freedom                  -10 USD
   Expenses:Food:Takeout                          +5 USD
   Liabilities:Receivables:GF                     +5 USD
@@ -341,97 +241,38 @@ plugin &#34;beancount_share.share&#34; &#34;{
 2021-01-02 * &#34;X Restaurant&#34; &#34;狮子头&#34; #GF
   Liabilities:GF:Chase:Freedom                  -10 USD
   Liabilities:Receivables:GF                    +10 USD
-</code></pre></td></tr></table>
-</div>
-</div><p>而女票对她信用卡的付款记录则可以移除标签，直接记录，如果不放心的话还可以加个余额的对帐。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2021-01-03 balance Liabilities:GF:Chase:Freedom -20 USD
+</code></pre><p>而女票对她信用卡的付款记录则可以移除标签，直接记录，如果不放心的话还可以加个余额的对帐。</p>
+<pre tabindex="0"><code class="language-beancount" data-lang="beancount">2021-01-03 balance Liabilities:GF:Chase:Freedom -20 USD
 
 2021-01-15 * &#34;Automatic Payment - Thank&#34;
   Liabilities:GF:Chase:Freedom                  +20 USD
   Liabilities:Receivables:GF                    -20 USD
-</code></pre></td></tr></table>
-</div>
-</div><p>如此记录，方便简洁，最后一看 <code>Liabilities:Receivables:GF</code> 的余额是 -5，所以我要还她 5 块钱。</p>
+</code></pre><p>如此记录，方便简洁，最后一看 <code>Liabilities:Receivables:GF</code> 的余额是 -5，所以我要还她 5 块钱。</p>
 <h2 id="医疗帐单">医疗帐单</h2>
 <p>在美国，医保是一项产业，工作之后医保与学生时期的医保相比差了不少，与之相关的帐务记录也变得非常麻烦。我的思路就是在实际发生日，按照医保公司给的帐单进行记录，并对 deductible 按年记付。这样可以方便地看出每年 deductible 额能否用完，日后需不需要更换更合适自己的医保。下面是一个例子：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2020-01-01 * &#34;Premera&#34; &#34;Labcorp Test&#34;
+<pre tabindex="0"><code class="language-beancount" data-lang="beancount">2020-01-01 * &#34;Premera&#34; &#34;Labcorp Test&#34;
   Expenses:Health:Medical:Claims               +150 USD
   Expenses:Health:Medical:NetworkDiscount       -20 USD
   Expenses:Health:Medical:PlanPayment          -100 USD
   Liabilities:Payables:Health:Y2020:Deductible  -30 USD
-</code></pre></td></tr></table>
-</div>
-</div><p>而后可以直接用 HSA 帐户付清帐单：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2020-02-01 * &#34;HSA&#34; &#34;Reimbursement&#34;
+</code></pre><p>而后可以直接用 HSA 帐户付清帐单：</p>
+<pre tabindex="0"><code class="language-beancount" data-lang="beancount">2020-02-01 * &#34;HSA&#34; &#34;Reimbursement&#34;
   Liabilities:Payables:Health:Y2020:Deductible  +30 USD
   Assets:Health:HSA                             -30 USD
-</code></pre></td></tr></table>
-</div>
-</div><p>如果 HSA 帐户里暂时没那么多钱，也可以用信用卡先付清帐单，日后再用 HSA 报销：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2020-02-01 * &#34;Premera&#34; &#34;Payment&#34;
+</code></pre><p>如果 HSA 帐户里暂时没那么多钱，也可以用信用卡先付清帐单，日后再用 HSA 报销：</p>
+<pre tabindex="0"><code class="language-beancount" data-lang="beancount">2020-02-01 * &#34;Premera&#34; &#34;Payment&#34;
   Liabilities:Payables:Health:Y2020:Deductible  -30 USD
   Liabilities:US:Chase:Freedom                  +30 USD
 
 2021-01-01 * &#34;HSA&#34; &#34;Reimbursement&#34;
   Assets:Health:HSA                             -30 USD
   Assets:US:Chase:Checking                      +30 USD
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="rsu">RSU</h2>
+</code></pre><h2 id="rsu">RSU</h2>
 <p>工作以后，会得到一些 RSU，即限制性股票，这一般是作为股票奖励写在 offer 中，按一定比例分四年发放。这在税务记录上会有一些复杂，所幸的是 Beancount 官方文档中给出了很好的<a href="https://beancount.github.io/docs/stock%5Fvesting%5Fin%5Fbeancount.html">示例</a>。由于我还没被 vest，在此先不赘述，以后拿到股票了再补完。</p>
 <h2 id="虚拟货币">虚拟货币</h2>
 <p>17 年的时候我有买过一点点比特币，虽然基本上都被不靠谱的我给玩没了，也算交了比小小的学费。由于虚拟货币的特殊性，当时用随手记记录的时候从税务角度来看帐目有一些不清晰。研究了一下发现，beancount 也可以比较好地处理这种场景。</p>
 <p>首先是开户，可以使用类似股票的形式开户，并以 FIFO 的形式计算盈余。除了资产以外，还有支出和收入来记录手续费与盈余收入。此外将虚拟货币记录为一种通货。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2017-06-01 open Assets:Crypto:Coinbase:Wallet &#34;FIFO&#34;
+<pre tabindex="0"><code class="language-beancount" data-lang="beancount">2017-06-01 open Assets:Crypto:Coinbase:Wallet &#34;FIFO&#34;
 2017-06-01 open Assets:Crypto:Bittrex:Wallet &#34;FIFO&#34;
 
 2017-06-01 open Expenses:Crypto:Commissions
@@ -440,56 +281,23 @@ plugin &#34;beancount_share.share&#34; &#34;{
 2008-01-01 commodity BTC
   export: &#34;BTC&#34;
   name: &#34;Bitcoin&#34;
-</code></pre></td></tr></table>
-</div>
-</div><p>在使用美元买进虚拟货币的时候，可以用 <code>{}</code> 表示每一币的持有成本，并用 <code>@@</code> 表示买入总价。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2017-06-01 * &#34;Coinbase&#34; &#34;BTC&#34;
+</code></pre><p>在使用美元买进虚拟货币的时候，可以用 <code>{}</code> 表示每一币的持有成本，并用 <code>@@</code> 表示买入总价。</p>
+<pre tabindex="0"><code class="language-beancount" data-lang="beancount">2017-06-01 * &#34;Coinbase&#34; &#34;BTC&#34;
   Assets:Crypto:Coinbase:Wallet         +0.03000000 BTC {3000.00 USD} @@ 90 USD
   Expenses:Crypto:Commissions                 +3.00 USD
   Liabilities:US:Chase:Freedom               -93.00 USD
-</code></pre></td></tr></table>
-</div>
-</div><p>而卖出的时候，由于我对这个钱包采用的是先进先出 (FIFO) 的模式，可以不指明卖出比特币的持有成本，这样 Beancount 会直接以最早买入的比特币的持有成本来计算盈余。卖出时可以用 @ 表示卖出时每币的价格。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2017-07-30 * &#34;Coinbase&#34; &#34;BTC-&gt; USD&#34;
+</code></pre><p>而卖出的时候，由于我对这个钱包采用的是先进先出 (FIFO) 的模式，可以不指明卖出比特币的持有成本，这样 Beancount 会直接以最早买入的比特币的持有成本来计算盈余。卖出时可以用 @ 表示卖出时每币的价格。</p>
+<pre tabindex="0"><code class="language-beancount" data-lang="beancount">2017-07-30 * &#34;Coinbase&#34; &#34;BTC-&gt; USD&#34;
   Assets:Crypto:Coinbase:Wallet         -0.02000000 BTC {} @ 4500.00 USD
   Expenses:Crypto:Commissions                 +3.00 USD
   Income:Crypto:PnL                          -30.00 USD
   Assets:Crypto:Coinbase:Wallet              +87.00 USD
-</code></pre></td></tr></table>
-</div>
-</div><p>虽然人们对虚拟货币的货币属性仍有争议，但是对于比特币的转帐行为，交易费用是采用比特币结算的。这就给传统记帐手段带来了问题。对于 Beancount 来说，也比较 tricky，我也是找到这个<a href="https://groups.google.com/g/beancount/c/Qvbcq-Sk5NY/m/evxSnb6nAQAJ">讨论帖</a>才找到如下这种记录方式。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">2017-08-01 * &#34;Bittrex&#34; &#34;Coinbase -&gt; Bittrex&#34;
+</code></pre><p>虽然人们对虚拟货币的货币属性仍有争议，但是对于比特币的转帐行为，交易费用是采用比特币结算的。这就给传统记帐手段带来了问题。对于 Beancount 来说，也比较 tricky，我也是找到这个<a href="https://groups.google.com/g/beancount/c/Qvbcq-Sk5NY/m/evxSnb6nAQAJ">讨论帖</a>才找到如下这种记录方式。</p>
+<pre tabindex="0"><code class="language-beancount" data-lang="beancount">2017-08-01 * &#34;Bittrex&#34; &#34;Coinbase -&gt; Bittrex&#34;
   Assets:Crypto:Coinbase:Wallet         -0.01000000 BTC {}
   Assets:Crypto:Bittrex:Wallet          +0.00990000 BTC @ BTC
   Expenses:Crypto:Commissions           +0.00010000 BTC @ USD
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="系列链接">系列链接</h2>
+</code></pre><h2 id="系列链接">系列链接</h2>
 <ul>
 <li><a href="https://blindwith.science/2019/07/444.html/">Emacs 上使用 Beancount 记帐</a>：这篇对复式记帐法进行了一个简单的介绍，并记录了我是如何从随手记改用 beancount 的。</li>
 <li><a href="https://blindwith.science/2020/12/461.html/">Beancount 记帐小进阶之一&ndash;环境配置</a>：这篇讨论了我是如何配置 beancount 本地环境的。</li>
@@ -581,7 +389,7 @@ plugin &#34;beancount_share.share&#34; &#34;{
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   width="28" height="28"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
       </a>
-  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -603,7 +411,7 @@ plugin &#34;beancount_share.share&#34; &#34;{
   <span class="copyright-year">
     &copy; 
     2005 - 
-    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
   </span>
 </div>
 
@@ -619,7 +427,7 @@ plugin &#34;beancount_share.share&#34; &#34;{
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script>
     var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -627,19 +435,8 @@ plugin &#34;beancount_share.share&#34; &#34;{
 
 
 
-<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="../../../js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-86469737-1', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

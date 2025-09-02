@@ -16,13 +16,13 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ziyunch" /><meta name="description" content="我一直都想有一个自己的微博系统，因为自己逐渐回复社恐状态，愈发不习惯在公共平台如豆瓣、微博、朋友圈吐槽。而自己也没有当年日更一博的劲头，几句话就发一篇博客的话好像也不妥。但是微博和博客不同，很难复用我所用的静态系统搭建。几个月前，我才孤陋寡闻得知了长毛象这么一个系统，发现其正符合我的需求，便入了坑。
+<meta name="author" content="" /><meta name="description" content="我一直都想有一个自己的微博系统，因为自己逐渐回复社恐状态，愈发不习惯在公共平台如豆瓣、微博、朋友圈吐槽。而自己也没有当年日更一博的劲头，几句话就发一篇博客的话好像也不妥。但是微博和博客不同，很难复用我所用的静态系统搭建。几个月前，我才孤陋寡闻得知了长毛象这么一个系统，发现其正符合我的需求，便入了坑。
 长毛象并不像Hugo这类静态架构，可以直接架在免费的Github pages上，所以第一步是挑选一个合适的云平台。我没有使用东家的产品，而是跟风使用Digital Ocean，开了一个每月5刀左右的Ubuntu instance。Digital Ocean上可以直接从marketplace选image直接搭建，但是版本比较老。Mastodon的文档比较完整，所以我便一路跟着从头开始搭建了。
-首先是一些准备工作，比如禁用 /etc/ssh/sshd_config 中的 PasswordAuthentication 并通过 systemctl restart ssh.service 重启，这样只能使用SSH Key登陆；通过 apt update &amp;amp;&amp;amp; apt upgrade -y 更新package后安装fail2ban和iptables-persistent并添加相关设置；由于Mastodon是内存大户，还根据Digital Ocean的教程增加了4G的swap。
+首先是一些准备工作，比如禁用 /etc/ssh/sshd_config 中的 PasswordAuthentication 并通过 systemctl restart ssh.service 重启，这样只能使用SSH Key登陆；通过 apt update &amp;&amp; apt upgrade -y 更新package后安装fail2ban和iptables-persistent并添加相关设置；由于Mastodon是内存大户，还根据Digital Ocean的教程增加了4G的swap。
 接下来便是安装Mastodon了。我没有使用docker，而是从源中直接安装。Mastodon基于Ruby on rails (REST API)，React.js（前端），Node.js（Streaming API），Redis（队列），PostgreSQL（数据库），自然也要安装这几个。其中Ruby需要通过rbenv来管理，而后者必须安装在单独的Linux用户中，所以可以创建一个mastodon用户（之后也会在这个用户下下载安装Mastodon）。Ruby会装很久，可以使用 --verbose 来确保还在安装而不是卡了。
 全部安装完成后，即可运行交互式安装向导来生成配置文件~.env.production~，预编译静态文件，并创建数据库的schema：
-1  RAILS_ENV=production bundle exec rake mastodon:setup   这一步在Mastodon文档中略过，不过基本上也可以一路回车。需要注意的是：
- 如果打算采用二级域名，但是想让用户名采用一级域名即可搜到，则需要在交互中提供一级域名。我后面会细说。 需要提前准备好SMTP的配置。比如gmail就需要设置应用专用密码，并使用plain模式来验证。  一般来说，之后跟着文档配置完nginx，SSL证书，以及一系列systemd服务后就可以使用Mastodon了。
+RAILS_ENV=production bundle exec rake mastodon:setup 这一步在Mastodon文档中略过，不过基本上也可以一路回车。需要注意的是：
+如果打算采用二级域名，但是想让用户名采用一级域名即可搜到，则需要在交互中提供一级域名。我后面会细说。 需要提前准备好SMTP的配置。比如gmail就需要设置应用专用密码，并使用plain模式来验证。 一般来说，之后跟着文档配置完nginx，SSL证书，以及一系列systemd服务后就可以使用Mastodon了。
 但是。
 " /><meta name="keywords" content="ziyunch, blog" />
 
@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.76.5 with theme even" />
+<meta name="generator" content="Hugo 0.149.0 with theme even" />
 
 
 <link rel="canonical" href="http://blindwith.science/2022/05/473.html/" />
@@ -45,85 +45,52 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="../../../sass/main.min.f346f1cd7c119368051aba0791b1276d109b14d2a0fcefac9fe27d9ba680605a.css" rel="stylesheet">
+<link href="../../../sass/main.min.22b0d99d8a618713080069182ee3608a4528452925f4324879d7352bfccb78bd.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="我有长毛象啦" />
-<meta property="og:description" content="我一直都想有一个自己的微博系统，因为自己逐渐回复社恐状态，愈发不习惯在公共平台如豆瓣、微博、朋友圈吐槽。而自己也没有当年日更一博的劲头，几句话就发一篇博客的话好像也不妥。但是微博和博客不同，很难复用我所用的静态系统搭建。几个月前，我才孤陋寡闻得知了长毛象这么一个系统，发现其正符合我的需求，便入了坑。
+<meta property="og:url" content="http://blindwith.science/2022/05/473.html/">
+  <meta property="og:site_name" content="Blind with Science">
+  <meta property="og:title" content="我有长毛象啦">
+  <meta property="og:description" content="我一直都想有一个自己的微博系统，因为自己逐渐回复社恐状态，愈发不习惯在公共平台如豆瓣、微博、朋友圈吐槽。而自己也没有当年日更一博的劲头，几句话就发一篇博客的话好像也不妥。但是微博和博客不同，很难复用我所用的静态系统搭建。几个月前，我才孤陋寡闻得知了长毛象这么一个系统，发现其正符合我的需求，便入了坑。
 长毛象并不像Hugo这类静态架构，可以直接架在免费的Github pages上，所以第一步是挑选一个合适的云平台。我没有使用东家的产品，而是跟风使用Digital Ocean，开了一个每月5刀左右的Ubuntu instance。Digital Ocean上可以直接从marketplace选image直接搭建，但是版本比较老。Mastodon的文档比较完整，所以我便一路跟着从头开始搭建了。
 首先是一些准备工作，比如禁用 /etc/ssh/sshd_config 中的 PasswordAuthentication 并通过 systemctl restart ssh.service 重启，这样只能使用SSH Key登陆；通过 apt update &amp;&amp; apt upgrade -y 更新package后安装fail2ban和iptables-persistent并添加相关设置；由于Mastodon是内存大户，还根据Digital Ocean的教程增加了4G的swap。
 接下来便是安装Mastodon了。我没有使用docker，而是从源中直接安装。Mastodon基于Ruby on rails (REST API)，React.js（前端），Node.js（Streaming API），Redis（队列），PostgreSQL（数据库），自然也要安装这几个。其中Ruby需要通过rbenv来管理，而后者必须安装在单独的Linux用户中，所以可以创建一个mastodon用户（之后也会在这个用户下下载安装Mastodon）。Ruby会装很久，可以使用 --verbose 来确保还在安装而不是卡了。
 全部安装完成后，即可运行交互式安装向导来生成配置文件~.env.production~，预编译静态文件，并创建数据库的schema：
-
-
-1
-
-
-RAILS_ENV=production bundle exec rake mastodon:setup
-
-
-这一步在Mastodon文档中略过，不过基本上也可以一路回车。需要注意的是：
-
-如果打算采用二级域名，但是想让用户名采用一级域名即可搜到，则需要在交互中提供一级域名。我后面会细说。
-需要提前准备好SMTP的配置。比如gmail就需要设置应用专用密码，并使用plain模式来验证。
-
-一般来说，之后跟着文档配置完nginx，SSL证书，以及一系列systemd服务后就可以使用Mastodon了。
-但是。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://blindwith.science/2022/05/473.html/" />
-<meta property="article:published_time" content="2022-05-21T22:44:00-07:00" />
-<meta property="article:modified_time" content="2022-05-22T21:28:07-07:00" />
-<meta itemprop="name" content="我有长毛象啦">
-<meta itemprop="description" content="我一直都想有一个自己的微博系统，因为自己逐渐回复社恐状态，愈发不习惯在公共平台如豆瓣、微博、朋友圈吐槽。而自己也没有当年日更一博的劲头，几句话就发一篇博客的话好像也不妥。但是微博和博客不同，很难复用我所用的静态系统搭建。几个月前，我才孤陋寡闻得知了长毛象这么一个系统，发现其正符合我的需求，便入了坑。
-长毛象并不像Hugo这类静态架构，可以直接架在免费的Github pages上，所以第一步是挑选一个合适的云平台。我没有使用东家的产品，而是跟风使用Digital Ocean，开了一个每月5刀左右的Ubuntu instance。Digital Ocean上可以直接从marketplace选image直接搭建，但是版本比较老。Mastodon的文档比较完整，所以我便一路跟着从头开始搭建了。
-首先是一些准备工作，比如禁用 /etc/ssh/sshd_config 中的 PasswordAuthentication 并通过 systemctl restart ssh.service 重启，这样只能使用SSH Key登陆；通过 apt update &amp;&amp; apt upgrade -y 更新package后安装fail2ban和iptables-persistent并添加相关设置；由于Mastodon是内存大户，还根据Digital Ocean的教程增加了4G的swap。
-接下来便是安装Mastodon了。我没有使用docker，而是从源中直接安装。Mastodon基于Ruby on rails (REST API)，React.js（前端），Node.js（Streaming API），Redis（队列），PostgreSQL（数据库），自然也要安装这几个。其中Ruby需要通过rbenv来管理，而后者必须安装在单独的Linux用户中，所以可以创建一个mastodon用户（之后也会在这个用户下下载安装Mastodon）。Ruby会装很久，可以使用 --verbose 来确保还在安装而不是卡了。
-全部安装完成后，即可运行交互式安装向导来生成配置文件~.env.production~，预编译静态文件，并创建数据库的schema：
-
-
-1
-
-
-RAILS_ENV=production bundle exec rake mastodon:setup
-
-
-这一步在Mastodon文档中略过，不过基本上也可以一路回车。需要注意的是：
-
-如果打算采用二级域名，但是想让用户名采用一级域名即可搜到，则需要在交互中提供一级域名。我后面会细说。
-需要提前准备好SMTP的配置。比如gmail就需要设置应用专用密码，并使用plain模式来验证。
-
-一般来说，之后跟着文档配置完nginx，SSL证书，以及一系列systemd服务后就可以使用Mastodon了。
+RAILS_ENV=production bundle exec rake mastodon:setup 这一步在Mastodon文档中略过，不过基本上也可以一路回车。需要注意的是：
+如果打算采用二级域名，但是想让用户名采用一级域名即可搜到，则需要在交互中提供一级域名。我后面会细说。 需要提前准备好SMTP的配置。比如gmail就需要设置应用专用密码，并使用plain模式来验证。 一般来说，之后跟着文档配置完nginx，SSL证书，以及一系列systemd服务后就可以使用Mastodon了。
 但是。">
-<meta itemprop="datePublished" content="2022-05-21T22:44:00-07:00" />
-<meta itemprop="dateModified" content="2022-05-22T21:28:07-07:00" />
-<meta itemprop="wordCount" content="1908">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-05-21T22:44:00-07:00">
+    <meta property="article:modified_time" content="2022-05-22T21:28:07-07:00">
+    <meta property="article:tag" content="Mastodon">
+    <meta property="article:tag" content="长毛象">
 
-
-
-<meta itemprop="keywords" content="Mastodon,长毛象," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="我有长毛象啦"/>
-<meta name="twitter:description" content="我一直都想有一个自己的微博系统，因为自己逐渐回复社恐状态，愈发不习惯在公共平台如豆瓣、微博、朋友圈吐槽。而自己也没有当年日更一博的劲头，几句话就发一篇博客的话好像也不妥。但是微博和博客不同，很难复用我所用的静态系统搭建。几个月前，我才孤陋寡闻得知了长毛象这么一个系统，发现其正符合我的需求，便入了坑。
+  <meta itemprop="name" content="我有长毛象啦">
+  <meta itemprop="description" content="我一直都想有一个自己的微博系统，因为自己逐渐回复社恐状态，愈发不习惯在公共平台如豆瓣、微博、朋友圈吐槽。而自己也没有当年日更一博的劲头，几句话就发一篇博客的话好像也不妥。但是微博和博客不同，很难复用我所用的静态系统搭建。几个月前，我才孤陋寡闻得知了长毛象这么一个系统，发现其正符合我的需求，便入了坑。
 长毛象并不像Hugo这类静态架构，可以直接架在免费的Github pages上，所以第一步是挑选一个合适的云平台。我没有使用东家的产品，而是跟风使用Digital Ocean，开了一个每月5刀左右的Ubuntu instance。Digital Ocean上可以直接从marketplace选image直接搭建，但是版本比较老。Mastodon的文档比较完整，所以我便一路跟着从头开始搭建了。
 首先是一些准备工作，比如禁用 /etc/ssh/sshd_config 中的 PasswordAuthentication 并通过 systemctl restart ssh.service 重启，这样只能使用SSH Key登陆；通过 apt update &amp;&amp; apt upgrade -y 更新package后安装fail2ban和iptables-persistent并添加相关设置；由于Mastodon是内存大户，还根据Digital Ocean的教程增加了4G的swap。
 接下来便是安装Mastodon了。我没有使用docker，而是从源中直接安装。Mastodon基于Ruby on rails (REST API)，React.js（前端），Node.js（Streaming API），Redis（队列），PostgreSQL（数据库），自然也要安装这几个。其中Ruby需要通过rbenv来管理，而后者必须安装在单独的Linux用户中，所以可以创建一个mastodon用户（之后也会在这个用户下下载安装Mastodon）。Ruby会装很久，可以使用 --verbose 来确保还在安装而不是卡了。
 全部安装完成后，即可运行交互式安装向导来生成配置文件~.env.production~，预编译静态文件，并创建数据库的schema：
-
-
-1
-
-
-RAILS_ENV=production bundle exec rake mastodon:setup
-
-
-这一步在Mastodon文档中略过，不过基本上也可以一路回车。需要注意的是：
-
-如果打算采用二级域名，但是想让用户名采用一级域名即可搜到，则需要在交互中提供一级域名。我后面会细说。
-需要提前准备好SMTP的配置。比如gmail就需要设置应用专用密码，并使用plain模式来验证。
-
-一般来说，之后跟着文档配置完nginx，SSL证书，以及一系列systemd服务后就可以使用Mastodon了。
-但是。"/>
+RAILS_ENV=production bundle exec rake mastodon:setup 这一步在Mastodon文档中略过，不过基本上也可以一路回车。需要注意的是：
+如果打算采用二级域名，但是想让用户名采用一级域名即可搜到，则需要在交互中提供一级域名。我后面会细说。 需要提前准备好SMTP的配置。比如gmail就需要设置应用专用密码，并使用plain模式来验证。 一般来说，之后跟着文档配置完nginx，SSL证书，以及一系列systemd服务后就可以使用Mastodon了。
+但是。">
+  <meta itemprop="datePublished" content="2022-05-21T22:44:00-07:00">
+  <meta itemprop="dateModified" content="2022-05-22T21:28:07-07:00">
+  <meta itemprop="wordCount" content="1900">
+  <meta itemprop="keywords" content="Mastodon,长毛象">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="我有长毛象啦">
+  <meta name="twitter:description" content="我一直都想有一个自己的微博系统，因为自己逐渐回复社恐状态，愈发不习惯在公共平台如豆瓣、微博、朋友圈吐槽。而自己也没有当年日更一博的劲头，几句话就发一篇博客的话好像也不妥。但是微博和博客不同，很难复用我所用的静态系统搭建。几个月前，我才孤陋寡闻得知了长毛象这么一个系统，发现其正符合我的需求，便入了坑。
+长毛象并不像Hugo这类静态架构，可以直接架在免费的Github pages上，所以第一步是挑选一个合适的云平台。我没有使用东家的产品，而是跟风使用Digital Ocean，开了一个每月5刀左右的Ubuntu instance。Digital Ocean上可以直接从marketplace选image直接搭建，但是版本比较老。Mastodon的文档比较完整，所以我便一路跟着从头开始搭建了。
+首先是一些准备工作，比如禁用 /etc/ssh/sshd_config 中的 PasswordAuthentication 并通过 systemctl restart ssh.service 重启，这样只能使用SSH Key登陆；通过 apt update &amp;&amp; apt upgrade -y 更新package后安装fail2ban和iptables-persistent并添加相关设置；由于Mastodon是内存大户，还根据Digital Ocean的教程增加了4G的swap。
+接下来便是安装Mastodon了。我没有使用docker，而是从源中直接安装。Mastodon基于Ruby on rails (REST API)，React.js（前端），Node.js（Streaming API），Redis（队列），PostgreSQL（数据库），自然也要安装这几个。其中Ruby需要通过rbenv来管理，而后者必须安装在单独的Linux用户中，所以可以创建一个mastodon用户（之后也会在这个用户下下载安装Mastodon）。Ruby会装很久，可以使用 --verbose 来确保还在安装而不是卡了。
+全部安装完成后，即可运行交互式安装向导来生成配置文件~.env.production~，预编译静态文件，并创建数据库的schema：
+RAILS_ENV=production bundle exec rake mastodon:setup 这一步在Mastodon文档中略过，不过基本上也可以一路回车。需要注意的是：
+如果打算采用二级域名，但是想让用户名采用一级域名即可搜到，则需要在交互中提供一级域名。我后面会细说。 需要提前准备好SMTP的配置。比如gmail就需要设置应用专用密码，并使用plain模式来验证。 一般来说，之后跟着文档配置完nginx，SSL证书，以及一系列systemd服务后就可以使用Mastodon了。
+但是。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -207,7 +174,7 @@ RAILS_ENV=production bundle exec rake mastodon:setup
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 1908 字 </span>
+          <span class="more-meta"> 约 1900 字 </span>
           <span class="more-meta"> 预计阅读 4 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -230,15 +197,8 @@ RAILS_ENV=production bundle exec rake mastodon:setup
 <p>首先是一些<a href="https://docs.joinmastodon.org/admin/prerequisites/">准备工作</a>，比如禁用 <code>/etc/ssh/sshd_config</code> 中的 <code>PasswordAuthentication</code> 并通过 <code>systemctl restart ssh.service</code> 重启，这样只能使用SSH Key登陆；通过 <code>apt update &amp;&amp; apt upgrade -y</code> 更新package后安装fail2ban和iptables-persistent并添加相关设置；由于Mastodon是内存大户，还根据<a href="https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04">Digital Ocean的教程</a>增加了4G的swap。</p>
 <p>接下来便是<a href="https://docs.joinmastodon.org/admin/install/">安装Mastodon</a>了。我没有使用docker，而是从源中直接安装。Mastodon基于Ruby on rails (REST API)，React.js（前端），Node.js（Streaming API），Redis（队列），PostgreSQL（数据库），自然也要安装这几个。其中Ruby需要通过rbenv来管理，而后者必须安装在单独的Linux用户中，所以可以创建一个mastodon用户（之后也会在这个用户下下载安装Mastodon）。Ruby会装很久，可以使用 <code>--verbose</code> 来确保还在安装而不是卡了。</p>
 <p>全部安装完成后，即可运行交互式安装向导来生成配置文件~.env.production~，预编译静态文件，并创建数据库的schema：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">RAILS_ENV=production bundle exec rake mastodon:setup
-</code></pre></td></tr></table>
-</div>
-</div><p>这一步在Mastodon文档中略过，不过基本上也可以一路回车。需要注意的是：</p>
+<pre tabindex="0"><code class="language-nil" data-lang="nil">RAILS_ENV=production bundle exec rake mastodon:setup
+</code></pre><p>这一步在Mastodon文档中略过，不过基本上也可以一路回车。需要注意的是：</p>
 <ol>
 <li>如果打算采用二级域名，但是想让用户名采用一级域名即可搜到，则需要在交互中提供一级域名。我后面会细说。</li>
 <li>需要提前准备好SMTP的配置。比如gmail就需要设置应用专用密码，并使用plain模式来验证。</li>
@@ -248,7 +208,7 @@ RAILS_ENV=production bundle exec rake mastodon:setup
 <p>对，由于我是个特别折腾的人，便总会有一些但是。我有个不太常见的需求，那就是我想让我的长毛象和我的博客共用一个一级域名。换句话说，我的博客是blindwith.science，那我想用mastodon.blindwith.science来访问我的长毛象，但是别人可以直接使用ziyunch@blindwith.science来搜我，而不是ziyunch@mastodon.blindwith.science。</p>
 <p>我找到<a href="https://github.com/felx/mastodon-documentation/blob/master/Running-Mastodon/Serving_a_different_domain.md">这篇文档</a>，算是有一些眉目。长毛象中，有两个概念，一个是webfinger <code>acct:</code> URI，即ziyunch@blindwith.science；另一个则是与Mastodon实例相匹配的URI，即mastodon.blindwith.science。一般情形下，两者一致，万事大吉。但是当不一致时，则需要注意：</p>
 <ol>
-<li>在~.env.production~中做区分。其中LOCAL_DOMAIN（也就是之前在交互时填写的domain）是~acct:~ URI中用到的域名，而WEB_DOMAIN则是与Mastodon实例相匹配的域名。</li>
+<li>在~.env.production<del>中做区分。其中LOCAL_DOMAIN（也就是之前在交互时填写的domain）是</del>acct:~ URI中用到的域名，而WEB_DOMAIN则是与Mastodon实例相匹配的域名。</li>
 <li>nginx的配置需针对WEB_DOMAIN，即mastodon.blindwith.science。</li>
 <li>在长毛象进行webfinger query <code>.well-known/host-meta</code> 时做一个跳转。</li>
 </ol>
@@ -256,30 +216,13 @@ RAILS_ENV=production bundle exec rake mastodon:setup
 <p>但是。</p>
 <p>对，又是一个但是。我的博客基于Hugo并直接架在Github pages上，也并没有设置nginx proxy，所以不能直接照抄<a href="https://dallas.lu/use-your-primary-domain-as-an-mastodon-name">答案</a>。折腾了好一段时间后，我在Hugo的static文件夹(会原样复制到作为Github pages档的public文件夹中)中添加了两个文件来解决这个跳转的问题：</p>
 <p>第一个是参考<a href="https://discourse.joinmastodon.org/t/usernames-without-subdomain/2815">这篇讨论</a>添加 <code>.well-known/host-meta</code> 文件。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;?xml version=&#34;1.0&#34;?&gt;
+<pre tabindex="0"><code class="language-nil" data-lang="nil">&lt;?xml version=&#34;1.0&#34;?&gt;
 &lt;XRD xmlns=&#34;http://docs.oasis-open.org/ns/xri/xrd-1.0&#34;&gt;
     &lt;Link rel=&#34;lrdd&#34; type=&#34;application/xrd+xml&#34; template=&#34;https://mastodon.blindwith.science/.well-known/webfinger?resource={uri}&#34;/&gt;
 &lt;/XRD&gt;
-</code></pre></td></tr></table>
-</div>
-</div><p>第二个则是参考<a href="https://stackoverflow.com/questions/55880919/how-to-add-well-known-on-github-pages-files-using-html">这个问答</a>添加 <code>_config.yml</code> ，这样Github才不会忽略隐藏的host-meta文件。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">include: [&#34;.well-known&#34;]
-</code></pre></td></tr></table>
-</div>
-</div><p>这样，我的长毛象才终于可用了。</p>
+</code></pre><p>第二个则是参考<a href="https://stackoverflow.com/questions/55880919/how-to-add-well-known-on-github-pages-files-using-html">这个问答</a>添加 <code>_config.yml</code> ，这样Github才不会忽略隐藏的host-meta文件。</p>
+<pre tabindex="0"><code class="language-nil" data-lang="nil">include: [&#34;.well-known&#34;]
+</code></pre><p>这样，我的长毛象才终于可用了。</p>
 <p>接下来，我打算</p>
 <ol>
 <li>为每篇新博客发一个嘟嘟，并支持博客与嘟嘟的联动。</li>
@@ -291,7 +234,7 @@ RAILS_ENV=production bundle exec rake mastodon:setup
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">文章作者</span>
-    <span class="item-content">ziyunch</span>
+    <span class="item-content"></span>
   </p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
@@ -374,7 +317,7 @@ RAILS_ENV=production bundle exec rake mastodon:setup
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   width="28" height="28"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
       </a>
-  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -396,7 +339,7 @@ RAILS_ENV=production bundle exec rake mastodon:setup
   <span class="copyright-year">
     &copy; 
     2005 - 
-    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
   </span>
 </div>
 
@@ -412,7 +355,7 @@ RAILS_ENV=production bundle exec rake mastodon:setup
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script>
     var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -420,19 +363,8 @@ RAILS_ENV=production bundle exec rake mastodon:setup
 
 
 
-<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="../../../js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-86469737-1', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

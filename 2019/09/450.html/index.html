@@ -16,8 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ziyunch" /><meta name="description" content="作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &amp;lt;s TAB会自动生成
-1 2 3  #&#43;BEGIN_SRC #&#43;END_SRC   这样插入代码或者引用这类结构非常方便。
+<meta name="author" content="ziyunch" /><meta name="description" content="作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &lt;s TAB 会自动生成
+#&#43;BEGIN_SRC #&#43;END_SRC 这样插入代码或者引用这类结构非常方便。
 " /><meta name="keywords" content="ziyunch, blog" />
 
 
@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.76.5 with theme even" />
+<meta name="generator" content="Hugo 0.149.0 with theme even" />
 
 
 <link rel="canonical" href="http://blindwith.science/2019/09/450.html/" />
@@ -39,67 +39,35 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="../../../sass/main.min.f346f1cd7c119368051aba0791b1276d109b14d2a0fcefac9fe27d9ba680605a.css" rel="stylesheet">
+<link href="../../../sass/main.min.22b0d99d8a618713080069182ee3608a4528452925f4324879d7352bfccb78bd.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Org-mode 中添加结构模板" />
-<meta property="og:description" content="作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &lt;s TAB 会自动生成
+<meta property="og:url" content="http://blindwith.science/2019/09/450.html/">
+  <meta property="og:site_name" content="Blind with Science">
+  <meta property="og:title" content="Org-mode 中添加结构模板">
+  <meta property="og:description" content="作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &lt;s TAB 会自动生成
+#&#43;BEGIN_SRC #&#43;END_SRC 这样插入代码或者引用这类结构非常方便。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2019-09-04T20:06:00-07:00">
+    <meta property="article:modified_time" content="2021-01-18T17:23:00-08:00">
+    <meta property="article:tag" content="Emacs">
+    <meta property="article:tag" content="Org-Mode">
+    <meta property="article:tag" content="Lisp">
 
-
-1
-2
-3
-
-
-#&#43;BEGIN_SRC
-
-#&#43;END_SRC
-
-
-这样插入代码或者引用这类结构非常方便。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://blindwith.science/2019/09/450.html/" />
-<meta property="article:published_time" content="2019-09-04T20:06:00-07:00" />
-<meta property="article:modified_time" content="2021-01-18T17:23:00-08:00" />
-<meta itemprop="name" content="Org-mode 中添加结构模板">
-<meta itemprop="description" content="作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &lt;s TAB 会自动生成
-
-
-1
-2
-3
-
-
-#&#43;BEGIN_SRC
-
-#&#43;END_SRC
-
-
-这样插入代码或者引用这类结构非常方便。">
-<meta itemprop="datePublished" content="2019-09-04T20:06:00-07:00" />
-<meta itemprop="dateModified" content="2021-01-18T17:23:00-08:00" />
-<meta itemprop="wordCount" content="618">
-
-
-
-<meta itemprop="keywords" content="Emacs,Org-mode,lisp," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Org-mode 中添加结构模板"/>
-<meta name="twitter:description" content="作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &lt;s TAB 会自动生成
-
-
-1
-2
-3
-
-
-#&#43;BEGIN_SRC
-
-#&#43;END_SRC
-
-
-这样插入代码或者引用这类结构非常方便。"/>
+  <meta itemprop="name" content="Org-mode 中添加结构模板">
+  <meta itemprop="description" content="作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &lt;s TAB 会自动生成
+#&#43;BEGIN_SRC #&#43;END_SRC 这样插入代码或者引用这类结构非常方便。">
+  <meta itemprop="datePublished" content="2019-09-04T20:06:00-07:00">
+  <meta itemprop="dateModified" content="2021-01-18T17:23:00-08:00">
+  <meta itemprop="wordCount" content="604">
+  <meta itemprop="keywords" content="Emacs,Org-Mode,Lisp">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Org-mode 中添加结构模板">
+  <meta name="twitter:description" content="作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &lt;s TAB 会自动生成
+#&#43;BEGIN_SRC #&#43;END_SRC 这样插入代码或者引用这类结构非常方便。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -183,7 +151,7 @@
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 618 字 </span>
+          <span class="more-meta"> 约 604 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -196,117 +164,81 @@
   </div>
 </div>
   <div class="post-outdated">
-    <div class="hint">
+    <div class="warn">
       <p>【注意】最后更新于 <span class="timeago" datetime="2021-01-18T17:23:00" title="January 18, 2021">January 18, 2021</span>，文中内容可能已过时，请谨慎使用。</p>
     </div>
   </div>
     <div class="post-content">
       <p>作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 <code>&lt;s</code> <!-- raw HTML omitted -->TAB<!-- raw HTML omitted --> 会自动生成</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-org" data-lang="org"><span class="c">#+BEGIN_SRC</span>
-
-<span class="c">#+END_SRC</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>这样插入代码或者引用这类结构非常方便。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-org" data-lang="org"><span style="display:flex;"><span><span style="color:#75715e">#+BEGIN_SRC</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+END_SRC</span>
+</span></span></code></pre></div><p>这样插入代码或者引用这类结构非常方便。</p>
 <p>在 <code>org-structure-template-alist</code> 这个列表中预置了许多常用结构，如<a href="https://orgmode.org/manual/Structure-Templates.html">官方文档</a>所示:</p>
 <table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Structure Template</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a</td>
-<td>‘#+BEGIN_EXPORT ascii’ … ‘#+END_EXPORT’</td>
-</tr>
-<tr>
-<td>c</td>
-<td>‘#+BEGIN_CENTER’ … ‘#+END_CENTER’</td>
-</tr>
-<tr>
-<td>C</td>
-<td>‘#+BEGIN_COMMENT’ … ‘#+END_COMMENT’</td>
-</tr>
-<tr>
-<td>e</td>
-<td>‘#+BEGIN_EXAMPLE’ … ‘#+END_EXAMPLE’</td>
-</tr>
-<tr>
-<td>E</td>
-<td>‘#+BEGIN_EXPORT’ … ‘#+END_EXPORT’</td>
-</tr>
-<tr>
-<td>h</td>
-<td>‘#+BEGIN_EXPORT html’ … ‘#+END_EXPORT’</td>
-</tr>
-<tr>
-<td>l</td>
-<td>‘#+BEGIN_EXPORT latex’ … ‘#+END_EXPORT’</td>
-</tr>
-<tr>
-<td>q</td>
-<td>‘#+BEGIN_QUOTE’ … ‘#+END_QUOTE’</td>
-</tr>
-<tr>
-<td>s</td>
-<td>‘#+BEGIN_SRC’ … ‘#+END_SRC’</td>
-</tr>
-<tr>
-<td>v</td>
-<td>‘#+BEGIN_VERSE’ … ‘#+END_VERSE’</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Key</th>
+          <th>Structure Template</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>a</td>
+          <td>‘#+BEGIN_EXPORT ascii’ … ‘#+END_EXPORT’</td>
+      </tr>
+      <tr>
+          <td>c</td>
+          <td>‘#+BEGIN_CENTER’ … ‘#+END_CENTER’</td>
+      </tr>
+      <tr>
+          <td>C</td>
+          <td>‘#+BEGIN_COMMENT’ … ‘#+END_COMMENT’</td>
+      </tr>
+      <tr>
+          <td>e</td>
+          <td>‘#+BEGIN_EXAMPLE’ … ‘#+END_EXAMPLE’</td>
+      </tr>
+      <tr>
+          <td>E</td>
+          <td>‘#+BEGIN_EXPORT’ … ‘#+END_EXPORT’</td>
+      </tr>
+      <tr>
+          <td>h</td>
+          <td>‘#+BEGIN_EXPORT html’ … ‘#+END_EXPORT’</td>
+      </tr>
+      <tr>
+          <td>l</td>
+          <td>‘#+BEGIN_EXPORT latex’ … ‘#+END_EXPORT’</td>
+      </tr>
+      <tr>
+          <td>q</td>
+          <td>‘#+BEGIN_QUOTE’ … ‘#+END_QUOTE’</td>
+      </tr>
+      <tr>
+          <td>s</td>
+          <td>‘#+BEGIN_SRC’ … ‘#+END_SRC’</td>
+      </tr>
+      <tr>
+          <td>v</td>
+          <td>‘#+BEGIN_VERSE’ … ‘#+END_VERSE’</td>
+      </tr>
+  </tbody>
 </table>
 <p>不过有时也会想要自己造个轮子，比如我平时写博客，有时需要插入按键标签 <code>&lt;kbd&gt;</code> 。此时可用 lisp 的 <a href="https://www.gnu.org/software/emacs/manual/html%5Fnode/elisp/List-Variables.html">add-to-list 语法</a>来添加新的结构模板：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="nv">add-to-list</span> <span class="nc">symbol</span> <span class="nv">element</span> <span class="k">&amp;optional</span> <span class="nf">append</span> <span class="nv">compare-fn</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>即</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;org-structure-template-alist</span>
-             <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;k&#34;</span> <span class="s">&#34;@@html:&lt;kbd&gt;@@?@@html:&lt;/kbd&gt;@@&#34;</span><span class="p">))</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>这个语法的优点在于它会对比原列表内的元素以避免添加重复元素。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>add-to-list <span style="color:#a6e22e">symbol</span> element <span style="color:#66d9ef">&amp;optional</span> <span style="color:#a6e22e">append</span> compare-fn
+</span></span></code></pre></div><p>即</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>(add-to-list <span style="color:#e6db74">&#39;org-structure-template-alist</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;k&#34;</span> <span style="color:#e6db74">&#34;@@html:&lt;kbd&gt;@@?@@html:&lt;/kbd&gt;@@&#34;</span>))
+</span></span></code></pre></div><p>这个语法的优点在于它会对比原列表内的元素以避免添加重复元素。</p>
 <p>这个 <code>add-to-list</code> 语法每次只能添加一个元素进入列表，并不能添加多个元素。而简单执行 <a href="http://clhs.lisp.se/Body/f%5Fappend.htm">append</a> ，则无法避免重复元素的添加。所以我采用 <a href="http://clhs.lisp.se/Body/m%5Fdolist.htm">dolist</a> 指令来添加多个元素：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nb">dolist</span>
-    <span class="p">(</span><span class="nv">my-org-structure-template</span>
-     <span class="o">&#39;</span><span class="p">((</span><span class="s">&#34;k&#34;</span> <span class="s">&#34;@@html:&lt;kbd&gt;@@?@@html:&lt;/kbd&gt;@@&#34;</span><span class="p">)</span>
-       <span class="p">(</span><span class="s">&#34;spy&#34;</span> <span class="s">&#34;#+BEGIN_SRC python\n?\n#+END_SRC&#34;</span><span class="p">)</span>
-       <span class="p">(</span><span class="s">&#34;son&#34;</span> <span class="s">&#34;#+BEGIN_SRC org :eval never-export\n,?\n#+END_SRC&#34;</span><span class="p">)))</span>
-  <span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;org-structure-template-alist</span> <span class="nv">my-org-structure-template</span><span class="p">))</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>效果拔群。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>(dolist
+</span></span><span style="display:flex;"><span>    (my-org-structure-template
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">&#39;</span>((<span style="color:#e6db74">&#34;k&#34;</span> <span style="color:#e6db74">&#34;@@html:&lt;kbd&gt;@@?@@html:&lt;/kbd&gt;@@&#34;</span>)
+</span></span><span style="display:flex;"><span>       (<span style="color:#e6db74">&#34;spy&#34;</span> <span style="color:#e6db74">&#34;#+BEGIN_SRC python\n?\n#+END_SRC&#34;</span>)
+</span></span><span style="display:flex;"><span>       (<span style="color:#e6db74">&#34;son&#34;</span> <span style="color:#e6db74">&#34;#+BEGIN_SRC org :eval never-export\n,?\n#+END_SRC&#34;</span>)))
+</span></span><span style="display:flex;"><span>  (add-to-list <span style="color:#e6db74">&#39;org-structure-template-alist</span> my-org-structure-template))
+</span></span></code></pre></div><p>效果拔群。</p>
     </div>
 
     <div class="post-copyright">
@@ -394,7 +326,7 @@
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   width="28" height="28"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
       </a>
-  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -416,7 +348,7 @@
   <span class="copyright-year">
     &copy; 
     2005 - 
-    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
   </span>
 </div>
 
@@ -432,7 +364,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script>
     var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -440,19 +372,8 @@
 
 
 
-<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="../../../js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-86469737-1', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

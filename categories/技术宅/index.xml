@@ -4,366 +4,178 @@
     <title>技术宅 on Blind with Science</title>
     <link>http://blindwith.science/categories/%E6%8A%80%E6%9C%AF%E5%AE%85/</link>
     <description>Recent content in 技术宅 on Blind with Science</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Sun, 23 Jul 2023 18:31:00 -0700</lastBuildDate><atom:link href="http://blindwith.science/categories/%E6%8A%80%E6%9C%AF%E5%AE%85/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Sep 2025 17:03:44 -0700</lastBuildDate>
+    <atom:link href="http://blindwith.science/categories/%E6%8A%80%E6%9C%AF%E5%AE%85/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kindle 装微信读书从入门到放弃</title>
+      <link>http://blindwith.science/2025/09/486.html/</link>
+      <pubDate>Mon, 01 Sep 2025 17:03:00 -0700</pubDate>
+      <guid>http://blindwith.science/2025/09/486.html/</guid>
+      <description>&lt;p&gt;由于我在海外，实体书空运价高，而海运通常需要等上一两个月，所以阅读电子书成了我的刚需。Kindle 退出中国市场后，正版电子书的来源便只剩微信读书了。但是 Kindle 上只能使用网页版微信读书，每章节之间都需要联网载入，体验非常不好。而 Kindle 退出中国市场退得非常激烈，一联网就会删除我存档的中文电子书，导致我的 Kindle 只能开飞行模式，更用不了网页版微信读书了。前几年，我便买了文石的 Leaf 2 作为微信读书启动器 （详见我之前的&lt;a href=&#34;https://blindwith.science/2023/02/480.html/&#34;&gt;文章&lt;/a&gt;）。适应了两年半，总觉得还是没那么舒服，一方面是文石的按键实在拉胯，按久了费手，背板也不舒适；另一方面也是文石的显示效果始终没办法调到 Kindle 那样舒适，文字边缘总有一些轻微的锯齿，光源也没有 Kindle 那么好。如果是有电子档的旧书，我还是会更倾向于用 Oasis 2 来阅读。&lt;/p&gt;&#xA;&lt;p&gt;每年总有这么几个月，我会难以忍受文石，想要看看有没有更好的微信读书启动器替代品。我的要求很简单，因为我已经有 Oasis 2 用来看漫画（当然我还是希望能有个更轻巧的大屏 Kindle，现在的 Kindle Scribe 虽然屏幕大但是太过笨重），也有 DPT-RP1 用来看 pdf，我平时也没有记笔记的习惯，所以我只是想要一个不卡顿，显示效果好，实体按键舒适的阅读器。但是每次新品出来，我总是激动地看评测，却每每败兴而归。&lt;/p&gt;&#xA;&lt;p&gt;长周末，我又刷着小红书，很多评论里提到给 Kindle 装安卓系统后可以看微信读书，弄得我心痒痒的。刚好手头有一个闲置的 Paperwhite 2 ，便尝试起来。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Orgmode 的优化</title>
       <link>http://blindwith.science/2023/07/484.html/</link>
       <pubDate>Sun, 23 Jul 2023 18:31:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2023/07/484.html/</guid>
-      <description>&lt;p&gt;最近从 Prime Day 解放，我终于又有时间捣鼓我的 Orgmode 了。其实缘起是同事给我看了他直接用 vscode ssh 到 cloud desktop 上写码运行 debug 的流程，让我很是心动。但是作为一个 Emacs 资深病患，我的第一反应是能不能用 Emacs 实现这套流程。不过我一直没怎么搞明白如何不卡顿地使用 Tramp，Emacs 在运行 Jupyter Notebook 上也需要更多的设置，就此作罢。&lt;/p&gt;
-&lt;p&gt;不过既然起了这个钻研 Orgmode 的头，我不经又想起了几个让我很纠结的问题。&lt;/p&gt;</description>
+      <description>&lt;p&gt;最近从 Prime Day 解放，我终于又有时间捣鼓我的 Orgmode 了。其实缘起是同事给我看了他直接用 vscode ssh 到 cloud desktop 上写码运行 debug 的流程，让我很是心动。但是作为一个 Emacs 资深病患，我的第一反应是能不能用 Emacs 实现这套流程。不过我一直没怎么搞明白如何不卡顿地使用 Tramp，Emacs 在运行 Jupyter Notebook 上也需要更多的设置，就此作罢。&lt;/p&gt;&#xA;&lt;p&gt;不过既然起了这个钻研 Orgmode 的头，我不经又想起了几个让我很纠结的问题。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>从LLM到AGI，AI时代我们该何去何从</title>
       <link>http://blindwith.science/2023/03/483.html/</link>
       <pubDate>Mon, 27 Mar 2023 22:20:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2023/03/483.html/</guid>
-      <description>&lt;p&gt;去年七月我去体验了一下 NAACL，对于一个外行人来说，听听报告看看海报，只留下 few-shot 和 zero-shot 还挺热门这一印象，仿佛最新的 NLP 技术也不过如此。没想到这还没到一年，AI 新闻便从月更变成了日更，接二连三地轰炸着新闻头条（为2023年 AI Index 的作者捏一把汗）。而随着 GPT-4 联了网（POI 警告），还没有任何准备的我们就进入了 AI 时代。&lt;/p&gt;
-&lt;p&gt;我先盘点一下过去一年都发生了什么吧。（也许是因为我还没用上联网的 ChatGPT，GPT4 偷懒大法在此失败了）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;2022-07-12: Midjourney 开始公测 &lt;a href=&#34;https://twitter.com/midjourney/status/1547108864788553729&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2022-07-20: OpenAI DALL-E 开始公测 &lt;a href=&#34;https://openai.com/blog/dall-e-now-available-in-beta&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2022-08-10: Stability AI 以开源形式发布 Stable Diffusion &lt;a href=&#34;https://stability.ai/blog/stable-diffusion-announcement&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2022-11-24: Stability AI 以开源形式发布 Stable Diffusion 2.0 &lt;a href=&#34;https://stability.ai/blog/stable-diffusion-v2-release&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2022-11-30: OpenAI 发布以 GPT-3.5 为后端的 ChatGPT，开启指令引导的流畅文本生成范式 &lt;a href=&#34;https://openai.com/blog/chatgpt&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-02-06: 谷歌公布 Bard 以挑战 ChatGPT &lt;a href=&#34;https://blog.google/technology/ai/bard-google-ai-search-updates&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-02-07: 微软发布 New Bing，重新定义搜索引擎 &lt;a href=&#34;https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-02-22: 微软公布手机版 Bing &lt;a href=&#34;https://blogs.microsoft.com/blog/2023/02/22/the-new-bing-preview-experience-arrives-on-bing-and-edge-mobile-apps-introducing-bing-now-in-skype&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-02-24: Meta 发布 LLaMA 并开放代码，堪称 ChatGPT 平替 &lt;a href=&#34;https://ai.facebook.com/blog/large-language-model-llama-meta-ai&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-03-01: OpenAI 开放 ChatGPT &amp;amp; Whisper API &lt;a href=&#34;https://openai.com/blog/introducing-chatgpt-and-whisper-apis&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-03-06: 谷歌发布通用语言识别模型 USM &lt;a href=&#34;https://ai.googleblog.com/2023/03/universal-speech-model-usm-state-of-art.html&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-03-10: 谷歌发布 PaLM-E &lt;a href=&#34;https://ai.googleblog.com/2023/03/palm-e-embodied-multimodal-language.html&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-03-14: 谷歌开放 PaLM API &lt;a href=&#34;https://blog.google/technology/ai/ai-developers-google-cloud-workspace&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-03-14: OpenAI 发布 GPT-4，较 GPT3.5 实现飞跃式提升 &lt;a href=&#34;https://openai.com/research/gpt-4&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-03-14: Anthropic 发布 Claude &lt;a href=&#34;https://www.anthropic.com/index/introducing-claude&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-03-15: 百度发布文心一言 &lt;a href=&#34;https://www.youtube.com/watch?v=ukvEUI3x0vI&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-03-15: Midjourney 发布 Midjourney v5 &lt;a href=&#34;https://twitter.com/midjourney/status/1636130389365497857&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-03-16: 微软发布 Microsoft 365 Copilot ，登陆微软全家桶&lt;a href=&#34;https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-03-17: Stability AI 发布 Stable Diffusion Reimagine &lt;a href=&#34;https://stability.ai/blog/stable-diffusion-reimagine&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-03-21: 谷歌 Bard 开始公测 &lt;a href=&#34;https://blog.google/technology/ai/try-bard&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-03-21: 微软发布 Bing Image Creator，接入 DALL-E 生成图像 &lt;a href=&#34;https://blogs.microsoft.com/blog/2023/03/21/create-images-with-your-words-bing-image-creator-comes-to-the-new-bing&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-03-21: Adobe 发布 Adobe Firefly &lt;a href=&#34;https://news.adobe.com/news/news-details/2023/Adobe-Unveils-Firefly-a-Family-of-new-Creative-Generative-AI&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-03-21: NVIDIA 与谷歌，微软，甲骨文，Adobe 于 AI 领域展开深度合作&lt;/li&gt;
-&lt;li&gt;2023-03-23: Github 发布 Copilot X，接入 GPT4 &lt;a href=&#34;https://github.blog/2023-03-22-github-copilot-x-the-ai-powered-developer-experience&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2023-03-23: ChatGPT 联网，开放第三方插件 &lt;a href=&#34;https://openai.com/blog/chatgpt-plugins&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;总结一下，过去一年，随着 ChatGPT 的发布与 Stable Diffusion 的开源， 文本生成与图片生成产品蓬勃发展。三月以来，AI 的曝光率猛增，这两周甚至是每天都有大新闻。说实话，如果我说我不焦虑，这是不可能的。我对于这一年的热门技术，都是只闻其名，不解其意。我虽然也有去凑热闹通过新闻或者试用去了解这些技术都是做什么的，却不知道这些技术是如何发展的，也不知道我该如何应用这些技术，未来我能做些什么才不会被时代淘汰。最近有两篇论文，就直接讨论了现有 AI 模型的通用性，其对人类工作的影响，与 AGI 时代的到来，更是加剧了我的焦虑情绪，于是我便先从这两篇论文谈起吧。&lt;/p&gt;</description>
+      <description>&lt;p&gt;去年七月我去体验了一下 NAACL，对于一个外行人来说，听听报告看看海报，只留下 few-shot 和 zero-shot 还挺热门这一印象，仿佛最新的 NLP 技术也不过如此。没想到这还没到一年，AI 新闻便从月更变成了日更，接二连三地轰炸着新闻头条（为2023年 AI Index 的作者捏一把汗）。而随着 GPT-4 联了网（POI 警告），还没有任何准备的我们就进入了 AI 时代。&lt;/p&gt;&#xA;&lt;p&gt;我先盘点一下过去一年都发生了什么吧。（也许是因为我还没用上联网的 ChatGPT，GPT4 偷懒大法在此失败了）&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;2022-07-12: Midjourney 开始公测 &lt;a href=&#34;https://twitter.com/midjourney/status/1547108864788553729&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2022-07-20: OpenAI DALL-E 开始公测 &lt;a href=&#34;https://openai.com/blog/dall-e-now-available-in-beta&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2022-08-10: Stability AI 以开源形式发布 Stable Diffusion &lt;a href=&#34;https://stability.ai/blog/stable-diffusion-announcement&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2022-11-24: Stability AI 以开源形式发布 Stable Diffusion 2.0 &lt;a href=&#34;https://stability.ai/blog/stable-diffusion-v2-release&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2022-11-30: OpenAI 发布以 GPT-3.5 为后端的 ChatGPT，开启指令引导的流畅文本生成范式 &lt;a href=&#34;https://openai.com/blog/chatgpt&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-02-06: 谷歌公布 Bard 以挑战 ChatGPT &lt;a href=&#34;https://blog.google/technology/ai/bard-google-ai-search-updates&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-02-07: 微软发布 New Bing，重新定义搜索引擎 &lt;a href=&#34;https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-02-22: 微软公布手机版 Bing &lt;a href=&#34;https://blogs.microsoft.com/blog/2023/02/22/the-new-bing-preview-experience-arrives-on-bing-and-edge-mobile-apps-introducing-bing-now-in-skype&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-02-24: Meta 发布 LLaMA 并开放代码，堪称 ChatGPT 平替 &lt;a href=&#34;https://ai.facebook.com/blog/large-language-model-llama-meta-ai&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-03-01: OpenAI 开放 ChatGPT &amp;amp; Whisper API &lt;a href=&#34;https://openai.com/blog/introducing-chatgpt-and-whisper-apis&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-03-06: 谷歌发布通用语言识别模型 USM &lt;a href=&#34;https://ai.googleblog.com/2023/03/universal-speech-model-usm-state-of-art.html&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-03-10: 谷歌发布 PaLM-E &lt;a href=&#34;https://ai.googleblog.com/2023/03/palm-e-embodied-multimodal-language.html&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-03-14: 谷歌开放 PaLM API &lt;a href=&#34;https://blog.google/technology/ai/ai-developers-google-cloud-workspace&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-03-14: OpenAI 发布 GPT-4，较 GPT3.5 实现飞跃式提升 &lt;a href=&#34;https://openai.com/research/gpt-4&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-03-14: Anthropic 发布 Claude &lt;a href=&#34;https://www.anthropic.com/index/introducing-claude&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-03-15: 百度发布文心一言 &lt;a href=&#34;https://www.youtube.com/watch?v=ukvEUI3x0vI&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-03-15: Midjourney 发布 Midjourney v5 &lt;a href=&#34;https://twitter.com/midjourney/status/1636130389365497857&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-03-16: 微软发布 Microsoft 365 Copilot ，登陆微软全家桶&lt;a href=&#34;https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-03-17: Stability AI 发布 Stable Diffusion Reimagine &lt;a href=&#34;https://stability.ai/blog/stable-diffusion-reimagine&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-03-21: 谷歌 Bard 开始公测 &lt;a href=&#34;https://blog.google/technology/ai/try-bard&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-03-21: 微软发布 Bing Image Creator，接入 DALL-E 生成图像 &lt;a href=&#34;https://blogs.microsoft.com/blog/2023/03/21/create-images-with-your-words-bing-image-creator-comes-to-the-new-bing&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-03-21: Adobe 发布 Adobe Firefly &lt;a href=&#34;https://news.adobe.com/news/news-details/2023/Adobe-Unveils-Firefly-a-Family-of-new-Creative-Generative-AI&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-03-21: NVIDIA 与谷歌，微软，甲骨文，Adobe 于 AI 领域展开深度合作&lt;/li&gt;&#xA;&lt;li&gt;2023-03-23: Github 发布 Copilot X，接入 GPT4 &lt;a href=&#34;https://github.blog/2023-03-22-github-copilot-x-the-ai-powered-developer-experience&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2023-03-23: ChatGPT 联网，开放第三方插件 &lt;a href=&#34;https://openai.com/blog/chatgpt-plugins&#34;&gt;🔗&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;总结一下，过去一年，随着 ChatGPT 的发布与 Stable Diffusion 的开源， 文本生成与图片生成产品蓬勃发展。三月以来，AI 的曝光率猛增，这两周甚至是每天都有大新闻。说实话，如果我说我不焦虑，这是不可能的。我对于这一年的热门技术，都是只闻其名，不解其意。我虽然也有去凑热闹通过新闻或者试用去了解这些技术都是做什么的，却不知道这些技术是如何发展的，也不知道我该如何应用这些技术，未来我能做些什么才不会被时代淘汰。最近有两篇论文，就直接讨论了现有 AI 模型的通用性，其对人类工作的影响，与 AGI 时代的到来，更是加剧了我的焦虑情绪，于是我便先从这两篇论文谈起吧。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>跟风AI炼图</title>
       <link>http://blindwith.science/2023/02/481.html/</link>
       <pubDate>Sun, 26 Feb 2023 22:35:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/2023/02/481.html/</guid>
       <description>&lt;p&gt;Stable Diffusion 发布以来，逼真的画风就让大家感慨画师的饭碗是不是要被抢了。当时女票用 Stable Diffusion 重绘了几张狗子的照片，但我总觉得用别人的搭好的服务会有隐私隐患。最近 ControlNet 出来后，当时被大家吐槽的六指问题似乎得到了解决，于是我这两天就尝试着在 Colab 上搭了 Stable Diffusion 炼炼图玩。 &amp;ndash; 为什么不用亚麻的Sagemaker？当然是因为 &lt;del&gt;colab免费易用&lt;/del&gt; 要支持女票工作咯。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>墨水屏阅读器小横评</title>
       <link>http://blindwith.science/2023/02/480.html/</link>
       <pubDate>Fri, 24 Feb 2023 22:19:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/2023/02/480.html/</guid>
       <description>&lt;p&gt;我是Kindle的老用户了，从当初给Kindle DXG越狱装中文字体，到在deal day买了好几个几十刀的Kindle paperwhite，再到收了现在用了好几年的Kindle Oasis 2，也有十年时光了。由于Kindle在DXG和Scribe之间的十年没有出过大屏墨水屏，为了读paper，我又入了Sony DPT-RP1。而在亚麻下架中文区电子书的服务后，Kindle唯一看正版电子书的渠道就变成了不太好用的微信读书网页版，我便又开始shopping专门用来看微信读书的墨水屏阅读器了。兔姐姐恰好刚买了文石的leaf 2，我便来拿这些设备做一个小小的横评吧。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>逃离豆瓣 - 使用Org-mode管理我的书影音</title>
       <link>http://blindwith.science/2022/05/475.html/</link>
       <pubDate>Mon, 30 May 2022 12:34:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2022/05/475.html/</guid>
-      <description>&lt;div class=&#34;admonition tip&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;小贴士&lt;/p&gt;
-  
-我的豆瓣书影音替代方案基于Org-mode，如果对此感兴趣的话可以阅读我的另一篇博客《继续吹一波Org-mode》了解Org-mode以及更多用法。
-
-&lt;/div&gt;
-&lt;p&gt;最近豆瓣开始搞激烈的实名认证，而不愿献祭隐私的我，也只能和豆瓣说再见了。豆瓣十几年的情谊化为乌有，我也无法相信其他书影音数据库能够天长地久。另一方面，IMDB，Letterbox，TMDB，Goodreads这类美国数据库对于动漫和国产书还有水土不服的问题，我曾经暂别豆瓣，用过挺长一段时间的IMDB+Letterbox，却还是回归豆瓣后觉得顺手。查了一下，似乎没有什么自架豆瓣替代品的开源软件，大家常用的方案也是我不太喜欢的Notion（我在&lt;a href=&#34;https://blindwith.science/2021/11/467.html/&#34;&gt;继续吹一波Org-mode&lt;/a&gt;里曾经详述过），于是趁着小长假，我便将豆瓣转移到了Org-mode。&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src=&#34;../../ox-hugo/org_mode_douban.png&#34;
-         alt=&#34;Figure 1: 最终效果长这样&#34;/&gt; &lt;figcaption&gt;
-            &lt;p&gt;&lt;!-- raw HTML omitted --&gt;Figure 1: &lt;!-- raw HTML omitted --&gt;最终效果长这样&lt;/p&gt;
-        &lt;/figcaption&gt;
-&lt;/figure&gt;</description>
+      <description>&lt;div class=&#34;admonition tip&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;小贴士&lt;/p&gt;&#xA;  &#xA;我的豆瓣书影音替代方案基于Org-mode，如果对此感兴趣的话可以阅读我的另一篇博客《继续吹一波Org-mode》了解Org-mode以及更多用法。&#xA;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;最近豆瓣开始搞激烈的实名认证，而不愿献祭隐私的我，也只能和豆瓣说再见了。豆瓣十几年的情谊化为乌有，我也无法相信其他书影音数据库能够天长地久。另一方面，IMDB，Letterbox，TMDB，Goodreads这类美国数据库对于动漫和国产书还有水土不服的问题，我曾经暂别豆瓣，用过挺长一段时间的IMDB+Letterbox，却还是回归豆瓣后觉得顺手。查了一下，似乎没有什么自架豆瓣替代品的开源软件，大家常用的方案也是我不太喜欢的Notion（我在&lt;a href=&#34;https://blindwith.science/2021/11/467.html/&#34;&gt;继续吹一波Org-mode&lt;/a&gt;里曾经详述过），于是趁着小长假，我便将豆瓣转移到了Org-mode。&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;../../ox-hugo/org_mode_douban.png&#34;&#xA;    alt=&#34;Figure 1: 最终效果长这样&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;&lt;!-- raw HTML omitted --&gt;Figure 1: &lt;!-- raw HTML omitted --&gt;最终效果长这样&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;</description>
     </item>
-    
     <item>
       <title>我有长毛象啦</title>
       <link>http://blindwith.science/2022/05/473.html/</link>
       <pubDate>Sat, 21 May 2022 22:44:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2022/05/473.html/</guid>
-      <description>&lt;p&gt;我一直都想有一个自己的微博系统，因为自己逐渐回复社恐状态，愈发不习惯在公共平台如豆瓣、微博、朋友圈吐槽。而自己也没有当年日更一博的劲头，几句话就发一篇博客的话好像也不妥。但是微博和博客不同，很难复用我所用的静态系统搭建。几个月前，我才孤陋寡闻得知了长毛象这么一个系统，发现其正符合我的需求，便入了坑。&lt;/p&gt;
-&lt;p&gt;长毛象并不像Hugo这类静态架构，可以直接架在免费的Github pages上，所以第一步是挑选一个合适的云平台。我没有使用东家的产品，而是跟风使用Digital Ocean，开了一个每月5刀左右的Ubuntu instance。Digital Ocean上可以直接从marketplace选image直接搭建，但是版本比较老。Mastodon的文档比较完整，所以我便一路跟着从头开始搭建了。&lt;/p&gt;
-&lt;p&gt;首先是一些&lt;a href=&#34;https://docs.joinmastodon.org/admin/prerequisites/&#34;&gt;准备工作&lt;/a&gt;，比如禁用 &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt; 中的 &lt;code&gt;PasswordAuthentication&lt;/code&gt; 并通过 &lt;code&gt;systemctl restart ssh.service&lt;/code&gt; 重启，这样只能使用SSH Key登陆；通过 &lt;code&gt;apt update &amp;amp;&amp;amp; apt upgrade -y&lt;/code&gt; 更新package后安装fail2ban和iptables-persistent并添加相关设置；由于Mastodon是内存大户，还根据&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04&#34;&gt;Digital Ocean的教程&lt;/a&gt;增加了4G的swap。&lt;/p&gt;
-&lt;p&gt;接下来便是&lt;a href=&#34;https://docs.joinmastodon.org/admin/install/&#34;&gt;安装Mastodon&lt;/a&gt;了。我没有使用docker，而是从源中直接安装。Mastodon基于Ruby on rails (REST API)，React.js（前端），Node.js（Streaming API），Redis（队列），PostgreSQL（数据库），自然也要安装这几个。其中Ruby需要通过rbenv来管理，而后者必须安装在单独的Linux用户中，所以可以创建一个mastodon用户（之后也会在这个用户下下载安装Mastodon）。Ruby会装很久，可以使用 &lt;code&gt;--verbose&lt;/code&gt; 来确保还在安装而不是卡了。&lt;/p&gt;
-&lt;p&gt;全部安装完成后，即可运行交互式安装向导来生成配置文件~.env.production~，预编译静态文件，并创建数据库的schema：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;RAILS_ENV=production bundle exec rake mastodon:setup
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;这一步在Mastodon文档中略过，不过基本上也可以一路回车。需要注意的是：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;如果打算采用二级域名，但是想让用户名采用一级域名即可搜到，则需要在交互中提供一级域名。我后面会细说。&lt;/li&gt;
-&lt;li&gt;需要提前准备好SMTP的配置。比如gmail就需要设置应用专用密码，并使用plain模式来验证。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一般来说，之后跟着文档配置完nginx，SSL证书，以及一系列systemd服务后就可以使用Mastodon了。&lt;/p&gt;
-&lt;p&gt;但是。&lt;/p&gt;</description>
+      <description>&lt;p&gt;我一直都想有一个自己的微博系统，因为自己逐渐回复社恐状态，愈发不习惯在公共平台如豆瓣、微博、朋友圈吐槽。而自己也没有当年日更一博的劲头，几句话就发一篇博客的话好像也不妥。但是微博和博客不同，很难复用我所用的静态系统搭建。几个月前，我才孤陋寡闻得知了长毛象这么一个系统，发现其正符合我的需求，便入了坑。&lt;/p&gt;&#xA;&lt;p&gt;长毛象并不像Hugo这类静态架构，可以直接架在免费的Github pages上，所以第一步是挑选一个合适的云平台。我没有使用东家的产品，而是跟风使用Digital Ocean，开了一个每月5刀左右的Ubuntu instance。Digital Ocean上可以直接从marketplace选image直接搭建，但是版本比较老。Mastodon的文档比较完整，所以我便一路跟着从头开始搭建了。&lt;/p&gt;&#xA;&lt;p&gt;首先是一些&lt;a href=&#34;https://docs.joinmastodon.org/admin/prerequisites/&#34;&gt;准备工作&lt;/a&gt;，比如禁用 &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt; 中的 &lt;code&gt;PasswordAuthentication&lt;/code&gt; 并通过 &lt;code&gt;systemctl restart ssh.service&lt;/code&gt; 重启，这样只能使用SSH Key登陆；通过 &lt;code&gt;apt update &amp;amp;&amp;amp; apt upgrade -y&lt;/code&gt; 更新package后安装fail2ban和iptables-persistent并添加相关设置；由于Mastodon是内存大户，还根据&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04&#34;&gt;Digital Ocean的教程&lt;/a&gt;增加了4G的swap。&lt;/p&gt;&#xA;&lt;p&gt;接下来便是&lt;a href=&#34;https://docs.joinmastodon.org/admin/install/&#34;&gt;安装Mastodon&lt;/a&gt;了。我没有使用docker，而是从源中直接安装。Mastodon基于Ruby on rails (REST API)，React.js（前端），Node.js（Streaming API），Redis（队列），PostgreSQL（数据库），自然也要安装这几个。其中Ruby需要通过rbenv来管理，而后者必须安装在单独的Linux用户中，所以可以创建一个mastodon用户（之后也会在这个用户下下载安装Mastodon）。Ruby会装很久，可以使用 &lt;code&gt;--verbose&lt;/code&gt; 来确保还在安装而不是卡了。&lt;/p&gt;&#xA;&lt;p&gt;全部安装完成后，即可运行交互式安装向导来生成配置文件~.env.production~，预编译静态文件，并创建数据库的schema：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;RAILS_ENV=production bundle exec rake mastodon:setup&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这一步在Mastodon文档中略过，不过基本上也可以一路回车。需要注意的是：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;如果打算采用二级域名，但是想让用户名采用一级域名即可搜到，则需要在交互中提供一级域名。我后面会细说。&lt;/li&gt;&#xA;&lt;li&gt;需要提前准备好SMTP的配置。比如gmail就需要设置应用专用密码，并使用plain模式来验证。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;一般来说，之后跟着文档配置完nginx，SSL证书，以及一系列systemd服务后就可以使用Mastodon了。&lt;/p&gt;&#xA;&lt;p&gt;但是。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>并行运行多任务</title>
       <link>http://blindwith.science/2021/11/468.html/</link>
       <pubDate>Wed, 17 Nov 2021 23:11:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/2021/11/468.html/</guid>
-      <description>&lt;p&gt;最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比python java这些简明易懂的现代语言什么的有用多了。&lt;/p&gt;
-&lt;p&gt;这个问题是我用&lt;a href=&#34;https://en.wikipedia.org/wiki/Loop-level%5Fparallelism&#34;&gt;loop-level parallelism&lt;/a&gt;来同时后台运行多个进程，怎么样可以只在所有进程都成功的情况下才会 &lt;code&gt;exit 0&lt;/code&gt; 。&lt;/p&gt;</description>
+      <description>&lt;p&gt;最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比python java这些简明易懂的现代语言什么的有用多了。&lt;/p&gt;&#xA;&lt;p&gt;这个问题是我用&lt;a href=&#34;https://en.wikipedia.org/wiki/Loop-level%5Fparallelism&#34;&gt;loop-level parallelism&lt;/a&gt;来同时后台运行多个进程，怎么样可以只在所有进程都成功的情况下才会 &lt;code&gt;exit 0&lt;/code&gt; 。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>继续吹一波Org-mode</title>
       <link>http://blindwith.science/2021/11/467.html/</link>
       <pubDate>Fri, 12 Nov 2021 23:14:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/2021/11/467.html/</guid>
-      <description>&lt;p&gt;最近Notion大火，从二手买卖到菜谱分享，隔三差五就会看到它的推荐和应用。出于好奇，我也去开了个帐户用了一番，确实不错，然而我对其持谨慎态度。一方面，作为在线产品，它的使用场景灵活，但又会受网络限制，假如所在单位或者地区禁止使用，那就徒增烦恼。而且，它并非开源产品，公司一旦跑路或者改变其业务重心，那会造成非常高的转移成本，前车之鉴便有Evernote。另一方面，它作为一个笔记产品，架构强大，也更复杂，有着较高的学习成本，也许用起来很sexy，但也会让人疑惑在有更好替代品的情况下，是否值得花费这么多时间来学习使用这个产品。&lt;/p&gt;
-&lt;p&gt;说了这么多，其实我只是想引出这个更好的替代品，也就是我用了多年的Emacs。&lt;/p&gt;
-&lt;p&gt;在数字化时代，我们需要用到各种各样的工具来记录管理我们的生活，这也催生了各种工具和网站。比如日程管理有Things、Bear等，文献管理软件有Endnote、NoteExpress等，记帐软件有随手记、Splitwise等，编辑器有VSCode、Atom等，博客写作软件有Typora、MWeb等，菜谱有下厨房。但是工具太多协作性便会变弱，在线产品更是逃不脱对厂商的依赖，一旦厂商缺钱改成了订阅付费模式，除了叫苦不迭也只能乖乖付钱，而如果厂商保持免费，那也有可能通过其他方式比如出售隐私增加广告来保持盈利。其实对于这些，Emacs的Org mode都可以胜任。&lt;/p&gt;
-&lt;p&gt;Emacs是什么呢？最简单的解释，便是Emacs是一种基于Lisp的具有可扩展性的文本编辑器。文本编辑器，意味着平时不管在上面记录什么，大小都以kb计，最基础的Dropbox plan就能轻松对其进行云端备份，哪怕在一个没有Emacs的环境，也能用任何文本编辑器打开使用Emacs处理的文档。而Lisp的强扩展性，则赋予Emacs一切可能，你可以用它记笔记（Org-mode），管理文件（Dired），编辑远程档案（Tramp），版本控制（Magit），收发邮件（Gnus），用作IDE，甚至上网发推。有一个著名的说法称Emacs为操作系统，倒也并非言过其实。不过我也不至于真的将Emacs当操作系统使用，毕竟我们已经一只脚跨入了Meta时代（狗头）。不过Emacs，尤其是无人可出其右的Org-mode，也确实渗透了我的学习、工作、生活。&lt;/p&gt;
-&lt;p&gt;那么，Org-mode又是什么呢？Org-mode是Emacs的一种支持内容分级显示的主编辑模式。在Emacs中，每种主模式都有特殊的Emacs Lisp变量和函数来使处理文档变得更便捷，而Org作为Emacs特有的文本格式，更是有着非常出色的原生支持。其他主流编辑器（Vim, Atom, VSCode, Sublime）也都有对应相应的Org模式，但只能支持基础的语法高亮功能。&lt;/p&gt;
-&lt;p&gt;Org-mode的宣传语就是 your life in plain text，可以说很好地概括了Org-mode的能力。最重要的一点是Org是纯文本文档，具有体积小结构简单的优点。在此我先简单介绍一下Org-mode的特性，就不一一展开了。毕竟如果展开来讲，那可能得出一个系列文章。&lt;/p&gt;</description>
+      <description>&lt;p&gt;最近Notion大火，从二手买卖到菜谱分享，隔三差五就会看到它的推荐和应用。出于好奇，我也去开了个帐户用了一番，确实不错，然而我对其持谨慎态度。一方面，作为在线产品，它的使用场景灵活，但又会受网络限制，假如所在单位或者地区禁止使用，那就徒增烦恼。而且，它并非开源产品，公司一旦跑路或者改变其业务重心，那会造成非常高的转移成本，前车之鉴便有Evernote。另一方面，它作为一个笔记产品，架构强大，也更复杂，有着较高的学习成本，也许用起来很sexy，但也会让人疑惑在有更好替代品的情况下，是否值得花费这么多时间来学习使用这个产品。&lt;/p&gt;&#xA;&lt;p&gt;说了这么多，其实我只是想引出这个更好的替代品，也就是我用了多年的Emacs。&lt;/p&gt;&#xA;&lt;p&gt;在数字化时代，我们需要用到各种各样的工具来记录管理我们的生活，这也催生了各种工具和网站。比如日程管理有Things、Bear等，文献管理软件有Endnote、NoteExpress等，记帐软件有随手记、Splitwise等，编辑器有VSCode、Atom等，博客写作软件有Typora、MWeb等，菜谱有下厨房。但是工具太多协作性便会变弱，在线产品更是逃不脱对厂商的依赖，一旦厂商缺钱改成了订阅付费模式，除了叫苦不迭也只能乖乖付钱，而如果厂商保持免费，那也有可能通过其他方式比如出售隐私增加广告来保持盈利。其实对于这些，Emacs的Org mode都可以胜任。&lt;/p&gt;&#xA;&lt;p&gt;Emacs是什么呢？最简单的解释，便是Emacs是一种基于Lisp的具有可扩展性的文本编辑器。文本编辑器，意味着平时不管在上面记录什么，大小都以kb计，最基础的Dropbox plan就能轻松对其进行云端备份，哪怕在一个没有Emacs的环境，也能用任何文本编辑器打开使用Emacs处理的文档。而Lisp的强扩展性，则赋予Emacs一切可能，你可以用它记笔记（Org-mode），管理文件（Dired），编辑远程档案（Tramp），版本控制（Magit），收发邮件（Gnus），用作IDE，甚至上网发推。有一个著名的说法称Emacs为操作系统，倒也并非言过其实。不过我也不至于真的将Emacs当操作系统使用，毕竟我们已经一只脚跨入了Meta时代（狗头）。不过Emacs，尤其是无人可出其右的Org-mode，也确实渗透了我的学习、工作、生活。&lt;/p&gt;&#xA;&lt;p&gt;那么，Org-mode又是什么呢？Org-mode是Emacs的一种支持内容分级显示的主编辑模式。在Emacs中，每种主模式都有特殊的Emacs Lisp变量和函数来使处理文档变得更便捷，而Org作为Emacs特有的文本格式，更是有着非常出色的原生支持。其他主流编辑器（Vim, Atom, VSCode, Sublime）也都有对应相应的Org模式，但只能支持基础的语法高亮功能。&lt;/p&gt;&#xA;&lt;p&gt;Org-mode的宣传语就是 your life in plain text，可以说很好地概括了Org-mode的能力。最重要的一点是Org是纯文本文档，具有体积小结构简单的优点。在此我先简单介绍一下Org-mode的特性，就不一一展开了。毕竟如果展开来讲，那可能得出一个系列文章。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Beancount 记帐小进阶之三–常见场景</title>
       <link>http://blindwith.science/2021/01/463.html/</link>
       <pubDate>Mon, 18 Jan 2021 18:33:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/2021/01/463.html/</guid>
       <description>&lt;p&gt;书接上文，这次分享一下我对工资单，共享帐簿以及医疗帐单，炒币这些常用场景的处理方式。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Beancount 记帐小进阶之二–优化导入</title>
       <link>http://blindwith.science/2021/01/462.html/</link>
       <pubDate>Sun, 03 Jan 2021 18:33:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/2021/01/462.html/</guid>
       <description>&lt;p&gt;上文中我将本地环境重新配置，又加上了远程记帐的功能。此文主要讨论我会如何优化帐目账本，并批量从银行帐单导入帐务。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Beancount 记帐小进阶之一–环境配置</title>
       <link>http://blindwith.science/2020/12/461.html/</link>
       <pubDate>Sun, 27 Dec 2020 18:33:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/2020/12/461.html/</guid>
-      <description>&lt;p&gt;记帐是我的一个习惯，也是爱好。自&lt;a href=&#34;https://blindwith.science/2019/07/444.html/&#34;&gt;Emacs 上使用 Beancount 记帐&lt;/a&gt;起，我改用 Beancount 记帐已有一年有余。Beancount 简便轻巧，帐目亦是非常清晰。通过其前端 fava 对帐目进行可视化后，还能获得很多平时不会注意到的信息。下图是我 2020 年的支出，很明显地可以看到在疫情之下，我的支出以解决生理与安全需求为主，也可以看到由于支出大幅缩减，税居然占了我去年支出的一半。&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src=&#34;../../ox-hugo/fava_1.png&#34;/&gt; 
-&lt;/figure&gt;
-
-&lt;p&gt;下图则是我自记帐以来在电影方面的支出，可以看到 2018-2019 年由于毕业找工作，出现了一个很大的平台期，也可以看到自今年三月疫情爆发以来，我再也没有去过电影院。&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src=&#34;../../ox-hugo/fava_2.png&#34;/&gt; 
-&lt;/figure&gt;
-
-&lt;p&gt;不过这一年来，我开始工作，也和女票同住，出现了更多类型的帐目。而这半年因新冠宅家，花销颇少，反而便懒于记帐了，一不小心便产生了好几个月的 lag，如何高效地记录各种类型的帐目反而成了一个问题。Beancount 虽然用的人不少，可是官方 document 写得非常硬核，中文资源又多浅尝辄止，我越是想要简化自己的流程，越是产生了更多的疑惑。最近花了圣诞元旦 MLK 三个长周末，总算将各种疑惑都理清了。&lt;/p&gt;</description>
+      <description>&lt;p&gt;记帐是我的一个习惯，也是爱好。自&lt;a href=&#34;https://blindwith.science/2019/07/444.html/&#34;&gt;Emacs 上使用 Beancount 记帐&lt;/a&gt;起，我改用 Beancount 记帐已有一年有余。Beancount 简便轻巧，帐目亦是非常清晰。通过其前端 fava 对帐目进行可视化后，还能获得很多平时不会注意到的信息。下图是我 2020 年的支出，很明显地可以看到在疫情之下，我的支出以解决生理与安全需求为主，也可以看到由于支出大幅缩减，税居然占了我去年支出的一半。&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;../../ox-hugo/fava_1.png&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;下图则是我自记帐以来在电影方面的支出，可以看到 2018-2019 年由于毕业找工作，出现了一个很大的平台期，也可以看到自今年三月疫情爆发以来，我再也没有去过电影院。&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;../../ox-hugo/fava_2.png&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;不过这一年来，我开始工作，也和女票同住，出现了更多类型的帐目。而这半年因新冠宅家，花销颇少，反而便懒于记帐了，一不小心便产生了好几个月的 lag，如何高效地记录各种类型的帐目反而成了一个问题。Beancount 虽然用的人不少，可是官方 document 写得非常硬核，中文资源又多浅尝辄止，我越是想要简化自己的流程，越是产生了更多的疑惑。最近花了圣诞元旦 MLK 三个长周末，总算将各种疑惑都理清了。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>从 pyim 换到 emacs-rime 了</title>
       <link>http://blindwith.science/2020/12/460.html/</link>
       <pubDate>Sun, 13 Dec 2020 17:49:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/2020/12/460.html/</guid>
-      <description>&lt;p&gt;之前我一直使用的是 pyim，见 &lt;a href=&#34;https://blindwith.science/2019/08/449.html/&#34;&gt;Mac 版 Emacs 中使用 Rime 输入法打带调双拼&lt;/a&gt;。前段时间手贱把 Mac 升至 Catalina 后，Emacs 便出现了各种各样的问题。捣鼓了一圈后发现了一个致命问题，那就是我对 pyim 的双拼定义不管用了。捣鼓了许久，都没搞明白原因是什么。不过 pyim 本身也有一些缺陷，安装复杂，和鼠须管并非无缝衔接，打字有卡顿，缓存限制对生僻字不友好，我的带调双拼也需要在 init 中另行设置，所以在发现 &lt;a href=&#34;https://github.com/DogLooksGood/emacs-rime&#34;&gt;emacs-rime&lt;/a&gt; 后，我便起了换个轮子用的想法。&lt;/p&gt;
-&lt;p&gt;emacs-rime 的安装非常简单，从 &lt;a href=&#34;https://github.com/rime/librime&#34;&gt;rime/librime&lt;/a&gt; 那儿下了最新的 Release 并解压至 &lt;code&gt;~/.emacs.d/librime&lt;/code&gt; 即可。更棒的是，由于 emacs-rime 仅仅是 rime 在 emacs 中的前端，所以其体验与鼠须管是完全一致的。也就是说，我再也不用为了实现带调双拼而写一个专用的 schema 并在 init 中另行设置了，而用起方言输入法也是顺滑非常。另外，在中英文混输时，也不需要切换输入法了，超级棒。&lt;/p&gt;</description>
+      <description>&lt;p&gt;之前我一直使用的是 pyim，见 &lt;a href=&#34;https://blindwith.science/2019/08/449.html/&#34;&gt;Mac 版 Emacs 中使用 Rime 输入法打带调双拼&lt;/a&gt;。前段时间手贱把 Mac 升至 Catalina 后，Emacs 便出现了各种各样的问题。捣鼓了一圈后发现了一个致命问题，那就是我对 pyim 的双拼定义不管用了。捣鼓了许久，都没搞明白原因是什么。不过 pyim 本身也有一些缺陷，安装复杂，和鼠须管并非无缝衔接，打字有卡顿，缓存限制对生僻字不友好，我的带调双拼也需要在 init 中另行设置，所以在发现 &lt;a href=&#34;https://github.com/DogLooksGood/emacs-rime&#34;&gt;emacs-rime&lt;/a&gt; 后，我便起了换个轮子用的想法。&lt;/p&gt;&#xA;&lt;p&gt;emacs-rime 的安装非常简单，从 &lt;a href=&#34;https://github.com/rime/librime&#34;&gt;rime/librime&lt;/a&gt; 那儿下了最新的 Release 并解压至 &lt;code&gt;~/.emacs.d/librime&lt;/code&gt; 即可。更棒的是，由于 emacs-rime 仅仅是 rime 在 emacs 中的前端，所以其体验与鼠须管是完全一致的。也就是说，我再也不用为了实现带调双拼而写一个专用的 schema 并在 init 中另行设置了，而用起方言输入法也是顺滑非常。另外，在中英文混输时，也不需要切换输入法了，超级棒。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>乐高 42083 布加迪奇龙传动系统解构</title>
       <link>http://blindwith.science/2020/12/459.html/</link>
       <pubDate>Tue, 08 Dec 2020 19:45:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/2020/12/459.html/</guid>
       <description>&lt;p&gt;最近西雅图进入了雨季，周末不是阴天便是淅淅沥沥的小雨，不宜出行。于是我们又把年初拼了一半的 42083 布加迪奇龙拿出来拼。这次女票自信非常，坚决不要监工。一本书结束，完成了 marriage process 后，我们装上轮胎测试传动系统，却发现好像哪里不太对。转向和轮轴的小问题很容易就能找到并修正，但是发动机似乎还是有点卡。我网上想搜一下原理，却发现所有的攻略似乎都默认拼装此模型的人对车非常熟悉，对其中的传动原理都一笔带过。我都不知道动力应该从哪里来。所以我干脆来个 reverse engineering，尝试以一个不懂车辆构造的理科生视角来解构这辆车。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>使用 pandoc 转换 ox-hugo 支持的 org 文件</title>
       <link>http://blindwith.science/2020/06/455.html/</link>
       <pubDate>Wed, 10 Jun 2020 22:41:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2020/06/455.html/</guid>
       <description>&lt;p&gt;之前从 hexo 转成 hugo 的时候，顺便用了使用非常方便的 ox-hugo 这个轮子。当时贪图省力，就直接用 pandoc 将 markdown 文件批量转换成了 orgmode，但是所有的 metadata 全都没能转换，后期还是得一个一个改。虽然是一个重新审阅自己黑历史的方式，但是要改四百多篇确实还是太过费心费力了。事情一变得繁杂起来，我的拖延症就犯了，于是直到现在我还是只改好了十几篇。今天终于忍不住了，动手看起了 pandoc 文档。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Postgresql server did not shutdown correctly</title>
       <link>http://blindwith.science/2019/11/452.html/</link>
       <pubDate>Tue, 05 Nov 2019 11:23:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/2019/11/452.html/</guid>
-      <description>&lt;p&gt;I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
-django.db.utils.OperationalError: could not connect to server: Connection refused
-        Is the server running on host &amp;#34;localhost&amp;#34; (::1) and accepting
-        TCP/IP connections on port 5432?
-could not connect to server: Connection refused
-        Is the server running on host &amp;#34;localhost&amp;#34; (127.0.0.1) and accepting
-        TCP/IP connections on port 5432?
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
+      <description>&lt;p&gt;I setup Postgresql as database for Django and it works as a charm. However, today I got a error message when I tried to migrate my django.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;django.db.utils.OperationalError: could not connect to server: Connection refused&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Is the server running on host &amp;#34;localhost&amp;#34; (::1) and accepting&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        TCP/IP connections on port 5432?&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;could not connect to server: Connection refused&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Is the server running on host &amp;#34;localhost&amp;#34; (127.0.0.1) and accepting&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        TCP/IP connections on port 5432?&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>My first Django app</title>
       <link>http://blindwith.science/2019/10/451.html/</link>
       <pubDate>Fri, 11 Oct 2019 13:58:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/10/451.html/</guid>
       <description>&lt;p&gt;This is my implementaion on the &lt;a href=&#34;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&#34;&gt;Django tutorial&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Org-mode 中添加结构模板</title>
       <link>http://blindwith.science/2019/09/450.html/</link>
       <pubDate>Wed, 04 Sep 2019 20:06:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/09/450.html/</guid>
-      <description>&lt;p&gt;作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &lt;code&gt;&amp;lt;s&lt;/code&gt; &lt;!-- raw HTML omitted --&gt;TAB&lt;!-- raw HTML omitted --&gt; 会自动生成&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;c&#34;&gt;#+BEGIN_SRC&lt;/span&gt;
-
-&lt;span class=&#34;c&#34;&gt;#+END_SRC&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;这样插入代码或者引用这类结构非常方便。&lt;/p&gt;</description>
+      <description>&lt;p&gt;作为文学编程利器，org-mode 中有一个非常方便的功能来插入常用结构，比如 &lt;code&gt;&amp;lt;s&lt;/code&gt; &lt;!-- raw HTML omitted --&gt;TAB&lt;!-- raw HTML omitted --&gt; 会自动生成&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#+BEGIN_SRC&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#+END_SRC&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这样插入代码或者引用这类结构非常方便。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Mac 版 Emacs 中使用 Rime 输入法打带调双拼</title>
       <link>http://blindwith.science/2019/08/449.html/</link>
       <pubDate>Sat, 31 Aug 2019 20:40:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/08/449.html/</guid>
-      <description>&lt;p&gt;注：已换成 emacs-rime，详见 &lt;a href=&#34;https://blindwith.science/2020/12/460.html/&#34;&gt;从 pyim 换到 emacs-rime 了&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。&lt;/p&gt;</description>
+      <description>&lt;p&gt;注：已换成 emacs-rime，详见 &lt;a href=&#34;https://blindwith.science/2020/12/460.html/&#34;&gt;从 pyim 换到 emacs-rime 了&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;p&gt;由于我习惯写中文博客，所以将写博客这件事也转移到 Emacs 后，我渐渐感觉到 pyim 的不足。所以今天研究一下如何让 pyim 调用 Rime 的词库。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Hacking the Data Transformation Interview</title>
       <link>http://blindwith.science/2019/08/448.html/</link>
       <pubDate>Fri, 30 Aug 2019 11:14:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/08/448.html/</guid>
       <description>&lt;p&gt;I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>博客由 Hexo 迁移至 Hugo</title>
       <link>http://blindwith.science/2019/08/447.html/</link>
       <pubDate>Mon, 26 Aug 2019 23:49:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/08/447.html/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;本篇博文使用 org-mode 书就，耶！&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;从 2016 将博客迁移至 Hexo+Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。&lt;/p&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;本篇博文使用 org-mode 书就，耶！&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;从 2016 将博客迁移至 Hexo+Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>鼠须管傻瓜化配置</title>
       <link>http://blindwith.science/2019/07/445.html/</link>
       <pubDate>Sat, 20 Jul 2019 20:58:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/07/445.html/</guid>
-      <description>&lt;p&gt;This configuration:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Optimized for simplified Chinese;&lt;/li&gt;
-&lt;li&gt;Implement 朙月拼音 &lt;code&gt;luna-pinyin&lt;/code&gt;, 微软双拼 &lt;code&gt;double-pinyin-mspy&lt;/code&gt; and
-地球拼音 &lt;code&gt;terra-pinyin&lt;/code&gt; with 20+ dictionaries including symbols and
-emoji;&lt;/li&gt;
-&lt;li&gt;Feature 地球双拼 &lt;code&gt;terra-double-pinyin-mspy&lt;/code&gt;, a double pinyin input
-method supporting tone marks;&lt;/li&gt;
-&lt;li&gt;Use 地球双拼 &lt;code&gt;terra-double-pinyin-mspy&lt;/code&gt; to reverse lookup
-吴语（苏州话） &lt;code&gt;wugniu_soutseu&lt;/code&gt; with tone marks, toggled by &lt;code&gt;`&lt;/code&gt;;&lt;/li&gt;
-&lt;li&gt;Use ASCII mode for several applications.&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;This configuration:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Optimized for simplified Chinese;&lt;/li&gt;&#xA;&lt;li&gt;Implement 朙月拼音 &lt;code&gt;luna-pinyin&lt;/code&gt;, 微软双拼 &lt;code&gt;double-pinyin-mspy&lt;/code&gt; and&#xA;地球拼音 &lt;code&gt;terra-pinyin&lt;/code&gt; with 20+ dictionaries including symbols and&#xA;emoji;&lt;/li&gt;&#xA;&lt;li&gt;Feature 地球双拼 &lt;code&gt;terra-double-pinyin-mspy&lt;/code&gt;, a double pinyin input&#xA;method supporting tone marks;&lt;/li&gt;&#xA;&lt;li&gt;Use 地球双拼 &lt;code&gt;terra-double-pinyin-mspy&lt;/code&gt; to reverse lookup&#xA;吴语（苏州话） &lt;code&gt;wugniu_soutseu&lt;/code&gt; with tone marks, toggled by &lt;code&gt;`&lt;/code&gt;;&lt;/li&gt;&#xA;&lt;li&gt;Use ASCII mode for several applications.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Emacs 上使用 Beancount 记帐</title>
       <link>http://blindwith.science/2019/07/444.html/</link>
       <pubDate>Thu, 04 Jul 2019 12:58:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/07/444.html/</guid>
-      <description>&lt;p&gt;昨天搞定 Emacs 的中文环境，今天想着好久没记帐了，随手记总是很花时间，干脆一鼓作气，将记帐一起搬过来。&lt;/p&gt;
-&lt;h2 id=&#34;复式记帐&#34;&gt;复式记帐&lt;/h2&gt;
-&lt;p&gt;我本科时双修了一门金融，其中最为繁琐，也是最令人头疼的一门课便是会计学。我不爱听讲，毕业之后也将会计的知识点忘得查差不多了，然而其&amp;quot;有借必有贷，借贷必相等&amp;quot;的复式记帐法，反而是我生活中运用最多的。&lt;/p&gt;
-&lt;p&gt;复式记帐法说起来复杂，对个人来说，就是将每笔交易分门别类，填入下面这条等式中：&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;资产 + 费用 = 负债 + 所有者权益 + 收入&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;在个人记帐中，这条等式辅以借贷概念会令人望而生畏，所以我将其略一变形：&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;（+资产）+（-负债）+（+费用）+（-收入）+（-所有者权益）= 0&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;ul&gt;
-&lt;li&gt;资产与负债都是与金钱直接挂钩的，比如银行户头，比如人民币美钞，比如信用卡帐户，再比如借条，这些都可以算是货币的不同表示形式。&lt;/li&gt;
-&lt;li&gt;费用与收入则是与金钱间接挂钩的，比如工资，比如商品，比如服务，这些都可以算是生产资本与商品资本的不同表现形式。其中收入与字面意思不同，可以理解为生产资本（劳动力等）。&lt;/li&gt;
-&lt;li&gt;所有者权益对个人意义不大，一般用来记录历史盈余与糊涂帐。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;而这个变形公式中的正负号，则可以将各项目的符号关系，用作资金流向的参照。这么说有点玄乎，换个茨威格式的说法就是：&amp;ldquo;人们从命运得到的一切，冥冥之中都记下了它的价钱。&amp;ldquo;花钱买了服务，则是减少资产（花了钱），增加费用（得到服务）；工资到帐，则是增加资产（到帐），减少收入（既有劳动时间的减少）；别人跟你借了钱，则是资产减少（银行帐户或现金余额减少），负债增加（别人在你这儿的负债）。&lt;/p&gt;
-&lt;p&gt;总结一下，由于人类暂时无法操控时间，所以费用一般为正，收入一般为负。而没有破产的情况下资产一般为正，别人欠你的钱为正，信用卡债（你欠别人的钱）为负。&lt;/p&gt;</description>
+      <description>&lt;p&gt;昨天搞定 Emacs 的中文环境，今天想着好久没记帐了，随手记总是很花时间，干脆一鼓作气，将记帐一起搬过来。&lt;/p&gt;&#xA;&lt;h2 id=&#34;复式记帐&#34;&gt;复式记帐&lt;/h2&gt;&#xA;&lt;p&gt;我本科时双修了一门金融，其中最为繁琐，也是最令人头疼的一门课便是会计学。我不爱听讲，毕业之后也将会计的知识点忘得查差不多了，然而其&amp;quot;有借必有贷，借贷必相等&amp;quot;的复式记帐法，反而是我生活中运用最多的。&lt;/p&gt;&#xA;&lt;p&gt;复式记帐法说起来复杂，对个人来说，就是将每笔交易分门别类，填入下面这条等式中：&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;资产 + 费用 = 负债 + 所有者权益 + 收入&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;在个人记帐中，这条等式辅以借贷概念会令人望而生畏，所以我将其略一变形：&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;（+资产）+（-负债）+（+费用）+（-收入）+（-所有者权益）= 0&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;资产与负债都是与金钱直接挂钩的，比如银行户头，比如人民币美钞，比如信用卡帐户，再比如借条，这些都可以算是货币的不同表示形式。&lt;/li&gt;&#xA;&lt;li&gt;费用与收入则是与金钱间接挂钩的，比如工资，比如商品，比如服务，这些都可以算是生产资本与商品资本的不同表现形式。其中收入与字面意思不同，可以理解为生产资本（劳动力等）。&lt;/li&gt;&#xA;&lt;li&gt;所有者权益对个人意义不大，一般用来记录历史盈余与糊涂帐。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;而这个变形公式中的正负号，则可以将各项目的符号关系，用作资金流向的参照。这么说有点玄乎，换个茨威格式的说法就是：&amp;ldquo;人们从命运得到的一切，冥冥之中都记下了它的价钱。&amp;ldquo;花钱买了服务，则是减少资产（花了钱），增加费用（得到服务）；工资到帐，则是增加资产（到帐），减少收入（既有劳动时间的减少）；别人跟你借了钱，则是资产减少（银行帐户或现金余额减少），负债增加（别人在你这儿的负债）。&lt;/p&gt;&#xA;&lt;p&gt;总结一下，由于人类暂时无法操控时间，所以费用一般为正，收入一般为负。而没有破产的情况下资产一般为正，别人欠你的钱为正，信用卡债（你欠别人的钱）为负。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Emacs 中文环境配置</title>
       <link>http://blindwith.science/2019/07/443.html/</link>
       <pubDate>Wed, 03 Jul 2019 13:44:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/07/443.html/</guid>
-      <description>&lt;p&gt;使用 Emacs 三年多了，当时受了 &lt;a href=&#34;https://github.com/redguardtoo/mastering-emacs-in-one-year-guide&#34;&gt;一年成为 Emacs 高手&lt;/a&gt; 的蛊惑，且贪图便利，使用了 &lt;a href=&#34;https://github.com/purcell/emacs.d&#34;&gt;Purcell 的配置&lt;/a&gt;。正如 Purcell 所说，此配置相当 reasonable，用来入门确实让我受益匪浅，少走了很多弯路。三年使用下来，我需要添加的插件只有 &lt;code&gt;org-ref&lt;/code&gt; 和 &lt;code&gt;ob-smiles&lt;/code&gt; ，配置更新也仅须 &lt;code&gt;git pull&lt;/code&gt; 外加 &lt;!-- raw HTML omitted --&gt;M-x package-list-packages U x&lt;!-- raw HTML omitted --&gt; 即可，非常方便。&lt;/p&gt;
-&lt;p&gt;然而过去三年来，我主要是使用 Emacs 中的 org-mode 来记 Science 与 Tech 方面笔记，基于 Latex 的长文章 / 代码我更喜欢用 Atoms + Vim-mode 来写，基于 Markdown 的博客则用 MWeb 来写，中文笔记喜欢使用 Bears，最后却还是回到了苹果自带的免费 Notes。其他零零碎碎的场景则使用更为零碎的 app，餐馆用 DayGram + Workflowy，记账用随手记。非常不统一。&lt;/p&gt;
-&lt;p&gt;也就是说，我并不是一个“running my life with Emacs”的重症者，Purcell 配置的 Emacs 中也有大量我用不到，或者需要使用却不甚了解的插件。所以失业在家这个契机恰好也是让我重新审视 Emacs，看看我能否最大化地使用 Emacs。&lt;/p&gt;
-&lt;p&gt;对我而言，使用 Atoms 来写代码与 Latex，是由于我对使用 Emacs 调试还不甚熟练。所以这几天我花了一点时间重新阅读了 Emacs 手册。&lt;/p&gt;
-&lt;p&gt;使用 MWeb 来写博客与使用 Notes 来记笔记的原因则比较可笑，因为我基本上都是使用英文记录 Science &amp;amp; Tech 方面的笔记，我并没有配置 Emacs 的中文环境。所以需要使用中文来写东西时，我自然就得换用其他工具。这段时间准备面试，将 org-mode 的使用范围扩大到记录面试适宜，由于一亩三分地是一个主要资料来源，不免需要粘贴许多中文帖子进来。这时再将 Emacs 视为一个纯英文环境未免有些麻烦。而将 Emacs 中文化了，自然也不需要 MWeb 和 Notes 或者 Bear 什么事了。&lt;/p&gt;
-&lt;p&gt;而记录餐馆和消费的需求比较麻烦，本文暂且搁置，今后有空再来研究。&lt;/p&gt;</description>
+      <description>&lt;p&gt;使用 Emacs 三年多了，当时受了 &lt;a href=&#34;https://github.com/redguardtoo/mastering-emacs-in-one-year-guide&#34;&gt;一年成为 Emacs 高手&lt;/a&gt; 的蛊惑，且贪图便利，使用了 &lt;a href=&#34;https://github.com/purcell/emacs.d&#34;&gt;Purcell 的配置&lt;/a&gt;。正如 Purcell 所说，此配置相当 reasonable，用来入门确实让我受益匪浅，少走了很多弯路。三年使用下来，我需要添加的插件只有 &lt;code&gt;org-ref&lt;/code&gt; 和 &lt;code&gt;ob-smiles&lt;/code&gt; ，配置更新也仅须 &lt;code&gt;git pull&lt;/code&gt; 外加 &lt;!-- raw HTML omitted --&gt;M-x package-list-packages U x&lt;!-- raw HTML omitted --&gt; 即可，非常方便。&lt;/p&gt;&#xA;&lt;p&gt;然而过去三年来，我主要是使用 Emacs 中的 org-mode 来记 Science 与 Tech 方面笔记，基于 Latex 的长文章 / 代码我更喜欢用 Atoms + Vim-mode 来写，基于 Markdown 的博客则用 MWeb 来写，中文笔记喜欢使用 Bears，最后却还是回到了苹果自带的免费 Notes。其他零零碎碎的场景则使用更为零碎的 app，餐馆用 DayGram + Workflowy，记账用随手记。非常不统一。&lt;/p&gt;&#xA;&lt;p&gt;也就是说，我并不是一个“running my life with Emacs”的重症者，Purcell 配置的 Emacs 中也有大量我用不到，或者需要使用却不甚了解的插件。所以失业在家这个契机恰好也是让我重新审视 Emacs，看看我能否最大化地使用 Emacs。&lt;/p&gt;&#xA;&lt;p&gt;对我而言，使用 Atoms 来写代码与 Latex，是由于我对使用 Emacs 调试还不甚熟练。所以这几天我花了一点时间重新阅读了 Emacs 手册。&lt;/p&gt;&#xA;&lt;p&gt;使用 MWeb 来写博客与使用 Notes 来记笔记的原因则比较可笑，因为我基本上都是使用英文记录 Science &amp;amp; Tech 方面的笔记，我并没有配置 Emacs 的中文环境。所以需要使用中文来写东西时，我自然就得换用其他工具。这段时间准备面试，将 org-mode 的使用范围扩大到记录面试适宜，由于一亩三分地是一个主要资料来源，不免需要粘贴许多中文帖子进来。这时再将 Emacs 视为一个纯英文环境未免有些麻烦。而将 Emacs 中文化了，自然也不需要 MWeb 和 Notes 或者 Bear 什么事了。&lt;/p&gt;&#xA;&lt;p&gt;而记录餐馆和消费的需求比较麻烦，本文暂且搁置，今后有空再来研究。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

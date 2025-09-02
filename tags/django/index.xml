@@ -4,18 +4,17 @@
     <title>Django on Blind with Science</title>
     <link>http://blindwith.science/tags/django/</link>
     <description>Recent content in Django on Blind with Science</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Fri, 11 Oct 2019 13:58:00 -0700</lastBuildDate><atom:link href="http://blindwith.science/tags/django/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Jan 2021 17:23:01 -0800</lastBuildDate>
+    <atom:link href="http://blindwith.science/tags/django/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My first Django app</title>
       <link>http://blindwith.science/2019/10/451.html/</link>
       <pubDate>Fri, 11 Oct 2019 13:58:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/10/451.html/</guid>
       <description>&lt;p&gt;This is my implementaion on the &lt;a href=&#34;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&#34;&gt;Django tutorial&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

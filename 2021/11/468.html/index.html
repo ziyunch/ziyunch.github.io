@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.76.5 with theme even" />
+<meta name="generator" content="Hugo 0.149.0 with theme even" />
 
 
 <link rel="canonical" href="http://blindwith.science/2021/11/468.html/" />
@@ -39,31 +39,34 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="../../../sass/main.min.f346f1cd7c119368051aba0791b1276d109b14d2a0fcefac9fe27d9ba680605a.css" rel="stylesheet">
+<link href="../../../sass/main.min.22b0d99d8a618713080069182ee3608a4528452925f4324879d7352bfccb78bd.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="并行运行多任务" />
-<meta property="og:description" content="最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比python java这些简明易懂的现代语言什么的有用多了。
-这个问题是我用loop-level parallelism来同时后台运行多个进程，怎么样可以只在所有进程都成功的情况下才会 exit 0 。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://blindwith.science/2021/11/468.html/" />
-<meta property="article:published_time" content="2021-11-17T23:11:00-08:00" />
-<meta property="article:modified_time" content="2021-11-18T21:47:41-08:00" />
-<meta itemprop="name" content="并行运行多任务">
-<meta itemprop="description" content="最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比python java这些简明易懂的现代语言什么的有用多了。
+<meta property="og:url" content="http://blindwith.science/2021/11/468.html/">
+  <meta property="og:site_name" content="Blind with Science">
+  <meta property="og:title" content="并行运行多任务">
+  <meta property="og:description" content="最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比python java这些简明易懂的现代语言什么的有用多了。
 这个问题是我用loop-level parallelism来同时后台运行多个进程，怎么样可以只在所有进程都成功的情况下才会 exit 0 。">
-<meta itemprop="datePublished" content="2021-11-17T23:11:00-08:00" />
-<meta itemprop="dateModified" content="2021-11-18T21:47:41-08:00" />
-<meta itemprop="wordCount" content="2527">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-11-17T23:11:00-08:00">
+    <meta property="article:modified_time" content="2021-11-18T21:47:41-08:00">
+    <meta property="article:tag" content="Bash">
+    <meta property="article:tag" content="Xargs">
 
-
-
-<meta itemprop="keywords" content="Bash,xargs," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="并行运行多任务"/>
-<meta name="twitter:description" content="最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比python java这些简明易懂的现代语言什么的有用多了。
-这个问题是我用loop-level parallelism来同时后台运行多个进程，怎么样可以只在所有进程都成功的情况下才会 exit 0 。"/>
+  <meta itemprop="name" content="并行运行多任务">
+  <meta itemprop="description" content="最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比python java这些简明易懂的现代语言什么的有用多了。
+这个问题是我用loop-level parallelism来同时后台运行多个进程，怎么样可以只在所有进程都成功的情况下才会 exit 0 。">
+  <meta itemprop="datePublished" content="2021-11-17T23:11:00-08:00">
+  <meta itemprop="dateModified" content="2021-11-18T21:47:41-08:00">
+  <meta itemprop="wordCount" content="2405">
+  <meta itemprop="keywords" content="Bash,Xargs">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="并行运行多任务">
+  <meta name="twitter:description" content="最近工作中遇到一个比较有意思的小问题，我在解决的过程中顺便又学到了一些bash的小知识。真希望能有一个给外行的bash的教材，这可比python java这些简明易懂的现代语言什么的有用多了。
+这个问题是我用loop-level parallelism来同时后台运行多个进程，怎么样可以只在所有进程都成功的情况下才会 exit 0 。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -147,8 +150,8 @@
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 2527 字 </span>
-          <span class="more-meta"> 预计阅读 6 分钟 </span>
+          <span class="more-meta"> 约 2405 字 </span>
+          <span class="more-meta"> 预计阅读 5 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -167,7 +170,7 @@
   </div>
 </div>
   <div class="post-outdated">
-    <div class="hint">
+    <div class="warn">
       <p>【注意】最后更新于 <span class="timeago" datetime="2021-11-18T21:47:41" title="November 18, 2021">November 18, 2021</span>，文中内容可能已过时，请谨慎使用。</p>
     </div>
   </div>
@@ -176,369 +179,160 @@
 <p>这个问题是我用<a href="https://en.wikipedia.org/wiki/Loop-level%5Fparallelism">loop-level parallelism</a>来同时后台运行多个进程，怎么样可以只在所有进程都成功的情况下才会 <code>exit 0</code> 。</p>
 <h2 id="使用wait命令来获取进程状态">使用wait命令来获取进程状态</h2>
 <p>一般来说，bash中后台运行可以通过在末尾添加 <code>&amp;</code> 来在后台运行子进程，但是缺点是一旦一个进程处于后台，那么shell也就不关心它的exit code。这样不管子进程运行多久，主进程都会开心地迅速 <code>exit 0</code> 。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span><span class="o">((</span><span class="nv">i</span><span class="o">=</span>0<span class="p">;</span>i&lt;3<span class="p">;</span>i++<span class="o">))</span>
-<span class="k">do</span>
-    ./run_something.sh -p <span class="nv">a</span><span class="o">=</span><span class="nv">$i</span> <span class="p">&amp;</span>
-<span class="k">done</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>如果想让主进程等一等子进程，那则需要增加 <code>wait</code> 命令。但是这样只会等最后一个子进程的状态，如果前几个子进程运行失败了，主进程还是会欢快地显示运行成功。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span><span class="o">((</span><span class="nv">i</span><span class="o">=</span>0<span class="p">;</span>i&lt;3<span class="p">;</span>i++<span class="o">))</span>
-<span class="k">do</span>
-    ./run_something.sh -p <span class="nv">a</span><span class="o">=</span><span class="nv">$i</span> <span class="p">&amp;</span>
-<span class="k">done</span>
-<span class="nb">wait</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>那有没有办法检查每个进程的状态呢？ <code>$!</code> 可以得到上一个命令的进程id，即pid，那我就可以将每个子进程的pid都存起来，再分别等每个子进程的状态，一旦失败就将失败结果传给主进程。但是这样就会遇到pid被回收的问题。每个子进程运行的时间都可能不一样，可能第二个早早地运行成功了，pid被回收给了不属于这个主进程的新进程，所以当查看其状态时，会因为拿不到状态（只能拿到子进程的状态）而报错。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span><span class="o">((</span><span class="nv">i</span><span class="o">=</span>0<span class="p">;</span>i&lt;3<span class="p">;</span>i++<span class="o">))</span>
-<span class="k">do</span>
-    ./run_something.sh -p <span class="nv">a</span><span class="o">=</span><span class="nv">$i</span> <span class="p">&amp;</span>
-    pids<span class="o">[</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="o">]=</span><span class="nv">$!</span>
-<span class="k">done</span>
-
-<span class="k">for</span> pid in <span class="si">${</span><span class="nv">pids</span><span class="p">[@]</span><span class="si">}</span>
-<span class="k">do</span>
-    <span class="nb">wait</span> <span class="nv">$pid</span> <span class="o">||</span> <span class="nb">exit</span>
-<span class="k">done</span> <span class="o">||</span> <span class="nb">exit</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>不过这个wait看起来非常promising，所以我还去研究了<a href="http://www.gnu.org/software/bash/manual/html%5Fnode/Job-Control-Builtins.html">文档</a>看看还有什么办法。果然， <code>wait -f</code> 看起来可以等所有的子进程运行完毕，似乎正是我所需要的。但是这个功能要在 bash 4.3 才引入，而我的工作环境默认使用 bash 4.2。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">for</span><span style="color:#f92672">((</span>i<span style="color:#f92672">=</span>0;i&lt;3;i++<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    ./run_something.sh -p a<span style="color:#f92672">=</span>$i &amp;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span></code></pre></div><p>如果想让主进程等一等子进程，那则需要增加 <code>wait</code> 命令。但是这样只会等最后一个子进程的状态，如果前几个子进程运行失败了，主进程还是会欢快地显示运行成功。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">for</span><span style="color:#f92672">((</span>i<span style="color:#f92672">=</span>0;i&lt;3;i++<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    ./run_something.sh -p a<span style="color:#f92672">=</span>$i &amp;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>wait
+</span></span></code></pre></div><p>那有没有办法检查每个进程的状态呢？ <code>$!</code> 可以得到上一个命令的进程id，即pid，那我就可以将每个子进程的pid都存起来，再分别等每个子进程的状态，一旦失败就将失败结果传给主进程。但是这样就会遇到pid被回收的问题。每个子进程运行的时间都可能不一样，可能第二个早早地运行成功了，pid被回收给了不属于这个主进程的新进程，所以当查看其状态时，会因为拿不到状态（只能拿到子进程的状态）而报错。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">for</span><span style="color:#f92672">((</span>i<span style="color:#f92672">=</span>0;i&lt;3;i++<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    ./run_something.sh -p a<span style="color:#f92672">=</span>$i &amp;
+</span></span><span style="display:flex;"><span>    pids<span style="color:#f92672">[</span><span style="color:#e6db74">${</span>i<span style="color:#e6db74">}</span><span style="color:#f92672">]=</span>$!
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> pid in <span style="color:#e6db74">${</span>pids[@]<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    wait $pid <span style="color:#f92672">||</span> exit
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span> <span style="color:#f92672">||</span> exit
+</span></span></code></pre></div><p>不过这个wait看起来非常promising，所以我还去研究了<a href="http://www.gnu.org/software/bash/manual/html%5Fnode/Job-Control-Builtins.html">文档</a>看看还有什么办法。果然， <code>wait -f</code> 看起来可以等所有的子进程运行完毕，似乎正是我所需要的。但是这个功能要在 bash 4.3 才引入，而我的工作环境默认使用 bash 4.2。</p>
 <p>另一个可能有用的是 <code>wait -n</code> ，只是它也只有在bash 4.3才被支持。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span><span class="o">((</span><span class="nv">i</span><span class="o">=</span>0<span class="p">;</span>i&lt;3<span class="p">;</span>i++<span class="o">))</span>
-<span class="k">do</span>
-    ./run_something.sh -p <span class="nv">a</span><span class="o">=</span><span class="nv">$i</span> <span class="p">&amp;</span>
-    <span class="nv">pidlist</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$pidlist</span><span class="s2"> </span><span class="nv">$!</span><span class="s2">&#34;</span>
-<span class="k">done</span>
-
-<span class="k">for</span> i in <span class="nv">$pidlist</span>
-<span class="k">do</span>
-    <span class="k">if</span> ! <span class="nb">wait</span> -n <span class="nv">$pidlist</span>
-       <span class="k">then</span>
-           <span class="nb">kill</span> <span class="nv">$pidlist</span> 2&gt;/dev/null
-           <span class="nb">exit</span> <span class="m">1</span>
-    <span class="k">fi</span>
-<span class="k">done</span> <span class="o">||</span> <span class="nb">exit</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="时时检查任务状态-check-heartbeat">时时检查任务状态（check heartbeat）</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">for</span><span style="color:#f92672">((</span>i<span style="color:#f92672">=</span>0;i&lt;3;i++<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    ./run_something.sh -p a<span style="color:#f92672">=</span>$i &amp;
+</span></span><span style="display:flex;"><span>    pidlist<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$pidlist<span style="color:#e6db74"> </span>$!<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in $pidlist
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ! wait -n $pidlist
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>           kill $pidlist 2&gt;/dev/null
+</span></span><span style="display:flex;"><span>           exit <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span> <span style="color:#f92672">||</span> exit
+</span></span></code></pre></div><h2 id="时时检查任务状态-check-heartbeat">时时检查任务状态（check heartbeat）</h2>
 <p>进程状态行不通，我的另一个想法是通过检查任务状态。以下是相应的代码：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">run_ids</span><span class="o">=()</span>
-
-<span class="k">for</span><span class="o">((</span><span class="nv">i</span><span class="o">=</span>0<span class="p">;</span>i&lt;3<span class="p">;</span>i++<span class="o">))</span>
-<span class="k">do</span>
-    run_ids &lt;- ./run_something.sh -p <span class="nv">a</span><span class="o">=</span><span class="nv">$i</span> <span class="p">&amp;</span>
-<span class="k">done</span>
-
-<span class="k">while</span><span class="o">((</span><span class="si">${#</span><span class="nv">run_ids</span><span class="p">[@]</span><span class="si">}</span><span class="o">==</span>0<span class="o">))</span>
-<span class="k">do</span>
-<span class="nb">echo</span> <span class="s2">&#34;Wait 1 more minutes.&#34;</span>
-sleep 1m
-<span class="k">done</span>
-
-<span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${#</span><span class="nv">run_ids</span><span class="p">[@]</span><span class="si">}</span><span class="s2"> jobs are executed:&#34;</span>
-<span class="k">for</span> id in <span class="s2">&#34;</span><span class="si">${</span><span class="nv">run_ids</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">;</span><span class="k">do</span> <span class="nb">echo</span> <span class="nv">$id</span><span class="p">;</span><span class="k">done</span>
-
-<span class="k">while</span><span class="o">((</span><span class="si">${#</span><span class="nv">run_ids</span><span class="p">[@]</span><span class="si">}</span>&gt;0<span class="o">))</span>
-<span class="k">do</span>
-    <span class="nb">echo</span> <span class="s2">&#34;Checking heartbeats of the remaining </span><span class="si">${#</span><span class="nv">run_ids</span><span class="p">[@]</span><span class="si">}</span><span class="s2"> jobs.&#34;</span>
-    <span class="k">for</span> i in <span class="si">${</span><span class="p">!run_ids[@]</span><span class="si">}</span>
-    <span class="k">do</span>
-        <span class="nv">job_run_status</span><span class="o">=</span><span class="k">$(</span>./check_run_id.sh -c <span class="si">${</span><span class="nv">run_ids</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="k">)</span>
-        <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">run_ids</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2"> is in state </span><span class="nv">$job_run_status</span><span class="s2">&#34;</span>
-        <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$job_run_status</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;SUCCESS&#34;</span> <span class="o">]</span>
-        <span class="k">then</span>
-            <span class="nb">unset</span> run_ids<span class="o">[</span><span class="nv">$i</span><span class="o">]</span>
-            <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${#</span><span class="nv">run_ids</span><span class="p">[@]</span><span class="si">}</span><span class="s2"> jobs remain.&#34;</span>
-        <span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$job_run_status</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;FAILURE&#34;</span> <span class="o">]</span>
-        <span class="k">then</span>
-            <span class="nv">failures</span><span class="o">=</span>$<span class="o">[</span><span class="nv">$failures</span>+1<span class="o">]</span>
-            <span class="nb">unset</span> run_ids<span class="o">[</span><span class="nv">$i</span><span class="o">]</span>
-            <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${#</span><span class="nv">run_ids</span><span class="p">[@]</span><span class="si">}</span><span class="s2"> jobs remain.&#34;</span>
-            <span class="nb">exit</span> <span class="m">1</span>
-        <span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$job_run_status</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;&#34;</span> <span class="o">]</span>
-        <span class="k">then</span>
-            <span class="nb">unset</span> run_ids<span class="o">[</span><span class="nv">$i</span><span class="o">]</span>
-        <span class="k">fi</span>
-    <span class="k">done</span> <span class="o">||</span> <span class="nb">exit</span>
-    sleep 1m
-<span class="k">done</span> <span class="o">||</span> <span class="nb">exit</span>
-
-<span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$failures</span><span class="s2"> jobs failed&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>不过比较tricky的一点是每次执行新的任务，都会生成一个相应的任务run_id。而我需要获取这个run_id才能用其检查状态。所以这一步 <code>run_ids &lt;- ./run_something.sh -p a=$i &amp;</code> 具体怎么实现，让我犯了难。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>run_ids<span style="color:#f92672">=()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span><span style="color:#f92672">((</span>i<span style="color:#f92672">=</span>0;i&lt;3;i++<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    run_ids &lt;- ./run_something.sh -p a<span style="color:#f92672">=</span>$i &amp;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span><span style="color:#f92672">((</span><span style="color:#e6db74">${#</span>run_ids[@]<span style="color:#e6db74">}</span><span style="color:#f92672">==</span>0<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Wait 1 more minutes.&#34;</span>
+</span></span><span style="display:flex;"><span>sleep 1m
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${#</span>run_ids[@]<span style="color:#e6db74">}</span><span style="color:#e6db74"> jobs are executed:&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> id in <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>run_ids[@]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>;<span style="color:#66d9ef">do</span> echo $id;<span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span><span style="color:#f92672">((</span><span style="color:#e6db74">${#</span>run_ids[@]<span style="color:#e6db74">}</span>&gt;0<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;Checking heartbeats of the remaining </span><span style="color:#e6db74">${#</span>run_ids[@]<span style="color:#e6db74">}</span><span style="color:#e6db74"> jobs.&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>!run_ids[@]<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>        job_run_status<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>./check_run_id.sh -c <span style="color:#e6db74">${</span>run_ids[$i]<span style="color:#e6db74">}</span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>        echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>run_ids[$i]<span style="color:#e6db74">}</span><span style="color:#e6db74"> is in state </span>$job_run_status<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$job_run_status<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;SUCCESS&#34;</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>            unset run_ids<span style="color:#f92672">[</span>$i<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>            echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${#</span>run_ids[@]<span style="color:#e6db74">}</span><span style="color:#e6db74"> jobs remain.&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$job_run_status<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;FAILURE&#34;</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>            failures<span style="color:#f92672">=</span>$<span style="color:#f92672">[</span>$failures+1<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>            unset run_ids<span style="color:#f92672">[</span>$i<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>            echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${#</span>run_ids[@]<span style="color:#e6db74">}</span><span style="color:#e6db74"> jobs remain.&#34;</span>
+</span></span><span style="display:flex;"><span>            exit <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$job_run_status<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>            unset run_ids<span style="color:#f92672">[</span>$i<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">done</span> <span style="color:#f92672">||</span> exit
+</span></span><span style="display:flex;"><span>    sleep 1m
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span> <span style="color:#f92672">||</span> exit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;</span>$failures<span style="color:#e6db74"> jobs failed&#34;</span>
+</span></span></code></pre></div><p>不过比较tricky的一点是每次执行新的任务，都会生成一个相应的任务run_id。而我需要获取这个run_id才能用其检查状态。所以这一步 <code>run_ids &lt;- ./run_something.sh -p a=$i &amp;</code> 具体怎么实现，让我犯了难。</p>
 <p>我试了几种方式将任务产生的run_id存起来，却都不成功。究其原因，则是主进程与子进程之间只能单向传递参数，所以虽然任务会产生run_id，但由于是在子进程中产生的，没有办法向主进程传递。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span><span class="o">((</span><span class="nv">i</span><span class="o">=</span>0<span class="p">;</span>i&lt;3<span class="p">;</span>i++<span class="o">))</span><span class="p">;</span> <span class="k">do</span> <span class="nv">run_ids</span><span class="o">+=(</span><span class="k">$(</span>./run_something.sh -p <span class="nv">a</span><span class="o">=</span><span class="nv">$i</span><span class="k">)</span><span class="o">)</span> <span class="p">&amp;;</span> <span class="k">done</span>
-
-<span class="k">for</span><span class="o">((</span><span class="nv">i</span><span class="o">=</span>0<span class="p">;</span>i&lt;3<span class="p">;</span>i++<span class="o">))</span><span class="p">;</span> <span class="k">do</span> run_ids<span class="o">[</span><span class="si">${#</span><span class="nv">run_ids</span><span class="p">[@]</span><span class="si">}</span>+1<span class="o">]=</span><span class="k">$(</span>./run_something.sh -p <span class="nv">a</span><span class="o">=</span><span class="nv">$i</span><span class="k">)</span> <span class="p">&amp;;</span> <span class="k">done</span>
-
-<span class="k">while</span> <span class="nb">read</span> -r line<span class="p">;</span> <span class="k">do</span> <span class="nv">run_ids</span><span class="o">+=(</span><span class="s2">&#34;</span><span class="nv">$line</span><span class="s2">&#34;</span><span class="o">)</span><span class="p">;</span> <span class="k">done</span> &lt; &lt;<span class="o">(</span><span class="k">for</span><span class="o">((</span><span class="nv">i</span><span class="o">=</span>0<span class="p">;</span>i&lt;3<span class="p">;</span>i++<span class="o">))</span><span class="p">;</span> <span class="k">do</span> ./run_something.sh -p <span class="nv">a</span><span class="o">=</span><span class="nv">$i</span> <span class="p">&amp;</span> <span class="k">done</span><span class="o">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>这个的解决方法则是将参数存在一个文件里，有些复杂了。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">for</span><span style="color:#f92672">((</span>i<span style="color:#f92672">=</span>0;i&lt;3;i++<span style="color:#f92672">))</span>; <span style="color:#66d9ef">do</span> run_ids<span style="color:#f92672">+=(</span><span style="color:#66d9ef">$(</span>./run_something.sh -p a<span style="color:#f92672">=</span>$i<span style="color:#66d9ef">)</span><span style="color:#f92672">)</span> &amp;; <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span><span style="color:#f92672">((</span>i<span style="color:#f92672">=</span>0;i&lt;3;i++<span style="color:#f92672">))</span>; <span style="color:#66d9ef">do</span> run_ids<span style="color:#f92672">[</span><span style="color:#e6db74">${#</span>run_ids[@]<span style="color:#e6db74">}</span>+1<span style="color:#f92672">]=</span><span style="color:#66d9ef">$(</span>./run_something.sh -p a<span style="color:#f92672">=</span>$i<span style="color:#66d9ef">)</span> &amp;; <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> read -r line; <span style="color:#66d9ef">do</span> run_ids<span style="color:#f92672">+=(</span><span style="color:#e6db74">&#34;</span>$line<span style="color:#e6db74">&#34;</span><span style="color:#f92672">)</span>; <span style="color:#66d9ef">done</span> &lt; &lt;<span style="color:#f92672">(</span><span style="color:#66d9ef">for</span><span style="color:#f92672">((</span>i<span style="color:#f92672">=</span>0;i&lt;3;i++<span style="color:#f92672">))</span>; <span style="color:#66d9ef">do</span> ./run_something.sh -p a<span style="color:#f92672">=</span>$i &amp; <span style="color:#66d9ef">done</span><span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>这个的解决方法则是将参数存在一个文件里，有些复杂了。</p>
 <h2 id="xargs">xargs</h2>
 <p>所幸经过一番查找，我在GNU的查找工具组里找到了一个解决方案：xargs。其实我一开始并没明白xargs是什么，只是因为它有多进程参数且可以通过子进程成功与否返回不同的exit code而觉得它会有用，便写了类似下面有问题的代码，并花了很多时间研究如何让xargs接受多个参数。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span><span class="o">((</span><span class="nv">i</span><span class="o">=</span>0<span class="p">;</span>i&lt;3<span class="p">;</span>i++<span class="o">))</span><span class="p">;</span>
-<span class="k">do</span>
-    <span class="o">((</span><span class="nv">j</span><span class="o">=</span>i+1<span class="o">))</span>
-    <span class="nb">echo</span> <span class="nv">$i</span> <span class="nv">$j</span>
-<span class="k">done</span> <span class="p">|</span> xargs -I<span class="o">{}</span> -n2 -P <span class="m">0</span> bash -c <span class="s2">&#34;./run_something.sh -p a={} -p b={}&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>但实际上，当我研读<a href="https://www.gnu.org/software/findutils/manual/html%5Fnode/find%5Fhtml/xargs-options.html">文档</a>，搞明白xargs真正在干什么的时候，就证明了我的方向错了:我们根本不需要让xargs接受多个参数就行了，一个参数就可以，因为一个参数可以是多条命令。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">for</span><span style="color:#f92672">((</span>i<span style="color:#f92672">=</span>0;i&lt;3;i++<span style="color:#f92672">))</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">((</span>j<span style="color:#f92672">=</span>i+1<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>    echo $i $j
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span> | xargs -I<span style="color:#f92672">{}</span> -n2 -P <span style="color:#ae81ff">0</span> bash -c <span style="color:#e6db74">&#34;./run_something.sh -p a={} -p b={}&#34;</span>
+</span></span></code></pre></div><p>但实际上，当我研读<a href="https://www.gnu.org/software/findutils/manual/html%5Fnode/find%5Fhtml/xargs-options.html">文档</a>，搞明白xargs真正在干什么的时候，就证明了我的方向错了:我们根本不需要让xargs接受多个参数就行了，一个参数就可以，因为一个参数可以是多条命令。</p>
 <p>那么xargs是什么呢，xargs可以将标准输入作为参数传递给命令。一条xargs命令，当该是这样的格式：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">命令1 <span class="p">|</span> xargs <span class="o">[</span>-xargs参数<span class="o">]</span> 命令2
-</code></pre></td></tr></table>
-</div>
-</div><p><code>|</code> 是管道，命令1的标准输出可以通过管道变成命令2的标准输入。但是，有一些命令比如echo并不接受管道传来的标准输入作为其参数，这个时候就需要xargs作为一个中间商，将标准输入转化成参数。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>命令1 | xargs <span style="color:#f92672">[</span>-xargs参数<span style="color:#f92672">]</span> 命令2
+</span></span></code></pre></div><p><code>|</code> 是管道，命令1的标准输出可以通过管道变成命令2的标准输入。但是，有一些命令比如echo并不接受管道传来的标准输入作为其参数，这个时候就需要xargs作为一个中间商，将标准输入转化成参数。</p>
 <p>对于xargs，它会默认命令2是echo，如果命令1也是echo的话，则会默认换行符和空格是分隔符。所以，xargs最常用的方式就是快速进行如下查找，新建，删除等文件操作：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">find . -name <span class="s2">&#34;*.txt&#34;</span> <span class="p">|</span> xargs grep <span class="s2">&#34;abcd&#34;</span> <span class="c1"># 在所有txt文件中查找含有abcd的文件</span>
-<span class="nb">echo</span> <span class="s2">&#34;a b c d&#34;</span> <span class="p">|</span> xargs -t touch <span class="c1"># 直接新建 a、b、c、d四个文件</span>
-<span class="nb">echo</span> <span class="s2">&#34;a b c d&#34;</span> <span class="p">|</span> xargs -p rm <span class="c1"># 确认后删除 a、b、c、d四个文件</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>但是，xargs真正性感的是它所支持的命令不仅限于简单的文件操作，它还支持多进程处理。所以，我可已将整个命令构建出来后，传递给bash来运行。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span><span class="o">((</span><span class="nv">i</span><span class="o">=</span>0<span class="p">;</span>i&lt;3<span class="p">;</span>i++<span class="o">))</span><span class="p">;</span>
-<span class="k">do</span>
-    <span class="nb">echo</span> <span class="s2">&#34;./run_something.sh -p a=</span><span class="nv">$i</span><span class="s2"> -p b=</span>$<span class="s2">[</span><span class="nv">$i</span><span class="s2">+1]&#34;</span>
-<span class="k">done</span> <span class="p">|</span> xargs -I<span class="o">{}</span> -P <span class="m">0</span> bash -c <span class="s2">&#34;{}&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>这里xargs的参数 <code>~-I</code> 是用来声明我想替换命令2中的&quot;{}&quot;，而 <code>-P</code> 则是 <code>--max-procs</code> ，用来声明最大进程数。如果所有进程都成功执行，则会返回0，否则会返回123。另外，如果我不想等所有进程都执行完便报错，则可以将子进程的报错值改为255。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span><span class="o">((</span><span class="nv">i</span><span class="o">=</span>0<span class="p">;</span>i&lt;3<span class="p">;</span>i++<span class="o">))</span><span class="p">;</span>
-<span class="k">do</span>
-    <span class="nb">echo</span> <span class="s2">&#34;./run_something.sh -p a=</span><span class="nv">$i</span><span class="s2"> -p b=</span>$<span class="s2">[</span><span class="nv">$i</span><span class="s2">+1] || exit 255&#34;</span>
-<span class="k">done</span> <span class="p">|</span> xargs -I<span class="o">{}</span> -P <span class="m">0</span> bash -c <span class="s2">&#34;{}&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>我的问题便迎刃而解了。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find . -name <span style="color:#e6db74">&#34;*.txt&#34;</span> | xargs grep <span style="color:#e6db74">&#34;abcd&#34;</span> <span style="color:#75715e"># 在所有txt文件中查找含有abcd的文件</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;a b c d&#34;</span> | xargs -t touch <span style="color:#75715e"># 直接新建 a、b、c、d四个文件</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;a b c d&#34;</span> | xargs -p rm <span style="color:#75715e"># 确认后删除 a、b、c、d四个文件</span>
+</span></span></code></pre></div><p>但是，xargs真正性感的是它所支持的命令不仅限于简单的文件操作，它还支持多进程处理。所以，我可已将整个命令构建出来后，传递给bash来运行。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">for</span><span style="color:#f92672">((</span>i<span style="color:#f92672">=</span>0;i&lt;3;i++<span style="color:#f92672">))</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;./run_something.sh -p a=</span>$i<span style="color:#e6db74"> -p b=</span>$<span style="color:#e6db74">[</span>$i<span style="color:#e6db74">+1]&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span> | xargs -I<span style="color:#f92672">{}</span> -P <span style="color:#ae81ff">0</span> bash -c <span style="color:#e6db74">&#34;{}&#34;</span>
+</span></span></code></pre></div><p>这里xargs的参数 <code>~-I</code> 是用来声明我想替换命令2中的&quot;{}&quot;，而 <code>-P</code> 则是 <code>--max-procs</code> ，用来声明最大进程数。如果所有进程都成功执行，则会返回0，否则会返回123。另外，如果我不想等所有进程都执行完便报错，则可以将子进程的报错值改为255。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">for</span><span style="color:#f92672">((</span>i<span style="color:#f92672">=</span>0;i&lt;3;i++<span style="color:#f92672">))</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;./run_something.sh -p a=</span>$i<span style="color:#e6db74"> -p b=</span>$<span style="color:#e6db74">[</span>$i<span style="color:#e6db74">+1] || exit 255&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span> | xargs -I<span style="color:#f92672">{}</span> -P <span style="color:#ae81ff">0</span> bash -c <span style="color:#e6db74">&#34;{}&#34;</span>
+</span></span></code></pre></div><p>我的问题便迎刃而解了。</p>
 <p>此外，我还查到可以用gnu parallel去更好地管理多进程，但是由于并非所有系统都自带gnu parallel，我便没有在这上面花太多时间。</p>
 <h2 id="彩蛋">彩蛋</h2>
 <p>因为我对bash很不熟练，在调试第二种方案的时候，有段时间不管怎么回事都显示任务成功完成。后来加上调试模式（见下）仔细研究一番，才发现bash中一对小括号，两对小括号，一对中括号，两对中括号和一对大括号都不能乱用。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">set</span> -e<span class="p">;</span>
-<span class="nb">set</span> -o pipefail<span class="p">;</span>
-<span class="nb">set</span> -x<span class="p">;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>一对小括号一般用于声明命令或是数组，两对小括号一般则用于变量计算和比较。一对中括号也会用于比较，但是一般是针对字符串的，也只能比较是或者不是。两对中括号则是用于通配符的匹配和替换。而大括号，则一般用于扩展与几种特殊模式的匹配替换。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># ()</span>
-<span class="k">$(</span>cmd<span class="k">)</span> <span class="c1"># cmd</span>
-<span class="nv">array</span><span class="o">=(</span>a b c d<span class="o">)</span>
-
-<span class="c1"># (())</span>
-<span class="o">((</span>exp<span class="o">))</span>
-<span class="o">((</span>a++<span class="o">))</span>
-<span class="k">for</span> i in <span class="k">$(</span>seq <span class="m">0</span> 4<span class="k">)</span><span class="p">;</span><span class="k">do</span> <span class="nb">echo</span> <span class="nv">$i</span><span class="p">;</span><span class="k">done</span>
-<span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">0</span> 4<span class="sb">`</span><span class="p">;</span><span class="k">do</span> <span class="nb">echo</span> <span class="nv">$i</span><span class="p">;</span><span class="k">done</span>
-<span class="k">for</span><span class="o">((</span><span class="nv">i</span><span class="o">=</span>0<span class="p">;</span>i&lt;5<span class="p">;</span>i++<span class="o">))</span><span class="p">;</span><span class="k">do</span> <span class="nb">echo</span> <span class="nv">$i</span><span class="p">;</span><span class="k">done</span>
-<span class="k">for</span> i in <span class="o">{</span>0..4<span class="o">})</span><span class="p">;</span><span class="k">do</span> <span class="nb">echo</span> <span class="nv">$i</span><span class="p">;</span><span class="k">done</span>
-<span class="k">if</span> <span class="o">((</span><span class="nv">$i</span>&lt;5<span class="o">))</span>
-<span class="k">if</span> <span class="o">[</span> <span class="nv">$i</span> -lt 5<span class="o">]</span>
-
-<span class="c1"># []</span>
-<span class="o">[</span> <span class="nv">$string</span> <span class="o">==</span> <span class="nv">$a</span> <span class="o">]</span>
-<span class="o">[</span> <span class="nv">$string</span> !<span class="o">=</span> <span class="nv">$b</span> <span class="o">]</span>
-
-<span class="c1"># [[]]</span>
-<span class="o">[[</span> <span class="nv">hello</span> <span class="o">==</span> hell? <span class="o">]]</span>
-<span class="k">if</span> <span class="o">[[</span> <span class="nv">$a</span> !<span class="o">=</span> <span class="m">1</span> <span class="o">&amp;&amp;</span> <span class="nv">$a</span> !<span class="o">=</span> <span class="m">2</span> <span class="o">]]</span>
-
-<span class="c1"># {}</span>
-<span class="si">${</span><span class="nv">var</span><span class="p">%pattern</span><span class="si">}</span> <span class="c1"># 去掉右边，最小匹配</span>
-<span class="si">${</span><span class="nv">var</span><span class="p">%%pattern</span><span class="si">}</span> <span class="c1"># 去掉右边，最大匹配</span>
-<span class="si">${</span><span class="nv">var</span><span class="p">#pattern</span><span class="si">}</span>  <span class="c1"># 去掉左边，最小匹配</span>
-<span class="si">${</span><span class="nv">var</span><span class="p">##pattern</span><span class="si">}</span>  <span class="c1"># 去掉右边，最大匹配</span>
-<span class="si">${</span><span class="nv">var</span><span class="p">:(-2)</span><span class="si">}</span> <span class="c1"># 右数第二个到最右</span>
-<span class="si">${</span><span class="nv">var</span><span class="p">:</span><span class="nv">3</span><span class="p">:</span><span class="nv">2</span><span class="si">}</span> <span class="c1"># 左数第三个起长度为2</span>
-<span class="si">${</span><span class="nv">var</span><span class="p">/pattern/pattern</span><span class="si">}</span> <span class="c1"># 替换首个</span>
-<span class="si">${</span><span class="nv">var</span><span class="p">//pattern/pattern</span><span class="si">}</span> <span class="c1"># 替换所有</span>
-</code></pre></td></tr></table>
-</div>
-</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>set -e;
+</span></span><span style="display:flex;"><span>set -o pipefail;
+</span></span><span style="display:flex;"><span>set -x;
+</span></span></code></pre></div><p>一对小括号一般用于声明命令或是数组，两对小括号一般则用于变量计算和比较。一对中括号也会用于比较，但是一般是针对字符串的，也只能比较是或者不是。两对中括号则是用于通配符的匹配和替换。而大括号，则一般用于扩展与几种特殊模式的匹配替换。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># ()</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">$(</span>cmd<span style="color:#66d9ef">)</span> <span style="color:#75715e"># cmd</span>
+</span></span><span style="display:flex;"><span>array<span style="color:#f92672">=(</span>a b c d<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># (())</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">((</span>exp<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">((</span>a++<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in <span style="color:#66d9ef">$(</span>seq <span style="color:#ae81ff">0</span> 4<span style="color:#66d9ef">)</span>;<span style="color:#66d9ef">do</span> echo $i;<span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">`</span>seq <span style="color:#ae81ff">0</span> 4<span style="color:#e6db74">`</span>;<span style="color:#66d9ef">do</span> echo $i;<span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span><span style="color:#f92672">((</span>i<span style="color:#f92672">=</span>0;i&lt;5;i++<span style="color:#f92672">))</span>;<span style="color:#66d9ef">do</span> echo $i;<span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in <span style="color:#f92672">{</span>0..4<span style="color:#f92672">})</span>;<span style="color:#66d9ef">do</span> echo $i;<span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">((</span>$i&lt;5<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $i -lt 5<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># []</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> $string <span style="color:#f92672">==</span> $a <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> $string !<span style="color:#f92672">=</span> $b <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [[]]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[[</span> hello <span style="color:#f92672">==</span> hell? <span style="color:#f92672">]]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> $a !<span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&amp;&amp;</span> $a !<span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">]]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># {}</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">${</span>var%pattern<span style="color:#e6db74">}</span> <span style="color:#75715e"># 去掉右边，最小匹配</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">${</span>var%%pattern<span style="color:#e6db74">}</span> <span style="color:#75715e"># 去掉右边，最大匹配</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">${</span>var#pattern<span style="color:#e6db74">}</span>  <span style="color:#75715e"># 去掉左边，最小匹配</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">${</span>var##pattern<span style="color:#e6db74">}</span>  <span style="color:#75715e"># 去掉右边，最大匹配</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">${</span>var:(-2)<span style="color:#e6db74">}</span> <span style="color:#75715e"># 右数第二个到最右</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">${</span>var:3:2<span style="color:#e6db74">}</span> <span style="color:#75715e"># 左数第三个起长度为2</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">${</span>var/pattern/pattern<span style="color:#e6db74">}</span> <span style="color:#75715e"># 替换首个</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">${</span>var//pattern/pattern<span style="color:#e6db74">}</span> <span style="color:#75715e"># 替换所有</span>
+</span></span></code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -625,7 +419,7 @@ sleep 1m
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   width="28" height="28"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
       </a>
-  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -647,7 +441,7 @@ sleep 1m
   <span class="copyright-year">
     &copy; 
     2005 - 
-    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
   </span>
 </div>
 
@@ -663,7 +457,7 @@ sleep 1m
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script>
     var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -671,19 +465,8 @@ sleep 1m
 
 
 
-<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="../../../js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-86469737-1', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

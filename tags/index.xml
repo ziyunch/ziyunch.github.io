@@ -4,531 +4,416 @@
     <title>Tags on Blind with Science</title>
     <link>http://blindwith.science/tags/</link>
     <description>Recent content in Tags on Blind with Science</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Tue, 02 Jan 2024 20:44:00 -0800</lastBuildDate><atom:link href="http://blindwith.science/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>书评</title>
-      <link>http://blindwith.science/tags/%E4%B9%A6%E8%AF%84/</link>
-      <pubDate>Tue, 02 Jan 2024 20:44:00 -0800</pubDate>
-      
-      <guid>http://blindwith.science/tags/%E4%B9%A6%E8%AF%84/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>书话</title>
-      <link>http://blindwith.science/tags/%E4%B9%A6%E8%AF%9D/</link>
-      <pubDate>Tue, 02 Jan 2024 20:44:00 -0800</pubDate>
-      
-      <guid>http://blindwith.science/tags/%E4%B9%A6%E8%AF%9D/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Tue, 02 Jan 2024 22:17:33 -0800</lastBuildDate>
+    <atom:link href="http://blindwith.science/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>浮世绘</title>
       <link>http://blindwith.science/tags/%E6%B5%AE%E4%B8%96%E7%BB%98/</link>
       <pubDate>Tue, 02 Jan 2024 20:44:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/%E6%B5%AE%E4%B8%96%E7%BB%98/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>书话</title>
+      <link>http://blindwith.science/tags/%E4%B9%A6%E8%AF%9D/</link>
+      <pubDate>Tue, 02 Jan 2024 20:44:00 -0800</pubDate>
+      <guid>http://blindwith.science/tags/%E4%B9%A6%E8%AF%9D/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>书评</title>
+      <link>http://blindwith.science/tags/%E4%B9%A6%E8%AF%84/</link>
+      <pubDate>Tue, 02 Jan 2024 20:44:00 -0800</pubDate>
+      <guid>http://blindwith.science/tags/%E4%B9%A6%E8%AF%84/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Everdell</title>
       <link>http://blindwith.science/tags/everdell/</link>
       <pubDate>Mon, 06 Mar 2023 20:11:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/everdell/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>仙境幽谷</title>
       <link>http://blindwith.science/tags/%E4%BB%99%E5%A2%83%E5%B9%BD%E8%B0%B7/</link>
       <pubDate>Mon, 06 Mar 2023 20:11:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/%E4%BB%99%E5%A2%83%E5%B9%BD%E8%B0%B7/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>桌游</title>
       <link>http://blindwith.science/tags/%E6%A1%8C%E6%B8%B8/</link>
       <pubDate>Mon, 06 Mar 2023 20:11:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/%E6%A1%8C%E6%B8%B8/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>AI</title>
       <link>http://blindwith.science/tags/ai/</link>
       <pubDate>Sun, 26 Feb 2023 22:35:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/ai/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Kindle</title>
       <link>http://blindwith.science/tags/kindle/</link>
       <pubDate>Fri, 24 Feb 2023 22:19:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/kindle/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>墨水屏</title>
       <link>http://blindwith.science/tags/%E5%A2%A8%E6%B0%B4%E5%B1%8F/</link>
       <pubDate>Fri, 24 Feb 2023 22:19:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/%E5%A2%A8%E6%B0%B4%E5%B1%8F/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>签证</title>
       <link>http://blindwith.science/tags/%E7%AD%BE%E8%AF%81/</link>
       <pubDate>Wed, 07 Sep 2022 16:07:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/%E7%AD%BE%E8%AF%81/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Emacs</title>
       <link>http://blindwith.science/tags/emacs/</link>
       <pubDate>Mon, 30 May 2022 12:34:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/emacs/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Org-mode</title>
+      <title>Org-Mode</title>
       <link>http://blindwith.science/tags/org-mode/</link>
       <pubDate>Mon, 30 May 2022 12:34:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/org-mode/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>豆瓣</title>
       <link>http://blindwith.science/tags/%E8%B1%86%E7%93%A3/</link>
       <pubDate>Mon, 30 May 2022 12:34:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/%E8%B1%86%E7%93%A3/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>NIW</title>
       <link>http://blindwith.science/tags/niw/</link>
       <pubDate>Fri, 27 May 2022 16:46:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/niw/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Mastodon</title>
       <link>http://blindwith.science/tags/mastodon/</link>
       <pubDate>Sat, 21 May 2022 22:44:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/mastodon/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>长毛象</title>
       <link>http://blindwith.science/tags/%E9%95%BF%E6%AF%9B%E8%B1%A1/</link>
       <pubDate>Sat, 21 May 2022 22:44:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/%E9%95%BF%E6%AF%9B%E8%B1%A1/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>二次元</title>
-      <link>http://blindwith.science/tags/%E4%BA%8C%E6%AC%A1%E5%85%83/</link>
-      <pubDate>Sun, 20 Feb 2022 18:17:00 -0800</pubDate>
-      
-      <guid>http://blindwith.science/tags/%E4%BA%8C%E6%AC%A1%E5%85%83/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>动漫</title>
       <link>http://blindwith.science/tags/%E5%8A%A8%E6%BC%AB/</link>
       <pubDate>Sun, 20 Feb 2022 18:17:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/%E5%8A%A8%E6%BC%AB/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>二次元</title>
+      <link>http://blindwith.science/tags/%E4%BA%8C%E6%AC%A1%E5%85%83/</link>
+      <pubDate>Sun, 20 Feb 2022 18:17:00 -0800</pubDate>
+      <guid>http://blindwith.science/tags/%E4%BA%8C%E6%AC%A1%E5%85%83/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Bash</title>
       <link>http://blindwith.science/tags/bash/</link>
       <pubDate>Wed, 17 Nov 2021 23:11:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/bash/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>xargs</title>
+      <title>Xargs</title>
       <link>http://blindwith.science/tags/xargs/</link>
       <pubDate>Wed, 17 Nov 2021 23:11:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/xargs/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>办公设备</title>
       <link>http://blindwith.science/tags/%E5%8A%9E%E5%85%AC%E8%AE%BE%E5%A4%87/</link>
       <pubDate>Fri, 01 Oct 2021 23:14:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/%E5%8A%9E%E5%85%AC%E8%AE%BE%E5%A4%87/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>桌面</title>
       <link>http://blindwith.science/tags/%E6%A1%8C%E9%9D%A2/</link>
       <pubDate>Fri, 01 Oct 2021 23:14:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/%E6%A1%8C%E9%9D%A2/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>端午</title>
       <link>http://blindwith.science/tags/%E7%AB%AF%E5%8D%88/</link>
       <pubDate>Sun, 13 Jun 2021 14:25:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/%E7%AB%AF%E5%8D%88/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>粽子</title>
       <link>http://blindwith.science/tags/%E7%B2%BD%E5%AD%90/</link>
       <pubDate>Sun, 13 Jun 2021 14:25:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/%E7%B2%BD%E5%AD%90/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Beancount</title>
       <link>http://blindwith.science/tags/beancount/</link>
       <pubDate>Mon, 18 Jan 2021 18:33:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/beancount/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Rime</title>
       <link>http://blindwith.science/tags/rime/</link>
       <pubDate>Sun, 13 Dec 2020 17:49:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/rime/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Bugatti</title>
       <link>http://blindwith.science/tags/bugatti/</link>
       <pubDate>Tue, 08 Dec 2020 19:45:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/bugatti/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Chiron</title>
       <link>http://blindwith.science/tags/chiron/</link>
       <pubDate>Tue, 08 Dec 2020 19:45:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/chiron/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Lego</title>
       <link>http://blindwith.science/tags/lego/</link>
       <pubDate>Tue, 08 Dec 2020 19:45:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/lego/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>波特兰</title>
       <link>http://blindwith.science/tags/%E6%B3%A2%E7%89%B9%E5%85%B0/</link>
       <pubDate>Mon, 16 Nov 2020 00:34:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/%E6%B3%A2%E7%89%B9%E5%85%B0/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>山塘街</title>
-      <link>http://blindwith.science/tags/%E5%B1%B1%E5%A1%98%E8%A1%97/</link>
-      <pubDate>Sat, 08 Aug 2020 20:10:00 -0700</pubDate>
-      
-      <guid>http://blindwith.science/tags/%E5%B1%B1%E5%A1%98%E8%A1%97/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>江南百景图</title>
       <link>http://blindwith.science/tags/%E6%B1%9F%E5%8D%97%E7%99%BE%E6%99%AF%E5%9B%BE/</link>
       <pubDate>Sat, 08 Aug 2020 20:10:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/%E6%B1%9F%E5%8D%97%E7%99%BE%E6%99%AF%E5%9B%BE/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>山塘街</title>
+      <link>http://blindwith.science/tags/%E5%B1%B1%E5%A1%98%E8%A1%97/</link>
+      <pubDate>Sat, 08 Aug 2020 20:10:00 -0700</pubDate>
+      <guid>http://blindwith.science/tags/%E5%B1%B1%E5%A1%98%E8%A1%97/</guid>
+      <description></description>
+    </item>
     <item>
       <title>苏州</title>
       <link>http://blindwith.science/tags/%E8%8B%8F%E5%B7%9E/</link>
       <pubDate>Sat, 08 Aug 2020 20:10:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/%E8%8B%8F%E5%B7%9E/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Pandoc</title>
       <link>http://blindwith.science/tags/pandoc/</link>
       <pubDate>Wed, 10 Jun 2020 22:41:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/pandoc/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>三番食记</title>
-      <link>http://blindwith.science/tags/%E4%B8%89%E7%95%AA%E9%A3%9F%E8%AE%B0/</link>
-      <pubDate>Sat, 21 Dec 2019 23:05:00 -0800</pubDate>
-      
-      <guid>http://blindwith.science/tags/%E4%B8%89%E7%95%AA%E9%A3%9F%E8%AE%B0/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>江浙菜</title>
       <link>http://blindwith.science/tags/%E6%B1%9F%E6%B5%99%E8%8F%9C/</link>
       <pubDate>Sat, 21 Dec 2019 23:05:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/%E6%B1%9F%E6%B5%99%E8%8F%9C/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>三番食记</title>
+      <link>http://blindwith.science/tags/%E4%B8%89%E7%95%AA%E9%A3%9F%E8%AE%B0/</link>
+      <pubDate>Sat, 21 Dec 2019 23:05:00 -0800</pubDate>
+      <guid>http://blindwith.science/tags/%E4%B8%89%E7%95%AA%E9%A3%9F%E8%AE%B0/</guid>
+      <description></description>
+    </item>
     <item>
       <title>PostgreSQL</title>
       <link>http://blindwith.science/tags/postgresql/</link>
       <pubDate>Tue, 05 Nov 2019 11:23:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/postgresql/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Django</title>
       <link>http://blindwith.science/tags/django/</link>
       <pubDate>Fri, 11 Oct 2019 13:58:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/django/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Python</title>
       <link>http://blindwith.science/tags/python/</link>
       <pubDate>Fri, 11 Oct 2019 13:58:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/python/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>lisp</title>
+      <title>Lisp</title>
       <link>http://blindwith.science/tags/lisp/</link>
       <pubDate>Wed, 04 Sep 2019 20:06:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/lisp/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>liberime</title>
+      <title>Liberime</title>
       <link>http://blindwith.science/tags/liberime/</link>
       <pubDate>Sat, 31 Aug 2019 20:40:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/liberime/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>pyim</title>
+      <title>Pyim</title>
       <link>http://blindwith.science/tags/pyim/</link>
       <pubDate>Sat, 31 Aug 2019 20:40:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/pyim/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>鼠须管</title>
       <link>http://blindwith.science/tags/%E9%BC%A0%E9%A1%BB%E7%AE%A1/</link>
       <pubDate>Sat, 31 Aug 2019 20:40:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/%E9%BC%A0%E9%A1%BB%E7%AE%A1/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Data-Engineering</title>
       <link>http://blindwith.science/tags/data-engineering/</link>
       <pubDate>Fri, 30 Aug 2019 11:14:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/data-engineering/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Interview</title>
       <link>http://blindwith.science/tags/interview/</link>
       <pubDate>Fri, 30 Aug 2019 11:14:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/interview/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Hexo</title>
       <link>http://blindwith.science/tags/hexo/</link>
       <pubDate>Mon, 26 Aug 2019 23:49:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/hexo/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Hugo</title>
       <link>http://blindwith.science/tags/hugo/</link>
       <pubDate>Mon, 26 Aug 2019 23:49:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/hugo/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>音乐剧</title>
       <link>http://blindwith.science/tags/%E9%9F%B3%E4%B9%90%E5%89%A7/</link>
       <pubDate>Sun, 25 Aug 2019 17:04:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/%E9%9F%B3%E4%B9%90%E5%89%A7/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>高中</title>
       <link>http://blindwith.science/tags/%E9%AB%98%E4%B8%AD/</link>
       <pubDate>Sat, 24 Dec 2005 21:22:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/%E9%AB%98%E4%B8%AD/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>杂志</title>
       <link>http://blindwith.science/tags/%E6%9D%82%E5%BF%97/</link>
       <pubDate>Wed, 09 Nov 2005 18:16:00 -0800</pubDate>
-      
       <guid>http://blindwith.science/tags/%E6%9D%82%E5%BF%97/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>初中</title>
       <link>http://blindwith.science/tags/%E5%88%9D%E4%B8%AD/</link>
       <pubDate>Sun, 18 Sep 2005 16:55:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/%E5%88%9D%E4%B8%AD/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>诗词</title>
       <link>http://blindwith.science/tags/%E8%AF%97%E8%AF%8D/</link>
       <pubDate>Sun, 18 Sep 2005 16:51:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/%E8%AF%97%E8%AF%8D/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>现代诗</title>
       <link>http://blindwith.science/tags/%E7%8E%B0%E4%BB%A3%E8%AF%97/</link>
       <pubDate>Thu, 18 Aug 2005 12:56:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/%E7%8E%B0%E4%BB%A3%E8%AF%97/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>相机</title>
       <link>http://blindwith.science/tags/%E7%9B%B8%E6%9C%BA/</link>
       <pubDate>Sun, 07 Aug 2005 00:55:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/%E7%9B%B8%E6%9C%BA/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>烧菜</title>
       <link>http://blindwith.science/tags/%E7%83%A7%E8%8F%9C/</link>
       <pubDate>Wed, 03 Aug 2005 21:58:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/%E7%83%A7%E8%8F%9C/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Gmail</title>
       <link>http://blindwith.science/tags/gmail/</link>
       <pubDate>Wed, 03 Aug 2005 00:44:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/gmail/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Wallop</title>
       <link>http://blindwith.science/tags/wallop/</link>
       <pubDate>Wed, 03 Aug 2005 00:44:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/wallop/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Google-earth</title>
+      <title>Google-Earth</title>
       <link>http://blindwith.science/tags/google-earth/</link>
       <pubDate>Sun, 31 Jul 2005 16:21:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/tags/google-earth/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

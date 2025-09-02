@@ -4,18 +4,17 @@
     <title>Data-Engineering on Blind with Science</title>
     <link>http://blindwith.science/tags/data-engineering/</link>
     <description>Recent content in Data-Engineering on Blind with Science</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Fri, 30 Aug 2019 11:14:00 -0700</lastBuildDate><atom:link href="http://blindwith.science/tags/data-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Jan 2021 17:22:59 -0800</lastBuildDate>
+    <atom:link href="http://blindwith.science/tags/data-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hacking the Data Transformation Interview</title>
       <link>http://blindwith.science/2019/08/448.html/</link>
       <pubDate>Fri, 30 Aug 2019 11:14:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2019/08/448.html/</guid>
       <description>&lt;p&gt;I am currently (still) seeking a job in data/software engineering area, and I am preparing for all kinds of technical interviews, ranging from coding, algorithm, system design, SQL to computer science fundamental quiz. Data engineer is a role with vague definition, and people with this title functions as an ETL (extract, transformation, load) engineer in some companies. Thus, topics on data transformation could be covered during the interview. In this blog, I am trying to hack interview focusing on data tranformation.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

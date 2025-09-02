@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.76.5 with theme even" />
+<meta name="generator" content="Hugo 0.149.0 with theme even" />
 
 
 <link rel="canonical" href="http://blindwith.science/2019/10/451.html/" />
@@ -38,28 +38,31 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="../../../sass/main.min.f346f1cd7c119368051aba0791b1276d109b14d2a0fcefac9fe27d9ba680605a.css" rel="stylesheet">
+<link href="../../../sass/main.min.22b0d99d8a618713080069182ee3608a4528452925f4324879d7352bfccb78bd.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="My first Django app" />
-<meta property="og:description" content="This is my implementaion on the Django tutorial." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://blindwith.science/2019/10/451.html/" />
-<meta property="article:published_time" content="2019-10-11T13:58:00-07:00" />
-<meta property="article:modified_time" content="2021-01-18T17:23:01-08:00" />
-<meta itemprop="name" content="My first Django app">
-<meta itemprop="description" content="This is my implementaion on the Django tutorial.">
-<meta itemprop="datePublished" content="2019-10-11T13:58:00-07:00" />
-<meta itemprop="dateModified" content="2021-01-18T17:23:01-08:00" />
-<meta itemprop="wordCount" content="3388">
+<meta property="og:url" content="http://blindwith.science/2019/10/451.html/">
+  <meta property="og:site_name" content="Blind with Science">
+  <meta property="og:title" content="My first Django app">
+  <meta property="og:description" content="This is my implementaion on the Django tutorial.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2019-10-11T13:58:00-07:00">
+    <meta property="article:modified_time" content="2021-01-18T17:23:01-08:00">
+    <meta property="article:tag" content="Django">
+    <meta property="article:tag" content="Python">
 
-
-
-<meta itemprop="keywords" content="Django,Python," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="My first Django app"/>
-<meta name="twitter:description" content="This is my implementaion on the Django tutorial."/>
+  <meta itemprop="name" content="My first Django app">
+  <meta itemprop="description" content="This is my implementaion on the Django tutorial.">
+  <meta itemprop="datePublished" content="2019-10-11T13:58:00-07:00">
+  <meta itemprop="dateModified" content="2021-01-18T17:23:01-08:00">
+  <meta itemprop="wordCount" content="2871">
+  <meta itemprop="keywords" content="Django,Python">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="My first Django app">
+  <meta name="twitter:description" content="This is my implementaion on the Django tutorial.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -143,8 +146,8 @@
         <div class="post-category">
             <a href="../../../categories/%E6%8A%80%E6%9C%AF%E5%AE%85/"> 技术宅 </a>
             </div>
-          <span class="more-meta"> 约 3388 字 </span>
-          <span class="more-meta"> 预计阅读 7 分钟 </span>
+          <span class="more-meta"> 约 2871 字 </span>
+          <span class="more-meta"> 预计阅读 6 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="../../../img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -174,9 +177,9 @@
         <li><a href="#result-view">Result view</a></li>
       </ul>
     </li>
-    <li><a href="#use-django-s-generic-views-instead-for-some-simple-views-in-the-polls-app">Use Django&rsquo;s generic views instead for some simple views in the <code>polls</code> app</a></li>
+    <li><a href="#use-django-s-generic-views-instead-for-some-simple-views-in-the-polls-app">Use Django’s generic views instead for some simple views in the <code>polls</code> app</a></li>
     <li><a href="#automated-testing">Automated testing</a></li>
-    <li><a href="#customize-the-polls-app-s-look-and-feel">Customize the <code>polls</code> app&rsquo;s look and feel</a></li>
+    <li><a href="#customize-the-polls-app-s-look-and-feel">Customize the <code>polls</code> app’s look and feel</a></li>
     <li><a href="#customize-the-admin-site">Customize the admin site</a></li>
     <li><a href="#wrap-up">Wrap up</a></li>
   </ul>
@@ -184,7 +187,7 @@
   </div>
 </div>
   <div class="post-outdated">
-    <div class="hint">
+    <div class="warn">
       <p>【注意】最后更新于 <span class="timeago" datetime="2021-01-18T17:23:01" title="January 18, 2021">January 18, 2021</span>，文中内容可能已过时，请谨慎使用。</p>
     </div>
   </div>
@@ -192,460 +195,188 @@
       <p>This is my implementaion on the <a href="https://docs.djangoproject.com/en/1.11/intro/tutorial01/">Django tutorial</a>.</p>
 <h2 id="create-django-project-and-a-polls-app">Create Django project and a <code>polls</code> app</h2>
 <p>First, I verify my Django installation and version by:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">python -m django --version
-</code></pre></td></tr></table>
-</div>
-</div><p>If Python (use 3 here) or Django (1.11.23 here) is not installed, go by:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">brew install python
-mkdir ~/.venvs/venv
-python3 -m venv ~/.venvs/venv
-<span class="nb">source</span> ~/.venvs/venv/bin/activate
-pip install <span class="nv">django</span><span class="o">==</span>1.11.23
-pip install psycopg2
-</code></pre></td></tr></table>
-</div>
-</div><p>Now I could create a project with a collection of settings for an instance of Django. Avoid naming projects after built-in Python (<code>test</code>) or Django (<code>django</code>) components. And for security, put codes in some directory outside of the document root, such as <code>/home/mycode</code>.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">django-admin startproject mysite
-</code></pre></td></tr></table>
-</div>
-</div><p>And this creates:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">mysite
-├── manage.py # a command-line utility
-└── mysite # actual Python package for mysite project
-    ├── __init__.py
-    ├── settings.py # settings/configuration
-    ├── urls.py # URL declaration; a &#39;table of contents&#39; of the Django-powered site
-    └── wsgi.py # entry-point for WSGI-compatible web servers to serve the project
-</code></pre></td></tr></table>
-</div>
-</div><p>I could run and verify the function of the development server (default port is 8000)</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py runserver <span class="m">8001</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>The development server automatically reloads Python code for each request as needed.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python -m django --version
+</span></span></code></pre></div><p>If Python (use 3 here) or Django (1.11.23 here) is not installed, go by:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>brew install python
+</span></span><span style="display:flex;"><span>mkdir ~/.venvs/venv
+</span></span><span style="display:flex;"><span>python3 -m venv ~/.venvs/venv
+</span></span><span style="display:flex;"><span>source ~/.venvs/venv/bin/activate
+</span></span><span style="display:flex;"><span>pip install django<span style="color:#f92672">==</span>1.11.23
+</span></span><span style="display:flex;"><span>pip install psycopg2
+</span></span></code></pre></div><p>Now I could create a project with a collection of settings for an instance of Django. Avoid naming projects after built-in Python (<code>test</code>) or Django (<code>django</code>) components. And for security, put codes in some directory outside of the document root, such as <code>/home/mycode</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>django-admin startproject mysite
+</span></span></code></pre></div><p>And this creates:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>mysite
+</span></span><span style="display:flex;"><span>├── manage.py # a command-line utility
+</span></span><span style="display:flex;"><span>└── mysite # actual Python package for mysite project
+</span></span><span style="display:flex;"><span>    ├── __init__.py
+</span></span><span style="display:flex;"><span>    ├── settings.py # settings/configuration
+</span></span><span style="display:flex;"><span>    ├── urls.py # URL declaration; a &#39;table of contents&#39; of the Django-powered site
+</span></span><span style="display:flex;"><span>    └── wsgi.py # entry-point for WSGI-compatible web servers to serve the project
+</span></span></code></pre></div><p>I could run and verify the function of the development server (default port is 8000)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python manage.py runserver <span style="color:#ae81ff">8001</span>
+</span></span></code></pre></div><p>The development server automatically reloads Python code for each request as needed.</p>
 <p>Now I have a project (a collection of configuration), I want to create some apps for the website right next to my <code>manage.py</code> as a top-level module. So I create the Polls app by:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py startapp polls
-</code></pre></td></tr></table>
-</div>
-</div><p>And this creates:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">polls
-├── __init__.py
-├── admin.py
-├── apps.py
-├── migrations
-│   └── __init__.py
-├── models.py
-├── tests.py
-└── views.py
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="write-my-first-view-for-the-polls-app">Write my first <code>view</code> for the <code>polls</code> app</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python manage.py startapp polls
+</span></span></code></pre></div><p>And this creates:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>polls
+</span></span><span style="display:flex;"><span>├── __init__.py
+</span></span><span style="display:flex;"><span>├── admin.py
+</span></span><span style="display:flex;"><span>├── apps.py
+</span></span><span style="display:flex;"><span>├── migrations
+</span></span><span style="display:flex;"><span>│   └── __init__.py
+</span></span><span style="display:flex;"><span>├── models.py
+</span></span><span style="display:flex;"><span>├── tests.py
+</span></span><span style="display:flex;"><span>└── views.py
+</span></span></code></pre></div><h2 id="write-my-first-view-for-the-polls-app">Write my first <code>view</code> for the <code>polls</code> app</h2>
 <p>Edit <code>polls/views.py</code> as:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
-<span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
-
-<span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">&#34;Hello, world. You&#39;re at the polls index.&#34;</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Map the view it to a URL by URLconf <code>polls/urls.py</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.shortcuts <span style="color:#f92672">import</span> render
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.http <span style="color:#f92672">import</span> HttpResponse
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>(request):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> HttpResponse(<span style="color:#e6db74">&#34;Hello, world. You&#39;re at the polls index.&#34;</span>)
+</span></span></code></pre></div><p>Map the view it to a URL by URLconf <code>polls/urls.py</code>:</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.conf.urls</span> <span class="kn">import</span> <span class="n">url</span>
-
-<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
-
-<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">),</span>
-<span class="p">]</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>And point the root URLconf at the <code>polls.urls</code> module by editing <code>mysite/urls.py</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.conf.urls <span style="color:#f92672">import</span> url
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> . <span style="color:#f92672">import</span> views
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>urlpatterns <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    url(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^$&#39;</span>, views<span style="color:#f92672">.</span>index, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;index&#39;</span>),
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><p>And point the root URLconf at the <code>polls.urls</code> module by editing <code>mysite/urls.py</code>:</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.conf.urls</span> <span class="kn">import</span> <span class="n">url</span><span class="p">,</span> <span class="n">include</span>
-<span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
-
-<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^polls/&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;polls.urls&#39;</span><span class="p">)),</span>
-    <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^admin/&#39;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
-<span class="p">]</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>The <code>include()</code> function allows referencing other URLconfs. You should always use <code>include()</code> when you include other URL patterns. <code>admin.site.urls</code> is the only exception to this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.conf.urls <span style="color:#f92672">import</span> url, include
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.contrib <span style="color:#f92672">import</span> admin
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>urlpatterns <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    url(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^polls/&#39;</span>, include(<span style="color:#e6db74">&#39;polls.urls&#39;</span>)),
+</span></span><span style="display:flex;"><span>    url(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^admin/&#39;</span>, admin<span style="color:#f92672">.</span>site<span style="color:#f92672">.</span>urls),
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><p>The <code>include()</code> function allows referencing other URLconfs. You should always use <code>include()</code> when you include other URL patterns. <code>admin.site.urls</code> is the only exception to this.</p>
 <p>The <code>url(regex, view, [kwargs, name])</code> function is passed four arguments.
 Note that the <code>regex</code> does not search GET and POST parameters, or the domain name.</p>
 <h2 id="setup-database-for-django-apps">Setup database for Django apps</h2>
 <p>Prepare PostgreSQL database:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">brew install postgresql@10
-brew link postgresql@10 --force
-brew services start postgresql@10
-createuser --superuser djangouser
-createdb -O djangouser djangodb
-psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class="s1">&#39;mypassword&#39;</span><span class="p">;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Setup database in <code>mysite/settings.py</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>brew install postgresql@10
+</span></span><span style="display:flex;"><span>brew link postgresql@10 --force
+</span></span><span style="display:flex;"><span>brew services start postgresql@10
+</span></span><span style="display:flex;"><span>createuser --superuser djangouser
+</span></span><span style="display:flex;"><span>createdb -O djangouser djangodb
+</span></span><span style="display:flex;"><span>psql djangodb; ALTER USER djangouser PASSWORD <span style="color:#e6db74">&#39;mypassword&#39;</span>;
+</span></span></code></pre></div><p>Setup database in <code>mysite/settings.py</code>:</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.db.backends.postgresql&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;djangodb&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;USER&#39;</span><span class="p">:</span> <span class="s1">&#39;djangouser&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s1">&#39;mypassword&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;HOST&#39;</span><span class="p">:</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;PORT&#39;</span><span class="p">:</span> <span class="s1">&#39;5432&#39;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Then run <code>migrate</code> command to create the tables for <code>INSTALLED_APPS</code> in the database, currently for <code>admin</code>, <code>auth</code>, <code>contenttypes</code> and <code>sessions</code>:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py migrate
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="create-models-for-the-polls-app">Create Models for the <code>polls</code> app</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>DATABASES <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;default&#39;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;ENGINE&#39;</span>: <span style="color:#e6db74">&#39;django.db.backends.postgresql&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;NAME&#39;</span>: <span style="color:#e6db74">&#39;djangodb&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;USER&#39;</span>: <span style="color:#e6db74">&#39;djangouser&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;PASSWORD&#39;</span>: <span style="color:#e6db74">&#39;mypassword&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;HOST&#39;</span>: <span style="color:#e6db74">&#39;127.0.0.1&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;PORT&#39;</span>: <span style="color:#e6db74">&#39;5432&#39;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Then run <code>migrate</code> command to create the tables for <code>INSTALLED_APPS</code> in the database, currently for <code>admin</code>, <code>auth</code>, <code>contenttypes</code> and <code>sessions</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python manage.py migrate
+</span></span></code></pre></div><h2 id="create-models-for-the-polls-app">Create Models for the <code>polls</code> app</h2>
 <h3 id="change-models-in-models-dot-py">Change models in <code>models.py</code></h3>
 <p>Now I will define my models, essentially my database layout with additional metadata. Note Django follows the DRY (Don&rsquo;t Repeat Yourself, every piece of knowledge must have a single, unambiguous, authoritative representation within a system) principle.</p>
 <p>I create two models <code>Questions</code> and <code>Choice</code> in my simple poll app:</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
-<span class="kn">from</span> <span class="nn">django.utils.encoding</span> <span class="kn">import</span> <span class="n">python_2_unicode_compatible</span>
-
-<span class="nd">@python_2_unicode_compatible</span> <span class="c1"># support Python 2</span>
-<span class="k">class</span> <span class="nc">Question</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-    <span class="n">question_text</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span> <span class="c1"># field</span>
-    <span class="n">pub_date</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="s1">&#39;date published&#39;</span><span class="p">)</span>
-
-    <span class="c1"># it is important to add object representation</span>
-    <span class="c1"># especially for Django&#39;s automatically-generated admin</span>
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">question_text</span>
-
-    <span class="c1"># custom method for demonstration</span>
-    <span class="k">def</span> <span class="nf">was_published_recently</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">now</span> <span class="o">=</span> <span class="n">timezone</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">now</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pub_date</span> <span class="o">&lt;=</span> <span class="n">now</span>
-
-    <span class="c1"># custom the question change list in admin view</span>
-    <span class="n">was_published_recently</span><span class="o">.</span><span class="n">admin_order_field</span> <span class="o">=</span> <span class="s1">&#39;pub_date&#39;</span>
-    <span class="n">was_published_recently</span><span class="o">.</span><span class="n">boolean</span> <span class="o">=</span> <span class="bp">True</span> <span class="c1"># use icon to represent true or false</span>
-    <span class="n">was_published_recently</span><span class="o">.</span><span class="n">short_description</span> <span class="o">=</span> <span class="s1">&#39;Published recently?&#39;</span>
-
-<span class="k">class</span> <span class="nc">Choice</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-    <span class="n">question</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Question</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span> <span class="c1"># relationship</span>
-    <span class="n">choice_text</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-    <span class="n">votes</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">choice_text</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Then I could add a reference of <code>polls</code> app to its configuration class in the <code>INSTALLED_APPS</code> setting.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.db <span style="color:#f92672">import</span> models
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.utils.encoding <span style="color:#f92672">import</span> python_2_unicode_compatible
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@python_2_unicode_compatible</span> <span style="color:#75715e"># support Python 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Question</span>(models<span style="color:#f92672">.</span>Model):
+</span></span><span style="display:flex;"><span>    question_text <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>) <span style="color:#75715e"># field</span>
+</span></span><span style="display:flex;"><span>    pub_date <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>DateTimeField(<span style="color:#e6db74">&#39;date published&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># it is important to add object representation</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># especially for Django&#39;s automatically-generated admin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__str__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>question_text
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># custom method for demonstration</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">was_published_recently</span>(self):
+</span></span><span style="display:flex;"><span>        now <span style="color:#f92672">=</span> timezone<span style="color:#f92672">.</span>now()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> now <span style="color:#f92672">-</span> datetime<span style="color:#f92672">.</span>timedelta(days<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">&lt;=</span> self<span style="color:#f92672">.</span>pub_date <span style="color:#f92672">&lt;=</span> now
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># custom the question change list in admin view</span>
+</span></span><span style="display:flex;"><span>    was_published_recently<span style="color:#f92672">.</span>admin_order_field <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;pub_date&#39;</span>
+</span></span><span style="display:flex;"><span>    was_published_recently<span style="color:#f92672">.</span>boolean <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span> <span style="color:#75715e"># use icon to represent true or false</span>
+</span></span><span style="display:flex;"><span>    was_published_recently<span style="color:#f92672">.</span>short_description <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Published recently?&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Choice</span>(models<span style="color:#f92672">.</span>Model):
+</span></span><span style="display:flex;"><span>    question <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ForeignKey(Question, on_delete<span style="color:#f92672">=</span>models<span style="color:#f92672">.</span>CASCADE) <span style="color:#75715e"># relationship</span>
+</span></span><span style="display:flex;"><span>    choice_text <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
+</span></span><span style="display:flex;"><span>    votes <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>IntegerField(default<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__str__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>choice_text
+</span></span></code></pre></div><p>Then I could add a reference of <code>polls</code> app to its configuration class in the <code>INSTALLED_APPS</code> setting.</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">&#39;polls.apps.PollsConfig&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
-<span class="p">]</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="run-python-manage-dot-py-makemigrations-to-create-migrations-for-those-changes">Run <code>python manage.py makemigrations</code> to create migrations for those changes</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>INSTALLED_APPS <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;polls.apps.PollsConfig&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;django.contrib.admin&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;django.contrib.auth&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;django.contrib.contenttypes&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;django.contrib.sessions&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;django.contrib.messages&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;django.contrib.staticfiles&#39;</span>,
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><h3 id="run-python-manage-dot-py-makemigrations-to-create-migrations-for-those-changes">Run <code>python manage.py makemigrations</code> to create migrations for those changes</h3>
 <p>Now run the command to tell Django that I would like store the changes for <code>polls</code> as a <em>migration</em>:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py makemigrations polls
-</code></pre></td></tr></table>
-</div>
-</div><p>I could also see the SQL that migration would run by:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py sqlmigrate polls <span class="m">0001</span>
-</code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">BEGIN</span><span class="p">;</span>
-<span class="c1">--
-</span><span class="c1">-- Create model Choice
-</span><span class="c1">--
-</span><span class="c1"></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="s2">&#34;polls_choice&#34;</span> <span class="p">(</span><span class="s2">&#34;id&#34;</span> <span class="nb">serial</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span> <span class="s2">&#34;choice_text&#34;</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">200</span>
-<span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span> <span class="s2">&#34;votes&#34;</span> <span class="nb">integer</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">);</span>
-<span class="c1">--
-</span><span class="c1">-- Create model Question
-</span><span class="c1">--
-</span><span class="c1"></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="s2">&#34;polls_question&#34;</span> <span class="p">(</span><span class="s2">&#34;id&#34;</span> <span class="nb">serial</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span> <span class="s2">&#34;question_text&#34;</span> <span class="nb">varchar</span>
-<span class="p">(</span><span class="mi">200</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span> <span class="s2">&#34;pub_date&#34;</span> <span class="k">timestamp</span> <span class="k">with</span> <span class="n">time</span> <span class="k">zone</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">);</span>
-<span class="c1">--
-</span><span class="c1">-- Add field question to choice
-</span><span class="c1">--
-</span><span class="c1"></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="s2">&#34;polls_choice&#34;</span> <span class="k">ADD</span> <span class="k">COLUMN</span> <span class="s2">&#34;question_id&#34;</span> <span class="nb">integer</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">;</span>
-<span class="k">CREATE</span> <span class="k">INDEX</span> <span class="s2">&#34;polls_choice_question_id_c5b4b260&#34;</span> <span class="k">ON</span> <span class="s2">&#34;polls_choice&#34;</span> <span class="p">(</span><span class="s2">&#34;question_id&#34;</span><span class="p">);</span>
-<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="s2">&#34;polls_choice&#34;</span> <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="s2">&#34;polls_choice_question_id_c5b4b260_fk_polls_qu
-</span><span class="s2">estion_id&#34;</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="s2">&#34;question_id&#34;</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="s2">&#34;polls_question&#34;</span> <span class="p">(</span><span class="s2">&#34;id&#34;</span><span class="p">)</span> <span class="k">DEFERRABLE</span> <span class="n">INI</span>
-<span class="n">TIALLY</span> <span class="k">DEFERRED</span><span class="p">;</span>
-<span class="k">COMMIT</span><span class="p">;</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="run-python-manage-dot-py-migrate-to-apply-those-changes-to-the-database">Run <code>python manage.py migrate</code> to apply those changes to the database</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python manage.py makemigrations polls
+</span></span></code></pre></div><p>I could also see the SQL that migration would run by:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python manage.py sqlmigrate polls <span style="color:#ae81ff">0001</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- Create model Choice
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#e6db74">&#34;polls_choice&#34;</span> (<span style="color:#e6db74">&#34;id&#34;</span> serial <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>, <span style="color:#e6db74">&#34;choice_text&#34;</span> varchar(<span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>, <span style="color:#e6db74">&#34;votes&#34;</span> integer <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- Create model Question
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#e6db74">&#34;polls_question&#34;</span> (<span style="color:#e6db74">&#34;id&#34;</span> serial <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>, <span style="color:#e6db74">&#34;question_text&#34;</span> varchar
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">200</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>, <span style="color:#e6db74">&#34;pub_date&#34;</span> <span style="color:#66d9ef">timestamp</span> <span style="color:#66d9ef">with</span> time <span style="color:#66d9ef">zone</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- Add field question to choice
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#e6db74">&#34;polls_choice&#34;</span> <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">COLUMN</span> <span style="color:#e6db74">&#34;question_id&#34;</span> integer <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> <span style="color:#e6db74">&#34;polls_choice_question_id_c5b4b260&#34;</span> <span style="color:#66d9ef">ON</span> <span style="color:#e6db74">&#34;polls_choice&#34;</span> (<span style="color:#e6db74">&#34;question_id&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#e6db74">&#34;polls_choice&#34;</span> <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">CONSTRAINT</span> <span style="color:#e6db74">&#34;polls_choice_question_id_c5b4b260_fk_polls_qu
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">estion_id&#34;</span> <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (<span style="color:#e6db74">&#34;question_id&#34;</span>) <span style="color:#66d9ef">REFERENCES</span> <span style="color:#e6db74">&#34;polls_question&#34;</span> (<span style="color:#e6db74">&#34;id&#34;</span>) <span style="color:#66d9ef">DEFERRABLE</span> INI
+</span></span><span style="display:flex;"><span>TIALLY <span style="color:#66d9ef">DEFERRED</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">COMMIT</span>;
+</span></span></code></pre></div><h3 id="run-python-manage-dot-py-migrate-to-apply-those-changes-to-the-database">Run <code>python manage.py migrate</code> to apply those changes to the database</h3>
 <p>Then I create those model tables in my database by running <code>migrate</code> again:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py migrate
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="use-django-apis-to-interact-with-the-polls-app">Use Django APIs to interact with the <code>polls</code> app</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python manage.py migrate
+</span></span></code></pre></div><h2 id="use-django-apis-to-interact-with-the-polls-app">Use Django APIs to interact with the <code>polls</code> app</h2>
 <p>Now I could play with the Django API using the Python shell under <code>DJANGO_SETTINGS_MODULE environment variable</code>:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">$ python manage.py shell
-&gt;&gt;&gt; from polls.models import Question, Choice
-&gt;&gt;&gt; Question.objects.all<span class="o">()</span>
-&gt;&gt;&gt; from django.utils import timezone
-&gt;&gt;&gt; <span class="nv">q</span> <span class="o">=</span> Question<span class="o">(</span><span class="nv">question_text</span><span class="o">=</span><span class="s2">&#34;What&#39;s new?&#34;</span>, <span class="nv">pub_date</span><span class="o">=</span>timezone.now<span class="o">())</span>
-&gt;&gt;&gt; q.save<span class="o">()</span>
-&gt;&gt;&gt; q.id
-&gt;&gt;&gt; q.question_text
-&gt;&gt;&gt; q.pub_date
-&gt;&gt;&gt; Question.objects.get<span class="o">(</span><span class="nv">pub_date__year</span><span class="o">=</span>timezone.now<span class="o">()</span>.year<span class="o">)</span>
-&gt;&gt;&gt; Question.objects.get<span class="o">(</span><span class="nv">id</span><span class="o">=</span>1<span class="o">)</span> <span class="c1"># identical to Question.objects.get(pk=1)</span>
-&gt;&gt;&gt; q.was_published_recently<span class="o">()</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="use-django-admin-to-manage-the-question-object">Use Django Admin to manage the <code>Question</code> object</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ python manage.py shell
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; from polls.models import Question, Choice
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; Question.objects.all<span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; from django.utils import timezone
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; q <span style="color:#f92672">=</span> Question<span style="color:#f92672">(</span>question_text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;What&#39;s new?&#34;</span>, pub_date<span style="color:#f92672">=</span>timezone.now<span style="color:#f92672">())</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; q.save<span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; q.id
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; q.question_text
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; q.pub_date
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; Question.objects.get<span style="color:#f92672">(</span>pub_date__year<span style="color:#f92672">=</span>timezone.now<span style="color:#f92672">()</span>.year<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; Question.objects.get<span style="color:#f92672">(</span>id<span style="color:#f92672">=</span>1<span style="color:#f92672">)</span> <span style="color:#75715e"># identical to Question.objects.get(pk=1)</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; q.was_published_recently<span style="color:#f92672">()</span>
+</span></span></code></pre></div><h2 id="use-django-admin-to-manage-the-question-object">Use Django Admin to manage the <code>Question</code> object</h2>
 <p>Django was written in a newsroom environment. The admin is intended to be used for site managers to edit content.</p>
 <p>An admin could be created by:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">python manage.py createsuperuser
-</code></pre></td></tr></table>
-</div>
-</div><p>Then I could login through <a href="http://127.0.0.1:8001/admin/">http://127.0.0.1:8001/admin/</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python manage.py createsuperuser
+</span></span></code></pre></div><p>Then I could login through <a href="http://127.0.0.1:8001/admin/">http://127.0.0.1:8001/admin/</a></p>
 <p>Don&rsquo;t forget to register the Question object with an admin interface by:</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
-<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Question</span>
-
-<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Question</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="four-public-interface-views-for-the-polls-app">Four public interface <code>views</code> for the <code>polls</code> app</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.contrib <span style="color:#f92672">import</span> admin
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> Question
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>admin<span style="color:#f92672">.</span>site<span style="color:#f92672">.</span>register(Question)
+</span></span></code></pre></div><h2 id="four-public-interface-views-for-the-polls-app">Four public interface <code>views</code> for the <code>polls</code> app</h2>
 <p>I will create four views for the <code>polls</code> app:</p>
 <ul>
 <li>Question &ldquo;index&rdquo; page: displays the latest few questions.</li>
@@ -653,449 +384,208 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
 <li>Question &ldquo;results&rdquo; page: displays results for a particular question.</li>
 <li>Vote action: handles voting for a particular choice in a particular question.</li>
 </ul>
-<!-- raw HTML omitted -->
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
-<span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
-
-<span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">&#34;Hello, world. You&#39;re at the polls index.&#34;</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">detail</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">question_id</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">&#34;You&#39;re looking at question </span><span class="si">%s</span><span class="s2">.&#34;</span> <span class="o">%</span> <span class="n">question_id</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">results</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">question_id</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">response</span> <span class="o">%</span> <span class="n">question_id</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">vote</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">question_id</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">&#34;You&#39;re voting on question </span><span class="si">%s</span><span class="s2">.&#34;</span> <span class="o">%</span> <span class="n">question_id</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.conf.urls</span> <span class="kn">import</span> <span class="n">url</span>
-
-<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
-
-<span class="n">app_name</span> <span class="o">=</span> <span class="s1">&#39;polls&#39;</span>
-<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="c1"># e.g. /polls/</span>
-    <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">),</span>
-    <span class="c1"># e.g. /polls/5/</span>
-    <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^(?P&lt;question_id&gt;[0-9]+)/$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">detail</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;detail&#39;</span><span class="p">),</span>
-    <span class="c1"># e.g. /polls/5/results/</span>
-    <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^(?P&lt;question_id&gt;[0-9]+)/results/$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">results</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;results&#39;</span><span class="p">),</span>
-    <span class="c1"># e.g. /polls/5/vote/</span>
-    <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^(?P&lt;question_id&gt;[0-9]+)/vote/$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">vote</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;vote&#39;</span><span class="p">),</span>
-<span class="p">]</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="index-view">Index view</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.shortcuts <span style="color:#f92672">import</span> render
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.http <span style="color:#f92672">import</span> HttpResponse
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>(request):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> HttpResponse(<span style="color:#e6db74">&#34;Hello, world. You&#39;re at the polls index.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">detail</span>(request, question_id):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> HttpResponse(<span style="color:#e6db74">&#34;You&#39;re looking at question </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">.&#34;</span> <span style="color:#f92672">%</span> question_id)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">results</span>(request, question_id):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> HttpResponse(response <span style="color:#f92672">%</span> question_id)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">vote</span>(request, question_id):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> HttpResponse(<span style="color:#e6db74">&#34;You&#39;re voting on question </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">.&#34;</span> <span style="color:#f92672">%</span> question_id)
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.conf.urls <span style="color:#f92672">import</span> url
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> . <span style="color:#f92672">import</span> views
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;polls&#39;</span>
+</span></span><span style="display:flex;"><span>urlpatterns <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># e.g. /polls/</span>
+</span></span><span style="display:flex;"><span>    url(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^$&#39;</span>, views<span style="color:#f92672">.</span>index, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;index&#39;</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># e.g. /polls/5/</span>
+</span></span><span style="display:flex;"><span>    url(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^(?P&lt;question_id&gt;[0-9]+)/$&#39;</span>, views<span style="color:#f92672">.</span>detail, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;detail&#39;</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># e.g. /polls/5/results/</span>
+</span></span><span style="display:flex;"><span>    url(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^(?P&lt;question_id&gt;[0-9]+)/results/$&#39;</span>, views<span style="color:#f92672">.</span>results, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;results&#39;</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># e.g. /polls/5/vote/</span>
+</span></span><span style="display:flex;"><span>    url(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^(?P&lt;question_id&gt;[0-9]+)/vote/$&#39;</span>, views<span style="color:#f92672">.</span>vote, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;vote&#39;</span>),
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><h3 id="index-view">Index view</h3>
 <p>I could use <code>templates</code> directory to seperate design from Python:</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html">{% if latest_question_list %}
-    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-    {% for question in latest_question_list %}
-        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{% url &#39;polls:detail&#39; question.id %}&#34;</span><span class="p">&gt;</span>{{ question.question_text }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    {% endfor %}
-    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-{% else %}
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>No polls are available.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-{% endif %}
-</code></pre></td></tr></table>
-</div>
-</div><p>Here I use <code>&lt;a href=&quot;{% url 'polls:detail' question.id %}&quot;&gt;</code> to avoid hardcoded link like <code>&lt;a href=&quot;/polls/{{ question.id }}/&quot;&gt;</code>, so that it look up the URL definition as specified in the <code>polls.url</code> module. I use <code>polls:detail</code> here to point at the namespaced detail view, as <code>'polls'</code> is specified as <code>app_name</code> in <code>polls/urls.py</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{% if latest_question_list %}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>    {% for question in latest_question_list %}
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;polls:detail&#39; question.id %}&#34;</span>&gt;{{ question.question_text }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>    {% endfor %}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>{% else %}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;No polls are available.&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>{% endif %}
+</span></span></code></pre></div><p>Here I use <code>&lt;a href=&quot;{% url 'polls:detail' question.id %}&quot;&gt;</code> to avoid hardcoded link like <code>&lt;a href=&quot;/polls/{{ question.id }}/&quot;&gt;</code>, so that it look up the URL definition as specified in the <code>polls.url</code> module. I use <code>polls:detail</code> here to point at the namespaced detail view, as <code>'polls'</code> is specified as <code>app_name</code> in <code>polls/urls.py</code>.</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># ...</span>
-<span class="kn">from</span> <span class="nn">django.utils</span> <span class="kn">import</span> <span class="n">timezone</span>
-<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Question</span>
-
-<span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
-    <span class="n">latest_question_list</span> <span class="o">=</span> <span class="n">Question</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
-        <span class="n">pub_date__lte</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-    <span class="p">)</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s1">&#39;-pub_date&#39;</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
-    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;latest_question_list&#39;</span><span class="p">:</span> <span class="n">latest_question_list</span><span class="p">}</span>
-    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;polls/index.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
-<span class="c1"># ...</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Here I use <code>render()</code> shortcut for <code>HttpResponse(loader.get_template(file).render(context, request))</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ...</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.utils <span style="color:#f92672">import</span> timezone
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> Question
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>(request):
+</span></span><span style="display:flex;"><span>    latest_question_list <span style="color:#f92672">=</span> Question<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(
+</span></span><span style="display:flex;"><span>        pub_date__lte<span style="color:#f92672">=</span>timezone<span style="color:#f92672">.</span>now()
+</span></span><span style="display:flex;"><span>    )<span style="color:#f92672">.</span>order_by(<span style="color:#e6db74">&#39;-pub_date&#39;</span>)[:<span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span>    context <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;latest_question_list&#39;</span>: latest_question_list}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;polls/index.html&#39;</span>, context)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ...</span>
+</span></span></code></pre></div><p>Here I use <code>render()</code> shortcut for <code>HttpResponse(loader.get_template(file).render(context, request))</code>.</p>
 <h3 id="detail-view-or-raise-a-404-error">Detail view or raise a 404 error</h3>
 <p>Each view is responsible for doing one of two things: returning an <code>HttpResponse</code> object containing the content for the requested page, or raising an exception such as <code>Http404</code>.</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ question.question_text }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-{% for choice in question.choice_set.all %}
-    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>{{ choice.choice_text }}<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-{% endfor %}
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">get_object_or_404</span><span class="p">,</span> <span class="n">render</span>
-<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Question</span>
-<span class="c1"># ...</span>
-<span class="k">def</span> <span class="nf">detail</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">question_id</span><span class="p">):</span>
-    <span class="n">question</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span>
-        <span class="n">Question</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">pub_date__lte</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">now</span><span class="p">()),</span> <span class="n">pk</span><span class="o">=</span><span class="n">question_id</span>
-    <span class="p">)</span>
-    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;polls/detail.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;question&#39;</span><span class="p">:</span> <span class="n">question</span><span class="p">})</span>
-<span class="c1"># ...</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Here I use <code>get_object_or_404()</code> shortcut for <code>Http404</code> exception.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span>&gt;{{ question.question_text }}&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>{% for choice in question.choice_set.all %}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">li</span>&gt;{{ choice.choice_text }}&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>{% endfor %}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.shortcuts <span style="color:#f92672">import</span> get_object_or_404, render
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> Question
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ...</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">detail</span>(request, question_id):
+</span></span><span style="display:flex;"><span>    question <span style="color:#f92672">=</span> get_object_or_404(
+</span></span><span style="display:flex;"><span>        Question<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(pub_date__lte<span style="color:#f92672">=</span>timezone<span style="color:#f92672">.</span>now()), pk<span style="color:#f92672">=</span>question_id
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;polls/detail.html&#39;</span>, {<span style="color:#e6db74">&#39;question&#39;</span>: question})
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ...</span>
+</span></span></code></pre></div><p>Here I use <code>get_object_or_404()</code> shortcut for <code>Http404</code> exception.</p>
 <h3 id="vote-view-creating-a-simple-form">Vote view: creating a simple form</h3>
 <p>Now I update my poll detail template and add a simple form to it.</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ question.question_text }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-
-{% if error_message %}<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>{{ error_message }}<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>{% endif %}
-
-<span class="c">&lt;!--POST, act of submitting form will alter data server-side--&gt;</span>
-<span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;{% url &#39;polls:vote&#39; question.id %}&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;post&#34;</span><span class="p">&gt;</span>
-  <span class="c">&lt;!--this protect from Cross Site Request Forgeries--&gt;</span>
-  {% csrf_token %}
-  {% for choice in question.choice_set.all %}
-  <span class="c">&lt;!--display a radio button which POST data choice=choice.id--&gt;</span>
-  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;choice&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;choice{{ forloop.counter }}&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;{{ choice.id }}&#34;</span> <span class="p">/&gt;</span>
-  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;choice{{ forloop.counter }}&#34;</span><span class="p">&gt;</span>{{ choice.choice_text }}<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
-  {% endfor %}
-  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Vote&#34;</span> <span class="p">/&gt;</span>
-<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Note all POST forms that are targeted at internal URLs should use the <code>{% csrf_token %}</code> template tag to protect from Cross Site Request Forgeries.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span>&gt;{{ question.question_text }}&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{% if error_message %}&lt;<span style="color:#f92672">p</span>&gt;&lt;<span style="color:#f92672">strong</span>&gt;{{ error_message }}&lt;/<span style="color:#f92672">strong</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;{% endif %}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!--POST, act of submitting form will alter data server-side--&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;polls:vote&#39; question.id %}&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!--this protect from Cross Site Request Forgeries--&gt;</span>
+</span></span><span style="display:flex;"><span>  {% csrf_token %}
+</span></span><span style="display:flex;"><span>  {% for choice in question.choice_set.all %}
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!--display a radio button which POST data choice=choice.id--&gt;</span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;choice&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;choice{{ forloop.counter }}&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ choice.id }}&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;choice{{ forloop.counter }}&#34;</span>&gt;{{ choice.choice_text }}&lt;/<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">br</span> /&gt;
+</span></span><span style="display:flex;"><span>  {% endfor %}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Vote&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">form</span>&gt;
+</span></span></code></pre></div><p>Note all POST forms that are targeted at internal URLs should use the <code>{% csrf_token %}</code> template tag to protect from Cross Site Request Forgeries.</p>
 <p>And I also replace the dummy implementation of the <code>vote()</code> function with a real one.</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">get_object_or_404</span><span class="p">,</span> <span class="n">render</span>
-<span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponseRedirect</span><span class="p">,</span> <span class="n">HttpResponse</span>
-<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">reverse</span>
-
-<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Choice</span><span class="p">,</span> <span class="n">Question</span>
-<span class="c1"># ...</span>
-<span class="k">def</span> <span class="nf">vote</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">question_id</span><span class="p">):</span>
-    <span class="n">question</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Question</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="n">question_id</span><span class="p">)</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">selected_choice</span> <span class="o">=</span> <span class="n">question</span><span class="o">.</span><span class="n">choice_set</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;choice&#39;</span><span class="p">])</span>
-    <span class="k">except</span> <span class="p">(</span><span class="ne">KeyError</span><span class="p">,</span> <span class="n">Choice</span><span class="o">.</span><span class="n">DoesNotExist</span><span class="p">):</span>
-        <span class="c1"># Redisplay the question voting form.</span>
-        <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;polls/detail.html&#39;</span><span class="p">,</span> <span class="p">{</span>
-            <span class="s1">&#39;question&#39;</span><span class="p">:</span> <span class="n">question</span><span class="p">,</span>
-            <span class="s1">&#39;error_message&#39;</span><span class="p">:</span> <span class="s2">&#34;You didn&#39;t select a choice.&#34;</span><span class="p">,</span>
-        <span class="p">})</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">selected_choice</span><span class="o">.</span><span class="n">votes</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">selected_choice</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
-        <span class="c1"># Always return an HttpResponseRedirect after successfully dealing</span>
-        <span class="c1"># with POST data. This prevents data from being posted twice if a</span>
-        <span class="c1"># user hits the Back button.</span>
-        <span class="k">return</span> <span class="n">HttpResponseRedirect</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;polls:results&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">question</span><span class="o">.</span><span class="n">id</span><span class="p">,)))</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Note that always return an HttpResponseRedirect after successfully dealing with POST data to prevent from posting data twice if a user hits the Back button. And I use the <code>reverse()</code> function in the <code>HttpResponseRedirect</code> constructor to help avoid hardcoding a URL in the view function.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.shortcuts <span style="color:#f92672">import</span> get_object_or_404, render
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.http <span style="color:#f92672">import</span> HttpResponseRedirect, HttpResponse
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.urls <span style="color:#f92672">import</span> reverse
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> Choice, Question
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ...</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">vote</span>(request, question_id):
+</span></span><span style="display:flex;"><span>    question <span style="color:#f92672">=</span> get_object_or_404(Question, pk<span style="color:#f92672">=</span>question_id)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        selected_choice <span style="color:#f92672">=</span> question<span style="color:#f92672">.</span>choice_set<span style="color:#f92672">.</span>get(pk<span style="color:#f92672">=</span>request<span style="color:#f92672">.</span>POST[<span style="color:#e6db74">&#39;choice&#39;</span>])
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> (<span style="color:#a6e22e">KeyError</span>, Choice<span style="color:#f92672">.</span>DoesNotExist):
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Redisplay the question voting form.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;polls/detail.html&#39;</span>, {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;question&#39;</span>: question,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;error_message&#39;</span>: <span style="color:#e6db74">&#34;You didn&#39;t select a choice.&#34;</span>,
+</span></span><span style="display:flex;"><span>        })
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        selected_choice<span style="color:#f92672">.</span>votes <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        selected_choice<span style="color:#f92672">.</span>save()
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Always return an HttpResponseRedirect after successfully dealing</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># with POST data. This prevents data from being posted twice if a</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># user hits the Back button.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> HttpResponseRedirect(reverse(<span style="color:#e6db74">&#39;polls:results&#39;</span>, args<span style="color:#f92672">=</span>(question<span style="color:#f92672">.</span>id,)))
+</span></span></code></pre></div><p>Note that always return an HttpResponseRedirect after successfully dealing with POST data to prevent from posting data twice if a user hits the Back button. And I use the <code>reverse()</code> function in the <code>HttpResponseRedirect</code> constructor to help avoid hardcoding a URL in the view function.</p>
 <p>And note that this <code>vote()</code> have a <em>race condition</em> problem: if two users of my website try to vote at <em>exactly the same time</em>, the computed new value of <code>votes</code> might go wrong.</p>
 <h3 id="result-view">Result view</h3>
 <p>Now I implement the <code>result()</code> view by creating a result template and update the view.</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ question.question_text }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-  {% for choice in question.choice_set.all %}
-  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-  {% endfor %}
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{% url &#39;polls:detail&#39; question.id %}&#34;</span><span class="p">&gt;</span>Vote again?<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># ...</span>
-<span class="k">def</span> <span class="nf">results</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">question_id</span><span class="p">):</span>
-    <span class="n">question</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span>
-        <span class="n">Question</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">pub_date__lte</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">now</span><span class="p">),</span> <span class="n">pk</span><span class="o">=</span><span class="n">question_id</span>
-    <span class="p">)</span>
-    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;polls/results.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;question&#39;</span><span class="p">:</span> <span class="n">question</span><span class="p">})</span>
-<span class="c1"># ...</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="use-django-s-generic-views-instead-for-some-simple-views-in-the-polls-app">Use Django&rsquo;s generic views instead for some simple views in the <code>polls</code> app</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span>&gt;{{ question.question_text }}&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>  {% for choice in question.choice_set.all %}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span>&gt;{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>  {% endfor %}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;polls:detail&#39; question.id %}&#34;</span>&gt;Vote again?&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ...</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">results</span>(request, question_id):
+</span></span><span style="display:flex;"><span>    question <span style="color:#f92672">=</span> get_object_or_404(
+</span></span><span style="display:flex;"><span>        Question<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(pub_date__lte<span style="color:#f92672">=</span>timezone<span style="color:#f92672">.</span>now), pk<span style="color:#f92672">=</span>question_id
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;polls/results.html&#39;</span>, {<span style="color:#e6db74">&#39;question&#39;</span>: question})
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ...</span>
+</span></span></code></pre></div><h2 id="use-django-s-generic-views-instead-for-some-simple-views-in-the-polls-app">Use Django&rsquo;s generic views instead for some simple views in the <code>polls</code> app</h2>
 <p>Since it is pretty common for basic Web development to get data from the database according a passing parameter in the URL, loading a template and returning template, Django provides generic views for the simple  <code>detail()</code>, <code>results()</code> and <code>index()</code> views.</p>
 <p>In practice, when writing a Django app, people evaluate whether generic views are a good fit for their problem, and use them from the beginning.</p>
 <p>I amend the <code>polls/urls.py</code> URLconf:</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.conf.urls</span> <span class="kn">import</span> <span class="n">url</span>
-
-<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
-
-<span class="n">app_name</span> <span class="o">=</span> <span class="s1">&#39;polls&#39;</span>
-<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="c1"># e.g. /polls/</span>
-    <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">IndexView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">),</span>
-    <span class="c1"># e.g. /polls/5/</span>
-    <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^(?P&lt;pk&gt;[0-9]+)/$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">DetailView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;detail&#39;</span><span class="p">),</span>
-    <span class="c1"># e.g. /polls/5/results/</span>
-    <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^(?P&lt;pk&gt;[0-9]+)/results/$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">ResultsView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;results&#39;</span><span class="p">),</span>
-    <span class="c1"># e.g. /polls/5/vote/</span>
-    <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^(?P&lt;question_id&gt;[0-9]+)/vote/$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">vote</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;vote&#39;</span><span class="p">),</span>
-<span class="p">]</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Note <code>&lt;question_id&gt;</code> in second and third patterns changes to <code>&lt;pk&gt;</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.conf.urls <span style="color:#f92672">import</span> url
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> . <span style="color:#f92672">import</span> views
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;polls&#39;</span>
+</span></span><span style="display:flex;"><span>urlpatterns <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># e.g. /polls/</span>
+</span></span><span style="display:flex;"><span>    url(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^$&#39;</span>, views<span style="color:#f92672">.</span>IndexView<span style="color:#f92672">.</span>as_view(), name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;index&#39;</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># e.g. /polls/5/</span>
+</span></span><span style="display:flex;"><span>    url(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^(?P&lt;pk&gt;[0-9]+)/$&#39;</span>, views<span style="color:#f92672">.</span>DetailView<span style="color:#f92672">.</span>as_view(), name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;detail&#39;</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># e.g. /polls/5/results/</span>
+</span></span><span style="display:flex;"><span>    url(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^(?P&lt;pk&gt;[0-9]+)/results/$&#39;</span>, views<span style="color:#f92672">.</span>ResultsView<span style="color:#f92672">.</span>as_view(), name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;results&#39;</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># e.g. /polls/5/vote/</span>
+</span></span><span style="display:flex;"><span>    url(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^(?P&lt;question_id&gt;[0-9]+)/vote/$&#39;</span>, views<span style="color:#f92672">.</span>vote, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;vote&#39;</span>),
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><p>Note <code>&lt;question_id&gt;</code> in second and third patterns changes to <code>&lt;pk&gt;</code>.</p>
 <p>I also amend <code>index()</code>, <code>detail()</code> and <code>results()</code> views with Django&rsquo;s generic views:</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">get_object_or_404</span><span class="p">,</span> <span class="n">render</span>
-<span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponseRedirect</span>
-<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">reverse</span>
-<span class="kn">from</span> <span class="nn">django.views</span> <span class="kn">import</span> <span class="n">generic</span>
-<span class="kn">from</span> <span class="nn">django.utils</span> <span class="kn">import</span> <span class="n">timezone</span>
-
-<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Choice</span><span class="p">,</span> <span class="n">Question</span>
-
-
-<span class="k">class</span> <span class="nc">IndexView</span><span class="p">(</span><span class="n">generic</span><span class="o">.</span><span class="n">ListView</span><span class="p">):</span>
-    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">&#39;polls/index.html&#39;</span>
-    <span class="n">context_object_name</span> <span class="o">=</span> <span class="s1">&#39;latest_question_list&#39;</span>
-
-    <span class="k">def</span> <span class="nf">get_queryset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">Question</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
-            <span class="n">pub_date__lte</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-        <span class="p">)</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s1">&#39;-pub_date&#39;</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
-
-
-<span class="k">class</span> <span class="nc">DetailView</span><span class="p">(</span><span class="n">generic</span><span class="o">.</span><span class="n">DetailView</span><span class="p">):</span>
-    <span class="n">model</span> <span class="o">=</span> <span class="n">Question</span>
-    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">&#39;polls/detail.html&#39;</span>
-
-    <span class="k">def</span> <span class="nf">get_queryset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">Question</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">pub_date__lte</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
-
-
-<span class="k">class</span> <span class="nc">ResultsView</span><span class="p">(</span><span class="n">generic</span><span class="o">.</span><span class="n">DetailView</span><span class="p">):</span>
-    <span class="n">model</span> <span class="o">=</span> <span class="n">Question</span>
-    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">&#39;polls/results.html&#39;</span>
-
-    <span class="k">def</span> <span class="nf">get_queryset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">Question</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">pub_date__lte</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
-
-<span class="c1"># ...</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="automated-testing">Automated testing</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.shortcuts <span style="color:#f92672">import</span> get_object_or_404, render
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.http <span style="color:#f92672">import</span> HttpResponseRedirect
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.urls <span style="color:#f92672">import</span> reverse
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.views <span style="color:#f92672">import</span> generic
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.utils <span style="color:#f92672">import</span> timezone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> Choice, Question
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">IndexView</span>(generic<span style="color:#f92672">.</span>ListView):
+</span></span><span style="display:flex;"><span>    template_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;polls/index.html&#39;</span>
+</span></span><span style="display:flex;"><span>    context_object_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;latest_question_list&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_queryset</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> Question<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(
+</span></span><span style="display:flex;"><span>            pub_date__lte<span style="color:#f92672">=</span>timezone<span style="color:#f92672">.</span>now()
+</span></span><span style="display:flex;"><span>        )<span style="color:#f92672">.</span>order_by(<span style="color:#e6db74">&#39;-pub_date&#39;</span>)[:<span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DetailView</span>(generic<span style="color:#f92672">.</span>DetailView):
+</span></span><span style="display:flex;"><span>    model <span style="color:#f92672">=</span> Question
+</span></span><span style="display:flex;"><span>    template_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;polls/detail.html&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_queryset</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> Question<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(pub_date__lte<span style="color:#f92672">=</span>timezone<span style="color:#f92672">.</span>now())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ResultsView</span>(generic<span style="color:#f92672">.</span>DetailView):
+</span></span><span style="display:flex;"><span>    model <span style="color:#f92672">=</span> Question
+</span></span><span style="display:flex;"><span>    template_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;polls/results.html&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_queryset</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> Question<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(pub_date__lte<span style="color:#f92672">=</span>timezone<span style="color:#f92672">.</span>now())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ...</span>
+</span></span></code></pre></div><h2 id="automated-testing">Automated testing</h2>
 <p>I will create some automated tests so that as I make changes to my app, I could check that my code still works well. Besides,</p>
 <ul>
 <li>Tests will save time</li>
@@ -1111,491 +601,234 @@ psql djangodb<span class="p">;</span> ALTER USER djangouser PASSWORD <span class
 </ul>
 <p>Here is some tests to check if the <code>polls</code> app not deals with future questions.</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
-</span><span class="lnt">  2
-</span><span class="lnt">  3
-</span><span class="lnt">  4
-</span><span class="lnt">  5
-</span><span class="lnt">  6
-</span><span class="lnt">  7
-</span><span class="lnt">  8
-</span><span class="lnt">  9
-</span><span class="lnt"> 10
-</span><span class="lnt"> 11
-</span><span class="lnt"> 12
-</span><span class="lnt"> 13
-</span><span class="lnt"> 14
-</span><span class="lnt"> 15
-</span><span class="lnt"> 16
-</span><span class="lnt"> 17
-</span><span class="lnt"> 18
-</span><span class="lnt"> 19
-</span><span class="lnt"> 20
-</span><span class="lnt"> 21
-</span><span class="lnt"> 22
-</span><span class="lnt"> 23
-</span><span class="lnt"> 24
-</span><span class="lnt"> 25
-</span><span class="lnt"> 26
-</span><span class="lnt"> 27
-</span><span class="lnt"> 28
-</span><span class="lnt"> 29
-</span><span class="lnt"> 30
-</span><span class="lnt"> 31
-</span><span class="lnt"> 32
-</span><span class="lnt"> 33
-</span><span class="lnt"> 34
-</span><span class="lnt"> 35
-</span><span class="lnt"> 36
-</span><span class="lnt"> 37
-</span><span class="lnt"> 38
-</span><span class="lnt"> 39
-</span><span class="lnt"> 40
-</span><span class="lnt"> 41
-</span><span class="lnt"> 42
-</span><span class="lnt"> 43
-</span><span class="lnt"> 44
-</span><span class="lnt"> 45
-</span><span class="lnt"> 46
-</span><span class="lnt"> 47
-</span><span class="lnt"> 48
-</span><span class="lnt"> 49
-</span><span class="lnt"> 50
-</span><span class="lnt"> 51
-</span><span class="lnt"> 52
-</span><span class="lnt"> 53
-</span><span class="lnt"> 54
-</span><span class="lnt"> 55
-</span><span class="lnt"> 56
-</span><span class="lnt"> 57
-</span><span class="lnt"> 58
-</span><span class="lnt"> 59
-</span><span class="lnt"> 60
-</span><span class="lnt"> 61
-</span><span class="lnt"> 62
-</span><span class="lnt"> 63
-</span><span class="lnt"> 64
-</span><span class="lnt"> 65
-</span><span class="lnt"> 66
-</span><span class="lnt"> 67
-</span><span class="lnt"> 68
-</span><span class="lnt"> 69
-</span><span class="lnt"> 70
-</span><span class="lnt"> 71
-</span><span class="lnt"> 72
-</span><span class="lnt"> 73
-</span><span class="lnt"> 74
-</span><span class="lnt"> 75
-</span><span class="lnt"> 76
-</span><span class="lnt"> 77
-</span><span class="lnt"> 78
-</span><span class="lnt"> 79
-</span><span class="lnt"> 80
-</span><span class="lnt"> 81
-</span><span class="lnt"> 82
-</span><span class="lnt"> 83
-</span><span class="lnt"> 84
-</span><span class="lnt"> 85
-</span><span class="lnt"> 86
-</span><span class="lnt"> 87
-</span><span class="lnt"> 88
-</span><span class="lnt"> 89
-</span><span class="lnt"> 90
-</span><span class="lnt"> 91
-</span><span class="lnt"> 92
-</span><span class="lnt"> 93
-</span><span class="lnt"> 94
-</span><span class="lnt"> 95
-</span><span class="lnt"> 96
-</span><span class="lnt"> 97
-</span><span class="lnt"> 98
-</span><span class="lnt"> 99
-</span><span class="lnt">100
-</span><span class="lnt">101
-</span><span class="lnt">102
-</span><span class="lnt">103
-</span><span class="lnt">104
-</span><span class="lnt">105
-</span><span class="lnt">106
-</span><span class="lnt">107
-</span><span class="lnt">108
-</span><span class="lnt">109
-</span><span class="lnt">110
-</span><span class="lnt">111
-</span><span class="lnt">112
-</span><span class="lnt">113
-</span><span class="lnt">114
-</span><span class="lnt">115
-</span><span class="lnt">116
-</span><span class="lnt">117
-</span><span class="lnt">118
-</span><span class="lnt">119
-</span><span class="lnt">120
-</span><span class="lnt">121
-</span><span class="lnt">122
-</span><span class="lnt">123
-</span><span class="lnt">124
-</span><span class="lnt">125
-</span><span class="lnt">126
-</span><span class="lnt">127
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">datetime</span>
-
-<span class="kn">from</span> <span class="nn">django.utils</span> <span class="kn">import</span> <span class="n">timezone</span>
-<span class="kn">from</span> <span class="nn">django.test</span> <span class="kn">import</span> <span class="n">TestCase</span>
-<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">reverse</span>
-
-<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Question</span>
-
-
-<span class="k">class</span> <span class="nc">QuestionModelTests</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
-
-    <span class="k">def</span> <span class="nf">test_was_published_recently_with_future_question</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">        was_published_recently() returns False for questions whose pub_date
-</span><span class="s2">        is in the future.
-</span><span class="s2">        &#34;&#34;&#34;</span>
-        <span class="n">time</span> <span class="o">=</span> <span class="n">timezone</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-        <span class="n">future_question</span> <span class="o">=</span> <span class="n">Question</span><span class="p">(</span><span class="n">pub_date</span><span class="o">=</span><span class="n">time</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertIs</span><span class="p">(</span><span class="n">future_question</span><span class="o">.</span><span class="n">was_published_recently</span><span class="p">(),</span> <span class="bp">False</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_was_published_recently_with_old_question</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">        was_published_recently() returns False for questions whose pub_date
-</span><span class="s2">        is older than 1 day.
-</span><span class="s2">        &#34;&#34;&#34;</span>
-        <span class="n">time</span> <span class="o">=</span> <span class="n">timezone</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">old_question</span> <span class="o">=</span> <span class="n">Question</span><span class="p">(</span><span class="n">pub_date</span><span class="o">=</span><span class="n">time</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertIs</span><span class="p">(</span><span class="n">old_question</span><span class="o">.</span><span class="n">was_published_recently</span><span class="p">(),</span> <span class="bp">False</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_was_published_recently_with_recent_question</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">        was_published_recently() returns True for questions whose pub_date
-</span><span class="s2">        is within the last day.
-</span><span class="s2">        &#34;&#34;&#34;</span>
-        <span class="n">time</span> <span class="o">=</span> <span class="n">timezone</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">23</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">59</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">59</span><span class="p">)</span>
-        <span class="n">recent_question</span> <span class="o">=</span> <span class="n">Question</span><span class="p">(</span><span class="n">pub_date</span><span class="o">=</span><span class="n">time</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertIs</span><span class="p">(</span><span class="n">recent_question</span><span class="o">.</span><span class="n">was_published_recently</span><span class="p">(),</span> <span class="bp">True</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">create_question</span><span class="p">(</span><span class="n">question_text</span><span class="p">,</span> <span class="n">days</span><span class="p">):</span>
-    <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">    Create a question with the given `question_text` and published the
-</span><span class="s2">    given number of `days` offset to now (negative for questions published
-</span><span class="s2">    in the past, positive for questions that have yet to be published).
-</span><span class="s2">    &#34;&#34;&#34;</span>
-    <span class="n">time</span> <span class="o">=</span> <span class="n">timezone</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">days</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">Question</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">question_text</span><span class="o">=</span><span class="n">question_text</span><span class="p">,</span> <span class="n">pub_date</span><span class="o">=</span><span class="n">time</span><span class="p">)</span>
-
-
-<span class="k">class</span> <span class="nc">QuestionIndexViewTests</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">test_no_questions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">        If no questions exist, an appropriate message is displayed.
-</span><span class="s2">        &#34;&#34;&#34;</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;polls:index&#39;</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertContains</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s2">&#34;No polls are available.&#34;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertQuerysetEqual</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">context</span><span class="p">[</span><span class="s1">&#39;latest_question_list&#39;</span><span class="p">],</span> <span class="p">[])</span>
-
-    <span class="k">def</span> <span class="nf">test_past_question</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">        Questions with a pub_date in the past are displayed on the
-</span><span class="s2">        index page.
-</span><span class="s2">        &#34;&#34;&#34;</span>
-        <span class="n">create_question</span><span class="p">(</span><span class="n">question_text</span><span class="o">=</span><span class="s2">&#34;Past question.&#34;</span><span class="p">,</span> <span class="n">days</span><span class="o">=-</span><span class="mi">30</span><span class="p">)</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;polls:index&#39;</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertQuerysetEqual</span><span class="p">(</span>
-            <span class="n">response</span><span class="o">.</span><span class="n">context</span><span class="p">[</span><span class="s1">&#39;latest_question_list&#39;</span><span class="p">],</span>
-            <span class="p">[</span><span class="s1">&#39;&lt;Question: Past question.&gt;&#39;</span><span class="p">]</span>
-        <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_future_question</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">        Questions with a pub_date in the future aren&#39;t displayed on
-</span><span class="s2">        the index page.
-</span><span class="s2">        &#34;&#34;&#34;</span>
-        <span class="n">create_question</span><span class="p">(</span><span class="n">question_text</span><span class="o">=</span><span class="s2">&#34;Future question.&#34;</span><span class="p">,</span> <span class="n">days</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;polls:index&#39;</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertContains</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s2">&#34;No polls are available.&#34;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertQuerysetEqual</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">context</span><span class="p">[</span><span class="s1">&#39;latest_question_list&#39;</span><span class="p">],</span> <span class="p">[])</span>
-
-    <span class="k">def</span> <span class="nf">test_future_question_and_past_question</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">        Even if both past and future questions exist, only past questions
-</span><span class="s2">        are displayed.
-</span><span class="s2">        &#34;&#34;&#34;</span>
-        <span class="n">create_question</span><span class="p">(</span><span class="n">question_text</span><span class="o">=</span><span class="s2">&#34;Past question.&#34;</span><span class="p">,</span> <span class="n">days</span><span class="o">=-</span><span class="mi">30</span><span class="p">)</span>
-        <span class="n">create_question</span><span class="p">(</span><span class="n">question_text</span><span class="o">=</span><span class="s2">&#34;Future question.&#34;</span><span class="p">,</span> <span class="n">days</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;polls:index&#39;</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertQuerysetEqual</span><span class="p">(</span>
-            <span class="n">response</span><span class="o">.</span><span class="n">context</span><span class="p">[</span><span class="s1">&#39;latest_question_list&#39;</span><span class="p">],</span>
-            <span class="p">[</span><span class="s1">&#39;&lt;Question: Past question.&gt;&#39;</span><span class="p">]</span>
-        <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_two_past_questions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">        The questions index page may display multiple questions.
-</span><span class="s2">        &#34;&#34;&#34;</span>
-        <span class="n">create_question</span><span class="p">(</span><span class="n">question_text</span><span class="o">=</span><span class="s2">&#34;Past question 1.&#34;</span><span class="p">,</span> <span class="n">days</span><span class="o">=-</span><span class="mi">30</span><span class="p">)</span>
-        <span class="n">create_question</span><span class="p">(</span><span class="n">question_text</span><span class="o">=</span><span class="s2">&#34;Past question 2.&#34;</span><span class="p">,</span> <span class="n">days</span><span class="o">=-</span><span class="mi">5</span><span class="p">)</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;polls:index&#39;</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertQuerysetEqual</span><span class="p">(</span>
-            <span class="n">response</span><span class="o">.</span><span class="n">context</span><span class="p">[</span><span class="s1">&#39;latest_question_list&#39;</span><span class="p">],</span>
-            <span class="p">[</span><span class="s1">&#39;&lt;Question: Past question 2.&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;Question: Past question 1.&gt;&#39;</span><span class="p">]</span>
-        <span class="p">)</span>
-
-
-<span class="k">class</span> <span class="nc">QuestionDetailViewTests</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">test_future_question</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">        The detail view of a question with a pub_date in the future
-</span><span class="s2">        returns a 404 not found.
-</span><span class="s2">        &#34;&#34;&#34;</span>
-        <span class="n">future_question</span> <span class="o">=</span> <span class="n">create_question</span><span class="p">(</span><span class="n">question_text</span><span class="o">=</span><span class="s1">&#39;Future question.&#39;</span><span class="p">,</span> <span class="n">days</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-        <span class="n">url</span> <span class="o">=</span> <span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;polls:detail&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">future_question</span><span class="o">.</span><span class="n">id</span><span class="p">,))</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="mi">404</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_past_question</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">        The detail view of a question with a pub_date in the past
-</span><span class="s2">        displays the question&#39;s text.
-</span><span class="s2">        &#34;&#34;&#34;</span>
-        <span class="n">past_question</span> <span class="o">=</span> <span class="n">create_question</span><span class="p">(</span><span class="n">question_text</span><span class="o">=</span><span class="s1">&#39;Past Question.&#39;</span><span class="p">,</span> <span class="n">days</span><span class="o">=-</span><span class="mi">5</span><span class="p">)</span>
-        <span class="n">url</span> <span class="o">=</span> <span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;polls:detail&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">past_question</span><span class="o">.</span><span class="n">id</span><span class="p">,))</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertContains</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">past_question</span><span class="o">.</span><span class="n">question_text</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="customize-the-polls-app-s-look-and-feel">Customize the <code>polls</code> app&rsquo;s look and feel</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.utils <span style="color:#f92672">import</span> timezone
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.test <span style="color:#f92672">import</span> TestCase
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.urls <span style="color:#f92672">import</span> reverse
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> Question
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">QuestionModelTests</span>(TestCase):
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_was_published_recently_with_future_question</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        was_published_recently() returns False for questions whose pub_date
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        is in the future.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        time <span style="color:#f92672">=</span> timezone<span style="color:#f92672">.</span>now() <span style="color:#f92672">+</span> datetime<span style="color:#f92672">.</span>timedelta(days<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>        future_question <span style="color:#f92672">=</span> Question(pub_date<span style="color:#f92672">=</span>time)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>assertIs(future_question<span style="color:#f92672">.</span>was_published_recently(), <span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_was_published_recently_with_old_question</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        was_published_recently() returns False for questions whose pub_date
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        is older than 1 day.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        time <span style="color:#f92672">=</span> timezone<span style="color:#f92672">.</span>now() <span style="color:#f92672">-</span> datetime<span style="color:#f92672">.</span>timedelta(days<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, seconds<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        old_question <span style="color:#f92672">=</span> Question(pub_date<span style="color:#f92672">=</span>time)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>assertIs(old_question<span style="color:#f92672">.</span>was_published_recently(), <span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_was_published_recently_with_recent_question</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        was_published_recently() returns True for questions whose pub_date
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        is within the last day.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        time <span style="color:#f92672">=</span> timezone<span style="color:#f92672">.</span>now() <span style="color:#f92672">-</span> datetime<span style="color:#f92672">.</span>timedelta(hours<span style="color:#f92672">=</span><span style="color:#ae81ff">23</span>, minutes<span style="color:#f92672">=</span><span style="color:#ae81ff">59</span>, seconds<span style="color:#f92672">=</span><span style="color:#ae81ff">59</span>)
+</span></span><span style="display:flex;"><span>        recent_question <span style="color:#f92672">=</span> Question(pub_date<span style="color:#f92672">=</span>time)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>assertIs(recent_question<span style="color:#f92672">.</span>was_published_recently(), <span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_question</span>(question_text, days):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Create a question with the given `question_text` and published the
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    given number of `days` offset to now (negative for questions published
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    in the past, positive for questions that have yet to be published).
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    time <span style="color:#f92672">=</span> timezone<span style="color:#f92672">.</span>now() <span style="color:#f92672">+</span> datetime<span style="color:#f92672">.</span>timedelta(days<span style="color:#f92672">=</span>days)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> Question<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>create(question_text<span style="color:#f92672">=</span>question_text, pub_date<span style="color:#f92672">=</span>time)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">QuestionIndexViewTests</span>(TestCase):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_no_questions</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        If no questions exist, an appropriate message is displayed.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>client<span style="color:#f92672">.</span>get(reverse(<span style="color:#e6db74">&#39;polls:index&#39;</span>))
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>assertEqual(response<span style="color:#f92672">.</span>status_code, <span style="color:#ae81ff">200</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>assertContains(response, <span style="color:#e6db74">&#34;No polls are available.&#34;</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>assertQuerysetEqual(response<span style="color:#f92672">.</span>context[<span style="color:#e6db74">&#39;latest_question_list&#39;</span>], [])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_past_question</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Questions with a pub_date in the past are displayed on the
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        index page.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        create_question(question_text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Past question.&#34;</span>, days<span style="color:#f92672">=-</span><span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>client<span style="color:#f92672">.</span>get(reverse(<span style="color:#e6db74">&#39;polls:index&#39;</span>))
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>assertQuerysetEqual(
+</span></span><span style="display:flex;"><span>            response<span style="color:#f92672">.</span>context[<span style="color:#e6db74">&#39;latest_question_list&#39;</span>],
+</span></span><span style="display:flex;"><span>            [<span style="color:#e6db74">&#39;&lt;Question: Past question.&gt;&#39;</span>]
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_future_question</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Questions with a pub_date in the future aren&#39;t displayed on
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        the index page.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        create_question(question_text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Future question.&#34;</span>, days<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>client<span style="color:#f92672">.</span>get(reverse(<span style="color:#e6db74">&#39;polls:index&#39;</span>))
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>assertContains(response, <span style="color:#e6db74">&#34;No polls are available.&#34;</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>assertQuerysetEqual(response<span style="color:#f92672">.</span>context[<span style="color:#e6db74">&#39;latest_question_list&#39;</span>], [])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_future_question_and_past_question</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Even if both past and future questions exist, only past questions
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        are displayed.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        create_question(question_text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Past question.&#34;</span>, days<span style="color:#f92672">=-</span><span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>        create_question(question_text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Future question.&#34;</span>, days<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>client<span style="color:#f92672">.</span>get(reverse(<span style="color:#e6db74">&#39;polls:index&#39;</span>))
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>assertQuerysetEqual(
+</span></span><span style="display:flex;"><span>            response<span style="color:#f92672">.</span>context[<span style="color:#e6db74">&#39;latest_question_list&#39;</span>],
+</span></span><span style="display:flex;"><span>            [<span style="color:#e6db74">&#39;&lt;Question: Past question.&gt;&#39;</span>]
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_two_past_questions</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        The questions index page may display multiple questions.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        create_question(question_text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Past question 1.&#34;</span>, days<span style="color:#f92672">=-</span><span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>        create_question(question_text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Past question 2.&#34;</span>, days<span style="color:#f92672">=-</span><span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>client<span style="color:#f92672">.</span>get(reverse(<span style="color:#e6db74">&#39;polls:index&#39;</span>))
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>assertQuerysetEqual(
+</span></span><span style="display:flex;"><span>            response<span style="color:#f92672">.</span>context[<span style="color:#e6db74">&#39;latest_question_list&#39;</span>],
+</span></span><span style="display:flex;"><span>            [<span style="color:#e6db74">&#39;&lt;Question: Past question 2.&gt;&#39;</span>, <span style="color:#e6db74">&#39;&lt;Question: Past question 1.&gt;&#39;</span>]
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">QuestionDetailViewTests</span>(TestCase):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_future_question</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        The detail view of a question with a pub_date in the future
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        returns a 404 not found.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        future_question <span style="color:#f92672">=</span> create_question(question_text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Future question.&#39;</span>, days<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>        url <span style="color:#f92672">=</span> reverse(<span style="color:#e6db74">&#39;polls:detail&#39;</span>, args<span style="color:#f92672">=</span>(future_question<span style="color:#f92672">.</span>id,))
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>client<span style="color:#f92672">.</span>get(url)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>assertEqual(response<span style="color:#f92672">.</span>status_code, <span style="color:#ae81ff">404</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_past_question</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        The detail view of a question with a pub_date in the past
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        displays the question&#39;s text.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        past_question <span style="color:#f92672">=</span> create_question(question_text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Past Question.&#39;</span>, days<span style="color:#f92672">=-</span><span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>        url <span style="color:#f92672">=</span> reverse(<span style="color:#e6db74">&#39;polls:detail&#39;</span>, args<span style="color:#f92672">=</span>(past_question<span style="color:#f92672">.</span>id,))
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>client<span style="color:#f92672">.</span>get(url)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>assertContains(response, past_question<span style="color:#f92672">.</span>question_text)
+</span></span></code></pre></div><h2 id="customize-the-polls-app-s-look-and-feel">Customize the <code>polls</code> app&rsquo;s look and feel</h2>
 <p>Django will look for statis files in the <code>polls/static/</code> directory. Its <code>STATICFILES_FINDERS</code> setting contains a list of finders that know how to discover static files from various source. <code>AppDirectoriesFinder</code> staticfile finder finds the stylesheet at <code>polls/static/polls/style.css</code>.</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">li</span> <span class="nt">a</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="kc">green</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nt">body</span> <span class="p">{</span>
-    <span class="k">background</span><span class="p">:</span> <span class="kc">white</span> <span class="nb">url</span><span class="p">(</span><span class="s2">&#34;images/background.gif&#34;</span><span class="p">)</span> <span class="kc">no-repeat</span> <span class="kc">right</span> <span class="kc">bottom</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>And I add the <code>{% static %}</code> template tag at the top of <code>polls/templates/polls/index.html</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">li</span> <span style="color:#f92672">a</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">green</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">body</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background</span>: <span style="color:#66d9ef">white</span> url(<span style="color:#e6db74">&#34;images/background.gif&#34;</span>) <span style="color:#66d9ef">no-repeat</span> <span style="color:#66d9ef">right</span> <span style="color:#66d9ef">bottom</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>And I add the <code>{% static %}</code> template tag at the top of <code>polls/templates/polls/index.html</code>.</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html">{% load static %}
-
-<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{% static &#39;polls/style.css&#39; %}&#34;</span><span class="p">&gt;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Note always use relative paths to link static files between each other.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{% load static %}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% static &#39;polls/style.css&#39; %}&#34;</span>&gt;
+</span></span></code></pre></div><p>Note always use relative paths to link static files between each other.</p>
 <h2 id="customize-the-admin-site">Customize the admin site</h2>
 <p>I customize the admin form by editing <code>polls/admin.py</code>:</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
-
-<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Choice</span><span class="p">,</span> <span class="n">Question</span>
-
-
-<span class="k">class</span> <span class="nc">ChoiceInline</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">TabularInline</span><span class="p">):</span>
-    <span class="n">model</span> <span class="o">=</span> <span class="n">Choice</span>
-    <span class="n">extra</span> <span class="o">=</span> <span class="mi">3</span>
-
-
-<span class="k">class</span> <span class="nc">QuestionAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
-    <span class="n">fieldsets</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;fields&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;question_text&#39;</span><span class="p">]}),</span>
-        <span class="p">(</span><span class="s1">&#39;Date information&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;fields&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;pub_date&#39;</span><span class="p">],</span> <span class="s1">&#39;classes&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;collapse&#39;</span><span class="p">]}),</span>
-    <span class="p">]</span>
-    <span class="n">inlines</span> <span class="o">=</span> <span class="p">[</span><span class="n">ChoiceInline</span><span class="p">]</span>
-    <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;question_text&#39;</span><span class="p">,</span> <span class="s1">&#39;pub_date&#39;</span><span class="p">,</span> <span class="s1">&#39;was_published_recently&#39;</span><span class="p">)</span>
-    <span class="n">list_filter</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pub_date&#39;</span><span class="p">]</span>
-    <span class="n">search_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;question_text&#39;</span><span class="p">]</span>
-
-<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Question</span><span class="p">,</span> <span class="n">QuestionAdmin</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>I use <code>fieldsets</code> to split the form up and provide an usability detail. Alternatively, <code>fields</code> could be directly used here serving only a few fields.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.contrib <span style="color:#f92672">import</span> admin
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> Choice, Question
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ChoiceInline</span>(admin<span style="color:#f92672">.</span>TabularInline):
+</span></span><span style="display:flex;"><span>    model <span style="color:#f92672">=</span> Choice
+</span></span><span style="display:flex;"><span>    extra <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">QuestionAdmin</span>(admin<span style="color:#f92672">.</span>ModelAdmin):
+</span></span><span style="display:flex;"><span>    fieldsets <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>        (<span style="color:#66d9ef">None</span>, {<span style="color:#e6db74">&#39;fields&#39;</span>: [<span style="color:#e6db74">&#39;question_text&#39;</span>]}),
+</span></span><span style="display:flex;"><span>        (<span style="color:#e6db74">&#39;Date information&#39;</span>, {<span style="color:#e6db74">&#39;fields&#39;</span>: [<span style="color:#e6db74">&#39;pub_date&#39;</span>], <span style="color:#e6db74">&#39;classes&#39;</span>: [<span style="color:#e6db74">&#39;collapse&#39;</span>]}),
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>    inlines <span style="color:#f92672">=</span> [ChoiceInline]
+</span></span><span style="display:flex;"><span>    list_display <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#39;question_text&#39;</span>, <span style="color:#e6db74">&#39;pub_date&#39;</span>, <span style="color:#e6db74">&#39;was_published_recently&#39;</span>)
+</span></span><span style="display:flex;"><span>    list_filter <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;pub_date&#39;</span>]
+</span></span><span style="display:flex;"><span>    search_fields <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;question_text&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>admin<span style="color:#f92672">.</span>site<span style="color:#f92672">.</span>register(Question, QuestionAdmin)
+</span></span></code></pre></div><p>I use <code>fieldsets</code> to split the form up and provide an usability detail. Alternatively, <code>fields</code> could be directly used here serving only a few fields.</p>
 <p>For <code>ChoiceInline</code>, with <code>TabularInline</code>, the related objects are displayed in a compact, table-based format. I could also spread it out using <code>StackInline</code>.</p>
 <p>I can also customize the Django admin itself. First I add a <code>DIRS</code> option in the <code>TEMPLATES</code> setting in the setting files:</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">TEMPLATES</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span>
-        <span class="c1"># ...</span>
-        <span class="s1">&#39;DIRS&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;templates&#39;</span><span class="p">)],</span>
-        <span class="c1"># ...</span>
-    <span class="p">},</span>
-<span class="p">]</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Find the Django source file, and copy the <code>django/contrib/admin/templates/admin/base_site.html</code> into <code>templates/admin/</code>:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">python -c <span class="s2">&#34;import django; print(django.__path__)&#34;</span>
-mkdir templates/admin
-cp PATH/django/contrib/admin/templates/admin/base_site.html templates/admin/base_site.html
-</code></pre></td></tr></table>
-</div>
-</div><p>Edit as:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>TEMPLATES <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># ...</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;DIRS&#39;</span>: [os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(BASE_DIR, <span style="color:#e6db74">&#39;templates&#39;</span>)],
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># ...</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><p>Find the Django source file, and copy the <code>django/contrib/admin/templates/admin/base_site.html</code> into <code>templates/admin/</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python -c <span style="color:#e6db74">&#34;import django; print(django.__path__)&#34;</span>
+</span></span><span style="display:flex;"><span>mkdir templates/admin
+</span></span><span style="display:flex;"><span>cp PATH/django/contrib/admin/templates/admin/base_site.html templates/admin/base_site.html
+</span></span></code></pre></div><p>Edit as:</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html">{% extends &#34;admin/base.html&#34; %}
-
-{% block title %}{{ title }} | {{ site_title|default:_(&#39;Django site admin&#39;) }}{% endblock %}
-
-{% block branding %}
-<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;site-name&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{% url &#39;admin:index&#39; %}&#34;</span><span class="p">&gt;</span>Polls Administration<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-{% endblock %}
-
-{% block nav-global %}{% endblock %}
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="wrap-up">Wrap up</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{% extends &#34;admin/base.html&#34; %}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{% block title %}{{ title }} | {{ site_title|default:_(&#39;Django site admin&#39;) }}{% endblock %}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{% block branding %}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;site-name&#34;</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;admin:index&#39; %}&#34;</span>&gt;Polls Administration&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>{% endblock %}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{% block nav-global %}{% endblock %}
+</span></span></code></pre></div><h2 id="wrap-up">Wrap up</h2>
 <p>Now my Django app looks like this:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">mysite
-├── db.sqlite3
-├── manage.py
-├── mysite
-│   ├── __init__.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-├── polls
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── migrations
-│   │   ├── 0001_initial.py
-│   │   ├── __init__.py
-│   ├── models.py
-│   ├── static
-│   │   └── polls
-│   │       ├── images
-│   │       │   └── background.gif
-│   │       └── style.css
-│   ├── templates
-│   │   └── polls
-│   │       ├── detail.html
-│   │       ├── index.html
-│   │       └── results.html
-│   ├── tests.py
-│   ├── urls.py
-│   └── views.py
-└── templates
-    └── admin
-        └── base_site.html
-</code></pre></td></tr></table>
-</div>
-</div><p>It is also useful to turn the <code>polls</code> app into a standalone Python package, but it is another story.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>mysite
+</span></span><span style="display:flex;"><span>├── db.sqlite3
+</span></span><span style="display:flex;"><span>├── manage.py
+</span></span><span style="display:flex;"><span>├── mysite
+</span></span><span style="display:flex;"><span>│   ├── __init__.py
+</span></span><span style="display:flex;"><span>│   ├── settings.py
+</span></span><span style="display:flex;"><span>│   ├── urls.py
+</span></span><span style="display:flex;"><span>│   └── wsgi.py
+</span></span><span style="display:flex;"><span>├── polls
+</span></span><span style="display:flex;"><span>│   ├── __init__.py
+</span></span><span style="display:flex;"><span>│   ├── admin.py
+</span></span><span style="display:flex;"><span>│   ├── apps.py
+</span></span><span style="display:flex;"><span>│   ├── migrations
+</span></span><span style="display:flex;"><span>│   │   ├── 0001_initial.py
+</span></span><span style="display:flex;"><span>│   │   ├── __init__.py
+</span></span><span style="display:flex;"><span>│   ├── models.py
+</span></span><span style="display:flex;"><span>│   ├── static
+</span></span><span style="display:flex;"><span>│   │   └── polls
+</span></span><span style="display:flex;"><span>│   │       ├── images
+</span></span><span style="display:flex;"><span>│   │       │   └── background.gif
+</span></span><span style="display:flex;"><span>│   │       └── style.css
+</span></span><span style="display:flex;"><span>│   ├── templates
+</span></span><span style="display:flex;"><span>│   │   └── polls
+</span></span><span style="display:flex;"><span>│   │       ├── detail.html
+</span></span><span style="display:flex;"><span>│   │       ├── index.html
+</span></span><span style="display:flex;"><span>│   │       └── results.html
+</span></span><span style="display:flex;"><span>│   ├── tests.py
+</span></span><span style="display:flex;"><span>│   ├── urls.py
+</span></span><span style="display:flex;"><span>│   └── views.py
+</span></span><span style="display:flex;"><span>└── templates
+</span></span><span style="display:flex;"><span>    └── admin
+</span></span><span style="display:flex;"><span>        └── base_site.html
+</span></span></code></pre></div><p>It is also useful to turn the <code>polls</code> app into a standalone Python package, but it is another story.</p>
     </div>
 
     <div class="post-copyright">
@@ -1682,7 +915,7 @@ cp PATH/django/contrib/admin/templates/admin/base_site.html templates/admin/base
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   width="28" height="28"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
       </a>
-  <a href="http://blindwith.science/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -1704,7 +937,7 @@ cp PATH/django/contrib/admin/templates/admin/base_site.html templates/admin/base
   <span class="copyright-year">
     &copy; 
     2005 - 
-    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>ziyunch</span>
   </span>
 </div>
 
@@ -1720,7 +953,7 @@ cp PATH/django/contrib/admin/templates/admin/base_site.html templates/admin/base
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script>
     var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -1728,19 +961,8 @@ cp PATH/django/contrib/admin/templates/admin/base_site.html templates/admin/base
 
 
 
-<script type="text/javascript" src="../../../js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="../../../js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-86469737-1', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

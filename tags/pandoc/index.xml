@@ -4,18 +4,17 @@
     <title>Pandoc on Blind with Science</title>
     <link>http://blindwith.science/tags/pandoc/</link>
     <description>Recent content in Pandoc on Blind with Science</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>ziyunch</copyright>
-    <lastBuildDate>Wed, 10 Jun 2020 22:41:00 -0700</lastBuildDate><atom:link href="http://blindwith.science/tags/pandoc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Jan 2021 17:23:01 -0800</lastBuildDate>
+    <atom:link href="http://blindwith.science/tags/pandoc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 pandoc 转换 ox-hugo 支持的 org 文件</title>
       <link>http://blindwith.science/2020/06/455.html/</link>
       <pubDate>Wed, 10 Jun 2020 22:41:00 -0700</pubDate>
-      
       <guid>http://blindwith.science/2020/06/455.html/</guid>
       <description>&lt;p&gt;之前从 hexo 转成 hugo 的时候，顺便用了使用非常方便的 ox-hugo 这个轮子。当时贪图省力，就直接用 pandoc 将 markdown 文件批量转换成了 orgmode，但是所有的 metadata 全都没能转换，后期还是得一个一个改。虽然是一个重新审阅自己黑历史的方式，但是要改四百多篇确实还是太过费心费力了。事情一变得繁杂起来，我的拖延症就犯了，于是直到现在我还是只改好了十几篇。今天终于忍不住了，动手看起了 pandoc 文档。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
