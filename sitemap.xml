@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blindwith.science/2025/10/488.html/</loc>
+    <lastmod>2025-10-16T21:16:04-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://blindwith.science/2025/10/487.html/</loc>
     <lastmod>2025-10-16T19:42:16-07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -465,34 +472,83 @@
   
   <url>
     <loc>http://blindwith.science/</loc>
-    <lastmod>2025-10-16T19:42:16-07:00</lastmod>
+    <lastmod>2025-10-16T21:16:04-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/tags/bso/</loc>
+    <lastmod>2025-10-16T21:16:04-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blindwith.science/categories/</loc>
-    <lastmod>2025-10-16T19:42:16-07:00</lastmod>
+    <lastmod>2025-10-16T21:16:04-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://blindwith.science/tags/mfa/</loc>
-    <lastmod>2025-10-16T19:42:16-07:00</lastmod>
+    <loc>http://blindwith.science/tags/hamilton/</loc>
+    <lastmod>2025-10-16T21:16:04-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/tags/maybehappyending/</loc>
+    <lastmod>2025-10-16T21:16:04-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/tags/operationmincemeat/</loc>
+    <lastmod>2025-10-16T21:16:04-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blindwith.science/post/</loc>
-    <lastmod>2025-10-16T19:42:16-07:00</lastmod>
+    <lastmod>2025-10-16T21:16:04-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/tags/strangerthings/</loc>
+    <lastmod>2025-10-16T21:16:04-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/tags/suffs/</loc>
+    <lastmod>2025-10-16T21:16:04-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blindwith.science/tags/</loc>
+    <lastmod>2025-10-16T21:16:04-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/categories/%E8%A7%82%E5%90%8E%E6%84%9F/</loc>
+    <lastmod>2025-10-16T21:16:04-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blindwith.science/tags/mfa/</loc>
     <lastmod>2025-10-16T19:42:16-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -886,13 +942,6 @@
   <url>
     <loc>http://blindwith.science/tags/hugo/</loc>
     <lastmod>2021-01-18T17:22:58-08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blindwith.science/categories/%E8%A7%82%E5%90%8E%E6%84%9F/</loc>
-    <lastmod>2021-01-18T17:23:05-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
